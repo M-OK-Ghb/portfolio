@@ -1,0 +1,116 @@
+<% page = {
+  title: "Media Kits",
+  description: "",
+  path: "/jpn/",
+  devPath: "../",
+  includePath: "../",
+  jpAssetsPath: "/",
+  devJpAssetsPath: "../../",
+  url: "",
+  name: "mediakits"
+} %>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="mediakits">
+      <div id="js-hero" class="DetailHero -mediakits is-before">
+        <div class="DetailHero__bg">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span>Media Kits</span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="MediaKits">
+          <div class="MediaKits__content">
+            <div class="Inner">
+              <section class="MediaKits__section">
+                <h2 class="Heading -medium">Woven City Footages</h2>
+                <ul class="MediaKits__list">
+                  <li class="MediaKits__item">
+                    <div class="MediaKits__itemInner">
+                      <h2 class="MediaKits__itemHeading">アップデート</h2>
+                      <figure class="MediaKits__itemImage">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/media-kits/20230223_wovencityphase1.jpg` %>" decoding="async" loading="lazy" alt="thumbnail">
+                      </figure>
+                      <span class="MediaKits__itemDate"><time datetime="2023-02-23">February 23, 2023</time></span>
+                      <div class="MediaKits__itemFooter">
+                        <span class="MediaKits__itemSize">SIZE: 882.9MB</span>
+                        <button type="button" class="TextLink js-modalTrigger" data-download-path="<%= `${page.jpAssetsPath}downloads/20230223_Update_Images.zip` %>">ZIP Download</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="MediaKits__item">
+                    <div class="MediaKits__itemInner">
+                      <h2 class="MediaKits__itemHeading">アップデート</h2>
+                      <figure class="MediaKits__itemImage">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/media-kits/20220601_updates.jpg` %>" decoding="async" loading="lazy" alt="thumbnail">
+                      </figure>
+                      <span class="MediaKits__itemDate"><time datetime="2022-06-01">June 01, 2022</time></span>
+                      <div class="MediaKits__itemFooter">
+                        <span class="MediaKits__itemSize">SIZE: 39.8MB</span>
+                        <button type="button" class="TextLink js-modalTrigger" data-download-path="<%= `${page.jpAssetsPath}downloads/20220601_Update_Images.zip` %>">ZIP Download</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>  
+              </section>
+              <section class="MediaKits__section">
+                <h2 class="Heading -medium">Event</h2>
+                <ul class="MediaKits__list">
+                  <li class="MediaKits__item">
+                    <div class="MediaKits__itemInner">
+                      <h2 class="MediaKits__itemHeading">安全祈願祭</h2>
+                      <figure class="MediaKits__itemImage">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221014/01.jpg` %>" decoding="async" loading="lazy" alt="thumbnail">
+                      </figure>
+                      <span class="MediaKits__itemDate"><time datetime="2022-10-14">October 14, 2022</time></span>
+                      <div class="MediaKits__itemFooter">
+                        <span class="MediaKits__itemSize">SIZE: 1.5GB</span>
+                        <button type="button" class="TextLink js-modalTrigger" data-download-path="<%= `${page.jpAssetsPath}downloads/20221014_SafetyPrayerCeremony_Images.zip` %>">ZIP Download</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="MediaKits__item">
+                    <div class="MediaKits__itemInner">
+                      <h2 class="MediaKits__itemHeading">地鎮祭</h2>
+                      <figure class="MediaKits__itemImage">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/media-kits/20220223_jichinsai.jpg` %>" decoding="async" loading="lazy" alt="thumbnail">
+                      </figure>
+                      <span class="MediaKits__itemDate"><time datetime="2022-02-23">February 23, 2022</time></span>
+                      <div class="MediaKits__itemFooter">
+                        <span class="MediaKits__itemSize">SIZE: 5.5MB</span>
+                        <button type="button" class="TextLink js-modalTrigger" data-download-path="<%= `${page.jpAssetsPath}downloads/20210223_Jichinsai_Images.zip` %>">ZIP Download</button>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="MediaKits__item">
+                    <div class="MediaKits__itemInner">
+                      <h2 class="MediaKits__itemHeading">CES2020</h2>
+                      <figure class="MediaKits__itemImage">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/media-kits/20200107_ces2020.jpg` %>" decoding="async" loading="lazy" alt="thumbnail">
+                      </figure>
+                      <span class="MediaKits__itemDate"><time datetime="2020-01-07">January 07, 2020</time></span>
+                      <div class="MediaKits__itemFooter">
+                        <span class="MediaKits__itemSize">SIZE: 5.5MB</span>
+                        <button type="button" class="TextLink js-modalTrigger" data-download-path="<%= `${page.jpAssetsPath}downloads/20200107_CES_Images.zip` %>">ZIP Download</button>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </section>
+            </div>
+            <%- include(`${page.includePath}_components/download-modal.ejs`); %>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

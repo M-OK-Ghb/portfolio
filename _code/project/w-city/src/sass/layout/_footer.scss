@@ -1,0 +1,410 @@
+// -------------------------------------------------------------------
+//  footer.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Footer {
+  @at-root {
+    & {
+      background-color: $color-primary;
+      color: $color_secondary;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.26;
+      padding-top: 80px;
+      text-transform: uppercase;
+      @include media(lg) {
+        font-size: 16px;
+      }
+      
+      @include jp {
+        font-family: $font-family_base;
+      }
+    }
+
+    .Footer__links {
+      @include media(lg) {
+        background: linear-gradient(to right, $color-primary 0%, $color-primary 50%, $color-secondary 50%, $color-secondary 100%);
+      }
+    }
+    
+    .Footer__linksInner {
+      @include media(lg) {
+        background: linear-gradient(to right, $color-primary 0%, $color-primary calc(129 / 1231 * 100%), $color-secondary calc(129 / 1231 * 100%), $color-secondary 100%);
+        display: flex;
+      }
+    }
+
+    .Footer__linksHeader {
+      @include media(lg) {
+        padding-top: 60px;
+        width: 25%;
+      }
+    }
+
+    .Footer__heading {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .Footer__linksContent {
+      background-color: $color-secondary;
+      color: $color-primary;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      margin-top: 30px;
+      padding: 60px 0 50px;
+      width: 100vw;
+      @include media(lg) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+        width: 75%;
+      }
+    }
+
+    .Footer__linksContentInner {
+      padding: 0 20px;
+      @include media(sm) {
+        padding: 0 40px;
+      }
+      @include media(md) {
+        max-width: 100%;
+      }
+      @include media(lg) {
+        padding: 0;
+      }
+    }
+
+    .Footer__linksList1 {
+
+      .Footer__linksItem {
+        width: 100%;
+
+        &:not(:first-child) {
+          margin-top: 45px;
+        }
+
+        @include media(lg) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &:not(:first-child) {
+            margin-top: 65px;
+          }
+        }
+      }
+  
+      .Footer__linksItemHeading {
+        
+        @include media(md) {
+          align-items: center;
+          display: flex;
+          height: 84px;
+        }
+        @include media(lg) {
+          flex-basis: calc(211 / 960 * 100%);
+        }
+      }
+
+      .Footer__linksItemDescription {
+        font-size: 14px;
+        line-height: 1.71;
+        margin-top: 15px;
+        text-transform: none;
+        @include media(md) {
+          font-size: 16px;
+          line-height: 1.56;
+          margin-top: 0;
+        }
+        @include media(lg) {
+          flex-basis: calc(100% / 3 * 2);
+        }
+  
+        > *:not(:first-child) {
+          margin-top: 1em;
+        }
+  
+        p {
+          
+        }
+
+        @include jp {
+          line-height: 1.8;
+        }
+      }  
+    }
+
+    .Footer__linksList2 {
+      align-items: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 74px;
+      @include media(md) {
+        justify-content: flex-start;
+        width: 100%;
+      }
+
+      .Footer__linksItem {
+        margin-top: 38px;
+        width: calc(160 / 335 * 100%);
+        @include media(md) {
+          width: calc(100% / 4);
+          margin-top: 0;
+        }
+        @include media(lg) {
+          width: calc(100% / 3);
+        }
+        
+        &:nth-child(-n+2) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .Footer__linksLink {
+      align-items: center;
+      display: flex;
+      min-height: 44px;
+      width: fit-content;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        @include media(lg) {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .Footer__linksSnsLogo {
+      display: inline-block;
+      margin-right: 1em;
+      width: 33px;
+
+      img {
+
+      }
+    }
+
+    .Footer__linksSnsText {
+      text-transform: none;
+    }
+
+    .Footer__linksLogo {
+      display: inline-block;
+      
+      &.-wovenPlanet {
+        max-width: 122px;
+        @include media(md) {
+          max-width: 150px;
+        }
+        @include media(lg) {
+          max-width: 100%;
+        }
+      }
+
+      &.-toyota {
+        max-width: 120px;
+        @include media(md) {
+          max-width: 147px;
+        }
+        @include media(lg) {
+          max-width: 100%;
+        }
+      }
+
+      &.-toyotatimes {
+        max-width: 159px;
+        @include media(md) {
+          max-width: 206px;
+        }
+
+        @include jp {
+          max-width: 134px;
+          width: 134px; // firefox対応
+        }
+      }
+    }
+
+    .Footer__siteMap {
+      padding: 60px 0;
+      @include media(lg) {
+        padding: 90px 0;
+      }
+    }
+
+    .Footer__siteMapInner {
+      @include media(lg) {
+        display: flex;
+      }
+    }
+
+    .Footer__siteMapGroup {
+      width: 100%;
+      @include media(lg) {
+        width: 25%;
+      }
+
+      &:not(:first-child) {
+        margin-top: 60px;
+        @include media(lg) {
+          margin-top: 0;
+        }
+      }
+
+      &.-large {
+        @include media(lg) {
+          width: 75%;
+        }
+
+        .Footer__siteMapList {
+          @include media(lg) {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            height: 88px;
+          }
+        }
+
+        .Footer__siteMapItem {
+          @include media(lg) {
+            width: calc(100% / 3);
+          }
+        }
+      }
+    }
+
+    .Footer__siteMapHading {
+      font-size: 18px;
+      font-weight: 600;
+      @include media(lg) {
+        font-size: 20px;
+      }
+    }
+
+    .Footer__siteMapList {
+      margin-top: 30px;
+    }
+
+    .Footer__siteMapItem {
+      height: 44px;
+    }
+
+    .Footer__siteMapLink {
+      align-items: center;
+      display: flex;
+      height: 100%;
+      position: relative;
+      width: fit-content;
+
+      &::after {
+        background-color: currentColor;
+        bottom: 6px;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transform: scale(0, 1);
+        transform-origin: right top;
+        transition: transform 0.4s $easeOutQuart;
+        width: 100%;
+      }
+        
+      &:hover::after {
+        @include media(lg) {
+          transform: scale(1, 1);
+          transform-origin: left top;
+        }
+      }  
+    }
+
+    .Footer__legal {
+      border-top: 1px solid $color-secondary;
+      font-size: 12px;
+      margin: 0 calc(50% - 50vw);
+      width: 100vw;
+      @include media(lg) {
+        font-size: 14px;
+        height: 113px;
+      }
+    }
+    
+    .Footer__legalInner {
+      padding: 30px 0 40px;
+      @include media(lg) {
+        align-items: center;
+        display: flex;
+      }
+    }
+
+    .Footer__legalList {
+      @include media(lg) {
+        display: flex;
+      }
+    }
+
+    .Footer__legalItem {
+      height: 44px;
+      &:not(:first-child) {
+        margin-top: 2px;
+        @include media(lg) {
+          margin-left: 47px;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .Footer__legalLink {
+      align-items: center;
+      display: flex;
+      font-size: inherit;
+      width: fit-content;
+      height: 100%;
+      position: relative;
+      
+      &::after {
+        background-color: currentColor;
+        bottom: 6px;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transform: scale(0, 1);
+        transform-origin: right top;
+        transition: transform 0.4s $easeOutQuart;
+        width: 100%;
+      }
+        
+      &:hover::after {
+        @include media(lg) {
+          transform: scale(1, 1);
+          transform-origin: left top;
+        }
+      }  
+    }
+
+    .Footer__legalCopyright {
+      margin-top: 40px;
+      text-align: right;
+      @include media(lg) {
+        margin-left: auto;
+        margin-top: 0;
+      }
+
+      small {
+        font-size: inherit;
+      }
+    }
+  }
+}

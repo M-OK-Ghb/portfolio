@@ -1,0 +1,135 @@
+<% page = {
+  title: "Demonstrations",
+  description: "未来の当たり前を発明し、幸せを量産するために、私たち自身も「モビリティ」を拡張するしくみやサービスを開発しています。",
+  path: "/jpn/",
+  devPath: "../",
+  includePath: "../",
+  jpAssetsPath: "/",
+  devJpAssetsPath: "../../",
+  url: "",
+  name: "demonstrations"
+} %>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="services">
+      <div id="js-hero" class="DetailHero -services is-before">
+        <div class="DetailHero__bg">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span>Demonstrations</span></h1>
+              <div class="DetailHero__description">
+                <p>未来の当たり前を発明し、幸せを量産するために、私たち自身も「モビリティ」を拡張するしくみやサービスを開発しています。<br>モビリティを12の領域と組み合わせて、「モビリティ＝クルマや移動手段」という枠を飛び越え、モビリティがヒトのためにできることを増やしていきます。また、パートナーと共に実証を行う分野もあります。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="Services__pageHeader">
+          <div data-animate class="Inner">
+            <div class="Services__mainImage">
+              <img src="<%= `${page.jpAssetsPath}assets/images/services/services.png` %>" decoding="async" loading="lazy" alt="Mobility, Energy, Logistics, Agriculture Food, IoT, Healthcare, Education, Entertainment, Payment Finance, Safe Security, Smart Home, Housing Office">
+            </div>    
+          </div>
+        </div>
+        <section class="Activities">
+          <div class="Inner">
+            <h2 data-animate class="Heading">Recent Activities</h2>
+            <ul class="Activities__list">
+              <li class="Activities__item">
+                <div class="Inner">
+                  <div class="Activities__itemInner">
+                    <div data-animate class="Activities__itemDetail">
+                      <h3 class="Activities__itemHeading">
+                        <span class="Activities__itemHeadingIcon">
+                          <img src="<%= `${page.jpAssetsPath}assets/images/services/icon_energy.png` %>" decoding="async" loading="lazy" alt="">
+                        </span>
+                        <span class="Activities__itemHeadingText">Energy</span>
+                      </h3>
+                      <div class="Activities__itemDescription">
+                        <p>ＥＮＥＯＳ株式会社とトヨタ自動車は、水素を「つくる」「運ぶ」「使う」という一連のサプライチェーンに関する実証をWoven Cityおよびその近隣で行い、誰もが気軽にクリーンなエネルギーを使える社会とのカーボンニュートラル 実現に挑戦します。</p>
+                      </div>
+                      <p class="Activities__itemFooter"><a href="https://www.woven-planet.global/jp/news-release/20220323/1y93iGergkoCxKn8DbpN1u" class="TextLink" target="_blank" rel="noopener noreferrer">Read the press release</a></p>
+                    </div>
+                    <figure data-animate class="Activities__itemImage">
+                      <img src="<%= `${page.jpAssetsPath}assets/images/services/services_energy.jpg` %>" decoding="async" loading="lazy" alt="記事のサムネイル">
+                    </figure>
+                  </div>
+                </div>
+              </li>
+              <li data-animate class="Activities__item">
+                <div class="Inner">
+                  <div class="Activities__itemInner">
+                    <div data-animate class="Activities__itemDetail">
+                      <h3 class="Activities__itemHeading">
+                        <span class="Activities__itemHeadingIcon">
+                          <img src="<%= `${page.jpAssetsPath}assets/images/services/icon_iot.png` %>" decoding="async" loading="lazy" alt="">
+                        </span>
+                        <span class="Activities__itemHeadingText">IoT</span>
+                      </h3>
+                      <div class="Activities__itemDescription">
+                        <p>日本電信電話株式会社（NTT）とトヨタ自動車は、「スマートシティプラットフォーム」を共同で構築し、先行ケースとして、まずはWoven Cityと東京都港区品川エリアにて実装します。</p>
+                      </div>
+                      <p class="Activities__itemFooter"><a href="https://global.toyota/jp/newsroom/corporate/32057066.html" class="TextLink" target="_blank" rel="noopener noreferrer">Read the press release</a></p>
+                    </div>
+                    <figure data-animate class="Activities__itemImage">
+                      <img src="<%= `${page.jpAssetsPath}assets/images/services/services_iot-jp.jpg` %>" decoding="async" loading="lazy" alt="記事のサムネイル">
+                    </figure>
+                  </div>
+                </div>
+              </li>
+              <li data-animate class="Activities__item">
+                <div class="Inner">
+                  <div class="Activities__itemInner">
+                    <div data-animate class="Activities__itemDetail">
+                      <h3 class="Activities__itemHeading">
+                        <span class="Activities__itemHeadingIcon">
+                          <img src="<%= `${page.jpAssetsPath}assets/images/services/icon_logistics.png` %>" decoding="async" loading="lazy" alt="">
+                        </span>
+                        <span class="Activities__itemHeadingText">Logistics</span>
+                      </h3>
+                      <div class="Activities__itemDescription">
+                        <p>物流に関する実証はWoven Cityのオフィスですでに始まっています。</p>
+                      </div>
+                      <p class="Activities__itemFooter"><a href="https://toyotatimes.jp/report/constract_wovencity/001.html" class="TextLink" target="_blank" rel="noopener noreferrer">Read At Toyota Times</a></p>
+                    </div>
+                    <figure data-animate class="Activities__itemImage">
+                      <img src="<%= `${page.jpAssetsPath}assets/images/services/services_logistics.png` %>" decoding="async" loading="lazy" alt="記事のサムネイル">
+                    </figure>
+                  </div>
+                </div>
+              </li>
+              <li class="Activities__item">
+                <div class="Inner">
+                  <div data-animate class="Activities__itemInner">
+                    <div class="Activities__itemDetail">
+                      <h3 class="Activities__itemHeading">
+                        <span class="Activities__itemHeadingIcon">
+                          <img src="<%= `${page.jpAssetsPath}assets/images/services/icon_food-and-agriculture.png` %>" decoding="async" loading="lazy" alt="">
+                        </span>
+                        <span class="Activities__itemHeadingText">Food & Agriculture</span>
+                      </h3>
+                      <div class="Activities__itemDescription">
+                        <p>日清食品株式会社とトヨタ自動車は、Woven Cityにおける、食を通じたWell-Beingの実現に向けた実証について、具体的な検討を進めることで基本合意しました。</p>
+                      </div>
+                      <p class="Activities__itemFooter"><a href="https://www.woven-planet.global/jp/news-release/20220426/1RiuHWv7yDiNymPFOoXzw3" class="TextLink" target="_blank" rel="noopener noreferrer">Read the press release</a></p>
+                    </div>
+                    <figure data-animate class="Activities__itemImage">
+                      <img src="<%= `${page.jpAssetsPath}assets/images/services/services_food-and-agriculture.jpg` %>" decoding="async" loading="lazy" alt="記事のサムネイル">
+                    </figure>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

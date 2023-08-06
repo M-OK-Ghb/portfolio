@@ -1,0 +1,62 @@
+<section class="WovenCity">
+  <div class="WovenCity__mainImage">
+    <div class="WovenCity__mainImageInner">
+      <img src="<%= `${page.path}assets/images/top/woven-city.jpg` %>" decoding="async" loading="lazy" alt="Completion image of woven city (bird's eye view)">
+    </div>
+  </div>
+  <div class="WovenCity__inner">
+    <div class="Inner">
+      <%- include('../_components/_movieArea.ejs'); %>
+      <div class="WovenCity__content">
+        <dl data-animate class="WovenCity__scaleList">
+          <div class="WovenCity__scaleItem -large">
+            <dt class="WovenCity__scaleItemTerm">Site size:</dt>
+            <dd class="WovenCity__scaleItemDescription">
+              <span>708,000 sq. metre</span>
+              <span>175 acres</span>
+            </dd>
+          </div>
+          <div class="WovenCity__scaleItem">
+            <dt class="WovenCity__scaleItemTerm">Initial residents:</dt>
+            <dd class="WovenCity__scaleItemDescription">360 people</dd>
+          </div>
+          <div class="WovenCity__scaleItem">
+            <dt class="WovenCity__scaleItemTerm">Future residents:</dt>
+            <dd class="WovenCity__scaleItemDescription">2,000 people</dd>
+          </div>
+        </dl>
+        <section class="WovenCity__traffic">
+          <h3 data-animate class="WovenCity__trafficHeading">Above-ground and <br class="_underLgOnly">Underground Mobility</h3>
+          <div data-animate class="WovenCity__trafficDescription">
+            <p>Woven City will feature multiple types of above- and below-ground human-centered movement and navigation. To enable safe and efficient mobility, commercial deliveries, urban logistics, pedestrians, and personal and public transportation will each have a separate pathway.</p>
+          </div>
+          <ul class="WovenCity__trafficList">
+            <li data-animate class="WovenCity__trafficItem">
+              <div class="WovenCity__trafficItemInner">
+                <figure class="WovenCity__trafficItemImage js-parallax">
+                  <img src="<%= `${page.path}assets/images/top/above-ground.jpg` %>" decoding="async" loading="lazy" alt="Image of the Above-ground">
+                </figure>
+                <div class="WovenCity__trafficItemDescription">
+                  <p>On the surface of the city, there will be three distinct pathways. One for automated mobility, another for pedestrians, and a third for both pedestrians and personal mobility.</p>
+                </div>
+              </div>
+            </li>
+            <li data-animate class="WovenCity__trafficItem">
+              <div class="WovenCity__trafficItemInner">
+                <figure class="WovenCity__trafficItemImage js-parallax">
+                  <img src="<%= `${page.path}assets/images/top/underground.jpg` %>" decoding="async" loading="lazy" alt="Image of the Underground">
+                </figure>
+                <div class="WovenCity__trafficItemDescription">
+                  <p>Beneath the ground, there will be a fourth pathway specifically for the movement of goods where the city's logistics network will also be installed.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </div>
+      <div class="WovenCity__footer">
+        <a href="<%= `${page.path}history/` %>" class="Button -primary">Learn More<span class="_visuallyHidden"> about Woven City</span></a>
+      </div>  
+    </div>
+  </div>
+</section>

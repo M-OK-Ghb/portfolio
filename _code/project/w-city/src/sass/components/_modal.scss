@@ -1,0 +1,130 @@
+// -------------------------------------------------------------------
+// 	modal.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Modal {
+  @at-root {
+    & {
+      position: relative;
+      z-index: #{map-get($layer, modal)};
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.6s ease, visibility 0.6s ease;
+      
+      &[aria-hidden="false"] {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.6s ease, visibility 0.6s ease;
+      }
+    }
+
+    .Modal__overlay {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(42, 46, 53, 0.9);
+    }
+
+    .Modal__inner {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      max-width: 1000px;
+      z-index: #{map-get($layer, modal)};
+      max-height: calc(100vh - 160px);
+      @include media(md) {
+        max-height: calc(100vh - 142px);
+      }
+    }
+
+    .Modal__content {
+      max-height: calc(100vh - 160px);
+      overflow: auto;
+      @include media(md) {
+        max-height: calc(100vh - 142px);
+      }
+
+    }
+
+    .Modal__movie {
+      padding-top: calc(738 / 1280 * 100%);
+      position: relative;
+
+      iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    .Modal__closeButton {
+      position: absolute;
+      top: -60px;
+      right: 0;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 50%;
+      border: 1px solid $color-secondary;
+      background: transparent;
+      transition: background-color 0.3s ease;
+      @include media(md) {
+        top: -80px;
+        width: 60px;
+        height: 60px;
+      }
+
+      &::before,
+      &::after {
+        content: "";
+        display: block;
+        width: 20px;
+        height: 1px;
+        background-color: $color-secondary;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include media(md) {
+          width: 30px;
+        }
+      }
+
+      &::before {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+      
+      &::after {
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+
+      &:hover {
+        @include media(lg) {
+          background-color: $color-secondary;
+        }
+      }
+
+      &:hover::before,
+      &:hover::after {
+        @include media(lg) {
+          background-color: $color-primary;
+        }
+      }
+    }
+  }
+}

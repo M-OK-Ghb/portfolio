@@ -1,0 +1,28 @@
+// -------------------------------------------------------------------
+//  state.scss
+// -------------------------------------------------------------------
+@use "../helpers/mediaquery" as *;
+
+._underSmOnly {
+  @include media(sm) {
+    display: none;
+  }
+}
+
+._underMdOnly {
+  @include media(md) {
+    display: none;
+  }
+}
+
+._underLgOnly {
+  @include media(lg) {
+    display: none;
+  }
+}
+
+._underXlOnly {
+  @include media(xl) {
+    display: none;
+  }
+}

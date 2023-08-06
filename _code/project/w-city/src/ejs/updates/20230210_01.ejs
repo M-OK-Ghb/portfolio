@@ -1,0 +1,174 @@
+<% heading = "Spreading the Joy of Mobility" %>
+<% page = {
+  title: `Updates | ${heading}`,
+  description: "",
+  path: "/",
+  devPath: "../",
+  includePath: "../",
+  url: "",
+  name: "updates-detail"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates-detail">
+      <div id="js-hero" class="DetailHero is-before">
+        <div class="DetailHero__bg" style="background-image: url(../assets/images/updates/20230210_01/01.jpg);">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <p class="DetailHero__headingSub">Start-ups/Entrepreneurs</p>
+              <h1 class="Heading"><span><%= heading %></span></h1>
+              <div class="DetailHero__description">
+                <p>An industrial designer named Takamitsu Ikoma developed a light foldable motorbike called the TATAMEL BIKE. It folds up into a small convenient square and can be stored under a desk. Even with the increasingly common emergence of micro mobility projects, this one really stands out! Imagine the lifestyle and transportation infrastructure possibilities if everyone had a motorbike like this one.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="UpdatesDetail">
+          <div class="UpdatesDetail__content">
+            <div class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>How often do you need to travel a distance that’s a bit too much for a walk and a bit too close for a drive? Micro mobility is a fun resolution that comes into play for those in-between
+                      distances. Instead of over doing it on foot or squandering resources on a drive, solutions such as the TATAMEL BIKE, a foldable motorbike designed by Takamitsu Ikoma, offer short
+                      enjoyable outings where you can feel the wind in your hair as you get where you need to go without stress.</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>How does the TATAMEL BIKE foster happiness and human well-being?</em></p>
+                    <p>Babies and toddlers often have those mini cars that they love playing around with, right? Basically, kids just love things that they can ride on. As we grow up, most of us still want to experience the joy of the ride but in urban areas we rarely have that opportunity.</p>
+                    <p>I grew up in Azumino City (Nagano Prefecture) in Japan, and
+                      the motorbike I rode after I graduated high school was incredibly fun to take around. But once I entered the workforce, I no longer had many opportunities to do so. Especially when it comes to urban areas where you need to find parking–the financial burden is no joke!</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20230210_01/02.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #01` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>That’s why I decided to develop something affordable and compact that could be stored conveniently. <span class="--decoration">This motorbike brings back the joy of the ride and allows people to experience their childhood love of riding things.</span></p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>Can you describe some of the features of the TATAMEL BIKE?</em></p>
+                    <p>The greatest feature of the TATAMEL BIKE comes straight from its meaning in Japanese–it can tatameru, or be folded and change shape. But even beyond its sheer function, a lot of emphasis has also been placed on how much fun the bike is to use.</p>
+                    <p>On the surface, it can be customized to your personality and preferences by swapping out the bike’s side panel design.
+                      This is great for those wanting to show off their unique style or for those wanting to ride coordina ting with their friends. For example, there are many Toyota owners who like to customize their Land Cruiser and HiAce models. That kind of joy and culture of really embracing your lifestyle and showing off to each other just isn’t something that many small motorbike users are doing yet.</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20230210_01/03.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #02` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>To be honest, for me it feels a lot like putting together a Mini 4WD model race car. I’m aiming for the same level of fun and simple customization. However, on the other hand, pushing customization as a salespoint can only go so far. It’s clear that we’re now in an age where the fun factor alone isn’t enough to make a vehicle take off in popularity. For that reason, I think a more practical salespoint is that it's an EV with a smart battery.
+                      The fact that this is such a compact vehicle and can supply power
+                      anywhere, even without special charging infrastructure, is one of
+                      the greatest benefits.</p>
+                    <p>The TATAMELBIKE could be used for many different situations such as outdoor
+                      leisure activities like camping, after a natural disaster, or you could even bring it on a boat to an island without gas stations. In fact, you could even power it by fixing solar panels to the
+                      side! The future potential is huge and we already have an abundance of exciting and 
+                      practical ideas about how to expand its usage.</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>Which plans for the Woven City mechanism are you most excited about?</em></p>
+                    <p><span class="--decoration">When making something new , you inevitably run into challenges and go through a series of trial and error . What’s most important isn’t avoiding the challenges but shortening
+                      the path between the developmental stage, learning from the failures, and eventual success. To achieve that goal, it’s crucial to have the right environment that readily welcomes new challenges.</span></p>
+                    <p>Conditions are always frantic at a start-up and details often get lost in the shuffle. Woven City, with the benefit of Toyota’s wealth of accumulated knowledge when it comes to building vehicles, is the perfect opportunity to thoroughly investigate those details.</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20230210_01/04.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #01` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>In this era where micromobility itself has
+                      changed, I can’t help but think about how it will continue to evolve, and I wonder just how far that evolution can go. I’m looking forward to testing the limits on this specialized test
+                      course.There’s also the benefit of being able to receive advice about manufacturing from an informed and objective perspective.</p>
+                    <p>
+                      The other day, I had the opportunity to exhibit our work at Woven by Toyota, and we were able to get some incredibly high-level feedback from several engineers. Although the real voices of actual users at regular events are crucial and helpful, <span class="--decoration">hearing the expert opinions and critiques of experienced engineers who have an “inventor’s mind,” is an import ant
+                      advantage. For me, having the opportunity to utilize the exploratory mechanism of Woven City and to receive this breadth and depth of feedback is especially valuable.</span></p>
+                    <p>In addition to working on the hardware side, I’m also very much looking forward to working with the many highly talented software developers at Woven City. It's difficult for start-ups like us to take on large-scale software development and I look forward to collaboration on multiple fronts in the development of Woven City.</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>And finally , what are your ultimate goals?</em></p>
+                    <p>Small-scale manufacturers like us make most of our progress by fumbling forward. However, through Woven City, I hope to gain the know-how to reliably, yet rapidly, take the
+                      project from 1 to 100. If we can do that, then I am certain that we’ll be able to use micro mobility to improve the quality of life for everyone.</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20230210_01/05.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #04` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block --nameBlock">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>Takamitsu Ikoma<br>ICOMA Inc. CEO/Product Designer</em></p>
+                    <p>After working at a toymaker involved in designing transformable robots,
+                      Ikoma designed and developed robots as an engineer at two hardware
+                      start-ups. In 2020, he established ICOMA. His TATAMEL BIKE has received
+                      honors in the CES 2023 Innovation Awards.</p>
+                    <p style="text-decoration: underline;">Ikoma is an inventor who has taken part in the exhibition project held at Woven by Toyota. He has not yet decided whether he will join the Woven City pilot test being set up in the city of Susono, Shizuoka Prefecture.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <h2 data-animate class="Heading">Photo Gallery</h2>
+                <div class="Carousel js-slider">
+                  <div class="Carousel__list swiper-wrapper">
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20230210_01/01.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #01">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20230210_01/02.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #02">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20230210_01/03.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #03">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20230210_01/04.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #04">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20230210_01/05.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #05">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Carousel__controller">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

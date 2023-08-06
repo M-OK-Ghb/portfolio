@@ -1,0 +1,139 @@
+<% heading = "トヨタスクール" %>
+<% page = {
+  title: `Updates | ${heading}`,
+  description: "",
+  path: "/jpn/",
+  devPath: "../",
+  includePath: "../",
+  jpAssetsPath: "/",
+  devJpAssetsPath: "../../",
+  url: "",
+  name: "updates-detail"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates-detail">
+      <div id="js-hero" class="DetailHero is-before">
+        <div class="DetailHero__bg" style="background-image: url(../../assets/images/updates/20221223/01.jpg);">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span><%= heading %></span></h1>
+              <div class="DetailHero__description">
+                <p>Ｗoven Cityを建設中の静岡県裾野市の小学校に伺い、トヨタのクルマ作りや開発、Ｗoven Cityのことをお伝えする出前授業「トヨタスクール」を実施しました</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="UpdatesDetail">
+          <div class="UpdatesDetail__content">
+            <section class="UpdatesDetail__section">
+              <div class="Inner">
+                <div class="UpdatesDetail__sectionInner -narrow">
+                  <div data-animate class="UpdatesDetail__movie">
+                    <iframe width="560" height="315" data-cookieconsent="necessary" src="https://www.youtube.com/embed/swK8zk7xVzc" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <div class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>トヨタスクールとは？</em></p>
+                    <p>裾野市近隣の小学校を対象に、トヨタ自動車東日本（TMEJ）とトヨタ自動車東富士研究所が、「トヨタって何をしているの？」「クルマってどう作るの？」などを紹介する、1977年から続けている取り組みです。工場見学などを通じてこれまでに延べ約4万人もの小学生が参加し、今年から出前授業という形に変えて実施しました。</p>
+                    <p>2024～2025年に一部実証を開始する「実証実験の街」Woven Cityについても地域の子供たちにも知っていただきたいと思い、2022年度よりWoven Planetも参加させていただきました。</p>
+                    <p>今回は、12月9日富岡第一小学校で実施したトヨタスクールの内容をレポートいたします。</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221223/02.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #01` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>トヨタスクール参加にあたっての想い</em></p>
+                    <p>「自分以外の誰かの幸せのために、未来の当たり前をつくる」というWoven Cityの考え方を、1人でも多くの地域の子どもたちに共感してもらえたらと思っています。</p>
+                    <p>将来を担う子どもたち自身に、Woven Cityは自分のやりたいことや想いを実現できたり、未来の当たり前を一緒に作っていける場所なんだ、という期待感を持ってほしいです。そして子どもたちが未来を考える1つのきっかけになればという想いから、トヨタスクールへ参加しました。</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221223/03.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #02` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>Ｗoven Cityの目指す未来を子どもたちが体験！？</em></p>
+                    <p>実際の授業では、「Woven Cityにはだれが住むの？」というクイズを子どもたちにも考えてもらいました。</p>
+                    <p>トヨタの社員だけでなく、裾野市民だけでもなく、Woven Cityで働く人、住む人、訪れる人みんなが、「誰かのためになりたい」という想いをもつ発明家だと伝えました。</p>
+                    <p>さらに、「自分以外の誰かのために」とはどういうことか、を実際に体験してもらえるよう、高齢者も安全に乗ることのできる歩行領域モビリティ “C+Walk”や、荷物を届けてくれる生活支援ロボット“HSR”にも触れてもらいました。</p>
+                    <p>授業を終えた子どもたちは「Woven Cityができるのが楽しみ。人のために頑張る、という考え方がすごく素敵だと思いました。」と、未来への期待感を持って話していました。</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221223/04.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #03` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>地域の方々とともにつくる未来へ</em></p>
+                    <p>TMEJからは、クルマの製造工程をクイズ形式で学べる授業、トヨタ自動車東富士研究所からは、性能試験や技術開発など研究所で実際にやっていることなどを伝える授業を行いました。</p>
+                    <p>トヨタ自動車東富士研究所の野田さんは、「子どもたちに、将来を自分たちがつくっていくんだ、と感じていただけたらと」と話しました。トヨタスクールのこの取り組みを通じて、これからも地元にあるトヨタのこと、Woven Cityのことに少しずつ興味をもっていただき、地域のみなさまに愛される「町いちばん」の会社を目指し、地域のみなさまとともに、新しい未来を創る活動にしていけたらと思います。</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221223/05.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #04` %>">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <h2 data-animate class="Heading">Photo Gallery</h2>
+                <div class="Carousel js-slider">
+                  <div class="Carousel__list swiper-wrapper">
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221223/01.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #01">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221223/02.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #02">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221223/03.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #03">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221223/04.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #04">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221223/05.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #05">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Carousel__controller">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

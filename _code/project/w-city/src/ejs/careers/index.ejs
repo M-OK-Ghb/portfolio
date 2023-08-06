@@ -1,0 +1,55 @@
+<% page = {
+  title: "Careers",
+  description: "Help us build the future fabric of life in a real-life mobility testing ground! We want to partner with people who are as thrilled as we are to work on a mobility test course of the future.",
+  path: "/",
+  devPath: "../",
+  includePath: "../",
+  url: "",
+  name: "careers"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="careers">
+      <div id="js-hero" class="DetailHero -careers is-before">
+        <div class="DetailHero__bg">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span>Careers</span></h1>
+              <div class="DetailHero__description">
+                <p>Help us build the future fabric of life in a real-life mobility testing ground!<br>We want to partner with people who are as thrilled as we are to work on a mobility test course of the future.</p>
+                <p>Success starts by celebrating and fostering our team member's individual skills, talents, and ideas.</p>
+              </div>
+              <div class="DetailHero__footer">
+                <%- include(`${page.includePath}_components/explore-all-job-link.ejs`); %>
+              </div>    
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <%- include(`${page.includePath}_components/vision.ejs`); %>
+        <%- include(`${page.includePath}_components/mission.ejs`); %>
+        <%- include(`${page.includePath}_components/values.ejs`); %>
+        <%- include(`${page.includePath}_components/how-we-work.ejs`); %>
+        <%- include(`${page.includePath}_components/team.ejs`); %>
+        <%- include(`${page.includePath}_components/topics.ejs`); %>
+        <%- include(`${page.includePath}_components/office.ejs`); %>
+        <div data-animate class="Careers__pageFooter">
+          <div class="Inner">
+            <div class="Careers__pageFooterInner">
+              <%- include(`${page.includePath}_components/explore-all-job-link.ejs`); %>
+            </div>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/movie-modal.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

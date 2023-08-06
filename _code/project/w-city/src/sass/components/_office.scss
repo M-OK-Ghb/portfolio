@@ -1,0 +1,23 @@
+// -------------------------------------------------------------------
+// 	office.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Office {
+  @at-root {
+    & {
+      background-color: $color_tertiary;
+      padding: 80px 0;
+      @include media(md) {
+        padding: 180px 0 160px;
+      }
+    }
+  }
+}

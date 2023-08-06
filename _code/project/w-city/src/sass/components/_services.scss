@@ -1,0 +1,120 @@
+// -------------------------------------------------------------------
+// 	services.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Services {
+  @at-root {
+    & {
+      background-color: $color-primary;
+      color: $color_secondary;
+      padding: 80px 0;
+      @include media(lg) {
+        padding: 180px 0;
+      }
+    }
+
+    .Services__inner {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+      @include media(md) {
+        padding: 0 40px;
+        margin: 0 auto;
+        max-width: 600px;
+      }
+      @include media(lg) {
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: $content-width_desktop;
+      }
+    }
+
+    .Services__detail {
+      display: contents;
+      @include media(lg) {
+        display: initial;
+        flex-basis: calc(570 / 1280 * 100%);
+      }
+      .Heading {
+        order: -1;
+        font-size: 26px;
+        @include media(lg) {
+          order: initial;
+          font-size: 34px;
+        }
+      }
+    }
+
+    .Services__description {
+      line-height: 1.62;
+      margin-top: 20px;
+      order: -1;
+      @include media(lg) {
+        line-height: 1.6;
+        margin-top: 43px;
+        order: initial;
+      }
+      
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+      
+      p {
+        
+      }
+
+      @include jp {
+        line-height: 1.8;
+      }
+    }
+
+    .Services__image {
+      order: -1;
+      margin: 40px auto 0;
+      @include media(lg) {
+        flex-basis: 50%;
+        order: initial;
+        margin-top: 0;
+      }
+
+      img {
+
+      }
+    }
+
+    .Services__footer {
+      margin-top: 60px;
+      text-align: center;
+      @include media(lg) {
+        margin-top: 80px;
+        text-align: initial;
+      }
+    }
+
+    .Services__pageHeader {
+      padding: 80px 0;
+      margin: 0 auto;
+      max-width: 800px;
+      @include media(md) {
+        padding: 140px 0 180px;
+      }
+    }
+
+    .Services__mainImage {
+      max-width: 640px;
+      margin: 0 auto;
+      
+      img {
+
+      }
+    }
+  }
+}

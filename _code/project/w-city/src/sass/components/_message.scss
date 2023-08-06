@@ -1,0 +1,277 @@
+// -------------------------------------------------------------------
+// 	message.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+@use "../helpers/functions" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Message {
+  @at-root {
+    & {
+      padding: 80px 0;
+      @include media(md) {
+        padding: 180px 0 180px;
+      }
+    }
+
+    .Message__feature {
+      @include media(lg) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .Message__featureDetail {
+      @include media(lg) {
+        flex-basis: calc(600 / 1280 * 100%);
+      }
+    }
+
+    .Message__featureDescription {
+      font-size: 16px;
+      margin-top: 20px;
+      line-height: 1.5;
+      @include media(md) {
+        margin-top: 43px;
+      }
+      @include media(lg) {
+        font-size: 20px;
+      }
+      
+      p {
+        
+      }
+      
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+      
+      @include jp {
+        line-height: 1.8;
+        @include media(md) {
+          margin-top: 43px;
+        }
+      }
+    }
+
+    .Message__featureMovie {
+      margin-top: 40px;
+      @include media(md) {
+        margin-top: 60px;
+      }
+      @include media(lg) {
+        flex-basis: calc(600 / 1280 * 100%);
+        margin-top: 0;
+      }
+    }
+
+    .Message__featureButton {
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      padding-top: calc(210 / 335 * 100%);
+      position: relative;
+      background: transparent;
+      border: 0;
+      width: 100%;
+      @include media(md) {
+        padding-top: calc(356 / 600 * 100%);
+        margin-top: 0;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(243, 244, 243, 0.25));
+        z-index: 1;
+      }
+
+      &::after {
+        content: "";
+        background-image: url(#{$image-path}common/icon_play.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        @include media(md) {
+          width: 70px;
+          height: 70px;
+        }
+      }
+
+      &:hover {
+        @include media(lg) {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .Message__leadership {
+      margin-top: 80px;
+      @include media(md) {
+        margin-top: 180px;
+      }
+    }
+
+    .Message__list {
+      margin-top: 80px;
+      @include media(md) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 100px;
+      }
+    }
+
+    .Message__item {
+      width: 100%;
+      &:not(:first-child) {
+        margin-top: 80px;
+      }
+      @include media(md) {
+        width: calc(600 / 1280 * 100%);
+        &:not(:first-child) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .Message__itemInner {
+      display: flex;
+      flex-direction: column;
+      @include media(md) {
+        height: 100%;
+      }
+    }
+
+    .Message__itemHeading {
+      margin-top: 27px;
+      @include media(md) {
+        margin-top: 48px;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+        line-height: $line-height_base;
+      }
+
+      &.--citypressJpn {
+        em {
+          br {
+            display: none;
+            @include media(md) {
+              display: block;
+            }
+          }
+        }
+      }
+      
+      span {
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        @include media(md) {
+          font-size: vw(18, 1024);
+        }
+        @include media(lg) {
+          font-size: vw(22, 1280);
+        }
+        @include media(xl) {
+          font-size: 22px;
+        }
+
+        &:only-of-type {
+          @include media(md) {
+            padding-bottom: calc(#{vw(18, 1024)} * 1.5);
+          }
+          @include media(lg) {
+            padding-bottom: calc(#{vw(22, 1280)} * 1.5);
+          }
+          @include media(xl) {
+            padding-bottom: 33px;
+          }
+        }
+      }
+
+      em {
+        display: block;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 600;
+        margin-top: 7px;
+        @include media(md) {
+          font-size: 40px;
+          margin-top: 2px;
+        }
+      }
+    }
+
+    .Message__itemImage {
+      padding-top: calc(246 / 335 * 100%);
+      position: relative;
+      order: -1;
+      overflow: hidden;
+      @include media(md) {
+        padding-top: calc(440 / 600 * 100%);
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .Message__itemDescription {
+      margin-top: 16px;
+      @include media(md) {
+        margin-top: 14px;
+      }
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      p {
+        
+      }
+    }
+
+    .Message__itemFooter {
+      margin-top: 40px;
+      text-align: center;
+      @include media(md) {
+        margin-top: auto;
+        padding-top: 50px;
+        text-align: initial;
+      }
+    }
+  }
+}

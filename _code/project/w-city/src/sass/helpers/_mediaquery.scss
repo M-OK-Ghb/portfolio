@@ -1,0 +1,52 @@
+// -------------------------------------------------------------------
+//  mediaquery.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+
+@mixin media($mediaSize) {
+  @if $mediaSize == sm {
+    @media (min-width: #{map-get($breakpoints, sm)}) {
+      @content;
+    }
+  } @else if $mediaSize == md {
+    @media (min-width: #{map-get($breakpoints, md)}) {
+      @content;
+    }
+  } @else if $mediaSize == lg {
+    @media (min-width: #{map-get($breakpoints, lg)}) {
+      @content;
+    }
+  } @else if $mediaSize == xl {
+    @media (min-width: #{map-get($breakpoints, xl)}) {
+      @content;
+    }
+  } @else if $mediaSize == landscape {
+    @media only screen and (orientation: landscape) {
+      @content;
+    }
+  }
+}
+
+@mixin mq($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin mq-min($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin mq-max($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin mq-under($under-width) {
+  @media not all and (min-width: $under-width) {
+    @content;
+  }
+}

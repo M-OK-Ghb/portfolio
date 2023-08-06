@@ -1,0 +1,156 @@
+<% heading = "“情報モビリティ”で未来のライフスタイルを実現する" %>
+<% page = {
+  title: `Updates | ${heading}`,
+  description: "",
+  path: "/jpn/",
+  devPath: "../",
+  includePath: "../",
+  jpAssetsPath: "/",
+  devJpAssetsPath: "../../",
+  url: "",
+  name: "updates-detail"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates-detail">
+      <div id="js-hero" class="DetailHero is-before">
+        <div class="DetailHero__bg" style="background-image: url(../../assets/images/updates/20230210_02/01.jpg);">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <p class="DetailHero__headingSub">トヨタグループの開発者</p>
+              <h1 class="Heading"><span><%= heading %></span></h1>
+              <div class="DetailHero__description">
+                <p>Woven Cityは、モビリティ（＝移動）によって幸せを量産するべく、さまざまな発明家が技術・サービスの開発に取り組むためのしくみ。このWoven CityのPhase1に先駆けて、遠く離れた人同士のコミュニケーションをより豊かにしようとビジネス開発を進めるトヨタグループの発明家がいます。果たして彼らは誰のための、どんな幸せを目指しているのでしょうか。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="UpdatesDetail">
+          <div class="UpdatesDetail__content">
+            <div class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>「Mobility for All」を大きなテーマとして掲げ、さまざまなアプローチから“モビリティの拡張”に取り組んでいるWoven City。その大テーマに携わるチームの一つとして、なかでも“情報のモビリティ”の拡張に着目し、次世代の遠隔コミュニケーションの研究開発を進めているのが、Infotainmentチームです。そこに所属する谷愛子さんとホルヘ・ペラエズさんにお話を聞きました。</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>“情報のモビリティ”とはなんですか？</em></p>
+                    <p>谷さん：現状のオンラインのコミュニケーションは直接的な言語による対話が中心となっていますが、ある論文によると、人と人のコミュニケーションのうち8割以上はノンバーバル（非言語）だとされています。実際、肩を叩いて気持ちを伝えたり、同じ時間・空間を過ごすことで仲間意識が芽生えたりと、私たちは必ずしも言語だけで相互のつながりを感じているわけではありません。相手の存在感や思いやりなど、もっと色々な要素が絡み合って、私たちはコミュニケーションしています。</p>
+                    <p>しかし、こういった情報はリモートでの再現が難しく、一部を除いてこれまでデジタル技術による試みはほとんど行われていません。であれば逆に、この“現代の遠隔コミュニケーション技術では伝えられない情報”を移動させる＝モビリティさせることで、より心がつながり、より豊かに、より幸せになるコミュニケーションを生み出せるのではないでしょうか。このような“情報のモビリティ”の実現に向けて日々研究開発を続けています。</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_02/02.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #01` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>実は、今手がけているこの“情報のモビリティ”にも、トヨタ自動車でのロボットの研究・開発で培った、「リモートにおける人同士の会話」や「ロボットと人の会話」の経験が活かされています。</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>“情報のモビリティ”は、どんな人のどのような幸せにつながると思いますか？</em></p>
+                    <p>ホルヘさん：私はスペイン出身ですが、単身で日本に来て働いていて、家族はスペインに住んでいます。家族とはリモートで会話することが多いです。音声や映像の画質は良くなっていても、やはり同じ空間にいるからこそ感じられていた様々な要素があったと強く感じています。世の中は、リモートだけで会うことが今や当たり前のことになっています。この技術を通じて、私と同じように<span class="--decoration">色々な事情で大事な人と物理的に同じ空間にいられない時でも、「心がつながる」幸せを増やしていけるのではないかと思っています。</span></p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_02/03.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #02` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>なるほど。ではそれを実現する技術面について教えてください。</em></p>
+                    <p>ホルヘさん：「同じ時間に、同じ体験」をすることで、人はつながりを感じることが分かっています。これを、リモートに相手がいる状況において実現できれば、遠隔にいる2人のつながりが深くなるのではないか、という仮説を我々は持っています。</p>
+                    <p>トヨタはものづくり企業であり、モノの動きをセンシングしたり、動作させたりといった技術を多く保有しています。私たちはそれを活用し、3D技術も組み合わせて「人やモノの動き」を相手に伝えることで、離れているのに“一緒にいるような体験”を産み出せるのではないかと考えています。</p>
+                    <p>その際、やがて普及するといわれている「XR グラス」の使用は避けたいと考えています。子どもや高齢者など最新のガジェットに不慣れな人にも自然に没入していただけるよう裸眼でも立体感のある映像を映すことができる装置を使った実験を行っているのです。今の3次元の仮想空間世界を、より一般化して誰でも使えるようにしつつ、新たな“情報のモビリティ”を実現していきます。</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_02/04.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #03` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>では具体的に、Woven Cityのしくみをどのように活用していきたいとお考えですか？</em></p>
+                    <p>ホルヘさん：今後、サービス・ソリューションの改良を重ね精度を上げていくためには、<span class="--decoration">さまざまなバックグラウンドを持つ人々（研究者、起業家、投資家、住民などのユーザー）との共創も同様に不可欠だと考えています。</span>まさにその点を、Woven City を舞台に行えたらと思っています。まったく別の専門領域を持つプロフェッショナルの方の視点であったり、ユーザーからの思いも寄らない使い方のアイディアであったりと、触れ合うことで開発スピードが加速したり、また、今は見えていない社会的な課題の解決に活用できる道を模索できるのではないかと思います。</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>谷さん：以前、習字における身体や筆の動きを伝達するプロトタイプを創り、ワークショップで子どもたちに試してもらう機会を設けました。そこで遠隔で習字を体験した子どもの一人が「習字は嫌いだし、学校の習字の授業はつまらない」けれど、私たちのテクノロジーで体験した習字は、先生や友だちが学校よりも身近にいて寄り添ってくれる感じがして、すごく楽しかったといってくれたのがとても印象的でした。</p>
+                    <p>当初、まだ開発途上の技術を体験してもらうことに不安もありましたが、子どもたちは「自分たちも開発に携われていることにワクワクする」といってくれました。<span class="--decoration">実際の将来のユーザーに利用してもらうことで“カイゼン”を繰り返しながら、いろんな人たちと一緒に良いものをつくっていきたい、という思い。まさにこの思いをWoven Cityでも実現したいと再認識しました。</span></p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_02/05.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #04` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>私たちは、デジタルが対面のリアルなコミュニケーションに対して持つマイナス部分を埋めるのではなく、まったく新しいベクトルの、まったく新しいサービス・ソリューションを生み出すチャレンジを日々続けています。それをWoven Cityという街レベルのスケールで実験していくことで、利用者の声をダイレクトに反映しながら、よりよく生活するための新たな価値を創造できればと考えています。それこそが、“情報のモビリティ”という概念自体を今から将来に向かって定義していく取り組みにつながるのだと思っています。</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block --nameBlock">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>谷 愛子　Aiko Tani</em></p>
+                    <p>トヨタ自動車で海外営業部国担当（カントリマネージャー）や商品企画を担当。2021年よりウーブン・アルファで現プロジェクトに携わる。</p>
+                    <p><em>ホルヘ・ペラエズ　Jorge Pelaez</em></p>
+                    <p>インフラエンジニアとして大学卒業後、ARゲームを開発（共にスペイン）。2020年より、ウーブン・アルファにてフロントエンドのソフトウェアを担当。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <h2 data-animate class="Heading">Photo Gallery</h2>
+                <div class="Carousel js-slider">
+                  <div class="Carousel__list swiper-wrapper">
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_02/01.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #01">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_02/02.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #02">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_02/03.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #03">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_02/04.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #04">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_02/05.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #05">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Carousel__controller">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

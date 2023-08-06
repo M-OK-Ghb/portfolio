@@ -1,0 +1,69 @@
+// -------------------------------------------------------------------
+// 	pagination.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Pagination {
+  @at-root {
+    & {
+
+    }
+
+    .Pagination__list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .Pagination__item {
+      margin-right: 10px;
+      margin-bottom: 10px;
+    }
+
+    .Pagination__itemLink {
+      font-weight: 600;
+      color: $color_secondary;
+      line-height: 1;
+      text-align: center;
+      text-decoration: none;
+      background-color: $color_primary;
+      border: 1px solid $color_primary;
+      border-radius: 50%;
+      box-sizing: border-box;
+      padding: 13px 0;
+      min-width: 44px;
+      display: inline-block;
+      user-select: none;
+      transition: color 0.3s ease, background-color 0.3s ease;
+      @include media(md) {
+        padding: 19px 0;
+        min-width: 60px;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+
+      &:hover {
+        @include media(lg) {
+          color: $color_primary;
+          background-color: $color_secondary;
+        }
+      }
+
+      &.-current {
+        color: $color_primary;
+        background-color: $color_secondary;
+        border: 1px solid $color_primary;
+        pointer-events: none;
+      }
+    }
+  }
+}

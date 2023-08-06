@@ -1,0 +1,147 @@
+<% heading = "安全祈願祭" %>
+<% page = {
+  title: `Updates | ${heading}`,
+  description: "",
+  path: "/jpn/",
+  devPath: "../",
+  includePath: "../",
+  jpAssetsPath: "/",
+  devJpAssetsPath: "../../",
+  url: "",
+  name: "updates-detail"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates-detail">
+      <div id="js-hero" class="DetailHero is-before">
+        <div class="DetailHero__bg" style="background-image: url(../../assets/images/updates/20221014/01.jpg);">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span><%= heading %></span></h1>
+              <div class="DetailHero__description">
+                <p>2022年10月10日、<br>Woven City Phase1安全祈願祭が執り行われました。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="UpdatesDetail">
+          <div class="UpdatesDetail__content">
+            <div class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>2021年2月23日の地鎮祭から約1年9カ月の歳月を経て、10月10日安全祈願祭を行いました。Woven Cityの中で最初に運用開始を目指すPhase1の建築本体工事が、2022年11月よりいよいよ始まります。</p>
+                  </div>
+                  <di data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221014/02.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の写真 #01` %>">
+                  </di>
+                </div>    
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <em>Woven Planet CEO James Kuffnerコメント</em>
+                    <p>
+                      多くの皆様のご協力のもと、コロナ禍においても、滞りなくプロジェクトを進めてくることができました。<br>
+                      Woven Cityはモビリティのためのテストコースです。<br>
+                      トヨタがテストコースでクルマをテストするように、Woven Cityでは改善を重ねながら、「未来の当たり前」になるような新しいモノやサービス、仕組みなどを発明していく実証実験の街です。
+                    </p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221014/03.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の写真 #02` %>">
+                  </div>
+                </div>    
+                <div class="UpdatesDetail__block">
+                  <div  data-animate class="UpdatesDetail__paragraph">
+                    <p>
+                      裾野市のWoven Cityでの実証を通じて生まれるヒトを中心とした新しい価値は、世界へ、そして未来へと羽ばたいていきます。<br>
+                      それはいずれ、トヨタが目指す「幸せの量産」に繋がっていくと信じています。<br>
+                      トヨタはこれまで「地域の皆様から愛され頼りにされる、この町いちばんの会社になりたい」という想いを持ち続けてきました。形を変えてWoven Cityになったとしてもこの想いを決して忘れず、地域の皆様とともに、未来に向けた実証実験の場づくりに取り組んでまいりたいと思います。
+                    </p>
+                  </div>
+                </div>    
+              </div>
+            </div>
+            <section class="UpdatesDetail__section">
+              <div class="Inner">
+                <div class="UpdatesDetail__sectionInner -narrow">
+                  <h2 data-animate class="UpdatesDetail__sectionHeading">Woven Cityの歩み</h2>
+                  <div data-animate class="History__paragraph">
+                    <p>Woven Cityプロジェクト発足から地鎮祭、造成工事、そしてWoven City Phase1安全祈願祭当日までの様子をまとめました。</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__movie">
+                    <iframe width="560" height="315" data-cookieconsent="necessary" src="https://www.youtube.com/embed/usGFhijGoio?rel=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <h2 data-animate class="Heading">Photo Gallery</h2>
+                <div class="Carousel js-slider">
+                  <div class="Carousel__list swiper-wrapper">
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221014/gallery_01.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #01">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221014/gallery_02.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #02">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221014/gallery_03.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #03">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221014/gallery_04.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #04">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221014/gallery_05.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #05">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221014/gallery_06.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #06">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221014/gallery_07.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #07">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Carousel__controller">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+              <div data-animate class="Carousel__footer">
+                <div class="Inner">
+                  <div class="Button__wrapper -center">
+                    <a href="<%= `${page.path}media-kits/` %>" class="Button -primary">Media Kits</a>
+                  </div>
+                </div>
+              </div>        
+            </section>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

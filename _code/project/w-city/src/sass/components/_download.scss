@@ -1,0 +1,58 @@
+// -------------------------------------------------------------------
+// 	download.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Download {
+  @at-root {
+    & {
+      background-color: $color_tertiary;
+    }
+
+    .Download__inner {
+      padding: 40px 20px;
+      @include media(md) {
+        padding: 80px;
+      }
+    }
+
+    .Download__content {
+
+    }
+
+    .Download__description {
+      margin-top: 30px;
+      @include media(md) {
+        margin-top: 50px;
+      }
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      p {
+        
+      }
+    }
+
+    .Download__accept {
+      margin-top: 1em;
+      position: relative;
+    }
+
+    .Download__footer {
+      text-align: center;
+      margin-top: 60px;
+      @include media(md) {
+        margin-top: 80px;
+      }
+    }
+  }
+}

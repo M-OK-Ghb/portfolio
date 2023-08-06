@@ -1,0 +1,37 @@
+<% page = {
+  title: "TOP | What is Woven City",
+  description: "",
+  path: "/jpn/",
+  devPath: "./",
+  includePath: "./",
+  jpAssetsPath: "/",
+  devJpAssetsPath: "../",
+  url: "",
+  name: "top"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="top">
+      <%- include(`${page.includePath}_components/hero.ejs`); %>
+      <%- include(`${page.includePath}_components/mission.ejs`); %>
+      <%- include(`${page.includePath}_components/leaflet.ejs`); %>
+      <%- include(`${page.includePath}_components/citypress.ejs`); %>
+      <%- include(`${page.includePath}_components/woven-city.ejs`); %>
+      <%- include(`${page.includePath}_components/services.ejs`); %>
+      <%- include(`${page.includePath}_components/message.ejs`); %>
+      <%- include(`${page.includePath}_components/updates.ejs`); %>
+      <%- include(`${page.includePath}_components/careers.ejs`); %>
+      <div class="Spacer"></div>
+      <%- include(`${page.includePath}_components/partners.ejs`); %>
+      <%- include(`${page.includePath}_components/faq.ejs`); %>
+      <%- include(`${page.includePath}_components/movie-modal.ejs`); %>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

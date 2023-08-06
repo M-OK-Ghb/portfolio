@@ -1,0 +1,53 @@
+<% page = {
+  title: "Terms",
+  description: "",
+  path: "/jpn/",
+  devPath: "../",
+  includePath: "../",
+  jpAssetsPath: "/",
+  devJpAssetsPath: "../../",
+  url: "",
+  name: "terms"
+} %>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="terms">
+      <div id="js-hero" class="DetailHero -terms is-before">
+        <div class="DetailHero__bg">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span>Terms</span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="Terms">
+          <div class="Terms__content">
+            <div class="Inner -narrow">
+              <section class="Terms__section">
+                <h2 class="Terms__heading">個人情報</h2>
+                <div class="Terms__description">
+                  <p>ウーブン・バイ・トヨタ株式会社（以下、当社といいます）は、当ウェブサイトのご利用にあたってご提供いただいた個人情報を、個人情報保護に関する基本方針（<a href="https://woven.toyota/jp/privacy-notice/" target="_blank" rel="noopener noreferrer">https://woven.toyota/jp/privacy-notice/</a>）に従い、取得し、取り扱います。また、当社は、ご提供いただいた個人情報を、Woven Cityプロジェクトの、当社提携会社及び提携候補会社に提供させていただきます。</p>
+                </div>
+              </section>
+              <section class="Terms__section">
+                <h2 class="Terms__heading">サイトコンテンツ</h2>
+                <div class="Terms__description">
+                  <p>当社は、お客様から郵送、電子メールまたは当ウェブサイトを通じて提供いただいた、文章、画像、図画、アニメーション、論文、映像、音声などのすべての情報（以下、お客様コンテンツといいます）の正確性、完全性又は品質を保証するものではありません。個人を特定できる情報を除き、お客様から電子メールまたは当ウェブサイトを通じて提供された情報は、機密情報ではないとみなし、当社は、何らの制限なく当該情報を、複製、利用、開示及び配布することができるものとします。当社は、開発、製造、マーケティングを含むあらゆる目的で、当該情報に含まれるアイデア、コンセプト、ノウハウ又は技術を自由に利用できるものとします。</p>
+                </div>
+              </section>
+              <em class="Terms__note">本ウェブサイトを通じてのメッセージの提出は、当社との提携を保証するものではありません。</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

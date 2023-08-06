@@ -1,0 +1,20 @@
+<div class="Updates__pickup">
+  <div class="Inner">
+    <div data-animate class="Updates__pickupInner">
+      <div class="Updates__pickupDetail">
+        <% if (page.name == 'top') {%>
+          <h3 class="Updates__itemHeading"><%= pickup.heading %></h3>
+          <span class="Updates__itemDate"><time datetime="<%= pickup.dateTime %>"><%= pickup.date %></time></span>
+          <p class="Updates__itemFooter"><a href="<%= `./updates${pickup.url}` %>" class="TextLink" <% if (pickup.targetBlank == true) {%>target="_blank" rel="noopener noreferrer"<%} %>><%= pickup.linkLabel %></a></p>
+        <% } else if (page.name == 'updates') { %>
+          <h2 class="Updates__itemHeading"><%= pickup.heading %></h2>
+          <span class="Updates__itemDate"><time datetime="<%= pickup.dateTime %>"><%= pickup.date %></time></span>
+          <p class="Updates__itemFooter"><a href="<%= `.${pickup.url}` %>" class="TextLink" <% if (pickup.targetBlank == true) {%>target="_blank" rel="noopener noreferrer"<%} %>><%= pickup.linkLabel %></a></p>
+        <% } %>
+      </div>
+      <figure class="Updates__pickupImage">
+        <img src="<%= `${page.jpAssetsPath}assets/images/updates/${pickup.thumbnail}` %>" decoding="async" loading="lazy" alt="article thumbnail">
+      </figure>
+    </div>
+  </div>
+</div>

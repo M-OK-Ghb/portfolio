@@ -1,0 +1,12 @@
+@use 'sass:math';
+@use "../helpers/variables" as *;
+
+@function vw($value, $root) {
+  $mathVW: math.div($value, $root) * 100vw;
+  @return math.div(round($mathVW * 10000), 10000); // （任意）四捨五入して小数点第4位まで出力
+}
+
+@function per($value, $root) {
+  $mathPER: math.div($value, $root) * 100%;
+  @return math.div(round($mathPER * 10000), 10000); // （任意）四捨五入して小数点第4位まで出力
+}

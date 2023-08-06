@@ -1,0 +1,51 @@
+<% page = {
+  title: "Terms",
+  description: "",
+  path: "/",
+  devPath: "../",
+  includePath: "../",
+  url: "",
+  name: "terms"
+} %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="terms">
+      <div id="js-hero" class="DetailHero -terms is-before">
+        <div class="DetailHero__bg">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span>Terms</span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="Terms">
+          <div class="Terms__content">
+            <div class="Inner -narrow">
+              <section class="Terms__section">
+                <h2 class="Terms__heading">Privacy</h2>
+                <div class="Terms__description">
+                  <p>Woven by Toyota, Inc. (hereinafter referred to as "the Company") will obtain and handle personal information provided by you when using this website in accordance with our basic policy on the protection of personal information (<a href="https://woven.toyota/en/privacy-notice/" target="_blank" rel="noopener noreferrer">https://woven.toyota/en/privacy-notice/</a>). In addition, we will share your personal information to our partners and potential partners of the Woven City Project.</p>
+                </div>
+              </section>
+              <section class="Terms__section">
+                <h2 class="Terms__heading">Site Content</h2>
+                <div class="Terms__description">
+                  <p>You are solely responsible for all the content including, but not limited to text, photographs, caricatures, illustrations, designs, icons, articles, audio clips, and video clips (collectively, User Content) that you post, e-mail, or otherwise transmit via this Site. The Company does not control User Content posted or otherwise transmitted via this Site and the Company does not guarantee the accuracy, integrity, or quality of such User Content. Any communications you send to this Site or otherwise to the Company by electronic mail, with the exception of personally identifiable information, shall be deemed to be non-confidential and the Company shall have no obligation of any kind with respect to such information and shall be free to reproduce, use, disclose, and distribute the information to others without limitation. We shall be free to use any ideas, concepts, know-how or techniques contained in such information for any purpose whatsoever including but not limited to developing, manufacturing and marketing products incorporating such information.</p>
+                </div>
+              </section>
+              <em class="Terms__note">Submission of a partnering interest of the Woven City is not a guarantee of approval or commitment of any kind of partnering with the Company.</em>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

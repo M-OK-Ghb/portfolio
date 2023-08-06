@@ -1,0 +1,197 @@
+// -------------------------------------------------------------------
+//  history.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+      
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.History {
+  @at-root {
+    & {
+
+    }
+
+    .History__content {
+      padding: 80px 0;
+      @include media(md) {
+        padding: 90px 0;
+      }
+    }
+
+    .History__section {
+      &:not(:first-child) {
+        margin-top: 80px;
+        @include media(md) {
+          margin-top: 90px;
+        }
+      }
+
+      &.-sub {
+        margin-top: 1em;
+      }
+    }
+
+    .History__sectionInner {
+      @include media(md) {
+        max-width: 850px;
+        margin: 0 auto;
+      }
+
+      > *:nth-child(2) {
+        margin-top: 40px;
+        @include media(md) {
+          margin-top: 60px;
+        }
+      }
+    }
+
+    .History__heading {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 1.33;
+      @include media(md) {
+        font-size: 40px;
+      }
+
+      .-sub & {
+        font-size: 16px;
+        font-weight: 600;
+        @include media(md) {
+          font-size: 20px;
+        }
+      }
+
+      &.-large {
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 1;
+        @include media(lg) {
+          font-size: 60px;
+        }  
+      }
+    }
+
+    .History__paragraph {
+      line-height: 1.75;
+      margin-top: 1em;
+      @include media(md) {
+        line-height: 1.9;
+      }
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      p {
+
+      }
+
+      em {
+        font-weight: 500;
+        font-style: normal;
+        display: block;
+      }
+    }
+
+    .History__footer {
+      background-color: $color_tertiary;
+      padding: 90px 0;
+      @include media(lg) {
+        padding: 180px 0;
+      }
+    }
+
+    .History__footerContent {
+      margin-top: 60px;
+      @include media(lg) {
+        margin-top: 100px;
+      }
+    }
+
+    .History__block {
+      display: flex;
+      flex-direction: column-reverse;
+      @include media(lg) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      
+      &:not(:first-child) {
+        margin-top: 60px;
+        @include media(lg) {
+          margin-top: 90px;
+        }
+      }
+
+      &.-reverse {
+        @include media(lg) {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+
+    .History__footerParagraph {
+      line-height: 1.75;
+      margin-top: 40px;
+      @include media(lg) {
+        line-height: 1.9;
+        flex-basis: calc(600 / 1280 * 100%);
+        margin-top: 0;
+      }
+
+      p {
+
+      }
+
+      em {
+        font-weight: 500;
+        font-style: normal;
+        display: block;
+      }
+    }
+
+    .History__movie {
+      padding-top: calc(188 / 335 * 100%);
+      flex-basis: 100%;
+      position: relative;
+      @include media(lg) {
+        flex-basis: calc(600 / 1280 * 100%);
+        padding-top: calc(333 / 1280 * 100%);
+        margin-top: 0;
+      }
+      
+      iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+    
+    .History__image {
+      padding-top: calc(223 / 335 * 100%);
+      position: relative;
+      flex-basis: 100%;
+      overflow: hidden;
+      @include media(lg) {
+        padding-top: calc(400 / 1280 * 100%);
+        flex-basis: calc(600 / 1280 * 100%);
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+}

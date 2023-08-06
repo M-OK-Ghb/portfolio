@@ -1,0 +1,316 @@
+// -------------------------------------------------------------------
+// 	partners.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Partners {
+  @at-root {
+    & {
+      background-color: $color_tertiary;
+      padding: 60px 0;
+      @include media(lg) {
+        padding: 100px 0;
+      }
+    }
+
+    .Partners__detail {
+      max-width: 955px;
+    }
+
+    .Partners__description {
+      line-height: 1.62;
+      margin-top: 20px;
+      @include media(md) {
+        line-height: 1.5;
+        margin-top: 28px;
+      }
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      p {
+        
+      }
+
+      @include jp {
+        line-height: 1.8;
+      }
+    }
+
+    .Partners__footer {
+      margin-top: 40px;
+      text-align: center;
+      @include media(md) {
+        margin-top: 50px;
+        text-align: initial;
+      }
+    }
+
+    .Partners__form {
+      padding: 80px 0;
+      @include media(lg) {
+        padding: 140px 0 180px;
+      }
+    }
+
+    .Partners__formInner {
+      padding: 0 20px;
+      width: 100%;
+      box-sizing: border-box;
+      @include media(md) {
+        margin: 0 auto;
+        max-width: 1000px;
+        padding: 0 40px;
+      }
+    }
+
+    .Partners__formHeading {
+      font-size: 32px;
+      font-weight: 300;
+      line-height: calc(40/32);
+      @include media(md) {
+        font-size: 48px;
+        line-height: 1;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+    }
+
+    .Partners__formLogo {
+      text-align: center;
+      margin-bottom: 25px;
+      img {
+        width: 100px;
+        height: 100px;
+        @include media(md) {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    }
+
+    .Partners__formImages {
+      text-align: center;
+      margin-bottom: 40px;
+      @include media(md) {
+        margin-bottom: 60px;
+      }
+    }
+    
+    .Partners__formDescription {
+      margin-top: 20px;
+      @include media(md) {
+        margin-top: 28px;
+      }
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      p {
+      }
+
+      .class-line {
+        border-bottom: dashed 2px;
+        padding-bottom: 1em;
+      }
+
+      a {
+        text-decoration: underline;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          @include media(lg) {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    .Partners__formContainer {
+      margin-top: 60px;
+      @include media(md) {
+        margin-top: 100px;
+      }
+
+      #form_embed_signup {
+        width: 100%;
+        background: #fff;
+        clear: left;
+        font: 14px Helvetica,Arial,sans-serif;
+      }
+
+      form {
+        display: block;
+        position: relative;
+        text-align: left;
+        padding: 10px 0 10px 3%;
+      }
+      
+      h2 {
+        font-weight: bold;
+        padding: 0;
+        margin: 15px 0;
+        font-size: 1.4em;
+      }
+
+      input {
+        border: 1px solid #ABB0B2;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+      }
+
+      input[type=checkbox] {
+        -webkit-appearance: checkbox;
+      }
+
+      .asterisk {
+        color: #e85c41;
+        font-size: 150%;
+        font-weight: normal;
+        position: relative;
+        top: 5px;
+      }
+
+      .indicates-required {
+        text-align: right;
+        font-size: 11px;
+        margin-right: 4%;
+      }
+
+      .form-field-group {
+        clear: left;
+        position: relative;
+        width: 96%;
+        padding-bottom: 3%;
+        min-height: 50px;
+      }
+
+      .form-field-group select {
+        display: inline-block;
+        width: 100%;
+        padding: 5px 0;
+        margin-bottom: 2px;
+      }
+
+      .form-field-group label {
+        display: block;
+        margin-bottom: 3px;
+      }
+
+      .form-field-group input {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        text-indent: 2%;
+      }
+
+      .form-field-group.input-group ul {
+        margin: 0;
+        padding: 5px 0;
+        list-style: none;
+        li {
+          display: block;
+          padding: 3px 0;
+          margin: 0;
+        }
+      }
+
+      .form-field-group.input-group input {
+        display: inline;
+        width: auto;
+        border: none;
+      }
+
+      .form-field-group.input-group label {
+        display: inline;
+        margin-left: 5px;
+      }
+
+      .foot {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        width: 96%;
+        align-items: center;
+      }
+
+      .button {
+        clear: both;
+        background-color: #aaa;
+        border: 0 none;
+        border-radius: 4px;
+        transition: all 0.23s ease-in-out 0s;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 15px;
+        font-weight: normal;
+        height: 32px;
+        line-height: 32px;
+        margin: 0 5px 10px 0;
+        padding: 0 22px;
+        text-align: center;
+        text-decoration: none;
+        vertical-align: top;
+        white-space: nowrap;
+        width: fit-content;
+        width: -moz-fit-content;
+      }
+
+    }
+    .Partners__formLinks {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+      @include media(md) {
+        margin-top: 50px;
+      }
+      
+      &__item {
+        margin-right: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 10px;
+        text-decoration: underline;
+        text-align: center;
+        @include media(md) {
+          margin-right: 20px;
+          font-size: 16px;
+          text-align: left;
+        }
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+
+      img {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 10px;
+        @include media(md) {
+          width: 60px;
+          height: 60px;
+        }
+      }
+    }
+  }
+
+}
+
+.parentFormform-embedded-subscribe-form.formError {
+	left: 63%!important;
+	z-index: 0;
+	width: 100px;
+}

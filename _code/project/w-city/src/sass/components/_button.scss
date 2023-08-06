@@ -1,0 +1,156 @@
+// -------------------------------------------------------------------
+// 	button.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Button {
+  @at-root {
+    & {
+      border-radius: 100px;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: inline-block;
+      font-weight: 600;
+      max-width: 335px;
+      text-transform: uppercase;
+      padding: 17px 24px;
+      position: relative;
+      text-align: center;
+      width: 100%;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      @include media(md) {
+        font-size: 18px;
+        max-width: 320px;
+        padding: 15.5px 24px;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+
+      &.-primary {
+        background-color: $color-primary;
+        border: 1px solid $color-primary;
+        color: $color_secondary;
+
+        &:hover {
+          @include media(lg) {
+            background-color: transparent;
+            color: $color-primary;
+          }
+        }
+        
+        .DetailHero & {
+          &:hover {
+            @include media(lg) {
+              background-color: $color-secondary;
+              color: $color-primary;
+            }
+          }
+        }
+      }
+
+      &.-secondary {
+        background-color: $color_secondary;
+        border: 1px solid $color_secondary;
+        color: $color-primary;
+        
+        &:hover {
+          @include media(lg) {
+            background-color: $color-primary;
+            color: $color-secondary;
+          }
+        }
+      }
+      
+      &.-disabled {
+        background-color: #8e8e8e;
+        border: 1px solid #8e8e8e;
+        pointer-events: none;
+      }
+
+      &[type="button"] {
+        &::before {
+          content: "";
+          background-image: url(#{$image-path}common/icon_triangle_white-right.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          top: 50%;
+          left: 24px;
+          transform: translateY(-50%);
+          transition: background-image 0.3s ease;
+        }
+        
+        &:hover::before {
+          @include media(lg) {
+            background-image: url(#{$image-path}common/icon_triangle_black-right.svg);
+          }
+        }
+      }
+
+      &[target="_blank"] {
+        &::before {
+          content: "";
+          background-image: url(#{$image-path}common/icon_newtab_white.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 14px;
+          height: 14px;
+          position: absolute;
+          top: 50%;
+          left: 24px;
+          transform: translateY(-50%);
+          transition: background-image 0.3s ease;
+        }
+
+        &:hover::before {
+          @include media(lg) {
+            background-image: url(#{$image-path}common/icon_newtab_black.svg);
+          } 
+        }
+      }
+
+      &[download] {
+        &::before {
+          content: "";
+          background-image: url(#{$image-path}common/icon_download_white.svg);
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: contain;
+          width: 11px;
+          height: 15px;
+          position: absolute;
+          top: 50%;
+          left: 24px;
+          transform: translateY(-50%);
+          transition: background-image 0.3s ease;
+        }
+
+        &:hover::before {
+          @include media(lg) {
+            background-image: url(#{$image-path}common/icon_download_black.svg);
+          }
+        }
+      }
+    }
+
+    .Button__wrapper {
+
+      &.-center {
+        text-align: center;
+      }
+    }
+  }
+}

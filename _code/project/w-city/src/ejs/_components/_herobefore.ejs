@@ -1,0 +1,43 @@
+<div id="js-hero" class="Hero is-before">
+  <h1 class="_visuallyHidden">Toyota Woven City | Top Page</h1>
+  <div class="Hero__videoContainer">
+    <video muted autoplay loop playsinline>
+      <source src="<%= `${page.path}video/PC_1280x720.mp4` %>" type="video/mp4">
+    </video>
+  </div>
+  <div class="Hero__content">
+    <section class="Hero__vision">
+      <%- include('vision-text.ejs'); %>
+    </section>
+    <section class="Hero__latestUpdates js-heroSlider">
+      <div class="Hero__sliderList swiper-wrapper">
+        <div class="Hero__sliderItem swiper-slide">
+          <a href="<%= `${page.path}updates${pickup.url}` %>" class="Hero__latestUpdatesLink">
+            <h2 class="Hero__latestUpdatesHeading">Pickup</h2>
+            <h3 class="Hero__latestUpdatesTitle"><%= pickup.heading %></h3>
+            <span class="Hero__latestUpdatesDate"><time datetime="<%= pickup.dateTime %>"><%= pickup.date %></time></span>
+          </a>
+        </div>
+        <div class="Hero__sliderItem swiper-slide">
+          <%# サイト内ページ or 外部ページ（target="_blank"の有無）で出し分け %>
+          <% if (updateList[0].targetBlank == true) {%>
+            <a href="<%= updateList[0].url %>" class="Hero__latestUpdatesLink" target="_blank" rel="noopener noreferrer">
+              <h2 class="Hero__latestUpdatesHeading"><span class="_visuallyHidden">Latest </span>Updates</h2>
+              <h3 class="Hero__latestUpdatesTitle"><%= updateList[0].heading %></h3>
+              <span class="Hero__latestUpdatesDate"><time datetime="<%= updateList[0].dateTime %>"><%= updateList[0].date %></time></span>
+            </a>
+          <% } else { %>
+            <a href="<%= `${page.path}updates${updateList[0].url}` %>" class="Hero__latestUpdatesLink">
+              <h2 class="Hero__latestUpdatesHeading"><span class="_visuallyHidden">Latest </span>Updates</h2>
+              <h3 class="Hero__latestUpdatesTitle"><%= updateList[0].heading %></h3>
+              <span class="Hero__latestUpdatesDate"><time datetime="<%= updateList[0].dateTime %>"><%= updateList[0].date %></time></span>
+            </a>
+          <% } %>
+        </div>
+      </div>    
+    </section>
+  </div>
+  <div class="Hero__scroll">
+    <span class="Hero__scrollText">Scroll</span>
+  </div>
+</div>

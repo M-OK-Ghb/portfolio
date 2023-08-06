@@ -1,0 +1,137 @@
+<% heading = "Toyota School" %>
+<% page = {
+  title: `Updates | ${heading}`,
+  description: "",
+  path: "/",
+  devPath: "../",
+  includePath: "../",
+  url: "",
+  name: "updates-detail"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates-detail">
+      <div id="js-hero" class="DetailHero is-before">
+        <div class="DetailHero__bg" style="background-image: url(../assets/images/updates/20221223/01.jpg);">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span><%= heading %></span></h1>
+              <div class="DetailHero__description">
+                <p>Toyota School is a visiting lecture program. Recently, we visited an elementary school in Susono City, Shizuoka Prefecture, where Woven City is currently being built, to teach students about Toyota’s automobile manufacturing and development as well as Woven City.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="UpdatesDetail">
+          <div class="UpdatesDetail__content">
+            <div class="UpdatesDetail__section">
+              <div class="Inner">
+                <div class="UpdatesDetail__sectionInner -narrow">
+                  <div data-animate class="UpdatesDetail__movie">
+                    <iframe width="560" height="315" data-cookieconsent="necessary" src="https://www.youtube.com/embed/BoYGBYkZuns" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>What is Toyota School?</em></p>
+                    <p>Targeting elementary schools in the Susono area, Toyota School is an educational program delivered by Toyota Motor East Japan (TMEJ) and the Toyota Motor Corporation Higashi-Fuji Technical Center that answers questions such as “What does Toyota do?” and “How are cars made?” It is an initiative that has been ongoing since 1977. About 40,000 elementary school students have participated in the program through plant tours and other activities. Starting this year, the format was changed to a visiting lecture style.</p>
+                    <p>Woven Planet has also participated in the program since 2022, as we would like local children to learn about Woven City, a “test course for mobility” that will partially start demonstration trials from 2024-2025.</p>
+                    <p>On this occasion, we would like to report the details of the Toyota School session held at Tomioka Daiichi Elementary School on December 9.</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20221223/02.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #01` %>">
+                  </div>
+                </div>    
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>Our thoughts on participating in the Toyota school</em></p>
+                    <p>We hope that as many children as possible from the local community will share Woven City’s desire to “build the future fabric of life for the sake of others’ happiness.”</p>
+                    <p>We would like children who will play a vital role in the future to expect that Woven City will be a place where they can realize their desires and what they want to do, and work together to build the future fabric of life. We hope this is an opportunity for children to think about the future.</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20221223/03.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #02` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>Children experience the future Woven City is aiming for!</em></p>
+                    <p>In the actual class, the children were asked to think about “Who will live in Woven City?”</p>
+                    <p>We told them that not just Toyota employees or Susono citizens, but everyone who works, lives, or visits Woven City is an inventor who “desires to help others.”</p>
+                    <p>Additionally, the children could experience firsthand what it means to “do something for the sake of others.” They touched and interacted with C+Walk, a walking-area mobility device that can be safely ridden by the elderly, and HSR, a human support robot that assists with daily tasks such as delivering things.</p>
+                    <p>Full of expectations for the future, after the class, the children said things like, “I am looking forward to Woven City’s opening,” and “I think the idea of working for others is wonderful.”</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20221223/04.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #01` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>Building the future together with local communities</em></p>
+                    <p>TMEJ conducted a quiz-style class on the automobile manufacturing process. The Toyota Motor Corporation Higashi-Fuji Technical Center conducted a class wherein they shared what they do at the technical center, such as performance testing and technology development.</p>
+                    <p>Noda, an employee of the Toyota Motor Corporation Higashi-Fuji Technical Center, said, “I hope the children will feel that they are the ones who will be creating the future.” Through the Toyota School initiative, we will continue to work with local communities to create the future, and to promote interest in local Toyota businesses and Woven City, aiming to become the “best-in-town” company that is loved by all.</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20221223/05.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #04` %>">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <h2 data-animate class="Heading">Photo Gallery</h2>
+                <div class="Carousel js-slider">
+                  <div class="Carousel__list swiper-wrapper">
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221223/01.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #01">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221223/02.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #02">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221223/03.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #03">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221223/04.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #04">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221223/05.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #05">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Carousel__controller">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

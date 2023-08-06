@@ -1,0 +1,27 @@
+<section class="Topics">
+  <div class="Inner">
+    <h2 data-animate class="Heading">topics</h2>
+    <ul class="Updates__list">
+      <% for(i = 0; i < updateList.length ; i++) { %>
+        <% if(updateList[i].topics == true) { %>
+        <li class="Updates__item">
+          <div data-animate class="Updates__itemInner">
+            <h3 class="Updates__itemHeading"><%= updateList[i].heading %></h3>
+            <% if(updateList[i].thumbnail) { %>
+              <figure class="Updates__itemImage">
+                <img src="<%= `${page.jpAssetsPath}assets/images/updates/${updateList[i].thumbnail}` %>" decoding="async" loading="lazy" alt="article thumbnail">
+              </figure>
+            <% } else { %>
+              <div class="Updates__itemMovie">
+                <iframe width="560" height="315" data-cookieconsent="necessary" src="https://www.youtube.com/embed/<%= updateList[i].youtubeId %>?rel=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>  
+            <% } %>
+            <span class="Updates__itemDate"><time datetime="<%= updateList[i].dateTime %>"><%= updateList[i].date %></time></span>
+            <p class="Updates__itemFooter"><a href="<%= updateList[i].url %>" class="TextLink" <% if (updateList[i].targetBlank == true) {%>target="_blank" rel="noopener noreferrer"<%} %>><%= updateList[i].linkLabel %></a></p>
+          </div>
+        </li>
+        <% } %>
+      <% } %>
+    </ul>
+  </div>
+</section>

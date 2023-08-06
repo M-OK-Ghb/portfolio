@@ -1,0 +1,59 @@
+<% page = {
+  title: "Contact",
+  description: "Woven City welcomes a diverse array of inventors or organizations who are excited to create new values through real-life demonstrations of goods and services.",
+  path: "/",
+  devPath: "../",
+  includePath: "../",
+  url: "",
+  name: "contact"
+} %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <script type="text/javascript">
+    let submitted = false;
+  </script>
+  <body>
+
+    <iframe
+      name="hidden_iframe"
+      id="hidden_iframe"
+      style="display: none"
+      onload="if(submitted){window.location='thanks.html';}"
+    ></iframe>
+
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="partners">
+      <div id="js-hero" class="DetailHero -partners is-before">
+        <div class="DetailHero__bg">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span>Contact</span></h1>
+              <div class="DetailHero__description">
+                <p>Woven City welcomes a diverse array of inventors or organizations who are excited to create new values through real-life demonstrations of goods and services.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <section data-animate class="Partners__form">
+          <div class="Partners__formInner">
+            <h2 class="Partners__formHeading">Inquiry Form</h2>
+            <div class="Partners__formDescription">
+              <p>Please read <a href="<%= `${page.path}terms/` %>">these terms</a> carefully before submitting an inquiry.</p>
+              <p>* We have received many inquiries regarding visitation for Woven City, but due to difficulties in safely accommodating visitors at the construction site, we are unable to accept such requests.<br>Thank you for your kind understanding.</p>
+            </div>
+            <div class="Partners__formContainer">
+              <%- include(`${page.includePath}_components/google-form.ejs`); %>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+    <script src="https://cdn.jsdelivr.net/gh/posabsolute/jQuery-Validation-Engine@3.1.0/js/languages/jquery.validationEngine-en.js"></script>
+  </body>
+</html>

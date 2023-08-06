@@ -1,0 +1,133 @@
+<% page = {
+  title: "Demonstrations",
+  description: "In order to build the future fabric of life and realize 'Well-being for All.', the Woven CIty Management Team is also inventing new values (goods and services) to expand the meaning of mobility.",
+  path: "/",
+  devPath: "../",
+  includePath: "../",
+  url: "",
+  name: "demonstrations"
+} %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="services">
+      <div id="js-hero" class="DetailHero -services is-before">
+        <div class="DetailHero__bg">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span>Demonstrations</span></h1>
+              <div class="DetailHero__description">
+                <p>In order to build the future fabric of life and realize "Well-being for All.", the Woven City Management Team is also inventing new values (goods and services) to expand the meaning of mobility.<br>Combining mobility and 12 areas of daily life, increase what mobility can do for people beyond cars and transportation.<br>To achieve these ambitious goals, Woven City has forged partnerships in some areas.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="Services__pageHeader">
+          <div data-animate class="Inner">
+            <div class="Services__mainImage">
+              <img src="<%= `${page.path}assets/images/services/services.png` %>" decoding="async" loading="lazy" alt="Mobility, Energy, Logistics, Agriculture Food, IoT, Healthcare, Education, Entertainment, Payment Finance, Safe Security, Smart Home, Housing Office">
+            </div>    
+          </div>
+        </div>
+        <section class="Activities">
+          <div class="Inner">
+            <h2 data-animate class="Heading">Recent Activities</h2>
+            <ul class="Activities__list">
+              <li class="Activities__item">
+                <div class="Inner">
+                  <div data-animate class="Activities__itemInner">
+                    <div class="Activities__itemDetail">
+                      <h3 class="Activities__itemHeading">
+                        <span class="Activities__itemHeadingIcon">
+                          <img src="<%= `${page.path}assets/images/services/icon_energy.png` %>" decoding="async" loading="lazy" alt="">
+                        </span>
+                        <span class="Activities__itemHeadingText">Energy</span>
+                      </h3>
+                      <div class="Activities__itemDescription">
+                        <p>ENEOS Corporation and Toyota Motor Corporation will jointly conduct advanced research on the hydrogen production supply chain to facilitate CO2-free hydrogen production and usage for Woven City and beyond. Woven by Toyota will establish a demonstration hub within and around Woven City to achieve Carbon Neutrality.</p>
+                      </div>
+                      <p class="Activities__itemFooter"><a href="https://www.woven-planet.global/en/news-release/20220323/1y93iGergkoCxKn8DbpN1u" class="TextLink" target="_blank" rel="noopener noreferrer">Read the press release</a></p>
+                    </div>
+                    <figure data-animate class="Activities__itemImage">
+                      <img src="<%= `${page.path}assets/images/services/services_energy.jpg` %>" decoding="async" loading="lazy" alt="article thumbnail">
+                    </figure>
+                  </div>
+                </div>
+              </li>
+              <li class="Activities__item">
+                <div class="Inner">
+                  <div class="Activities__itemInner">
+                    <div data-animate class="Activities__itemDetail">
+                      <h3 class="Activities__itemHeading">
+                        <span class="Activities__itemHeadingIcon">
+                          <img src="<%= `${page.path}assets/images/services/icon_iot.png` %>" decoding="async" loading="lazy" alt="">
+                        </span>
+                        <span class="Activities__itemHeadingText">IoT</span>
+                      </h3>
+                      <div class="Activities__itemDescription">
+                        <p>NTT Corporation and Toyota Motor Corporation will jointly build the “Smart City Platform” for smart cities. As a precedent model, it will first be implemented in Woven City and the Shinagawa area.</p>
+                      </div>
+                      <p class="Activities__itemFooter"><a href="https://global.toyota/en/newsroom/corporate/32057071.html" class="TextLink" target="_blank" rel="noopener noreferrer">Read the press release</a></p>
+                    </div>
+                    <figure data-animate class="Activities__itemImage">
+                      <img src="<%= `${page.path}assets/images/services/services_iot-en.jpg` %>" decoding="async" loading="lazy" alt="article thumbnail">
+                    </figure>
+                  </div>
+                </div>
+              </li>
+              <li class="Activities__item">
+                <div class="Inner">
+                  <div class="Activities__itemInner">
+                    <div data-animate class="Activities__itemDetail">
+                      <h3 class="Activities__itemHeading">
+                        <span class="Activities__itemHeadingIcon">
+                          <img src="<%= `${page.path}assets/images/services/icon_logistics.png` %>" decoding="async" loading="lazy" alt="">
+                        </span>
+                        <span class="Activities__itemHeadingText">Logistics</span>
+                      </h3>
+                      <div class="Activities__itemDescription">
+                        <p>Woven City demonstrations and logistics testing have already begun at the Nihonbashi office.</p>
+                      </div>
+                      <p class="Activities__itemFooter"><a href="https://toyotatimes.jp/en/report/constract_wovencity/001.html" class="TextLink" target="_blank" rel="noopener noreferrer">Read At Toyota Times</a></p>
+                    </div>
+                    <figure data-animate class="Activities__itemImage">
+                      <img src="<%= `${page.path}assets/images/services/services_logistics.png` %>" decoding="async" loading="lazy" alt="article thumbnail">
+                    </figure>
+                  </div>
+                </div>
+              </li>
+              <li class="Activities__item">
+                <div class="Inner">
+                  <div class="Activities__itemInner">
+                    <div data-animate class="Activities__itemDetail">
+                      <h3 class="Activities__itemHeading">
+                        <span class="Activities__itemHeadingIcon">
+                          <img src="<%= `${page.path}assets/images/services/icon_food-and-agriculture.png` %>" decoding="async" loading="lazy" alt="">
+                        </span>
+                        <span class="Activities__itemHeadingText">Food & Agriculture</span>
+                      </h3>
+                      <div class="Activities__itemDescription">
+                        <p>Nissin Food Products Co., Ltd. and Toyota Motor Corporation have initiated an agreement to jointly foster human well-being through healthy eating.</p>
+                      </div>
+                      <p class="Activities__itemFooter"><a href="https://www.woven-planet.global/en/news-release/1650931200000/1RiuHWv7yDiNymPFOoXzw3" class="TextLink" target="_blank" rel="noopener noreferrer">Read the press release</a></p>
+                    </div>
+                    <figure data-animate class="Activities__itemImage">
+                      <img src="<%= `${page.path}assets/images/services/services_food-and-agriculture.jpg` %>" decoding="async" loading="lazy" alt="article thumbnail">
+                    </figure>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

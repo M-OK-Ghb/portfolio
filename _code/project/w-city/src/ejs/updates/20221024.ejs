@@ -1,0 +1,73 @@
+<% heading = "Community Friendship Festival - Susono" %>
+<% page = {
+  title: `Updates | ${heading}`,
+  description: "",
+  path: "/",
+  devPath: "../",
+  includePath: "../",
+  url: "",
+  name: "updates-detail"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates-detail">
+      <div id="js-hero" class="DetailHero is-before">
+        <div class="DetailHero__bg" style="background-image: url(../assets/images/updates/20221024/01.jpg);">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span><%= heading %></span></h1>
+              <div class="DetailHero__description">
+                <p>On October 15 - 16, 2022, we participated in the “Community Friendship Festival - Susono” held in Susono City, Shizuoka Prefecture, where Woven City will be constructed.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="UpdatesDetail">
+          <div class="UpdatesDetail__content">
+            <div class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>
+                      On October 15 - 16, 2022, we participated in the “Community Friendship Festival - Susono” held in Susono City, Shizuoka Prefecture, where Woven City will be constructed.<br>
+                      Planned by the Susono City Chamber of Commerce, and with various companies that bring excitement to the region participating, it was an enjoyable event where both adults and children could have fun and learn together.
+                    </p>
+                  </div>
+                  <di data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20221024/02.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #01` %>">
+                  </di>
+                </div>    
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>Construction of permanent works at Woven City will start in November 2022, and we prepared a quiz for children and an urban development/construction simulation experience. As a result, we interacted with nearly 1,000 local children and saw many smiling faces.</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20221024/01.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #02` %>">
+                  </div>
+                </div>    
+                <div class="UpdatesDetail__block">
+                  <div  data-animate class="UpdatesDetail__paragraph">
+                    <p>
+                      We will strive to create a living laboratory for the future and be the “best-in-town” company with a local presence that benefits the surrounding community.
+                    </p>
+                  </div>
+                </div>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

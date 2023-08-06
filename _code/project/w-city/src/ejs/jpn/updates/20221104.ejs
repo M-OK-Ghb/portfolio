@@ -1,0 +1,127 @@
+<% heading = "IROS 2022 KYOTO" %>
+<% page = {
+  title: `Updates | ${heading}`,
+  description: "",
+  path: "/jpn/",
+  devPath: "../",
+  includePath: "../",
+  jpAssetsPath: "/",
+  devJpAssetsPath: "../../",
+  url: "",
+  name: "updates-detail"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates-detail">
+      <div id="js-hero" class="DetailHero is-before">
+        <div class="DetailHero__bg" style="background-image: url(../../assets/images/updates/20221104/01.jpg);">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span><%= heading %></span></h1>
+              <div class="DetailHero__description">
+                <p>2022年10月23日～27日<br>
+                  2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022 KYOTO)に参加しました。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="UpdatesDetail">
+          <div class="UpdatesDetail__content">
+            <div class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>
+                      Woven Planet CEO のジェームス・カフナーが『The Future of Intelligent Machines: Combining the Safety of Model-based Design with the Scalability of Data-Driven Algorithms』をテーマに基調講演を行いました。<br>
+                      「ロジックとデータはそれぞれを補完する関係にあり、組み合わせることで、システムにArtificial Intelligence (AI)とArtificial Experience (AE) を持たせることが可能になります。そして、私たちの最終的な目的はテクノロジーによってヒトや地球の可能性を広げ、世界中の人々の健康や幸福感に繋げることです。」
+                    </p>
+                  </div>
+                  <di data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221104/02.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #01` %>">
+                  </di>
+                </div>    
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>またテクニカルセッションでは、<br>
+                      Woven City ManagementのRoboticsチームの池田拓也が、<br>
+                      『Sim2Real Instance-Level Style Transfer for 6D Pose Estimation』をテーマに発表しました。
+                    </p>
+                    <p>
+                      詳細については、<a href="https://medium.com/@woven_planet/how-to-bridge-the-fidelity-gap-between-simulation-and-reality-especially-for-object-pose-de666fb3de35" target="_blank" rel="noopener noreferrer">Medium blog （英語のみ）</a>をご覧ください
+                    </p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221104/03.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #02` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>
+                      展示ブースでは、Mobile Manipulatorを展示しました。Home Robotの機能開発のためのプラットフォームロボットの位置づけとして初披露され、今後Gantry Robotとともに様々な機能の実証を行っていきます。
+                    </p>
+                    <p>
+                      Mobile Manipulatorの動きは<a href="https://youtu.be/fgGV_tntecM" target="_blank" rel="noopener noreferrer">こちら</a>から<br>
+                      Gantry Robotの動きは<a href="https://youtu.be/h3yvXRROIcg" target="_blank" rel="noopener noreferrer">こちら</a>から
+                    </p>
+                  </div>
+                  <di data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221104/04.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #01` %>">
+                  </di>
+                </div>      
+              </div>
+            </div>
+            <section class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <h2 data-animate class="Heading">Photo Gallery</h2>
+                <div class="Carousel js-slider">
+                  <div class="Carousel__list swiper-wrapper">
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221104/gallery_01.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #01">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221104/gallery_02.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #02">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221104/gallery_03.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #03">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221104/gallery_04.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #04">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221104/gallery_05.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #05">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Carousel__controller">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

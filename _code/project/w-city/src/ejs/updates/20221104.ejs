@@ -1,0 +1,124 @@
+<% heading = "IROS 2022 KYOTO" %>
+<% page = {
+  title: `Updates | ${heading}`,
+  description: "",
+  path: "/",
+  devPath: "../",
+  includePath: "../",
+  url: "",
+  name: "updates-detail"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates-detail">
+      <div id="js-hero" class="DetailHero is-before">
+        <div class="DetailHero__bg" style="background-image: url(../assets/images/updates/20221104/01.jpg);">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span><%= heading %></span></h1>
+              <div class="DetailHero__description">
+                <p>October 23 - 27, 2022 <br>
+                  We participated in the 2022 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2022 KYOTO).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="UpdatesDetail">
+          <div class="UpdatesDetail__content">
+            <div class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>
+                      Woven Planet CEO James Kuffner delivered a keynote presentation on “The Future of Intelligent Machines: Combining the Safety of Model-based Design with the Scalability of Data-Driven Algorithms.”<br>
+                      He noted that “Logic and data have a complementary relationship, and by combining them, it is possible for systems to have both artificial intelligence (AI) and artificial experience (AE). Our ultimate goal is to amplify human potential through technology and provide health and happiness for people and our planet”.
+                    </p>
+                  </div>
+                  <di data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20221104/02.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #01` %>">
+                  </di>
+                </div>    
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>
+                      Additionally, in the technical session, Takuya Ikeda for the Woven City Management Robotics Team gave a presentation on “Sim2Real Instance-Level Style Transfer for 6D Pose Estimation.” 
+                    </p>
+                    <p>
+                      For more information, please visit <a href="https://medium.com/@woven_planet/how-to-bridge-the-fidelity-gap-between-simulation-and-reality-especially-for-object-pose-de666fb3de35" target="_blank" rel="noopener noreferrer">the Medium blog</a>
+                    </p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20221104/03.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #02` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>
+                      We displayed the Mobile Manipulator at our exhibition booth. It was unveiled for the first time as a platform robot for aiding in the development of home robot functionality. Going forward, it will be used together with the Gantry Robot to demonstrate various functions. 
+                    </p>
+                    <p>
+                      Click <a href="https://youtu.be/fgGV_tntecM" target="_blank" rel="noopener noreferrer">here</a> to see the Mobile Manipulator in motion<br>
+                      Click <a href="https://youtu.be/h3yvXRROIcg" target="_blank" rel="noopener noreferrer">here</a> to see the Gantry Robot in motion
+                    </p>
+                  </div>
+                  <di data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20221104/04.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #01` %>">
+                  </di>
+                </div>      
+              </div>
+            </div>
+            <section class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <h2 data-animate class="Heading">Photo Gallery</h2>
+                <div class="Carousel js-slider">
+                  <div class="Carousel__list swiper-wrapper">
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221104/gallery_01.jpg` %>" decoding="async" loading="lazy" alt="Photo of gallery #01">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221104/gallery_02.jpg` %>" decoding="async" loading="lazy" alt="Photo of gallery #02">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221104/gallery_03.jpg` %>" decoding="async" loading="lazy" alt="Photo of gallery #03">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221104/gallery_04.jpg` %>" decoding="async" loading="lazy" alt="Photo of gallery #04">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221104/gallery_05.jpg` %>" decoding="async" loading="lazy" alt="Photo of gallery #05">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Carousel__controller">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

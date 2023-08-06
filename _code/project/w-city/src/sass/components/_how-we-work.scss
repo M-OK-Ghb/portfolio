@@ -1,0 +1,203 @@
+// -------------------------------------------------------------------
+// 	how-we-work.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.HowWeWork {
+  @at-root {
+    & {
+      padding: 80px 0;
+      @include media(lg) {
+        padding: 180px 0;
+      }
+    }
+
+    .HowWeWork__content {
+      margin-top: 60px;
+      @include media(lg) {
+        margin-top: 100px;
+      }
+    }
+
+    .HowWeWork__1 {
+      display: flex;
+      flex-direction: column-reverse;
+      @include media(lg) {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .HowWeWork__mainImage {
+      margin: 0 calc(50% - 50vw);
+      width: 100vw;
+      margin-top: 60px;
+      order: -1;
+      @include media(lg) {
+        height: 467px;
+        margin-top: 162px;
+      }
+
+      z-index: -1;
+      position: sticky;
+      top: 0;
+      left: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .HowWeWork__mainImageInner {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    }
+
+
+    .HowWeWork__2 {
+      margin: 0 calc(50% - 50vw);
+      width: 100vw;
+      background-color: $color_secondary;
+      position: relative;
+      padding-bottom: 1px;
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: inherit;
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        z-index: 1;
+      }
+    }
+
+    .HowWeWork__detail {
+      margin-top: 40px;
+
+      .HowWeWork__1 & {
+        @include media(lg) {
+          flex-basis: calc(570 / 1280 * 100%);
+          margin-top: 0;
+        }
+      }
+
+      .HowWeWork__2 & {
+        @include media(lg) {
+          display: flex;
+          margin-top: 70px;
+        }
+      }
+    }
+
+    .HowWeWork__read {
+      font-size: 30px;
+      font-weight: 600;
+      line-height: 1.4;
+      font-style: normal;
+      margin-top: 32px;
+      @include media(lg) {
+        font-size: 50px;
+        line-height: 1.32;
+        margin-top: 0;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+
+      .HowWeWork__2 & {
+        @include media(lg) {
+          flex-basis: 50%;
+        }
+      }
+    }
+
+    .HowWeWork__description {
+      font-size: 16px;
+      line-height: 1.62;
+      margin-top: 30px;
+      @include media(lg) {
+        font-size: 20px;
+        line-height: 1.6;
+      }
+      
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+      
+      p {
+        
+      }
+      
+      @include jp {
+        font-size: 14px;
+        line-height: 1.8;
+        @include media(lg) {
+          font-size: 18px;
+        }
+      }
+      
+      .HowWeWork__1 & {
+        @include media(lg) {
+          margin-top: 46px;
+        }
+      }
+
+      .HowWeWork__2 & {
+        @include media(lg) {
+          flex-basis: 50%;
+          margin-top: 0;
+        }
+      }
+    }
+
+    .HowWeWork__image {
+      padding-top: 100%;
+      position: relative;
+      margin-right: calc(50% - 50vw);
+      overflow: hidden;
+      flex-basis: 100%;
+      @include media(lg) {
+        padding-top: calc(720 / 1280 * 100%);
+        flex-basis: 50vw;
+        }      
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .HowWeWork__footer {
+      margin-top: 60px;
+      text-align: center;
+      @include media(lg) {
+        margin-top: 45px;
+        text-align: right;
+      }
+    }
+
+    .HowWeWork__2Inner {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

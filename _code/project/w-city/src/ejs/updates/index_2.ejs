@@ -1,0 +1,77 @@
+<% page = {
+  title: "Updates",
+  description: "",
+  path: "/",
+  devPath: "../",
+  includePath: "../",
+  url: "",
+  name: "updates"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates">
+      <div id="js-hero" class="DetailHero -updates">
+        <div class="DetailHero__bg">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span>Updates</span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="Updates__pageContent">
+          <div class="Inner">
+            <ul class="Updates__list">
+              <% for(i = 12; i < updateList.length; i++) { %>
+                <li class="Updates__item">
+                  <div data-animate class="Updates__itemInner">
+                    <h2 class="Updates__itemHeading"><%= updateList[i].heading %></h2>
+                    <%# image or YouTube で出し分け %>
+                    <% if(updateList[i].thumbnail) { %>
+                      <figure class="Updates__itemImage">
+                        <img src="<%= `${page.path}assets/images/updates/${updateList[i].thumbnail}` %>" decoding="async" loading="lazy" alt="article thumbnail">
+                      </figure>
+                    <% } else { %>
+                      <div class="Updates__itemMovie">
+                        <iframe width="560" height="315" data-cookieconsent="necessary" src="https://www.youtube.com/embed/<%= updateList[i].youtubeId %>?rel=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>  
+                    <% } %>
+                    <span class="Updates__itemDate"><time datetime="<%= updateList[i].dateTime %>"><%= updateList[i].date %></time></span>
+                    <%# サイト内ページ or 外部ページ（target="_blank"の有無）で出し分け %>
+                    <% if (updateList[i].targetBlank == true) {%>
+                      <p class="Updates__itemFooter"><a href="<%= updateList[i].url %>" class="TextLink" target="_blank" rel="noopener noreferrer"><%= updateList[i].linkLabel %></a></p>
+                    <% } else { %>
+                      <p class="Updates__itemFooter"><a href="<%= `.${updateList[i].url}` %>" class="TextLink"><%= updateList[i].linkLabel %></a></p>
+                    <% } %>
+                  </div>
+                </li>
+              <% } %>
+            </ul>
+            <div class="Updates__pagination">
+              <nav class="Pagination" aria-label="Page Navigation">
+                <ul class="Pagination__list">
+                  <li class="Pagination__item">
+                    <a class="Pagination__itemLink" href="<%= `${page.path}updates/` %>">1</a>
+                  </li>
+                  <li class="Pagination__item">
+                    <span class="Pagination__itemLink -current" aria-current="page">2</span>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

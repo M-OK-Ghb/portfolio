@@ -1,0 +1,131 @@
+// -------------------------------------------------------------------
+// 	updates.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Leaflet {
+  @at-root {
+    & {
+      background-color: $color_tertiary;
+      margin: 0 calc(50% - 50vw);
+      padding: 55px 0 60px;
+      width: 100vw;
+      @include media(md) {
+        padding: 100px 0;
+      }
+    }
+
+    .Leaflet__inner {
+      @include media(md) {
+        display: flex;
+        justify-content: space-between;
+        min-height: 360px;
+        height: 100%;
+      }
+
+      &.--MissionBlk {
+        margin-top: 30px;
+        min-height: unset;
+        .Heading.-medium {
+          font-size: 26px;
+          text-transform: unset;
+          line-height: 1.2;
+        }
+
+        @include media(md) {
+          margin-top: 100px;
+        }
+
+        @include media(lg) {
+          .Leaflet__detail {
+            flex-basis: calc(500 / 1280 * 100%);
+            justify-content: center;
+          }
+
+          .Heading.-medium {
+            font-size: 32px;
+          }
+
+          .Leaflet__description {
+            font-size: 18px;
+          }
+        }
+
+        @media (min-width: '768px') and (max-width: '1024px') {
+          display: block;
+        }
+      }
+    }
+
+    .Leaflet__detail {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      @include media(md) {
+        flex-basis: calc(600 / 1280 * 100%)
+      }
+    }
+
+    .Leaflet__description {
+      font-size: 16px;
+      margin-top: 20px;
+      line-height: 1.62;
+      @include media(lg) {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-top: 40px;
+      }
+
+      @include jp {
+        font-size: 14px;
+        line-height: 1.8;
+        @include media(lg) {
+          font-size: 18px;
+        }
+      }
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+    }
+
+    .Leaflet__footer {
+      margin-top: auto;
+      padding-top: 30px;
+      text-align: right;
+      @include media(md) {
+        padding-top: 20px;
+      }
+    }
+
+    .Leaflet__image {
+      padding-top: calc(190 / 335 * 100%);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      margin-top: 30px;
+      flex-basis: 100%;
+      @include media(md) {
+        padding-top: calc(340 / 1440 * 100%);
+        flex-basis: calc(600 / 1280 * 100%);
+        margin-top: 0;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+}

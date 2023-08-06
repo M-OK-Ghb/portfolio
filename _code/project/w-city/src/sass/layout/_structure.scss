@@ -1,0 +1,67 @@
+// -------------------------------------------------------------------
+//  structure.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Wrapper {
+  @at-root {
+    & {
+
+    }
+  }
+}
+
+.Main {
+  @at-root {
+    & {
+
+    }
+  }
+}
+
+.Content {
+  transition: opacity 0.3s ease;
+  
+  &.is-before {
+    opacity: 0;
+  }
+}
+
+.Inner {
+  @at-root {
+    & {
+      padding: 0 20px;
+      width: 100%;
+      box-sizing: border-box;
+      @include media(md) {
+        margin: 0 auto;
+        max-width: calc(#{$content-width_desktop} + 40px * 2);
+        padding: 0 40px;
+      }
+      
+      &.-narrow {
+        @include media(md) {
+          max-width: 1104px;
+        }
+      }
+    }
+  }
+}
+
+.Spacer {
+  @at-root {
+    & {
+      height: 10px;
+      @include media(md) {
+        height: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,152 @@
+// -------------------------------------------------------------------
+// 	media-kits.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.MediaKits {
+  @at-root {
+    & {
+      padding-bottom: 80px;
+      @include media(md) {
+        padding-bottom: 180px;
+      }
+    }
+
+    .MediaKits__content {
+
+    }
+
+    .MediaKits__section {
+      &:not(:first-child) {
+        margin-top: 60px;
+        @include media(md) {
+          margin-top: 80px;
+        }
+      }
+    }
+
+    .MediaKits__list {
+      margin-top: 40px;
+      @include media(md) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 60px;
+      }
+    }
+
+    .MediaKits__item {
+      margin-top: 60px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+      @include media(md) {
+        width: calc(600 / 1280 * 100%);
+        margin-left: calc(80 / 1280 * 100%);
+        margin-top: calc(80 / 1280 * 100%);
+
+        &:nth-child(2n-1) {
+          margin-left: 0;
+        }
+
+        &:nth-child(-n+2) {
+            margin-top: 0;
+        }
+      }
+    }
+
+    .MediaKits__itemInner {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .MediaKits__itemHeading {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 10px;
+      line-height: 1.62;
+      @include media(md) {
+        font-size: 20px;
+        margin-top: 16px;
+        line-height: 1.5;
+      }
+
+      @include jp {
+        font-size: 14px;
+        @include media(md) {
+          font-size: 18px;
+        }
+      }
+    }
+
+
+    .MediaKits__itemImage {
+      padding-top: calc(190 / 335 * 100%);
+      position: relative;
+      order: -1;
+      overflow: hidden;
+      @include media(md) {
+        padding-top: calc(340 / 600 * 100%);
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .MediaKits__itemDate {
+      font-size: 12px;
+      font-weight: 500;
+      margin-top: 17px;
+      line-height: 1.26;
+      order: -1;
+      @include media(md) {
+        font-size: 14px;
+        margin-top: 25px;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+
+      time {
+
+      }
+    }
+
+    .MediaKits__itemFooter {
+      margin-top: auto;
+      padding-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include media(md) {
+        padding-top: 30px;
+      }
+    }
+
+    .MediaKits__itemSize {
+      display: inline-block;
+      
+      @include jp {
+        font-size: 14px;
+        @include media(md) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

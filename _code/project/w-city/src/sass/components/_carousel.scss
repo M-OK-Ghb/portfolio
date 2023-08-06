@@ -1,0 +1,147 @@
+// -------------------------------------------------------------------
+// 	carousel.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Carousel {
+  @at-root {
+    & {
+      margin: 60px calc(50% - 50vw) 0;
+      width: 100vw;
+      overflow: hidden;
+      @include media(md) {
+        margin-top: 100px;
+      }
+
+      .History & {
+        @include media(md) {
+          margin-top: 80px;
+        }
+      }
+    }
+
+    .Carousel__list {
+
+    }
+
+    .Carousel__item {
+
+    }
+    
+    .Carousel__image {
+      padding-top: calc(172 / 285 * 100%);
+      position: relative;
+      @include media(md) {
+        padding-top: calc(600 / 1000 * 100%);
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .Carousel__controller {
+      display: flex;
+      justify-content: space-between;
+      width: 90px;
+      margin-top: 30px;
+      margin-left: auto;
+
+      @include media(md) {
+        width: 160px;
+        margin-top: 50px;
+      }
+
+      .History & {
+        @include media(md) {
+          margin-top: 40px;
+        }
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background-color: $color-primary;
+        border-radius: 50%;
+        border: 1px solid $color-primary;
+        margin-top: 0;
+        box-sizing: border-box;
+        transition: background-color 0.3s ease;
+        @include media(md) {
+          width: 70px;
+          height: 70px;
+        }
+        
+        &::after {
+          content: "";
+          display: block;
+          width: 10px;
+          height: 10px;
+          border-top: 1px solid $color-secondary;
+          transition: border-color 0.3s ease;
+          position: absolute;
+          @include media(md) {
+            width: 20px;
+            height: 20px;
+          }
+        }
+
+        &:hover {
+          @include media(lg) {
+            background-color: transparent;
+          }
+        }
+
+        &:hover::after {
+          @include media(lg) {
+            border-color: $color-primary;
+          }
+        }
+      }
+
+      .swiper-button-prev {
+        left: 0;
+
+        &::after {
+          border-left: 1px solid $color-secondary;
+          transform: rotate(-45deg);
+          left: 16px;
+          @include media(md) {
+            left: 30px;
+          }
+        }
+      }
+      
+      .swiper-button-next {
+        right: 0;
+
+        &::after {
+          border-right: 1px solid $color-secondary;
+          transform: rotate(45deg);
+          right: 15px;
+          @include media(md) {
+            right: 28px;
+          }
+        }
+      }
+    }
+
+    .Carousel__footer {
+      margin-top: 90px;
+    }
+  }
+}

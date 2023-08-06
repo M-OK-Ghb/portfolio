@@ -1,0 +1,154 @@
+// -------------------------------------------------------------------
+// 	vision.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Vision {
+  @at-root {
+    & {
+      padding-top: 40px;
+      @include media(md) {
+        padding-top: 92px;
+      }
+    }
+
+    .Vision__summary {
+      display: flex;
+      flex-direction: column-reverse;
+      @include media(md) {
+        flex-direction: row;
+        justify-content: space-between;
+        min-height: 670px;
+      }
+    }
+
+    .Vision__detail {
+      margin-top: 30px;
+      @include media(md) {
+        flex-basis: calc(570 / 1280 * 100%);
+        margin-top: calc(168 / 1280 * 100%);
+      }
+    }
+
+    .Vision__lead {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.46;
+      margin-top: 10px;
+      @include media(md) {
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 1.42;
+      }
+      @include media(lg) {
+        font-size: 42px;
+        line-height: 1.38;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+        font-size: 25px;
+        line-height: 1.4;
+        @include media(md) {
+          font-size: 36px;
+        }
+        @include media(lg) {
+          font-size: 40px;
+        }  
+      }
+
+      &.-jp {
+        font-family: $font-family_base-jp;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 10px;
+        @include media(md) {
+          font-size: 22px;
+          margin-top: 15px;
+        }
+      }
+
+      em {
+        display: block;
+        font-style: normal;
+      }
+
+      span {
+        vertical-align: text-top;
+      }
+
+      .Hero__vision & {
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 1.25;
+        margin-top: 4px;
+        opacity: 1;
+        transform: translateY(0);
+        transition: transform 1s $transition-easing,opacity .5s linear;
+        transition-delay: .2s;
+        @include media(md) {
+          font-size: 44px;
+          font-weight: 600;
+          line-height: 1.2;
+        }
+        @include media(lg) {
+          display: block;
+          font-size: 53px;
+          font-weight: 700;
+          margin-top: 8px;
+        }
+
+        @include jp {
+          font-family: $font-family_base;
+          font-size: 25px;
+          font-weight: 600;
+          line-height: 1.29;
+          @include media(md) {
+            font-size: 39px;
+          }
+          @include media(lg) {
+            font-size: 47px;
+          }
+        }
+
+        &.-jp {
+          font-family: $font-family_base-jp;
+          font-size: 16px;
+          margin-top: 10px;
+          @include media(md) {
+            font-size: 22px;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+
+    .Vision__image {
+      padding-top: calc(278 / 335 * 100%);
+      position: relative;
+      margin-right: calc(50% - 50vw);
+      overflow: hidden;
+      @include media(md) {
+        padding-top: calc(670 / 1440 * 100%);
+        flex-basis: 50vw;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+  }
+}

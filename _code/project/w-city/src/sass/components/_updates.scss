@@ -1,0 +1,333 @@
+// -------------------------------------------------------------------
+// 	updates.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Updates {
+  @at-root {
+    & {
+      padding-bottom: 80px;
+      @include media(md) {
+        padding-bottom: 180px;
+      }
+    }
+
+    
+    .Updates__pickup {
+      background-color: $color_tertiary;
+      margin: 0 calc(50% - 50vw);
+      padding: 55px 0 60px;
+      width: 100vw;
+      @include media(md) {
+        padding: 100px 0;
+      }
+
+      [data-page="top"] & {
+        margin-top: 80px;
+          @include media(md) {
+            margin-top: 100px;
+          }
+        }
+    }
+
+    .Updates__pickupInner {
+      @include media(md) {
+        display: flex;
+        justify-content: space-between;
+        min-height: 360px;
+        height: 100%;
+      }
+    }
+
+    .Updates__pickupDetail {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 100%;
+      @include media(md) {
+        flex-basis: calc(600 / 1280 * 100%)
+      }
+    }
+
+    .Updates__pickupImage {
+      padding-top: calc(190 / 335 * 100%);
+      position: relative;
+      border: 1px solid #d7d7d7;
+      overflow: hidden;
+      width: 100%;
+      margin-top: 30px;
+      flex-basis: 100%;
+      @include media(md) {
+        padding-top: calc(340 / 1440 * 100%);
+        flex-basis: calc(600 / 1280 * 100%);
+        margin-top: 0;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .Updates__list {
+      margin-top: 60px;
+      @include media(md) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 100px;
+      }
+    }
+
+    .Updates__item {
+      margin-top: 60px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+      @include media(md) {
+        width: calc(600 / 1280 * 100%);
+        margin-left: calc(80 / 1280 * 100%);
+        margin-top: calc(80 / 1280 * 100%);
+
+        &:nth-child(2n-1) {
+          margin-left: 0;
+        }
+
+        &:nth-child(-n+2) {
+            margin-top: 0;
+        }
+      }
+
+      &.--none {
+        display: none;
+      }
+    }
+
+    .Updates__itemInner {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .Updates__itemHeading {
+      font-size: 16px;
+      font-weight: 600;
+      margin-top: 10px;
+      line-height: 1.62;
+      @include media(md) {
+        font-size: 20px;
+        margin-top: 16px;
+        line-height: 1.5;
+      }
+
+      @include jp {
+        font-size: 14px;
+        line-height: 1.8;
+        @include media(md) {
+          font-size: 18px;
+        }
+      }
+
+      .Updates__pickup & {
+        font-size: 24px;
+        @include media(md) {
+          font-size: 30px;
+        }
+
+        @include jp {
+          font-size: 20px;
+          @include media(md) {
+            font-size: 26px;
+          }
+        }  
+      }
+    }
+
+
+    .Updates__itemImage {
+      padding-top: calc(190 / 335 * 100%);
+      position: relative;
+      order: -1;
+      overflow: hidden;
+      @include media(md) {
+        padding-top: calc(340 / 600 * 100%);
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .Updates__itemMovie {
+      padding-top: calc(190 / 335 * 100%);
+      order: -1;
+      position: relative;
+      @include media(md) {
+        padding-top: calc(340 / 600 * 100%);
+      }
+
+      iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    .Updates__itemDate {
+      font-size: 12px;
+      font-weight: 500;
+      margin-top: 17px;
+      line-height: 1.26;
+      order: -1;
+      @include media(md) {
+        font-size: 14px;
+        margin-top: 25px;
+      }
+
+      .Updates__pickup & {
+        font-size: 18px;
+        @include media(md) {
+          font-size: 20px;
+        }
+      }  
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+
+      time {
+
+      }
+    }
+
+    .Updates__itemFooter {
+      margin-top: auto;
+      padding-top: 30px;
+      text-align: right;
+      @include media(md) {
+        padding-top: 20px;
+      }
+    }
+
+    .Update__footer {
+      margin-top: 40px;
+      text-align: center;
+      @include media(md) {
+        margin-top: 80px;
+      }
+    }
+
+    .Updates__movieArea {
+      background-color: #FFF;
+      padding-top: 60px;
+      padding-bottom: 60px;
+      @include media(md) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+    }
+
+    .Updates__pageContent {
+      padding-bottom: 80px;
+      @include media(md) {
+        padding-bottom: 180px;
+      }
+    }
+
+    .Updates__pagination {
+      margin-top: 40px;
+      @include media(md) {
+        margin-top: 80px;
+      }
+    }
+
+    .Updates__pageFooter {
+      padding-bottom: 80px;
+      @include media(md) {
+        padding-bottom: 180px;
+      }
+
+      [data-page="updates-detail"] & {
+        padding-top: 80px;
+        @include media(md) {
+          padding-top: 90px;
+        }  
+      }
+    }
+
+    .Updates__social {
+      margin-top: 60px;
+      @include media(md) {
+        margin-top: 100px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    .Updates__socialYouTube {
+      width: 100%;
+      @include media(md) {
+        flex-basis: calc(600 / 1280 * 100%);
+      }
+    }
+
+    .Updates__socialYouTubeContent {
+      margin-top: 30px;
+      padding-top: calc(190 / 335 * 100%);
+      position: relative;
+      @include media(md) {
+        margin-top: 50px;
+        padding-top: calc(340 / 600 * 100%);
+      }
+
+      iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    .Updates__socialFacebook {
+      width: 100%;
+      margin-top: 60px;
+      @include media(md) {
+        margin-top: 0;
+        flex-basis: calc(600 / 1280 * 100%);
+      }
+    }
+
+    .Updates__socialFacebookContent {
+      margin-top: 30px;
+      // background-color: $color-tertiary;
+      @include media(md) {
+        margin-top: 50px;
+      }
+
+      .fb-page,
+      .fb-page span,
+      iframe {
+        width: 100% !important;
+        height: 700px !important;
+      }
+    }
+  }
+}

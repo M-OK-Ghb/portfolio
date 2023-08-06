@@ -1,0 +1,93 @@
+// -------------------------------------------------------------------
+// 	text-link.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.TextLink {
+  @at-root {
+    & {
+      display: inline;
+      color: $color-primary;
+      font-size: 14px;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: 0;
+      background-color: transparent;
+      cursor: pointer;
+      padding-bottom: 13.25px;
+      padding-right: 30px;
+      padding-top: 13.25px;
+      position: relative;
+      width: fit-content;
+      transition: padding 0.3s $easeOutQuart;
+      @include media(md) {
+        font-size: 16px;
+        padding-bottom: 12px;
+        padding-top: 12px;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+    }
+
+    .Accordion__definition[aria-hidden="true"] & {
+      padding: 0;
+    }  
+
+    &::after {
+      content: "";
+      background-image: url(#{$image-path}common/icon_arrow_right-s.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      width: 21px;
+      height: 21px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      transition: transform 0.3s $easeOutQuart;
+    }
+
+    &:hover::after {
+      @include media(lg) {
+        transform: translate(5px, -50%);
+      }
+    }
+    
+    &[target="_blank"] {
+      padding-left: 1.375em;        
+      &::before {
+        content: "";
+        background-image: url(#{$image-path}common/icon_newtab_black.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 14px;
+        height: 14px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    .Faq & {
+      display: block;
+      padding-right: 0;
+      margin-left: auto;
+      
+      &::after {
+        content: none;
+      }
+    }
+  }
+}

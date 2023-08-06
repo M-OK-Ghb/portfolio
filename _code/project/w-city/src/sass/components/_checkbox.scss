@@ -1,0 +1,66 @@
+// -------------------------------------------------------------------
+// 	checkbox.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Checkbox {
+  @at-root {
+    & {
+      cursor: pointer;
+      }  
+    
+    .Checkbox__input {
+      position: absolute;
+      top: 50%;
+      left: 0;
+  
+      &:checked + .Checkbox__icon {
+        width: 20px;
+        height: 20px;
+        background-color: $color-primary;
+      }
+  
+      &:checked + .Checkbox__icon::after {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 6px;
+        border-left: 2px solid $color-secondary;
+        border-bottom: 2px solid $color-secondary;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -80%) rotate(-45deg);
+      }
+  
+      &:focus-visible + .Checkbox__icon {
+        outline: -webkit-focus-ring-color auto 1px;
+      }
+    }
+  
+    .Checkbox__icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border: 1px solid $color-primary;
+      border-radius: 4px;
+      position: absolute;
+      top: 50%;
+      left: 1px;
+      transform: translateY(-50%);
+    }
+  
+    .Checkbox__text {
+      display: inline-block;
+      margin-left: 2em;
+      user-select: none;
+    }
+  }
+}

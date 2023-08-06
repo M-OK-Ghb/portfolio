@@ -1,0 +1,199 @@
+// -------------------------------------------------------------------
+// 	detail-hero.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.DetailHero {
+  @at-root {
+    & {
+      color: $color_secondary;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.62;
+      height: 550px;
+      overflow: hidden;
+      @include media(md) {
+        font-size: 24px;
+        line-height: 1.5;
+        height: 760px;
+      }
+
+      @include jp {
+        font-size: 14px;
+        @include media(md) {
+          font-size: 22px;
+        }
+      }
+
+      &.-updates,
+      &.-mediakits,
+      &.-terms {
+        height: 242px;
+        @include media(md) {
+          height: 403px;
+        }
+      }
+
+      &.is-before {
+        .Heading {
+          > span {
+            transform: translateY(100%);
+          }
+        }
+        .DetailHero__bg {
+          transform: scale(1.2);
+          transform-origin: 50%;
+        }
+        .DetailHero__description {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+
+        .DetailHero__footer {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+      }
+      &.is-after {
+        opacity: 1;
+      }
+      opacity: 0;
+      transition: opacity 0.5s linear;
+    }
+    
+    .DetailHero__bg {
+      display: flex;
+      align-items: center;
+      height: 550px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      transform: scale(1);
+      transition: transform 1.5s $transition-easing;
+      @include media(md) {
+        height: 760px;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(42, 46, 53, 0.5));
+      }
+
+      .-history & {
+        background-image: url(#{$image-path}history/hero_history.jpg);
+      }
+
+      .-services & {
+        background-image: url(#{$image-path}services/hero_services.jpg);
+      }
+      
+      .-updates &,
+      .-mediakits &,
+      .-terms & {
+        color: $color-primary;
+        height: 242px;
+        padding-top: 64px;
+        box-sizing: border-box;
+        transition: none;
+        @include media(md) {
+          height: 403px;
+          padding-top: 110px;
+        }
+        
+        &::before {
+          background-image: none;
+        }
+      }
+
+      .-careers & {
+        background-image: url(#{$image-path}careers/hero_careers.jpg);
+      }
+
+      .-partners & {
+        background-image: url(#{$image-path}partners/hero_partners.jpg);
+      }
+    }
+
+    .DetailHero__inner {
+      position: relative;
+      text-align: center;
+      @include media(md) {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    }
+
+    .DetailHero__headingSub {
+      font-size: 16px;
+      font-weight: bold;
+      @include media(md) {
+        font-size: 24px;
+      }
+    }
+
+    .DetailHero__description {
+      margin-top: 12px;
+      font-size: 16px;
+      line-height: 1.62;
+      font-weight: 500;
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 1.5s $transition-easing,opacity .8s linear;
+      transition-delay: 1.2s;
+
+      &.-detailSmall {
+        font-size: 14px;
+        @include media(md) {
+          font-size: 22px;
+        }
+      }
+
+      @include media(md) {
+        margin-top: 20px;
+        font-size: 24px;
+        line-height: 1.5;
+      }      
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      p {
+        
+      }
+
+      @include jp {
+        font-size: 14px;
+        line-height: 1.8;
+        margin-top: 1em;
+        @include media(md) {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .DetailHero__footer {
+      margin-top: 40px;
+      opacity: 1;
+      transform: translateY(0);
+      transition: transform 1.5s $transition-easing,opacity .8s linear;
+      transition-delay: 1.5s;
+      @include media(md) {
+        margin-top: 50px;
+      }
+    }
+  }
+}

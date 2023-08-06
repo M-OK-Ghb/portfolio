@@ -1,0 +1,123 @@
+// -------------------------------------------------------------------
+// 	careers.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Careers {
+  @at-root {
+    & {
+      background-color: $color_tertiary;
+      padding: 60px 0;
+      @include media(lg) {
+        padding: 100px 0;
+      }
+    }
+
+    .Careers__inner {
+      display: flex;
+      flex-direction: column;
+      padding: 0 20px;
+      @include media(md) {
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: $content-width_desktop;
+        padding: 0 40px;
+        min-height: 454px;
+      }
+    }
+
+    .Careers__detail {
+      display: contents;
+      flex-basis: 100%;
+      @include media(md) {
+        display: initial;
+        flex-basis: calc(570 / 1280 * 100%);
+        margin-top: calc(70 / 1280 * 100%);
+      }
+
+      .Heading {
+        order: -1;
+        @include media(md) {
+          order: initial;
+        }
+      }
+    }
+
+    .Careers__description {
+      line-height: 1.62;
+      margin-top: 20px;
+      order: -1;
+      @include media(md) {
+        line-height: 1.5;
+        margin-top: 28px;
+        order: initial;
+      }
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      p {
+        
+      }
+
+      @include jp {
+        line-height: 1.8;
+      }
+    }
+
+    .Careers__image {
+      padding-top: calc(210 / 335 * 100%);
+      position: relative;
+      order: -1;
+      overflow: hidden;
+      width: 100%;
+      margin: 30px auto 0;
+      flex-basis: 100%;
+      @include media(md) {
+        flex-basis: 50vw;
+        order: initial;
+        margin-top: 0;
+        margin-right: calc(50% - 50vw);
+        padding-top: calc(454 / 1440 * 100%);
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .Careers__footer {
+      margin-top: 40px;
+      text-align: center;
+      @include media(md) {
+        margin-top: 50px;
+        text-align: initial;
+      }
+    }
+
+    .Careers__pageFooter {
+      padding: 80px 0;
+      @include media(md) {
+        padding: 90px 0;
+      }
+    }
+    
+    .Careers__pageFooterInner {
+      text-align: center;
+    }
+  }
+}

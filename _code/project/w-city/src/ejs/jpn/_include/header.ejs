@@ -1,0 +1,27 @@
+<header id="js-header" class="Header<% if (page.name == 'updates' || page.name == 'mediakits' || page.name == 'terms') {%> -changeBgColor<%} %>">
+  <div class="Header__inner">
+    <nav class="Header__nav" aria-labelledby="nav-heading">
+      <h2 id="nav-heading" class="_visuallyHidden">グローバルナビゲーション</h2>
+      <button type="button" id="js-navButton" class="Header__navButton" aria-controls="js-siteMenu">
+        <span class="_visuallyHidden">メニュー開閉</span>
+        <span class="Header__navButtonLine -line1"></span>
+        <span class="Header__navButtonLine -line2"></span>
+        <span class="Header__navButtonLine -line3"></span>
+      </button>
+      <div class="Header__logo">
+        <a class="Header__logoLink" href="<%= `${page.path}` %>"><img src="<%= `${page.jpAssetsPath}assets/images/common/logo_wc_white-2.svg` %>" alt="TOYOTA WOVEN CITY"></a>
+      </div>
+      <div id="js-siteMenu" class="Header__navContent">
+        <ul class="Header__navList">
+          <li class="Header__navItem"><a href="<%= `${page.path}` %>" class="Header__navLink<% if (page.name == 'top') {%> -current<%} %>">What is Woven City</a></li>
+          <li class="Header__navItem"><a href="<%= `${page.path}history/` %>" class="Header__navLink<% if (page.name == 'history') {%> -current<%} %>">History</a></li>
+          <li class="Header__navItem"><a href="<%= `${page.path}services/` %>" class="Header__navLink<% if (page.name == 'demonstrations') {%> -current<%} %>">Demonstrations</a></li>
+          <li class="Header__navItem"><a href="<%= `${page.path}updates/` %>" class="Header__navLink<% if (page.name == 'updates' || page.name == 'updates-detail') {%> -current<%} %>">Updates</a></li>
+          <li class="Header__navItem"><a href="<%= `${page.path}careers/` %>" class="Header__navLink<% if (page.name == 'careers') {%> -current<%} %>">Careers</a></li>
+          <li class="Header__navItem"><a href="<%= `${page.path}partners/` %>" class="Header__navLink<% if (page.name == 'contact') {%> -current<%} %>">Contact</a></li>
+        </ul>
+        <div class="Header__lang"><a class="Header__langLink" href="<%= `${page.jpAssetsPath}` %>"><abbr title="English">EN</abbr></a></div>
+      </div>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,73 @@
+<% heading = "市民のふれあいフェスタすその" %>
+<% page = {
+  title: `Updates | ${heading}`,
+  description: "",
+  path: "/jpn/",
+  devPath: "../",
+  includePath: "../",
+  jpAssetsPath: "/",
+  devJpAssetsPath: "../../",
+  url: "",
+  name: "updates-detail"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates-detail">
+      <div id="js-hero" class="DetailHero is-before">
+        <div class="DetailHero__bg" style="background-image: url(../../assets/images/updates/20221024/01.jpg);">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span><%= heading %></span></h1>
+              <div class="DetailHero__description">
+                <p>2022年10月15日～16日、Woven City建設予定地の静岡県裾野市で開催された「市民のふれあいフェスタすその」に参加しました。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="UpdatesDetail">
+          <div class="UpdatesDetail__content">
+            <div class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>
+                      2022年10月15日～16日、Woven City建設予定地の静岡県裾野市で開催された「市民のふれあいフェスタすその」に参加しました。<br>
+                      裾野市の商工会が企画し、地域を盛り上げる様々な企業が参画した、大人もこどもも遊んで学んで楽しめるイベントでした。
+                    </p>
+                  </div>
+                  <di data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221024/02.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #01` %>">
+                  </di>
+                </div>    
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>2022年11月から建築本体工事を開始するWoven Cityは、こども向けに用意したクイズやまちづくり工事の疑似体験コーナーを出展し、1,000人近い地域のこどもたちとふれあい、たくさんの笑顔を見ることができました。</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20221024/01.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #02` %>">
+                  </div>
+                </div>    
+                <div class="UpdatesDetail__block">
+                  <div  data-animate class="UpdatesDetail__paragraph">
+                    <p>引き続き未来に向けた実証実験の場づくりに取り組み、地域の皆様に愛され頼りにされる存在として地域に貢献していきたいと思います。</p>
+                  </div>
+                </div>    
+              </div>
+            </div>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

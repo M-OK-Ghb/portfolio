@@ -1,0 +1,167 @@
+// -------------------------------------------------------------------
+// 	mission.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Mission {
+  @at-root {
+    & {
+      padding-top: 60px;
+      @include media(md) {
+        padding-top: 84px;
+      }
+      
+      [data-page="top"] & {
+        padding-top: 40px;
+        @include media(md) {
+          padding-top: 90px;
+        }
+      }
+    }
+
+    .Mission__summary {
+      display: flex;
+      flex-direction: column-reverse;
+      @include media(md) {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        min-height: 670px;
+      }
+    }
+
+    .Mission__detail {
+      margin-top: 30px;
+      flex-basis: 100%;
+      @include media(md) {
+        flex-basis: calc(570 / 1280 * 100%);
+        margin-top: calc(168 / 1280 * 100%);
+      }
+    }
+
+    .Mission__lead {
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 1.46;
+      margin-top: 10px;
+      display: block;
+      @include media(md) {
+        font-size: 38px;
+        font-weight: 600;
+        line-height: 1.42;
+      }
+      @include media(lg) {
+        font-size: 42px;
+        line-height: 1.38;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+        font-size: 25px;
+        line-height: 1.4;
+        @include media(md) {
+          font-size: 36px;
+        }
+        @include media(lg) {
+          font-size: 40px;
+        }  
+      }
+
+      &.-jp {
+        font-family: $font-family_base-jp;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 10px;
+        @include media(md) {
+          font-size: 22px;
+          margin-top: 15px;
+        }
+      }
+    }
+
+    .Mission__image {
+      padding-top: calc(278 / 335 * 100%);
+      position: relative;
+      margin-left: calc(50% - 50vw);
+      overflow: hidden;
+      flex-basis: 100%;
+      @include media(md) {
+        padding-top: calc(670 / 1440 * 100%);
+        flex-basis: 50vw;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .Mission__statement {
+      font-size: 20px;
+      line-height: 1.6;
+      padding: 60px 0 80px;
+      @include media(md) {
+        font-size: 28px;
+        padding: 160px 0;
+      }
+      @include media(lg) {
+        font-size: 30px;
+      }
+
+      @include jp {
+        font-size: 16px;
+        line-height: 1.8;
+        @include media(md) {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .Mission__statementInner {
+      padding: 0 1px;
+      @include media(md) {
+        margin: 0 auto;
+        max-width: 877px;
+      }
+    }
+
+    .Mission__statementParagraph {
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+    }
+
+    .Mission__movie {
+      position: relative;
+      @include mq-max('1023px') {
+        padding-top: calc(188 / 335 * 100%);
+        margin-top: 30px;
+      }
+
+      > iframe {
+        @include mq-max('1023px') {
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+        }
+        @include media(lg) {
+          width: 560px;
+          height: 315px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+<% heading = "Safety Prayer Ceremony" %>
+<% page = {
+  title: `Updates | ${heading}`,
+  description: "",
+  path: "/",
+  devPath: "../",
+  includePath: "../",
+  url: "",
+  name: "updates-detail"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates-detail">
+      <div id="js-hero" class="DetailHero is-before">
+        <div class="DetailHero__bg" style="background-image: url(../assets/images/updates/20221014/01.jpg);">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span><%= heading %></span></h1>
+              <div class="DetailHero__description">
+                <p>A safety prayer ceremony<br>for Woven City Phase 1 was held on October 10, 2022.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="UpdatesDetail">
+          <div class="UpdatesDetail__content">
+            <div class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>Approximately one year and nine months after a groundbreaking ceremony was held on February 23, 2021, a ceremony to pray for the safety of the construction and city was held on October 10, 2022. Construction of the Phase 1 main building, which aims to be the first operational structure in Woven City, will finally start in November 2022. </p>
+                  </div>
+                  <di data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20221014/02.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #01` %>">
+                  </di>
+                </div>    
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <em>Woven Planet CEO James Kuffner comment</em>
+                    <p>Thanks to everyone's support and cooperation, the project has been able to progress smoothly, even during the pandemic.</p>
+                    <p>Toyota aims for "well-being for all" and we believe our efforts in Woven City will bring us closer to that goal. Just as Toyota tests its cars on a test course, Woven City is a test course for mobility, through invention and kaizen (continuous improvement). </p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20221014/03.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #02` %>">
+                  </div>
+                </div>    
+                <div class="UpdatesDetail__block">
+                  <div  data-animate class="UpdatesDetail__paragraph">
+                    <p>Woven City is a living laboratory where new human-centered goods, services, and systems are developed, tested, and fine-tuned to make everyday life easier, increasingly sustainable, and more enjoyable for all. The practical value generated through demonstrations at Woven City in Susono City will spread throughout the world and be used for generations to come - eventually becoming the future fabric of life. </p>
+                    <p>Today we are launching a new proving ground for the future - everything Woven City is today, and everything it will become is only possible due to the dedication and hard work that came before. The historic legacy of the Higashi-Fuji Plant will always be part of the origin story of Woven City. As we forge ahead to create, develop, and test innovations, we will always continue to strive to be the “best-in-town” company with a local presence that benefits the surrounding community.</p>
+                  </div>
+                </div>    
+              </div>
+            </div>
+            <section class="UpdatesDetail__section">
+              <div class="Inner">
+                <div class="UpdatesDetail__sectionInner -narrow">
+                  <h2 data-animate class="UpdatesDetail__sectionHeading">Footsteps of Woven City</h2>
+                  <div data-animate class="History__paragraph">
+                    <p>A summary of the Woven City project from its launch to the groundbreaking ceremony, site preparation work, and the day of the Woven City Phase 1 safety prayer ceremony. </p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__movie">
+                    <iframe width="560" height="315" data-cookieconsent="necessary" src="https://www.youtube.com/embed/5rzkX1aX_ro?rel=0" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <h2 data-animate class="Heading">Photo Gallery</h2>
+                <div class="Carousel js-slider">
+                  <div class="Carousel__list swiper-wrapper">
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221014/gallery_01.jpg` %>" decoding="async" loading="lazy" alt="Photo of gallery #01">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221014/gallery_02.jpg` %>" decoding="async" loading="lazy" alt="Photo of gallery #02">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221014/gallery_03.jpg` %>" decoding="async" loading="lazy" alt="Photo of gallery #03">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221014/gallery_04.jpg` %>" decoding="async" loading="lazy" alt="Photo of gallery #04">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221014/gallery_05.jpg` %>" decoding="async" loading="lazy" alt="Photo of gallery #05">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221014/gallery_06.jpg` %>" decoding="async" loading="lazy" alt="Photo of gallery #06">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20221014/gallery_07.jpg` %>" decoding="async" loading="lazy" alt="Photo of gallery #07">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Carousel__controller">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+              <div data-animate class="Carousel__footer">
+                <div class="Inner">
+                  <div class="Button__wrapper -center">
+                    <a href="<%= `${page.path}media-kits/` %>" class="Button -primary">Media Kits</a>
+                  </div>
+                </div>
+              </div>        
+            </section>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

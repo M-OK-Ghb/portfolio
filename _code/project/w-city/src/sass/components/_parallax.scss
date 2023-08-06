@@ -1,0 +1,18 @@
+// -------------------------------------------------------------------
+// 	parallax.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.js-parallax {
+  overflow: hidden;
+  > img {
+    transform-origin: 0 50%;
+  }
+}

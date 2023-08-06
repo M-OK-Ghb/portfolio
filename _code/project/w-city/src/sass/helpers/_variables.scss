@@ -1,0 +1,57 @@
+// -------------------------------------------------------------------
+//  variables.scss
+// -------------------------------------------------------------------
+
+// Breakpoints
+// -------------------------------------------------------------------
+$breakpoints: (
+  'sm':  640px,
+  'md':  768px,
+  'lg': 1024px,
+  'xl': 1280px
+) !default;
+
+// Layer
+// -------------------------------------------------------------------
+$layer: (
+	'modal':   100, 
+	'drawer':   40, 
+	'floating': 30, 
+	'header':   20, 
+	'footer':   10, 
+	'default':   1
+);
+
+// Width
+// -------------------------------------------------------------------
+$site-width_mobile: 375px;
+$site-width_desktop: 1440px;
+$content-width_mobile: 335px;
+$content-width_desktop: 1280px;
+
+// Font
+// -------------------------------------------------------------------
+$font-size_mobile: 16px;
+$font-size_mobile-jp: 14px;
+$font-size_desktop: 20px;
+$font-size_desktop-jp: 18px;
+$line-height_base: 1.5;
+$line-height_base-jp: 1.8;
+$font-family_base: 'Plus Jakarta Sans', Arial, Helvetica, Roboto, 'Droid Sans', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+$font-family_base-jp: 'Noto Sans JP', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+
+// Color
+// -------------------------------------------------------------------
+$color_primary: #2a2e35;
+$color_secondary: #f3f4f3;
+$color_tertiary: #fff;
+
+// Image Path
+// -------------------------------------------------------------------
+$image-path: "../images/";
+
+// Easing
+// -------------------------------------------------------------------
+$easeOut: cubic-bezier(0, 0, 0, 1);
+$easeOutQuart: cubic-bezier(0.25, 1, 0.5, 1);
+$transition-easing: cubic-bezier(0.230, 1.000, 0.320, 1.000);

@@ -1,0 +1,175 @@
+<% heading = "Mobility of Information Enables the Lifestyle of the Future" %>
+<% page = {
+  title: `Updates | ${heading}`,
+  description: "",
+  path: "/",
+  devPath: "../",
+  includePath: "../",
+  url: "",
+  name: "updates-detail"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates-detail">
+      <div id="js-hero" class="DetailHero is-before">
+        <div class="DetailHero__bg" style="background-image: url(../assets/images/updates/20230210_02/01.jpg);">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <p class="DetailHero__headingSub">Toyota Group Developers</p>
+              <h1 class="Heading -detailSmall"><span><%= heading %></span></h1>
+              <div class="DetailHero__description -detailSmall">
+                <p>Woven City is the first-of-its-kind exploratory mechanism dedicated to fostering happiness, sustainability, and well-being for all humankind through mobility. Inventors will all work collaboratively within this mechanism to develop technologies and services. Before launching the infrastructure for Woven City’s Phase 1, some inventors from Toyota Group company will focus on optimizing communications between the dispersed collaborators. What kind of happiness are they trying to achieve with the new technology?</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="UpdatesDetail">
+          <div class="UpdatesDetail__content">
+            <div class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>With “Mobility for All” as a major theme, Woven City is approaching the idea of expanding mobility from a variety of angles. One of the teams tackling that big topic is the
+                      Infotainment team which is responsible for driving R&D for
+                      next-generation remote communication with a focus specifically on “mobility of information.” We asked two members of this team, Aiko Tani and Jorge Pelaez, for details
+                      about the kinds of projects they’re working on and what gets
+                      them excited every day.</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>What does “Mobility of Information” mean?</em></p>
+                    <p>Aiko Tani: Sharing the same space helps people form personal bonds, enables us to strengthen heart-to-heart connections,
+                      enriches us, and makes us feel happier. But what do we do when we can’t be in the same room?
+                    </p>
+                    <p>Although studies say that over 80% of interpersonal
+                      communication is non-verbal , modern-day online communication is still primarily limited to direct language
+                      exchange. During remote communication, those missing touches and shared experiences are difficult to replicate and
+                      so far, few attempts have been made toward filling in those blanks through digital technology.
+                    </p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20230210_02/02.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #01` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>What if we could ‘mobilize’ the missing information between people to enhance communication? We can! In fact, every day we combine new R&D research with information from robotics R&D at Toyota. By analyzing remote conversations between
+                      people and those between robots and people we are making great strides toward realizing a more deep and fulfilling way to communicate virtually.</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>How can the “mobility of information” bring about happiness?</em></p>
+                    <p>Jorge Pelaez: I came to Japan by myself for work, but I often make video calls home to my family still living in Spain. I have found that even when both the audio and video quality are
+                      high, a lot is lost. It’s not the same as being home. Although there will always be a degree of connection that can only be conveyed when sharing the same space, I believe that this
+                      technology will help bridge that divide.</p>
+                    <p>In today’s world, meeting virtually has become a normal part of life and being physically in the same space is sometimes impossible.<span class="--decoration">I am
+                      confident that by improving these heart-to-heart connections and continuing to humanize virtual exchanges, we will increase human joy for people like myself who are not always able to be in the same space as their loved ones.</span></p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20230210_02/03.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #02` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>Could you further describe how this works from a more technical standpoint?</em></p>
+                    <p>Jorge Pelaez: We know that people form bonds when they have the same experiences at the same time. Our hypothesis is that if we could implement this same idea through remote
+                      communication, it could deepen the connection between two (or more) people who are not in the same location.</p>
+                    <p>Toyota is a manufacturing company that owns many technologies which sense object
+                      movement and make them move. If we utilize those and combine them with 3D technology, I believe that we can communicate the movement of people and objects to the other side of the con versation and recreate the experience of being together despite being apart.</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20230210_02/04.jpg` %>" decoding="async" loading="lazy" alt="<%= `Photo of ${heading} #01` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>Could you share with us, in concrete terms, how you intend to use Woven City as a mechanism to enhance human connection?</em></p>
+                    <p>Jorge Pelaez: <span class="--decoration">In order to improve our services and make our solutions more precise going forward, collaboration with people from all kinds of back grounds ( researchers ,
+                      entrepreneurs, investors, residents, and other users) will be indispensable.</span> Woven City will be able to cultivate original ideas and test them against viewpoints from completely different fields of expertise and new ide as from users. I believe that this way of exchanging ideas will accelerate development and provide significant advantages to solving
+                      future social challenges.
+                      </p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>Aiko Tani: We created a remote prototype for communicating the physical brush strokes used in calligraphy and gave school children the opportunity to try it out in a workshop. A few of the children participating said they found their school ’s calligraphy class boring. Ho wever, they got excited to learn when our virtual technology made it feel like their classmates
+                      and teachers were right next to them!</p>
+                    <p><span class="--decoration">Initially, I was anxious about letting people experience our unfinished technology but the children loved the idea of “kaizen” and treasured being a part of making continuous
+                      improvements.</span> The workshop reaffirmed that using input from actual future users is an import ant part of the development process. Working with all kinds of people to produce
+                      something enjoyable and valuable is exactly what Woven City is about!</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.path}assets/images/updates/20230210_02/05.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #04` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>We don’t see this as a battle between digital communication and face-to-face communication. Instead, we are focusing on future potential and using the concept of “mobility of
+                      information” as a gateway to completely redefine what communication can be. With the Woven City experiment operating at the full scale of a town, we will be able to directly reflect the voices of our users as we generate new solutions and standards for better living, now and into the future.</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block --nameBlock">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><span style="font-weight: bold;">Aiko Tani</span><br>Worked at Toyota as a country manager as well as a product planner<br>Since 2021, started involved in this project at Woven Alpha</p>
+                    <p><span style="font-weight: bold;">Jorge Pelaez</span><br>Graduated university as an infrastructure engineer (Spain)<br>Developed AR game (Spain)<br>Since 2020, started Involved in software development at Woven Alpha (Japan)</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <h2 data-animate class="Heading">Photo Gallery</h2>
+                <div class="Carousel js-slider">
+                  <div class="Carousel__list swiper-wrapper">
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20230210_02/01.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #01">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20230210_02/02.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #02">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20230210_02/03.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #03">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20230210_02/04.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #04">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.path}assets/images/updates/20230210_02/05.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #05">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Carousel__controller">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

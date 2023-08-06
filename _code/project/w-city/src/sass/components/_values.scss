@@ -1,0 +1,186 @@
+// -------------------------------------------------------------------
+// 	values.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Values {
+  @at-root {
+    & {
+      background-color: $color-primary;
+      color: $color-secondary;
+      padding: 90px 0 80px;
+      @include media(lg) {
+        box-sizing: border-box;
+        padding: 0;
+      }
+    }
+
+    .Values__inner {
+      @include media(lg) {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100vh;
+      }
+    }
+
+    .Values__heading {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 26px;
+      @include media(lg) {
+        font-size: 24px;
+        line-height: 46px;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+    }
+    
+    .Values__content {
+      margin-top: 15px;
+      @include media(lg) {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 34px;
+        height: clamp(508px, 60vh, 578px);
+      }
+    }
+    
+    .Values__lead {
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 40px;
+      @include media(lg) {
+        font-size: 50px;
+        flex-basis: calc(500 / 1280 * 100%);
+        line-height: 70px;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+    }
+
+    .Values__list {
+      margin-top: 60px;
+      @include media(lg) {
+        margin-top: 0;
+        flex-basis: calc(700 / 1280 * 100%);
+        position: relative;
+      }
+    }
+
+    .Values__group {
+      @include media(lg) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: transform .5s linear,opacity .5s linear;
+        transform: translateY(0);
+        opacity: 1;
+
+        &.is-before {
+          transform: translateY(40px);
+          opacity: 0;
+        }
+        &.is-after {
+          transform: translateY(-40px);
+          opacity: 0;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-top: 50px;
+        @include media(lg) {
+          margin-top: 0;
+        }
+      }
+    }
+    
+    .Values__item {
+      display: flex;
+      @include media(lg) {
+        min-height: 246px;
+      }
+
+      &:not(:first-child) {
+        margin-top: 50px;
+        @include media(lg) {
+          margin-top: auto;
+        }
+      }
+    }
+
+    .Values__itemNum {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 44px;
+      @include media(lg) {
+        font-size: 34px;
+        line-height: 70px;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+    }
+
+    .Values__itemDetail {
+      margin-left: 13px;
+      @include media(lg) {
+        margin-left: 30px;
+      }
+    }
+
+    .Values__itemTerm {
+      display: inline-block;
+      font-size: clamp(30px, calc(38 / 375 * 100vw), 38px);
+      font-weight: 400;
+      line-height: 44px;
+      text-transform: uppercase;
+      @include media(lg) {
+        font-size: 64px;
+        line-height: 70px;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+    }
+
+    .Values__itemDefinition {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.57;
+      margin-top: 10px;
+      @include media(lg) {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-top: 22px;
+        max-width: 440px;
+      }
+
+      @include jp {
+        line-height: 1.8;
+        @include media(lg) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

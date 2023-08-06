@@ -1,0 +1,67 @@
+<% page = {
+  title: "Cookie Policy",
+  description: "",
+  path: "/",
+  devPath: "../",
+  includePath: "../",
+  url: "",
+  name: "terms"
+} %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="terms">
+      <div id="js-hero" class="DetailHero -terms is-before">
+        <div class="DetailHero__bg">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span>Cookie Policy</span></h1>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="Terms">
+          <div class="Terms__content">
+            <div class="Inner -narrow">
+              <div class="Terms__section">
+                <div class="Terms__description">
+                  <p>To enhance your online experience, Woven by Toyota, Inc. (hereafter referred to as "Woven by Toyota" or "our") uses “cookies”, “web beacons” or other tracking technologies. Cookies are text files placed in your computer's browser to store your preferences. Woven by Toyota uses cookies or other tracking technologies to understand Service and Internet usage and to improve or customize the content, offerings or services on the Woven by Toyota website.</p>
+                </div>
+              </div>
+              <section class="Terms__section">
+                <h2 class="Terms__heading">Woven by Toyota sets its cookies in 4 different categories.</h2>
+                <div class="Terms__description">
+                  <p>Necessary cookies<br>Are essential in order to enable you to move around the website and use its features, etc.</p>
+                  <p>Preferences cookies<br>Enable a website to save information which has already been entered (such as user names, languages choices, and your location), so that it can offer you improved and more personalized functions.</p>
+                  <p>Statistics cookies<br>Gather information about how a website is used – for example, which pages a visitor opens most often, and whether the user receives error messages from some pages, etc.</p>
+                  <p>Marketing cookies<br>Are used to deliver adverts and other communications more relevant to you and your interests. They are also used to limit the number of times you see an advertisement and to help measure the effectiveness of advertising campaigns, etc.</p>
+                </div>
+              </section>
+              <div class="Terms__section">
+                <div class="Terms__description">
+                  <p>By visiting the Woven by Toyota website, you acknowledge, and agree that you are giving us your consent to track your activities and your use of the services and functionalities through the technologies described above, as well as similar technologies developed in the future.</p>
+                  <p>Third parties may themselves set and access their own tracking technologies when you visit our Woven by Toyota website and they may have access to information about you and your online activities over time and across different websites or applications when you use the Woven by Toyota website. Their use of such tracking technologies is not in our control and is subject to their own privacy policies.</p>
+                </div>
+              </div>
+              <div class="Terms__section">
+                <div class="Terms__description">
+                  <p>Most web browsers are set up to accept cookies. You may be able to set your browser to warn you before accepting certain cookies or to refuse certain cookies. However, if you disable the use of cookies in your web browser, some services and functionalities of the Woven by Toyota website may be difficult to use or may not function correctly, and you may have to manually adjust some preferences every time you visit our website.</p>
+                </div>
+              </div>
+              <div class="Terms__section"></div>
+              <!-- <script id="CookieDeclaration" src="https://consent.cookiebot.com/0926de79-6e8b-4de1-a13f-189b97241e6f/cd.js" type="text/javascript" async></script>
+              <script id="CookieDeclaration" src="https://consent.cookiebot.com/6355755f-de80-4a98-a141-2a8c56fd7bf3/cd.js" type="text/javascript" async></script> -->
+              <script id="CookieDeclaration" src="https://consent.cookiebot.com/6355755f-de80-4a98-a141-2a8c56fd7bf3/cd.js" type="text/javascript" async   data-georegions="{'region ':'US-06','cbid':'0926de79-6e8b-4de1-a13f-189b97241e6f'} " ></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

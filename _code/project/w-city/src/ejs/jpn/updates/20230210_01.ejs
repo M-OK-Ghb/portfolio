@@ -1,0 +1,149 @@
+<% heading = "乗り物の楽しみをすべての人に" %>
+<% page = {
+  title: `Updates | ${heading}`,
+  description: "",
+  path: "/jpn/",
+  devPath: "../",
+  includePath: "../",
+  jpAssetsPath: "/",
+  devJpAssetsPath: "../../",
+  url: "",
+  name: "updates-detail"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_components/facebook-sdk.ejs`); %>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="updates-detail">
+      <div id="js-hero" class="DetailHero is-before">
+        <div class="DetailHero__bg" style="background-image: url(../../assets/images/updates/20230210_01/01.jpg);">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <p class="DetailHero__headingSub">スタートアップ/起業家</p>
+              <h1 class="Heading"><span><%= heading %></span></h1>
+              <div class="DetailHero__description">
+                <p>折りたたむと四角い形状になり、コロコロと引っ張ってデスクの下に収納できる．．．。工業デザイナー生駒崇光さんが開発する可変式小型電動バイク「タタメルバイク」は、近年注目を集めるマイクロモビリティのなかでも一風変わった存在です。このバイクを通じて、生駒さんはどんな価値を社会に提供しようとしているのでしょうか。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <div class="UpdatesDetail">
+          <div class="UpdatesDetail__content">
+            <div class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>歩くにはちょっと遠いけれど、クルマやタクシーに乗って行くのは大袈裟すぎる——。コンビニへのちょっとした買い物、旅で出かけた先など、そう感じる場面は意外と多いのではないでしょうか。そんな“微妙な”距離の移動を“肩で風切る爽快な旅”として楽しむことを叶えてくれるマイクロモビリティ。それが工業デザイナーの生駒崇光さんが開発する可変式小型電動バイク「タタメルバイク」です。</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>「タタメルバイク」でどんな人のどのような幸せを実現したいですか？</em></p>
+                    <p>赤ちゃんや小さい子どもはみんなミニカーを持って、いつも遊んでいますよね。つまり子どもはみんな乗り物が大好きなんです。ぼくは（長野県）安曇野市で育ったのですが、高校卒業後に乗っていたバイクがめちゃくちゃ楽しかったんです。でも社会人になるとなかなかその機会がない。特に都会では駐車スペースを確保する必要もあったりと金銭的負担も少なくありません。だったらリーズナブルかつサイズ的にも収納便利なコンパクトさがあって、<span class="--decoration">若い人たちが子どもの頃の“乗り物愛”を忘れることなく、乗り物に乗る楽しさ、そこからもたらされる幸せを提供できるバイクを開発しようと決意をしたんです。</span></p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_01/02.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #01` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>そんな「タタメルバイク」の特徴について教えてください。</em></p>
+                    <p>「タタメルバイク」のもっとも大きな特徴は、その名の通り畳むことで形状が変わる“変形機構”ですが、実用性もさることながら同時に趣味性にも重きを置いたバイクである点だと思います。バイク本体の側面にあるパネルを好みのデザインに変えて自己主張できるので、「これを自慢したい」とか「友だちと一緒に乗ってみたい」といった満足感を提供できると思います。例えばトヨタでいったら、ランクルやハイエースって、多くのオーナーがカスタムするじゃないですか。そうした自分たちのライフスタイルにどんどん定着させていく喜びや見せ合う文化といった部分を、小さいバイクでやっている人はこれまでいませんでした。正直なところ、ぼく的にはミニ四駆を作っているぐらいの感覚です。あれくらい簡単にカスタムできて遊べるものを目指しています。</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_01/03.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #02` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>また、カスタム性をセールスポイントとして押す一方で、ただ楽しいだけでは乗り物が普及しない時代になってきていることも確かです。ですので、EVでもありスマートバッテリーにもなるという点は、実用面でのセールスポイントだと思っています。キャンプのような屋外レジャー時や災害時の電源という点はもちろんですが、例えば船に乗せてガソリンスタンドがない離島での活用もできると思います。充電インフラがなくてもコンセントで充電できるのは、コンパクトな乗り物だからこその魅力です。側面にソーラーパネルを付けて給電することもできると思いますし。使い方を拡げていくアイディアはたくさんあります。</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>では、Woven Cityのしくみのどんなところに期待しますか？</em></p>
+                    <p>スタートアップはとにかくしゃかりきにやっているので、取りこぼしている部分が少なからずあるはずです。まさにそこを、Woven Cityという「テストコース」を使って徹底的に検証していきたいんです。だからこそWoven Cityでは、たくさんチャレンジさせて欲しい。<span class="--decoration">ものづくりは、一度ならず必ずどこかで試練に直面します。大事なのは試行錯誤を繰り返す開発ステージから成功までの道のりを短くすることで、そのためには積極的にチャレンジする精神を歓迎する環境が重要なんです。</span></p>
+                    <p>マイクロモビリティ自体が変わってきている時代なので、どう変わっていくか、どこまで変わっていけるのか——。Woven Cityはそれを試していく絶好の機会だと思います。</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_01/04.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #03` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p>またトヨタ自動車として、乗り物づくりに関する知見の蓄積は半端ありません。冷静な目線、客観的な評価を軸に製造に関するアドバイスをいただけるメリットもありますね。先日、ウーブン・バイ・トヨタ社の展示スペースで展示する機会をいただきましたが、エンジニアの方々からものすごくハイレベルなフィードバックをもらえました。一般ユーザーのフィードバックは普段から開催しているイベントなどでも得ることができます。</p>
+                    <p>みなさん一人ひとりのリアルな声はとても重要ですが、同時に<span class="--decoration">“インベンターマインド”をもった経験豊富なエンジニアの方々から鋭い意見・指摘を直に聞けることはなかなか少ないので、Woven Cityのしくみを活用できるチャンスというのはぼくにとってものすごく貴重です。</span></p>
+                    <p>さらにはハード面のみならず、トヨタ自動車が開発を進めているソフトウェア面にも期待しています。ぼくたちのようなスタートアップが大規模なソフトウェア開発を行うのは難しいですし、また優秀なソフトウェア開発者がWoven Cityにはたくさんいらっしゃるので、多方面でのコラボレーションができるといいですね。</p>
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block -col2 -reverse">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>では最後に、ご自身の最終目標はどこに定めているのでしょうか？</em></p>
+                    <p>ぼくらのような規模の小さいメーカーは手探りしながら、かたちにしていく作業が主ですが、Woven Cityでは事業を確実かつ迅速に1から100に進めるノウハウを生み出したい。そうすればマイクロモビリティを通じて、必ずやみんなのクオリティ・オブ・ライフを向上できると信じています。</p>
+                  </div>
+                  <div data-animate class="UpdatesDetail__image">
+                    <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_01/05.jpg` %>" decoding="async" loading="lazy" alt="<%= `${heading}の画像 #04` %>">
+                  </div>
+                </div>
+                <div class="UpdatesDetail__block --nameBlock">
+                  <div data-animate class="UpdatesDetail__paragraph">
+                    <p><em>生駒 崇光　Takamitsu Ikoma<br>ICOMA Inc. CEO/プロダクトデザイナー</em></p>
+                    <p>玩具メーカーで変形ロボットの設計に携わり、その後、ハードウェアスタートアップ2社でエンジニアとしてロボットの開発、デザインを行う。2020年ICOMAを創業。タタメルバイクがCES 2023 InnovationAwardsを受賞。</p>
+                    <p style="text-decoration: underline;">生駒さんは、ウーブン・バイ・トヨタ社で開催している展示企画にご参加いただいた発明家で、静岡県裾野市にできるWoven Cityでの実証実験への参加は未定です。</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <section class="UpdatesDetail__section -bgc">
+              <div class="Inner">
+                <h2 data-animate class="Heading">Photo Gallery</h2>
+                <div class="Carousel js-slider">
+                  <div class="Carousel__list swiper-wrapper">
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_01/01.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #01">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_01/02.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #02">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_01/03.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #03">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_01/04.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #04">
+                      </div>
+                    </div>
+                    <div class="Carousel__item swiper-slide">
+                      <div class="Carousel__image">
+                        <img src="<%= `${page.jpAssetsPath}assets/images/updates/20230210_01/05.jpg` %>" decoding="async" loading="lazy" alt="galleryの写真 #05">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="Carousel__controller">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/updates-page-footer.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

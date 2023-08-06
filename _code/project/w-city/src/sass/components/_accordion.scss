@@ -1,0 +1,160 @@
+// -------------------------------------------------------------------
+// 	accordion.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Accordion {
+  @at-root {
+    & {
+
+    }
+
+    .Accordion__term {
+
+    }
+
+    .Accordion__trigger {
+      align-items: center;
+      background: transparent;
+      border-bottom: 0;
+      border-top: 1px solid #818A9B;
+      border-left: 0;
+      border-right: 0;
+      color: inherit;
+      cursor: pointer;
+      display: flex;
+      padding-bottom: 30px;
+      padding-right: 1.75em;
+      padding-top: 30px;
+      width: 100%;
+      position: relative;
+      text-align: left;
+      transition: opacity 0.3s ease;
+      @include media(md) {
+        padding-right: 2.6em;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 8.5px;
+        height: 8.5px;
+        border-right: 1px solid $color_primary;
+        border-bottom: 1px solid $color_primary;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%) rotate(45deg);
+        transition: transform 0.3s ease;
+        @include media(md) {
+          right: 1em;
+        }
+      }
+
+      &[aria-expanded="true"] {
+        &::after {
+          transform: rotate(-135deg);
+        }
+      }
+
+      &:hover {
+        @include media(lg) {
+          opacity: 0.7;
+        }
+      }
+    }
+
+    .Accordion__marker {
+      align-items: center;
+      display: block;
+    }
+
+    .Accordion__termText {
+      background: transparent;
+      display: block;
+      font-weight: 500;
+      margin-left: 0.5em;
+    }
+
+    .Accordion__definition {
+      transition: line-height 0.3s ease, visibility 0.1s linear, opacity 0.1s linear;
+      opacity: 1;
+      visibility: visible;
+
+      &[aria-hidden="true"] {
+        line-height: 0;
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+
+    .Accordion__definitionInner {
+      padding-bottom: 30px;
+      transition: padding 0.3s ease;
+      @include media(md) {
+        font-size: 18px;
+      }
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      [aria-hidden="true"] & {
+        padding: 0;
+      }
+    }
+
+    .Accordion__definitionText {
+      transition: margin 0.3s ease;
+
+      [aria-hidden="true"] & {
+        margin-top: 0;
+      }  
+
+      a {
+        display: inline-block;
+        text-decoration: underline;
+        position: relative;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          @include media(lg) {
+            opacity: 0.7;
+          }
+        }
+
+        &[target="_blank"] {
+          padding-left: 1.5em;        
+          &::before {
+            content: "";
+            background-image: url(#{$image-path}common/icon_newtab_black.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            top: 50%;
+            left: 8px;
+            transform: translateY(-50%);
+          }
+        }  
+      }
+    }
+
+    .Accordion__definitionLink {
+      transition: margin 0.3s ease;
+
+      [aria-hidden="true"] & {
+        margin-top: 0;
+      }  
+    }
+  }
+}

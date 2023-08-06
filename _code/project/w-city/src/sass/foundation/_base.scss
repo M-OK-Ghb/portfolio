@@ -1,0 +1,52 @@
+// -------------------------------------------------------------------
+//  base.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+html {
+  height: -webkit-fill-available;
+}
+body {
+  height: 100%;
+  background: $color_secondary;
+  color: $color_primary;
+  font-family: $font-family_base;
+  font-size: $font-size_mobile;
+  font-weight: 400;
+  line-height: $line-height_base;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+  @include media(md) {
+    font-size: $font-size_desktop;
+  }
+
+  @include jp {
+    font-family: $font-family_base-jp;
+    font-size: $font-size_mobile-jp;
+    line-height: $line-height_base-jp;
+    @include media(md) {
+      font-size: $font-size_desktop-jp;
+    }
+  }
+}
+
+img {
+  height: auto;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+iframe {
+  border: 0;
+}
+
+abbr[title] {
+  text-decoration: none;
+}

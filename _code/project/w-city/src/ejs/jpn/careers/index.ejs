@@ -1,0 +1,56 @@
+<% page = {
+  title: "Careers",
+  description: "ウーブン・シティプロジェクトには、多様なバックグラウンドを持つメンバーがかかわっています。「テストコースの街で、未来の当たり前を発明する」という私たちの想いに共感し、一緒に働きたいという皆さまからの応募をお待ちしています。",
+  path: "/jpn/",
+  devPath: "../",
+  includePath: "../",
+  jpAssetsPath: "/",
+  devJpAssetsPath: "../../",
+  url: "",
+  name: "careers"
+} %>
+<%- include(`${page.includePath}_data/updatelist.ejs`); %>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include(`${page.includePath}_include/head.ejs`); %>
+  <body>
+    <%- include(`${page.includePath}_include/header.ejs`); %>
+    <main id="js-main" class="Main" data-page="careers">
+      <div id="js-hero" class="DetailHero -careers is-before">
+        <div class="DetailHero__bg">
+          <div class="Inner">
+            <div class="DetailHero__inner">
+              <h1 class="Heading"><span>Careers</span></h1>
+              <div class="DetailHero__description">
+                <p>ウーブン・シティプロジェクトには、多様なバックグラウンドを持つメンバーがかかわっています。<br>「テストコースの街で、未来の当たり前を発明する」という私たちの想いに共感し、一緒に働きたいという皆さまからの応募をお待ちしています。<br>私たちには、チームで働くために大切にしたい価値観、"Value"があります。</p>
+              </div>
+              <div class="DetailHero__footer">
+                <%- include('../../_components/explore-all-job-link.ejs'); %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="js-content" class="Content is-before">
+        <%- include(`${page.includePath}_components/vision.ejs`); %>
+        <%- include(`${page.includePath}_components/mission.ejs`); %>
+        <%- include(`${page.includePath}_components/values.ejs`); %>
+        <%- include(`${page.includePath}_components/how-we-work.ejs`); %>
+        <%- include(`${page.includePath}_components/team.ejs`); %>
+        <%- include(`${page.includePath}_components/topics.ejs`); %>
+        <%- include(`${page.includePath}_components/office.ejs`); %>
+        <div class="Careers__pageFooter">
+          <div class="Inner">
+            <div class="Careers__pageFooterInner">
+              <%- include('../../_components/explore-all-job-link.ejs'); %>
+            </div>
+          </div>
+        </div>
+        <%- include(`${page.includePath}_components/movie-modal.ejs`); %>
+      </div>
+    </main>
+    <%- include(`${page.includePath}_include/footer.ejs`); %>
+    <%- include(`${page.includePath}_include/script.ejs`); %>
+  </body>
+</html>

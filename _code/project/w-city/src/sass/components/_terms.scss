@@ -1,0 +1,97 @@
+// -------------------------------------------------------------------
+// 	terms.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Terms {
+  @at-root {
+    & {
+
+    }
+
+    .Terms__content {
+      padding-bottom: 80px;
+      @include media(md) {
+        padding-bottom: 180px;
+      }
+    }
+
+    .Terms__section {
+
+      &:not(:first-child) {
+        margin-top: 60px;
+        @include media(md) {
+          margin-top: 80px;
+        }
+      }
+    }
+
+    .Terms__heading {
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+      @include media(md) {
+        font-size: 24px;
+      }
+
+      @include jp {
+        font-size: 18px;
+        @include media(md) {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .Terms__description {
+      margin-top: 1em;
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      p {
+
+      }
+
+      a {
+        text-decoration: underline;
+        word-break: break-all;
+        position: relative;
+        transition: opacity 0.3s ease;
+
+        &:hover {
+          @include media(lg) {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+
+    .Terms__note {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 600;
+      font-style: normal;
+      text-transform: uppercase;
+      margin-top: 40px;
+      @include media(md) {
+        font-size: 24px;
+        margin-top: 60px;
+      }
+
+      @include jp {
+        font-size: 18px;
+        @include media(md) {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+// -------------------------------------------------------------------
+// 	heading.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Heading {
+  @at-root {
+    & {
+      font-size: 36px;
+      font-weight: 300;
+      font-style: normal;
+      line-height: 1.28;
+      text-transform: uppercase;
+      overflow: hidden;
+
+      @include media(md) {
+        font-size: 64px;
+        line-height: 1;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+      
+      &.-small {
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.86;
+        @include media(md) {
+          font-size: 24px;
+          line-height: 1.92;
+        }
+
+        @include jp {
+          @include media(md) {
+            font-size: 20px;
+          }
+        }
+      }
+      
+      &.-medium {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 1.44;
+        @include media(md) {
+          font-size: 46px;
+          line-height: 1;
+        }
+
+        .Leaflet & {
+          text-transform: none;
+          overflow: visible;
+        }
+
+        .Citypress & {
+          text-transform: none;
+          overflow: visible;
+        }
+
+        .Download & {
+          @include jp {
+            font-family: $font-family_base-jp;
+            font-size: 30px;
+            @include media(md) {
+              font-size: 44px;
+            }
+          }
+        }  
+      }
+
+      &.-detailSmall {
+        font-size: 24px;
+        @include media(md) {
+          font-size: 54px;
+        }
+      }
+
+      [data-page="updates-detail"] .DetailHero & {
+        line-height: inherit;
+        text-transform: none;
+      }
+
+      > span {
+        transform: translateY(0);
+        transition: transform .9s $transition-easing;
+        transition-delay: 0.5s;
+        display: inline-block;
+      }
+    }
+  }
+}

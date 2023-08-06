@@ -1,0 +1,288 @@
+// -------------------------------------------------------------------
+//  header.scss
+// -------------------------------------------------------------------
+@use 'sass:math';
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Header {
+  @at-root {
+    & {
+      height: 64px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: #{map-get($layer, header)};
+      transform: none;
+      background-color: transparent;
+      width: 100%;
+      transition: transform 1s $easeOut;
+      @include media(xl) {
+        height: 110px;
+      }
+      
+      @include jp {
+        font-family: $font-family_base;
+      }
+      
+      &.-hide {
+        transform: translateY(-100%);
+      }
+      
+      &.-changeBgColor {
+        background-color: $color_primary;
+      }
+    }
+
+    .Header__inner {
+      height: 100%;
+      padding: 0 20px;
+      @include media(lg) {
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+      @include media(xl) {
+        padding: 0 80px;
+      }
+    }
+
+    .Header__nav {
+      align-items: center;
+      display: flex;
+      height: 100%;
+    }
+
+    .Header__navButton {
+      position: absolute;
+      right: 9px;
+      background-color: transparent;
+      cursor: pointer;
+      width: 44px;
+      height: 44px;
+      border-radius: 5px;
+      padding: 0;
+      z-index: #{map-get($layer, header)};
+      border: 1px solid transparent;
+      border-radius: 50%;
+      transition: background-color 0.4s, color 0.4s;
+
+      &:hover {
+        @include media(lg) {
+          background-color: $color-secondary;
+          color: $color_primary;
+          
+          .Header__navButtonLine {
+            background-color: $color_primary;
+          }
+        }
+      }
+
+      @include media(xl) {
+        display: none;
+      }
+    }
+
+    .Header__navButtonLine {
+      display: inline-block;
+      position: absolute;
+      height: 1px;
+      background: $color-secondary;
+      border-radius: 2px;
+      transition: transform 0.4s, opacity 0.4s;
+      
+      &.-line1 {
+        top:14px;
+        left: 18.5px;
+        width: calc(13 / 44 * 100%);
+        
+        [aria-expanded="true"] & {
+          top: 16px;
+          left: 10px;
+          transform: translateY(6px) rotate(-45deg);
+          width: calc(25 / 44 * 100%);
+        }
+      }
+      
+      &.-line2 {
+        top:22px;
+        left: 12px;
+        width: calc(20 / 44 * 100%);
+        
+        [aria-expanded="true"] & {
+          opacity: 0;
+        }
+      }
+      
+      &.-line3 {
+        top:30px;
+        left: 12px;
+        width: calc(20 / 44 * 100%);
+        
+        [aria-expanded="true"] & {
+          top: 28px;
+          left: 10px;
+          transform: translateY(-6px) rotate(45deg);
+          width: calc(25 / 44 * 100%);
+        }
+      }
+    }
+
+    .Header__logo {
+      width: 218px;
+      @include media(sm) {
+        width: 349px;
+      }
+    }
+
+    .Header__logoLink {
+      display: inline-block;
+      padding: 12px 0;
+      width: 100%;
+      line-height: 1;
+      @include media(xl) {
+        padding: 6px 0;
+      }
+
+      img {
+
+      }
+    }
+
+    .Header__navContent {
+      align-items: center;
+      color: $color_secondary;
+      font-size: 14px;
+      font-weight: 600;
+      display: flex;
+      line-height: 1.26;
+      margin-left: auto;
+      padding-left: 50px;
+      flex-shrink: 0;
+      text-transform: uppercase;
+      transform: translateX(0);
+      @include mq-under(1280px) {
+        transform: translateX(200%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $color_primary;
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 60px 20px;
+        font-size: 16px;
+        line-height: 1.25;
+        box-sizing: border-box;
+        z-index: #{map-get($layer, header) - 1};
+        transition: transform 1.2s $easeOutQuart;
+      }
+      
+      &[aria-hidden="false"] {
+        @include mq-under(1280px) {
+          transition: transform 0.6s $easeOutQuart;
+          transform: translateX(0);
+        }
+      }
+    }
+    
+    .Header__navList {
+      @include media(xl) {
+        align-items: center;
+        display: flex;
+      }
+    }
+
+    .Header__navItem {
+
+      &:not(:first-child) {
+        margin-top: 6px;
+        @include media(xl) {
+            margin-left: 40px;
+            margin-top: 0;
+          }
+      }
+    }
+
+    .Header__navLink {
+      display: inline-block;
+      position: relative;
+      padding: 12px 0;
+      @include media(xl) {
+        padding: 14px 0;
+      }
+
+      &::after {
+        background-color: currentColor;
+        bottom: 6px;
+        content: "";
+        display: block;
+        height: 1px;
+        left: 0;
+        position: absolute;
+        transform: scale(0, 1);
+        transform-origin: right top;
+        transition: transform 0.4s $easeOutQuart;
+        width: 100%;
+      }
+        
+      &:hover::after {
+        @include media(lg) {
+          transform: scale(1, 1);
+          transform-origin: left top;
+        }
+      }
+
+      &.-current {
+        &::after {
+          transform: scale(1);
+        }
+      }
+    }
+
+    .Header__lang {
+      margin-top: 34px;
+      @include media(xl) {
+        margin-left: 50px;
+        margin-top: 0;
+      }
+    }
+
+    .Header__langLink {
+      align-items: center;
+      display: flex;
+      height: 44px;
+      justify-content: center;
+      width: 44px;
+      
+      &:hover {
+        @include media(lg) {
+          abbr {
+            background-color: rgba(243, 244, 243, 0.8);
+            color: $color_primary;
+          }
+        }
+      }
+      
+      abbr {
+        background-color: transparent;
+        border: 1px solid rgba(243, 244, 243, 0.8); //$color-secondary(gray)の透過率80% 
+        border-radius: 50%;
+        box-sizing: border-box;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        width: 40px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+    }
+  }
+}

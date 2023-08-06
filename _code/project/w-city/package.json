@@ -1,0 +1,102 @@
+{
+  "name": "w-city",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "run-p server watch:css watch:ejs watch:ts watch:image",
+    "build": "run-s build:clean build:css build:autoprefixer lint:eslint lint:prettier build:ts build:image build:copy build:ejs",
+    "release": "run-s release:clean release:css release:autoprefixer lint:eslint lint:prettier release:ts release:image release:copy release:ejs",
+    "server": "browser-sync start --config configs/bs.config.js",
+    "watch:ejs": "watch \"run-s build:ejs\" ./src/ejs",
+    "watch:css": "watch \"run-s build:css build:autoprefixer\" ./src/sass",
+    "watch:ts": "watch \"run-s lint:eslint lint:prettier build:ts\" ./src/ts",
+    "watch:image": "onchange './src/images' -e '**/*.DS_Store' -- npm run build:image",
+    "lint:eslint": "eslint . --ext ts,tsx",
+    "lint:prettier": "prettier --check src/ts/**/*.ts",
+    "build:clean": "rimraf build",
+    "build:ejs": "node tasks/ejs.js",
+    "build:css": "sass src/sass:build/assets/css --no-source-map && cleancss -o ./build/assets/css/style.css ./build/assets/css/**/*.css --format beautify --compatibility '*'",
+    "build:autoprefixer": "postcss build/assets/css/style.css --map inline -u autoprefixer -o build/assets/css/style.css",
+    "build:image": "cpx \"src/images/**/*\" build/assets/images",
+    "build:copy": "cpx \"src/copy/**/*\" build",
+    "build:ts": "NODE_ENV=development parcel build --no-optimize --target dev src/ts/app.ts --no-cache --no-scope-hoist",
+    "release:clean": "rimraf release",
+    "release:ejs": "node tasks/ejs.js --mode release",
+    "release:css": "sass src/sass:release/assets/css --no-source-map && cleancss -o ./release/assets/css/style.css ./release/assets/css/**/*.css --compatibility '*'",
+    "release:autoprefixer": "postcss release/assets/css/style.css -u autoprefixer --no-map -o release/assets/css/style.css ",
+    "release:image": "node tasks/imagemin.js",
+    "release:copy": "cpx \"src/copy/**/*\" release",
+    "release:ts": "NODE_ENV=production parcel build --no-source-maps --target prod src/ts/app.ts --no-cache --no-scope-hoist",
+    "postinstall": "yarn build"
+  },
+  "author": "monsterdive inc.",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.11.0",
+    "@typescript-eslint/parser": "^5.11.0",
+    "autoprefixer": "^9.8.6",
+    "browser-sync": "^2.26.12",
+    "clean-css-cli": "^4.3.0",
+    "command-line-args": "^5.1.1",
+    "cpx2": "^3.0.0",
+    "cssnano": "^4.1.10",
+    "ejs": "^3.1.5",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "fs": "^0.0.1-security",
+    "glob": "^7.1.6",
+    "imagemin": "^7.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-keep-folder": "^5.3.2",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.0",
+    "imagemin-svgo": "^8.0.0",
+    "make-dir": "^3.1.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "parcel": "^2.2.1",
+    "path": "^0.12.7",
+    "postcss-cli": "^7.1.1",
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "sass": "^1.26.10",
+    "ts-loader": "^8.0.6",
+    "typescript": "^4.0.3",
+    "watch": "^1.0.2"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not ie < 11",
+    "Android >= 8",
+    "iOS >= 13"
+  ],
+  "volta": {
+    "node": "14.17.0",
+    "yarn": "1.22.5"
+  },
+  "targets": {
+    "main": false,
+    "dev": {
+      "distDir": "build/assets/js",
+      "includeNodeModules": true
+    },
+    "prod": {
+      "distDir": "release/assets/js",
+      "includeNodeModules": true
+    }
+  },
+  "dev": "main.js",
+  "prod": "main.js",
+  "engines": {
+    "node": "14.17.0"
+  },
+  "dependencies": {
+    "gsap": "^3.10.4",
+    "swiper": "^8.1.6",
+    "youtube-iframe": "^1.0.3"
+  }
+}

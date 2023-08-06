@@ -1,0 +1,152 @@
+// -------------------------------------------------------------------
+// 	team.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.Team {
+  @at-root {
+    & {
+      padding-bottom: 80px;
+      @include media(md) {
+        padding-bottom: 180px;
+      }
+    }
+
+    .Team__list {
+      margin-top: 60px;
+      @include media(md) {
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+
+    .Team__item {
+      width: 100%;
+      background-color: $color-tertiary;
+      margin-top: 20px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @include media(md) {
+        width: calc(620 / 1280 * 100%);
+        margin-left: calc(38 / 1280 * 100%);
+        margin-top: calc(38 / 1280 * 100%);
+
+        &:nth-child(2n-1) {
+          margin-left: 0;
+        }
+
+        &:nth-child(-n+2) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .Team__itemInner {
+      padding: calc(30 / 335 * 100%);
+      display: flex;
+      flex-direction: column;
+      @include media(md) {
+        padding: calc(60 / 620 * 100%);
+      }
+
+    }
+
+    .Team__itemHeading {
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.26;
+      @include media(md) {
+        margin-top: 30px;
+        font-size: 34px;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+        font-size: 18px;
+        @include media(md) {
+          font-size: 32px;
+        }
+      }
+    }
+
+    .Team__itemDescription {
+      margin-top: 10px;
+      font-weight: 40;
+      font-size: 14px;
+      line-height: 1.57;
+      @include media(md) {
+        margin-top: 12px;
+        font-size: 18px;
+      }
+
+      p {
+        &:not(:first-child) {
+          margin-top: 1em;
+        }
+      }
+
+      @include jp {
+        line-height: 1.8;
+      }
+    }
+
+    .Team__itemButton {
+      order: -1;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      padding: calc(155 / 275 * 100%) 0 0 0;
+      position: relative;
+      background: transparent;
+      border: 0;
+      @include media(md) {
+        padding-top: calc(280 / 500 * 100%);
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &::before {
+        content: "";
+        background-image: url(#{$image-path}common/icon_play.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        @include media(md) {
+          width: 70px;
+          height: 70px;
+        }
+      }
+
+      &:hover {
+        @include media(lg) {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

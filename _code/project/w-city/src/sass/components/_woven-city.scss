@@ -1,0 +1,346 @@
+// -------------------------------------------------------------------
+// 	woven-city.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as *;
+@use "../helpers/mixin" as *;
+@use "../helpers/mediaquery" as *;
+
+@include media(sm) {}
+@include media(md) {}
+@include media(lg) {}
+@include media(xl) {}
+
+.WovenCity {
+  @at-root {
+    & {
+      z-index: 1;
+      position: relative;
+    }
+
+    .WovenCity__inner {
+      background-color: $color_secondary;
+      padding: 40px 0 80px;
+      @include media(lg) {
+        padding: 80px 0 180px;
+      }
+    }
+
+    .WovenCity__mainImage {
+      height: 380px;
+      overflow: hidden;
+      width: 100%;
+      z-index: -1;
+      position: sticky;
+      top: 0;
+      left: 0;
+      @include media(lg) {
+        height: 800px;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .WovenCity__mainImageInner {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100%;
+    }
+
+    .WovenCity__header {
+      @include media(lg) {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: $content-width_desktop;
+      }    
+    }
+
+    .WovenCity__summary {
+      @include media(lg) {
+        flex-basis: calc(600 / 1280 * 100%);
+      }
+
+      &.--updates {
+        > p {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .WovenCity__heading {
+      font-size: 36px;
+      font-weight: 600;
+      line-height: 1.17;
+      text-transform: uppercase;
+
+      &.--small {
+        text-transform: none;
+        font-size: 28px;
+        margin-top: 16px;
+        @include media(lg) {
+          font-size: 36px;
+          margin-top: 20px;
+        }
+      }
+
+      @include media(lg) {
+        font-size: 64px;
+        line-height: 1.09;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+    }
+
+    .WovenCity__description {
+      font-size: 16px;
+      margin-top: 20px;
+      line-height: 1.62;
+      @include media(lg) {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-top: 40px;
+      }
+
+      @include jp {
+        font-size: 14px;
+        line-height: 1.8;
+        @include media(lg) {
+          font-size: 18px;
+        }
+      }
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      p {
+
+      }
+    }
+
+    .WovenCity__movie {
+      padding-top: calc(188 / 335 * 100%);
+      margin-top: 47px;
+      position: relative;
+      @include media(lg) {
+        padding-top: calc(333 / 1280 * 100%);
+        flex-basis: calc(600 / 1280 * 100%);
+        margin-top: 0;
+      }
+
+      iframe {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+    }
+
+    .WovenCity__content {
+      margin-top: 53px;
+      @include media(md) {
+        margin-top: 140px;
+      }
+
+    }
+
+    .WovenCity__scaleList {
+      @include media(md) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+    }
+
+    .WovenCity__scaleItem {
+      @include media(md) {
+        width: calc(600 / 1280 * 100%);
+      }
+
+      &:not(:first-child) {
+        margin-top: 40px;
+        @include media(md) {
+          margin-top: 80px;
+        }
+      }
+
+      &.-large {
+        @include media(md) {
+          width: 100%;
+        }
+      }
+    }
+
+    .WovenCity__scaleItemTerm {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.8;
+      text-transform: uppercase;
+      @include media(md) {
+        font-size: 24px;
+        line-height: 1;
+      }
+    }
+
+    .WovenCity__scaleItemDescription {
+      font-size: 34px;
+      font-weight: 300;
+      margin-top: 10px;
+      letter-spacing: -0.02em;
+      line-height: 1.53;
+      @include media(md) {
+        font-size: clamp(34px, 4.7vw ,68px);
+        margin-top: 20px;
+        line-height: 1.47;
+      }
+
+      .-large & {
+        @include media(md) {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      span {
+        display: block;
+        @include media(md) {
+          width: calc(600 / 1280 * 100%);
+        }
+      }
+
+      sup {
+        font-size: 0.5em;
+      }
+    }
+
+    .WovenCity__traffic {
+      margin-top: 60px;
+      @include media(md) {
+        margin-top: 180px;
+      }
+    }
+
+    .WovenCity__trafficHeading {
+      display: inline-block;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 1.38;
+      @include media(md) {
+        font-size: 40px;
+      }
+
+      @include jp {
+        font-family: $font-family_base;
+      }
+    }
+
+    .WovenCity__trafficDescription {
+      font-size: 16px;
+      line-height: 1.5;
+      margin-top: 20px;
+      @include media(md) {
+        font-size: 20px;
+        margin-top: 40px;
+      }
+
+      @include jp {
+        line-height: 1.8;
+      }
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      p {
+
+      }
+    }
+
+    .WovenCity__trafficList {
+      margin-top: 40px;
+      @include media(md) {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 60px;
+      }
+    }
+
+    .WovenCity__trafficItem {
+      width: 100%;
+      @include media(md) {
+        width: calc(600 / 1280 * 100%);
+      }
+
+      &:not(:first-child) {
+        margin-top: 40px;
+        @include media(md) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    .WovenCity__trafficItemInner {
+
+    }
+
+    .WovenCity__trafficItemImage {
+      padding-top: calc(145 / 335 * 100%);
+      position: relative;
+      overflow: hidden;
+      @include media(md) {
+        padding-top: calc(260 / 600 * 100%);
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .WovenCity__trafficItemDescription {
+      margin-top: 30px;
+      @include media(md) {
+        margin-top: 40px;
+      }
+
+      @include jp {
+        line-height: 1.8;
+      }
+
+      > *:not(:first-child) {
+        margin-top: 1em;
+      }
+
+      p {
+
+      }
+    }
+
+    .WovenCity__footer {
+      margin-top: 60px;
+      text-align: center;
+      @include media(md) {
+        margin-top: 80px;
+      }
+    }
+  }
+}
