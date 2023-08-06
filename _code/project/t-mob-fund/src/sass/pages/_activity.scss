@@ -1,0 +1,123 @@
+// -------------------------------------------------------------------
+//  activity.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.p-activity {
+  &__list {
+    > li {
+      margin-bottom: 5.86vw;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include med.media(sp) {
+        margin-bottom: 8.5vw;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    @include med.media(sp) {
+      display: block;
+    }
+  }
+
+  &__itemVisual {
+    position: relative;
+    width: 48%;
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  &__itemImg {
+    position: relative;
+    width: 100%;
+    > img {
+      width: 100%;
+      height: 22.7vw;
+      object-fit: cover;
+    }
+    @include med.media(sp) {
+      width: 100%;
+      > img {
+        height: 52vw;
+      }
+    }
+  }
+
+  &__itemLabel {
+    position: absolute;
+    left: 2.08%;
+    bottom: 3.23%;
+    display: inline-block;
+    font-size: 0.805vw;
+    height: 2.05vw;
+    line-height: 2.05vw;
+    padding: 0 1.25vw;
+    border-radius: 1.03vw;
+    @include mix.commonLabelStyle;
+
+    @include med.media(sp) {
+      @include mix.subLabelSp;
+      left: 3.33%;
+      bottom: 5.12%;
+    }
+  }
+
+  &__itemText {
+    width: 48%;
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  &__itemText {
+    > h2 {
+      font-size: 1.54vw;
+      line-height: 1.4;
+      @include med.media(sp) {
+        line-height: 1.67;
+        font-size: 4.8vw;
+      }
+    }
+
+    > p {
+      margin-top: 2.41vw;
+      font-size: 1.17vw;
+      line-height: 2.25;
+      @include med.media(sp) {
+        margin-top: 4.27vw;
+        font-size: 2.93vw;
+        line-height: 1.82;
+      }
+    }
+  }
+
+  &__itemDate {
+    > span {
+      display: inline-block;
+      color: var.$LIGHT_TEXT_COLOR_A;
+      font-size: 0.88vw;
+      line-height: 2.5;
+      @include med.media(sp) {
+        font-size: 2.67vw;
+      }
+    }
+  }
+
+  &__itemBtn {
+    margin-top: 3.7vw;
+    @include med.media(sp) {
+      margin-top: 4.27vw;
+      > a {
+        margin: auto;
+      }
+    }
+  }
+}

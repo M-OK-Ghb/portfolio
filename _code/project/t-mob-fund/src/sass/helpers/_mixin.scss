@@ -1,0 +1,48 @@
+// -------------------------------------------------------------------
+//  mixin.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+@mixin defaultHover {
+  transition: opacity 0.3s, color 0.3s;
+  &:hover {
+    color: var.$ACCENT_RED;
+    opacity: 0.7;
+  }
+}
+
+@mixin buttonHover {
+  transition: opacity 0.5s, color 0.3s, background-color 0.3s;
+  &:hover {
+    color: #FFF;
+    background-color: var.$ACCENT_RED;
+    opacity: 0.9;
+  }
+}
+
+@mixin commonLabelStyle {
+  color: var.$ACCENT_RED;
+  background-color: #FFF;
+  border: max(0.073vw, 1px) solid var.$LIGHT_RED;
+  @include med.media(sp) {
+    border: 0.27vw solid var.$LIGHT_RED;
+  }
+}
+
+@mixin subLabelSp {
+  font-size: 2.67vw;
+  height: 6.13vw;
+  line-height: 6.13vw;
+  padding: 0 3.33vw;
+  border-radius: 3.07vw;
+}
+
+@mixin en {
+  @at-root {
+    [lang="en"] & {
+      @content;
+    }
+  }
+}
+

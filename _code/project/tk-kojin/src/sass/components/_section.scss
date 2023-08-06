@@ -1,0 +1,24 @@
+// -------------------------------------------------------------------
+// 	section.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-section {
+  margin: auto;
+  width: var.$INNER_CONTENT;
+  padding: calc(100/1920*100vw) 0;
+
+  &.--firstPt {
+    padding-top: calc(150/1920*100vw);
+    @include med.media(sp) {
+      padding-top: calc(185/750*100vw);
+    }
+  }
+
+  @include med.media(sp) {
+    padding: calc(100/750*100vw) 0;
+    width: var.$INNER_CONTENT_SP;
+  }
+}

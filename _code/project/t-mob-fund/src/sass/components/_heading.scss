@@ -1,0 +1,99 @@
+// -------------------------------------------------------------------
+// 	heading.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-heading {
+  font-size: 2.93vw;
+
+  &.colorWhite {
+    color: #FFF;
+  }
+
+  @include med.media(sp) {
+    font-size: 6.93vw;
+  }
+}
+
+.c-headingSub {
+  margin-top: 1vw;
+  padding-left: 0.4vw;
+
+  &__decoration {
+    width: 3vw;
+    height: 1px;
+    background-color: var.$ACCENT_RED;
+    display: inline-block;
+    vertical-align: top;
+
+    @include med.media(sp) {
+      width: 6vw;
+    }
+  }
+
+  @include med.media(sp) {
+    margin-top: 2.67vw;
+  }
+}
+
+// headingAnimation
+
+.c-headingWrap {
+  overflow-y: hidden;
+  // subPageTop
+  &--subMv {
+    .c-heading {
+      transition:  opacity 1s;
+      opacity: 0;
+    }
+  
+    .c-headingSub {
+      transition: opacity 0.5s, transform 0.25s;
+      transition-delay: 0.5s;
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  
+    &.is-show {
+      .c-heading {
+        opacity: 1;
+      }
+    
+      .c-headingSub {
+        transform: translateY(0);
+        opacity: 1;
+      } 
+    }
+  }
+}
+
+
+.js-scrollFadeIn {
+  // Scroll Show
+  .c-headingWrap {
+    .c-heading {
+      transition:  opacity 0.5s;
+      transition-delay: 0.25s;
+      opacity: 0.2;
+    }
+
+    .c-headingSub {
+      transition: opacity 1s, transform 0.5s;
+      transition-delay: 0.5s;
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+
+  &.is-show {
+    .c-heading {
+      opacity: 1;
+    }
+
+    .c-headingSub {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}

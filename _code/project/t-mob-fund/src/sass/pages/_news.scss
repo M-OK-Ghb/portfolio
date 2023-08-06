@@ -1,0 +1,157 @@
+// -------------------------------------------------------------------
+//  news.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.p-news {
+  position: relative;
+  z-index: 2;
+
+  &__listArea {
+    width: 73.3vw;
+    margin:2vw auto 0;
+    padding-bottom: 10vw;
+    @include med.media(sp) {
+      width: 80vw;
+      margin-top: 6vw;
+      padding-bottom: 8vw;
+    }
+  }
+
+  &__list {
+    border-top: max(0.073vw, 1px) solid #ABAEB1;
+    @include med.media(sp) {
+      border-top: 0.27vw solid #ABAEB1;
+    }
+
+    > li {
+      border-bottom: max(0.073vw, 1px) solid #ABAEB1;
+      padding: 3vw 0;
+      @include med.media(sp) {
+        border-bottom: 0.27vw solid #ABAEB1;
+        padding: 5.33vw 0;
+      }
+    }
+  }
+
+  &__item {
+    > a {
+      display: block;
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 0.7;
+
+        .p-news__linkIcon {
+          > svg {
+            > g {
+              circle {
+                fill: #e41e2a;
+              }
+
+              path {
+                stroke: #FFF;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__itemInner {
+    position: relative;
+  }
+
+  &__date {
+    position: absolute;
+    top: 50%;
+    left: 2.5%;
+    transform: translateY(-50%);
+    line-height: 1;
+    font-size: 1.17vw;
+
+    @include med.media(sp) {
+      top: 1.5vw;
+      left: inherit;
+      right: 7.5%;
+      transform: translateY(0);
+      font-size: 2.67vw;
+    }
+
+    > span {
+      display: inline-block;
+      color: var.$LIGHT_TEXT_COLOR_A;
+    }
+  }
+
+  &__contents {
+    width: 54.9vw;
+    padding-left: 12.6vw;
+    @include med.media(sp) {
+      width: 90%;
+      margin: auto;
+      padding-left: 0;
+    }
+  }
+
+  &__label {
+    > span {
+      display: inline-block;
+      font-size: 0.81vw;
+      color: #e41e2a;
+      background-color: #fff;
+      border: 0.073vw solid #f18e94;
+      border-radius: 1.025vw;
+      height: 2.05vw;
+      line-height: 2.05vw;
+      padding: 0 1.24vw;
+      @include med.media(sp) {
+        border: 0.27vw solid #f18e94;
+        border-radius: 3.07vw;
+        font-size: 2.67vw;
+        height: 6.13vw;
+        line-height: 6.13vw;
+        padding: 0 3.2vw;
+      }
+    }
+  }
+
+  &__text {
+    margin-top: 1.25vw;
+    font-size: 1.32vw;
+    line-height: 1.67;
+    @include med.media(sp) {
+      margin-top: 4.27vw;
+      font-size: 3.47vw;
+      line-height: 2;
+    }
+  }
+
+  &__linkIcon {
+    width: 2.2vw;
+    height: 2.2vw;
+    position: absolute;
+    right: 1%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @include med.media(sp) {
+      display: none;
+    }
+
+    > svg {
+      width: 100%;
+      height: 100%;
+
+      circle {
+        transition: all 0.3s;
+      }
+
+      path {
+        transition: all 0.3s;
+      }
+    }
+  }
+}

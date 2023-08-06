@@ -1,0 +1,26 @@
+// -------------------------------------------------------------------
+// 	heading.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-heading {
+  line-height: 1;
+  font-weight: bold;
+  &.--large {
+    font-size: 58px;
+  }
+
+  &.--med {
+    font-size: calc(46/1920*100vw);
+    text-align: center;
+    @include med.media(sp) {
+      font-size: calc(54/750*100vw);
+    }
+  }
+}
+
+.c-heading--en {
+  @include mix.notoSansSet;
+}

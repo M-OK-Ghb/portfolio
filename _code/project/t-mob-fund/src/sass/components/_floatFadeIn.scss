@@ -1,0 +1,61 @@
+// -------------------------------------------------------------------
+// 	floatFadeIn.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.js-scrollFadeIn {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(3.66vw);
+  transition: opacity 1s, transform 1s;
+
+  @include med.media(sp) {
+    transform: translateY(8vw);
+  }
+
+  &.is-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+
+.js-load-fadeIn {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(3.66vw);
+  transition: opacity 1s, transform 1s;
+
+  @include med.media(sp) {
+    transform: translateY(8vw);
+  }
+
+  &.is-load-show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+
+  &.spNoAnimation {
+    @include med.media(sp) {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+}
+
+.js-load-fadeIn-sp {
+  @include med.media(sp) {
+    opacity: 0;
+    &.is-load-show--sp {
+      opacity: 1;
+      &.p-about__topHeading {
+        opacity: 0.8;
+      }
+    }
+  }
+}

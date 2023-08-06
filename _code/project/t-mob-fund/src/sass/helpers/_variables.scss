@@ -1,0 +1,88 @@
+// -------------------------------------------------------------------
+//  variables.scss
+// -------------------------------------------------------------------
+
+// Width
+// -------------------------------------------------------------------
+$ADJUST_SP_POINT: 640px;
+$BREAK_POINT_SP: 960px;
+$BREAK_POINT_TABLET: 960px;
+
+// Font
+// -------------------------------------------------------------------
+/*==Noto Sans JP==*/
+/*Thin*/
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../font/NotoSansJP-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+/*Light*/
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../font/NotoSansJP-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/*Regular*/
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../font/NotoSansJP-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*Midium*/
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../font/NotoSansJP-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*Bold*/
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../font/NotoSansJP-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/*Black*/
+@font-face {
+  font-family: 'Noto Sans JP';
+  src: url('../font/NotoSansJP-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/*NoteraPersonalUseOnly*/
+@font-face {
+  font-family: 'NoteraPersonalUseOnly';
+  src: url('../font/Notera_PersonalUseOnly.ttf') format('opentype');
+}
+
+/*Japanese*/
+$BASE_FONT_FAMILY: Noto Sans JP, 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+
+/*English*/
+$EN_FONT_FAMILY: Arial, Helvetica, Roboto, 'Droid Sans', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+$HEADING_CURSIVE: 'NoteraPersonalUseOnly';
+
+// Color
+// -------------------------------------------------------------------
+$BASE_TEXT_COLOR: #38383A;
+$LIGHT_TEXT_COLOR_A: #7D7B83;
+$LIGHT_TEXT_COLOR_B: #ADACB1;
+
+$DARK_GRAY: #5C5A64;
+$MIDDLE_GRAY: #8D8C93;
+$LIGHT_GRAY: #F2F3F3;
+
+$ACCENT_RED: #E41E2A;
+$LIGHT_RED: #F18E94;
+
+

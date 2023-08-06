@@ -1,0 +1,80 @@
+// -------------------------------------------------------------------
+// 	checkBox.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-checkBox {
+  input[type="checkbox"] {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+
+  input[type="checkbox"] {
+    cursor: pointer;
+    padding-left: 2.56vw;
+    vertical-align: middle;
+    position: relative;
+    @include med.media(sp) {
+      padding-left: 6vw;
+      width: 5.33vw;
+      height: 5.33vw;
+    }
+  }
+ 
+  input[type="checkbox"]::before,
+  input[type="checkbox"]::after {
+    content: "";
+    display: block; 
+    position: absolute;
+  }
+ 
+  input[type="checkbox"]::before {
+    background-color: #fff;
+    border-radius: 0%;
+    border: 1px solid #ABAEB1;
+    width: 1.83vw;
+    height: 1.83vw;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 0.366vw;
+
+    @include med.media(sp) {
+      width: 5.33vw;
+      height: 5.33vw;
+      border: 0.27vw solid #ABAEB1;
+    }
+  }
+ 
+  input[type="checkbox"]::after {
+    border-bottom: 2px solid var.$ACCENT_RED;
+    border-left: 2px solid var.$ACCENT_RED;
+    opacity: 0;
+    height: 0.73vw;
+    width: 1.17vw;
+    transform: rotate(-45deg);
+    top: -0.512vw;
+    left: 0.73vw;
+
+    @include med.media(sp) {
+      height: 2vw;
+      width: 3vw;
+      top: 1vw;
+      left: 1.25vw;
+      border-bottom: 0.54vw solid var.$ACCENT_RED;
+      border-left: 0.54vw solid var.$ACCENT_RED;
+    }
+  }
+ 
+  input[type="checkbox"]:checked::after {
+    opacity: 1;
+  }
+}

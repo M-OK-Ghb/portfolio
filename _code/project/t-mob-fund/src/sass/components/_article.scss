@@ -1,0 +1,580 @@
+// -------------------------------------------------------------------
+// 	article.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-article {
+  &__fv {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__fvBg {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 67.5vh;
+    @include med.media(sp) {
+      height: 55vw;
+    }
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: blur(10px);
+    }
+  }
+
+  &__curveBg {
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    z-index: 3;
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__kv {
+    position: absolute;
+    z-index: 5;
+    width: 67.4vw;
+    height: 38.1vw;
+    top: 27.5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    @include med.media(sp) {
+      width: 80vw;
+      height: 52vw;
+      top: 38.5%;
+    }
+  }
+
+  &__kvInner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__kvImg {
+    width: 100%;
+    height: 100%;
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__kvLabel {
+    position: absolute;
+    z-index: 2;
+    left: 3.27%;
+    bottom: 5.77%;
+
+    @include med.media(sp) {
+      left: 3.3%;
+      bottom: 5.12%;
+    }
+
+    &.--news {
+      position: static;
+      margin-bottom: 1vw;
+      @include med.media(sp) {
+        margin-bottom: 3vw;
+      }
+    }
+
+    > span {
+      font-size: 1.1vw;
+      color: var.$ACCENT_RED;
+      background-color: #FFF;
+      display: inline-block;
+      border:max(0.073vw, 1px) solid var.$LIGHT_RED;
+      border-radius: 1.39vw;
+      height: 2.78vw;
+      line-height: 2.78vw;
+      padding: 0 2.93vw;
+      @include med.media(sp) {
+        font-size: 2.67vw;
+        height: 6.13vw;
+        line-height: 6.13vw;
+        padding: 0 5.87vw;
+        border-radius: 3.07vw;
+        border: 0.27vw solid var.$LIGHT_RED;
+      }
+    }
+  }
+
+  &__contents {
+    position: relative;
+    z-index: 2;
+    width: 67.4vw;
+    margin: 13.5vw auto 0;
+    padding-bottom: 15vw;
+    @include med.media(sp) {
+      width: 80vw;
+      margin-top: 22vw;
+    }
+
+    &.mtAdjust {
+      margin-top: 4vw;
+      @include med.media(sp) {
+        margin-top: 10vw;
+      }
+    }
+  }
+
+  &__titleArea {
+    background-color: #FFF;
+  }
+
+  &__title {
+    font-size: 3.08vw;
+    line-height: 1.43;
+    @include med.media(sp) {
+      font-size: 5.6vw;
+      line-height: 1.67;
+    }
+  }
+
+  &__date {
+    color: var.$LIGHT_TEXT_COLOR_A;
+    font-size: 1.03vw;
+    margin-top: 0.74vw;
+    @include med.media(sp) {
+      font-size: 2.67vw;
+      margin-top: 2.13vw;
+    }
+  }
+
+  &__main {
+    margin-top: 5vw;
+    @include med.media(sp) {
+      margin-top: 9.33vw;
+    }
+  }
+
+  &__heading {
+    font-weight: bold;
+    &.--h2 {
+      position: relative;
+      font-size: 2.2vw;
+      line-height: 1.4;
+      margin-bottom: 2.8vw;
+      padding-left: 4.1vw;
+      @include med.media(sp) {
+        font-size: 5.6vw;
+        margin-bottom: 5.33vw;
+        line-height: 1.33;
+        padding-left: 9.33vw;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 2.56vw;
+        height: max(0.073vw, 1px);
+        background-color: var.$ACCENT_RED;
+        left: 0;
+        top: 1.5vw;
+        @include med.media(sp) {
+          width: 6.67vw;
+          height: 0.27vw;
+          top: 3.5vw;
+        }
+      }
+    }
+
+    &.--h3 {
+      font-size: 1.61vw;
+      line-height: 1.6;
+      margin-bottom: 1.83vw;
+
+      @include med.media(sp) {
+        font-size: 4.8vw;
+        margin-bottom: 4.8vw;
+        line-height: 1.39;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 1.32vw;
+    margin-bottom: 2.8vw;
+    line-height: 2.2;
+
+    @include med.media(sp) {
+      font-size: 4vw;
+      margin-bottom: 5.33vw;
+      line-height: 2;
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: underline;
+      @include mix.defaultHover;
+    }
+  }
+
+  &__wrap {
+    margin-top: 4.03vw;
+    @include med.media(sp) {
+      margin-top: 7.62vw;
+    }
+  }
+
+  &__list {
+    margin-bottom: 2.63vw;
+
+    @include med.media(sp) {
+      margin-bottom: 8.5vw;
+    }
+
+    > li {
+      position: relative;
+      font-size: 1.32vw;
+      line-height: 1.67;
+      margin-bottom: 1.17vw;
+      padding-left: 2.93vw;
+
+      @include med.media(sp) {
+        font-size: 4vw;
+        padding-left: 5.33vw;
+        margin-bottom: 3vw;
+        line-height: 1.73;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 1.282vw;
+        top: 1vw;
+        display: inline-block;
+        width: 0.366vw;
+        height: 0.366vw;
+        border-radius: 50%;
+        background-color: var.$DARK_GRAY;
+        @include med.media(sp) {
+          width: 2.13vw;
+          height: 2.13vw;
+          left: 0;
+          top: 2.5vw;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      a {
+        display: inline-block;
+        text-decoration: underline;
+        @include mix.defaultHover;
+      }
+    }
+
+    &.--discNone {
+      > li {
+        padding-left: 1vw;
+        &::before {
+          display: none;
+        }
+
+        @include med.media(sp) {
+          padding-left: 2vw;
+        }
+      }
+    }
+
+    &.--number {
+      list-style-type: decimal;
+      > li {
+        padding-left: 0;
+        margin-left: 2vw;
+        &::before {
+          display: none;
+        }
+
+        a {
+          display: inline;
+        }
+
+        @include med.media(sp) {
+          margin-left: 4vw;
+        }
+      }
+    }
+  }
+
+  &__tableArea {
+    @include med.media(sp) {
+      overflow-x: scroll;
+    }
+  }
+
+  &__table {
+    margin-bottom: 2.8vw;
+    border-collapse: collapse;
+    border: 1px solid var.$DARK_GRAY;
+    width: 100%;
+    @include med.media(sp) {
+      width: auto;
+      margin-bottom: 5.33vw; 
+    }
+    th,td {
+      border-collapse: collapse;
+      border: 1px solid var.$DARK_GRAY;
+      line-height: 1.67;
+      padding: 2.2vw;
+      font-size: 1.32vw;
+      @include med.media(sp) {
+        font-size: 4vw;
+        padding: 4vw;
+      }
+    }
+
+    th {
+      font-weight: bold;
+      background-color: var.$LIGHT_GRAY;
+      width: 18.31vw;
+      @include med.media(sp) {
+        min-width: 30vw;
+      }
+    }
+
+    td {
+      width: 30vw;
+      @include med.media(sp) {
+        min-width: 50vw;
+      }
+    }
+
+    a {
+      display: inline-block;
+      text-decoration: underline;
+      @include mix.defaultHover;
+    }
+
+    &.--vertical {
+      th {
+        width: 30vw;
+        @include med.media(sp) {
+          min-width: 40vw;
+        }
+      }
+
+      td {
+        width: 30vw;
+        @include med.media(sp) {
+          min-width: 40vw;
+        }
+      }
+    }
+  }
+
+  &__movieWrap {
+    margin: 0 auto 2.8vw;
+    @include med.media(sp) {
+      width: 100%;
+      margin-bottom: 6.67vw;
+    }
+
+    width: 47.62vw;
+    > iframe {
+      width: 100%;
+      height: 29.29vw;
+      @include med.media(sp) {
+        height: 49.33vw;
+      }
+    }
+  }
+
+  &__img {
+    margin: 0 auto 2.8vw;
+    @include med.media(sp) {
+      margin-bottom: 6.67vw;
+    }
+
+    > p {
+      margin-top: 1.47vw;
+      line-height: 1.71;
+      font-size: 1.03vw;
+      color: var.$DARK_GRAY;
+
+      @include med.media(sp) {
+        font-size: 3.2vw;
+        margin-top: 2.67vw;
+        line-height: 1.67; 
+      }
+    }
+
+    &.--single {
+      width: 47.62vw;
+      > img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      @include med.media(sp) {
+        width: 100%;
+      }
+    }
+
+    &.--double {
+      width: 30.77vw;
+      > img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      @include med.media(sp) {
+        width: 100%;
+      }
+    }
+
+    &.--triple {
+      width: 21.5vw;
+      > img {
+        width: 100%;
+        object-fit: cover;
+      }
+
+      @include med.media(sp) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__imgList {
+    display: flex;
+    justify-content: space-between;
+
+    @include med.media(sp) {
+      display: block;
+      > li {
+        margin-bottom: 0;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__arrangeImg {
+    display: flex;
+    justify-content: space-between;
+    > img {
+      width: 20.51vw;
+      height: 20.51vw;
+      object-fit: cover;
+      @include med.media(sp) {
+        width: 21.33vw;
+        height: 21.33vw;
+      }
+    }
+
+    > p {
+      width: 43.95vw;
+      font-size: 1.32vw;
+      line-height: 2.2;
+      margin-top: -0.725vw;
+      @include med.media(sp) {
+        width: 53.33vw;
+        font-size: 4vw;
+        line-height: 2;
+        margin-top: -2vw;
+      }
+    }
+  }
+
+  &__footerText {
+    font-size: 1.32vw;
+    line-height: 1.67;
+    text-align: right;
+    margin-bottom: 2.8vw;
+    @include med.media(sp) {
+      font-size: 4vw;
+      line-height: 1.73;
+      margin-bottom: 5.4vw;
+    }
+  }
+
+  &__pdfBtnArea {
+    border-bottom: max(0.073vw, 1px) solid #ABAEB1;
+    padding: 3.37vw 0;
+    @include med.media(sp) {
+      border-bottom:0.27vw solid #ABAEB1;
+      padding: 4.53vw 0;
+    }
+
+    > p {
+      text-align: center;
+      font-size: 1.76vw;
+      font-weight: bold;
+      line-height: 1.67;
+      margin-bottom: 0.88vw;
+      @include med.media(sp) {
+        font-size: 4.8vw;
+        line-height: 1.38;
+        margin-bottom: 4.53vw;
+      }
+    }
+
+    > div {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__textAndImgArrange {
+    display: flex;
+    align-items: center;
+    padding: 2vw 0;
+    @include med.media(sp) {
+      display: block;
+      padding: 6vw 0;
+    }
+
+    > dt {
+      font-size: 1.32vw;
+      margin-right: 1.74vw;
+      @include med.media(sp) {
+        font-size: 4vw;
+      }
+    }
+
+    > dd {
+      @include med.media(sp) {
+        margin-top: 4vw;
+      }
+      ul {
+        display: flex;
+        align-items: center;
+        > li {
+          width: 5vw;
+          margin-right: 2vw;
+          @include med.media(sp) {
+            width: 15.73vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+.js-modal-img {
+  img {
+    display: block;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

@@ -1,0 +1,142 @@
+<%
+  const data = {
+    isTop: false,
+    title: "",
+    description: "",
+    pageName: "topic",
+    current: "topic",
+    pageTitle: "Main Areas of Focus",
+    path: "../../en",
+    filePath: "../..",
+    imgPath: "../../images/sub",
+    commonImgPath: "../../images/common",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../include/common/_header.ejs', {data: data}); %>
+      <main class="c-main">
+        <%- include('../include/sub/_mv.ejs', {data: data}); %>
+        <%- include('../include/common/_curveBg.ejs', {data: data}); %>
+        <div class="p-sub__contentsWrap">
+          <div class="p-topic__topText">
+            <p class="c-text">Based on its mission, the Toyota Mobility Foundation is working to solve various mobility issues around the world, such as traffic congestion and safety, maintaining local transportation options, assisting basic hydrogen research, supporting those with mobility difficulties, farming village assistance in Africa, and pursuing initiatives that bring fun and joy to mobility.</p>
+          </div>
+          <div class="p-sub__contents">
+            <ul class="p-topic__list">
+              <li class="js-scrollFadeIn">
+                <div class="p-topic__img">
+                  <img src="<%= data.imgPath %>/topic/traffic_safety.png" alt="trafficSafety img">
+                </div>
+                <section class="p-topic__textArea">
+                  <h3 class="p-topic__heading">
+                    <span class="p-topic__icon trafficSafety">
+                      <img src="<%= data.commonImgPath %>/icon_traffic_safety.svg" alt="trafficSafety icon">
+                    </span>
+                    <span class="p-topic__title">Traffic Safety</span>
+                  </h3>
+                  <p>Aiming for zero casualties from traffic accidents, we are working on traffic safety from two angles: educational activities focused on child safety and safe driving for older adults, and efforts to prevent accidents using technology and data.</p>
+                  <div class="p-topic__btn">
+                    <a href="<%= data.path %>/activity/traffic_safety/" class="c-button">LEARN MORE</a>
+                  </div>
+                </section>
+              </li>
+              <li class="js-scrollFadeIn">
+                <div class="p-topic__img">
+                  <img src="<%= data.imgPath %>/topic/traffic_jam.png" alt="trafficJam img">
+                </div>
+                <section class="p-topic__textArea">
+                  <h3 class="p-topic__heading">
+                    <span class="p-topic__icon trafficJam">
+                      <img src="<%= data.commonImgPath %>/icon_traffic_jam.svg" alt="trafficJam icon">
+                    </span>
+                    <span class="p-topic__title">Measures to mitigate traffic congestion</span>
+                  </h3>
+                  <p>An increase in mobility needs accompanies economic growth and urbanization in emerging countries in the ASEAN region, aggravating traffic congestion and air pollution. To resolve these issues, we are implementing various initiatives that utilize vehicle movement data from traffic management, infrastructure development, and urban planning perspectives.</p>
+                  <div class="p-topic__btn">
+                    <a href="<%= data.path %>/activity/traffic_congestion/" class="c-button">LEARN MORE</a>
+                  </div>
+                </section>
+              </li>
+              <li class="js-scrollFadeIn">
+                <div class="p-topic__img">
+                  <img src="<%= data.imgPath %>/topic/person_support.png" alt="supportPerson img">
+                </div>
+                <section class="p-topic__textArea">
+                  <h3 class="p-topic__heading">
+                    <span class="p-topic__icon supportPerson">
+                      <img src="<%= data.commonImgPath %>/icon_person_support.svg" alt="supportPerson icon">
+                    </span>
+                    <span class="p-topic__title">Support for people with mobility challenges</span>
+                  </h3>
+                  <p>To realize our goal of “Mobility for All,” we aim to create a world where people everywhere can enjoy safe, secure freedom of movement regardless of disability.</p>
+                  <div class="p-topic__btn">
+                    <a href="<%= data.path %>/activity/support_for_people/" class="c-button">LEARN MORE</a>
+                  </div>
+                </section>
+              </li>
+              <li class="js-scrollFadeIn">
+                <div class="p-topic__img">
+                  <img src="<%= data.imgPath %>/topic/energy.png" alt="energy img">
+                </div>
+                <section class="p-topic__textArea">
+                  <h3 class="p-topic__heading">
+                    <span class="p-topic__icon energy">
+                      <img src="<%= data.commonImgPath %>/icon_energy.svg" alt="energy icon">
+                    </span>
+                    <span class="p-topic__title">Hydrogen/Energy</span>
+                  </h3>
+                  <p>To realize a decarbonized society, we provide grants to universities and research institutions for basic research on CO2-free hydrogen to help it become more widespread and conduct joint research with grant recipients.</p>
+                  <div class="p-topic__btn">
+                    <a href="<%= data.path %>/activity/hydrogen_energy/" class="c-button">LEARN MORE</a>
+                  </div>
+                </section>
+              </li>
+              <li class="js-scrollFadeIn">
+                <div class="p-topic__img">
+                  <img src="<%= data.imgPath %>/topic/area_support.png" alt="supportArea img">
+                </div>
+                <section class="p-topic__textArea">
+                  <h3 class="p-topic__heading">
+                    <span class="p-topic__icon supportArea">
+                      <img src="<%= data.commonImgPath %>/icon_area_support.svg" alt="supportArea icon">
+                    </span>
+                    <span class="p-topic__title">Mobility support for local communities</span>
+                  </h3>
+                  <p>To solve the various mobility issues that differ between countries and regions, we support efforts to secure mobility in areas in Japan where depopulation and aging are progressing and effectively utilize public transportation in areas with growing populations, and also help to secure mobility in rural areas of Africa.</p>
+                  <div class="p-topic__btn">
+                    <a href="<%= data.path %>/activity/local_mobility_support/" class="c-button">LEARN MORE</a>
+                  </div>
+                </section>
+              </li>
+              <li class="js-scrollFadeIn">
+                <div class="p-topic__img">
+                  <img src="<%= data.imgPath %>/topic/public_offering.png" alt="publicOffering img">
+                </div>
+                <section class="p-topic__textArea">
+                  <h3 class="p-topic__heading">
+                    <span class="p-topic__icon publicOffering">
+                      <img src="<%= data.commonImgPath %>/icon_public_offering.svg" alt="publicOffering icon">
+                    </span>
+                    <span class="p-topic__title">Contests/Open recruitment</span>
+                  </h3>
+                  <p>We hold contests and open recruitment to support people who have new ideas and technologies aimed at solving mobility issues in society. We hope to realize a “better mobility society” by supporting innovative ideas and technology.</p>
+                  <div class="p-topic__btn">
+                    <a href="<%= data.path %>/activity/contests/" class="c-button">LEARN MORE</a>
+                  </div>
+                </section>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <%- include('../include/common/_related.ejs', {data: data}); %>
+      </main>
+      <%- include('../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

@@ -1,0 +1,304 @@
+// -------------------------------------------------------------------
+// 	product.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-productWrap {
+  margin-top: calc(90/1920*100vw);
+  > div {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include med.media(sp) {
+    margin-top: calc(40/750*100vw);
+  }
+}
+
+.c-product {
+  position: relative;
+  background-color: var.$BLOCK_BG_GRAY;
+  margin-bottom: calc(60/1920*100vw);
+  padding: 0 calc(60/1920*100vw) calc(50/1920*100vw);
+  @include med.media(sp) {
+    margin-bottom: calc(20/750*100vw);
+    padding: 0 0 calc(65/750*100vw);
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    width: calc(395/1920*100vw);
+    background-color: #000;
+    color: #FFF;
+    line-height: 1;
+    font-size: calc(30/1920*100vw);
+    font-weight: bold;
+    text-align: center;
+    padding: calc(25/1920*100vw) 0;
+    transform: translateY(-33%);
+    @include med.media(sp) {
+      width: 100%;
+      font-size: calc(45/750*100vw);
+      padding: calc(22.5/750*100vw) 0;
+      transform: translateY(0);
+    }
+
+    &.--rentacar {
+      transform: translateY(-100%);
+      @include med.media(sp) {
+        transform: translateY(-40%);
+      }
+    }
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    @include med.media(sp) {
+      display: block;
+      width: 94.2%;
+      margin: calc(20/750*100vw) auto 0;
+    }
+  }
+
+  &__commonImg {
+    position: relative;
+    width: calc(395/1920*100vw);
+    height: auto;
+    margin-right: calc(20/1920*100vw);
+    > img {
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      @include med.media(sp) {
+        position: relative;
+        height: calc(300/750*100vw);
+      }
+    }
+
+    @include med.media(sp) {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  &__block {
+    width: calc(100% - 415/1920*100vw);
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  &__text {
+    font-size: calc(22/1920*100vw);
+    line-height: 1;
+    position: absolute;
+    top: 1vw;
+    @include med.media(sp) {
+      position: relative;
+      top: inherit;
+      font-size: calc(28/750*100vw);
+      margin-top: calc(20/750*100vw);
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: calc(40/1920*100vw);
+
+    @include med.media(sp) {
+      justify-content: center;
+      margin-top: calc(40/750*100vw);
+      display: none;
+      &.is-block-show {
+        display: flex;
+      }
+    }
+
+    > a {
+      width: calc(280/1920*100vw);
+      @include med.media(sp) {
+        width: calc(400/750*100vw);
+      }
+    }
+  }
+
+  &__itemList {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: calc(-15/1920*100vw);
+    @include med.media(sp) {
+      margin-top: calc(24/750*100vw);
+      margin-bottom: calc(-20/750*100vw);
+      justify-content: space-between;
+      display: none;
+      &.is-block-show {
+        display: flex;
+      }
+    }
+
+    > li {
+      margin-right: calc(15/1920*100vw);
+      width: calc(220/1920*100vw);
+      height: calc(200/1920*100vw);
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+
+      @include med.media(sp) {
+        margin-right: 0;
+        width: calc(307.5/750*100vw);
+        height: calc(240/750*100vw);
+      }
+    }
+  }
+
+  &__item {
+    margin-bottom: calc(15/1920*100vw);
+    > a {
+      transition: opacity 0.5s, border-color 0.5s;
+    }
+
+    @include med.media(sp) {
+      margin-bottom: calc(20/750*100vw);
+    }
+  }
+
+  &__itemLink {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    background-color: #FFF;
+    border: 1px solid #FFF;
+    border-radius: calc(10/1920*100vw);
+    box-shadow: 3px 3px 6px #C3C3C333;
+    width: 100%;
+    height: 100%;
+
+    @include med.media(sp) {
+      border-radius: calc(20/750*100vw);
+    }
+
+    > img {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: 1;
+      @include med.media(sp) {
+        transform: scale(0.8);
+      }
+    }
+    
+    > span {
+      display: inline-block;
+      position: absolute;
+      z-index: 2;
+      &.--pdfIcon {
+        display: none;
+        left: calc(10/1920*100vw);
+        top: calc(10/1920*100vw);
+        @include med.media(sp) {
+          left: calc(16/750*100vw);
+          top: calc(10/750*100vw);
+        }
+
+        img {
+          width: calc(30/1920*100vw);
+          @include med.media(sp) {
+            width: calc(40/750*100vw);
+          }
+        }
+      }
+
+      &.--text {
+        font-size: calc(18/1920*100vw);
+        color: var.$LIGHT_TEXT_COLOR;
+        text-align: center;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        line-height: 1.75;
+        @include med.media(sp) {
+          font-size: calc(26/750*100vw);
+        }
+      }
+    }
+
+    &.--pdf {
+      > span {
+        &.--pdfIcon {
+          display: inline-block;
+        }
+      }
+    }
+
+    &:hover {
+      opacity: 1;
+      border-color: var.$ACCENT_ORANGE;
+    }
+
+    &.--noLink {
+      &:hover {
+        opacity: 1;
+        border-color: #FFF;
+      }
+    }
+  }
+
+  &__itemTriggerWrap {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+      position: absolute;
+      right: 1.5%;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__itemTrigger {
+    position: relative;
+    display: block;
+    width: calc(60/750*100vw);
+    height: calc(60/750*100vw);
+    border-radius: calc(10/750*100vw);
+    background-color: var.$ACCENT_ORANGE;
+    transition: background-color 0.2s;
+    > svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      transition: all 0.2s;
+
+      path {
+        fill: #FFF;
+      }
+
+      @include med.media(sp) {
+        width: calc(20/750*100vw);
+        height: calc(17/750*100vw);
+      }
+    }
+
+    &.is-block-show {
+      background-color: #FFF;
+      svg {
+        transform: translate(-50%, -50%) rotate(0deg);
+        path {
+          fill: var.$ACCENT_ORANGE;
+        }
+      }
+    }
+  }
+}

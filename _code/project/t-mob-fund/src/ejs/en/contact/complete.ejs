@@ -1,0 +1,43 @@
+<%
+  const data = {
+    isTop: false,
+    title: "",
+    description: "",
+    pageName: "contact",
+    current: "contact",
+    pageTitle: "Contact Form",
+    path: "../../en",
+    filePath: "../..",
+    imgPath: "../../images/sub",
+    commonImgPath: "../../images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body class="js-contact-body">
+    <div class="p-sub__container">
+      <%- include('../include/common/_header.ejs', {data: data}); %>
+      <main class="c-main">
+        <div class="p-contact">
+          <section id="js-heading-subMv" class="p-contact__headingWrap c-headingWrap--subMv">
+            <h1 class="c-heading"><%= data.pageTitle %></h1>
+            <p class="c-headingSub">
+              <span class="c-headingSub__decoration"></span>
+            </p>
+          </section>
+          <div class="p-contact__complete js-load-fadeIn">
+            <p>お問い合わせいただきありがとうございます。</p>
+            <p>入力いただいた内容の送信が完了いたしました。</p>
+            <div class="p-contact__backTopBtn">
+              <a href="<%= data.path %>/" class="c-button">TOPに戻る</a>
+            </div>
+          </div>
+        </div>
+      </main>
+      <%- include('../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

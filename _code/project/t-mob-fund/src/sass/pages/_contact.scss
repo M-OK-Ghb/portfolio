@@ -1,0 +1,304 @@
+// -------------------------------------------------------------------
+// 	contact.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.p-contact {
+  padding:13.55vw 0 9.9vw;
+
+  @include med.media(sp) {
+    padding: 23.47vw 0 14vw;
+  }
+
+  &__headingWrap {
+    padding-left: 9.17vw;
+    @include med.media(sp) {
+      padding-left: 4.93vw;
+    }
+  }
+
+  &__contents {
+    width: 47.62vw;
+    margin: 3.3vw auto 0;
+    @include med.media(sp) {
+      width: 84vw;
+      margin-top: 8.8vw;
+    }
+  }
+
+  &__headText {
+    text-align: center;
+    font-size: 1.2vw;
+    line-height: 2.25;
+    @include med.media(sp) {
+      text-align: left;
+      font-size: 4vw;
+      line-height: 1.73;
+    }
+  }
+
+  &__formArea {
+    margin-top: 4.77vw;
+    @include med.media(sp) {
+      margin-top: 9.33vw;
+    }
+    > dl {
+      margin-bottom: 2.56vw;
+      @include med.media(sp) {
+        margin-bottom: 6.93vw;
+      }
+
+      &.confirm {
+        margin-bottom: 3vw;
+        @include med.media(sp) {
+          margin-bottom: 8vw;
+        }
+      }
+    }
+  }
+
+  &__list {
+    > dt {
+      font-size: 1.17vw;
+      line-height: 2.25;
+      margin-bottom: 0.88vw;
+      span {
+        display: inline-block;
+        color: var.$ACCENT_RED;
+      }
+
+      @include med.media(sp) {
+        font-size: 3.47vw;
+        margin-bottom: 2.67vw;
+        line-height: 1.5;
+      }
+    }
+
+    &.confirm {
+      > dt {
+        line-height: 2;
+        margin-bottom: 0.4vw;
+        @include med.media(sp) {
+          margin-bottom: 1.5vw;
+        }
+      }
+    }
+
+    > dd {
+      &.nameArea {
+        display: flex;
+        justify-content: space-between;
+        > span {
+          display: inline-block;
+          width: 46.15%;
+        }
+
+        @include med.media(sp) {
+          display: block;
+          > span {
+            width: 100%;
+            &:first-child {
+              margin-bottom: 2.67vw;
+            }
+          }
+        }
+      }
+
+      input, select, textarea {
+        width: 100%;
+        border: max(0.073vw, 1px) solid #ABAEB1;
+        font-size: 1.17vw;
+        line-height: 1.5;
+        padding: 1.32vw 2.2vw;
+  
+        @include med.media(sp) {
+          border: 0.27vw solid #ABAEB1;
+          font-size: max(3.47vw,16px);
+          padding-left: 4.53vw;
+        }
+
+        &.plAdjust {
+          @include med.media(sp) {
+            padding-left: 2vw;
+          }
+        }
+      }
+  
+      input, select {
+        min-height: 4.4vw;
+        @include med.media(sp) {
+          min-height: 12vw;
+        }
+      }
+    }
+  }
+
+  &__selectWrap {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      right: 1.2vw;
+      top: 45%;
+      width: 1.1vw;
+      height: 1.1vw;
+      border-top: 2px solid var.$ACCENT_RED;
+      border-left: 2px solid var.$ACCENT_RED;
+      transform: translateY(-50%) rotate(-135deg);
+      pointer-events: none;
+      @include med.media(sp) {
+        right: 3.2vw;
+        width: 3.2vw;
+        height: 3.2vw;
+        border-top: 0.533vw solid var.$ACCENT_RED;
+        border-left: 0.533vw solid var.$ACCENT_RED;
+      }
+    }
+  }
+
+  &__errorNote {
+    color: var.$ACCENT_RED;
+    display: none;
+    margin-top: 0.73vw;
+    font-size: 1.1vw;
+    @include med.media(sp) {
+      font-size: 3.47vw;
+      margin-top: 2vw;
+    }
+
+    &.is-error {
+      display: block;
+    }
+  }
+
+  &__bottom {
+    margin-top: 4.76vw;
+    @include med.media(sp) {
+      margin-top: 10vw;
+    }
+  }
+
+  &__checkArea {
+    text-align: center;
+    span {
+      font-size: 1.03vw;
+      line-height: 1.43;
+      @include med.media(sp) {
+        font-size: 3.2vw;
+      }
+    }
+  }
+
+  &__btnWrap {
+    margin-top: 3.66vw;
+    display: flex;
+    justify-content: center;
+    @include med.media(sp) {
+      margin-top: 8vw;
+    }
+
+    > button {
+      pointer-events: none;
+      &.is-active {
+        pointer-events: inherit;
+      }
+    }
+  }
+
+  // 確認画面
+  &__confirmText {
+    font-size: 1.17vw;
+    line-height: 1.5;
+    @include med.media(sp) {
+      font-size: 3.47vw;
+    }
+
+    &.nameArea {
+      > span {
+        display: inline-block;
+        &:first-child {
+          margin-right: 1vw;
+        }
+      }
+    }
+
+    &.freeInput {
+      line-height: 2;
+    }
+  }
+
+  &__confirmNote {
+    text-align: center;
+    font-size: 1.2vw;
+    line-height: 2;
+    @include med.media(sp) {
+      text-align: left;
+      font-size: 3.5vw;
+    }
+  }
+
+  &__confirmBtnWrap {
+    margin-top: 3.2vw;
+    display: flex;
+    justify-content: center;
+
+    @include med.media(sp) {
+      margin-top: 12vw;
+      flex-wrap: wrap;
+    }
+
+    > button {
+      &:first-child {
+        margin-right: 2vw;
+        @include med.media(sp) {
+          margin-right: 0;
+          margin-bottom: 8vw;
+        }
+      }
+    }
+  }
+
+  &__complete {
+    width: 70vw;
+    margin: auto;
+    padding:8vw 5vw;
+
+    @include med.media(sp) {
+      width: 100%;
+      padding: 12vw 6vw;
+    }
+
+    > p {
+      text-align: center;
+      line-height: 2.5;
+      font-size: 2vw;
+
+      @include med.media(sp) {
+        text-align-last: left;
+        font-size: 4vw;
+      }
+    }
+  }
+
+  &__backTopBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.2vw;
+
+    @include med.media(sp) {
+      margin-top: 8vw;
+    }
+
+    > a {
+      width: 24vw;
+      font-size: 1.4vw;
+
+      @include med.media(sp) {
+        width: 53.33vw;
+        font-size: 3.47vw;
+      }
+    }
+  }
+}

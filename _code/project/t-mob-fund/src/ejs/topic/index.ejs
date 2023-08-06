@@ -1,0 +1,142 @@
+<%
+  const data = {
+    isTop: false,
+    title: "主な活動分野 | 一般財団法人 トヨタ・モビリティ基金",
+    description: "",
+    pageName: "topic",
+    current: "topic",
+    pageTitle: "主な活動内容",
+    pageTitleSub: "PROJECT REPORTS",
+    path: "..",
+    imgPath: "../images/sub",
+    commonImgPath: "../images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../include/common/_header.ejs', {data: data}); %>
+      <main class="c-main">
+        <%- include('../include/sub/_mv.ejs', {data: data}); %>
+        <%- include('../include/common/_curveBg.ejs', {data: data}); %>
+        <div class="p-sub__contentsWrap">
+          <div class="p-topic__topText">
+            <p class="c-text">トヨタ・モビリティ基金は当財団のミッションに基づき、渋滞対策、交通安全、地域の移動手段維持、水素基礎研究の助成、移動困難者の移動支援、アフリカ農村の支援、モビリティの楽しさを追求した取組み等、世界中のさまざまな移動課題の解決に取り組んでいます。</p>
+          </div>
+          <div class="p-sub__contents">
+            <ul class="p-topic__list">
+              <li class="js-scrollFadeIn">
+                <div class="p-topic__img">
+                  <img src="<%= data.imgPath %>/topic/traffic_safety.png" alt="trafficSafety img">
+                </div>
+                <section class="p-topic__textArea">
+                  <h3 class="p-topic__heading">
+                    <span class="p-topic__icon trafficSafety">
+                      <img src="<%= data.commonImgPath %>/icon_traffic_safety.svg" alt="trafficSafety icon">
+                    </span>
+                    <span class="p-topic__title">交通安全</span>
+                  </h3>
+                  <p>「交通事故死傷者ゼロ」を目指し、子どもの安全や高齢者の安全運転に焦点を当てた啓発活動と、技術やデータで事故を未然に防ぐ取り組みの両面から交通安全に取り組んでいます。</p>
+                  <div class="p-topic__btn">
+                    <a href="<%= data.path %>/activity/traffic_safety/" class="c-button">詳細を見る</a>
+                  </div>
+                </section>
+              </li>
+              <li class="js-scrollFadeIn">
+                <div class="p-topic__img">
+                  <img src="<%= data.imgPath %>/topic/traffic_jam.png" alt="trafficJam img">
+                </div>
+                <section class="p-topic__textArea">
+                  <h3 class="p-topic__heading">
+                    <span class="p-topic__icon trafficJam">
+                      <img src="<%= data.commonImgPath %>/icon_traffic_jam.svg" alt="trafficJam icon">
+                    </span>
+                    <span class="p-topic__title">渋滞対策</span>
+                  </h3>
+                  <p>アジア地域の新興国では、経済成長や都市化の進展によりモビリティのニーズが拡大し、交通渋滞や大気汚染が深刻化しています。その解消に向け、車両の移動データを活用した交通マネジメントやインフラ整備、都市計画の面からさまざまな取り組みを実施しています。</p>
+                  <div class="p-topic__btn">
+                    <a href="<%= data.path %>/activity/traffic_congestion/" class="c-button">詳細を見る</a>
+                  </div>
+                </section>
+              </li>
+              <li class="js-scrollFadeIn">
+                <div class="p-topic__img">
+                  <img src="<%= data.imgPath %>/topic/person_support.png" alt="supportPerson img">
+                </div>
+                <section class="p-topic__textArea">
+                  <h3 class="p-topic__heading">
+                    <span class="p-topic__icon supportPerson">
+                      <img src="<%= data.commonImgPath %>/icon_person_support.svg" alt="supportPerson icon">
+                    </span>
+                    <span class="p-topic__title">移動困難者の支援</span>
+                  </h3>
+                  <p>「Mobility for All（すべての人に移動の自由を）」の実現に向けて、障がいの有無にかかわらず、世界中のあらゆる人が安全・安心で、自由に移動を楽しめる世界を目指しています。</p>
+                  <div class="p-topic__btn">
+                    <a href="<%= data.path %>/activity/support_for_people/" class="c-button">詳細を見る</a>
+                  </div>
+                </section>
+              </li>
+              <li class="js-scrollFadeIn">
+                <div class="p-topic__img">
+                  <img src="<%= data.imgPath %>/topic/energy.png" alt="energy img">
+                </div>
+                <section class="p-topic__textArea">
+                  <h3 class="p-topic__heading">
+                    <span class="p-topic__icon energy">
+                      <img src="<%= data.commonImgPath %>/icon_energy.svg" alt="energy icon">
+                    </span>
+                    <span class="p-topic__title">水素・エネルギー</span>
+                  </h3>
+                  <p>脱炭素社会の実現に向けて、大学、研究機関等によるCO2フリー水素普及の為の基礎研究に対する助成、助成研究採択者を対象とした共同研究を実施しています。</p>
+                  <div class="p-topic__btn">
+                    <a href="<%= data.path %>/activity/hydrogen_energy/" class="c-button">詳細を見る</a>
+                  </div>
+                </section>
+              </li>
+              <li class="js-scrollFadeIn">
+                <div class="p-topic__img">
+                  <img src="<%= data.imgPath %>/topic/area_support.png" alt="supportArea img">
+                </div>
+                <section class="p-topic__textArea">
+                  <h3 class="p-topic__heading">
+                    <span class="p-topic__icon supportArea">
+                      <img src="<%= data.commonImgPath %>/icon_area_support.svg" alt="supportArea icon">
+                    </span>
+                    <span class="p-topic__title">地域の移動支援</span>
+                  </h3>
+                  <p>国や地域で異なるさまざまな移動の課題を解決するため、日本では過疎化や高齢化が進む地域の移動手段の確保、人口流入が進む地域では公共交通機関の有効活用、アフリカでは農村地域での移動手段確保の取り組みを支援しています。</p>
+                  <div class="p-topic__btn">
+                    <a href="<%= data.path %>/activity/local_mobility_support/" class="c-button">詳細を見る</a>
+                  </div>
+                </section>
+              </li>
+              <li class="js-scrollFadeIn">
+                <div class="p-topic__img">
+                  <img src="<%= data.imgPath %>/topic/public_offering.png" alt="publicOffering img">
+                </div>
+                <section class="p-topic__textArea">
+                  <h3 class="p-topic__heading">
+                    <span class="p-topic__icon publicOffering">
+                      <img src="<%= data.commonImgPath %>/icon_public_offering.svg" alt="publicOffering icon">
+                    </span>
+                    <span class="p-topic__title">コンテスト・公募</span>
+                  </h3>
+                  <p>私たちは、社会の移動課題解決に向けて新たな発想や技術を持つ人を支援するコンテスト・公募を実施しています。イノベーティブなアイデアや技術の支援を通じ「もっといいモビリティ社会」の実現を目指します。</p>
+                  <div class="p-topic__btn">
+                    <a href="<%= data.path %>/activity/contests/" class="c-button">詳細を見る</a>
+                  </div>
+                </section>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <%- include('../include/common/_related.ejs', {data: data}); %>
+      </main>
+      <%- include('../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

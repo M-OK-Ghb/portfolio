@@ -1,0 +1,141 @@
+// -------------------------------------------------------------------
+//  relatedArea.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-related {
+  padding-bottom: 5.15vw;
+  background-color: #f2f3f3;
+  position: relative;
+
+  @include med.media(sp) {
+    padding-bottom: 10vw;
+  }
+
+  &__head {
+    background-color: var.$MIDDLE_GRAY;
+  }
+
+  &__headInner {
+    width: 82vw;
+    margin: auto;
+    padding-top: 4.76vw;
+    padding-bottom: 7.33vw;
+    > h2,p {
+      color: #FFF;
+    }
+
+    @include med.media(sp) {
+      width: 80vw;
+      padding-top: 8.53vw;
+      padding-bottom: 18.65vw;
+    }
+  }
+
+  // &__contents {}
+
+  &__contentsInner {
+    width: 82vw;
+    margin: auto;
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  &__listTopWrap {
+    transform: translateY(-4vw);
+    @include med.media(sp) {
+      transform: translateY(-12vw);
+      overflow-x: hidden;
+    }
+  }
+
+  &__listTop {
+    display: flex;
+    justify-content: space-between;
+    > li {
+      width: 30.5%;
+      height: auto;
+      background-color: #FFF;
+
+      > a {
+        display: block;
+        @include mix.defaultHover;
+      }
+
+      @include med.media(sp) {
+        width: 31.5%;
+      }
+    }
+  }
+
+  &__topImg {
+    > img {
+      width: 100%;
+      height: 12.45vw;
+      object-fit: cover;
+      @include med.media(sp) {
+        height: 32.27vw;
+      }
+    }
+  }
+
+  &__topText {
+    padding: 1.32vw 1.8vw;
+    @include med.media(sp) {
+      padding: 5vw 7%;
+    }
+
+    > h3 {
+      font-size: 1.17vw;
+      @include med.media(sp) {
+        font-size: 3.8vw;
+      }
+    }
+
+    > p {
+      color: var.$DARK_GRAY;
+      font-size: 0.88vw;
+      line-height: 2;
+      margin-top: 1.17vw;
+      @include med.media(sp) {
+        margin-top: 3.73vw;
+        font-size: 3.2vw;
+        line-height: 1.8;
+      }
+    }
+  }
+
+  &__listBottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include med.media(sp) {
+      margin: -4.5vw auto 0;
+      width: 90%;
+      justify-content: space-between;
+    }
+    
+    > li {
+      width: 30.15%;
+      &:first-child {
+        margin-right: 9.55%;
+      }
+
+      @include med.media(sp) {
+        width: 47.5%;
+        &:first-child {
+          margin-right: 0;
+        }
+      }
+
+      > a {
+        display: block;
+        @include mix.defaultHover;
+      }
+    }
+  }
+}

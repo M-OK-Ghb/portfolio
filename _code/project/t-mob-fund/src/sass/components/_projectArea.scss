@@ -1,0 +1,150 @@
+// -------------------------------------------------------------------
+//  projectArea.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c- {
+  &project {
+    width: 82vw;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    @include med.media(sp) {
+      width: 80vw;
+      display: block;
+    }
+  }
+
+  &projectTextArea {
+    width: 38.2%;
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  &projectText {
+    margin-top: 8.06vw;
+    @include med.media(sp) {
+      margin-top: 10.13vw;
+    }
+  }
+
+  &projectIconArea {
+    width: 53.57%;
+    @include med.media(sp) {
+      width: 100%;
+      margin-top: 5.33vw;
+    }
+  }
+
+  &projectIconList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include med.media(sp) {
+      margin-bottom: 2.65vw;
+    }
+
+    > li {
+      width: 30%;
+      text-align: center;
+      margin-bottom: 2.93vw;
+
+      @include med.media(sp) {
+        width: 47%;
+        margin-bottom: 8vw;
+      }
+
+      > p {
+        margin-top: 1vw;
+        font-size: 1.17vw;
+        @include med.media(sp) {
+          margin-top: 4vw;
+          font-size: 4vw;
+        }
+      }
+    }
+  }
+
+  &projectIcon {
+    background-color: #FFF;
+    border-radius: 50%;
+    box-shadow: 0.75vw 0.75vw 1.5vw #0000001A;
+    width: 13.19vw;
+    height: 13.19vw;
+    position: relative;
+
+    @include med.media(sp) {
+      width: 37vw;
+      height: 37vw;
+      margin: auto;
+    }
+
+    > img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &.trafficSafety {
+      > img {
+        width: 47.8%;
+      }
+    }
+
+    &.trafficJam {
+      > img {
+        width: 47%;
+      }
+    }
+
+    &.personSupport {
+      > img {
+        width: 37.2%;
+      }
+    }
+
+    &.energy {
+      > img {
+        width: 43.33%;
+      }
+    }
+
+    &.areaSupport {
+      > img {
+        width: 38.33%;
+      }
+    }
+
+    &.publicOffering {
+      > img {
+        width: 25.6%;
+      }
+    }
+  }
+
+  &projectBtn {
+    &.--pc {
+      margin-top: 2.93vw;
+
+      @include med.media(sp) {
+        display: none;
+      }
+    }
+
+    &.--sp {
+      display: none;
+      @include med.media(sp) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}

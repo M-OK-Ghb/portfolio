@@ -1,0 +1,218 @@
+// -------------------------------------------------------------------
+// 	modal.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-modal {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(56,56,58,0.9);
+  overflow-y: auto;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.2s;
+
+  &.is-show {
+    display: block;
+    &.is-fadeIn {
+      opacity: 1;
+    }
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__contents {
+    width: 61.5vw;
+    margin: 4.4vw auto 0;
+    padding-bottom: 3vw;
+    @include med.media(sp) {
+      width: 85vw;
+      margin-top: 16vw;
+      padding-bottom: 8vw;
+    }
+
+    > p {
+      color: #FFFFFF;
+      font-size: 1.32vw;
+      line-height: 2.22;
+      margin-top: 1.47vw;
+      @include med.media(sp) {
+        font-size: 4vw;
+        line-height: 2;
+        margin-top: 5.33vw;
+      }
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 40vw;
+    @include med.media(sp) {
+      height: 56vw;
+    }
+
+    > img {
+      width: 100%;
+      height: auto;
+      max-height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__closeBtnArea {
+    display: block;
+    position: absolute;
+    width: 3.66vw;
+    height: 3.66vw;
+    top: 2.93vw;
+    right: 2.93vw;
+    @include med.media(sp) {
+      width: 8vw;
+      height: 8vw;
+    }
+  }
+
+  &__closeBtn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    
+    @include mix.defaultHover;
+
+    > span {
+      position: absolute;
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+      background-color: #FFF;
+
+      &:nth-child(1) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &__downloadArea {
+    width: 55.68vw;
+    margin: 9.5vw auto 0;
+    background-color: #FFFFFF;
+    padding: 2.93vw 5.86vw;
+
+    @include med.media(sp) {
+      width: 85.33vw;
+      padding: 4.8vw 5.33vw;
+      margin-top: 16vw;
+    }
+
+    > h4 {
+      font-weight: bold;
+      font-size: 1.61vw;
+      line-height: 1.64;
+      @include med.media(sp) {
+        font-size: 4.8vw;
+        line-height: 2;
+      }
+    }
+
+    > p {
+      font-size: 1.17vw;
+      margin-top: 1.83vw;
+      line-height: 2;
+      @include med.media(sp) {
+        font-size: 3.2vw;
+        margin-top: 3.33vw;
+      }
+    }
+  }
+
+  &__checkArea {
+    margin-top: 1.5vw;
+    text-align: center;
+
+    @include med.media(sp) {
+      margin-top: 2.67vw;
+      @include mix.en {
+        margin-top: 3.6vw;
+      }
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 1.17vw;
+      line-height: 2.25;
+
+      @include med.media(sp) {
+        font-size: 3.73vw;
+        line-height: 2.57;
+
+        @include mix.en {
+          line-height: 1.6;
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  &__exLink {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.83vw;
+    @include med.media(sp) {
+      margin-top: 4.27vw;
+    }
+
+    > a {
+      pointer-events: none;
+      &.is-active {
+        pointer-events: inherit;
+      }
+    }
+  }
+
+  &__pdfClose {
+    margin-top: 3.52vw;
+    text-align: center;
+    @include med.media(sp) {
+      margin-top: 9.33vw;
+    }
+  }
+
+  &__pdfCloseBtn {
+    width: 11.72vw;
+    text-align: center;
+    background-color: #BCBEC1;
+    color: #FFF;
+    font-size: 1.1vw;
+    height: 2.93vw;
+    line-height: 2.93vw;
+    border-radius: 1.47vw;
+
+    @include med.media(sp) {
+      width: 34.7vw;
+      font-size: 3.33vw;
+      height: 8.53vw;
+      line-height: 8.53vw;
+      border-radius: 4.27vw;
+    }
+
+    > span {
+      display: inline-block;
+      margin-right: 4px;
+    }
+
+    @include mix.defaultHover;
+  }
+}

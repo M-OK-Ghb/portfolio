@@ -1,0 +1,95 @@
+// -------------------------------------------------------------------
+// 	floatLink.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-float {
+  position: sticky;
+  top: 120px;
+  z-index: 3;
+
+  @include med.media(sp) {
+    position: absolute;
+    width: 100%;
+    margin: auto;
+    top: calc(60/750*100vw);
+
+    &.--rentacar {
+      display: none;
+      position: fixed;
+      top: inherit;
+      bottom: calc(60/750*100vw);
+
+      &.is-block {
+        display: block;
+      }
+
+      &.is-stop {
+        position: absolute;
+      }
+    }
+
+    &.is-float {
+      position: fixed;
+      top: inherit;
+      bottom: calc(60/750*100vw);
+    }
+
+    &.is-float-stop {
+      position: absolute;
+      top: inherit;
+      bottom: calc(60/750*100vw);
+    }
+  }
+
+  &__linkWrap {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0.5vw;
+
+    @include med.media(sp) {
+      padding-right: 0;
+      justify-content: center;
+    }
+
+    > a {
+      transition: background-color 0.5s;
+    }
+  }
+
+  &__outer {
+    position: relative;
+    &.--rentacar {
+      margin-top: calc(140/1920*100vw);
+    }
+
+    @include med.media(sp) {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__sibling {
+    margin-top: calc(-104/1920*100vw);
+    @include med.media(sp) {
+      margin-top: 0;
+    }
+  }
+
+  &__heightAdjustBlock {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+      width: 100%;
+      height: calc(260/750*100vw);
+    }
+  }
+
+  &__bgAdjustBlock {
+    width: 100%;
+    height: calc(20/1920*100vw);
+    background-color: var.$BLOCK_BG_GRAY;
+  }
+}

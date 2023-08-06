@@ -1,0 +1,14 @@
+<% if(data.isTop) { %>
+<div class="c-curveBg top">
+  <img src="<%= data.commonImgPath %>/bg_white_border.png" alt="white curve">
+</div>
+<% } else if(data.curveSp === false) { %>
+<div class="c-curveBg sub spNone">
+  <img src="<%= data.commonImgPath %>/bg_white_border.png" alt="white curve">
+</div>
+<% } else { %>
+<div class="c-curveBg sub">
+  <img src="<%= data.commonImgPath %>/bg_white_border.png" alt="white curve">
+</div>
+<% } %>
+

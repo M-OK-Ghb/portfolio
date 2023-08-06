@@ -1,0 +1,159 @@
+// -------------------------------------------------------------------
+//  topic.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.p-topic {
+  &__topText {
+    width: 50.55vw;
+    margin: auto;
+    @include med.media(sp) {
+      width: 80vw;
+    }
+  }
+
+  &__list {
+    > li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5.86vw;
+
+      @include med.media(sp) {
+        display: block;
+        margin-bottom: 16vw;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:nth-child(even) {
+        .p-topic__img {
+          order: 1;
+        }
+
+        .p-topic__textArea {
+          order: 0;
+        }
+      }
+    }
+  }
+
+  &__img {
+    width: 29.3vw;
+    > img {
+      width: 100%;
+    }
+
+    @include med.media(sp) {
+      width: 80%;
+      margin: auto;
+    }
+  }
+
+  &__textArea {
+    width: 41vw;
+
+    @include med.media(sp) {
+      width: 100%;
+      margin-top: 2vw;
+    }
+
+    > p {
+      font-size: 1.32vw;
+      line-height: 2.2;
+      @include med.media(sp) {
+        margin-top: 5.33vw;
+        font-size: 4vw;
+        line-height: 2.13;
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: 2.56vw;
+    display: flex;
+    align-items: center;
+    > span {
+      display: inline-block;
+    }
+
+    @include med.media(sp) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    margin-right: 1.72vw;
+
+    @include med.media(sp) {
+      margin-right: 4.16vw;
+    }
+
+    > img {
+      width: 100%;
+    }
+
+    &.trafficSafety {
+      width: 6.3vw;
+      @include med.media(sp) {
+        width: 13.33vw;
+      }
+    }
+
+    &.trafficJam {
+      width: 6.22vw;
+      @include med.media(sp) {
+        width: 13.33vw;
+      }
+    }
+
+    &.supportPerson {
+      width: 4.9vw;
+      @include med.media(sp) {
+        width: 10.65vw;
+      }
+    }
+
+    &.energy {
+      width: 5.78vw;
+      @include med.media(sp) {
+        width: 12.5vw;
+      }
+    }
+
+    &.supportArea {
+      width: 5.05vw;
+      @include med.media(sp) {
+        width: 10.93vw;
+      }
+    }
+
+    &.publicOffering {
+      width: 3.37vw;
+      @include med.media(sp) {
+        width: 7.47vw;
+        margin-left: 2vw;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 3.08vw;
+    @include med.media(sp) {
+      font-size: 6.93vw;
+    }
+  }
+
+  &__btn {
+    margin-top: 1.47vw;
+    @include med.media(sp) {
+      margin-top: 3vw;
+      > a {
+        margin: auto;
+      }
+    }
+  }
+}

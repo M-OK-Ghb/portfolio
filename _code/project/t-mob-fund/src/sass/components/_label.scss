@@ -1,0 +1,21 @@
+// -------------------------------------------------------------------
+// 	label.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-label {
+  display: inline-block;
+  font-size: 12px;
+  color: var.$ACCENT_RED;
+  background-color: #FFF;
+  border-radius: 12px;
+  height: 26px;
+  line-height: 26px;
+  padding: 0 14px;
+
+  @include mix.en {
+    font-size: 10px;
+  }
+}

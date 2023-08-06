@@ -1,0 +1,36 @@
+<%
+  const data = {
+    isTop: true,
+    title: "個人のお客様へ - 太陽建機レンタル",
+    description: "個人のお客様へ - 太陽建機レンタル description",
+    path: ".",
+    imgPath: "./images",
+    commonImgPath: "./images/common",
+    current: "top",
+    contactURL: "https://www.taiyokenki.co.jp/individuals/form.html"
+  }
+%>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div>
+      <%- include('include/existingParts/_header.ejs', {data: data}); %>
+      <main class="phase2-theme">
+        <%- include('include/existingParts/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-individual">
+          <%- include('include/top/_fv.ejs', {data: data}); %>
+          <%- include('include/top/_popular.ejs', {data: data}); %>
+          <%- include('include/common/_contactLead.ejs', {data: data}); %>
+          <%- include('include/top/_lineup.ejs', {data: data}); %>
+          <%- include('include/common/_contactLead.ejs', {data: data}); %>
+          <%- include('include/top/_rental.ejs', {data: data}); %>
+        </div>
+      </main>
+      <%- include('include/common/_contactLead.ejs', {data: data}); %>
+      <%- include('include/existingParts/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('include/existingParts/_scriptBlock.ejs', {data: data}); %>
+    <%- include('include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

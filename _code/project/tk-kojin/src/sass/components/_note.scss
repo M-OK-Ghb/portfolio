@@ -1,0 +1,64 @@
+// -------------------------------------------------------------------
+// 	note.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-note {
+  margin-top: calc(32/1920*100vw);
+  @include med.media(sp) {
+    margin-top: calc(36/750*100vw);
+  }
+
+  &__line {
+    line-height: 1;
+    font-size: calc(17/1920*100vw);
+    display: flex;
+    @include med.media(sp) {
+      display: block;
+      font-size: calc(26/750*100vw);
+    }
+  }
+
+  &__title {
+    line-height: 1.54;
+    font-weight: normal;
+    margin-right: calc(30/1920*100vw);
+    flex-shrink: 0;
+    @include med.media(sp) {
+      margin-right: 0;
+      margin-bottom: calc(20/750*100vw);
+    }
+  }
+
+  &__listWrap {
+    position: relative;
+    @include med.media(sp) {
+      position: relative;
+    }
+  }
+
+  &__list {
+    > li {
+      line-height: 1.54;
+      margin-bottom: calc(10/1920*100vw);
+      &:last-child {
+        margin-bottom: 0;
+      }
+      @include med.media(sp) {
+        margin-bottom: calc(20/750*100vw);
+      }
+    }
+  }
+
+  &__text {
+    line-height: 1.54;
+    font-size: calc(17/1920*100vw);
+    margin-top: calc(30/1920*100vw);
+    @include med.media(sp) {
+      font-size: calc(26/750*100vw);
+      margin-top: calc(20/750*100vw);
+    }
+  }
+}

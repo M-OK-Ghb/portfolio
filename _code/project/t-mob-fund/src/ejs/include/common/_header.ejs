@@ -1,0 +1,148 @@
+<header class="l-header" id="js-header">
+  <div class="l-header__inner">
+    <div class="l-header__logo">
+      <a href="<%= data.path %>/">
+        <img src="<%= data.commonImgPath %>/logo_gray.svg" alt="TOYOTA Mobility Foundation">
+      </a>
+    </div>
+    <nav class="l-header__nav">
+      <ul class="l-header__linkList">
+        <li class="l-header__linkItem">
+          <% if(data.current === 'top') { %>
+          <div class="l-header__linkFirst current">
+          <% } else { %>
+          <div class="l-header__linkFirst">
+          <% } %>
+            <a href="<%= data.path %>/">
+              <span>トップ</span>
+            </a>
+          </div>
+        </li>
+        <li class="l-header__linkItem">
+          <% if(data.current === 'about') { %>
+          <div class="l-header__linkFirst current">
+          <% } else { %>
+          <div class="l-header__linkFirst">
+          <% } %>
+            <a href="<%= data.path %>/about/">
+              <span>当財団について</span>
+            </a>
+          </div>
+        </li>
+        <li class="l-header__linkItem">
+          <% if(data.current === 'topic') { %>
+          <div class="l-header__linkFirst current">
+          <% } else { %>
+          <div class="l-header__linkFirst">
+          <% } %>
+            <a href="<%= data.path %>/topic/">
+              <span>主な活動分野</span>
+            </a>
+          </div>
+        </li>
+        <li class="l-header__linkItem">
+          <% if(data.current === 'activity') { %>
+          <div class="l-header__linkFirst current">
+          <% } else { %>
+          <div class="l-header__linkFirst">
+          <% } %>
+            <a href="<%= data.path %>/activity/">
+              <span>活動内容</span>
+              <div class="l-header__linkSpaceAdjust"></div>
+            </a>
+          </div>
+          <div class="l-header__secondTriggerWrap">
+            <button class="l-header__secondTriggerBtn js-link-second-trigger">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="l-header__linkSecondWrap">
+            <ul class="l-header__linkSecond js-link-second">
+              <li>
+                <a href="<%= data.path %>/activity/">すべて</a>
+              </li>
+              <li>
+                <a href="<%= data.path %>/activity/traffic_safety/">交通安全</a>
+              </li>
+              <li>
+                <a href="<%= data.path %>/activity/traffic_congestion/">渋滞対策</a>
+              </li>
+              <li>
+                <a href="<%= data.path %>/activity/support_for_people/">移動困難者の支援</a>
+              </li>
+              <li>
+                <a href="<%= data.path %>/activity/hydrogen_energy/">水素・エネルギー</a>
+              </li>
+              <li>
+                <a href="<%= data.path %>/activity/local_mobility_support/">地域の移動支援</a>
+              </li>
+              <li>
+                <a href="<%= data.path %>/activity/contests/">コンテスト・公募</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="l-header__linkItem">
+          <% if(data.current === 'news') { %>
+          <div class="l-header__linkFirst current">
+          <% } else { %>
+          <div class="l-header__linkFirst">
+          <% } %>
+            <a href="<%= data.path %>/news/">
+              <span>お知らせ</span>
+              <div class="l-header__linkSpaceAdjust"></div>
+            </a>
+          </div>
+          <div class="l-header__secondTriggerWrap">
+            <button class="l-header__secondTriggerBtn js-link-second-trigger">
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+          <div class="l-header__linkSecondWrap">
+            <ul class="l-header__linkSecond js-link-second">
+              <li>
+                <a href="<%= data.path %>/news/">すべて</a>
+              </li>
+              <li>
+                <a href="<%= data.path %>/news/info/">INFO</a>
+              </li>
+              <li>
+                <a href="<%= data.path %>/news/update/">UPDATE</a>
+              </li>
+              <li>
+                <a href="<%= data.path %>/news/release/">RELEASE</a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="l-header__linkItem">
+          <% if(data.current === 'contact') { %>
+          <div class="l-header__linkFirst current">
+          <% } else { %>
+          <div class="l-header__linkFirst">
+          <% } %>
+            <a href="<%= data.path %>/contact/">
+              <span>お問い合わせ</span>
+            </a>
+          </div>
+        </li>
+        <li class="l-header__linkItem">
+          <div class="l-header__linkFirst langChange">
+            <a href="<%= data.path %>/en/">
+              <span>EN</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="l-header__spBtnWrap">
+      <button class="l-header__spBtn" id="js-spBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+</header>

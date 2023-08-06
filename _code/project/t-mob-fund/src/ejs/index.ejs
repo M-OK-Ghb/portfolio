@@ -1,0 +1,44 @@
+<%
+  const data = {
+    isTop: true,
+    title: "一般財団法人 トヨタ・モビリティ基金",
+    description: "",
+    current: "top",
+    path: ".",
+    imgPath: "./images/top",
+    commonImgPath: "./images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-top__container">
+      <%- include('include/common/_header.ejs', {data: data}); %>
+      <main class="p-top__main c-main">
+        <%- include('include/top/_mv.ejs', {data: data}); %>
+        <%- include('include/common/_curveBg.ejs', {data: data}); %>
+        <%- include('include/top/_news.ejs', {data: data}); %>
+        <div class="p-top__middleArea">
+          <%- include('include/top/_mission.ejs', {data: data}); %>
+          <div class="p-top__separate">
+            <img class="is-pc" src="<%= data.imgPath %>/bg_separate.png" alt="background separate">
+            <img class="is-sp" src="<%= data.imgPath %>/bg_separate_sp.png" alt="background separate sp">
+          </div>
+          <div class="p-top__middleBottom">
+            <%- include('include/common/_projectArea.ejs', {data: data}); %>
+            <div class="p-top__grayCircleBg">
+              <img src="<%= data.commonImgPath %>/circle_gray.png" alt="gray circle BG">
+            </div>
+            <%- include('include/top/_report.ejs', {data: data}); %>
+          </div>
+        </div>
+        <%- include('include/common/_related.ejs', {data: data}); %>
+      </main>
+      <%- include('include/common/_footer.ejs', {data: data}); %>
+      <%- include('include/common/_pickUpModal.ejs', {data: data}); %>
+    </div>
+    <%- include('include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

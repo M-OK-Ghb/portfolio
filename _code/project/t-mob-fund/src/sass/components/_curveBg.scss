@@ -1,0 +1,34 @@
+// -------------------------------------------------------------------
+// 	curveBg.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-curveBg {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  > img {
+    width: 100%;
+  }
+
+  &.top {
+    top: 105vh;
+    @include med.media(sp) {
+      top: 100vh;
+    }
+  }
+
+  &.sub {
+    top: 57.5vh;
+    @include med.media(sp) {
+      top: 49vw;
+    }
+
+    &.spNone {
+      @include med.media(sp) {
+        display: none;
+      }
+    }
+  }
+}

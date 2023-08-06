@@ -1,0 +1,31 @@
+// -------------------------------------------------------------------
+//  mix.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+@mixin notoSansSet {
+  font-family: var.$FONT_NOTO;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin hoverEffect {
+  transition: background-color .2s,color .2s;
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+    background-color: #FFF;
+    color: var.$ACCENT_ORANGE;
+  }
+}
+
+@mixin hoverEffectBgWhite {
+  transition: background-color .2s,color .2s;
+  &:hover {
+    opacity: 1;
+    text-decoration: none;
+    background-color: var.$ACCENT_ORANGE;
+    color: #FFF;
+  }
+}

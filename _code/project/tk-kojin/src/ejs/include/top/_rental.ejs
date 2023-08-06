@@ -1,0 +1,189 @@
+<section class="c-section" id="js-payment">
+  <h2 class="c-heading --med">レンタルのお手続き情報</h2>
+  <div class="c-rental">
+    <div class="c-rental__step">
+      <ol class="c-rental__stepList">
+        <li>
+          <div class="c-rental__stepTitle">
+            <div class="c-rental__stepLabel">
+              <span class="--text">STEP.1</span>
+              <span class="--icon"><img src="<%= data.imgPath %>/top/icon_step1.svg" alt="step1 icon"></span>
+            </div>
+            <div class="c-rental__stepArrow">
+              <div class="c-rental__stepArrowInner"></div>
+            </div>
+          </div>
+          <div class="c-rental__stepContents">
+            <h3 class="c-rental__stepHeading">ご予約 <span>（電話・MAIL・御来社にて）</span></h3>
+            <p class="c-rental__stepText">最寄りの支店へお電話もしくはご来店にて、ご利用になられる機械・商品、日時・使用予定期間をお申し付けください。<br>その際、契約～貸出までの流れ、レンタル料金をご確認ください。</p>
+          </div>
+        </li>
+        <li>
+          <div class="c-rental__stepTitle">
+            <div class="c-rental__stepLabel">
+              <span class="--text">STEP.2</span>
+              <span class="--icon"><img src="<%= data.imgPath %>/top/icon_step2.svg" alt="step2 icon"></span>
+            </div>
+            <div class="c-rental__stepArrow">
+              <div class="c-rental__stepArrowInner"></div>
+            </div>
+          </div>
+          <div class="c-rental__stepContents">
+            <h3 class="c-rental__stepHeading">ご契約</h3>
+            <p class="c-rental__stepText">来店時にはご本人確認が出来るもの(運転免許証、身分証明書等)に加え、現住所の確認が出来るもの(公共料金　直近3ヶ月以内)を必ずご提示頂きます。 ご提示頂けない場合は、お貸しできない場合がございますのでご注意ください。 確認後レンタル取引基本契約書を作成させていただきます。</p>
+          </div>
+        </li>
+        <li>
+          <div class="c-rental__stepTitle">
+            <div class="c-rental__stepLabel">
+              <span class="--text">STEP.3</span>
+              <span class="--icon"><img src="<%= data.imgPath %>/top/icon_step3.svg" alt="step3 icon"></span>
+            </div>
+            <div class="c-rental__stepArrow">
+              <div class="c-rental__stepArrowInner"></div>
+            </div>
+          </div>
+          <div class="c-rental__stepContents">
+            <h3 class="c-rental__stepHeading">機械お引渡し</h3>
+            <p class="c-rental__stepText">レンタル料金をお支払いいただき、機械・商品の使用方法などサービススタッフと一緒に確認後、商品をお受け取りください。 また、ご返却の日時・方法をお聞かせください。</p>
+          </div>
+        </li>
+        <li>
+          <div class="c-rental__stepTitle">
+            <div class="c-rental__stepLabel">
+              <span class="--text">STEP.4</span>
+              <span class="--icon"><img src="<%= data.imgPath %>/top/icon_step4.svg" alt="step4 icon"></span>
+            </div>
+          </div>
+          <div class="c-rental__stepContents">
+            <h3 class="c-rental__stepHeading">お支払い</h3>
+            <p class="c-rental__stepText">お支払方法は現金またはキャッシュレス決済（クレジットカード・電子マネー・QRコード）からお選びいただけます。</p>
+            <div class="c-rental__paymentImg">
+              <img src="https://www.taiyokenki.co.jp/rental/images/logo_payment.png" alt="payment">
+            </div>
+          </div>
+        </li>
+      </ol>
+    </div>
+    <div class="c-rental__faq" id="js-faq">
+      <div class="c-rental__faqTitle"><span>Q&A</span></div>
+      <ul class="c-rental__faqList">
+        <li>
+          <dl class="c-rental__itemWrap">
+            <dt class="c-rental__item --question js-faq-trigger">
+              <div class="c-rental__itemHeadingWrap --question">
+                <h3 class="c-rental__itemHeading"><span>Q</span></h3>
+              </div>
+              <p class="c-rental__itemText --question">
+                <span class="c-rental__qText">予約のキャンセルはできますか？</span>
+                <span class="c-rental__triggerBtn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8.5" viewBox="0 0 10 8.5">
+                    <path d="M5,0l5,8.5H0Z" fill="#f57a1b"/>
+                  </svg>
+                </span>
+              </p>
+            </dt>
+            <dd class="c-rental__item --answer">
+              <div class="c-rental__itemHeadingWrap --answer">
+                <h3 class="c-rental__itemHeading"><span>A</span></h3>
+              </div>
+              <p class="c-rental__itemText --answer">予約のキャンセル料は特にいただいておりません。但し配送等の費用が既に発生した場合は、ご負担いただく場合がございますのでお早めのご連絡をお願いいたします。</p>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="c-rental__itemWrap">
+            <dt class="c-rental__item --question js-faq-trigger">
+              <div class="c-rental__itemHeadingWrap --question">
+                <h3 class="c-rental__itemHeading"><span>Q</span></h3>
+              </div>
+              <p class="c-rental__itemText --question">
+                <span class="c-rental__qText">使用中に機械が故障した場合には？</span>
+                <span class="c-rental__triggerBtn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8.5" viewBox="0 0 10 8.5">
+                    <path d="M5,0l5,8.5H0Z" fill="#f57a1b"/>
+                  </svg>
+                </span>
+              </p>
+            </dt>
+            <dd class="c-rental__item --answer">
+              <div class="c-rental__itemHeadingWrap --answer">
+                <h3 class="c-rental__itemHeading"><span>A</span></h3>
+              </div>
+              <p class="c-rental__itemText --answer">機械の状態につきましては万全を期しておりますが、万一故障等により使用が出来なくなった場合、お借りいただいた支店までご連絡下さい。当社スタッフが迅速に対応させていただきます。尚、お客様の誤った使用方法などによる故障の場合は修理費用をご請求させていただく場合がございます。</p>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="c-rental__itemWrap">
+            <dt class="c-rental__item --question js-faq-trigger">
+              <div class="c-rental__itemHeadingWrap --question">
+                <h3 class="c-rental__itemHeading"><span>Q</span></h3>
+              </div>
+              <p class="c-rental__itemText --question">
+                <span class="c-rental__qText">保険に加入する必要はありますか？</span>
+                <span class="c-rental__triggerBtn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8.5" viewBox="0 0 10 8.5">
+                    <path d="M5,0l5,8.5H0Z" fill="#f57a1b"/>
+                  </svg>
+                </span>
+              </p>
+            </dt>
+            <dd class="c-rental__item --answer">
+              <div class="c-rental__itemHeadingWrap --answer">
+                <h3 class="c-rental__itemHeading"><span>A</span></h3>
+              </div>
+              <p class="c-rental__itemText --answer">万一事故に遭われた場合のご負担を軽減し、安心してご利用戴く為に、<a href="https://www.taiyokenki.co.jp/rental/safetyservice/index.html">「太陽総合セーフティサービス」</a>へ自動的にご加入戴きます。セーフティサービスが適用できないケースがございますのでご注意下さい。</p>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="c-rental__itemWrap">
+            <dt class="c-rental__item --question js-faq-trigger">
+              <div class="c-rental__itemHeadingWrap --question">
+                <h3 class="c-rental__itemHeading"><span>Q</span></h3>
+              </div>
+              <p class="c-rental__itemText --question">
+                <span class="c-rental__qText">おためし利用はできますか？</span>
+                <span class="c-rental__triggerBtn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8.5" viewBox="0 0 10 8.5">
+                    <path d="M5,0l5,8.5H0Z" fill="#f57a1b"/>
+                  </svg>
+                </span>
+              </p>
+            </dt>
+            <dd class="c-rental__item --answer">
+              <div class="c-rental__itemHeadingWrap --answer">
+                <h3 class="c-rental__itemHeading"><span>A</span></h3>
+              </div>
+              <p class="c-rental__itemText --answer">購入を検討している機種や試しに使ってみたいものなど、お試し利用でも問題ございません。</p>
+            </dd>
+          </dl>
+        </li>
+        <li>
+          <dl class="c-rental__itemWrap">
+            <dt class="c-rental__item --question js-faq-trigger">
+              <div class="c-rental__itemHeadingWrap --question">
+                <h3 class="c-rental__itemHeading"><span>Q</span></h3>
+              </div>
+              <p class="c-rental__itemText --question">
+                <span class="c-rental__qText">はじめてでも安心して利用できますか？</span>
+                <span class="c-rental__triggerBtn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="8.5" viewBox="0 0 10 8.5">
+                    <path d="M5,0l5,8.5H0Z" fill="#f57a1b"/>
+                  </svg>
+                </span>
+              </p>
+            </dt>
+            <dd class="c-rental__item --answer">
+              <div class="c-rental__itemHeadingWrap --answer">
+                <h3 class="c-rental__itemHeading"><span>A</span></h3>
+              </div>
+              <p class="c-rental__itemText --answer">使い方やどんな機種を選んだらいいかわからなくもご安心ください。<br>当社スタッフがお客様の利用目的に合った機種をご提案いたします。用途、期間などお気軽にご相談ください。</p>
+            </dd>
+          </dl>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

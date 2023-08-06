@@ -1,0 +1,110 @@
+<%
+  const data = {
+    isTop: false,
+    title: "レンタカー | 個人のお客様へ - 太陽建機レンタル",
+    description: "レンタカー | 個人のお客様へ - 太陽建機レンタル description",
+    path: "..",
+    imgPath: "../images",
+    commonImgPath: "../images/common",
+    current: "rent-a-car",
+    contactURL: "https://www.taiyokenki.co.jp/individuals/form.html"
+  }
+%>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div>
+      <%- include('../include/existingParts/_header.ejs', {data: data}); %>
+      <main class="phase2-theme">
+        <%- include('../include/existingParts/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-individual p-indivdiual--sub">
+          <%- include('../include/rent-a-car/_fv.ejs', {data: data}); %>
+          <div class="c-fv__bottom">
+            <h2 class="c-fv__subHeading">ラインナップ</h2>
+            <ul class="c-fv__cardList --rentacar">
+              <li class="c-fv__cardItem">
+                <a href="#track" class="c-fv__cardLink --track">
+                  <div class="c-fv__cardInner">
+                    <div class="c-fv__cardImg --track">
+                      <img src="<%= data.imgPath %>/rent-a-car/item_track.jpg" alt="トラック">
+                    </div>
+                    <div class="c-fv__cardText">
+                      <span class="--icon">
+                        <img src="<%= data.commonImgPath %>/icon_list_circle.svg" alt="オレンジ desc">
+                      </span>
+                      <span class="--text">トラック</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="c-fv__cardItem">
+                <a href="#dump" class="c-fv__cardLink --dump">
+                  <div class="c-fv__cardInner">
+                    <div class="c-fv__cardImg --dump">
+                      <img src="<%= data.imgPath %>/rent-a-car/item_dump.jpg" alt="ダンプ">
+                    </div>
+                    <div class="c-fv__cardText">
+                      <span class="--icon">
+                        <img src="<%= data.commonImgPath %>/icon_list_circle.svg" alt="オレンジ desc">
+                      </span>
+                      <span class="--text">ダンプ</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="c-fv__cardItem">
+                <a href="#passenger" class="c-fv__cardLink --passenger">
+                  <div class="c-fv__cardInner">
+                    <div class="c-fv__cardImg --passenger">
+                      <img src="<%= data.imgPath %>/rent-a-car/item_car.jpg" alt="乗用車">
+                    </div>
+                    <div class="c-fv__cardText">
+                      <span class="--icon">
+                        <img src="<%= data.commonImgPath %>/icon_list_circle.svg" alt="オレンジ desc">
+                      </span>
+                      <span class="--text">乗用車</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-sub__container">
+            <div class="p-sub__headingWrap">
+              <h3 class="p-sub__heading">ラインナップ一覧</h3>
+            </div>
+            <%- include('../include/rent-a-car/_itemList.ejs', {data: data}); %>
+            <div class="c-float__bgAdjustBlock"></div>
+            <div class="p-sub__supplementContents --rentacar js-float-end">
+              <div class="c-note">
+                <dl class="c-note__line">
+                  <dt class="c-note__title">※注意書き</dt>
+                  <dd>
+                    <ul class="c-note__list">
+                      <li>・レンタル料金、管理検査料は、地域や時期により変動することがあります。また、仕様によっても変わりますので最寄り支店にお問合せ下さい。</li>
+                      <li>・AT、MTの指定、ETC、ナビについては最寄りの支店にお問合せください。</li>
+                      <li>・車両の種類は豊富に取扱いございますので、ご相談ください。他のレンタル可能な機種は<a href="https://www.taiyokenki.co.jp/product/cat1/cat/index.html">こちら</a>をご覧ください。</li>
+                    </ul>
+                  </dd>
+                </dl>
+                <p class="c-note__text">※金額は全て税別表示になります。</p>
+              </div>
+              <div class="p-sub__supplementBtnWrap">
+                <div class="c-buttonWrap --w280">
+                  <a href="<%= data.path %>/" class="c-button --em --min">
+                    <span class="--text">個人のお客さまトップに戻る</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <%- include('../include/common/_contactLead.ejs', {data: data}); %>
+      <%- include('../include/existingParts/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/existingParts/_scriptBlock.ejs', {data: data}); %>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

@@ -1,0 +1,281 @@
+<%
+  const data = {
+    isTop: false,
+    title: "",
+    description: "",
+    pageName: "about",
+    current: "about",
+    pageTitle: "About Us",
+    path: "../../en",
+    filePath: "../..",
+    imgPath: "../../images/sub",
+    commonImgPath: "../../images/common",
+    curveSp: false
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../include/common/_header.ejs', {data: data}); %>
+      <main class="c-main">
+        <%- include('../include/sub/_mv.ejs', {data: data}); %>
+        <%- include('../include/common/_curveBg.ejs', {data: data}); %>
+        <div class="p-about">
+          <div class="p-about__top js-load-fadeIn spNoAnimation">
+            <div class="p-about__circleArea">
+              <div class="p-about__circleImg">
+                <img class="is-pc" src="<%= data.imgPath %>/<%= data.pageName %>/about_circle_orange.png" alt="circle orange" loading="eager">
+                <img class="is-sp" src="<%= data.imgPath %>/<%= data.pageName %>/about_circle_orange_sp.png" alt="circle orange sp" loading="eager">
+              </div>
+              <h2 class="p-about__topHeading js-load-fadeIn-sp">
+                <span>Our</span><span>Mission</span>
+              </h2>
+              <p class="p-about__firstMessage js-load-fadeIn-sp">Building an even-better<br> mobility society</p>
+              <div class="p-about__messageCircle --first js-load-fadeIn-sp">
+                <h3>Eliminate<br>the negative<br class="is-sp"> side of cars</h3>
+              </div>
+              <div class="p-about__messageCircle --second js-load-fadeIn-sp">
+                <h3>Eliminate inconvenience</h3>
+              </div>
+              <div class="p-about__messageCircle --third js-load-fadeIn-sp">
+                <h3>Pursue<br class="is-sp"> enjoyment<br>in mobility</h3>
+              </div>
+              <div class="p-about__messageCircle --fourth js-load-fadeIn-sp">
+                <h3>Create and bring<br class="is-sp"> about various opportunities</h3>
+              </div>
+            </div>
+            <div class="p-about__topText js-load-fadeIn-sp">
+              <p>The Toyota Mobility Foundation works with a diverse range of partners to solve social issues related to mobility in Japan and overseas.</p>
+              <p>Through collaborative efforts with like-minded people, we will determinedly take on the challenge of creating innovative technologies and systems to realize a more vibrant and sustainable future society and pursue the joy of mobility.</p>
+            </div>
+            <div class="p-about__guideLine js-load-fadeIn-sp">
+              <h2 class="p-about__guideLineHeading">Guiding principles - Toyota Mobility Foundation (TMF) Mission</h2>
+              <ul class="p-about__guideLineList">
+                <li>Globally pursue activities that will serve as a legacy for a prosperous and sustainable future society by working to realize the freedom of movement for all.</li>
+                <li>Accept the challenge of actualizing innovative technologies and systems that will change the world.</li>
+                <li>Achieve our goals while working together with partners who share our vision.</li>
+                <li>Learn through our activities and share what we discover with the world.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-about__middle">
+            <div class="p-about__separate">
+              <img class="is-pc" src="<%= data.imgPath %>/about/about_separate.png" alt="背景 円">
+              <img class="is-sp" src="<%= data.imgPath %>/about/about_separate_sp.png" alt="背景 円 SP">
+            </div>
+            <%- include('../include/common/_projectArea.ejs', {data: data}); %>
+            <div class="p-about__grayCircleBg">
+              <img src="<%= data.commonImgPath %>/circle_gray.png" alt="gray circle BG">
+            </div>
+            <section class="p-about__member js-scrollFadeIn">
+              <div class="c-headingWrap">
+                <h2 class="c-heading">OUR LEADERSHIP</h2>
+                <p class="c-headingSub">
+                  <span class="c-headingSub__decoration"></span>
+                </p>
+              </div>
+              <div class="p-about__memberArea --ceo">
+                <h3>BOARD CHAIRMAN</h3>
+                <ul class="p-about__memberList --ceo">
+                  <li>
+                    <div class="p-about__memberItemInner --ceo">
+                      <div class="p-about__memberImg --ceo">
+                        <img src="<%= data.imgPath %>/about/toyoda_akio.png" alt="Toyoda Akio" loading="lazy">
+                      </div>
+                      <div class="p-about__memberText --ceo">
+                        <h4>Akio Toyoda</h4>
+                        <p>President, Member of the Board of Directors Toyota Motor Corporation</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-about__memberArea">
+                <h3>BOARD OF DIRECTORS</h3>
+                <ul class="p-about__memberList --directors">
+                  <li>
+                    <div class="p-about__memberItemInner">
+                      <div class="p-about__memberImg">
+                        <img src="<%= data.imgPath %>/about/hayakawa_shigeru.png" alt="Hayakawa Shigeru" loading="lazy">
+                      </div>
+                      <div class="p-about__memberText">
+                        <span>Acting board chairman</span>
+                        <h4>Shigeru Hayakawa</h4>
+                        <p>Vice Chairman of the Board of Directors<br>Toyota Motor Corporation</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="p-about__memberItemInner">
+                      <div class="p-about__memberImg">
+                        <img src="<%= data.imgPath %>/about/arima_koji.png" alt="Arima Koji" loading="lazy">
+                      </div>
+                      <div class="p-about__memberText">
+                        <h4>Koji Arima</h4>
+                        <p>President & CEO, Member of the Board<br>DENSO Corporation</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="p-about__memberItemInner">
+                      <div class="p-about__memberImg">
+                        <img src="<%= data.imgPath %>/about/karube_jun.png" alt="Karube Jun" loading="lazy">
+                      </div>
+                      <div class="p-about__memberText">
+                        <h4>Jun Karube</h4>
+                        <p>Chairman of the Board<br>Toyota Tsusho Corporation</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="p-about__memberItemInner">
+                      <div class="p-about__memberImg">
+                        <img src="<%= data.imgPath %>/about/ikeda_naoto.png" alt="Ikeda Naoto" loading="lazy">
+                      </div>
+                      <div class="p-about__memberText">
+                        <h4>Naoto Ikeda</h4>
+                        <p>Automobile Journalist</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="p-about__memberItemInner">
+                      <div class="p-about__memberImg">
+                        <img src="<%= data.imgPath %>/about/okazaki_goro.png" alt="Okazaki Goro" loading="lazy">
+                      </div>
+                      <div class="p-about__memberText">
+                        <h4>Goro Okazaki</h4>
+                        <p>Automobile Journalist</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="p-about__memberItemInner">
+                      <div class="p-about__memberImg">
+                        <img src="<%= data.imgPath %>/about/kudo_teiko.png" alt="Kudo Teiko" loading="lazy">
+                      </div>
+                      <div class="p-about__memberText">
+                        <h4>Teiko Kudo</h4>
+                        <p>Director Senior Managing Executive Officer<br>Sumitomo Mitsui Financial Group, Inc</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-about__memberArea">
+                <h3>AUDITOR</h3>
+                <ul class="p-about__memberList --examination">
+                  <li>
+                    <div class="p-about__memberItemInner">
+                      <div class="p-about__memberImg">
+                        <img src="<%= data.imgPath %>/about/korosue_hiroyoshi.png" alt="Korosue Hiroyoshi" loading="lazy">
+                      </div>
+                      <div class="p-about__memberText">
+                        <h4>Hiroyoshi Korosue</h4>
+                        <p>Sales Financial Business Group (Chief Officer)<br>Toyota Motor Corporation</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-about__memberArea">
+                <h3>BOARD OF TRUSTEES</h3>
+                <ul class="p-about__memberList --council">
+                  <li>
+                    <div class="p-about__memberItemInner">
+                      <div class="p-about__memberImg">
+                        <img src="<%= data.imgPath %>/about/omori_fumihiko.jpg" alt="Omori Fumihiko" loading="lazy">
+                      </div>
+                      <div class="p-about__memberText">
+                        <h4>Fumihiko Omori</h4>
+                        <p>三井住友海上火災保険株式会社<br>経営企画部 顧問</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="p-about__memberItemInner">
+                      <div class="p-about__memberImg">
+                        <img src="<%= data.imgPath %>/about/kubota_masakazu.png" alt="Kubota Masakazu" loading="lazy">
+                      </div>
+                      <div class="p-about__memberText">
+                        <h4>Masakazu Kubota</h4>
+                        <p>Director General KEIDANREN<br>(Japan Business Federation)</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="p-about__memberItemInner">
+                      <div class="p-about__memberImg">
+                        <img src="<%= data.imgPath %>/about/sugawara_ikuro.png" alt="Sugawara Ikuro" loading="lazy">
+                      </div>
+                      <div class="p-about__memberText">
+                        <h4>Ikuro Sugawara</h4>
+                        <p>Member of the Board of Directors<br>Toyota Motor Corporation</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="p-about__memberItemInner">
+                      <div class="p-about__memberImg">
+                        <img src="<%= data.imgPath %>/about/matsuko_dx.png" alt="Matsuko Dx" loading="lazy">
+                      </div>
+                      <div class="p-about__memberText">
+                        <h4>Matsuko DELUXE</h4>
+                        <p>Columnist</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+          </div>
+          <section class="p-about__access js-scrollFadeIn">
+            <div class="c-headingWrap">
+              <h2 class="c-heading">Access</h2>
+              <p class="c-headingSub">
+                <span class="c-headingSub__decoration"></span>
+              </p>
+            </div>
+            <div class="p-about__accessInner">
+              <dl class="p-about__accessList">
+                <dt>Address</dt>
+                <dd>1-4-18 Koraku, Bunkyo-ku, Tokyo 112-8701, Japan (Inside Toyota Motor Corporation's Tokyo Head Office)</dd>
+              </dl>
+              <dl class="p-about__accessList">
+                <dt>Phone</dt>
+                <dd>03-3817-9960</dd>
+              </dl>
+              <dl class="p-about__accessList --station">
+                <dt>Access</dt>
+                <dd>
+                  <ul class="p-about__accessDetail">
+                    <li>5-minute  walk from the West Exit of Suidobashi Station on the JR Sobu Line</li>
+                    <li>5-minute walk from the East Exit of Iidabashi Station on the JR Sobu Line </li>
+                    <li>5-minute walk from Exit A1 of Iidabashi Station on the Tozai, Namboku, and Yurakucho Subway Lines</li>
+                    <li>3-minute walk from Exit C2 of Iidabashi Station on the Oedo Subway Line</li>
+                  </ul>
+                </dd>
+              </dl>
+              <div class="p-about__map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.914659661612!2d139.74666075090101!3d35.70371763624842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188c46f2ef3a29%3A0x56a507d42f4c2b7f!2s1-ch%C5%8Dme-4-18%20K%C5%8Draku%2C%20Bunkyo%20City%2C%20Tokyo%20112-0004!5e0!3m2!1sen!2sjp!4v1668517452623!5m2!1sen!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+            <div class="c-article__pdfBtnArea aboutPage">
+              <p>当財団の概要資料</p>
+              <div>
+                <button class="c-button js-pdfModal-trigger" type="button" data-href="/pdf/foundation_overview_202211.pdf">ダウンロード</button>
+              </div>
+            </div>
+          </section>
+        </div>
+        <%- include('../include/common/_related.ejs', {data: data}); %>
+      </main>
+      <%- include('../include/common/_footer.ejs', {data: data}); %>
+      <%- include('../include/common/_pdfModal.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

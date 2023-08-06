@@ -1,0 +1,340 @@
+// -------------------------------------------------------------------
+//  pages.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.p-sub {
+  &__container {
+    padding-top: calc(100/1920*100vw);
+    @include med.media(sp) {
+      padding-top: calc(100/750*100vw);
+    }
+  }
+
+  &__heading {
+    font-size: calc(46/1920*100vw);
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    @include med.media(sp) {
+      font-size: calc(54/750*100vw);
+      line-height: 1.3;
+    }
+  }
+
+  &__headingSub {
+    line-height: 1.5;
+    width: calc(1280/1920*100vw);
+    font-size: calc(22/1920*100vw);
+    margin: calc(60/1920*100vw) auto 0;
+    @include med.media(sp) {
+      width: calc(690/750*100vw);
+      font-size: calc(30/750*100vw);
+      margin-top: calc(40/750*100vw);
+    }
+  }
+
+  &__mainContents {
+    margin-top: calc(40/1920*100vw);
+    background-color: var.$BLOCK_BG_GRAY;
+    padding: calc(80/1920*100vw) 0 calc(100/1920*100vw);
+
+    &.--rentacar {
+      margin-top: calc(135/1920*100vw);
+      padding-top: calc(40/1920*100vw);
+      @include med.media(sp) {
+        margin-top: calc(105/750*100vw);
+      }
+      &.--first {
+        margin-top: calc(-140/1920*100vw);
+
+        @include med.media(sp) {
+          margin-top: calc(80/750*100vw);
+        }
+      }
+
+      &.--last {
+        @include med.media(sp) {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    @include med.media(sp) {
+      margin-top: calc(40/750*100vw);
+      padding: calc(100/750*100vw) 0;
+      &.c-float__outer {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  &__mainContentsInner {
+    margin: auto;
+    width: calc(1280/1920*100vw);
+    @include med.media(sp) {
+      width: calc(690/750*100vw);
+    }
+  }
+
+  &__supplementContents {
+    margin: auto;
+    width: calc(1280/1920*100vw);
+    padding: calc(100/1920*100vw) 0;
+    @include med.media(sp) {
+      width: calc(690/750*100vw);
+      padding: calc(80/750*100vw) 0;
+    }
+
+    &.--rentacar {
+      padding: 0  0 calc(80/1920*100vw);
+      @include med.media(sp) {
+        padding: 0  0 calc(80/750*100vw);
+      }
+    }
+  }
+
+  &__supplementBtnWrap {
+    margin-top: calc(80/1920*100vw);
+    @include med.media(sp) {
+      margin-top: calc(80/750*100vw);
+    }
+  }
+
+  &__itemList {
+    > li {
+      margin-bottom: calc(60/1920*100vw);
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include med.media(sp) {
+        margin-bottom: calc(60/750*100vw);
+      }
+
+      &.is-dpNone {
+        display: none;
+      }
+    }
+  }
+
+  &__itemNameWrap {
+    &.--multiLine {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include med.media(sp) {
+        display: block;
+      }
+    }
+  }
+
+  &__itemName {
+    position: relative;
+    font-size: calc(26/1920*100vw);
+    font-weight: bold;
+    line-height: 1;
+
+    @include med.media(sp) {
+      font-size: calc(44/750*100vw);
+    }
+
+    > span {
+      display: inline-block;
+      padding-left: calc(20/1920*100vw);
+      @include med.media(sp) {
+        padding-left: calc(36/750*100vw);
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: calc(10/1920*100vw);
+      height: calc(10/1920*100vw);
+      background-color: #000;
+      border-radius: 50%;
+      @include med.media(sp) {
+        width: calc(24/750*100vw);
+        height: calc(24/750*100vw);
+      }
+    }
+  }
+
+  &__itemCategory {
+    line-height: 1;
+    font-size: 0;
+    > span {
+      margin-right: calc(10/1920*100vw);
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    @include med.media(sp) {
+      margin-top: calc(20/750*100vw);
+    }
+  }
+
+  &__itemText {
+    font-size: calc(17/1920*100vw);
+    line-height: 1.76;
+    @include med.media(sp) {
+      line-height: 1.5;
+      font-size: calc(24/750*100vw);
+    }
+  }
+
+  &__itemMain {
+    margin-top: calc(22/1920*100vw);
+    @include med.media(sp) {
+      margin-top: calc(50/750*100vw);
+    }
+  }
+
+  &__tableItem {
+    > dt {
+      background-color: var.$ACCENT_GREEN;
+      color: #FFF;
+      font-size: calc(16/1920*100vw);
+    }
+
+    > dd {
+      font-size: calc(16/1920*100vw);
+    }
+  }
+
+  &__pointList {
+    margin-top: calc(60/1920*100vw);
+    margin-bottom: calc(100/1920*100vw);
+    > li {
+      margin-bottom: calc(30/1920*100vw);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @include med.media(sp) {
+      margin-top: calc(60/750*100vw);
+      margin-bottom: calc(80/750*100vw);
+
+      > li {
+        margin-bottom: calc(60/750*100vw);
+      }
+    }
+  }
+
+  &__pointItem {
+    display: flex;
+    align-items: center;
+    @include med.media(sp) {
+      display: block;
+    }
+  }
+
+  &__pointHeading {
+    line-height: 1;
+    font-weight: bold;
+    font-size: calc(26/1920*100vw);
+    margin-right: calc(32/1920*100vw);
+    min-width: calc(210/1920*100vw);
+    @include med.media(sp) {
+      font-size: calc(44/750*100vw);
+      margin-right: 0;
+    }
+
+    > span {
+      display: inline-block;
+      &.--desc {
+        transform: scale(1.75);
+        @include med.media(sp) {
+          transform: scale(2.25);
+        }
+      }
+
+      &.--text {
+        margin-left: -0.5vw;
+      }
+    }
+  }
+
+  &__pointText {
+    line-height: 1.76;
+    font-size: calc(18/1920*100vw);
+    @include med.media(sp) {
+      line-height: 1.5;
+      font-size: calc(24/750*100vw);
+      margin-top: calc(30/750*100vw);
+    }
+  }
+
+  &__tableWrap {
+    margin-top: calc(20/1920*100vw);
+    @include med.media(sp) {
+      overflow-x: scroll;
+      margin-top: calc(40/750*100vw);
+    }
+  }
+
+  &__movieArea {
+    padding: calc(60/1920*100vw) 0 calc(80/1920*100vw);
+  }
+
+  &__movieTrigger {
+    position: relative;
+    width: calc(1000/1920*100vw);
+    margin: auto;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    @include med.media(pc) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-color: #000;
+      opacity: 0.4;
+    }
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+
+    > span {
+      display: inline-block;
+      &.--mainImg {
+        width: 100%;
+        > img {
+          width: 100%;
+        }
+      }
+
+      &.--icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(120/1920*100vw);
+
+        @include med.media(sp) {
+          width: calc(84/750*100vw);
+        }
+
+        > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

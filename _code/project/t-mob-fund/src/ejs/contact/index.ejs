@@ -1,0 +1,371 @@
+<%
+  const data = {
+    isTop: false,
+    title: "お問い合わせ | 一般財団法人 トヨタ・モビリティ基金",
+    description: "",
+    pageName: "contact",
+    current: "contact",
+    pageTitle: "お問い合わせ",
+    pageTitleSub: "CONTACT",
+    path: "..",
+    imgPath: "../images/sub",
+    commonImgPath: "../images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body class="js-contact-body">
+    <div class="p-sub__container">
+      <%- include('../include/common/_header.ejs', {data: data}); %>
+      <main class="c-main">
+        <div class="p-contact">
+          <section id="js-heading-subMv" class="p-contact__headingWrap c-headingWrap--subMv">
+            <h1 class="c-heading"><%= data.pageTitle %></h1>
+            <p class="c-headingSub">
+              <span class="c-headingSub__decoration"></span>
+            </p>
+          </section>
+          <div class="p-contact__contents js-load-fadeIn" id="js-contact">
+            <p class="p-contact__headText">個人情報取扱い規約に同意の上、お問い合わせください。</p>
+            <form id="js-contact-form" action="confirm.php" method="POST" novalidate>
+              <div class="p-contact__formArea">
+                <dl class="p-contact__list">
+                  <dt><label for="Name">お名前 <span>*</span></label></dt>
+                  <dd class="nameArea">
+                    <span>
+                      <input class="js-required" name="last-name" id="Name" type="text" placeholder="姓">
+                      <span class="p-contact__errorNote">※必須項目です</span>
+                    </span>
+                    <span>
+                      <input class="js-required" name="first-name" id="FirstName" type="text" placeholder="名">
+                      <span class="p-contact__errorNote">※必須項目です</span>
+                    </span>
+                  </dd>
+                </dl>
+                <dl class="p-contact__list">
+                  <dt><label for="Country">国／地域 <span>*</span></label></dt>
+                  <dd class="p-contact__selectWrap">
+                    <select class="js-required" name="country" id="Country">
+                      <option value="" disabled selected>選択してください</option>
+                      <%
+                        let countryArr = [
+                          "Japan（日本）",
+                          "Aaland Islands",
+                          "Afghanistan",
+                          "Algeria",
+                          "American Samoa",
+                          "Andorra",
+                          "Angola",
+                          "Anguilla",
+                          "Antarctica",
+                          "Antigua And Barbuda",
+                          "Argentina",
+                          "Armenia",
+                          "Aruba",
+                          "Australia",
+                          "Austria",
+                          "Azerbaijan",
+                          "Bahamas",
+                          "Bahrain",
+                          "Bangladesh",
+                          "Barbados",
+                          "Belarus",
+                          "Belgium",
+                          "Belize",
+                          "Benin",
+                          "Bermuda",
+                          "Bhutan",
+                          "Bolivia",
+                          "Bonaire Saint Eustatius and Saba",
+                          "Bosnia and Herzegovina",
+                          "Botswana",
+                          "Bouvet Island",
+                          "Brazil",
+                          "British Indian Ocean Territory",
+                          "Brunei Darussalam",
+                          "Bulgaria",
+                          "Burkina Faso",
+                          "Burundi",
+                          "Cambodia",
+                          "Cameroon",
+                          "Canada",
+                          "Cape Verde",
+                          "Cayman Islands",
+                          "Central African Republic",
+                          "Chad",
+                          "Chile",
+                          "China",
+                          "Christmas Island",
+                          "Cocos (Keeling) Islands",
+                          "Colombia",
+                          "Comoros",
+                          "Congo",
+                          "Cook Islands",
+                          "Costa Rica",
+                          "Cote D'Ivoire",
+                          "Croatia",
+                          "Cuba",
+                          "Curacao",
+                          "Cyprus",
+                          "Czech Republic",
+                          "Democratic Republic of the Congo",
+                          "Denmark",
+                          "Djibouti",
+                          "Dominica",
+                          "Dominican Republic",
+                          "Ecuador",
+                          "Egypt",
+                          "El Salvador",
+                          "Equatorial Guinea",
+                          "Eritrea",
+                          "Estonia",
+                          "Ethiopia",
+                          "Falkland Islands",
+                          "Faroe Islands",
+                          "Fiji",
+                          "Finland",
+                          "France",
+                          "French Guiana",
+                          "French Polynesia",
+                          "French Southern Territories",
+                          "Gabon",
+                          "Gambia",
+                          "Georgia",
+                          "Germany",
+                          "Ghana",
+                          "Gibraltar",
+                          "Greece",
+                          "Greenland",
+                          "Grenada",
+                          "Guadeloupe",
+                          "Guam",
+                          "Guatemala",
+                          "Guernsey",
+                          "Guinea",
+                          "Guinea-Bissau",
+                          "Guyana",
+                          "Haiti",
+                          "Heard and Mc Donald Islands",
+                          "Honduras",
+                          "Hong Kong",
+                          "Hungary",
+                          "Iceland",
+                          "India",
+                          "Indonesia",
+                          "Iran",
+                          "Iraq",
+                          "Ireland",
+                          "Isle of Man",
+                          "Israel",
+                          "Italy",
+                          "Jamaica",
+                          "Jersey (Channel Islands)",
+                          "Jordan",
+                          "Kazakhstan",
+                          "Kenya",
+                          "Kiribati",
+                          "Kuwait",
+                          "Kyrgyzstan",
+                          "Lao People's Democratic Republic",
+                          "Latvia",
+                          "Lebanon",
+                          "Lesotho",
+                          "Liberia",
+                          "Libya",
+                          "Liechtenstein",
+                          "Lithuania",
+                          "Luxembourg",
+                          "Macau",
+                          "Macedonia",
+                          "Madagascar",
+                          "Malawi",
+                          "Malaysia",
+                          "Maldives",
+                          "Mali",
+                          "Malta",
+                          "Marshall Islands",
+                          "Martinique",
+                          "Mauritania",
+                          "Mauritius",
+                          "Mayotte",
+                          "Mexico",
+                          "Micronesia, Federated States of",
+                          "Moldova, Republic of",
+                          "Monaco",
+                          "Mongolia",
+                          "Montenegro",
+                          "Montserrat",
+                          "Morocco",
+                          "Mozambique",
+                          "Myanmar",
+                          "Namibia",
+                          "Nauru",
+                          "Nepal",
+                          "Netherlands",
+                          "Netherlands Antilles",
+                          "New Caledonia",
+                          "New Zealand",
+                          "Nicaragua",
+                          "Niger",
+                          "Nigeria",
+                          "Niue",
+                          "Norfolk Island",
+                          "North Korea",
+                          "Northern Mariana Islands",
+                          "Norway",
+                          "Oman",
+                          "Pakistan",
+                          "Palau",
+                          "Palestine",
+                          "Panama",
+                          "Papua New Guinea",
+                          "Paraguay",
+                          "Peru",
+                          "Philippines",
+                          "Pitcairn",
+                          "Poland",
+                          "Portugal",
+                          "Puerto Rico",
+                          "Qatar",
+                          "Republic of Kosovo",
+                          "Reunion",
+                          "Romania",
+                          "Russia",
+                          "Rwanda",
+                          "Saint Kitts and Nevis",
+                          "Saint Lucia",
+                          "Saint Martin",
+                          "Saint Vincent and the Grenadines",
+                          "Samoa (Independent)",
+                          "San Marino",
+                          "Sao Tome and Principe",
+                          "Saudi Arabia",
+                          "Senegal",
+                          "Serbia",
+                          "Seychelles",
+                          "Sierra Leone",
+                          "Singapore",
+                          "Sint Maarten",
+                          "Slovakia",
+                          "Slovenia",
+                          "Solomon Islands",
+                          "Somalia",
+                          "South Africa",
+                          "South Georgia and the South Sandwich Islands",
+                          "South Korea",
+                          "South Sudan",
+                          "Spain",
+                          "Sri Lanka",
+                          "St. Helena",
+                          "St. Pierre and Miquelon",
+                          "Sudan",
+                          "Suriname",
+                          "Svalbard and Jan Mayen Islands",
+                          "Swaziland",
+                          "Sweden",
+                          "Switzerland",
+                          "Syria",
+                          "Taiwan",
+                          "Tajikistan",
+                          "Tanzania",
+                          "Thailand",
+                          "Timor-Leste",
+                          "Togo",
+                          "Tokelau",
+                          "Tonga",
+                          "Trinidad and Tobago",
+                          "Tunisia",
+                          "Turkey",
+                          "Turkmenistan",
+                          "Turks Caicos Islands",
+                          "Turks and Caicos Islands",
+                          "Tuvalu",
+                          "Uganda",
+                          "Ukraine",
+                          "United Arab Emirates",
+                          "United Kingdom",
+                          "United States of America",
+                          "Uruguay",
+                          "USA Minor Outlying Islands",
+                          "Uzbekistan",
+                          "Vanuatu",
+                          "Vatican City State (Holy See)",
+                          "Venezuela",
+                          "Vietnam",
+                          "Virgin Islands (British)",
+                          "Virgin Islands (U.S.)",
+                          "Wallis and Futuna Islands",
+                          "Western Sahara",
+                          "Yemen",
+                          "Zambia",
+                          "Zimbabwe",
+                        ];
+                      %>
+                      <% for (let item of countryArr) { %>
+                      <option value="<%= item %>"><%= item %></option>
+                      <% } %>
+                    </select>
+                    <span class="p-contact__errorNote">※必須項目です</span>
+                  </dd>
+                </dl>
+                <dl class="p-contact__list">
+                  <dt><label for="E-mail">Email Address <span>*</span></label></dt>
+                  <dd>
+                    <input class="js-required" name="e-mail" id="E-mail" type="email">
+                    <span class="p-contact__errorNote">※必須項目です</span>
+                  </dd>
+                </dl>
+                <dl class="p-contact__list">
+                  <dt><label for="WebSite">Website URL (任意)</label></dt>
+                  <dd>
+                    <input name="website" id="WebSite" type="url">
+                  </dd>
+                </dl>
+                <dl class="p-contact__list">
+                  <dt><label for="Affiliation">所属部署/所属会社名　(任意)</label></dt>
+                  <dd>
+                    <input name="affiliation" id="Affiliation" type="text">
+                  </dd>
+                </dl>
+                <dl class="p-contact__list">
+                  <dt><label for="Content">お問い合わせ内容 <span>*</span></label></dt>
+                  <dd class="p-contact__selectWrap">
+                    <select class="js-required plAdjust" name="content" id="Content">
+                      <option value="" disabled selected>選択してください</option>
+                      <option value="活動内容に関するお問い合わせ">活動内容に関するお問い合わせ</option>
+                      <option value="財団に関するお問い合わせ">財団に関するお問い合わせ</option>
+                      <option value="取材・掲載依頼に関するお問い合わせ">取材・掲載依頼に関するお問い合わせ</option>
+                      <option value="その他">その他</option>
+                    </select>
+                    <span class="p-contact__errorNote">※必須項目です</span>
+                  </dd>
+                </dl>
+                <dl class="p-contact__list">
+                  <dt><label for="FreeInput">自由入力</label></dt>
+                  <dd>
+                    <textarea name="free-input" id="FreeInput" cols="30" rows="10"></textarea>
+                  </dd>
+                </dl>
+                <div class="p-contact__bottom">
+                  <div class="p-contact__checkArea c-checkBox">
+                    <label for="js-contact-agree">
+                      <input name="agree-check" type="checkbox" id="js-contact-agree">
+                      <span>個人情報取扱いに関する規約に同意します</span>
+                    </label>
+                  </div>
+                  <div class="p-contact__btnWrap">
+                    <button type="submit" value="入力内容を確認する" class="c-button" id="js-contact-submitBtn">入力内容を確認する</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <%- include('../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

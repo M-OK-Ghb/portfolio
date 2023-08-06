@@ -1,0 +1,95 @@
+<%
+  const data = {
+    isTop: false,
+    title: "",
+    description: "",
+    pageName: "contact",
+    current: "contact",
+    pageTitle: "Contact Form",
+    path: "../../en",
+    filePath: "../..",
+    imgPath: "../../images/sub",
+    commonImgPath: "../../images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body class="js-contact-body">
+    <div class="p-sub__container">
+      <%- include('../include/common/_header.ejs', {data: data}); %>
+      <main class="c-main">
+        <div class="p-contact">
+          <section id="js-heading-subMv" class="p-contact__headingWrap c-headingWrap--subMv">
+            <h1 class="c-heading"><%= data.pageTitle %></h1>
+            <p class="c-headingSub">
+              <span class="c-headingSub__decoration"></span>
+            </p>
+          </section>
+          <div class="p-contact__contents js-load-fadeIn">
+            <p class="p-contact__headText">入力内容をご確認ください。<br>この内容で送信する場合は、ページ下部<br class="is-sp">「送信する」ボタンを押してください。</p>
+            <form id="js-contact-form" action="complete.php" method="POST" novalidate>
+              <div class="p-contact__formArea">
+                <dl class="p-contact__list confirm">
+                  <dt>お名前 <span>*</span></dt>
+                  <dd>
+                    <p class="p-contact__confirmText nameArea">
+                      <span>モンスター</span>
+                      <span>ダイブ郎</span>
+                    </p>
+                  </dd>
+                </dl>
+                <dl class="p-contact__list confirm">
+                  <dt>国 <span>*</span></dt>
+                  <dd>
+                    <p class="p-contact__confirmText">Japan（日本）</p>
+                  </dd>
+                </dl>
+                <dl class="p-contact__list confirm">
+                  <dt>Email Address <span>*</span></dt>
+                  <dd>
+                    <p class="p-contact__confirmText">okumura@monster-dive.com</p>
+                  </dd>
+                </dl>
+                <dl class="p-contact__list confirm">
+                  <dt>Website URL (任意)</dt>
+                  <dd>
+                    <p class="p-contact__confirmText">https://www.monster-dive.com/</p>
+                  </dd>
+                </dl>
+                <dl class="p-contact__list confirm">
+                  <dt>所属部署/所属会社名　(任意)</dt>
+                  <dd>
+                    <p class="p-contact__confirmText">入力なし</p>
+                  </dd>
+                </dl>
+                <dl class="p-contact__list confirm">
+                  <dt>お問い合わせ内容 <span>*</span></dt>
+                  <dd>
+                    <p class="p-contact__confirmText">活動内容に関するお問い合わせ</p>
+                  </dd>
+                </dl>
+                <dl class="p-contact__list confirm">
+                  <dt>自由入力</dt>
+                  <dd>
+                    <p class="p-contact__confirmText freeInput">トヨタ・モビリティ基金は、多様なパートナーとともに、移動に関わる国内外の社会課題の解決に取り組んでいます。志を同じくする人たちとの協働を通じ、より豊かでサステナブルな未来社会の実現に向けて、イノベーティブな技術、仕組みづくりに果敢にチャレンジし、移動の楽しさを追求していきます。</p>
+                  </dd>
+                </dl>
+                <div class="p-contact__bottom">
+                  <p class="p-contact__confirmNote">以上の内容で送信します。<br>ご確認の上、「この内容で送信する」ボタンを押してください。</p>
+                  <div class="p-contact__confirmBtnWrap">
+                    <button type="button" value="入力画面に戻る" class="c-button--confirm">入力画面に戻る</button>
+                    <button type="submit" value="送信する" class="c-button">この内容で送信する</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+      <%- include('../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

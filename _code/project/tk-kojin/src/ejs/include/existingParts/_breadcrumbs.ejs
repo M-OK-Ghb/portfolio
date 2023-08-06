@@ -1,0 +1,18 @@
+<nav class="breadcrumb-list">
+  <ol itemscope="" itemtype="https://schema.org/BreadcrumbList">
+    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+      <a itemprop="item" href="../index.html"><span itemprop="name">ホーム</span></a>
+      <meta itemprop="position" content="1">
+    </li>
+    <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem">
+      <span itemprop="name">個人のお客様へ</span>
+      <meta itemprop="position" content="2">
+    </li>
+  </ol>
+</nav>
+<% if(data.current === 'top') { %>
+<a class="hero-area-link02" href="../index.html">
+  <img src="<% data.path %>/img/icon_for_corporation_sp.png" alt="" width="46" height="46">
+  <span>法人のお客様はこちら</span>
+</a>
+<% } %>

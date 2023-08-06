@@ -1,0 +1,270 @@
+<%
+  const data = {
+    isTop: false,
+    title: "ニュース 詳細記事 | 一般財団法人 トヨタ・モビリティ基金",
+    description: "",
+    pageName: "news",
+    current: "news",
+    pageTitle: "お知らせ",
+    pageTitleSub: "PROJECT REPORTS",
+    path: "../..",
+    imgPath: "../../images/sub",
+    commonImgPath: "../../images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../../include/common/_header.ejs', {data: data}); %>
+      <main class="c-main">
+        <section class="c-article__contents">
+          <div class="c-article__kvLabel --news">
+            <span>RELEASE</span>
+          </div>
+          <div class="c-article__titleArea">
+            <h1 class="c-article__title">News記事詳細用のテンプレート(KVがない)</h1>
+            <p class="c-article__date">2022.09.01</p>
+          </div>
+          <div class="c-article__main">
+            <h2 class="c-article__heading --h2">中見出し中見出し中見出し中見出し中見出し 中見出し中見出し中見出し中見出し中見出し</h2>
+            <p class="c-article__text">本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+            <h3 class="c-article__heading --h3">小見出し小見出し小見出し小見出し小見出し小見出し<br>小見出し小見出し小見出し小見出し小見出し</h3>
+            <p class="c-article__text">本文テキスト本文テキスト本文テキスト本文テキスト<a href="#">本文テキスト本文テキスト</a>本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">リスト</h2>
+              <ul class="c-article__list">
+                <li>リスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入ります</li>
+                <li><a href="#">リスト入りますリスト入りますリスト入ります</a></li>
+                <li>リスト入りますリスト入りますリスト入ります</li>
+                <li>リスト入りますリスト入りますリスト入ります</li>
+                <li>リスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入ります</li>
+              </ul>
+              <p class="c-article__text">本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">リスト - <small>●</small> 無し</h2>
+              <ul class="c-article__list --discNone">
+                <li>リスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入ります</li>
+                <li><a href="#">リスト入りますリスト入りますリスト入ります</a></li>
+                <li>リスト入りますリスト入りますリスト入ります</li>
+                <li>リスト入りますリスト入りますリスト入ります</li>
+                <li>リスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入ります</li>
+              </ul>
+              <p class="c-article__text">本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">リスト - 連番</h2>
+              <ul class="c-article__list --number">
+                <li>リスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入ります</li>
+                <li><a href="#">リスト入りますリスト入りますリスト入ります</a></li>
+                <li>リスト入りますリスト入りますリスト入ります</li>
+                <li>リスト入りますリスト入りますリスト入ります</li>
+                <li>リスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入りますリスト入ります</li>
+              </ul>
+              <p class="c-article__text">本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">表組み - 横に要素を並べる(行数可変対応)</h2>
+              <p class="c-article__text">本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+              <div class="c-article__tableArea">
+                <table class="c-article__table">
+                  <tbody>
+                    <tr>
+                      <th>タイトル</th>
+                      <td>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</td>
+                      <td>ダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキストダミーテキスト</td>
+                      <td>ダミーテキスト</td>
+                    </tr>
+                    <tr>
+                      <th>タイトル タイトル</th>
+                      <td>ダミーテキスト</td>
+                      <td>ダミーテキスト</td>
+                      <td>ダミーテキスト</td>
+                    </tr>
+                    <tr>
+                      <th>タイトル タイトル</th>
+                      <td>ダミーテキストダミーテキスト</td>
+                      <td>ダミーテキスト</td>
+                      <td>ダミーテキスト</td>
+                    </tr>
+                    <tr>
+                      <th>タイトル タイトル タイトル</th>
+                      <td>ダミーテキスト</td>
+                      <td>ダミーテキストダミーテキスト</td>
+                      <td>ダミーテキスト</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">表組み - 行グレー(縦にコンテンツを並べる)</h2>
+              <p class="c-article__text">本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+              <div class="c-article__tableArea">
+                <table class="c-article__table --vertical">
+                  <thead>
+                    <tr>
+                      <th>Metric（指標）</th>
+                      <th>Bengaluru（ベンガルール）</th>
+                      <th>Hyderabad（ハイデラバード）</th>
+                      <th>Hyderabad（ハイデラバード）</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Rides served（乗車回数）</td>
+                      <td>17,564</td>
+                      <td>10,310</td>
+                      <td>10,310</td>
+                    </tr>
+                    <tr>
+                      <td>Passenger-time saved（ユーザーの時間短縮/分）</td>
+                      <td>226,007 minutes</td>
+                      <td>72,788 minutes</td>
+                      <td>72,788 minutes</td>
+                    </tr>
+                    <tr>
+                      <td>Mode-shift induced（モーダルシフト）</td>
+                      <td>35% modal shift from private modes　（35％が自家用車から変更)</td>
+                      <td>11% modal shift from private modes （11％が自家用車から変更）</td>
+                      <td>11% modal shift from private modes （11％が自家用車から変更）</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">画像一枚センターレイアウトでキャプション付き</h2>
+              <div class="c-article__img js-modal-img --single">
+                <img src="<%= data.imgPath %>/dummy/modal_dummy_1.png" alt="modal dummy">
+                <!-- <p>1-キャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキスト</p> -->
+              </div>
+              <p class="c-article__text">本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">画像素材テスト</h2>
+              <div class="c-article__img js-modal-img --single">
+                <img src="../../images/TMF-articleB-img02.png" alt="modal dummy">
+                <!-- <p>1-キャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキスト</p> -->
+              </div>
+              <p class="c-article__text">本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">画像2カラム（キャプション付き）</h2>
+              <ul class="c-article__imgList">
+                <li>
+                  <div class="c-article__img js-modal-img --double">
+                    <img src="<%= data.imgPath %>/dummy/modal_dummy_2.png" alt="modal dummy">
+                    <p>2-キャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキスト</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="c-article__img js-modal-img --double">
+                    <img src="<%= data.imgPath %>/dummy/modal_dummy_3.png" alt="modal dummy">
+                    <p>3-キャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキスト</p>
+                  </div>
+                </li>
+              </ul>
+              <p class="c-article__text">本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">画像3カラム（キャプション付き）</h2>
+              <ul class="c-article__imgList">
+                <li>
+                  <div class="c-article__img js-modal-img --triple">
+                    <img src="<%= data.imgPath %>/dummy/modal_dummy_2.png" alt="modal dummy">
+                    <p>2-キャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキスト</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="c-article__img js-modal-img --triple">
+                    <img src="<%= data.imgPath %>/dummy/modal_dummy_3.png" alt="modal dummy">
+                    <p>3-キャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキスト</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="c-article__img js-modal-img --triple">
+                    <img src="<%= data.imgPath %>/dummy/modal_dummy_3.png" alt="modal dummy">
+                    <p>3-キャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキストキャプションテキスト</p>
+                  </div>
+                </li>
+              </ul>
+              <p class="c-article__text">本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">イメージ左寄せ、テキスト右レイアウト</h2>
+              <div class="c-article__arrangeImg js-modal-img">
+                <img src="<%= data.imgPath %>/dummy/modal_dummy_3.png" alt="dummy">
+                <p>4-本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+              </div>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">Youtube動画埋め込み</h2>
+              <div class="c-article__movieWrap">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0FwUVwxQk9U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">会社名文末右寄せ</h2>
+              <p class="c-article__text">本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト</p>
+              <p class="c-article__footerText">会社名が入ります会社名が入ります会社名が入ります<br>会社名が入ります会社名が入ります</p>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">強調文字デザイン</h2>
+              <p class="c-article__text"><b>強調文字です：</b>本文テキスト本文テキスト本文テキスト<b>本文テキスト本文テキスト</b>本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト<br>改行本文テキスト本文テキスト本文テキスト本文テキスト<b>強調</b>本文テキスト本文テキスト</p>
+              <p class="c-article__text"><b>強調文字です：</b>本文テキスト本文テキスト本文テキスト<b>本文テキスト本文テキスト</b>本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト本文テキスト<b>強調</b>本文テキスト本文テキスト本文テキスト本文テキスト</p>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">ボーダー付きの一覧</h2>
+              <div class="c-article__pdfBtnArea">
+                <p>PDFモーダルが出ます</p>
+                <div>
+                  <button class="c-button js-pdfModal-trigger" type="button" data-href="https://www.google.com/">詳細を見る</button>
+                </div>
+              </div>
+              <div class="c-article__pdfBtnArea">
+                <p>PDFモーダルが出ます</p>
+                <div>
+                  <button class="c-button js-pdfModal-trigger" type="button" data-href="https://www.apple.com/jp/">詳細を見る</button>
+                </div>
+              </div>
+              <div class="c-article__pdfBtnArea">
+                <p>PDFモーダルが出ます</p>
+                <div>
+                  <button class="c-button js-pdfModal-trigger" type="button" data-href="https://www.woven-city.global/">詳細を見る</button>
+                </div>
+              </div>
+            </div>
+            <div class="c-article__wrap">
+              <h2 class="c-article__heading --h2">テキストと画像の横並べリスト</h2>
+              <dl class="c-article__textAndImgArrange">
+                <dt>今回の取り組みに関連する SDGs の目標：</dt>
+                <dd>
+                  <ul>
+                    <li>
+                      <img src="../../images/mark_10.webp" alt="10 人間の不平等を治そう">
+                    </li>
+                    <li>
+                      <img src="../../images/mark_11.webp" alt="11 住み続けられるまちづくりを">
+                    </li>
+                    <li>
+                      <img src="../../images/mark_17.webp" alt="17 パートナーシップで目標を達成しよう">
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+          </div>
+        </section>
+        <%- include('../../include/common/_related.ejs', {data: data}); %>
+      </main>
+      <%- include('../../include/common/_footer.ejs', {data: data}); %>
+      <%- include('../../include/common/_pickUpModal.ejs', {data: data}); %>
+      <%- include('../../include/common/_pdfModal.ejs', {data: data}); %>
+    </div>
+    <%- include('../../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

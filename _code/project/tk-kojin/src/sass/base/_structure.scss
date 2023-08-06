@@ -1,0 +1,24 @@
+// -------------------------------------------------------------------
+//  structure.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.p-individual {
+  font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+  color: var.$BASE_TEXT_COLOR;
+}
+
+.phase2-theme {
+  overflow: visible;
+}
+
+body {
+  &.is-modal-open {
+    overflow-y: hidden;
+  }
+
+  @include med.media(sp) {
+    overflow-x: hidden;
+  }
+}

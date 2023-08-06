@@ -1,0 +1,69 @@
+// -------------------------------------------------------------------
+// 	button.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+@mixin commonDesign {
+  position: relative;
+  width: 19vw;
+  display: block;
+  text-align: center;
+  font-size: 1.1vw;
+  height: 4.1vw;
+  line-height: 4.1vw;
+  border-radius: 2.05vw;
+  @include med.media(sp) {
+    width: 53.33vw;
+    font-size: 3.47vw;
+    height: 12vw;
+    line-height: 12vw;
+    border-radius: 6vw;
+  }
+}
+
+.c-button {
+  @include commonDesign;
+  @include mix.commonLabelStyle;
+  transition: opacity 0.5s, color 0.3s, background-color 0.3s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    right: 1.08vw;
+    top: 45%;
+    width: 1.32vw;
+    height: 0.39vw;
+    background-image: url(../images/common/icon_arrow_red.svg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    @include med.media(sp) {
+      right: 3.47vw;
+      width: 4.8vw;
+      height: 1.33vw;
+    }
+  }
+
+  &:hover {
+    color: #FFF;
+    background-color: var.$LIGHT_RED;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  &.--contactEn {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.c-button--confirm {
+  @include commonDesign;
+  @include mix.defaultHover;
+  background-color: #bcbec1;
+  color: #fff;
+}

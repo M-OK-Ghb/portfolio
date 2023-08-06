@@ -1,0 +1,62 @@
+<%
+  const data = {
+    isTop: false,
+    title: "",
+    description: "",
+    pageName: "news",
+    current: "news",
+    pageTitle: "News",
+    path: "../../../en",
+    filePath: "../../..",
+    imgPath: "../../../images/sub",
+    commonImgPath: "../../../images/common",
+    label: "release"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../../include/common/_header.ejs', {data: data}); %>
+      <main class="c-main">
+        <%- include('../../include/sub/_mv.ejs', {data: data}); %>
+        <%- include('../../include/common/_curveBg.ejs', {data: data}); %>
+        <div class="p-news">
+          <%- include('../_label.ejs', {data: data}); %>
+          <div class="p-news__listArea">
+            <ul class="p-news__list">
+              <li class="p-news__item">
+                <a href="#">
+                  <div class="p-news__itemInner">
+                    <div class="p-news__date">
+                      <span>2022.09.01</span>
+                    </div>
+                    <div class="p-news__contents">
+                      <div class="p-news__label">
+                        <span>RELEASE</span>
+                      </div>
+                      <p class="p-news__text">トヨタ・モビリティ基金、沖縄県での実証実験においてレンタカー利用者の交通事故削減につながる顕著な行動変化を確認。今後は車両データも活用し、さらなる安全運転促進と観光振興を目指す</p>
+                    </div>
+                    <div class="p-news__linkIcon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="31" height="31" viewBox="0 0 31 31">
+                        <g transform="translate(-1152.667 -1922.104)">
+                          <circle cx="15" cy="15" r="15" transform="translate(1153.167 1922.604)" fill="#fff" stroke="#f18e94" stroke-miterlimit="10" stroke-width="1"/>
+                          <path d="M6019.013,1938.821H6032.6l-4.893-3.992" transform="translate(-4857)" fill="none" stroke="#e41e2a" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+                        </g>
+                      </svg>
+                    </div>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <%- include('../../include/common/_related.ejs', {data: data}); %>
+      </main>
+      <%- include('../../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

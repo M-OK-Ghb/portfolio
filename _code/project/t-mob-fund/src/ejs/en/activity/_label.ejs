@@ -1,0 +1,53 @@
+<div class="p-sub__labelArea">
+  <ul class="p-sub__labelList">
+    <% if(data.label === "all") { %>
+    <li class="p-sub__label current">
+    <% } else { %>
+    <li class="p-sub__label">
+    <% } %>
+      <a href="<%= data.path %>/activity/">ALL</a>
+    </li>
+    <% if(data.label === "traffic_safety") { %>
+    <li class="p-sub__label current">  
+    <% } else { %>
+    <li class="p-sub__label">
+    <% } %>
+      <a href="<%= data.path %>/activity/traffic_safety/">Traffic Safety</a>
+    </li>
+    <% if(data.label === "traffic_congestion") { %>
+    <li class="p-sub__label current">
+    <% } else { %>
+    <li class="p-sub__label">
+    <% } %>
+      <a href="<%= data.path %>/activity/traffic_congestion/">Measures to mitigate traffic congestion</a>
+    </li>
+    <% if(data.label === "support_for_people") { %>
+    <li class="p-sub__label current">
+    <% } else { %>
+    <li class="p-sub__label">
+    <% } %>
+      <a href="<%= data.path %>/activity/support_for_people/">Support for people with mobility challenges</a>
+    </li>
+    <% if(data.label === "energy") { %>
+    <li class="p-sub__label current">
+    <% } else { %>
+    <li class="p-sub__label">
+    <% } %>
+      <a href="<%= data.path %>/activity/hydrogen_energy/">Hydrogen/Energy</a>
+    </li>
+    <% if(data.label === "local_mobility_support") { %>
+    <li class="p-sub__label current">
+    <% } else { %>
+    <li class="p-sub__label">
+    <% } %>
+      <a href="<%= data.path %>/activity/local_mobility_support/">Mobility support for local communities</a>
+    </li>
+    <% if(data.label === "contests") { %>
+    <li class="p-sub__label current">
+    <% } else { %>
+    <li class="p-sub__label">
+    <% } %>
+      <a href="<%= data.path %>/activity/contests/">Contests/Open recruitment</a>
+    </li>
+  </ul>
+</div>

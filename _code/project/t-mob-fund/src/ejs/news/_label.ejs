@@ -1,0 +1,32 @@
+<div class="p-sub__labelArea news">
+  <ul class="p-sub__labelList">
+    <% if(data.label === "all") { %>
+    <li class="p-sub__label current">
+    <% } else { %>
+    <li class="p-sub__label">
+    <% } %>
+      <a href="<%= data.path %>/news/">すべて</a>
+    </li>
+    <% if(data.label === "info") { %>
+    <li class="p-sub__label current">  
+    <% } else { %>
+    <li class="p-sub__label">
+    <% } %>
+      <a href="<%= data.path %>/news/info/">INFO</a>
+    </li>
+    <% if(data.label === "update") { %>
+    <li class="p-sub__label current">
+    <% } else { %>
+    <li class="p-sub__label">
+    <% } %>
+      <a href="<%= data.path %>/news/update/">UPDATE</a>
+    </li>
+    <% if(data.label === "release") { %>
+    <li class="p-sub__label current">
+    <% } else { %>
+    <li class="p-sub__label">
+    <% } %>
+      <a href="<%= data.path %>/news/release/">RELEASE</a>
+    </li>
+  </ul>
+</div>

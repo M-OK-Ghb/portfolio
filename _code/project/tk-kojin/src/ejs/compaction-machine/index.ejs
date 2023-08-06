@@ -1,0 +1,117 @@
+<%
+  const data = {
+    isTop: false,
+    title: "転圧機 | 個人のお客様へ - 太陽建機レンタル",
+    description: "転圧機 | 個人のお客様へ - 太陽建機レンタル description",
+    path: "..",
+    imgPath: "../images",
+    commonImgPath: "../images/common",
+    current: "compaction",
+    contactURL: "https://www.taiyokenki.co.jp/individuals/form.html"
+  }
+%>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div>
+      <%- include('../include/existingParts/_header.ejs', {data: data}); %>
+      <main class="phase2-theme">
+        <%- include('../include/existingParts/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-individual p-indivdiual--sub">
+          <%- include('../include/compaction/_fv.ejs', {data: data}); %>
+          <div class="p-sub__container">
+            <div class="p-sub__headingWrap">
+              <h3 class="p-sub__heading">おすすめ機種3選</h3>
+            </div>
+            <div class="p-sub__mainContents c-float__outer">
+              <%- include('../include/common/_floatLink.ejs', {data: data}); %>
+              <div class="c-float__heightAdjustBlock"></div>
+              <div class="c-float__sibling">
+                <div class="p-sub__mainContentsInner">
+                  <%- include('../include/compaction/_itemList.ejs', {data: data}); %>
+                  <div class="c-note">
+                    <dl class="c-note__line">
+                      <dt class="c-note__title">※注意書き</dt>
+                      <dd>
+                        <ul class="c-note__list">
+                          <li>・レンタル料金、管理検査料は、地域や時期により変動することがあります。また、仕様によっても変わりますので最寄り支店にお問合せ下さい。</li>
+                        </ul>
+                      </dd>
+                    </dl>
+                    <p class="c-note__text">※金額は全て税別表示になります。</p>
+                  </div>
+                  <div class="c-float__heightAdjustBlock"></div>
+                </div>
+              </div>
+            </div>
+            <div class="p-sub__supplementContents js-float-end">
+              <div class="p-sub__pointArea">
+                <h3 class="p-sub__heading">転圧機（プレート）の<br class="is-sp">選び方のPOINT</h3>
+                <ul class="p-sub__pointList">
+                  <li class="p-sub__pointItem">
+                    <h4 class="p-sub__pointHeading">
+                      <span class="--desc">・</span>
+                      <span class="--text">目的で選ぶ</span>
+                    </h4>
+                    <p class="p-sub__pointText">庭先の芝生部分や田んぼのあぜ道など、弱い転圧力で少しだけ作業したい方には軽量のプレート30kgがお勧めです。</p>
+                  </li>
+                  <li class="p-sub__pointItem">
+                    <h4 class="p-sub__pointHeading">
+                      <span class="--desc">・</span>
+                      <span class="--text">重量で選ぶ</span>
+                    </h4>
+                    <p class="p-sub__pointText">広い場所や駐車場などのアスファルト舗装をされる方は幅が広くて転圧力がある重量級のプレート60kgがお勧めです。</p>
+                  </li>
+                  <li class="p-sub__pointItem">
+                    <h4 class="p-sub__pointHeading">
+                      <span class="--desc">・</span>
+                      <span class="--text">転圧盤幅で選ぶ</span>
+                    </h4>
+                    <p class="p-sub__pointText">転圧もしたいが取り回しが良く、車に積載をされたい方はスタンダードタイプのプレート45kgがお勧めです。</p>
+                  </li>
+                </ul>
+              </div>
+              <h3 class="p-sub__heading">転圧機の使い方</h3>
+              <div class="p-sub__movieArea">
+                <div class="p-sub__movieTrigger js-modal-trigger" data-url="https://www.youtube.com/embed/1uGOEeuMKyc">
+                  <span class="--mainImg">
+                    <img src="https://img.youtube.com/vi/1uGOEeuMKyc/sddefault.jpg" alt="youtube サムネイル">
+                  </span>
+                  <span class="--icon">
+                    <img src="<%= data.commonImgPath %>/icon_youtube.svg" alt="Youtube ボタン">
+                  </span>
+                </div>
+                <div class="c-modal js-modal">
+                  <div class="c-modal__inner">
+                    <div class="c-modal__movie">
+                      <div class="c-modal__top">
+                        <p class="c-modal__text js-modal-text">転圧機の使い方</p>
+                        <div class="c-modal__closeBtn">
+                          <span><img src="<%= data.commonImgPath %>/icon_close.svg" alt="×"></span>
+                        </div>
+                      </div>
+                      <div class="c-modal__iframeWrap js-iframe-box">
+                        <iframe class="js-iframe" src="https://www.youtube.com/embed/1uGOEeuMKyc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                      </div>
+                      <p class="c-modal__text --sub js-modal-text">詳しい使い方は、こちらの動画を参照してください。</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-buttonWrap --w280">
+                <a href="<%= data.path %>/" class="c-button --em --min">
+                  <span class="--text">個人のお客さまトップに戻る</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <%- include('../include/common/_contactLead.ejs', {data: data}); %>
+      <%- include('../include/existingParts/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/existingParts/_scriptBlock.ejs', {data: data}); %>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

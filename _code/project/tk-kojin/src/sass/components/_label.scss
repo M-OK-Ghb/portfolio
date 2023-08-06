@@ -1,0 +1,25 @@
+// -------------------------------------------------------------------
+// 	label.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-label {
+  display: inline-block;
+  font-size: calc(18/1920*100vw);
+  font-weight: bold;
+  border-radius: calc(15/1920*100vw);
+  background-color: #FFF;
+  color: var.$LIGHT_TEXT_COLOR;
+  height: calc(30/1920*100vw);
+  line-height: calc(30/1920*100vw);
+  padding: 0 calc(15/1920*100vw);
+  @include med.media(sp) {
+    font-size: calc(26/750*100vw);
+    border-radius: calc(25/750*100vw);
+    height: calc(50/750*100vw);
+    line-height: calc(50/750*100vw);
+    padding: 0 calc(25/750*100vw);
+  }
+}
