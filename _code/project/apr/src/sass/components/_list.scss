@@ -1,0 +1,198 @@
+// -------------------------------------------------------------------
+// 	list.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+ul {
+  margin-bottom: 50px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.c-list {
+  > li {
+    border-bottom: 1px solid #b1b1b1;
+  }
+
+  &__firstLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__firstText {
+    display: inline-block;
+    font-family: var.$HelveticaNeue_M;
+    font-size: 18px;
+    letter-spacing: 2.7px;
+    height: 60px;
+    line-height: 60px;
+
+    @include med.media(sp) {
+      font-size: 4vw;
+      letter-spacing: 0.6vw;
+      height: 13.33vw;
+      line-height: 13.33vw;
+      padding-left: 4.65vw;
+    }
+  }
+
+  &__trigger {
+    display: inline-block;
+    width: 18px;
+    margin-right: 25px;
+    cursor: pointer;
+    @include med.media(sp) {
+      width: 3.465vw;
+      margin-right: 2.65vw;
+    }
+
+    &:hover {
+      transition: 0.3s;
+      opacity: 0.5;
+    }
+
+    > img {
+      width: 100%;
+    }
+
+    &.is-show {
+      transition: transform 0.2s;
+      transform: rotate(180deg);
+    }
+  }
+
+  &__second {
+    border-top: 1px solid #b1b1b1;
+    > li {
+      border-bottom: 1px solid #b1b1b1;
+      background-color: #D1CED6;
+    }
+
+    display: none;
+    &.is-show {
+      display: block;
+    }
+  }
+
+  &__secondLine {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__secondText {
+    position: relative;
+    font-family: var.$HelveticaNeue_L;
+    font-size: 16px;
+    letter-spacing: 2.4px;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 38px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 8px;
+      height: 1px;
+      background-color: #000;
+      top: 50%;
+      left: 24px;
+      @include med.media(sp) {
+        width: 1.065vw;
+        left: 8%;
+      }
+    }
+
+    @include med.media(sp) {
+      font-size: 3.74vw;
+      letter-spacing: 0.56vw;
+      height: 13.33vw;
+      line-height: 13.33vw;
+      padding-left: 4.65vw;
+    }
+  }
+
+  &__third {
+    > li {
+      border-top: 1px solid #646464;
+      background-color: #CDD7DE;
+    }
+
+    display: none;
+    &.is-show {
+      display: block;
+    }
+  }
+
+  &__thirdText {
+    font-style: italic;
+    font-family: var.$HelveticaNeue_L;
+    font-size: 14px;
+    letter-spacing: 2.1px;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 38px;
+
+    @include med.media(sp) {
+      font-size: 3.2vw;
+      letter-spacing: 0.48vw;
+      height: 13.33vw;
+      line-height: 13.33vw;
+      padding-left: 4.65vw;
+    }
+  }
+}
+
+.c-list__node {
+  font-size: 18px;
+  padding-left: 40px;
+  li {
+    padding: 3px 0;
+    margin-left: 1em;
+  }
+  &.--discBlack {
+    li {
+      list-style: disc;
+    }
+  }
+  &.--discWhite {
+    li {
+      list-style: circle;
+      .--discBlack {
+        li {
+          list-style: disc;
+        }
+      }
+    }
+  }
+  &.--number {
+    li {
+      list-style: decimal;
+      .--discBlack {
+        li {
+          list-style: disc;
+        }
+      }
+      .--discWhite {
+        li {
+          list-style: circle;
+        }
+      }
+    }
+  }
+  &.--parent {
+    li {
+      padding: 10px 0;
+    }
+  }
+  &.--child {
+    padding-left: 40px;
+    li {
+      padding: 3px 0;
+      font-size: 15px;
+      line-height: 2;
+    }
+  }
+}

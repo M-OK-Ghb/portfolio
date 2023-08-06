@@ -1,0 +1,133 @@
+// -------------------------------------------------------------------
+// 	imgWrap.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-imgWrap {
+  &.--single {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+    > img {
+      width: 100%;
+    }
+
+    > span {
+      color: #000;
+      font-style: italic;
+      font-size: 12px;
+      font-family: var.$HelveticaNeue_L;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    &.--andText {
+      > span {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &.--twoClm {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    > li {
+      width: 48.5%;
+      > img {
+        width: 100%;
+      }
+
+      > span {
+        color: #000;
+        font-style: italic;
+        font-size: 12px;
+        font-family: var.$HelveticaNeue_L;
+        display: inline-block;
+        margin-top: 10px;
+      }
+    }
+
+    @include med.media(sp) {
+      display: block;
+      width: 75%;
+      margin: auto;
+      > li {
+        width: 100%;
+        margin-bottom: 6vw;
+      }
+    }
+  }
+
+  &.--threeClm {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    > li {
+      width: 32.8%;
+      > img {
+        width: 100%;
+      }
+
+      > span {
+        color: #000;
+        font-style: italic;
+        font-size: 12px;
+        font-family: var.$HelveticaNeue_L;
+        display: inline-block;
+        margin-top: 10px;
+      }
+    }
+
+    @include med.media(sp) {
+      flex-wrap: wrap;
+      > li {
+        width: 48.5%;
+        margin-bottom: 4vw;
+      }
+    }
+  }
+
+  &.--arrange {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+    @include med.media(sp) {
+      display: block;
+    }
+
+    > dt {
+      width: 350px;
+      @include med.media(sp) {
+        width: 100%;
+        margin-bottom: 4vw;
+      }
+
+      img {
+        width: 100%;
+      }
+
+      span {
+        color: #000;
+        font-style: italic;
+        font-size: 12px;
+        font-family: var.$HelveticaNeue_L;
+        display: inline-block;
+        margin-top: 10px;
+      }
+    }
+
+    > dd {
+      width: 330px;
+
+      @include med.media(sp) {
+        width: 100%;
+      }
+    }
+  }
+}

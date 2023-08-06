@@ -1,0 +1,183 @@
+<%
+  const data = {
+    isTop: true,
+    title: "aprim2023",
+    description: "",
+    path: ".",
+    commonImgPath: "images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('include/_head.ejs', {data: data}); %>
+  <body id="js-top-body">
+    <div class="p-top__container c-bg">
+      <%- include('include/_header.ejs', {data: data}); %>
+      <main class="l-main">
+        <div class="p-top__fv c-bgBlurWrap js-logoShow-target">
+          <div class="c-bgBlur"></div>
+          <div class="p-top__fvImg">
+            <img src="<%= data.commonImgPath %>/main_visual.webp" alt="key visual" loading="eager">
+          </div>
+          <div class="p-top__logoArea">
+            <img src="<%= data.commonImgPath %>/logo_white.png" alt="APRIM Logo" loading="eager" id="js-fv-logo">
+            <p id="js-fv-message">Aug.07-11.2023</p>
+          </div>
+          <p class="c-fvCopy top"><span>Starscape photo:</span><br class="is-sp"> Yasuhiko ENDO</p>
+          <div class="p-top__fvScroll">
+            <p class="p-top__fvScrollText">SCROLL</p>
+            <div class="p-top__bgAnimationWrap">
+              <div class="p-top__bgBlur fvBottom"></div>
+              <div class="p-top__fvScrollImg">
+                <img src="<%= data.commonImgPath %>/scroll_sign.png" alt="stars illustration" loading="eager">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-top__contentsWrap">
+          <div class="p-top__bgBlur contentsTop"></div>
+          <section class="c-section">
+            <div class="c-headingWrap --h1">
+              <h1 class="c-heading --h1">
+                <span class="c-heading__text">WELCOME MESSAGE</span>
+              </h1>
+              <div class="c-heading__lineArea">
+                <div class="c-heading__lineWrap js-heading-line">
+                  <span class="c-heading__line first"></span>
+                  <span class="c-heading__line second"></span>
+                  <span class="c-heading__line third"></span>
+                </div>
+              </div>
+            </div>
+            <div class="c-contentsWrap">
+              <ul class="c-textList">
+                <li class="c-text">We are pleased to invite you all to the 2023 Asia-Pacific Regional IAU Meeting (APRIM 2023) in Japan at the BIG PALETTE FUKUSHIMA in Koriyama, Fukushima Prefecture, from August 7-11, 2023.</li>
+                <li class="c-text">Taking place once every three years, APRIM is one of the largest regional meetings of the IAU, where astronomers in the Asia-Pacific region gather to discuss common scientific interests and contribute to astronomy advancement internationally. New Zealand hosted the first APRIM in 1978, and since then, the meeting has been held regularly until 2020, when the COVID-19 pandemic forced its cancellation. Japan has hosted this IAU meeting twice, in 1984 in Kyoto and 2002 in Tokyo. 2023 will be the third APRIM held in Japan.</li>
+                <li class="c-text">For this edition, we are planning to provide our participating researchers with an enriched full IAU experience while scientifically impacting the region through international collaboration. Mindful of regional and national contexts, we wish that APRIM 2023 Japan reflects the diversity of Asia-Pacific with tolerance and inclusion permeating all its discussions that will impact competitiveness in research and bring innovation through regional collaboration.</li>
+              </ul>
+            </div>
+          </section>
+          <section class="c-section" id="top-information">
+            <div class="c-headingWrap --h1">
+              <h1 class="c-heading --h1">
+                <span class="c-heading__text">NEWS</span>
+              </h1>
+              <div class="c-heading__lineArea">
+                <div class="c-heading__lineWrap js-heading-line">
+                  <span class="c-heading__line first"></span>
+                  <span class="c-heading__line second"></span>
+                  <span class="c-heading__line third"></span>
+                </div>
+              </div>
+            </div>
+            <div class="c-contentsWrap rightShort information">
+              <ul class="c-info__list" id="js-scroll-list">
+                <li>
+                  <a href="#" class="c-info__item">
+                    <div class="c-info__itemInner">
+                      <span class="c-info__date">Dec. 1, 2022</span>
+                      <span class="c-info__title">dummy texts short size</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="c-info__item">
+                    <div class="c-info__itemInner">
+                      <span class="c-info__date">Nov. 10, 2022</span>
+                      <span class="c-info__title">dummy texts med size dummy texts med size dummy texts med</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="c-info__item">
+                    <div class="c-info__itemInner">
+                      <span class="c-info__date">Oct. 5, 2022</span>
+                      <span class="c-info__title">dummy texts med size dummy texts med size dummy texts med</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="c-info__item">
+                    <div class="c-info__itemInner">
+                      <span class="c-info__date">Sep. 30, 2022</span>
+                      <span class="c-info__title">dummy texts med size dummy texts med size dummy texts med</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="c-info__item">
+                    <div class="c-info__itemInner">
+                      <span class="c-info__date">Aug. 30, 2022</span>
+                      <span class="c-info__title">dummy texts med size dummy texts med size dummy texts med</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="c-info__item">
+                    <div class="c-info__itemInner">
+                      <span class="c-info__date">July 30, 2022</span>
+                      <span class="c-info__title">dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy textdummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long sizedummy texts Long size</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="c-info__item">
+                    <div class="c-info__itemInner">
+                      <span class="c-info__date">June 30, 2022</span>
+                      <span class="c-info__title">dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy textdummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long sizedummy texts Long size</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="c-info__item">
+                    <div class="c-info__itemInner">
+                      <span class="c-info__date">May 30, 2022</span>
+                      <span class="c-info__title">dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy textdummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long sizedummy texts Long size</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="c-info__item">
+                    <div class="c-info__itemInner">
+                      <span class="c-info__date">April 30, 2022</span>
+                      <span class="c-info__title">dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy textdummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long sizedummy texts Long size</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="c-info__item">
+                    <div class="c-info__itemInner">
+                      <span class="c-info__date">March 30, 2022</span>
+                      <span class="c-info__title">dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy textdummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long sizedummy texts Long size</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="c-info__item">
+                    <div class="c-info__itemInner">
+                      <span class="c-info__date">Feb. 30, 2022</span>
+                      <span class="c-info__title">dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy textdummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long sizedummy texts Long size</span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="c-info__item">
+                    <div class="c-info__itemInner">
+                      <span class="c-info__date">Jan. 30, 2022</span>
+                      <span class="c-info__title">dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy textdummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long size dummy texts Long sizedummy texts Long size</span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <div class="c-info__border" id="js-scroll-border"></div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <%- include('include/common/_scrollTop.ejs', {data: data}); %>  
+      <%- include('include/_footer.ejs', {data: data}); %>  
+    </div>
+    <%- include('include/_script.ejs', {data: data}); %>
+  </body>
+</html>

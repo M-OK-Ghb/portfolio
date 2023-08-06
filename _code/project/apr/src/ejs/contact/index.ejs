@@ -1,0 +1,85 @@
+<%
+  const data = {
+    title: "",
+    description: "",
+    path: "..",
+    commonImgPath: "../images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../include/_head.ejs', {data: data}); %>
+  <body>
+    <div class="c-bg">
+      <%- include('../include/_header.ejs', {data: data}); %>
+      <main class="l-main">
+        <%- include('../include/sub/_firstVisualSub.ejs', {data: data}); %>
+        <div class="p-sub__contentsWrap">
+          <section class="c-section">
+            <div class="c-headingWrap --h1">
+              <h1 class="c-heading --h1">
+                <span class="c-heading__text">Contact Us</span>
+              </h1>
+              <div class="c-heading__lineArea">
+                <div class="c-heading__lineWrap js-heading-line">
+                  <span class="c-heading__line first"></span>
+                  <span class="c-heading__line second"></span>
+                  <span class="c-heading__line third"></span>
+                </div>
+              </div>
+            </div>
+            <div class="c-contentsWrap">
+              <div class="p-contact__area">
+                <ul class="c-info__list">
+                  <li class="c-text">If you are unable to use the form please email your inquiry to the following address: <a href="mailto:inquiry@aprim2023.org" style="text-decoration: underline;">inquiry@aprim2023.org</a></li>
+                </ul>
+                <h3 class="p-contact__note">
+                  <img src="<%= data.path %>/images/contact_note.svg" alt="✴︎ = required">
+                </h3>
+                <div class="p-contact__itemWrap">
+                  <dl class="p-contact__item">
+                    <dt>
+                      <span class="p-contact__requiredCategory">Name (Full Name)</span>
+                    </dt>
+                    <dd>
+                      <input type="text">
+                    </dd>
+                  </dl>
+                  <dl class="p-contact__item">
+                    <dt>
+                      <span class="p-contact__requiredCategory">Email</span>
+                    </dt>
+                    <dd>
+                      <input type="text">
+                    </dd>
+                  </dl>
+                  <dl class="p-contact__item">
+                    <dt>Affiliation</dt>
+                    <dd>
+                      <input type="text">
+                    </dd>
+                  </dl>
+                  <dl class="p-contact__item">
+                    <dt>
+                      <span class="p-contact__requiredCategory">Message</span>
+                    </dt>
+                    <dd>
+                      <textarea></textarea>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="c-btnWrap center">
+                  <button class="c-btn" type="submit">SUBMIT</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <%- include('../include/common/_scrollTop.ejs', {data: data}); %>  
+      <%- include('../include/_footer.ejs', {data: data}); %>  
+    </div>
+    <%- include('../include/_script.ejs', {data: data}); %>
+  </body>
+</html>

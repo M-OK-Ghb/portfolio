@@ -1,0 +1,127 @@
+// -------------------------------------------------------------------
+// 	articleLink.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-articleLinkArea {
+  position: relative;
+  height: 18.5px;
+  @include med.mq(var.$ADJUST_SP_POINT, var.$BREAK_POINT_TABLET) {
+    height: 28px;
+  }
+}
+
+.c-articleLinkWrap {
+  &.back {
+    position: absolute;
+    left: 0;
+  }
+
+  &.next {
+    position: absolute;
+    right: 0;
+  }
+}
+
+.c-articleLink {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover {
+    transition: opacity 0.3s;
+    opacity: 0.7;
+  }
+
+  > a {
+    font-family: var.$FUTURE_M;
+    font-style: italic;
+    font-size: 12px;
+    letter-spacing: 1.8px;
+    border-bottom: 2px solid;
+    padding-bottom: 2px;
+
+    @include med.mq(var.$ADJUST_SP_POINT, var.$BREAK_POINT_TABLET) {
+      font-size: 24px;
+    }
+  }
+
+  &.back {
+
+    > a {
+      padding-left: 10px;
+      @include med.mq(var.$ADJUST_SP_POINT, var.$BREAK_POINT_TABLET) {
+        padding-left: 12px;
+        margin-left: 10px;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      left: -10px;
+      bottom: -3.5px;
+      @include med.mq(var.$ADJUST_SP_POINT, var.$BREAK_POINT_TABLET) {
+        width: 14px;
+        bottom: -5.5px;
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 14px;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      left: -10px;
+      bottom: 0px;
+      transform: rotate(-30deg);
+      @include med.mq(var.$ADJUST_SP_POINT, var.$BREAK_POINT_TABLET) {
+        width: 20px;
+      }
+    }
+  }
+
+  &.next {
+
+    > a {
+      padding-right: 10px;
+      @include med.mq(var.$ADJUST_SP_POINT, var.$BREAK_POINT_TABLET) {
+        padding-right: 12px;
+        margin-right: 10px;
+      }
+    }
+
+    &::before {
+      content: "";
+      width: 8px;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      right: -10px;
+      bottom: -3.5px;
+      @include med.mq(var.$ADJUST_SP_POINT, var.$BREAK_POINT_TABLET) {
+        width: 14px;
+        bottom: -5.5px;
+      }
+    }
+
+    &::after {
+      content: "";
+      width: 14px;
+      height: 2px;
+      background: #000;
+      position: absolute;
+      right: -10px;
+      bottom: 0px;
+      transform: rotate(30deg);
+      @include med.mq(var.$ADJUST_SP_POINT, var.$BREAK_POINT_TABLET) {
+        width: 20px;
+      }
+    }
+  }
+}

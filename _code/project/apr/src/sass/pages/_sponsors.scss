@@ -1,0 +1,122 @@
+// -------------------------------------------------------------------
+//  sponsors.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.p-sponsors {
+  &__heading {
+    position: relative;
+    font-family: var.$FUTURE_M;
+    font-size: 32px;
+    color: #000;
+
+    @include med.media(sp) {
+      font-size: 5.86vw;
+    }
+
+    &::before {
+      content: "";
+      background-image: url(../images/common/heading_icon.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: -30px;
+      top: 50%;
+      transform: translateY(-50%);
+      @include med.media(sp) {
+        width: 8vw;
+        height: 8vw;
+        left: -6vw;
+      }
+    }
+  }
+
+  &__rank {
+    padding-bottom: 70px;
+
+    @include med.media(sp) {
+      padding-bottom: 12vw;
+    }
+
+    &.bronze {
+      padding-bottom: 0;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    @include med.media(sp) {
+      justify-content: space-between;
+    }
+
+    > li {
+      margin-bottom: 20px;
+      @include med.media(sp) {
+        margin-bottom: 2.65vw;
+      }
+    }
+
+    &.platinum {
+      justify-content: space-between;
+      > li {
+        width: 345px;
+        @include med.media(sp) {
+          width: 100%;
+        }
+      }
+    }
+
+    &.gold {
+      > li {
+        width: 225px;
+        margin-right: 22.5px;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+
+        @include med.media(sp) {
+          width: 48.5%;
+          margin-right: 0;
+        }
+      }
+    }
+
+    &.silver {
+      > li {
+        width: 165px;
+        margin-right: 20px;
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+
+        @include med.media(sp) {
+          width: 48.5%;
+          margin-right: 0;
+        }
+      }
+    }
+
+    &.bronze {
+      > li {
+        width: 130px;
+        margin-right: 17.5px;
+        &:nth-child(5n) {
+          margin-right: 0;
+        }
+        @include med.media(sp) {
+          width: 48.5%;
+          margin-right: 0;
+        }
+      }
+    }
+
+
+  }
+}

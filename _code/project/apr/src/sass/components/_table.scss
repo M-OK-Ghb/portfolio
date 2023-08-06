@@ -1,0 +1,112 @@
+// -------------------------------------------------------------------
+// 	table.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-tableWrap {
+  margin-bottom: 50px;
+  overflow-x: auto;
+  @include med.media(sp) {
+    margin-bottom: 6.65vw;
+    padding-bottom: 15px;
+
+    &::-webkit-scrollbar {
+      height: 1px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba(255,255,255,0.5);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #000;
+    }
+  }
+}
+
+.c-table {
+  width: 720px;
+  border-collapse: collapse;
+
+  tr {
+    &.--textCenter {
+      th,td {
+        text-align: center;
+      }
+    }
+
+    &.--textRight {
+      th,td {
+        text-align: right;
+      }
+    }
+  }
+
+  tr {
+    width: 100%;
+
+    th,td {
+      width: 180px;
+      height: 50px;
+      vertical-align: middle;
+      font-family: var.$HelveticaNeue_L;
+      font-size: 15px;
+      letter-spacing: 2.25px;
+      padding: 8px 14px;
+
+      @include med.media(sp) {
+        height: 80px;
+        font-size: 3.74vw;
+      }
+
+      a {
+        display: inline-block;
+        text-decoration: underline;
+        &:hover {
+          transition: opacity 0.3s;
+          opacity: 0.7;
+        }
+      }
+    }
+
+    th {
+      border: 1px solid #646464;
+    }
+
+    td {
+      border: 1px solid #B1B1B1;
+      background-color: #EDEDED;
+    }
+
+    &:nth-child(odd) {
+      th {
+        background-color: #D1CED6;
+      }
+    }
+
+    &:nth-child(even) {
+      th {
+        background-color: #CDD7DE;
+      }
+    }
+  }
+
+  &.headTop {
+    tr {
+      width: 100%;
+
+      &:first-child {
+        th {
+          &:nth-child(odd) {
+            background-color: #D1CED6;
+          }
+
+          &:nth-child(even) {
+            background-color: #CDD7DE;
+          }
+        }
+      }
+    }
+  }
+}

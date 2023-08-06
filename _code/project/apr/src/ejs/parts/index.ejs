@@ -1,0 +1,490 @@
+<%
+  const data = {
+    title: "parts",
+    description: "parts page",
+    path: "..",
+    commonImgPath: "../images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../include/_head.ejs', {data: data}); %>
+  <body>
+    <div class="c-bg">
+      <%- include('../include/_header.ejs', {data: data}); %>
+      <main class="l-main">
+        <%- include('../include/sub/_firstVisualSub.ejs', {data: data}); %>
+        <div class="p-sub__contentsWrap">
+          <section class="c-section">
+            <div class="c-headingWrap --h1">
+              <h1 class="c-heading --h1">
+                <span class="c-heading__text">TITLE h1</span>
+              </h1>
+              <div class="c-heading__lineArea">
+                <div class="c-heading__lineWrap js-heading-line">
+                  <span class="c-heading__line first"></span>
+                  <span class="c-heading__line second"></span>
+                  <span class="c-heading__line third"></span>
+                </div>
+              </div>
+            </div>
+            <div class="c-contentsWrap">
+              <div class="c-textArea">
+                <h2 class="c-heading --h2">Title h2</h2>
+                <p class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. <a href="#">Stet clita kasd gubergrenLorem ipsum dolor sit amet</a>, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+              <div class="c-textArea">
+                <h3 class="c-heading --h3">Title h3</h3>
+                <p class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergrenLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+              <div class="c-textArea">
+                <h4 class="c-heading --h4">Mini title h4</h4>
+                <p class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergrenLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+                <p class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergrenLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+                <p class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergrenLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+            </div>
+          </section>
+          <section class="c-section">
+            <div class="c-contentsWrap">
+              <h2 class="c-heading --h2">List</h2>
+              <div class="c-listWrap">
+                <ul class="c-list js-list">
+                  <li>
+                    <div class="c-list__firstLine">
+                      <span class="c-list__firstText">First Text</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="c-list__firstLine">
+                      <span class="c-list__firstText">First Text</span>
+                      <span class="c-list__trigger js-list-second-trigger">
+                        <img src="<%= data.commonImgPath %>/list_trigger_icon.svg" alt="↓">
+                      </span>
+                    </div>
+                    <ul class="c-list__second js-list-second">
+                      <li>
+                        <div class="c-list__secondLine">
+                          <span class="c-list__secondText">Second Text 1</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="c-list__secondLine">
+                          <span class="c-list__secondText">Second Text 2</span>
+                          <span class="c-list__trigger js-list-third-trigger">
+                            <img src="<%= data.commonImgPath %>/list_trigger_icon.svg" alt="↓">
+                          </span>
+                        </div>
+                        <ul class="c-list__third js-list-third">
+                          <li>
+                            <span class="c-list__thirdText">Third Text 1</span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="c-list__secondLine">
+                          <span class="c-list__secondText">Second Text 3</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="c-list__firstLine">
+                      <span class="c-list__firstText">First Text</span>
+                      <span class="c-list__trigger js-list-second-trigger">
+                        <img src="<%= data.commonImgPath %>/list_trigger_icon.svg" alt="↓">
+                      </span>
+                    </div>
+                    <ul class="c-list__second js-list-second">
+                      <li>
+                        <div class="c-list__secondLine">
+                          <span class="c-list__secondText">Second Text 1</span>
+                          <span class="c-list__trigger js-list-third-trigger">
+                            <img src="<%= data.commonImgPath %>/list_trigger_icon.svg" alt="↓">
+                          </span>
+                        </div>
+                        <ul class="c-list__third js-list-third">
+                          <li>
+                            <span class="c-list__thirdText">Third Text 1</span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="c-list__secondLine">
+                          <span class="c-list__secondText">Second Text 2</span>
+                          <span class="c-list__trigger js-list-third-trigger">
+                            <img src="<%= data.commonImgPath %>/list_trigger_icon.svg" alt="↓">
+                          </span>
+                        </div>
+                        <ul class="c-list__third js-list-third">
+                          <li>
+                            <span class="c-list__thirdText">Third Text 1</span>
+                          </li>
+                          <li>
+                            <span class="c-list__thirdText">Third Text 2</span>
+                          </li>
+                          <li>
+                            <span class="c-list__thirdText">Third Text 3</span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="c-list__secondLine">
+                          <span class="c-list__secondText">Second Text 3</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="c-section">
+            <div class="c-contentsWrap">
+              <h2 class="c-heading --h2">Night Picture in Koriyama</h2>
+              <div class="c-imgWrap --single">
+                <img src="<%= data.path %>/images/parts_dummy.png" alt="dummy Img">
+                <span>:Caption inserted here</span>
+              </div>
+              <ul class="c-imgWrap --twoClm">
+                <li>
+                  <img src="<%= data.path %>/images/parts_dummy.png" alt="dummy">
+                  <span>:Caption inserted here</span>
+                </li>
+                <li>
+                  <img src="<%= data.path %>/images/parts_dummy.png" alt="dummy">
+                  <span>:Caption inserted here</span>
+                </li>
+              </ul>
+              <ul class="c-imgWrap --threeClm">
+                <li>
+                  <img src="<%= data.path %>/images/parts_dummy.png" alt="dummy">
+                  <span>:Caption inserted here</span>
+                </li>
+                <li>
+                  <img src="<%= data.path %>/images/parts_dummy.png" alt="dummy">
+                  <span>:Caption inserted here</span>
+                </li>
+                <li>
+                  <img src="<%= data.path %>/images/parts_dummy.png" alt="dummy">
+                  <span>:Caption inserted here</span>
+                </li>
+              </ul>
+              <div class="c-imgWrap --single --andText">
+                <img src="<%= data.path %>/images/parts_dummy.png" alt="dummy Img">
+                <span>:Caption inserted here</span>
+                <p class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergrenLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+              <dl class="c-imgWrap --arrange">
+                <dt>
+                  <img src="<%= data.path %>/images/parts_dummy.png" alt="dummy Img">
+                  <span>:Caption inserted here</span>
+                </dt>
+                <dd>
+                  <span class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</span>
+                </dd>
+              </dl>
+            </div>
+          </section>
+          <section class="c-section">
+            <div class="c-contentsWrap">
+              <div class="c-tableArea">
+                <h4 class="c-heading --h4">Table Type A (Heading Left)</h4>
+                <div class="c-tableWrap">
+                  <table class="c-table headLeft">
+                    <tbody>
+                      <tr>
+                        <th>Aries</th>
+                        <td>text text text text text text</td>
+                        <td><a href="#">text link text link</a></td>
+                        <td>text text</td>
+                      </tr>
+                      <tr>
+                        <th>Taurus</th>
+                        <td>text text</td>
+                        <td>Long text Long text Long text Long textLong text Long text</td>
+                        <td>text text</td>
+                      </tr>
+                      <tr>
+                        <th>Gemini</th>
+                        <td>text text</td>
+                        <td>text text</td>
+                        <td>text text</td>
+                      </tr>
+                      <tr>
+                        <th>Cancer</th>
+                        <td>text text</td>
+                        <td>text text</td>
+                        <td>text text</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="c-tableArea">
+                <h4 class="c-heading --h4">Table Type A (Heading Left + text center)</h4>
+                <div class="c-tableWrap">
+                  <table class="c-table headLeft --textCenter">
+                    <tbody>
+                      <tr class="--textCenter">
+                        <th>Aries</th>
+                        <td>text text text text text text</td>
+                        <td><a href="#">text link text link</a></td>
+                        <td>text text</td>
+                      </tr>
+                      <tr class="--textCenter">
+                        <th>Taurus</th>
+                        <td>text text</td>
+                        <td>Long text Long text Long text Long textLong text Long text</td>
+                        <td>text text</td>
+                      </tr>
+                      <tr class="--textCenter">
+                        <th>Gemini</th>
+                        <td>text text</td>
+                        <td>text text</td>
+                        <td>text text</td>
+                      </tr>
+                      <tr class="--textCenter">
+                        <th>Cancer</th>
+                        <td>text text</td>
+                        <td>text text</td>
+                        <td>text text</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="c-tableArea">
+                <h4 class="c-heading --h4">Table Type A (Heading Left + text right)</h4>
+                <div class="c-tableWrap">
+                  <table class="c-table headLeft --textRight">
+                    <tbody>
+                      <tr class="--textRight">
+                        <th>Aries</th>
+                        <td>text text text text text text</td>
+                        <td><a href="#">text link text link</a></td>
+                        <td>text text</td>
+                      </tr>
+                      <tr class="--textRight">
+                        <th>Taurus</th>
+                        <td>text text</td>
+                        <td>Long text Long text Long text Long textLong text Long text</td>
+                        <td>text text</td>
+                      </tr>
+                      <tr class="--textRight">
+                        <th>Gemini</th>
+                        <td>text text</td>
+                        <td>text text</td>
+                        <td>text text</td>
+                      </tr>
+                      <tr class="--textRight">
+                        <th>Cancer</th>
+                        <td>text text</td>
+                        <td>text text</td>
+                        <td>text text</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="c-tableArea">
+                <h4 class="c-heading --h4">Table Type B (Heading Top)</h4>
+                <div class="c-tableWrap">
+                  <table class="c-table headTop">
+                    <tbody>
+                      <tr>
+                        <th>Aries</th>
+                        <th>Taurus</th>
+                        <th>Gemini</th>
+                        <th>Cancer</th>
+                      </tr>
+                      <tr>
+                        <td>text text</td>
+                        <td>text text text text</td>
+                        <td>Long text Long text Long text Long textLong text Long text</td>
+                        <td>text text</td>
+                      </tr>
+                      <tr>
+                        <td>text text</td>
+                        <td>text text</td>
+                        <td>text text</td>
+                        <td>text text text text</td>
+                      </tr>
+                      <tr>
+                        <td>text text</td>
+                        <td>text text text text</td>
+                        <td>text text</td>
+                        <td>text text</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="c-tableArea">
+                <h4 class="c-heading --h4">Table Type B (Heading Top + text center)</h4>
+                <div class="c-tableWrap">
+                  <table class="c-table headTop">
+                    <tbody>
+                      <tr class="--textCenter">
+                        <th>Aries</th>
+                        <th>Taurus</th>
+                        <th>Gemini</th>
+                        <th>Cancer</th>
+                      </tr>
+                      <tr class="--textCenter">
+                        <td>text text</td>
+                        <td>text text text text</td>
+                        <td>Long text Long text Long text Long textLong text Long text</td>
+                        <td>text text</td>
+                      </tr>
+                      <tr class="--textCenter">
+                        <td>text text</td>
+                        <td>text text</td>
+                        <td>text text</td>
+                        <td>text text text text</td>
+                      </tr>
+                      <tr class="--textCenter">
+                        <td>text text</td>
+                        <td>text text text text</td>
+                        <td>text text</td>
+                        <td>text text</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="c-tableArea">
+                <h4 class="c-heading --h4">Table Type B (Heading Top + text right)</h4>
+                <div class="c-tableWrap">
+                  <table class="c-table headTop">
+                    <tbody>
+                      <tr class="--textRight">
+                        <th>Aries</th>
+                        <th>Taurus</th>
+                        <th>Gemini</th>
+                        <th>Cancer</th>
+                      </tr>
+                      <tr class="--textRight">
+                        <td>text text</td>
+                        <td>text text text text</td>
+                        <td>Long text Long text Long text Long textLong text Long text</td>
+                        <td>text text</td>
+                      </tr>
+                      <tr class="--textRight">
+                        <td>text text</td>
+                        <td>text text</td>
+                        <td>text text</td>
+                        <td>text text text text</td>
+                      </tr>
+                      <tr class="--textRight">
+                        <td>text text</td>
+                        <td>text text text text</td>
+                        <td>text text</td>
+                        <td>text text</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="c-section">
+            <div class="c-contentsWrap">
+              <h2 class="c-heading --h2">Title h2</h2>
+              <div class="c-textArea">
+                <p class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergrenLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+                <div class="c-btnWrap left">
+                  <a href="#" class="p-contact__submitBtn c-btn">WEB SITE</a>
+                </div>
+                <div class="c-btnWrap center">
+                  <a href="#" class="p-contact__submitBtn c-btn">WEB SITE</a>
+                </div>
+                <div class="c-btnWrap right">
+                  <a href="#" class="p-contact__submitBtn c-btn">WEB SITE</a>
+                </div>
+                <p class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergrenLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren</p>
+              </div>
+              <div class="c-textArea">
+                <div class="c-articleLinkArea">
+                  <div class="c-articleLinkWrap back">
+                    <div class="c-articleLink back">
+                      <a href="#">
+                        <span>Back Link</span>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="c-articleLinkWrap next">
+                    <div class="c-articleLink next">
+                      <a href="#">
+                        <span>Next Link</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-textArea">
+                <p class="c-text center">TEXT CENTER Lorem ipsum dolor sit amet, consetetur sadipscing elitr,</p>
+                <p class="c-text right">TEXT RIGHT Lorem ipsum dolor sit amet</p>
+              </div>
+              <div class="c-textArea">
+                <p class="c-text"><strong>FONT BOLD ALL Lorem ipsum dolor sit amet, consetetur sadipscing elitr</strong></p>
+                <p class="c-text">Lorem ipsum <strong>FONT BOLD POINT</strong> sadipscing elitr</p>
+              </div>
+            </div>
+          </section>
+          <section class="c-section">
+            <div class="c-contentsWrap">
+              <h2 class="c-heading --h2">Titles and sentence</h2>
+              <div class="c-rangeListArea">
+                <dl>
+                  <dt>Lorem ipsum</dt>
+                  <dd class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing</dd>
+                </dl>
+                <dl>
+                  <dt>Lorem ipsum</dt>
+                  <dd class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing</dd>
+                </dl>
+                <dl>
+                  <dt>Lorem ipsum</dt>
+                  <dd class="c-text">Lorem ipsum dolor sit amet, <a href="#">consetetur sadipscing elitr, seddia</a> mnonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</dd>
+                </dl>
+                <dl>
+                  <dt>Lorem ipsum</dt>
+                  <dd class="c-text">Lorem ipsum dolor sit</dd>
+                </dl>
+              </div>
+              <div class="c-info__border"></div>
+            </div>
+          </section>
+          <section class="c-section">
+            <div class="c-contentsWrap">
+              <h2 class="c-heading --h2">Titles and sentence(No scroll)</h2>
+              <div class="c-rangeListArea no-scroll">
+                <dl>
+                  <dt>Lorem ipsum</dt>
+                  <dd class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing</dd>
+                </dl>
+                <dl>
+                  <dt>Lorem ipsum</dt>
+                  <dd class="c-text">Lorem ipsum dolor sit amet, consetetur sadipscing</dd>
+                </dl>
+                <dl>
+                  <dt>Lorem ipsum</dt>
+                  <dd class="c-text">Lorem ipsum dolor sit amet, <a href="#">consetetur sadipscing elitr, seddia</a> mnonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam</dd>
+                </dl>
+                <dl>
+                  <dt>Lorem ipsum</dt>
+                  <dd class="c-text">Lorem ipsum dolor sit</dd>
+                </dl>
+              </div>
+            </div>
+          </section>
+        </div>
+        <%- include('../include/common/_scrollTop.ejs', {data: data}); %>  
+      </main>
+      <%- include('../include/_footer.ejs', {data: data}); %>  
+    </div>
+    <%- include('../include/_script.ejs', {data: data}); %>
+  </body>
+</html>

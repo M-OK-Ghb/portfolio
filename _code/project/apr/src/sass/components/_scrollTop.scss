@@ -1,0 +1,51 @@
+// -------------------------------------------------------------------
+// 	scrollTop.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-scrollTop {
+  display: block;
+  position: fixed;
+  z-index: 3;
+  right: 80px;
+  bottom: 70px;
+  > button {
+    width: 50px;
+    display: block;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+  @include med.mq-max('1140px') {
+    display: none;
+  }
+}
+
+.c-scrollTop--sp {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  right: 5vw;
+  bottom: 10vh;
+
+  > button {
+    width: 7.65vw;
+    max-width: 36px;
+    display: block;
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  @include med.mq-max('1140px') {
+    display: block;
+  }
+}

@@ -1,0 +1,82 @@
+// -------------------------------------------------------------------
+// 	rangeList.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-rangeListArea {
+  max-height: 300px;
+  overflow-y: scroll;
+
+  &.no-scroll {
+    max-height: none;
+    overflow-y: visible;
+  }
+
+  @include med.media(sp) {
+    max-height: 72vw;
+  }
+
+  &::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 2px;
+  }
+
+  > dl {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include med.media(sp) {
+      display: block;
+    }
+
+    dt {
+      flex-basis: 120px;
+      font-family: var.$FUTURE_M;
+      font-size: 15px;
+      letter-spacing: 2.25px;
+      line-height: 1.9;
+
+      @include med.media(sp) {
+        font-size: 4.5vw;
+        line-height: 1;
+        margin-bottom: 4vw;
+      }
+    }
+    
+    dd {
+      flex-basis: 580px;
+      padding-right: 12px;
+
+      a {
+        text-decoration: underline;
+        &:hover {
+          transition: opacity 0.3s;
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &.variable {
+    > dl {
+      dt {
+        flex-basis: auto;
+      }
+      
+      dd {
+        flex-basis: 550px;
+      }
+    }
+  }
+}

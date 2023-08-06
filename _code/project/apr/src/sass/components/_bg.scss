@@ -1,0 +1,19 @@
+// -------------------------------------------------------------------
+// 	bg.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-bg {
+  &::before {
+    content: "";
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:-1;
+    width:100vw;
+    height:100vh;
+    background-image: url('../images/common/body_bg.webp');
+    background-size: 100vw 100vh;
+  }
+}

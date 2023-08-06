@@ -1,0 +1,19 @@
+<%
+  const data = {
+    title: "",
+    description: "",
+    path: "../",
+    commonImgPath: "../images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/_head.ejs', {data: data}); %>
+  <body>
+    <div>
+      <h1>配下ページテンプレート</h1>
+    </div>
+    <%- include('../include/_script.ejs', {data: data}); %>
+  </body>
+</html>

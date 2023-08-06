@@ -1,0 +1,118 @@
+// -------------------------------------------------------------------
+//  contact.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.p-contact {
+  &__note {
+    width: 100px;
+    @include med.media(sp) {
+      width: 22vw;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__itemWrap {
+    margin-top: 20px;
+    @include med.media(sp) {
+      margin-top: 8vw;
+    }
+  }
+
+  &__item {
+    margin-bottom: 60px;
+    @include med.media(sp) {
+      margin-bottom: 12vw;
+    }
+
+    > dt {
+      font-family: var.$FUTURE_M;
+      font-size: 25px;
+      margin-bottom: 10px;
+
+      @include med.media(sp) {
+        font-size: 5.06vw;
+        margin-bottom: 2.65vw;
+      }
+    }
+
+    > dd {
+      width: 100%;
+
+      input, textarea {
+        background-color:  #FAFAFA;
+        border: 1px solid #B1B1B1;
+        font-family: var.$HelveticaNeue_M;
+        font-size: 16px;
+        letter-spacing: 1.6px;
+        width: 100%;
+        @include med.media(sp) {
+          font-size: 4.27vw;
+        }
+      }
+
+      input {
+        padding: 0 10px;
+        min-height: 30px;
+
+        @include med.media(sp) {
+          min-height: 8vw;
+        }
+      }
+
+      textarea {
+        padding: 10px;
+        resize: none;
+        min-height: 160px;
+        @include med.media(sp) {
+          padding: 3.2vw;
+          min-height: 54.65vw;
+        }
+      }
+    }
+  }
+
+  &__requiredCategory {
+    &::after {
+      content: "✴︎";
+      color: #f50000;
+      font-size: 12px;
+      vertical-align: top;
+      padding-left: 4px;
+      display: inline-block;
+    }
+  }
+}
+
+/*contact form 調整*/
+/*必須項目み入力時テキスト*/
+.wpcf7-not-valid-tip {
+  font-family: var.$HelveticaNeue_M;
+  color: #f50000 !important;
+  font-size: 16px !important;
+  letter-spacing: 1.6px !important;
+  margin-top: 12px;
+  @include med.media(sp) {
+    font-size: 4.27vw !important;
+  }
+}
+
+.wpcf7-response-output {
+  font-family: var.$HelveticaNeue_M;
+  border: none!important;
+  text-align: center;
+  color: #f50000;
+  font-size: 18px;
+  @include med.media(sp) {
+    font-size: 4.8vw;
+    text-align: left;
+  }
+}
+/* 送信ボタン下完了時 */
+.wpcf7 form.sent .wpcf7-response-output {
+  color: #000;
+}

@@ -1,0 +1,124 @@
+// -------------------------------------------------------------------
+// 	info.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-info {
+  &__list {
+    position: relative;
+    max-height: 200px;
+    overflow-y: scroll;
+
+    @include med.media(sp) {
+      max-height:65vw;
+    }
+
+    > li {
+      margin-bottom: 20px;
+
+      @include med.media(sp) {
+        margin-bottom: 5.33vw;
+      }
+
+      a {
+        &:hover {
+          transition: opacity 0.3s;
+          opacity: 0.7;
+        }
+
+        .c-info__title {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    &::-webkit-scrollbar {
+      width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: rgba(255,255,255,0.5);
+      border-radius: 2px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: #000;
+      border-radius: 2px;
+    }
+  }
+
+  &__item {
+    display: block;
+  }
+
+  &__itemInner {
+    display: flex;
+    justify-content: space-between;
+    @include med.media(sp) {
+      display: block;
+    }
+  }
+
+  &__date {
+    display: inline-block;
+    font-family: var.$HelveticaNeue_M;
+    font-size: 16px;
+    line-height: 1.3;
+    @include med.media(sp) {
+      width: 100%;
+      font-size: 4vw;
+      line-height: 1;
+      margin-bottom: 4vw;
+    }
+  }
+
+  &__title {
+    font-size: 15px;
+    font-family: var.$HelveticaNeue_L;
+    line-height: 1.6;
+    letter-spacing: 2.4px;
+    display: inline-block;
+    width: 590px;
+    padding-right: 30px;
+    @include med.media(sp) {
+      width: 100%;
+      line-height: 1.5;
+      font-size: 3.73vw;
+      letter-spacing: 0.6vw;
+      padding-right: 5.33vw;
+    }
+  }
+
+  &__border {
+    position: relative;
+    background: #000;
+    opacity: 0.9;
+    width: 100%;
+    height: 1px;
+    margin-top: 40px;
+    @include med.media(sp) {
+      margin-top: 8vw;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../images/common/info_arrow_bottom.svg);
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      width: 60px;
+      height: 10px;
+      top: -30px;
+      left: 0;
+      right: 0;
+      margin: auto;
+
+      @include med.media(sp) {
+        width: 13.35vw;
+        height: 2.225vw;
+        top: -4.225vw;
+      }
+    }
+  }
+}

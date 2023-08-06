@@ -1,0 +1,38 @@
+// -------------------------------------------------------------------
+//  sponsors.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+.c-heading:lang(ja) {
+  font-family: var.$BIZUDGothic_B;
+  line-height: 1.5;
+}
+.c-text:lang(ja) {
+  font-weight: normal;
+  letter-spacing: 1px;
+  font-family: var.$BIZUDGothic_R;
+  strong {
+    font-family: var.$BIZUDGothic_B;
+  }
+}
+.c-list__firstText:lang(ja) {
+  font-family: var.$BIZUDGothic_R;
+}
+.c-list__node:lang(ja) {
+  font-family: var.$BIZUDGothic_R;
+}
+.c-table tr td:lang(ja) {
+  font-family: var.$BIZUDGothic_R;
+}
+.c-table tr th:lang(ja) {
+  font-family: var.$BIZUDGothic_B;
+}
+.c-btn:lang(ja) {
+  font-family: var.$BIZUDGothic_R;
+}
+.c-articleLink > a:lang(ja) {
+  font-family: var.$BIZUDGothic_R;
+}
+.c-rangeListArea > dl dt:lang(ja) {
+  font-family: var.$BIZUDGothic_B;
+}

@@ -1,0 +1,93 @@
+// -------------------------------------------------------------------
+// 	text.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+
+.c-text {
+  font-family: var.$HelveticaNeue_L;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 2;
+  letter-spacing: 2.25px;
+  @include med.media(sp) {
+    font-size: 3.74vw;
+    line-height: 1.9;
+    letter-spacing: 0.56vw;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.right {
+    text-align: right;
+  }
+
+  strong {
+    font-family: var.$HelveticaNeue_M;
+  }
+
+  &.longList {
+    > p {
+      margin-bottom: 20px;
+      @include med.media(sp) {
+        margin-bottom: 5.33vw;
+      }
+    }
+  }
+}
+
+.c-textList {
+  > li {
+    margin-bottom: 50px;
+
+    @include med.media(sp) {
+      margin-bottom: 14.65vw;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.c-textArea {
+  padding-bottom: 50px;
+  &.singleTop {
+    padding-bottom: 0; 
+    @include med.media(sp) {
+      padding-bottom: 0; 
+    }
+  }
+
+  @include med.media(sp) {
+    padding-bottom: 14.65vw;
+  }
+
+  > p {
+    margin-bottom: 50px;
+    @include med.media(sp) {
+      margin-bottom: 14.65vw;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    a {
+      text-decoration: underline;
+      &:hover {
+        transition: opacity 0.3s;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  iframe {
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+}

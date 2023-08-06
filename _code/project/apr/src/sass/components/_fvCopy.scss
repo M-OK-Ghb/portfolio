@@ -1,0 +1,45 @@
+// -------------------------------------------------------------------
+//  fvCopy.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-fvCopy {
+  font-family: var.$HelveticaNeue_L;
+  font-size: 12px;
+  letter-spacing: 1.7px;
+  text-shadow: 0px 0px 8px rgba(255,255,255,0.9);
+  color: #CCC;
+  position: absolute;
+  z-index: 5;
+  left: 5.8%;
+  pointer-events: none;
+
+  @include med.media(sp) {
+    line-height: 1.5;
+    font-size: 3vw;
+    transform: scale(0.9);
+  }
+
+  &.top {
+    bottom: 10.4vh;
+    @include med.media(sp) {
+      bottom: 3vh;
+    }
+  }
+
+  &.sub {
+    bottom: 12.5vh;
+    @include med.media(sp) {
+      bottom: 10vh;
+    }
+  }
+
+  > span {
+    font-size: 10px;
+    letter-spacing: 1.2px;  
+    @include med.media(sp) {
+      font-size: 2.65vw;
+    }
+  }
+}

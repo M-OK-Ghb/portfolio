@@ -1,0 +1,31 @@
+// -------------------------------------------------------------------
+//  footer.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.l-footer {
+  background-color: #000;
+  height: 50px;
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include med.media(sp) {
+    margin-top: 40vw;
+    height: 13.3vw;
+  }
+
+  &__copyright {
+    text-align: center;
+    font-family: var.$HelveticaNeue_L;
+    font-size: 10px;
+    color: #FFF;
+    letter-spacing: 1.8px;
+    line-height: 1.5;
+    @include med.media(sp) {
+      font-size: 2.7vw;
+    }
+  }
+}

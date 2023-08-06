@@ -1,0 +1,18 @@
+// -------------------------------------------------------------------
+// 	bgBlur.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-bgBlurWrap {
+  position: relative;
+  z-index: 5;
+}
+
+.c-bgBlur {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  height: 70px;
+  background: linear-gradient(to bottom,#111,rgba(0,0,0,0));
+}

@@ -1,0 +1,27 @@
+// -------------------------------------------------------------------
+//  structure.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+html, body {
+  height: 100%;  
+}
+
+body {
+  font-family: var.$BASE_FONT_FAMILY;
+  color: var.$BASE_TEXT_COLOR;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+
+  &.is-open {
+    overflow-y: hidden;
+  }
+}
+
+@include med.media(sp) {
+  body {
+    overflow-x: hidden;
+  }
+}

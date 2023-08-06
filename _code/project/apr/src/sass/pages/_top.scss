@@ -1,0 +1,212 @@
+// -------------------------------------------------------------------
+//  top.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.p-top {
+  &__logoArea {
+    width: 35%;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+
+    > img {
+      width: 100%;
+      transition: opacity 0.5s, transform 0.5s;
+      opacity: 0;
+      transform: translateY(20px);
+      &.is-show {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    > p {
+      opacity: 0;
+      color: #FFF;
+      text-align: center;
+      font-family: var.$FUTURE_M;
+      font-size: 35px;
+      letter-spacing: 3.5px;
+      margin-top: 16px;
+      transform: translateY(40px);
+      @include med.media(sp) {
+        font-size: 5.3vw;
+        letter-spacing: 0.53vw;
+        margin-top: 2vw;
+      }
+
+      &.is-show {
+        transition: opacity 0.5s 0.3s, transform 0.5s 0.1s;
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @include med.media(sp) {
+      width: 72%;
+    }
+  }
+
+  &__fvCopy {
+    font-family: var.$HelveticaNeue_L;
+    font-size: 12px;
+    letter-spacing: 1.7px;
+    text-shadow: 0px 0px 8px rgba(255,255,255,0.9);
+    color: #CCC;
+    position: absolute;
+    z-index: 5;
+    left: 5.8%;
+    bottom: 10.4vh;
+
+    > span {
+      font-size: 10px;
+      letter-spacing: 1.2px;
+      @include med.media(sp) {
+        font-size: 2.65vw;
+      }
+    }
+
+    @include med.media(sp) {
+      bottom: 3vh;
+      line-height: 1.5;
+      font-size: 3vw;
+      transform: scale(0.9);
+    }
+  }
+
+  &__fvImg {
+    width: 100%;
+    height: 100vh;
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+  }
+
+  &__fvScroll {
+    position: absolute;
+    text-align: center;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: -5vh;
+
+    @include med.media(sp) {
+      bottom: -10vh;
+    }
+  }
+
+  &__fvScrollText {
+    font-family: var.$HelveticaNeue_M;
+    font-size: max(1.02vw, 14px);
+    line-height: 1;
+    letter-spacing: 1.9px;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgb(255 255 255 / 80%);
+    position: relative;
+    z-index: 5;
+    color: #FFF;
+    @include med.media(sp) {
+      font-size: 3vw;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__bgAnimationWrap {
+    position: relative;
+  }
+
+  &__bgBlur {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    &.fvBottom {
+      opacity: 1;
+      top: -20vh;
+      height: 30vh;
+      background: linear-gradient(to top,#000,rgba(0,0,0,0));
+      @include med.media(sp) {
+        top: -40vh;
+        height: 60vh;
+      }
+    }
+
+    &.contentsTop {
+      opacity: 1;
+      top: 4vh;
+      height: 20vh;
+      background: linear-gradient(to bottom,#000,rgba(0,0,0,0));
+      @include med.media(sp) {
+        top: 8vh;
+      }
+    }
+  }
+
+  &__fvScrollImg {
+    width: 100%;
+    position: relative;
+    z-index: 3;
+    display: inline-block;
+    overflow: hidden;
+    background: #000;
+
+    > img {
+      opacity: 1;
+      width: 2vw;
+      min-width: 24px;
+      @include med.media(sp) {
+        width: 8vw;
+      }
+    }
+
+    &::before {
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      perspective: 1000;
+      background: #000;
+      width: 2vw;
+      min-width: 24px;
+      height: 7.75vw;
+      min-height: 93px;
+      opacity: 0.5;
+      content: '';
+      position: absolute;
+      animation: starsFadeIn 2s infinite;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      pointer-events: none;
+      @include med.media(sp) {
+        width: 8vw;
+        height: 30vw;
+      }
+    }
+  }
+
+  &__contentsWrap {
+    position: relative;
+    padding-top: 30vh;
+    @include med.media(sp) {
+      padding-top: 40vh;
+    }
+  }
+}
+
+@keyframes starsFadeIn {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(100%);
+  }
+}

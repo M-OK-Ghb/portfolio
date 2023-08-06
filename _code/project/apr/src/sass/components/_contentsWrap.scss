@@ -1,0 +1,44 @@
+// -------------------------------------------------------------------
+// 	contentsWrap.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-contentsWrap {
+  position: relative;
+  background: #FDFDFD;
+  padding: 100px;
+
+  &.rightShort {
+    padding-right: 80px;
+    @include med.media(sp) {
+      padding-right: 3%;
+    }
+  }
+
+  @include med.media(sp) {
+    padding: 14.65vw 6%;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background-color: #000;
+    position: absolute;
+    width: 10px;
+    height:  1.5px;
+    right: 80px;
+    bottom: 10px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    background-color: #000;
+    position: absolute;
+    width: 70px;
+    height:  1.5px;
+    right: 0;
+    bottom: 10px;
+  }
+}

@@ -1,0 +1,43 @@
+@charset "UTF-8";
+// -------------------------------------------------------------------
+//  style.scss
+// -------------------------------------------------------------------
+
+// Base
+// -------------------------------------------------------------------
+@use "base/normalize";
+@use "base/destyle";
+@use "base/structure";
+@use "base/state";
+
+// Components
+// -------------------------------------------------------------------
+@use "components/bg";
+@use "components/bgBlur";
+@use "components/section";
+@use "components/contentsWrap";
+@use "components/heading";
+@use "components/text";
+@use "components/info";
+@use "components/fvCopy";
+@use "components/scrollTop";
+@use "components/imgWrap";
+@use "components/table";
+@use "components/button";
+@use "components/articleLink";
+@use "components/rangeList";
+@use "components/list";
+
+// Layout
+// -------------------------------------------------------------------
+@use "layout/header";
+@use "layout/footer";
+
+// Pages
+// -------------------------------------------------------------------
+@use "pages/top";
+@use "pages/sub";
+@use "pages/sponsors";
+@use "pages/contact";
+@use "pages/jp-detail";
+

@@ -1,0 +1,491 @@
+<%
+  const data = {
+    title: "",
+    description: "",
+    path: "../",
+    commonImgPath: "../images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/_head.ejs', {data: data}); %>
+  <body id="js-top-body">
+    <div class="p-top__container c-bg">
+      <%- include('../include/_header.ejs', {data: data}); %>
+      <main class="l-main">
+        <div class="c-bgBlurWrap js-logoShow-target">
+          <div class="c-bgBlur"></div>
+          <div class="p-sub__fvImg">
+            <img src="<%= data.commonImgPath %>/main_visual_sub.webp" alt="key visual subPage">
+          </div>
+          <div class="p-sub__logoArea">
+            <img src="<%= data.commonImgPath %>/logo_white.png" alt="APRIM Logo" loading="eager">
+            <p>Aug.07-11.2023</p>
+          </div>
+          <p class="c-fvCopy sub"><span>Starscape photo:</span><br class="is-sp"> Yasuhiko ENDO</p>
+        </div>
+        <div class="p-sub__contentsWrap">
+          <section class="c-section">
+            <div class="c-headingWrap --h1">
+              <h1 class="c-heading --h1">
+                <span class="c-heading__text">日本語配下ページ</span>
+              </h1>
+              <div class="c-heading__lineArea">
+                <div class="c-heading__lineWrap js-heading-line">
+                  <span class="c-heading__line first"></span>
+                  <span class="c-heading__line second"></span>
+                  <span class="c-heading__line third"></span>
+                </div>
+              </div>
+            </div>
+            <div class="c-contentsWrap">
+              <div class="c-textArea">
+                <h2 class="c-heading --h2">h2タイトルが入ります。</h2>
+                <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<a href="#">テキストが入ります。</a>、テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              </div>
+              <div class="c-textArea">
+                <h3 class="c-heading --h3">h3タイトルが入ります。</h3>
+                <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              </div>
+              <div class="c-textArea">
+                <h4 class="c-heading --h4">h4タイトルが入ります。</h4>
+                <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              </div>
+            </div>
+          </section>
+          <section class="c-section">
+            <div class="c-contentsWrap">
+              <h2 class="c-heading --h2">リスト</h2>
+              <div class="c-listWrap">
+                <ul class="c-list js-list">
+                  <li>
+                    <div class="c-list__firstLine">
+                      <span class="c-list__firstText">タイトル：1</span>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="c-list__firstLine">
+                      <span class="c-list__firstText">タイトル：1</span>
+                      <span class="c-list__trigger js-list-second-trigger">
+                        <img src="<%= data.commonImgPath %>/list_trigger_icon.svg" alt="↓">
+                      </span>
+                    </div>
+                    <ul class="c-list__second js-list-second">
+                      <li>
+                        <div class="c-list__secondLine">
+                          <span class="c-list__secondText">タイトル：2</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="c-list__secondLine">
+                          <span class="c-list__secondText">タイトル：2</span>
+                          <span class="c-list__trigger js-list-third-trigger">
+                            <img src="<%= data.commonImgPath %>/list_trigger_icon.svg" alt="↓">
+                          </span>
+                        </div>
+                        <ul class="c-list__third js-list-third">
+                          <li>
+                            <span class="c-list__thirdText">タイトル：3</span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="c-list__secondLine">
+                          <span class="c-list__secondText">タイトル：2</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div class="c-list__firstLine">
+                      <span class="c-list__firstText">タイトル：1</span>
+                      <span class="c-list__trigger js-list-second-trigger">
+                        <img src="<%= data.commonImgPath %>/list_trigger_icon.svg" alt="↓">
+                      </span>
+                    </div>
+                    <ul class="c-list__second js-list-second">
+                      <li>
+                        <div class="c-list__secondLine">
+                          <span class="c-list__secondText">タイトル：2</span>
+                          <span class="c-list__trigger js-list-third-trigger">
+                            <img src="<%= data.commonImgPath %>/list_trigger_icon.svg" alt="↓">
+                          </span>
+                        </div>
+                        <ul class="c-list__third js-list-third">
+                          <li>
+                            <span class="c-list__thirdText">タイトル：3</span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="c-list__secondLine">
+                          <span class="c-list__secondText">タイトル：2</span>
+                          <span class="c-list__trigger js-list-third-trigger">
+                            <img src="<%= data.commonImgPath %>/list_trigger_icon.svg" alt="↓">
+                          </span>
+                        </div>
+                        <ul class="c-list__third js-list-third">
+                          <li>
+                            <span class="c-list__thirdText">タイトル：3</span>
+                          </li>
+                          <li>
+                            <span class="c-list__thirdText">タイトル：3</span>
+                          </li>
+                          <li>
+                            <span class="c-list__thirdText">タイトル：3</span>
+                          </li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div class="c-list__secondLine">
+                          <span class="c-list__secondText">タイトル：2</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="c-list__node --discBlack">
+                  <li>リスト：1</li>
+                  <li>リスト：2</li>
+                  <li>リスト：3</li>
+                </ul>
+                <ul class="c-list__node --discWhite">
+                  <li>リスト：1</li>
+                  <li>リスト：2</li>
+                  <li>リスト：3</li>
+                </ul>
+                <ul class="c-list__node --number">
+                  <li>リスト：1</li>
+                  <li>リスト：2</li>
+                  <li>リスト：3</li>
+                </ul>
+                <ul class="c-list__node --discBlack">
+                  <li>リスト：1
+                    <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                  </li>
+                  <li>リスト：2
+                    <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                  </li>
+                  <li>リスト：3
+                    <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                  </li>
+                </ul>
+                <ul class="c-list__node --discWhite">
+                  <li>リスト：1
+                    <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                  </li>
+                  <li>リスト：2
+                    <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                  </li>
+                  <li>リスト：3
+                    <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                  </li>
+                </ul>
+                <ul class="c-list__node --number">
+                  <li>リスト：1
+                    <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                  </li>
+                  <li>リスト：2
+                    <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                  </li>
+                  <li>リスト：3
+                    <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                  </li>
+                </ul>
+                <ul class="c-list__node --discBlack --parent">
+                  <li>リスト：1
+                    <ul class="c-list__node --discBlack --child">
+                      <li>リスト：1</li>
+                      <li>リスト：2</li>
+                      <li>リスト：2</li>
+                    </ul>
+                  </li>
+                  <li>リスト：2
+                    <ul class="c-list__node --discWhite --child">
+                      <li>リスト：1</li>
+                      <li>リスト：2</li>
+                      <li>リスト：2</li>
+                    </ul>
+                  </li>
+                  <li>リスト：3
+                    <ul class="c-list__node --number --child">
+                      <li>リスト：1</li>
+                      <li>リスト：2</li>
+                      <li>リスト：2</li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="c-list__node --discWhite --parent">
+                  <li>リスト：1
+                    <ul class="c-list__node --discBlack --child">
+                      <li>リスト：1</li>
+                      <li>リスト：2</li>
+                      <li>リスト：2</li>
+                    </ul>
+                  </li>
+                  <li>リスト：2
+                    <ul class="c-list__node --discWhite --child">
+                      <li>リスト：1</li>
+                      <li>リスト：2</li>
+                      <li>リスト：2</li>
+                    </ul>
+                  </li>
+                  <li>リスト：3
+                    <ul class="c-list__node --number --child">
+                      <li>リスト：1</li>
+                      <li>リスト：2</li>
+                      <li>リスト：2</li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul class="c-list__node --number --parent">
+                  <li>リスト：1
+                    <ul class="c-list__node --discBlack --child">
+                      <li>リスト：1</li>
+                      <li>リスト：2</li>
+                      <li>リスト：2</li>
+                    </ul>
+                  </li>
+                  <li>リスト：2
+                    <ul class="c-list__node --discWhite --child">
+                      <li>リスト：1</li>
+                      <li>リスト：2</li>
+                      <li>リスト：2</li>
+                    </ul>
+                  </li>
+                  <li>リスト：3
+                    <ul class="c-list__node --number --child">
+                      <li>リスト：1</li>
+                      <li>リスト：2</li>
+                      <li>リスト：2</li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="c-section">
+            <div class="c-contentsWrap">
+              <h2 class="c-heading --h2">Night Picture in Koriyama</h2>
+              <div class="c-imgWrap --single">
+                <img src="https://devaprim2023.jpn.org/wp-content/uploads/2022/08/parts_dummy.png" alt="dummy Img">
+                <span>:キャプションが入ります。</span>
+              </div>
+              <ul class="c-imgWrap --twoClm">
+                <li>
+                  <img src="https://devaprim2023.jpn.org/wp-content/uploads/2022/08/parts_dummy.png" alt="dummy">
+                  <span>:キャプションが入ります。</span>
+                </li>
+                <li>
+                  <img src="https://devaprim2023.jpn.org/wp-content/uploads/2022/08/parts_dummy.png" alt="dummy">
+                  <span>:キャプションが入ります。</span>
+                </li>
+              </ul>
+              <ul class="c-imgWrap --threeClm">
+                <li>
+                  <img src="https://devaprim2023.jpn.org/wp-content/uploads/2022/08/parts_dummy.png" alt="dummy">
+                  <span>:キャプションが入ります。</span>
+                </li>
+                <li>
+                  <img src="https://devaprim2023.jpn.org/wp-content/uploads/2022/08/parts_dummy.png" alt="dummy">
+                  <span>:キャプションが入ります。</span>
+                </li>
+                <li>
+                  <img src="https://devaprim2023.jpn.org/wp-content/uploads/2022/08/parts_dummy.png" alt="dummy">
+                  <span>:キャプションが入ります。</span>
+                </li>
+              </ul>
+              <div class="c-imgWrap --single --andText">
+                <img src="https://devaprim2023.jpn.org/wp-content/uploads/2022/08/parts_dummy.png" alt="dummy Img">
+                <span>:キャプションが入ります。</span>
+                <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              </div>
+              <dl class="c-imgWrap --arrange">
+                <dt>
+                  <img src="https://devaprim2023.jpn.org/wp-content/uploads/2022/08/parts_dummy.png" alt="dummy Img">
+                  <span>:キャプションが入ります。</span>
+                </dt>
+                <dd>
+                  <span class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</span>
+                </dd>
+              </dl>
+            </div>
+          </section>
+          <section class="c-section">
+            <div class="c-contentsWrap">
+              <div class="c-tableArea">
+                <h4 class="c-heading --h4">テーブルA (左タイトル)</h4>
+                <div class="c-tableWrap">
+                  <table class="c-table headLeft">
+                    <tbody>
+                      <tr>
+                        <th>タイトル</th>
+                        <td>テキストが入ります。</td>
+                        <td><a href="#">テキストが入ります。テキストが入ります。</a></td>
+                        <td>テキストが入ります。</td>
+                      </tr>
+                      <tr>
+                        <th>タイトル</th>
+                        <td>テキストが入ります。</td>
+                        <td>テキストが入ります。テキストが入ります。</td>
+                        <td>テキストが入ります。</td>
+                      </tr>
+                      <tr>
+                        <th>タイトル</th>
+                        <td>テキストが入ります。</td>
+                        <td>テキストが入ります。テキストが入ります。</td>
+                        <td>テキストが入ります。</td>
+                      </tr>
+                      <tr>
+                        <th>タイトル</th>
+                        <td>テキストが入ります。</td>
+                        <td>テキストが入ります。テキストが入ります。</td>
+                        <td>テキストが入ります。</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="c-tableArea">
+                <h4 class="c-heading --h4">テーブルB (上タイトル)</h4>
+                <div class="c-tableWrap">
+                  <table class="c-table headTop">
+                    <tbody>
+                      <tr>
+                        <th>タイトル</th>
+                        <th>タイトル</th>
+                        <th>タイトル</th>
+                        <th>タイトル</th>
+                      </tr>
+                      <tr>
+                        <td>テキストが入ります。</td>
+                        <td>テキストが入ります。テキストが入ります。</td>
+                        <td>テキストが入ります。テキストが入ります。テキストが入ります。</td>
+                        <td>テキストが入ります。</td>
+                      </tr>
+                      <tr>
+                        <td>テキストが入ります。</td>
+                        <td>テキストが入ります。テキストが入ります。</td>
+                        <td>テキストが入ります。テキストが入ります。テキストが入ります。</td>
+                        <td>テキストが入ります。</td>
+                      </tr>
+                      <tr>
+                        <td>テキストが入ります。</td>
+                        <td>テキストが入ります。テキストが入ります。</td>
+                        <td>テキストが入ります。テキストが入ります。テキストが入ります。</td>
+                        <td>テキストが入ります。</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="c-section">
+            <div class="c-contentsWrap">
+              <h2 class="c-heading --h2">h2タイトルが入ります。</h2>
+              <div class="c-textArea">
+                <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                <div class="c-btnWrap left">
+                  <a href="#" class="p-contact__submitBtn c-btn">ウェブサイト</a>
+                </div>
+                <div class="c-btnWrap center">
+                  <a href="#" class="p-contact__submitBtn c-btn">ウェブサイト</a>
+                </div>
+                <div class="c-btnWrap right">
+                  <a href="#" class="p-contact__submitBtn c-btn">ウェブサイト</a>
+                </div>
+                <p class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              </div>
+              <div class="c-textArea">
+                <div class="c-articleLinkArea">
+                  <div class="c-articleLinkWrap back">
+                    <div class="c-articleLink back">
+                      <a href="#"><span>前に戻る</span></a>
+                    </div>
+                  </div>
+                  <div class="c-articleLinkWrap next">
+                    <div class="c-articleLink next">
+                      <a href="#"><span>次に進む</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-textArea">
+                <p class="c-text center">テキストが中央寄せで入ります。テキストが中央寄せで入ります。</p>
+                <p class="c-text right">テキストが右寄せで入ります。テキストが右寄せで入ります。テキストが右寄せで入ります。</p>
+              </div>
+              <div class="c-textArea">
+                <p class="c-text"><strong>テキストが太字で入ります。テキストが太字で入ります。</strong></p>
+                <p class="c-text">テキストが入ります。 <strong>テキスト太字</strong> テキストが入ります。</p>
+              </div>
+            </div>
+          </section>
+          <section class="c-section">
+            <div class="c-contentsWrap">
+              <h2 class="c-heading --h2">タイトルとリード（スクロールあり）</h2>
+              <div class="c-rangeListArea js-borderShowHide-point">
+                <dl>
+                  <dt>テキストが入ります</dt>
+                  <dd class="c-text">テキストが入ります。 テキストが入ります。 テキストが入ります。 </dd>
+                </dl>
+                <dl>
+                  <dt>テキストが入ります</dt>
+                  <dd class="c-text">テキストが入ります。 テキストが入ります。 テキストが入ります。 </dd>
+                </dl>
+                <dl>
+                  <dt>テキストが入ります</dt>
+                  <dd class="c-text">テキストが入ります。  <a href="#">リンクテキスト</a> テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 </dd>
+                </dl>
+                <dl>
+                  <dt>テキストが入ります</dt>
+                  <dd class="c-text">テキストが入ります。</dd>
+                </dl>
+              </div>
+              <div class="c-info__border js-info-border"></div>
+            </div>
+          </section>
+          
+          <section class="c-section">
+            <div class="c-contentsWrap">
+              <h2 class="c-heading --h2">タイトルとリード（スクロールなし）</h2>
+              <div class="c-rangeListArea no-scroll">
+                <dl>
+                  <dt>テキストが入ります</dt>
+                  <dd class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+                </dl>
+                <dl>
+                  <dt>テキストが入ります</dt>
+                  <dd class="c-text">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</dd>
+                </dl>
+                <dl>
+                  <dt>テキストが入ります</dt>
+                  <dd class="c-text">テキストが入ります。  <a href="#">リンクテキスト</a> テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 テキストが入ります。 </dd>
+                </dl>
+                <dl>
+                  <dt>テキストが入ります</dt>
+                  <dd class="c-text">テキストが入ります。テキストが入ります。</dd>
+                </dl>
+              <dl>
+                <dt>テキストが入ります</dt>
+              <dd class="c-text longList">
+                <p>名前１</p>
+                <p>名前２</p>
+                <p>名前３</p>
+                <p>名前４</p>
+              </dd>
+              </dl>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+      <%- include('../include/common/_scrollTop.ejs', {data: data}); %>  
+      <%- include('../include/_footer.ejs', {data: data}); %>  
+    </div>
+    <%- include('../include/_script.ejs', {data: data}); %>
+  </body>
+</html>

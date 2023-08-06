@@ -1,0 +1,15 @@
+// -------------------------------------------------------------------
+// 	section.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-section {
+  width: 920px;
+  margin: 0 auto 100px;
+
+  @include med.media(sp) {
+    width: 90%;
+    margin-bottom: 32vw;
+  }
+}
