@@ -1,0 +1,487 @@
+// -------------------------------------------------------------------
+//  top.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.p-top {
+  opacity: 0;
+  transition: opacity 0.5s;
+  overflow-y: hidden;
+  &::before {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  &.is-show {
+    opacity: 1;
+  }
+
+  &.is-bgSet {
+    &::before {
+      background-image: url(../images/top_bg.jpg); 
+    }
+  }
+
+  &__mv {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
+
+  &__mvCover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    background: rgba(0,0,0,0.3);
+  }
+
+  &__mvImg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    > img {
+      width: 110%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+      &.is-animation {
+        animation: bgZoom 10s cubic-bezier(0.61, 1, 0.88, 1) forwards;
+      }
+    }
+  }
+
+  &__mvMessage {
+    width: 60vw;
+    color: #fff;
+    background: rgb(18 27 57 / 50%);
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 1vh;
+    z-index: 2;
+
+    @include med.media(sp) {
+      width: 90vw;
+      margin: auto;
+    }
+
+    > h2 {
+      text-align: center;
+      font-family: var.$SAWARABI;
+      font-size: min(1.76vw, 26px);
+      line-height: 3;
+      @include med.media(sp) {
+        line-height: 1.4;
+        text-align: left;
+        font-size: 5.05vw;
+        padding-left: 8vw;
+        height: 18.5vh;
+        display: flex;
+        align-items: center;
+      }
+      @include med.media(tb) {
+        font-size: min(4.2vw, 34px);
+      }
+    }
+    > p {
+      font-size: min(1.1vw, 16px);
+      line-height: 1.65;
+      padding: 1.6vw 2.2vw;
+      @include med.media(sp) {
+        padding: 2vh 8vw;
+        font-size: 3.73vw;
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  &__mvLogo {
+    width: 24vw;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 2;
+    > img {
+      width: 100%;
+      @include med.media(sp) {
+        height: 61.5vh;
+        object-fit: contain;
+      }
+
+      @include med.media(tb) {
+        height: 54vh;
+      }
+    }
+
+    @include med.media(sp) {
+      width: 80vw;
+      top: 13.5vh;
+      left: 5vw;
+      right: 0;
+      margin: auto;
+    }
+
+    @include med.media(tb) {
+      width: 72vw;
+      top: 15vh;
+    }
+  }
+
+  &__fvSpace {
+    width: 100%;
+    background: rgba(255,255,255,0.8);
+    display: none;
+    @include med.media(sp) {
+      display: block;
+    }
+  }
+
+  // slide animation mv
+  &__slideTop {
+    display: flex;
+    overflow: hidden;
+    padding: 10px;
+    background: rgba(255,255,255,0.8);
+    @include med.media(sp) {
+      padding: 2.65vw 0;
+    }
+  }
+
+  &__slideItemWrap {
+    display: flex;
+    animation: slideTop 40s linear infinite; 
+    > li {
+      width: 30vw;
+      height: 16.875vw;
+      margin-right: 1vw;
+
+      @include med.media(sp) {
+        width: 66.5vw;
+        height: 37.4vw;
+        margin-right: 2.65vw;
+      }
+
+      > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__amberjack {
+    background: rgba(255,255,255,0.68);
+    backdrop-filter: blur(8px);
+    margin-top: 160px;
+    @include med.media(sp) {
+      margin-top: 26.65vw;
+    }
+  }
+  
+  &__amberjackInner {
+    width: 800px;
+    margin: auto;
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+    @include med.media(sp) {
+      width: 100%;
+      flex-wrap: wrap;
+      padding: 16vw 0;
+    }
+  }
+
+  &__amberjackLogo {
+    width: 240px;
+
+    @include med.media(sp) {
+      width: 64vw;
+      margin: 0 auto;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__amberjackText {
+    width: 490px;
+    margin-top: 24px;
+
+    @include med.media(sp) {
+      width: 78.65vw;
+      margin: 16vw auto 0;
+    }
+
+    > p {
+      font-size: 14px;
+      line-height: 2;
+      @include med.media(sp) {
+        font-size: 3.73vw;
+      }
+    }
+  }
+
+  &__btnWrap {
+    &.amberjack {
+      margin-top: 30px;
+      @include med.media(sp) {
+        display: flex;
+        justify-content: center;
+        margin-top: 10.65vw;
+      }
+    }
+
+    &.products {
+      margin-top: 60px;
+      display: flex;
+      justify-content: center;
+      @include med.media(sp) {
+        margin-top: 10.65vw;
+      }
+    }
+
+    &.info {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      @include med.media(sp) {
+        margin-top: 10.65vw;
+      }
+    }
+
+    &.history {
+      margin-top: 30px;
+      @include med.media(sp) {
+        display: flex;
+        justify-content: center;
+        margin-top: 10.65vw;
+      }
+    }
+  }
+
+  &__products {
+    margin-top: 160px;
+    padding: 120px 0;
+    background: rgba(255,255,255,0.85);
+    @include med.media(sp) {
+      margin-top: 26.65vw;
+      padding: 21.33vw 0;
+    }
+  }
+
+  &__productsInner {
+    width: 980px;
+    margin: auto;
+    @include med.media(sp) {
+      width: 90%;
+    }
+  }
+
+  &__productsText {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 15px;
+    line-height: 2;
+    @include med.media(sp) {
+      margin-top: 12vw;
+      font-size: 3.73vw;
+      text-align: left;
+    }
+  }
+
+  &__productsListWrap {
+    margin-top: 40px;
+    @include med.media(sp) {
+      margin-top: 12vw;
+      .c-productsList {
+        width: 100%;
+      }
+    }
+  }
+
+  &__info {
+    background: #F7F7F7;
+    padding: 120px 0;
+    @include med.media(sp) {
+      padding: 21.33vw 0;
+    }
+  }
+
+  &__infoInner {
+    width: 980px;
+    margin: auto;
+    @include med.media(sp) {
+      width: 90%;
+    }
+  }
+
+  &__infoArticleWrap {
+    margin-top: 25px;
+    @include med.media(sp) {
+      margin-top: 16vw;
+    }
+  }
+
+  &__history {
+    padding: 120px 0;
+    background: #fff;
+    @include med.media(sp) {
+      padding: 24vw 0 32vw;
+    }
+  }
+
+  &__historySlide {
+    margin-top: 28px;
+    display: flex;
+    overflow: hidden;
+    @include med.media(sp) {
+      margin-top: 10.65vw;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__historySlideList {
+    display: flex;
+    width: 50%;
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  &__slideItemWrap--history {
+    display: flex;
+    animation: slideTop 60s linear infinite; 
+
+    > li {
+      width: 50vw;
+      > img {
+        width: 100%;
+        height: auto;
+        @include med.media(sp) {
+          width: 100vw;
+        }
+      }
+      @include med.media(sp) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__historySlideText {
+    width: 50%;
+    background: rgba(255,255,255,0.68);
+    backdrop-filter: blur(8px);
+    z-index: 2;
+
+    @include med.media(sp) {
+      width: 90%;
+      padding: 0;
+      background: #fff;
+      backdrop-filter: none;
+      margin: 8vw auto 0;
+    }
+  }
+
+  &__historySlideInner {
+    width: 72.5%;
+    margin: auto;
+    margin-top: 10vw;
+    > p {
+      font-size: 15px;
+      line-height: 2;
+      @include med.media(sp) {
+        font-size: 3.73vw;
+      }
+    }
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  &__aboutGround {
+    margin-top: 120px;
+    @include med.media(sp) {
+      margin-top: 21.33vw;
+    }
+  }
+
+  &__aboutBottom {
+    width: 880px;
+    margin: 42px auto 0;
+    display: flex;
+    justify-content: space-between;
+    @include med.media(sp) {
+      width: 90.5%;
+      display: block;
+      margin-top: 10.65vw;
+    }
+  }
+
+  &__groundImg {
+    width: 250px;
+    @include med.media(sp) {
+      width: 75%;
+      margin: auto;
+    }
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__groundText {
+    width: 570px;
+    @include med.media(sp) {
+      width: 100%;
+      margin-top: 10.65vw;
+    }
+    > p {
+      font-size: 15px;
+      line-height: 2;
+      margin-top: 30px;
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @include med.media(sp) {
+        font-size: 3.73vw;
+        margin-top: 8vw;
+      }
+    }
+  }
+}
+
+@keyframes slideTop {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes bgZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.2);
+  }
+}

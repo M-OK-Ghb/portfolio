@@ -1,0 +1,89 @@
+<%
+  const meta = {
+    title: "お問合せ - 柿内水産",
+    description: "柿内水産のお問合せページです。鮮魚の卸売、加工品の販売など、個人・企業にかかわらずお気軽にお問合せください。",
+    path: "..",
+    pageName: "お問合せ",
+    pageNameEn: "inquiry",
+    hierarchy: "second"
+  }
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../_include/_head.ejs', {meta: meta}); %>
+
+<body>
+  <div>
+    <%- include('../_include/_header.ejs', {meta: meta}); %>
+    <main class="l-main">
+      <%- include('../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+      <div class="l-main__contentInner">
+        <%- include('../_include/parts/_subPageTopHeading.ejs', {meta: meta}); %>
+        <div class="p-inquiry">
+          <p class="p-inquiry__text">柿内水産有限会社のお問合せページです。鮮魚の卸売、加工品の販売など、個人・企業にかかわらずお気軽にお問合せください。</p>
+          <!--お問い合わせフォームはWorpdress組み込み時にcontactform7に組み込むため、調整はWP側で対応-->
+          <div class="p-inquiry__formArea">
+            <dl class="p-inquiry__formItem">
+              <dt>
+                <label for="Name">氏名<br class="is-pc"><span style="color:#dc3232;">(必須)</span></label>
+              </dt>
+              <dd>
+                <input type="text" id="Name" name="your-name">
+              </dd>
+            </dl>
+            <dl class="p-inquiry__formItem">
+              <dt>
+                <label for="mailAddress">メールアドレス<br class="is-pc"><span style="color:#dc3232;">(必須)</span></label>
+              </dt>
+              <dd>
+                <input type="text" id="mailAddress" name="your-email">
+              </dd>
+            </dl>
+            <dl class="p-inquiry__formItem">
+              <dt>
+                <label for="mailAddressConfirm">メールアドレス<br class="is-pc">確認用<br class="is-pc"><span style="color:#dc3232;">(必須)</span></label>
+              </dt>
+              <dd>
+                <input type="text" id="mailAddressConfirm" name="your-email_confirm">
+              </dd>
+            </dl>
+            <dl class="p-inquiry__formItem">
+              <dt>
+                <label for="Subject">件名<br class="is-pc">(任意)</label>
+              </dt>
+              <dd>
+                <input type="text" id="Subject" name="your-subject">
+              </dd>
+            </dl>
+            <dl class="p-inquiry__formItem">
+              <dt>
+                <label for="Tel">電話番号<br class="is-pc">(任意)</label>
+              </dt>
+              <dd>
+                <input type="text" id="Tel" name="your-tel">
+              </dd>
+            </dl>
+            <dl class="p-inquiry__formItem requests">
+              <dt>
+                <label for="Message">ご用件<br class="is-pc">(任意)</label>
+              </dt>
+              <dd>
+                <textarea id="Message" name="your-message" cols="40" rows="10"></textarea>
+              </dd>
+            </dl>
+          </div>
+          <div class="p-inquiry__submitWrap">
+            <div class="c-button--submitBtn">
+              <input type="submit" value="送信"></input>
+            </div>
+          </div>
+        </div>
+      </div>
+      <%- include('../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+    </main>
+    <%- include('../_include/_footer.ejs', {meta: meta}); %>
+  </div>
+  <%- include('../_include/_script.ejs', {meta: meta}); %>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<%
+  const btnData = {
+    size: 160
+  }
+%>
+
+<header class="l-header" id="js-header">
+  <h1 class="l-header__heading">
+    <a href="<%= meta.path %>/">
+      <img src="<%= meta.path %>/images/site_logo.svg" alt="三代目 柿内水産" loading="eager">
+    </a>
+  </h1>
+  <nav class="l-header__nav" id="js-global-menu">
+    <ul class="l-header__globalMenu">
+      <li>
+        <% if(meta.current === 'amberjack') { %>
+        <a id="js-link-amberjack" class="is-current" href="<%= meta.path %>/the-best-amberjack/">極上 三ツ星かんぱちとは</a>
+        <% } else { %>
+        <a id="js-link-amberjack" href="<%= meta.path %>/the-best-amberjack/">極上 三ツ星かんぱちとは</a>
+        <% } %>
+      </li>
+      <li>
+        <% if(meta.current === 'product') { %>
+        <a id="js-link-products" class="is-current" href="<%= meta.path %>/products/">取り扱い商品</a>
+        <% } else { %>
+        <a id="js-link-products" href="<%= meta.path %>/products/">取り扱い商品</a>
+        <% } %>
+      </li>
+      <li>
+        <% if(meta.current === 'information') { %>
+        <a id="js-link-information" class="is-current" href="<%= meta.path %>/information/">お知らせ</a>
+        <% } else { %>
+        <a id="js-link-information" href="<%= meta.path %>/information/">お知らせ</a>
+        <% } %>
+      </li>
+      <li>
+        <% if(meta.current === 'history') { %>
+        <a class="is-current" href="<%= meta.path %>/history/">柿内水産の歴史</a>
+        <% } else { %>
+        <a href="<%= meta.path %>/history/">柿内水産の歴史</a>
+        <% } %>
+      </li>
+      <li>
+        <% if(meta.current === 'company') { %>
+        <a class="is-current" href="<%= meta.path %>/company/">会社情報</a>
+        <% } else { %>
+        <a href="<%= meta.path %>/company/">会社情報</a>
+        <% } %>
+      </li>
+    </ul>
+    <dl class="l-header__inquiryArea">
+      <dt>仕入れ、ご購入についてはこちらから</dt>
+      <dd>
+        <%- include('parts/_inquiryBtn.ejs', {btnData: btnData}); %>
+      </dd>
+    </dl>
+  </nav>
+  <div class="l-header__menuBtnWrap">
+    <button class="l-header__menuBtn" id="js-menu-trigger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,86 @@
+// -------------------------------------------------------------------
+// 	breadCrumbs.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-breadCrumbs {
+  display: flex;
+  margin-top: 10px;
+  padding-left: 32px;
+
+  @include med.media(sp) {
+    flex-wrap: wrap;
+    padding-left: 5.33%;
+    padding-right: 5.33%;
+    margin-top: 2.66vw;
+  }
+
+  &.history {
+    margin-top: 0;
+    padding-top: 10px;
+    @include med.media(sp) {
+      padding-top: 2.66vw;
+    }
+
+    > li {
+      &::after {
+        color: #fff;
+      }
+
+      > a {
+        color: #fff;
+      }
+
+      > span {
+        color: #fff;
+      }
+    }
+  }
+
+  > li {
+    &::after {
+      content: '>';
+      display: inline-block;
+      padding-left: 10px;
+      padding-right: 10px;
+      font-size: 12px;
+      @include med.media(sp) {
+        padding-left: 2.65vw;
+        padding-right: 2.65vw;
+        font-size: 3.2vw;
+      }
+    }
+
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+
+    @include med.media(sp) {
+      margin-bottom: 2.65vw;
+    }
+
+    > a {
+      font-size: 12px;
+      transition: 0.3s color;
+      &:hover {
+        color: var.$ACCENT_GOLD;
+        text-decoration: underline;
+      }
+
+      @include med.media(sp) {
+        font-size: 3.2vw;
+      }
+    }
+
+    > span {
+      font-size: 12px;
+
+      @include med.media(sp) {
+        font-size: 3.2vw;
+      }
+    }
+  }
+}

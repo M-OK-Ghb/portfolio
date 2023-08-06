@@ -1,0 +1,56 @@
+// -------------------------------------------------------------------
+// 	label.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+// Color一覧
+$ALL_COLOR:#C32104;
+$NEWS_COLOR:#121B39;
+$NEWPRODUCT_COLOR:#C19C30;
+$EVENT_COLOR:#29817A;
+$MEDIA_COLOR:#295281;
+$OTHER_COLOR:#812929;
+
+.c-label {
+  color: #fff;
+  font-size: 12px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 4px;
+  width: 64px;
+  height: 26px;
+  line-height: 26px;
+
+  &.all {
+    background-color: $ALL_COLOR;
+  }
+
+  &.news {
+    background-color: $NEWS_COLOR;
+  }
+
+  &.products {
+    background-color: $NEWPRODUCT_COLOR;
+  }
+
+  &.events {
+    background-color: $EVENT_COLOR;
+  }
+
+  &.media {
+    background-color: $MEDIA_COLOR;
+  }
+
+  &.others {
+    background-color: $OTHER_COLOR;
+  }
+
+  @include med.media(sp) {
+    font-size: 3.2vw;
+    border-radius: 1.065vw;
+    width: 17.05vw;
+    height: 6.93vw;
+    line-height: 6.93vw;
+  }
+}

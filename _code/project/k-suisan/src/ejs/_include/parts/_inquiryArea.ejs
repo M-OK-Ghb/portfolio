@@ -1,0 +1,13 @@
+<%
+  const btnData = {
+    size: 400
+  }
+%>
+
+<div class="c-inquiryArea">
+  <h3 class="c-inquiryArea__heading">仕入れ、ご購入について</h3>
+  <p class="c-inquiryArea__text">商品の仕入れやご購入、そのほか商品について気になることは気軽にお問合せください。</p>
+  <div class="c-inquiryArea__btnWrap">
+    <%- include('../parts/_inquiryBtn.ejs', {btnData: btnData}); %>
+  </div>
+</div>

@@ -1,0 +1,49 @@
+// -------------------------------------------------------------------
+// 	inquiryArea.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-inquiryArea {
+  width: 980px;
+  margin: 120px auto;
+  background-color: var.$COMMON_BLUE;
+  padding: 60px 0;
+
+  @include med.media(sp) {
+    width: 90%;
+    margin: 22.4vw auto;
+    padding: 10.65vw 5.33vw;
+  }
+
+  &__heading {
+    color: #fff;
+    font-family: var.$SAWARABI;
+    font-size: 34px;
+    text-align: center;
+
+    @include med.media(sp) {
+      font-size: 6.4vw;
+    }
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    line-height: 2;
+    margin-top: 40px;
+    @include med.media(sp) {
+      line-height: 1.8;
+      font-size: 3.73vw;
+      margin-top: 10.65vw;
+    }
+  }
+
+  &__btnWrap {
+    margin-top: 40px;
+    @include med.media(sp) {
+      margin-top: 10.65vw;
+    }
+  }
+}

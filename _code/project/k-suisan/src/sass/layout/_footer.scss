@@ -1,0 +1,140 @@
+// -------------------------------------------------------------------
+//  footer.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.l-footer {
+  background-color: var.$COMMON_BLUE;
+  padding: 60px 0 30px;
+
+  @include med.media(sp) {
+    padding: 15% 10.65%;
+  }
+
+  &__heading {
+    text-align: center;
+    > a {
+      display: inline-block;
+      width: 220px;
+      transition: 0.3s opacity;
+
+      @include med.media(sp) {
+        width: 73.5%;
+      }
+
+      > img {
+        width: 100%;
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__nav {
+    margin: 50px auto 0;
+    max-width: 910px;
+    @include med.media(sp) {
+      margin-top: 10.65vw;
+    }
+  }
+
+  &__globalMenu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    @include med.media(sp) {
+      display: block;
+      text-align: center;
+    }
+
+    > li {
+      border-right: 1px solid var.$GLOBAL_MENU_COLOR;
+      line-height: 1;
+      padding-right: 40px;
+      margin-right: 40px;
+      &:last-child {
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+      }
+
+      @include med.media(sp) {
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+        margin-bottom: 5.35vw;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      > a {
+        display: block;
+        transition: 0.3s color;
+        color: var.$GLOBAL_MENU_COLOR;
+        font-size: 15px;
+
+        @include med.media(sp) {
+          font-size: 4.265vw;
+        }
+
+        &:hover {
+          color: var.$ACCENT_GOLD;
+        }
+      }
+    }
+  }
+
+  &__inquiryArea {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include med.media(sp) {
+      display: block;
+      margin-top: 16vw;
+    }
+
+    > dt {
+      font-size: 13px;
+      margin-right: 10px;
+      color: var.$GLOBAL_MENU_COLOR;
+
+      @include med.media(sp) {
+        margin-right: 0;
+        font-size: 4.265vw;
+        margin-bottom: 5.35vw;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 50px;
+    > p {
+      color: var.$GLOBAL_MENU_COLOR;
+      text-align: center;
+    }
+  }
+
+  &__address {
+    font-size: 13px;
+    @include med.media(sp) {
+      line-height: 2;
+      font-size: 4vw;
+    }
+  }
+
+  &__copy {
+    font-size: 12px;
+    margin-top: 20px;
+    @include med.media(sp) {
+      margin-top: 8vw;
+      font-size: 3vw;
+    }
+  }
+}

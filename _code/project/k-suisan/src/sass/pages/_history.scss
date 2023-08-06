@@ -1,0 +1,228 @@
+// -------------------------------------------------------------------
+// 	history.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.p-history {
+  &__mv {
+    position: relative;
+    background-color: #000;
+    background-image: url('../images/history_mv.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 20%;
+    background-position-y: center;
+    // header分調整
+    height: calc(100vh - 70px);
+    @include med.media(sp) {
+      // header分調整
+      height: calc(100vh - 13.5vw);
+      background-position-x: center;
+      background-position-y: 16vh;
+    }
+  }
+
+  &__mvTextWrap {
+    width: 60%;
+    margin: 5% auto 0;
+    padding-left: 5%;
+
+    @include med.media(sp) {
+      width: 88%;
+      margin: 10% auto 0;
+    }
+    > p {
+      color: #fff;
+      font-size: max(15px, 1.1vw);
+      font-family: var.$SAWARABI;
+      line-height: 2;
+      margin-top: 20px;
+      &:first-child {
+        margin-top: 0;
+        @include med.media(sp) {
+          margin-top: 0;
+        }
+      }
+
+      @include med.media(sp) {
+        font-size: 3.75vw;
+        margin-top: 5.33vw;
+      }
+    }
+  }
+
+  &__periodWrap {
+    width: 980px;
+    margin: auto;
+    @include med.media(sp) {
+      width: 90%;
+    }
+  }
+
+  &__periodItem {
+    width: 100%;
+    margin-top: 120px;
+    @include med.media(sp) {
+      margin-top: 21.33vw;
+    }
+  }
+
+  &__periodImgList {
+    margin-top: 60px;
+    display: flex;
+    width: 100%;
+
+    @include med.media(sp) {
+      flex-wrap: wrap;
+      margin-top: 10.65vw;
+    }
+
+    > li {
+      width: 50%;
+
+      @include med.media(sp) {
+        width: 100%;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__periodImgMain {
+    > img {
+      aspect-ratio: 49 / 55;
+      object-fit: cover;
+
+      @include med.media(sp) {
+        aspect-ratio: unset;
+      }
+    }
+  }
+
+  &__periodImgSubItem {
+    > img {
+      // 55/2 = 27.5
+      aspect-ratio: 49 / 27.5;
+      object-fit: cover;
+
+      @include med.media(sp) {
+        aspect-ratio: unset;
+      }
+    }
+  }
+
+  &__periodMessage {
+    background-color: var.$DARK_BLUE;
+    padding: 40px;
+
+    @include med.media(sp) {
+      padding: 8vw;
+    }
+
+    > h4 {
+      font-family: var.$SAWARABI;
+      color: #fff;
+      font-size: 20px;
+
+      @include med.media(sp) {
+        font-size: 5.33vw;
+      }
+    }
+
+    > p {
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.8;
+      margin-top: 20px;
+
+      @include med.media(sp) {
+        font-size: 3.73vw;
+        margin-top: 5.33vw;
+      }
+    }
+  }
+
+  &__periodDetailList {
+    margin-top: 40px;
+
+    @include med.media(sp) {
+      margin-top: 10.65vw;
+    }
+
+    > li {
+      margin-top: 30px;
+
+      @include med.media(sp) {
+        margin-top: 8vw;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      > dl {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        @include med.media(sp) {
+          flex-wrap: wrap;
+        }
+
+        > dt {
+          font-family: var.$SAWARABI;
+          font-size: 20px;
+          margin-right: 20px;
+          width: 160px;
+          flex-grow: 0;
+          line-height: 1.8;
+          @include med.media(sp) {
+            width: 100%;
+            margin-right: 0;
+            font-size: 5.33vw;
+          }
+        }
+
+        > dd {
+          font-size: 14px;
+          line-height: 1.8;
+          @include med.media(sp) {
+            font-size: 3.73vw;
+            margin-top: 2.65vw;
+          }
+        }
+      }
+    }
+  }
+
+  &__breadBottom {
+    .c-breadCrumbs.history {
+      margin-top: 10px;
+      padding-top: 0;
+      > li {
+        color: #000;
+        &::after {
+          color: #000;
+        }
+
+        > a {
+          color: #000;
+          &:hover {
+            color: var.$ACCENT_GOLD;
+          }
+        }
+  
+        > span {
+          color: #000;
+        }
+      }
+
+      @include med.media(sp) {
+        margin-top: 2.66vw;
+      }
+    }
+  }
+}

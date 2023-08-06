@@ -1,0 +1,143 @@
+// -------------------------------------------------------------------
+//  company.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.p-company {
+  &Content {
+    width: 980px;
+    margin: 120px auto 0;
+    @include med.media(sp) {
+      width: auto;
+      margin-top: 21.35vw;
+    }
+  }
+
+  &Table {
+    padding:0 5.33%;
+    > dl {
+      width: 100%;
+      display: flex;
+      margin-bottom: 36px;
+
+      @include med.media(sp) {
+        flex-wrap: wrap;
+        margin-bottom: 10.65vw;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      > dt {
+        font-weight: bold;
+        font-size: 20px;
+        width: 230px;
+
+        @include med.media(sp) {
+          font-size: 5.33vw;
+          margin-bottom: 5vw;
+          width: 100%;
+        }
+      }
+
+      > dd {
+        font-size: 20px;
+        width: 750px;
+
+        @include med.media(sp) {
+          font-size: 4.8vw;
+          width: 100%;
+          line-height: 1.6;
+        }
+      }
+    }
+
+    &__detailList {
+      margin-top: -2px;
+      > li {
+        line-height: 1;
+        margin-bottom: 15px;
+      }
+
+      @include med.media(sp) {
+        margin-top: 0;
+        > li {
+          margin-bottom: 4vw;
+        }
+      }
+    }
+  }
+
+  &Person {
+    margin-top: 120px;
+
+    @include med.media(sp) {
+      margin-top: 21.35vw;
+    }
+
+    &__mvWrap {
+      width: 980px;
+      margin-top: 60px;
+
+      @include med.media(sp) {
+        width: 100%;
+        margin-top: 10.65vw;
+      }
+
+      > img {
+        width: 100%;
+      }
+
+      > p {
+        font-size: 14px;
+        line-height: 1.6;
+        width: 81.5%;
+        margin: 20px auto 0;
+        @include med.media(sp) {
+          width: 90%;
+          margin-top: 2.65vw;
+          font-size: 3.75vw;
+        }
+      }
+    }
+
+    &__brothersList {
+      width: 980px;
+      display: flex;
+      justify-content: space-between;
+      margin: 60px auto 0;
+
+      @include med.media(sp) {
+        flex-wrap: wrap;
+        width: 81.3%;
+        margin-top: 16vw;
+      }
+
+      > li {
+        width: 300px;
+        @include med.media(sp) {
+          width: 100%;
+          margin-bottom: 16vw;
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        > img {
+          width: 100%;
+        }
+
+        > p {
+          font-size: 17px;
+          text-align: center;
+          margin-top: 12px;
+          @include med.media(sp) {
+            margin-top: 1.6vw;
+            font-size: 4.53vw;
+          }
+        }
+      }
+    }
+  }
+} 

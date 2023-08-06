@@ -1,0 +1,60 @@
+// -------------------------------------------------------------------
+//  relatedLinks.scss
+// -------------------------------------------------------------------
+
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-relatedLinks {
+  width: 980px;
+  margin-top: 120px;
+  @include med.media(sp) {
+    width: 90%;
+    margin: 21.33vw auto 0;
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    @include med.media(sp) {
+      flex-wrap: wrap;
+      margin-top: 0;
+    }
+
+    > li {
+      width: 310px;
+      @include med.media(sp) {
+        width: 100%;
+        margin-top: 10.65vw;
+      }
+
+      > a {
+        display: block;
+        transition: 0.3s opacity;
+        &:hover {
+          opacity: 0.7;
+        }
+
+        > img {
+          width: 100%;
+          border-radius: 10px;
+          box-shadow: 3px 3px 6px rgb(0 0 0 / 10%);
+        }
+      }
+    }
+  }
+
+  &__text {
+    text-align: center;
+    margin-top: 16px;
+    > span {
+      display: inline-block;
+      font-size: 16px;
+      @include med.media(sp) {
+        font-size: 4.53vw;
+      }
+    }
+  }
+}

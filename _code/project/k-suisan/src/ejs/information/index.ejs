@@ -1,0 +1,487 @@
+<%
+  const meta = {
+    title: "お知らせ - 柿内水産",
+    description: "柿内水産のお知らせです。企業の取り組みや商品情報、イベントに関する情報などを発信しています。",
+    path: "..",
+    pageName: "お知らせ",
+    pageNameEn: "information",
+    hierarchy: "second",
+    current: "information"
+  }
+%>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../_include/_head.ejs', {meta: meta}); %>
+  <body>
+    <div>
+      <%- include('../_include/_header.ejs', {meta: meta}); %>
+      <main class="l-main">
+        <%- include('../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+        <div class="l-main__contentInner">
+          <%- include('../_include/parts/_subPageTopHeading.ejs', {meta: meta}); %>
+          <div class="p-information">
+            <div class="p-information__pickUp">
+              <h3 class="c-heading--middle">ピックアップ</h3>
+              <ul class="p-information__pickUpList">
+                <li class="p-information__pickUpItem">
+                  <a href="#">
+                    <div class="p-information__pickUpImg">
+                      <img src="<%= meta.path %>/images/pickup_noimage.png" alt="ピックアップ　サムネイル" width="310" height="220" loading="lazy">
+                    </div>
+                    <div class="p-information__pickUpLabel">
+                      <span class="p-information__pickUpDate">2022/07/27</span>
+                      <span class="c-label news">ニュース</span>
+                    </div>
+                    <p class="p-information__pickUpTitle">ここにニュースタイトルが入ります。</p>
+                  </a>
+                </li>
+                <li class="p-information__pickUpItem">
+                  <a href="#">
+                    <div class="p-information__pickUpImg">
+                      <img src="<%= meta.path %>/images/pickup_noimage.png" alt="ピックアップ　サムネイル" width="310" height="220" loading="lazy">
+                    </div>
+                    <div class="p-information__pickUpLabel">
+                      <span class="p-information__pickUpDate">2022/06/27</span>
+                      <span class="c-label products">商品</span>
+                    </div>
+                    <p class="p-information__pickUpTitle">ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="p-information__pickUpItem">
+                  <a href="#">
+                    <div class="p-information__pickUpImg">
+                      <img src="<%= meta.path %>/images/pickup_noimage.png" alt="ピックアップ　サムネイル" width="310" height="220" loading="lazy">
+                    </div>
+                    <div class="p-information__pickUpLabel">
+                      <span class="p-information__pickUpDate">2022/05/27</span>
+                      <span class="c-label events">イベント</span>
+                    </div>
+                    <p class="p-information__pickUpTitle">ここにニュースタイトルが入ります。eここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <dl class="p-information__search">
+              <dt>絞り込む</dt>
+              <dd>
+                <ul class="p-information__searchList">
+                  <li>
+                    <span class="c-label all">全て表示</span>
+                  </li>
+                  <li>
+                    <span class="c-label news">ニュース</span>
+                  </li>
+                  <li>
+                    <span class="c-label products">商品</span>
+                  </li>
+                  <li>
+                    <span class="c-label events">イベント</span>
+                  </li>
+                  <li>
+                    <span class="c-label media">メディア</span>
+                  </li>
+                  <li>
+                    <span class="c-label others">その他</span>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+            <div class="p-information__linkArea">
+              <ul class="c-infoArticle" id="js-articleWrap">
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/news/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label news">ニュース</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/products/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label products">商品</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/events/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label events">イベント</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/media/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label media">メディア</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/news/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label news">ニュース</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/products/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label products">商品</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/news/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label news">ニュース</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/products/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label products">商品</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/events/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label events">イベント</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/media/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label media">メディア</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/products/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label products">商品</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/events/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label events">イベント</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/media/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label media">メディア</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/products/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label products">商品</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/events/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label events">イベント</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/media/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label media">メディア</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/products/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label products">商品</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/events/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label events">イベント</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/media/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label media">メディア</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+                <li class="is-link-hide">
+                  <a href="<%= meta.path %>/information/others/aaa.html">
+                    <dl>
+                      <dt>2022/06/30</dt>
+                      <dd>
+                        <span class="c-label others">その他</span>
+                      </dd>
+                    </dl>
+                    <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                  </a>
+                </li>
+              </ul>
+              <div class="p-information__moreBtnWrap">
+                <div class="c-button--moreInfo">
+                  <button type="button" id="js-article-moreBtn">さらに読み込む</button>
+                </div>
+              </div>
+            </div>
+            <div class="p-information__bottom">
+              <dl class="p-information__search">
+                <dt>絞り込む</dt>
+                <dd>
+                  <ul class="p-information__searchList">
+                    <li>
+                      <span class="c-label all">全て表示</span>
+                    </li>
+                    <li>
+                      <span class="c-label news">ニュース</span>
+                    </li>
+                    <li>
+                      <span class="c-label products">商品</span>
+                    </li>
+                    <li>
+                      <span class="c-label events">イベント</span>
+                    </li>
+                    <li>
+                      <span class="c-label media">メディア</span>
+                    </li>
+                    <li>
+                      <span class="c-label others">その他</span>
+                    </li>
+                  </ul>
+                </dd>
+              </dl>
+            </div>
+            <%- include('../_include/parts/_relatedLinks.ejs', {meta: meta}); %> 
+          </div>
+        </div>
+        <%- include('../_include/parts/_inquiryArea.ejs', {meta: meta}); %>
+        <%- include('../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+      </main>
+      <%- include('../_include/_footer.ejs', {meta: meta}); %>
+    </div>
+    <%- include('../_include/_script.ejs', {meta: meta}); %>
+  </body>
+</html>

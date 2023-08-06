@@ -1,0 +1,223 @@
+// -------------------------------------------------------------------
+// 	button.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+%linkBase {
+  > a {
+    border-radius: 6px;
+    color: #FFFFFF;
+    width: 100%;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+%buttonBase {
+  > button {
+    border-radius: 6px;
+    color: #FFFFFF;
+    width: 100%;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+%submitInput {
+  > input {
+    border-radius: 6px;
+    color: #FFFFFF;
+    width: 100%;
+    display: block;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    transition: opacity 0.3s;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+}
+
+.c-button {
+  &--inquiry {
+    @extend %linkBase;
+    &.w160 {
+      width: 160px;
+      @include med.media(sp) {
+        width: 78.65vw;
+      }
+
+      > a {
+        @include med.media(sp) {
+          height: 13.35vw;
+          line-height: 13.35vw;
+        }
+      }
+    }
+
+    &.w200 {
+      width: 200px;
+      @include med.media(sp) {
+        width: 78.65vw;
+      }
+
+      > a {
+        @include med.media(sp) {
+          height: 13.35vw;
+          line-height: 13.35vw;
+        }
+      }
+    }
+
+    &.w400 {
+      width: 400px;
+      margin: auto;
+
+      @include med.media(sp) {
+        width: 100%;
+      }
+
+      > a {
+        height: 60px;
+        line-height: 60px;
+
+        @include med.media(sp) {
+          height: 16vw;
+          line-height: 16vw;
+        }
+
+        .c-button--inquiry__iconWrap {
+          width: 38px;
+          margin-right: 20px;
+          @include med.media(sp) {
+            width: 10vw;
+            margin-right: 5.33vw;
+          }
+        }
+
+        .c-button--inquiry__text {
+          font-size: 20px;
+          font-weight: bold;
+          @include med.media(sp) {
+            font-size: 5.33vw;
+          }
+        }
+      }
+    }
+
+    > a {
+      background-color: var.$ACCENT_GOLD;
+      transition: 0.3s background-color;
+      &:hover {
+        background-color: #fff;
+        span {
+          color: var.$ACCENT_GOLD;
+        }
+
+        svg {
+          stroke: var.$ACCENT_GOLD;
+        }
+      }
+    }
+
+    &__iconWrap {
+      display: inline-block;
+      width: 25px;
+      margin-right: 10px;
+      vertical-align: top;
+      > svg {
+        stroke: #FFF;
+        stroke-width: 1;
+        width: 100%;
+        vertical-align: middle;
+        transition: 0.3s stroke;
+        @include med.media(sp) {
+          stroke-width: 3;
+          border-radius: 1vw;
+        }
+      }
+
+      @include med.media(sp) {
+        margin-right: 2.65vw;
+        width: 6.65vw;
+      }
+    }
+
+    &__text {
+      display: inline-block;
+      color: #fff;
+      transition: 0.3s color;
+      @include med.media(sp) {
+        font-size: 3.75vw;
+      }
+    }
+  }
+
+  &--moreInfo {
+    @extend %buttonBase;
+    > button {
+      background-color: var.$COMMON_BLUE;
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 0.7;
+      }
+
+      @include med.media(sp) {
+        height: 10.65vw;
+        line-height: 10.65vw;
+        font-size: 3.73vw;
+      }
+    }
+  }
+
+  &--submitBtn {
+    @extend %submitInput;
+    > input {
+      background-color: var.$COMMON_BLUE;
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 0.7;
+      }
+
+      @include med.media(sp) {
+        height: 10.65vw;
+        line-height: 10.65vw;
+        font-size: 3.73vw;
+      }
+    }
+  }
+
+  &--subPageLink {
+    > a {
+      width: 220px;
+      background-color: var.$COMMON_BLUE;
+      transition: opacity 0.3s;
+      display: block;
+      text-align: center;
+      border-radius: 6px;
+      color: #FFFFFF;
+      line-height: 1.5;
+      padding: 10px;
+
+      @include med.media(sp) {
+        width: 58.65vw;
+        font-size: 3.73vw;
+        padding: 2.65vw;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

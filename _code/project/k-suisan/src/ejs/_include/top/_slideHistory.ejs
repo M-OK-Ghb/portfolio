@@ -1,0 +1,42 @@
+<% const arrayHistory = [
+    'slide_history_1.png',
+    'slide_history_2.png',
+    'slide_history_3.png',
+    'slide_history_4.png',
+    'slide_history_5.png',
+    'slide_history_6.png'
+  ];
+%>
+
+<div class="p-top__historySlide">
+  <div class="p-top__historySlideList">
+    <ul class="p-top__slideItemWrap--history">
+      <% let countHis = 1; %> 
+      <% arrayHistory.forEach(function (value) { %>  
+      <li>
+        <img src="<%= meta.path %>/images/<%= value %>" alt="history slide <%= countHis %>" loading="eager" width="680" height="410">
+      </li>
+      <% countHis++; %>
+      <% }); %>
+    </ul>
+    <ul class="p-top__slideItemWrap--history second">
+      <% let countHisSecond = 1; %> 
+      <% arrayHistory.forEach(function (value) { %>  
+      <li>
+        <img src="<%= meta.path %>/images/<%= value %>" alt="history slide <%= countHisSecond %>" loading="eager" width="680" height="410">
+      </li>
+      <% countHisSecond++; %>
+      <% }); %>
+    </ul>
+  </div>
+  <div class="p-top__historySlideText">
+    <div class="p-top__historySlideInner">
+      <p>年間約20万尾を水揚げする柿内水産。<br>その歴史は、75年前、初代・柿内盛吉が一艘の木船で<br class="is-pc">海へ漕ぎだしたことからはじまりました。</p>
+      <div class="p-top__btnWrap history">
+        <div class="c-button--subPageLink">
+          <a href="<%= meta.path %>/history/">柿内水産の歴史</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

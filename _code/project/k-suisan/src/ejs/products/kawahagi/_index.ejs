@@ -1,0 +1,139 @@
+<%
+  const meta = {
+    title: "三ツ星カワハギ - 取り扱い商品 - 柿内水産",
+    description: "hogehoge",
+    path: "../..",
+    parentName: "取り扱い商品",
+    parentUrl: "products",
+    pageName: "仮(カワハギ)",
+    pageNameEn: "hogehoge",
+    hierarchy: "third"
+  }
+%>
+<!--商品一覧から削除 新商品追加に備えて、ファイルのみ保存-->
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../_include/_head.ejs', {meta: meta}); %>
+  <body>
+    <div>
+      <%- include('../../_include/_header.ejs', {meta: meta}); %>
+      <main class="l-main">
+        <%- include('../../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+        <%- include('../../_include/parts/_subPageTopHeading.ejs', {meta: meta}); %>
+        <div class="c-productItem__fv">
+          <img src="<%= meta.path %>/images/amberjack_fv.png" alt="極上 三ツ星かんぱち メインビジュアル">
+          <p>単体商品の説明テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+        </div>
+        <div class="c-productLineup">
+          <h3 class="c-heading--middle">商品一覧</h3>
+          <p class="c-heading--middleEn">Product lineup</p>
+          <ul class="c-productLineup__list">
+            <li>
+              <div class="c-productLineup__name">
+                <p>ラウンド（丸一匹）</p>
+                <p>Round</p>
+              </div>
+              <div class="c-productLineup__img">
+                <img src="<%= meta.path %>/images/amberjack_round.png" alt="極上三ツ星かんぱち ラウンド">
+              </div>
+              <p class="c-productLineup__text">商品説明文テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </li>
+            <li>
+              <div class="c-productLineup__name">
+                <p>フィーレ（三枚おろし）</p>
+                <p>Filet</p>
+              </div>
+              <div class="c-productLineup__img">
+                <img src="<%= meta.path %>/images/amberjack_filet.png" alt="極上三ツ星かんぱち フィーレ">
+              </div>
+              <p class="c-productLineup__text">商品説明文テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </li>
+            <li>
+              <div class="c-productLineup__name">
+                <p>ロイン（柵）</p>
+                <p>Loin</p>
+              </div>
+              <div class="c-productLineup__img">
+                <img src="<%= meta.path %>/images/amberjack_loin.png" alt="極上三ツ星かんぱち ロイン">
+              </div>
+              <p class="c-productLineup__text">商品説明文テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </li>
+            <li>
+              <div class="c-productLineup__name">
+                <p>熟成かんぱち（フィーレ）</p>
+                <p>Aged amberjack</p>
+              </div>
+              <div class="c-productLineup__img">
+                <img src="<%= meta.path %>/images/amberjack_aged.png" alt="極上三ツ星かんぱち 熟成">
+              </div>
+              <p class="c-productLineup__text">商品説明文テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </li>
+            <li>
+              <div class="c-productLineup__name">
+                <p>贈答用セット（市販品）</p>
+                <p>Gift</p>
+              </div>
+              <div class="c-productLineup__img">
+                <img src="<%= meta.path %>/images/amberjack_gift.png" alt="極上三ツ星かんぱち 贈答用セット">
+              </div>
+              <p class="c-productLineup__text">商品説明文テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+            </li>
+          </ul>
+        </div>
+        <div class="c-cooking">
+          <h3 class="c-heading--middle">調理例</h3>
+          <p class="c-heading--middleEn">Cooking example</p>
+          <!-- swiper cookingArea -->
+          <div class="c-swiper c-cooking__swiper">
+            <div class="swiper-container slider2">
+              <ul class="c-swiper__wrapper swiper-wrapper">
+                <li class="swiper-slide">
+                  <img src="<%= meta.path %>/images/cooking_amberjack_1.png" alt="極上 三ツ星かんぱち 調理例1">
+                  <p>カルパッチョ1</p>
+                </li>
+                <li class="swiper-slide">
+                  <img src="<%= meta.path %>/images/cooking_amberjack_2.png" alt="極上 三ツ星かんぱちとは 調理例2">
+                  <p>カルパッチョ2</p>
+                </li>
+                <li class="swiper-slide">
+                  <img src="<%= meta.path %>/images/cooking_amberjack_3.png" alt="極上 三ツ星かんぱちとは 調理例3">
+                  <p>カルパッチョ3</p>
+                </li>
+                <li class="swiper-slide">
+                  <img src="<%= meta.path %>/images/cooking_amberjack_4.png" alt="極上 三ツ星かんぱちとは 調理例4">
+                  <p>カルパッチョ4</p>
+                </li>
+                <li class="swiper-slide">
+                  <img src="<%= meta.path %>/images/cooking_amberjack_5.png" alt="極上 三ツ星かんぱちとは 調理例5">
+                  <p>カルパッチョ5</p>
+                </li>
+              </ul>
+            </div>
+            <div class="c-swiper__pagination swiper-pagination-cooking"></div>
+          </div>
+        </div>
+        <section class="c-productItem__chart">
+          <h3 class="c-heading--middle">三ツ星のおいしさ</h3>
+          <p class="c-heading--middleEn">Deliciousness</p>
+          <div class="c-productItem__chartDetail">
+            <div class="c-productItem__graphWrap">
+              <img src="<%= meta.path %>/images/amberjack_deli_graph.svg" alt="三ツ星の美味しさ グラフ">
+            </div>
+            <div class="c-productItem__textInfo">
+              <h4>甘みと旨味、ここに極まる</h4>
+              <p>
+                通常の三倍の手間ひまをかけて育てた、一般的なかんぱちの数倍～十数倍の甘みと旨味を持つ極上のかんぱちです。<br>
+                国内の三ツ星レストランなどでもその味わい深さが認められ、お取り扱いいただいています。
+              </p>
+            </div>
+          </div>
+        </section>
+        <%- include('../../_include/parts/_inquiryArea.ejs', {meta: meta}); %>
+        <%- include('../../_include/parts/_productsList.ejs', {meta: meta}); %>
+        <%- include('../../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+      </main>
+      <%- include('../../_include/_footer.ejs', {meta: meta}); %>
+    </div>
+    <%- include('../../_include/_script.ejs', {meta: meta}); %>
+  </body>
+</html>

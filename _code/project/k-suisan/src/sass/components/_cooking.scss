@@ -1,0 +1,28 @@
+// -------------------------------------------------------------------
+// 	cooking.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-cooking {
+  margin-top: 120px;
+  @include med.media(sp) {
+    margin-top: 16vw;
+  }
+}
+
+.c-cooking__swiper {
+  ul {
+     > li {
+       > p {
+         font-size: 17px;
+         text-align: center;
+         margin-top: 20px;
+         @include med.media(sp) {
+           font-size: 4vw;
+           margin-top: 2.65vw;
+         }
+       }
+     }
+  }
+}

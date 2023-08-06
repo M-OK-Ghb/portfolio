@@ -1,0 +1,25 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><%= meta.title %></title>
+  <meta name="description" content="<%= meta.description %>">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:title" content="<%= meta.title %>">
+  <meta property="og:description" content="<%= meta.description %>">
+  <% if(meta.top) { %>
+  <meta property="og:type" content="website">
+  <% } else { %>
+  <meta property="og:type" content="article">
+  <% } %>
+  <meta property="og:image" content="">
+  <meta property="og:url" content="">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="">
+  <meta name="twitter:title" content="<%= meta.title %>">
+  <meta name="twitter:description" content="<%= meta.description %>">
+  <meta name="twitter:image" content="">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="stylesheet" href="<%= meta.path %>/css/swiper.min.css">
+  <link rel="stylesheet" href="<%= meta.path %>/css/style.css">
+</head>

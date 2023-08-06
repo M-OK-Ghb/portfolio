@@ -1,0 +1,84 @@
+// -------------------------------------------------------------------
+// 	productLineup.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-productLineup {
+  width: 980px;
+  margin: 120px auto 0;
+
+  @include med.media(sp) {
+    width: 90%;
+    margin-top: 21.33vw;
+  }
+
+  &__list {
+    margin-top: 60px; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include med.media(sp) {
+      margin-top: 10.66vw;
+    }
+
+    > li {
+      width: 470px;
+      @include med.media(sp) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__name {
+    > p {
+      &:nth-child(1) {
+        font-family: var.$SAWARABI;
+        font-size: 20px;
+        @include med.media(sp) {
+          font-size: 5.33vw;
+        }
+      }
+
+      &:nth-child(2) {
+        font-family: var.$TIMES;
+        font-size: 18px;
+        margin-top: 10px;
+        @include med.media(sp) {
+          font-size: 4.8vw;
+          margin-top: 2.66vw;
+        }
+      }
+    }
+  }
+
+  &__img {
+    margin-top: 12px;
+    > img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 47/27;
+      @include med.media(sp) {
+        aspect-ratio: auto;
+      }
+    }
+
+    @include med.media(sp) {
+      margin-top: 5.33vw;
+    }
+  }
+
+  &__text {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    line-height: 1.7;
+    @include med.media(sp) {
+      font-size: 3.73vw;
+      margin-top: 5.33vw;
+      margin-bottom: 10.65vw;
+    }
+  }
+}

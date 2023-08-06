@@ -1,0 +1,329 @@
+// -------------------------------------------------------------------
+// 	articleTemplate.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-article {
+  width: 980px;
+  margin: 110px auto 0;
+  @include med.media(sp) {
+    width: 90%;
+    margin-top: 10.65vw;
+  }
+
+  &__date {
+    display: flex;
+    align-items: center;
+    > dt {
+      font-size: 14px;
+      margin-right: 20px;
+      @include med.media(sp) {
+        font-size: 5.06vw;
+        margin-right: 2.65vw;
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 30px;
+    @include med.media(sp) {
+      margin-top: 8vw;
+    }
+  }
+
+  &__heading {
+    font-size: 24px;
+    line-height: 1.5;
+    color: var.$DARK_BLUE;
+    @include med.media(sp) {
+      font-size: 6.4vw;
+    }
+  }
+
+  &__discList {
+    width: 800px;
+    margin: 40px auto 0;
+    > li {
+      margin-bottom: 20px;
+      display: flex;
+      // @include med.media(sp) {
+        
+      // }
+
+      &::before {
+        content : "・";
+        display: inline-block;
+        font-size: 15px;
+        @include med.media(sp) {
+          height: 40px;
+          line-height: 1.6;
+          font-size: 3.73vw;
+        }
+      }
+
+      > span {
+        display: inline-block;
+        line-height: 1.6;
+        font-size: 15px;
+
+        > a {
+          color: var.$ACCENT_GOLD;
+          text-decoration: underline;
+          transition: opacity 0.3s;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+
+        @include med.media(sp) {
+          font-size: 3.73vw;
+        }
+      }
+    }
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  // wordpress shortcode [用語ブロック]
+  &__descriptionBlock {
+    width: 980px;
+    margin: 40px auto 0;
+    background-color: #F7F7F7;
+    padding: 30px;
+
+    @include med.media(sp) {
+      width: 100%;
+      padding: 5.33vw;
+      margin-top: 21.33vw;
+    }
+
+    > h4 {
+      font-size: 18px;
+      font-weight: bold;
+      @include med.media(sp) {
+        font-size: 4.8vw;
+      }
+    }
+
+    > p {
+      font-size: 14px;
+      line-height: 1.8;
+      margin-top: 20px;
+      @include med.media(sp) {
+        font-size: 3.73vw;
+        margin-top: 5.33vw;
+      }
+    }
+  }
+
+  // wordpress shortcode
+  &__link {
+    width: 800px;
+    margin: 40px auto 0;
+    font-size: 15px;
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: 0.3s opacity;
+      border-bottom: 1px solid #B7B7B7;
+      padding-bottom: 10px;
+      > span {
+        display: inline-block;
+        line-height: 1.5;
+        width: 95%;
+        @include med.media(sp) {
+          line-height: 1.8;
+          width: 90%;
+          font-size: 3.73vw;
+        }
+      }
+
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+
+    // shortcode [内部リンクブロック]
+    &.icon-arrow {
+      > a {
+        &::after {
+          content : '';
+          display: inline-block;
+          width: 10px;
+          height: 15px;
+          background-image: url(../images/icon_arrow.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    // shortcode [外部リンクブロック]
+    &.icon-external {
+      > a {
+        &::after {
+          content : '';
+          display: inline-block;
+          width: 15px;
+          height: 15px;
+          background-image: url(../images/icon_external.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  // wordpress shortcode [画像ダブル]
+  &__imgDouble {
+    width: 800px;
+    margin:28px auto 0;
+    display: flex;
+    justify-content: space-between;
+    
+    @include med.media(sp) {
+      width: 100%;
+      margin-top: 5.33vw;
+      flex-wrap: wrap;
+    }
+
+    &Item {
+      width: 48.5%;
+      > img {
+        width: 100%;
+      }
+      @include med.media(sp) {
+        width: 100%;
+        margin-top: 2.65vw;
+      }
+    }
+  }
+
+}
+
+// WP 記事投稿 the_content
+.c-article__field {
+  margin-top: 60px;
+  @include med.media(sp) {
+    margin-top: 16vw;
+  }
+
+  // 標準のテキスト
+  > p {
+    font-size: 14px;
+    line-height: 1.85;
+    width: 800px;
+    margin: 28px auto 0;
+    @include med.media(sp) {
+      width: 100%;
+      font-size: 3.73vw;
+      margin-top: 5.33vw;
+      line-height: 1.7;
+    }
+
+    // 文中リンク
+    > a {
+      color: var.$ACCENT_GOLD;
+      text-decoration: underline;
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    // 画像 デフォルト表示
+    > img {
+      display: block;
+      margin: auto;
+      width: 100%;
+    }
+  }
+
+  // 強調小見出し
+  > h3 {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.6;
+    width: 800px;
+    margin: 40px auto 0;
+    @include med.media(sp) {
+      width: 100%;
+      font-size: 4.8vw;
+      margin-top: 10.65vw;
+    }
+  }
+
+  span {
+    // wordpress shortcode [画像キャプション]
+    &.c-article__imgCaption {
+      width: 800px;
+      display: block;
+      margin:20px auto 0;
+      font-size: 13px;
+      @include med.media(sp) {
+        width: 100%;
+        margin-top: 4vw;
+        font-size: 3.465vw;
+      }
+    }
+  }
+
+  // 順序無しリスト テキスト
+  > ul {
+    width: 800px;
+    margin: 40px auto 0;
+    @include med.media(sp) {
+      width: 100%;
+    }
+
+    > li {
+      margin-bottom: 20px;
+      line-height: 1.6;
+      font-size: 15px;
+
+      @include med.media(sp) {
+        font-size: 3.73vw;
+      }
+
+      &::before {
+        content : "・";
+        display: inline-block;
+        font-size: 15px;
+        @include med.media(sp) {
+          min-height: 40px;
+          line-height: 1.6;
+          font-size: 3.73vw;
+        }
+      }
+    }
+  }
+
+  // 整形済みテキストを利用した場合の横幅調整
+  > pre {
+    width: 800px;
+    margin: auto;
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  // ルール外で画像をアップしたときの微調整
+  img {
+    display: block;
+    margin: auto;
+    max-width: 800px;
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+<%
+  const meta = {
+    title: "極上 三ツ星かんぱち - 取り扱い商品 - 柿内水産",
+    description: "極上 三ツ星かんぱちの商品詳細ページです。手間ひまをかけて育てた極上のかんぱちは、その旨味と味わい深さを認められ、ミシュラン三ツ星のレストランなどでお取り扱いいただいております。仕入れ、ご購入は国内外問わずご相談いただけます。",
+    path: "../..",
+    parentName: "取り扱い商品",
+    parentUrl: "products",
+    pageName: "極上 三ツ星かんぱち",
+    pageNameEn: "The best amberjack",
+    hierarchy: "third",
+    current: "product"
+  }
+%>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../_include/_head.ejs', {meta: meta}); %>
+  <body id="js-item-amberjack">
+    <div>
+      <%- include('../../_include/_header.ejs', {meta: meta}); %>
+      <main class="l-main">
+        <%- include('../../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+        <%- include('../../_include/parts/_subPageTopHeading.ejs', {meta: meta}); %>
+        <div class="c-productItem__fv">
+          <img src="<%= meta.path %>/images/amberjack_fv.png" alt="極上 三ツ星かんぱち メインビジュアル">
+          <p>三代目柿内水産のオリジナルブランド「極上 三ツ星かんぱち」は、通常の3倍の手間ひまをかけ育てることで、一般的なかんぱちの数倍から十数倍の甘みと旨味を引き出した極上のかんぱちです。</p>
+          <p>その深い美味しさはプロのシェフたちにも認められており、ミシュラン三ツ星レストランなど、高名な料理店でも多数お取り扱いいただいております。</p>
+        </div>
+        <%- include('../../_include/parts/_amberjackProducts.ejs', {meta: meta}); %>
+        <%- include('../../_include/parts/_amberjackCooking.ejs', {meta: meta}); %>
+        <%- include('../../_include/parts/_amberjackChart.ejs', {meta: meta}); %>
+        <%- include('../../_include/parts/_inquiryArea.ejs', {meta: meta}); %>
+        <%- include('../../_include/parts/_productsList.ejs', {meta: meta}); %>
+        <%- include('../../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+      </main>
+      <%- include('../../_include/_footer.ejs', {meta: meta}); %>
+    </div>
+    <%- include('../../_include/_script.ejs', {meta: meta}); %>
+  </body>
+</html>

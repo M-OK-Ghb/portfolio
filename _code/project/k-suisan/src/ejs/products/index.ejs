@@ -1,0 +1,38 @@
+<%
+  const meta = {
+    title: "取り扱い商品 - 柿内水産",
+    description: "柿内水産の取り扱い商品ページです。「極上 三ツ星かんぱち」をはじめとした鮮魚の卸売や、さまざまな加工食品を取り扱っております。",
+    path: "..",
+    pageName: "取り扱い商品",
+    pageNameEn: "Products",
+    hierarchy: "second",
+    current: "product"
+  }
+%>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../_include/_head.ejs', {meta: meta}); %>
+  <body>
+    <div>
+      <%- include('../_include/_header.ejs', {meta: meta}); %>
+      <main class="l-main">
+        <%- include('../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+        <div class="l-main__contentInner">
+          <%- include('../_include/parts/_subPageTopHeading.ejs', {meta: meta}); %>
+          <div class="p-products">
+            <div class="p-products__textWrap">
+              <p>ミシュラン三ツ星レストラン御用達のオリジナルブランド「極上 三ツ星かんぱち」をはじめ、代々受け継がれてきた三代目柿内水産の技術を生かして育てた、自慢の鮮魚をご堪能ください。フィーレから加工品まで取り揃えています。</p>
+            </div>
+            <div class="p-products__listWrap">
+              <%- include('../_include/parts/_productsList.ejs', {meta: meta}); %>
+            </div>
+          </div>
+        </div>
+        <%- include('../_include/parts/_inquiryArea.ejs', {meta: meta}); %>
+        <%- include('../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+      </main>
+      <%- include('../_include/_footer.ejs', {meta: meta}); %>
+    </div>
+    <%- include('../_include/_script.ejs', {meta: meta}); %>
+  </body>
+</html>

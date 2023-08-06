@@ -1,0 +1,93 @@
+// -------------------------------------------------------------------
+// 	productItem.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-productItem {
+  &__fv {
+    width: 980px;
+    margin: 120px auto 0;
+
+    @include med.media(sp) {
+      width: 100%;
+      margin-top: 21.33vw;
+    }
+
+    > img {
+      width: 100%;
+    }
+
+    > p {
+      width: 81.5%;
+      margin: 40px auto 0;
+      font-size: 14px;
+      line-height: 1.7;
+      @include med.media(sp) {
+        font-size: 3.73vw;
+        margin-top: 5.33vw;
+      }
+    }
+  }
+
+  &__chart {
+    width: 980px;
+    margin: 120px auto 0;
+
+    @include med.media(sp) {
+      width: 90%;
+      margin-top: 21.33vw;
+    }
+  }
+
+  &__chartDetail {
+    margin: 60px auto 0;
+    display: flex;
+    justify-content: space-between;
+
+    &.single {
+      justify-content: center;
+    }
+
+    @include med.media(sp) {
+      flex-wrap: wrap;
+      margin-top: 10.65vw;
+    }
+  }
+
+  &__graphWrap {
+    width: 500px;
+    > img {
+      width: 100%;
+    }
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  &__textInfo {
+    width: 440px;
+    @include med.media(sp) {
+      width: 100%;
+      margin-top: 10.65vw;
+    }
+
+    > h4 {
+      font-family: var.$SAWARABI;
+      font-size: 24px;
+      @include med.media(sp) {
+        font-size: 5.02vw;
+      }
+    }
+
+    > p {
+      font-size: 14px;
+      line-height: 1.7;
+      margin-top: 25px;
+      @include med.media(sp) {
+        font-size: 3.73vw;
+        margin-top: 8vw;
+      }
+    }
+  }
+}

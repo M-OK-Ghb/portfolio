@@ -1,0 +1,67 @@
+<% if(meta.hierarchy === 'first' || meta.hierarchy === 'second') { %>
+<ul class="c-productsList">
+  <li class="theBestAmberjack">
+    <a href="<%= meta.path %>/products/the-best-amberjack/">
+      <img class="theBestAmberjack" src="<%= meta.path %>/images/item_thebestamberjack.png" alt="極上 三ツ星かんぱち">
+      <div class="c-productsList__textWrap">
+        <p class="c-productsList__text">極上 三ツ星かんぱち</p>
+        <p class="c-productsList__textEn">The best amberjack</p>
+      </div>
+    </a>
+  </li>
+  <li class="stripedJack">
+    <a href="<%= meta.path %>/products/striped-jack/">
+      <img class="stripedJack" src="<%= meta.path %>/images/item_stripedjack.png" alt="三ツ星しまあじ">
+      <div class="c-productsList__textWrap">
+        <p class="c-productsList__text">三ツ星しまあじ</p>
+        <p class="c-productsList__textEn">Striped jack</p>
+      </div>
+    </a>
+  </li>
+</ul>
+<% } else { %>
+  <h3 class="c-heading--middle">関連商品</h3>
+  <p class="c-heading--middleEn">Related products</p>
+  <ul class="c-productsList itemPage">
+    <% if(meta.pageName === '極上 三ツ星かんぱち') { %>
+      <li class="stripedJack">
+        <a href="<%= meta.path %>/products/striped-jack/">
+          <img class="stripedJack" src="<%= meta.path %>/images/item_stripedjack.png" alt="三ツ星しまあじ">
+          <div class="c-productsList__textWrap">
+            <p class="c-productsList__text">三ツ星しまあじ</p>
+            <p class="c-productsList__textEn">Striped jack</p>
+          </div>
+        </a>
+      </li>
+    <% } else if(meta.pageName === '三ツ星しまあじ') { %>
+      <li class="theBestAmberjack">
+        <a href="<%= meta.path %>/products/the-best-amberjack/">
+          <img class="theBestAmberjack" src="<%= meta.path %>/images/item_thebestamberjack.png" alt="極上 三ツ星かんぱち">
+          <div class="c-productsList__textWrap">
+            <p class="c-productsList__text">極上 三ツ星かんぱち</p>
+            <p class="c-productsList__textEn">The best amberjack</p>
+          </div>
+        </a>
+      </li>
+    <% } else { %>
+      <li class="stripedJack">
+        <a href="<%= meta.path %>/products/striped-jack/">
+          <img class="stripedJack" src="<%= meta.path %>/images/item_stripedjack.png" alt="三ツ星しまあじ">
+          <div class="c-productsList__textWrap">
+            <p class="c-productsList__text">三ツ星しまあじ</p>
+            <p class="c-productsList__textEn">Striped jack</p>
+          </div>
+        </a>
+      </li>
+      <li class="theBestAmberjack">
+        <a href="<%= meta.path %>/products/the-best-amberjack/">
+          <img class="theBestAmberjack" src="<%= meta.path %>/images/item_thebestamberjack.png" alt="極上 三ツ星かんぱち">
+          <div class="c-productsList__textWrap">
+            <p class="c-productsList__text">極上 三ツ星かんぱち</p>
+            <p class="c-productsList__textEn">The best amberjack</p>
+          </div>
+        </a>
+      </li>
+    <% } %>
+  </ul>
+<% } %>

@@ -1,0 +1,24 @@
+// -------------------------------------------------------------------
+//  main.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.l-main {
+  // headerHeight
+  padding-top: 70px;
+  padding-bottom: 25px;
+  @include med.media(sp) {
+    // headerHeight
+    padding-top: 13.5vw;
+    padding-bottom: 5.33vw;
+  }
+
+  &__bottom {
+    width: 980px;
+    margin: auto;
+    @include med.media(sp) {
+      width: 90%;
+    }
+  }
+}

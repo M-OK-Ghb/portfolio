@@ -1,0 +1,18 @@
+// -------------------------------------------------------------------
+//  pageTemplate.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+
+// 指定なし固定ページ用スタイル
+.p-page {
+  &__contentWrap {
+    width: 980px;
+    margin: 120px auto 0;
+    @include med.media(sp) {
+      width: 90%;
+      margin-top: 21.33vw;
+    }
+  }
+}

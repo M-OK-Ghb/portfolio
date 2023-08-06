@@ -1,0 +1,165 @@
+<%
+  const meta = {
+    title: "柿内水産",
+    description: "柿内水産の公式サイトです。オリジナルブランド「極上 三ツ星かんぱち」を代表とした鮮魚の卸売や加工品まで、さまざまな商品を取り扱っております。",
+    path: ".",
+    top: true,
+    hierarchy: "first"
+  }
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('_include/_head.ejs', {meta: meta}); %>
+
+<body id="js-top">
+  <div class="p-top" id="js-top-content">
+    <%- include('_include/_header.ejs', {meta: meta}); %>
+    <main class="p-top__main">
+      <div class="p-top__mv">
+        <div class="p-top__mvImg">
+          <img src="" alt="トップページ メインビジュアル" id="js-top-mv" loading="eager">
+        </div>
+        <div class="p-top__mvLogo">
+          <img src="<%= meta.path %>/images/fv_title.svg" alt="三代目 柿内水産 KAKIUCHI FISHRIES COMPANY 03rd Generation" loading="eager">
+        </div>
+        <div class="p-top__mvMessage">
+          <h2>1945年創業。<br class="is-sp">三代目の技術と錦江湾が育てる<br class="is-sp">極上の魚。</h2>
+        </div>
+      </div>
+      <%- include('_include/top/_slideTop.ejs', {meta: meta}); %>
+      <div class="p-top__amberjack">
+        <div class="p-top__amberjackInner">
+          <div class="p-top__amberjackLogo">
+            <img src="<%= meta.path %>/images/kanpachi_logo.svg" alt="極上 三ツ星かんぱち ロゴ" loading="lazy">
+          </div>
+          <div class="p-top__amberjackText">
+            <p>通常の3倍の手間ひまをかけて育てた、一般的なかんぱちの数倍から十数倍の甘みと旨味を持つ極上のかんぱち。<br>その味わい深さが認められ、ミシュラン三ツ星のレストランなどでお取り扱いいただいております。</p>
+            <div class="p-top__btnWrap amberjack">
+              <div class="c-button--subPageLink">
+                <a href="<%= meta.path %>/the-best-amberjack/">極上 三ツ星かんぱちとは</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-top__products">
+        <div class="p-top__productsInner">
+          <h3 class="c-heading--middle">取り扱い商品</h3>
+          <p class="c-heading--middle__brush">
+            <img src="<%= meta.path%>/images/heading_brush.svg" alt="ブラシ" loading="lazy">
+          </p>
+          <p class="p-top__productsText">
+            「極上 三ツ星かんぱち」をはじめ、天然の海の生け簀で育てた鮮魚の卸売や加工食品など、<br>三代目柿内水産が自信を持ってお勧めする商品をご紹介します。
+          </p>
+          <div class="p-top__productsListWrap">
+            <%- include('_include/parts/_productsList.ejs', {meta: meta}); %>
+            <div class="p-top__btnWrap products">
+              <div class="c-button--subPageLink">
+                <a href="<%= meta.path %>/products/">商品一覧</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-top__info">
+        <div class="p-top__infoInner">
+          <h3 class="c-heading--middle">お知らせ</h3>
+          <p class="c-heading--middle__brush">
+            <img src="<%= meta.path%>/images/heading_brush.svg" alt="ブラシ" loading="lazy">
+          </p>
+          <div class="p-top__infoArticleWrap">
+            <ul class="c-infoArticle">
+              <li>
+                <a href="<%= meta.path %>/information/news/aaa.html">
+                  <dl>
+                    <dt>2022/06/30</dt>
+                    <dd>
+                      <span class="c-label news">ニュース</span>
+                    </dd>
+                  </dl>
+                  <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                </a>
+              </li>
+              <li>
+                <a href="<%= meta.path %>/information/products/aaa.html">
+                  <dl>
+                    <dt>2022/06/30</dt>
+                    <dd>
+                      <span class="c-label products">商品</span>
+                    </dd>
+                  </dl>
+                  <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                </a>
+              </li>
+              <li>
+                <a href="<%= meta.path %>/information/events/aaa.html">
+                  <dl>
+                    <dt>2022/06/30</dt>
+                    <dd>
+                      <span class="c-label events">イベント</span>
+                    </dd>
+                  </dl>
+                  <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                </a>
+              </li>
+              <li>
+                <a href="<%= meta.path %>/information/media/aaa.html">
+                  <dl>
+                    <dt>2022/06/30</dt>
+                    <dd>
+                      <span class="c-label media">メディア</span>
+                    </dd>
+                  </dl>
+                  <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                </a>
+              </li>
+              <li>
+                <a href="<%= meta.path %>/information/others/aaa.html">
+                  <dl>
+                    <dt>2022/06/30</dt>
+                    <dd>
+                      <span class="c-label others">その他</span>
+                    </dd>
+                  </dl>
+                  <p>ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。ここにニュースタイトルが入ります。…</p>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-top__btnWrap info">
+            <div class="c-button--subPageLink">
+              <a href="<%= meta.path %>/information/">お知らせ一覧</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-top__history" id="js-bg-off-target">
+        <h3 class="c-heading--middle">柿内水産の歴史</h3>
+        <p class="c-heading--middle__brush">
+          <img src="<%= meta.path%>/images/heading_brush.svg" alt="ブラシ" loading="lazy">
+        </p>
+        <%- include('_include/top/_slideHistory.ejs', {meta: meta}); %>
+        <div class="p-top__aboutGround">
+          <h3 class="c-heading--middle mini">国内最大級のかんぱち水揚げ量。<br>私たちの漁場「錦江湾」について。</h3>
+          <p class="c-heading--middle__brush shortSize">
+            <img src="<%= meta.path%>/images/heading_brush.svg" alt="ブラシ" loading="lazy">
+          </p>
+          <div class="p-top__aboutBottom">
+            <div class="p-top__groundImg">
+              <img src="<%= meta.path%>/images/kinkowan_map.png" alt="錦江湾" loading="lazy">
+            </div>
+            <div class="p-top__groundText">
+              <p>日本で最も古いかんぱち養殖の歴史を持つ鹿児島・錦江湾は、通年絶えず黒潮が流れ込み、プランクトンが豊富で良質な漁場です。</p>
+              <p>潮流が早く身の引き締まった魚が育つため、暖流魚であるかんぱちをおいしく育てるのにこの上ないポテンシャルを秘めています。</p>
+              <p>全国シェア50％以上のかんぱちが水揚げされる、このかんぱち大国・錦江湾で、私たちの「極上 三ツ星かんぱち」は育っています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include('_include/_footer.ejs', {meta: meta}); %>
+  </div>
+  <%- include('_include/_script.ejs', {meta: meta}); %>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+// -------------------------------------------------------------------
+// 	information.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.p-information {
+  width: 980px;
+  margin:120px auto 0;
+
+  @include med.media(sp) {
+    width: 90%;
+    margin-top: 21.33vw;
+  }
+
+  &__search {
+    background-color: #F7F7F7;
+    display: flex;
+    align-items: center;
+    padding: 30px;
+
+    @include med.media(sp) {
+      padding: 5.33vw 2.65vw 2.65vw 5.33vw;
+      flex-wrap: wrap;
+    }
+
+    > dt {
+      font-weight: bold;
+      font-size: 20px;
+      margin-right: 30px;
+      @include med.media(sp) {
+        font-size: 4.8vw;
+        margin-right: 0;
+      }
+    }
+
+    > dd {
+      @include med.media(sp) {
+        margin-top: 5.33vw;
+      }
+    }
+  }
+
+  &__searchList {
+    display: flex;
+    @include med.media(sp) {
+      flex-wrap: wrap;
+    }
+
+    > li {
+      margin-right: 10px;
+      transition: opacity 0.3s;
+      cursor: pointer;
+
+      @include med.media(sp) {
+        margin-right: 2.65vw;
+        margin-bottom: 2.65vw;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__linkArea {
+    margin-top: 60px;
+  }
+
+  &__moreBtnWrap {
+    width: 220px;
+    margin: 60px auto 0;
+    @include med.media(sp) {
+      width: 58.65vw;
+      margin-top: 10.65vw;
+    }
+  }
+
+  &__bottom {
+    margin-top: 60px;
+    @include med.media(sp) {
+      margin-top: 10.65vw;
+    }
+  }
+
+  &__pickUp {
+    margin-bottom: 60px;
+    @include med.media(sp) {
+      margin-bottom: 21.33vw;
+    }
+  }
+
+  &__pickUpHeading {
+    font-size: 30px;
+    border-left: 4px solid #c19c30;
+    padding-left: 8px;
+    line-height: 1;
+    letter-spacing: 1.5px;
+    @include med.media(sp) {
+      font-size: 6vw;
+    }
+  }
+
+  &__pickUpList {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+
+    @include med.media(sp) {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      margin-top: 10.65vw;
+    }
+
+    > li {
+      margin-right: 25px;
+      &:last-child {
+        margin-right: 0;
+        @include med.media(sp) {
+          margin-bottom: 0;
+        }
+      }
+
+      @include med.media(sp) {
+        margin-right: 0;
+        margin-bottom: 10.65vw;
+      }
+    }
+  }
+
+  &__pickUpItem {
+    width: 310px;
+    > a {
+      display: block;
+      &:hover {
+        transition: opacity 0.3s;
+        opacity: 0.7;
+
+        > p {
+          transition: color 0.3s;
+          color: #c19c30;
+          text-decoration: underline;
+        }
+      }
+    }
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  &__pickUpImg {
+    height: 220px;
+
+    @include med.media(sp) {
+      height: 64vw;
+    }
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 3px 3px 6px rgb(0 0 0 / 10%);
+    }
+  }
+
+  &__pickUpLabel {
+    margin-top: 16px;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    > span {
+      display: inline-block;
+    }
+
+    @include med.media(sp) {
+      padding-left: 1vw;
+      margin-top: 2.65vw;
+    }
+  }
+
+  &__pickUpDate {
+    font-size: 14px;
+    margin-right: 20px;
+    @include med.media(sp) {
+      font-size: 5.05vw;
+      margin-right: 2.65vw;
+    }
+  }
+
+  &__pickUpTitle {
+    font-size: 15px;
+    padding-left: 12px;
+    margin-top: 8px;
+    line-height: 1.8;
+    @include med.media(sp) {
+      padding-left: 1vw;
+      margin-top: 2vw;
+      font-size: 3.73vw;
+    }
+  }
+}

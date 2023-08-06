@@ -1,0 +1,40 @@
+// -------------------------------------------------------------------
+//  variables.scss
+// -------------------------------------------------------------------
+
+// Width
+// -------------------------------------------------------------------
+$BREAK_POINT_SP: 960px;
+$BREAK_POINT_TABLET: 960px;
+$ADJUST_SP_POINT: 640px;
+
+// Font
+// -------------------------------------------------------------------
+$BASE_FONT_SIZE: 14;
+$BASE_FONT_SIZE_SP: 12;
+// $BASE_FONT_FAMILY: 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+// $EN_FONT_FAMILY: Arial, Helvetica, Roboto, 'Droid Sans', 'ヒラギノ角ゴ Pro W3', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, sans-serif;
+
+// Font
+// -------------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Noto+Sans:wght@400;700&family=Sawarabi+Mincho&display=swap');
+@font-face {
+	font-family: 'TimesFont';
+	src: url(../font/times.otf);
+}
+
+$SAWARABI: 'Sawarabi Mincho', serif;
+$NOTOSANS_JP: 'Noto Sans JP', sans-serif;
+$NOTOSANS: 'Noto Sans', sans-serif;
+$TIMES: 'TimesFont';
+$MINCHO: 'ヒラギノ明朝 ProN W3', 'HiraMinProN-W3', 'HG明朝E', 'ＭＳ Ｐ明朝', 'MS PMincho', 'MS 明朝', serif;
+
+
+// Color
+// -------------------------------------------------------------------
+$BASE_TEXT_COLOR: #000;
+$COMMON_BLUE: #10193D;
+// HeaderColor $DARK_BLUE
+$DARK_BLUE: #121B39;
+$ACCENT_GOLD: #C19C30;
+$GLOBAL_MENU_COLOR: #E4E4E4;

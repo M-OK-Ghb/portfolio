@@ -1,0 +1,159 @@
+// -------------------------------------------------------------------
+//  inquiry.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.p-inquiry {
+  width: 980px;
+  margin: 120px auto 100px;
+  @include med.media(sp) {
+    width: 90%;
+    margin-top: 21.33vw;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.5;
+    @include med.media(sp) {
+      font-size: 3.73vw;
+      line-height: 1.8;
+    }
+  }
+
+  &__formArea {
+    margin-top: 60px;
+    border: 1px solid #707070;
+    @include med.media(sp) {
+      margin-top: 10.65vw;
+    }
+
+    > dl {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__formItem {
+    display: flex;
+    border-bottom: 1px solid #707070;
+    align-items: stretch;
+    @include med.media(sp) {
+      flex-wrap: wrap;
+    }
+
+    > dt {
+      display: flex;
+      align-items: center;
+      width: 144px;
+      font-size: 15px;
+      font-weight: bold;
+      color: #707070;
+      background-color: #EEEEEE;
+      min-height: 80px;
+      line-height: 1.5;
+      padding-left: 20px;
+
+      @include med.media(sp) {
+        width: 100%;
+        font-size: 4vw;
+        padding-left: 0;
+        justify-content: center;
+        min-height: unset;
+        height: 12vw;
+        line-height: 12vw;
+      }
+
+      > label {
+        cursor: auto;
+      }
+    }
+
+    > dd {
+      display: flex;
+      align-items: center;
+      flex: 1;
+      color: #707070;
+      font-size: 15px;
+      padding: 20px 0;
+
+      @include med.media(sp) {
+        padding: 5.33vw 0;
+        font-size: 4vw;
+      }
+
+      > span {
+        display: inline-block;
+        width: 100%;
+
+        span {
+          // contactform7 css調整
+          &.wpcf7-not-valid-tip {
+            margin-left: 5%;
+            margin-top: 10px;
+            @include med.media(sp) {
+              margin-left: 0;
+              font-size: 3.5vw;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      input, textarea {
+        border: 1px solid #B7B7B7;
+        width: 90%;
+        margin-left: 5%;
+        padding: 10px;
+      }
+
+      input {
+        height: 40px;
+        @include med.media(sp) {
+          height: 10.65vw;
+        }
+      }
+
+      textarea {
+        min-height: 100px;
+        line-height: 1.2;
+        resize: none;
+        @include med.media(sp) {
+          min-height: 26.65vw;
+        }
+      }
+    }
+  }
+
+  &__submitWrap {
+    width: 220px;
+    margin: 50px auto 0;
+    @include med.media(sp) {
+      width: 58.65vw;
+    }
+  }
+
+  // contactform7 css調整
+  form {
+    // エラー時のメッセージカラー
+    .wpcf7-response-output {
+      border: none !important;
+      text-align: center;
+      color: #dc3232;
+      font-size: 18px;
+      line-height: 1.5;
+      @include med.media(sp) {
+        text-align: left;
+        font-size: 4vw;
+      }
+    }
+
+    // 送信完了時のメッセージカラー
+    &.sent {
+      .wpcf7-response-output {
+        color: #000;
+      }
+    }
+  }
+}

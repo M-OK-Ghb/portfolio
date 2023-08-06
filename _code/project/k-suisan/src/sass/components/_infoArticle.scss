@@ -1,0 +1,95 @@
+// -------------------------------------------------------------------
+// 	infoArticle.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-infoArticle {
+  > li {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #B7B7B7;
+    margin-bottom: 20px;
+    @include med.media(sp) {
+      padding-bottom: 2.65vw;
+      margin-bottom: 8vw;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    > a {
+      display: block;
+      transition: opacity 0.3s;
+      > dl {
+        display: flex;
+        align-items: center;
+  
+        > dt {
+          margin-right: 20px;
+          font-size: 14px;
+          @include med.media(sp) {
+            margin-right: 2.65vw;
+            font-size: 5.05vw;
+          }
+        }
+      }
+
+      &:hover {
+        opacity: 0.7;
+        > p {
+          color: var.$ACCENT_GOLD;
+          text-decoration: underline;
+        }
+      }
+
+      > p {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.8;
+        transition: color 0.3s;
+  
+        @include med.media(sp) {
+          margin-top: 2.65vw;
+          font-size: 3.73vw;
+        }
+      }
+    }
+
+    > dl {
+      display: flex;
+      align-items: center;
+
+      > dt {
+        margin-right: 20px;
+        font-size: 14px;
+        @include med.media(sp) {
+          margin-right: 2.65vw;
+          font-size: 5.05vw;
+        }
+      }
+    }
+
+    > p {
+      margin-top: 10px;
+      font-size: 15px;
+      line-height: 1.8;
+
+      @include med.media(sp) {
+        margin-top: 2.65vw;
+        font-size: 3.73vw;
+      }
+    }
+
+    &.itemNone {
+      border: none;
+      > p {
+        font-size: 18px;
+        line-height: 2;
+        @include med.media(sp) {
+          font-size: 4.2vw;
+        }
+      }
+    }
+  }
+}

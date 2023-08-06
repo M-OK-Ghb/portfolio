@@ -1,0 +1,44 @@
+// -------------------------------------------------------------------
+// 	swiperEdit.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-swiper {
+  &.p-amberjack__top {
+    margin-top: 30px;
+  }
+
+  &__wrapper {
+    > li {
+      > img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  .c-swiper__pagination {
+    position: static;
+    margin-top: 10px;
+    text-align: center;
+    > span {
+      margin-right: 10px;
+    }
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    &.swiper-pagination-bullet-active {
+      background-color: var.$ACCENT_GOLD;
+    }
+  }
+
+  &.c-cooking__swiper {
+    margin-top: 60px;
+    @include med.media(sp) {
+      margin-top: 10.65vw;
+    }
+  }
+}

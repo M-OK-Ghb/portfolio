@@ -1,0 +1,144 @@
+// -------------------------------------------------------------------
+// 	productsList.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-productsList {
+  width: 980px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
+  &.itemPage {
+    margin-top: 60px;
+    margin-bottom: 120px;
+    @include med.media(sp) {
+      margin-top: 10.65vw;
+      margin-bottom: 20vw;
+    }
+  }
+
+  @include med.media(sp) {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+
+  >  li {
+    position: relative;
+    width: 310px;
+    height: 220px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgb(0 0 0 / 10%);
+    background-color: #EEEEEE;
+    border: 2px solid #eee;
+    margin-right: 25px;
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover {
+      transition: 0.3s border-color;
+      border-color: var.$ACCENT_GOLD;
+    }
+
+    &.stripedJack {
+      @include med.media(sp) {
+        order: 1;   
+      }
+    }
+
+    &.theBestAmberjack {
+      @include med.media(sp) {
+        order: 0;
+      }
+    }
+
+    &.kawahagi {
+      @include med.media(sp) {
+        order: 2;
+      }
+    }
+
+    @include med.media(sp) {
+      width: 100%;
+      height: 58.65vw;
+      margin-bottom: 5.33vw;
+      margin-right: 0;
+    }
+
+    > a {
+      display: block;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      transition: opacity 0.3s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      img {
+        &.stripedJack {
+          width: 245px;
+          height: 125px;
+          margin-top: 10px;
+          @include med.media(sp) {
+            width: 65.33vw;
+            height: auto;
+            margin-top: 4.25vw;
+          }
+        }
+
+        &.theBestAmberjack {
+          width: 270px;
+          height: 85px;
+          margin-top: 24px;
+          @include med.media(sp) {
+            width: 72vw;
+            height: auto;
+            margin-top: 8.5vw;
+          }
+        }
+
+        &.kawahagi {
+          width: 205px;
+          height: 103px;
+          margin-top: 20px;
+          @include med.media(sp) {
+            width: 54.65vw;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  &__textWrap {
+    text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 32px;
+    @include med.media(sp) {
+      bottom: 8.54vw;
+    }
+  }
+
+  &__text {
+    font-size: 17px;
+    @include med.media(sp) {
+      font-size: 4.25vw;
+    }
+  }
+
+  &__textEn {
+    font-family: var.$MINCHO;
+    font-size: 14px;
+    margin-top: 8px;
+    @include med.media(sp) {
+      font-size: 3.46vw;
+      margin-top: 3.2vw;
+    }
+  }
+}

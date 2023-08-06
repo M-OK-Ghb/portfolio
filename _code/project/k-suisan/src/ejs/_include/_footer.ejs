@@ -1,0 +1,32 @@
+<%
+  const btnData = {
+    size: 200
+  }
+%>
+
+<footer class="l-footer">
+  <h2 class="l-footer__heading">
+    <a href="<%= meta.path %>/">
+      <img src="<%= meta.path %>/images/site_logo.svg" alt="三代目 柿内水産" loading="lazy">
+    </a>
+  </h2>
+  <nav class="l-footer__nav">
+    <ul class="l-footer__globalMenu">
+      <li><a href="<%= meta.path %>/the-best-amberjack/">極上 三ツ星かんぱちとは</a></li>
+      <li><a href="<%= meta.path %>/products/">取り扱い商品</a></li>
+      <li><a href="<%= meta.path %>/information/">お知らせ</a></li>
+      <li><a href="<%= meta.path %>/history/">柿内水産の歴史</a></li>
+      <li><a href="<%= meta.path %>/company/">会社情報</a></li>
+    </ul>
+  </nav>
+  <dl class="l-footer__inquiryArea">
+    <dt>仕入れ、ご購入についてはこちらから</dt>
+    <dd>
+      <%- include('parts/_inquiryBtn.ejs', {btnData: btnData}); %>
+    </dd>
+  </dl>
+  <div class="l-footer__bottom">
+    <p class="l-footer__address">柿内水産有限会社　<br class="is-sp">〒893-0053　鹿児島県 鹿屋市 浜田町 204</p>
+    <p class="l-footer__copy">Copyright © Kakiuchi suisan LLC. All Rights Reserved.</p>
+  </div>
+</footer>

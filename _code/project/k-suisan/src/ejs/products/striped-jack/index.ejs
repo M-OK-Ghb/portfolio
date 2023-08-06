@@ -1,0 +1,106 @@
+<%
+  const meta = {
+    title: "三ツ星 しまあじ - 取り扱い商品 - 柿内水産",
+    description: "三ツ星しまあじの商品詳細ページです。丁寧に育てたしまあじは、旨味成分の「アラニン」が一般と比べて10倍含まれ、爽やかな甘みが特徴です。仕入れ、ご購入は国内外問わずご相談いただけます。",
+    path: "../..",
+    parentName: "取り扱い商品",
+    parentUrl: "products",
+    pageName: "三ツ星しまあじ",
+    pageNameEn: "Striped jack",
+    hierarchy: "third",
+    current: "product"
+  }
+%>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../_include/_head.ejs', {meta: meta}); %>
+  <body>
+    <div>
+      <%- include('../../_include/_header.ejs', {meta: meta}); %>
+      <main class="l-main">
+        <%- include('../../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+        <%- include('../../_include/parts/_subPageTopHeading.ejs', {meta: meta}); %>
+        <div class="c-productItem__fv">
+          <img src="<%= meta.path %>/images/stripedjack_fv.png" alt="三ツ星しまあじ メインビジュアル">
+          <p>三代目柿内水産の養殖技術で丁寧に育てた三ツ星しまあじは、旨味成分のアミノ酸「アラニン」が一般的なしまあじと比べ10倍含まれており、爽やかな甘みが特徴です。</p>
+        </div>
+        <div class="c-productLineup">
+          <h3 class="c-heading--middle">商品一覧</h3>
+          <p class="c-heading--middleEn">Product lineup</p>
+          <ul class="c-productLineup__list">
+            <li>
+              <div class="c-productLineup__name">
+                <p>ラウンド（丸一匹）</p>
+                <p>Round</p>
+              </div>
+              <div class="c-productLineup__img">
+                <img src="<%= meta.path %>/images/stripedjack_round.png" alt="極上三ツ星かんぱち ラウンド">
+              </div>
+              <p class="c-productLineup__text">水揚げされた「三ツ星しまあじ」を丸ごとお届け。お刺身やカルパッチョ、火入れした料理まで、三ツ星の魅力を余すことなくご堪能いただけます。</p>
+            </li>
+            <li>
+              <div class="c-productLineup__name">
+                <p>フィーレ（三枚おろし）</p>
+                <p>Filet</p>
+              </div>
+              <div class="c-productLineup__img">
+                <img src="<%= meta.path %>/images/stripedjack_filet.png" alt="極上三ツ星かんぱち フィーレ">
+              </div>
+              <p class="c-productLineup__text">頭と内臓を取り除き、三枚におろした状態。手軽にお刺身にすることができ、カマもついているので、塩焼きや煮つけなどにもお使いいただけます。真空包装してお届けします。</p>
+            </li>
+          </ul>
+        </div>
+        <div class="c-cooking">
+          <h3 class="c-heading--middle">調理例</h3>
+          <p class="c-heading--middleEn">Cooking example</p>
+          <!-- swiper cookingArea -->
+          <div class="c-swiper c-cooking__swiper">
+            <div class="swiper-container slider2">
+              <ul class="c-swiper__wrapper swiper-wrapper">
+                <li class="swiper-slide">
+                  <img src="<%= meta.path %>/images/cooking_stripedjack_1.png" alt="三ツ星しまあじ 調理例1">
+                  <!--<p>テキスト表示の際のDOM</p>-->
+                </li>
+                <li class="swiper-slide">
+                  <img src="<%= meta.path %>/images/cooking_stripedjack_2.png" alt="三ツ星しまあじとは 調理例2">
+                </li>
+                <li class="swiper-slide">
+                  <img src="<%= meta.path %>/images/cooking_stripedjack_3.png" alt="三ツ星しまあじとは 調理例3">
+                </li>
+                <li class="swiper-slide">
+                  <img src="<%= meta.path %>/images/cooking_stripedjack_4.png" alt="三ツ星しまあじとは 調理例4">
+                </li>
+                <li class="swiper-slide">
+                  <img src="<%= meta.path %>/images/cooking_stripedjack_5.png" alt="三ツ星しまあじとは 調理例5">
+                </li>
+              </ul>
+            </div>
+            <div class="c-swiper__pagination swiper-pagination-cooking"></div>
+          </div>
+        </div>
+        <section class="c-productItem__chart">
+          <h3 class="c-heading--middle">三ツ星のおいしさ</h3>
+          <p class="c-heading--middleEn">Deliciousness</p>
+          <div class="c-productItem__chartDetail single">
+            <div class="c-productItem__graphWrap">
+              <img src="<%= meta.path %>/images/stripedjack_deli_graph.svg" alt="三ツ星の美味しさ グラフ">
+            </div>
+            <!--テキスト無しの時はグラフをセンター寄せ c-productItem__chartDetailにマルチクラスでsingleを付与-->
+            <!-- <div class="c-productItem__textInfo">
+              <h4>甘みと旨味、ここに極まる</h4>
+              <p>
+                通常の三倍の手間ひまをかけて育てた、一般的なかんぱちの数倍～十数倍の甘みと旨味を持つ三ツ星しまあじです。<br>
+                国内の三ツ星レストランなどでもその味わい深さが認められ、お取り扱いいただいています。
+              </p>
+            </div> -->
+          </div>
+        </section>
+        <%- include('../../_include/parts/_inquiryArea.ejs', {meta: meta}); %>
+        <%- include('../../_include/parts/_productsList.ejs', {meta: meta}); %>
+        <%- include('../../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+      </main>
+      <%- include('../../_include/_footer.ejs', {meta: meta}); %>
+    </div>
+    <%- include('../../_include/_script.ejs', {meta: meta}); %>
+  </body>
+</html>

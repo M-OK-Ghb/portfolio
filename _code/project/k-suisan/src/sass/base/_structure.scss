@@ -1,0 +1,38 @@
+// -------------------------------------------------------------------
+//  structure.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+html, body {
+  height: 100%;  
+}
+
+body {
+  @include mix.fontsize(var.$BASE_FONT_SIZE);
+  @include med.media(sp) {
+    @include mix.fontsize(var.$BASE_FONT_SIZE_SP);
+  }
+  color: var.$BASE_TEXT_COLOR;
+  font-family: var.$NOTOSANS_JP;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+
+  &.is-open {
+    overflow-y: hidden;
+  }
+}
+
+@include med.media(sp) {
+  body {
+    overflow-x: hidden;
+  }
+  .screen {
+    overflow-x: hidden;
+  }
+  .wrapper {
+    overflow-x: hidden;
+  }
+}

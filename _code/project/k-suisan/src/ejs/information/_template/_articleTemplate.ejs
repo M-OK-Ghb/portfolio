@@ -1,0 +1,60 @@
+<div class="c-article">
+  <dl class="c-article__date">
+    <dt>2022/06/30</dt>
+    <dd>
+      <span class="c-label <%= meta.category %>"><%= meta.labelName %></span>
+    </dd>
+  </dl>
+  <section class="c-article__content">
+    <h2 class="c-article__heading"><%= meta.pageName %></h2>
+    <!-- wp the_content部分 -->
+    <div class="c-article__field">
+      <p>
+        <img src="<%= meta.path %>/images/article_dummy.png" alt="ダミー画像">
+      </p>
+      <p>ここにテキストが入ります。ここにテキスト<a href="#">文中リンクテスト</a>テキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。 ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。<br>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+      <p>margin確認</p>
+      <p>&nbsp;</p>
+      <p>&nbsp;</p>
+      <h3>強調小見出し　ここにテキストが入ります。ここにテキストが入ります。</h3>
+      <p>
+        <img src="<%= meta.path %>/images/article_dummy.png" alt="ダミー画像">
+      </p>
+      <!-- shortcode [画像キャプション] -->
+      <span class="c-article__imgCaption">画像キャプションが入ります。</span>
+      <ul class="c-article__discList">
+        <li><span>ここにテキストが入ります。ここに<a href="#">リンクを入れられ</a>ます。ここにテキストが入ります。</span></li>
+        <li><span>長文テキストテスト長文テキストテスト長文テキストテスト長文テキストテスト長文テキストテスト長文テキストテスト長文テキストテスト長文テキストテスト</span></li>
+        <li><span>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</span></li>
+      </ul>
+
+      <!-- shortcode [画像ダブル] -->
+      <div class="c-article__imgDouble">
+        <div class="c-article__imgDoubleItem">
+          <img src="<%= meta.path %>/images/article_dummy.png" alt="ダミー画像">
+        </div>
+        <div class="c-article__imgDoubleItem">
+          <img src="<%= meta.path %>/images/article_dummy.png" alt="ダミー画像">
+        </div>
+      </div>
+      <!--shortcode [用語ブロック] -->
+      <div class="c-article__descriptionBlock">
+        <h4>用語タイトル</h4>
+        <p>ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。ここにテキストが入ります。</p>
+      </div>
+      <!--shortcode [内部リンクブロック]-->
+      <div class="c-article__link icon-arrow">
+        <a href="#">
+          <span>テキストリングが入ります。テキストリングが入ります。テキストリングが入ります。</span>
+        </a>
+      </div>
+      <!--shortcode [外部リンクブロック]-->
+      <div class="c-article__link icon-external">
+        <a href="#" target="_blank">
+          <span>テキストリングが入ります。テキストリングが入ります。テキストリングが入ります。</span>
+        </a>
+      </div>
+      <!--ここまでshortcode対応-->
+    </div>
+  </section>
+</div>

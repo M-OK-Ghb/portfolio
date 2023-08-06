@@ -1,0 +1,39 @@
+// -------------------------------------------------------------------
+//  products.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.p-products {
+  &__textWrap {
+    width: 980px;
+    margin: 120px auto 0;
+    @include med.media(sp) {
+      width: 90%;
+      margin-top: 21.33vw;
+    }
+
+    > p {
+      line-height: 1.8;
+      font-size: 14px;
+      margin: 20px auto 0;
+      max-width: 800px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @include med.media(sp) {
+        font-size: 3.73vw;
+        margin-top: 5.33vw;
+      }
+    }
+  }
+
+  &__listWrap {
+    margin-top: 60px;
+    @include med.media(sp) {
+      margin-top: 21.33vw;
+    }
+  }
+}

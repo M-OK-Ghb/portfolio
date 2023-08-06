@@ -1,0 +1,80 @@
+<%
+  const meta = {
+    title: "極上 三ツ星かんぱちとは - 柿内水産",
+    description: "「極上 三ツ星かんぱち」とは、甘みと旨味が一般的なかんぱちと比べ数倍から十数倍に達した「柿内水産」オリジナルブランド。養殖に最適な錦江湾で育った、天然ものを越える鮮烈な味と爽やかな香りのかんぱちです。",
+    path: "..",
+    pageName: "極上 三ツ星かんぱちとは",
+    pageNameEn: "The best amberjack",
+    hierarchy: "second",
+    current: "amberjack"
+  }
+%>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../_include/_head.ejs', {meta: meta}); %>
+  <body>
+    <div>
+      <%- include('../_include/_header.ejs', {meta: meta}); %>
+      <main class="l-main">
+        <%- include('../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+        <div class="l-main__contentInner">
+          <%- include('../_include/parts/_subPageTopHeading.ejs', {meta: meta}); %>
+          <div class="p-amberjack">
+            <!-- swiper -->
+            <div class="c-swiper p-amberjack__top">
+              <div class="swiper-container slider1">
+                <ul class="c-swiper__wrapper swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img src="<%= meta.path %>/images/amberjack_top_1.png" alt="極上 三ツ星かんぱちとは 1">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= meta.path %>/images/amberjack_top_2.png" alt="極上 三ツ星かんぱちとは 2">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= meta.path %>/images/amberjack_top_3.png" alt="極上 三ツ星かんぱちとは 3">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= meta.path %>/images/amberjack_top_4.png" alt="極上 三ツ星かんぱちとは 4">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= meta.path %>/images/amberjack_top_5.png" alt="極上 三ツ星かんぱちとは 5">
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= meta.path %>/images/amberjack_top_6.png" alt="極上 三ツ星かんぱちとは 6">
+                  </li>
+                </ul>
+              </div>
+              <div class="c-swiper__pagination swiper-pagination"></div>
+            </div>
+            <div class="p-amberjack__feature">
+              <div class="p-amberjack__logo">
+                <img src="<%= meta.path %>/images/kanpachi_logo.svg" alt="極上 三ツ星かんぱち ロゴ">
+              </div>
+              <ol class="p-amberjack__featureList">
+                <li>
+                  <h3>一、圧倒的な味と香り</h3>
+                  <p>天然モノのような爽やかな香りに加え、甘みや旨味が一般的なかんぱち（文科省基準）に比べ数倍から数十倍あります。</p>
+                </li>
+                <li>
+                  <h3>二、漁場の良さ</h3>
+                  <p>漁場は、天然のプランクトンを運ぶ黒潮が絶えない錦江湾。暖海域を好むかんぱちの養殖に最適な環境で育てています。</p>
+                </li>
+                <li>
+                  <h3>三、エサと手間ひま</h3>
+                  <p>栄養バランスに優れたみずみずしい生餌ベースのエサを使用しており、従来の固形飼料（EP）に比べ3倍の手間をかけています。</p>
+                </li>
+              </ol>
+            </div>
+            <%- include('../_include/parts/_amberjackChart.ejs', {meta: meta}); %>
+            <%- include('../_include/parts/_amberjackCooking.ejs', {meta: meta}); %>
+            <%- include('../_include/parts/_amberjackProducts.ejs', {meta: meta}); %>
+          </div>
+        </div>
+        <%- include('../_include/parts/_inquiryArea.ejs', {meta: meta}); %>
+        <%- include('../_include/parts/_breadCrumbs.ejs', {meta: meta}); %>
+      </main>
+      <%- include('../_include/_footer.ejs', {meta: meta}); %>
+    </div>
+    <%- include('../_include/_script.ejs', {meta: meta}); %>
+  </body>
+</html>

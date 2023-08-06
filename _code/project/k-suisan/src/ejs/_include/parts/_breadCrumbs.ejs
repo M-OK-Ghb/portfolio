@@ -1,0 +1,21 @@
+<% if(meta.pageName === '柿内水産の歴史') { %>
+<ol class="c-breadCrumbs history">
+<% } else { %>
+<ol class="c-breadCrumbs">
+<% } %>
+  <li>
+    <a href="<%= meta.path %>/">TOP</a>
+  </li>
+  <% if(meta.hierarchy === 'second') { %>
+  <li>
+    <a href="#"><%= meta.pageName %></a>
+  </li>
+  <% } else if(meta.hierarchy === 'third') { %>
+  <li>
+    <a href="<%= meta.path %>/<%= meta.parentUrl %>/"><%= meta.parentName %></a>
+  </li>
+  <li>
+    <a href="#"><%= meta.pageName %></a>
+  </li>
+  <% } %>
+</ol>
