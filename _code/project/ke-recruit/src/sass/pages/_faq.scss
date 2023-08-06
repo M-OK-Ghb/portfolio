@@ -1,0 +1,177 @@
+// -------------------------------------------------------------------
+//  FAQ - faq.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.p-faq {
+  &__itemWrap {
+    width: 70%;
+    margin: 60px auto 0;
+    padding: 100px 0;
+    @include med.media(sp) {
+      width: 90%;
+      padding: 10vw 0;
+    }
+  }
+
+  &__item {
+    margin-bottom: 120px;
+    @include med.media(sp) {
+      margin-bottom: 20vw;
+    }
+  }
+
+  &__itemHeading {
+    color: #323232;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 60px;
+    @include med.media(sp) {
+      font-size: 5vw;
+      margin-bottom: 10vw;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    > li {
+      margin-top: 60px;
+      position: relative;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @include med.media(sp) {
+        margin-top: 8vw;
+      }
+    }
+  }
+
+  &__itemText {
+    display: flex;
+    font-size: 16px;
+    line-height: 2;
+    > span {
+      font-family: var.$FONT_RALEWAY;
+      display: inline-block;
+      margin-right: 12px;
+      @include med.media(sp) {
+        margin-right: 3.2vw;
+      }
+    }
+
+    @include med.media(sp) {
+      font-size: 3.6vw;
+      line-height: 1.8;
+    }
+  }
+
+  &__toggleBtnWrap {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  &__toggleBtn {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    @include med.media(sp) {
+      width: 3.2vw;
+      height: 3.2vw;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    > span {
+      display: inline-block;
+
+      &::before, &::after {
+        content:'';
+        position:absolute;
+        top:15px;
+        right:0;
+        width:15px;
+        height:2px;
+        background-color:#333;
+
+        @include med.media(sp) {
+          top: 3.2vw;
+          width: 3.2vw;
+        }
+      }
+
+      &::after {
+        transition: transform 0.3s;
+        transform: rotate(-90deg);
+      }
+    }
+  }
+
+  &__question {
+    border-bottom: 2px dotted #bababa;
+    padding-bottom: 8px;
+    transition: opacity 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+    
+    @include med.media(sp) {
+      padding-right: 5%;
+      padding-bottom: 2.2vw;
+    }
+
+    &.is-open {
+      .p-faq__toggleBtn {
+        > span {
+          &::after {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+  }
+
+  &__answer {
+    max-height: 0;
+    margin-top: 20px;
+    overflow: hidden;
+    transition: max-height 0.7s;
+
+    @include med.media(sp) {
+      margin-top: 5.5vw;
+    }
+
+    &.is-open {
+      max-height: 400px;
+
+      @include med.media(tb) {
+        max-height: 750px;
+      }
+    }
+
+    > p {
+      > a {
+        text-decoration: underline;
+        transition: opacity 0.3;
+        color: #004FA2;
+        font-weight: bold;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}

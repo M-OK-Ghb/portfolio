@@ -1,0 +1,35 @@
+// -------------------------------------------------------------------
+// 	label.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+$MYPAGE_COLOR: #416491;
+$NEWS_COLOR: #003F93;
+
+.c-label {
+  display: inline-block;
+  font-size: 16px;
+  color: #fff;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  padding:0 10px;
+  min-width: 100px;
+
+  &.c-label--mypage {
+    background-color: $MYPAGE_COLOR;
+  }
+
+  &.c-label--news {
+    background-color: $NEWS_COLOR;
+  }
+
+  @include med.media(sp) {
+    font-size: 3.2vw;
+    height: 4.4vw;
+    line-height: 4.4vw;
+    min-width: 80px;
+  }
+}

@@ -1,0 +1,211 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/_head.ejs', { data: dataSet } ) %>
+  <body>
+    <div>
+      <%- include('../../include/_header.ejs', { data: dataSet } ) %>
+      <main class="c-subPage__main">
+        <div class="c-breadCrumbs">
+          <ul class="c-breadCrumbs__list">
+            <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+            <li><a href="<%= dataSet.srcpath %>people/">PEOPLE -社員インタビュー</a></li>
+          </ul>
+        </div>
+        <div class="p-peopleDetail">
+          <div class="p-peopleDetail__firstVisual js-loadFadeIn">
+            <div class="p-peopleDetail__topImg">
+              <img class="pc" src="<%= dataSet.srcpath %>images/detail_firstvisual_7.jpg" alt="インタビュー詳細 ファーストビジュアル">
+              <img class="sp" src="<%= dataSet.srcpath %>images/detail_firstvisual_sp_7.jpg" alt="インタビュー詳細 ファーストビジュアル">
+            </div>
+            <div class="p-peopleDetail__topTextWrap">
+              <p class="p-peopleDetail__topLabel se">
+                <span>SE</span>
+              </p>
+              <p class="p-peopleDetail__topLead">大切なのはコミュニケーション<br>お客様の思いを、システムで実現するために。</p>
+              <p class="p-peopleDetail__topName">K.M. / 第二システム部</p>
+              <p class="p-peopleDetail__topText">2016年新卒として入社。<br>VDI（仮想デスクトップ）案件やMicrosoftが提供しているクラウドサービス「Azure AD」関連のプロジェクトマネージャーとして、クラウドサービスを担当する。</p>
+            </div>
+          </div>
+          <div class="p-peopleDetail__content js-scrollFloatFadeIn">
+            <div class="p-peopleDetail__contentInner">
+              <div class="p-peopleDetail__contentBg"></div>
+              <div class="p-peopleDetail__contentWrap">
+                <div class="p-peopleDetail__spSpace">
+                  <div class="p-peopleDetail__contentFirst">
+                    <div class="p-peopleDetail__contentFirstImg">
+                      <img src="<%= dataSet.srcpath %>images/detail_left_7.jpg" alt="インタビュー　素材1">
+                    </div>
+                    <div class="p-peopleDetail__contentFirstText p-peopleDetail__info">
+                      <h3>SEとしての基盤を築き、<br>段階的に成長できる環境がある。</h3>
+                      <p>大学までは英文学を学んでいて、留学経験もありました。でも就職活動をする際、英語を仕事にするのはピンと来なくて。もともと1つのことに集中するタイプで、性格的にも営業職よりもエンジニアの方が合っているかなと思い、KELの面接を受けました。<span>KELには社員同士がフランクにコミュニケーションをとれる環境があり、年次の高い先輩にも気軽に相談できます。</span>私は入社５年目ですが、6年上の先輩ともよくご飯に行きますよ。</p>
+                      <p>1年目は研修でさまざまなことを身につけ、2年目にはマンツーマンのOJT制度で少しずつ現場に馴染んでいくことができました。研修後は現場に出て、まずは先輩のフォローの下、短期の案件から始めます。</p>
+                      <p>先輩のやり方を見ながら「自分だったらどうするかな」と考え、だんだんと長期の大型案件も任されるようになっていきました。段階的に成長していけるので、SEとしての基盤を作るには非常に良い環境だと思います。</p>
+                    </div>
+                  </div>
+                  <div class="p-peopleDetail__contentSecond">
+                    <div class="p-peopleDetail__contentSecondImg">
+                      <img src="<%= dataSet.srcpath %>images/detail_right_7.jpg" alt="インタビュー　素材2">
+                    </div>
+                    <div class="p-peopleDetail__contentSecondText p-peopleDetail__info">
+                      <h3>お客様からの信頼が、<br>自信になっていく。</h3>
+                      <p>私はもともとVDI（仮想デスクトップ）のエンジニアですが、VDIは奥が深いですね。今教えている後輩も、4年目の半ばぐらいから「独り立ちしたな」と思います。私も4年目ぐらいから自信がついてきました。今は５年目ですが、VDIの案件ではリーダーや担当に任命されることもあります。</p>
+                      <p><span>自信がついてくると喋り方が変わるので、お客様からの信頼度も変わってきます。</span>「（案件の内容を）持って帰ります」という感じだと、お客様も「大丈夫かな」と心配になるかもしれません。最近では私が「念のためメーカーさんに確認しますね」とお伝えすると、「近藤さんが言うなら調べなくてもいいよ」と言われることも。もちろん念には念を入れて確認は怠りませんが、お客様から信頼されているなと感じる瞬間ですね。</p>
+                    </div>
+                  </div>
+                  <div class="p-peopleDetail__contentFirst">
+                    <div class="p-peopleDetail__contentFirstImg">
+                      <img src="<%= dataSet.srcpath %>images/detail_left_7_2.jpg" alt="インタビュー　素材3">
+                    </div>
+                    <div class="p-peopleDetail__contentFirstText p-peopleDetail__info">
+                      <h3>満足度を上げるのは、<br>密なコミュニケーション。</h3>
+                      <p>仕事のやり方は、プロジェクトの設計フェーズと構築フェーズで異なります。設計の段階では、社内や在宅での資料作りが中心。それが終わると今度は構築フェーズで、案件の規模にもよりますが、2週間から1ヶ月くらいの出張もありますね。KELは近年クラウドにも力を入れ始めていますが、基本的にはデータセンターなど現地に赴いての作業が中心です。</p>
+                      <p>ゴールはいつも、システムリリース。お客様に満足していただくまでは、やはり緊張感が続きます。<br>当社はパッケージ製品を売るのではなく、お客様の要望に合わせたカスタマイズが求められます。<span>お客様のやりたいことをできるかぎり実現するには、密なコミュニケーションが最も重要</span>ですね。技術も求められますが、話さないとシステムはできません。</p>
+                    </div>
+                  </div>
+                  <div class="p-peopleDetail__contentCenterText p-peopleDetail__info">
+                    <h3>お客様の考えていることを、<br>システムとして表現したい。</h3>
+                    <p>お客様のイメージを具現化するには、「設定値をどうしますか」と問いかけるだけでは理解されません。「そもそも設定値がどういうものか」「これで何ができるのか」からご納得いただくには、言葉での説明力が求められます。下手でもいいので「何回も伝えて、伝わるまでやる」根気が大切ですね。</p>
+                    <p>私はお客様と頻繁に連絡をとり、フランクにやり取りしていただけるよう意識しています。<span>親しくなればなるほど、プロジェクトもやりやすい</span>ですね。相手が何を考えているのかをしっかり受け取り、それをシステムとして表現できるのが一人前のSEだと思います。
+                      将来的には、リリースまで1～2年かかるような大型案件のプロジェクトマネージャーをやってみたいです。今は短期間で全力疾走する案件が多いので、長期でじっくり構築する案件にもチャレンジしていきたいですね。</p>
+                  </div>
+                </div>
+                <div class="p-peopleDetail__contentImg">
+                  <img src="<%= dataSet.srcpath %>images/detail_middle_7.jpg" alt="メインイメージ">
+                </div>
+                <div class="p-peopleDetail__clientMessage p-peopleDetail__info">
+                  <h3>心に残るお客様の一言</h3>
+                  <h4>「次も近藤さんにお願いしたい」</h4>
+                  <p>プロジェクトマネージャーとしての案件が終了した際に、お客様から頂いた一言です。提案時のヒアリングが不足しており、設計フェーズになってお客様から「本当はこういうことがしかったんだ」という要求が出てきました。メーカーへの確認などを迅速に行い、真摯に対応した結果「最終的にこれがやりたかったんです」と、ご満足いただけたのは嬉しかったですね。</p>
+                </div>
+                <div class="p-peopleDetail__offtime">
+                  <div class="p-peopleDetail__offtimeLabel se">
+                    <span>OFF TIME</span>
+                  </div>
+                  <div class="p-peopleDetail__offtimeContents">
+                    <p class="p-peopleDetail__offtimeText">ディズニーが大好きです。学生時代は年間パスポートを持っていて、月2回は通っていました。社会人になっても、ディズニーのために有休を取って行くほど好きです。場内の全エリアを把握しているので、友人と行くと「何も考えなくていいからラク」と喜ばれるほど（笑）。アメリカやフランス、香港など世界のディズニーランドも制覇しました。</p>
+                    <div class="p-peopleDetail__offtimeImg">
+                      <img src="<%= dataSet.srcpath %>images/detail_offtime_7.jpg" alt="オフタイム">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--営業とSEで管理-->
+        <div class="p-peopleDetail__otherMember js-scrollFloatFadeIn">
+          <h3 class="p-peopleDetail__otherMemberHeading">同職種の社員インタビュー</h3>
+          <ul class="p-peopleDetail__otherMemberList">
+            <li>
+              <a href="#">
+                <div class="p-peopleDetail__memberImg">
+                  <img src="<%= dataSet.srcpath %>images/other_interview_6.jpg" alt="">
+                  <span class="se">SE</span>
+                </div>
+                <div class="p-peopleDetail__memberText">
+                  <p class="p-peopleDetail__memberLead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                  <p class="p-peopleDetail__memberName">第一ソリューション営業本部部長<br><span>S.N.</span></p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="p-peopleDetail__memberImg">
+                  <img src="<%= dataSet.srcpath %>images/other_interview_7.jpg" alt="">
+                  <span class="se">SE</span>
+                </div>
+                <div class="p-peopleDetail__memberText">
+                  <p class="p-peopleDetail__memberLead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                  <p class="p-peopleDetail__memberName">第一ソリューション営業本部部長<br><span>S.N.</span></p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="p-peopleDetail__memberImg">
+                  <img src="<%= dataSet.srcpath %>images/other_interview_8.jpg" alt="">
+                  <span class="se">SE</span>
+                </div>
+                <div class="p-peopleDetail__memberText">
+                  <p class="p-peopleDetail__memberLead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                  <p class="p-peopleDetail__memberName">第一ソリューション営業本部部長<br><span>S.N.</span></p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="p-peopleDetail__memberImg">
+                  <img src="<%= dataSet.srcpath %>images/other_interview_10.jpg" alt="">
+                  <span class="se">SE</span>
+                </div>
+                <div class="p-peopleDetail__memberText">
+                  <p class="p-peopleDetail__memberLead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                  <p class="p-peopleDetail__memberName">第一ソリューション営業本部部長<br><span>S.N.</span></p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--インタビュー一覧と共通パーツ-->
+        <div class="p-people__movieArea detailPage js-scrollFloatFadeIn">
+          <div class="p-mainPeople__talkInfo peoplePage">
+            <div class="p-mainPeople__textWrap peoplePage">
+              <h3 class="p-mainPeople__talkHeading">社員インタビュー</h3>
+              <p>KELで働く営業、エンジニアの先輩社員に職種別でインタビュー。<br>入社したきっかけ、仕事内容、社内の雰囲気や仕事のやりがいについて<br class="pc">語っていただきました。</p>
+            </div>
+          </div>
+          <div class="p-mainPeople__videoWrap peoplePage">
+            <div class="p-mainPeople__video">
+              <button class="p-mainPeople__videoThumb js-modalOpenBtn">
+                <span class="p-mainPeople__videoBtn">
+                  <span>
+                    <img src="<%= dataSet.srcpath %>images/movie_btn.svg" alt="btn">
+                  </span>
+                  <span class="p-mainPeople__videoBtnText">PLAY MOVIE</span>
+                </span>
+                <img src="<%= dataSet.srcpath %>images/top_talk_sales_thumb.png" alt="営業インタビュー">
+                <span class="p-mainPeople__overLay"></span>
+              </button>
+              <p>社員インタビュー 営業編</p>
+            </div>
+            <div class="p-mainPeople__video p-mainPeople__video--second">
+              <button class="p-mainPeople__videoThumb js-modalOpenBtn">
+                <span class="p-mainPeople__videoBtn">
+                  <span>
+                    <img src="<%= dataSet.srcpath %>images/movie_btn.svg" alt="btn">
+                  </span>
+                  <span class="p-mainPeople__videoBtnText">PLAY MOVIE</span>
+                </span>
+                <img src="<%= dataSet.srcpath %>images/top_talk_se_thumb.png" alt="SEインタビュー">
+                <span class="p-mainPeople__overLay"></span>
+              </button>
+              <p>社員インタビュー SE編</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-people__movieAreaBtnWrap">
+          <div class="c-circleBtn p-peopleMovieArea">
+            <a href="<%= dataSet.srcpath %>people/">
+              <span class="c-circleBtn__circle">
+                <span class="c-circleBtn__arrow"></span>
+              </span>
+              <span class="c-circleBtn__text">全ての社員インタビューを見る</span>
+            </a>
+          </div>
+        </div>
+        <%- include('../../include/_movieModal.ejs', { data: dataSet } ) %>
+        <%- include('../../include/parts/_entryBtn.ejs') %>
+      </main>
+      <%- include('../../include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script>
+  </body>
+</html>

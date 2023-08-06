@@ -1,0 +1,19 @@
+// -------------------------------------------------------------------
+// 	fadeInFv.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.js-sub-fvImg {
+  > img {
+    transition: opacity 1.25s ease-in;
+    opacity: 0;
+  }
+
+  &.is-show {
+    > img {
+      opacity: 1;
+    }
+  }
+}

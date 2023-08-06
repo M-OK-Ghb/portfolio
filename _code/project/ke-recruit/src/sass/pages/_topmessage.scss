@@ -1,0 +1,86 @@
+// -------------------------------------------------------------------
+//  Top - topmessage.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.p-mainMessage {
+  margin-top: 200px;
+  padding-left: 6.875%;
+  padding-right: 10.5%;
+  @include med.media(sp) {
+    padding: 0 5%;
+    margin-top: 32vw;
+  }
+
+  &__inner {
+    position: relative;
+  }
+
+  &__headWrap {
+    position: absolute;
+    top: -63px;
+    right: 0;
+    @include med.media(sp) {
+      top: -10vw;
+      right: 12.5%;
+    }
+  }
+
+  &__titleSub {
+    font-size: 24px;
+    font-weight: bold;
+    padding-left: 40px;
+    margin-top: 10px;
+    @include med.media(sp) {
+      font-size: 4.26vw;
+      margin-top: 1vw;
+      padding-left: 10vw;
+    }
+  }
+
+  &__catch {
+    width: 55%;
+    > img {
+      width: 100%;
+    }
+
+    @include med.media(sp) {
+      width: 90%;
+      margin: auto;
+    }
+  }
+
+  &__textWrap {
+    background-color: #FAFAFA; 
+    padding: 140px 0 80px 200px;
+    @include med.media(sp) {
+      padding: 20vw 8vw 10vw;
+    }
+  }
+
+  &__text {
+    width: 65%;
+    font-size: 18px;
+    line-height: 2;
+    margin-top: 40px;
+    @include med.media(sp) {
+      width: 100%;
+      font-size: 3.5vw;
+      margin-top: 10.65vw;
+    }
+  }
+
+  &__link {
+    margin-top: 40px;
+
+    @include med.media(sp) {
+      margin-top: 10.65vw;
+
+      > a {
+        justify-content: flex-end;
+      }
+    }
+  }
+}

@@ -1,0 +1,121 @@
+<%
+  const data = {
+    isTop: false,
+    title: "Culture | NOS 新卒採用サイト",
+    description: "",
+    path: "../..",
+    imgPath: "../../images",
+    commonImgPath: "../../images/common",
+    current: "culture",
+    hierarchy: "third",
+    crumbsText: "数字で見るNOS",
+    crumbsUrl: "number",
+    crumbsParentText: "CULTURE",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../../include/common/_header.ejs', {data: data}); %>
+      <main class="p-sub__main">
+        <%- include('../../include/common/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-sub__fv">
+          <div class="p-sub__fvImg js-sub-fvImg">
+            <img class="is-pc" src="<%= data.imgPath %>/kv/culture_number.webp" alt="キービジュアル <%= data.crumbsText %>">
+            <img class="is-sp" src="<%= data.imgPath %>/kv/culture_number_sp.webp" alt="キービジュアル <%= data.crumbsText %>">
+          </div>
+          <section class="p-sub__topSection">
+            <h1 class="c-heading --culture p-sub__topHeading js-sub-titleTop">
+              <img src="<%= data.commonImgPath %>/heading_culture.svg" alt="<%= data.current %>">
+            </h1>
+            <p class="c-headingSub"><span>数字で見るNOS</span></p>
+          </section>
+        </div>
+        <div class="p-sub__contents js-scrollFadeIn --block">
+          <p class="p-sub__description">NOSはどのような会社か？会社について、働く人について、特徴的な数字を集めてみました。</p>
+        </div>
+        <section class="p-culture__number">
+          <h2 class="p-culture__numberTitle">
+            <span class="icon --first">
+              <img src="<%= data.commonImgPath %>/01_white.svg" alt="01">
+            </span>
+            <span class="text">全体（全社員）の数字</span>
+          </h2>
+          <div class="p-culture__graphArea">
+            <p class="p-culture__graphDate">※2022年3月31日時点</p>
+            <div class="p-culture__graph--top">
+              <img src="<%= data.imgPath %>/culture/graph1_1.svg" alt="graph 全体">
+            </div>
+            <ul class="p-culture__graph--middle">
+              <li>
+                <div class="p-culture__graphImgWrap">
+                  <img src="<%= data.imgPath %>/culture/graph1_2.svg" alt="男女比 グラフ">
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__graphImgWrap">
+                  <img src="<%= data.imgPath %>/culture/graph1_3.svg" alt="職種 割合">
+                </div>
+              </li>
+            </ul>
+            <ul class="p-culture__graph--middle --spOneClm">
+              <li>
+                <div class="p-culture__graphImgWrap">
+                  <img src="<%= data.imgPath %>/culture/graph1_4.svg" alt="平均年齢">
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__graphImgWrap">
+                  <img src="<%= data.imgPath %>/culture/graph1_5.svg" alt="平均年齢">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="p-culture__number">
+          <h2 class="p-culture__numberTitle">
+            <span class="icon --second">
+              <img src="<%= data.commonImgPath %>/02_white.svg" alt="02">
+            </span>
+            <span class="text">入社1年目～3年目に聞いた<br class="is-sp">数字でみるNOS</span>
+          </h2>
+          <div class="p-culture__graphArea">
+            <p class="p-culture__graphDate">※2022年3月31日時点</p>
+            <ul class="p-culture__graph--middle --noBorder --spOneClm">
+              <li>
+                <div class="p-culture__graphImgWrap">
+                  <img src="<%= data.imgPath %>/culture/graph2_1.svg" alt="部活動・サークル">
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__graphImgWrap">
+                  <img src="<%= data.imgPath %>/culture/graph2_2.svg" alt="服装">
+                </div>
+              </li>
+            </ul>
+            <ul class="p-culture__graph--middle --spOneClm">
+              <li>
+                <div class="p-culture__graphImgWrap">
+                  <img src="<%= data.imgPath %>/culture/graph2_3.svg" alt="入社の決め手">
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__graphImgWrap">
+                  <img src="<%= data.imgPath %>/culture/graph2_4.svg" alt="ランチタイムの過ごし方">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <%- include('../_linkCard.ejs', {data: data}); %>
+        <%- include('../../include/common/_entryBottom.ejs', {data: data}); %>
+      </main>
+      <%- include('../../include/common/_scrollTop.ejs', {data: data}); %>
+      <%- include('../../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

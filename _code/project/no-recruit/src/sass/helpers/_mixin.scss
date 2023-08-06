@@ -1,0 +1,24 @@
+// -------------------------------------------------------------------
+//  mix.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+@mixin lightHover {
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+@mixin underLineHover {
+  transition: opacity 0.3s;
+  &:hover {
+    opacity: 0.5;
+    text-decoration: underline;
+  }
+}
+
+@mixin gradationSet {
+  background: transparent linear-gradient(117deg, #E8E8E80A 0%, #272B8E1A 100%) 0% 0% no-repeat padding-box;
+}

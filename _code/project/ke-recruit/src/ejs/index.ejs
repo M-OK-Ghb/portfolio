@@ -1,0 +1,35 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: './',
+    page: 'top'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('include/_head.ejs', { data: dataSet } ) %>
+  <body class="js-topBody" data-page="top">
+    <div>
+      <%- include('include/_loading.ejs') %>
+      <main class="p-topMain">
+        <%- include('include/_topfirstvisual.ejs', { data: dataSet } ) %>
+        <div class="p-main__content" id="js-main-content">
+          <%- include('include/_header.ejs', { data: dataSet } ) %>
+          <%- include('include/_mission.ejs', { data: dataSet } ) %>
+          <%- include('include/_message.ejs', { data: dataSet } ) %>
+          <%- include('include/_people.ejs', { data: dataSet } ) %>
+          <%- include('include/_culture.ejs', { data: dataSet }) %>
+          <div class="p-mainBottom">
+            <%- include('include/parts/_entryBtn.ejs') %>
+          </div>
+          <%- include('include/_movieModal.ejs', { data: dataSet } ) %>
+        </div>
+      </main>
+      <%- include('include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/swiper.min.js"></script>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script>
+  </body>
+</html>

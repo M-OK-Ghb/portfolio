@@ -1,0 +1,191 @@
+// -------------------------------------------------------------------
+//  footer.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.l-footer {
+  background-color: #2B2B2B;
+  padding: 7.33vw 11.94vw 1.47vw;
+
+  @include med.media(sp) {
+    padding: 21.33vw 5.33vw 5.33vw;
+  }
+
+  &__logo {
+    width: 18.6vw;
+    margin: 5.86vw auto 0;
+
+    > a {
+      display: block;
+
+      > img {
+        width: 100%;
+      }
+
+      @include mix.lightHover;
+    }
+
+    @include med.media(sp) {
+      width: 78vw;
+      margin-top: 16vw;
+    }
+  }
+
+  &__bottom {
+    margin-top: 5.5vw;
+    display: flex;
+    justify-content: space-between;
+    @include med.media(sp) {
+      margin-top: 21.5vw;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__globalMenu {
+    display: flex;
+    justify-content: space-between;
+
+    @include med.media(sp) {
+      display: block;
+    }
+
+    > li {
+      @include med.media(sp) {
+        margin-bottom: 10.67vw;
+      }
+    }
+  }
+
+  &__copy {
+    font-size: 0.73vw;
+    color: #C4C4C4;
+    @include med.media(sp) {
+      width: 100%;
+      order: 1;
+      margin-top: 2.7vw;
+      font-size: 2.7vw;
+      text-align: center;
+    }
+  }
+
+  &__exLinkWrap {
+    display: flex;
+    flex-wrap: wrap;
+    @include med.media(sp) {
+      order: 0;
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__exLink {
+    line-height: 1;
+    > a {
+      line-height: 1;
+      display: block;
+      @include mix.lightHover;
+
+       > span {
+         display: inline-block;
+         font-size: 0.88vw;
+         color: #C4C4C4;
+
+         @include med.media(sp) {
+           font-size: 2.93vw;
+         }
+
+         > img {
+          width: 0.44vw;
+          vertical-align: middle;
+          margin-left: 0.5vw;
+          padding-bottom: 0.2vw;
+          @include med.media(sp) {
+            width: 1.33vw;
+            margin-left: 1.25vw;
+          }
+        }
+      }
+    }
+
+    &.--border {
+      > a {
+        > span {
+          border-right: 1px solid #c4c4c4;
+          padding-right: 0.75vw;
+          margin-right: 0.75vw;
+          @include med.media(sp) {
+            padding-right: 2.7vw;
+            margin-right: 2.7vw;
+          }
+        }
+      }
+    }
+  }
+
+  &__itemHeading {
+    > a {
+      @include mix.lightHover;
+      display: block;
+
+      > span {
+        display: block;
+        &:nth-child(1) {
+          color: #FFF;
+          font-family: var.$EN_FONT_BASIC;
+          font-size: 1.32vw;
+          letter-spacing: 0.11vw;
+          margin-bottom: 0.25vw;
+
+          @include med.media(sp) {
+            font-size: 5.33vw;
+            letter-spacing: 0.43vw;
+            margin-bottom: 1.1vw;
+          }
+        }
+
+        &:nth-child(2) {
+          color: #C3C3C3;
+          font-size: 0.73vw;
+          @include med.media(sp) {
+            font-size: 2.93vw;
+          }
+        }
+      }
+    }
+  }
+
+  &__subMenu {
+    margin-top: 1.47vw;
+
+    @include med.media(sp) {
+      margin-top: 5.33vw;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    > li {
+      margin-bottom: 0.58vw;
+      > a {
+        display: block;
+        color: #FFF;
+        font-size: 0.88vw;
+        border-left: 1px solid #FFF;
+        padding-left: 0.25vw;
+        line-height: 1;
+        @include mix.underLineHover;
+
+        @include med.media(sp) {
+          font-size: 3.73vw;
+          padding-left: 1.33vw;
+        }
+      }
+
+      @include med.media(sp) {
+        margin-right: 4vw;
+        margin-bottom: 2.67vw;
+      }
+    }
+  }
+}

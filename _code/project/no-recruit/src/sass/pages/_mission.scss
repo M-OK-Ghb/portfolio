@@ -1,0 +1,493 @@
+// -------------------------------------------------------------------
+//  mission.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.p-mission {
+  &__philosophy {
+    position: relative;
+    z-index: 2;
+    background-color: #FFF;
+    padding: 6.6vw 11.72vw 9.52vw;
+    @include med.media(sp) {
+      padding: 20vw 0 80vw;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 1.465vw;
+    line-height: 1.6;
+    color: var.$ACCENT_BLUE;
+    @include med.media(sp) {
+      font-size: 4.27vw;
+      line-height: 1.6875;
+    }
+  }
+
+  &__philosophyTextArea {
+    width: 36.63vw;
+    margin-top: 4.4vw;
+    margin-left: 4.4vw;
+    @include med.media(sp) {
+      width: 89.33vw;
+      margin: 13.33vw auto 0;
+    }
+  }
+
+  &__philosophyList {
+    margin-top: 3.66vw;
+    > li {
+      margin-bottom: 1.76vw;
+
+      &:nth-child(2) {
+        padding-left: 1.68vw;
+        @include med.media(sp) {
+          padding-left: 2.67vw;
+        }
+      }
+
+      &:nth-child(3) {
+        padding-left: 3.36vw;
+        @include med.media(sp) {
+          padding-left: 5.34vw;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include med.media(sp) {
+        margin-bottom: 8vw;
+      }
+    }
+
+    @include med.media(sp) {
+      margin-top: 13.33vw;
+    }
+  }
+
+  &__philosophyItem {
+    > dl {
+      display: flex;
+
+      dt {
+        font-size: 1.03vw;
+        line-height: 1;
+        font-weight: bold;
+        color: var.$ACCENT_BLUE;
+        margin-right: 0.733vw;
+        @include med.media(sp) {
+          font-size: 3.73vw;
+          margin-right: 2.13vw;
+        }
+      }
+
+      dd {
+        line-height: 1;
+        > p {
+          &:nth-child(1) {
+            font-weight: bold;
+            font-size: 1.17vw;
+            line-height: 1;
+            @include med.media(sp) {
+              font-size: 4vw;
+            }
+          }
+
+          &:nth-child(2) {
+            font-size: 1.03vw;
+            line-height: 1.71;
+            margin-top: 0.733vw;
+            @include med.media(sp) {
+              font-size: 3.47vw;
+              margin-top: 4vw;
+              padding-right: 6vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__philosophyVision {
+    position: absolute;
+    bottom: -5vw;
+    left: 0;
+    width: 62vw;
+    > img {
+      width: 100%;
+    }
+
+    @include med.media(sp) {
+      width: 34.67vw;
+      top: 0;
+      left: inherit;
+      bottom: inherit;
+      right: 0;
+    }
+  }
+
+  &__philosophyImg {
+    width: 35.16vw;
+    position: absolute;
+    top: -3vw;
+    right: 0;
+    > img {
+      width: 100%;
+    }
+    @include med.media(sp) {
+      width: 94.67vw;
+      top: inherit;
+      bottom: -32vw;
+    }
+  }
+
+  &__business {
+    padding-top: 7.33vw;
+    padding-bottom: 7.33vw;
+    position: relative;
+    @include med.media(sp) {
+      padding-top: 46.67vw;
+      padding-bottom: 105.33vw;
+    }
+  }
+
+  &__heading {
+    margin-left: 11.94vw;
+    @include med.media(sp) {
+      margin-left: 5.33vw;
+    }
+
+    &.--philosophy {
+      margin-left: 0;
+      @include med.media(sp) {
+        margin-left: 5.33vw;
+      }
+    }
+  }
+
+  &__businessImg {
+    width: 33.7vw;
+    position: absolute;
+    top: 13.4vw;
+    left: 0;
+
+    > img {
+      width: 100%;
+    }
+
+    @include med.media(sp) {
+      width: 94.67vw;
+      top: inherit;
+      bottom: 13.33vw;
+    }
+  }
+
+  &__businessTop {
+    width: 51.28vw;
+    margin-top: 2.5vw;
+    margin-left: 37vw;
+
+    @include med.media(sp) {
+      width: 89.33vw;
+      margin: 13.33vw auto 0;
+    }
+  }
+
+  &__businessText {
+    margin-top: 2.93vw;
+
+    @include med.media(sp) {
+      margin-top: 10.67vw;
+    }
+
+    > p {
+      font-size: 1.03vw;
+      line-height: 1.71;
+      margin-bottom: 1.8vw;
+
+      @include med.media(sp) {
+        margin-bottom: 5vw;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include med.media(sp) {
+        font-size: 3.47vw;
+      }
+
+      > span {
+        font-weight: bold;
+        color: var.$ACCENT_BLUE;
+      }
+    }
+  }
+
+  &__graphArea {
+    width: 76.2vw;
+    margin: 14.65vw auto 0;
+    position: relative;
+    z-index: 1;
+    > dl {
+      margin-bottom: 5.86vw;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include med.media(sp) {
+        margin-bottom: 26.67vw;
+      }
+    }
+
+    @include med.media(sp) {
+      width: 94.67vw;
+      margin: 20vw auto 0;
+    }
+  }
+
+  &__graphList {
+    display: flex;
+    justify-content: space-between;
+
+    @include med.media(sp) {
+      display: block;
+      width: 100%;
+    }
+
+    > dt {
+      height: 4.76vw;
+      display: flex;
+      align-items: center;
+
+      @include med.media(sp) {
+        height: auto;
+      }
+
+      > span {
+        display: inline-block;
+        &.--number {
+          margin-right: 1.465vw;
+
+          @include med.media(sp) {
+            margin-right: 4vw;
+          }
+
+          &.--first {
+            width: 6.6vw;
+            > img {
+              width: 100%;
+            }
+
+            @include med.media(sp) {
+              width: 20.4vw;
+            }
+          }
+
+          &.--second {
+            width: 8.06vw;
+            > img {
+              width: 100%;
+            }
+
+            @include med.media(sp) {
+              width: 24.93vw;
+            }
+          }
+        }
+
+        &.--text {
+          font-size: 1.61vw;
+          font-weight: bold;
+          color: var.$ACCENT_BLUE;
+          @include med.media(sp) {
+            font-size: 5.07vw;
+          }
+        }
+      }
+    }
+
+    > dd {
+      width: 51.28vw;
+
+      @include med.media(sp) {
+        width: 100%;
+        margin-top: 5.86vw;
+      }
+
+      > img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__systemList {
+    display: flex;
+    justify-content: space-between;
+    > li {
+      width: 48.6%;
+      padding: 4.4vw 5.86vw;
+      background-color: #FFF;
+      border-radius: 2.93vw;
+      box-shadow: 0px 3px 6px #00000029;
+    }
+
+    @include med.media(sp) {
+      display: block;
+      > li {
+        width: 100%;
+        margin-bottom: 8vw;
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        padding: 12.67vw 0 10.67vw;
+      }
+    }
+  }
+
+  &__systemIcon {
+    width: 100%;
+    > img {
+      width: 100%;
+    }
+
+    @include med.media(sp) {
+      width: 50%;
+      margin: auto;
+    }
+  }
+
+  &__systemText {
+    margin-top: 1.465vw;
+    font-size: 1.32vw;
+    font-weight: bold;
+    color: var.$ACCENT_BLUE;
+    text-align: center;
+    @include med.media(sp) {
+      font-size: 4.27vw;
+      margin-top: 6vw;
+    }
+  }
+
+  &__message {
+    background-color: #FFF;
+    padding: 7.33vw 0;
+
+    @include med.media(sp) {
+      padding: 20vw 0;
+    }
+  }
+
+  &__messageContents {
+    width: 67.4vw;
+    margin: 4.4vw auto 0;
+
+    @include med.media(sp) {
+      width: 89.33vw;
+      margin: 13.33vw auto 0;
+    }
+  }
+
+  &__presidentCopy {
+    color: var.$ACCENT_BLUE;
+    font-weight: bold;
+    font-size: 1.32vw;
+    @include med.media(sp) {
+      font-size: 4.27vw;
+      line-height: 1.6875;
+    }
+  }
+
+  &__messageText {
+    margin-top: 2.2vw;
+
+    @include med.media(sp) {
+      margin-top: 8vw;
+    }
+
+    > p {
+      font-size: 1.03vw;
+      line-height: 1.71;
+      margin-bottom: 1.4vw;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include med.media(sp) {
+        font-size: 3.47vw;
+        margin-bottom: 4vw;
+      }
+    }
+  }
+
+  &__president {
+    position: relative;
+    margin-top: 4.4vw;
+    padding-left: 3.2%;
+    @include med.media(sp) {
+      margin-top: 10.67vw;
+      padding-left: 1.33vw;
+    } 
+  }
+
+  &__presidentImg {
+    width: 100%;
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__presidentLabel {
+    position: absolute;
+    bottom: 4.4vw;
+    left: 0;
+    > p {
+      line-height: 1;
+    }
+
+    @include med.media(sp) {
+      bottom: 4vw;
+      left: 0;
+    }
+  }
+
+  &__presidentTitle {
+    margin-bottom: 0.73vw;
+    > span {
+      display: inline-block;
+      background-color: #191919;
+      color: #FFF;
+      font-size: 0.88vw;
+      padding: 0.44vw;
+      @include med.media(sp) {
+        font-size: 3.47vw;
+        padding: 0.8vw;
+      }
+    }
+
+    @include med.media(sp) {
+      margin-bottom: 2.67vw;
+    }
+  }
+
+  &__presidentName {
+    > span {
+      display: inline-block;
+      background-color: var.$ACCENT_BLUE;
+      color: #FFF;
+      font-size: 1.32vw;
+      padding: 0.44vw;
+      @include med.media(sp) {
+        font-size: 4.27vw;
+        padding: 1.07vw;
+      }
+    }
+  }
+}

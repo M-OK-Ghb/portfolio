@@ -1,0 +1,195 @@
+// -------------------------------------------------------------------
+//  sub.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.p-sub {
+  &__main {
+    padding-top: 5.86vw;
+    background: transparent linear-gradient(117deg, #E8E8E80A 0%, #272B8E1A 100%) 0% 0% no-repeat padding-box;
+    @include med.media(sp) {
+      background:transparent linear-gradient(125deg, #E8E8E800 0%, #272B8E1F 100%) 0% 0% no-repeat padding-box; 
+      padding-top: 16vw;
+    }
+  }
+
+  &__fvImg {
+    > img {
+      width: 100%;
+      @include med.media(sp) {
+        height: 74.67vw;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__topSection {
+    margin-left: 9vw;
+    margin-top: -4vw;
+    @include med.media(sp) {
+      margin-left: 2.67vw;
+      margin-top: -8vw;
+    }
+  }
+
+  &__contents {
+    width: 76.2vw;
+    margin: 3.67vw auto 0;
+
+    &.--pb {
+      padding-bottom: 7.33vw;
+      @include med.media(sp) {
+        padding-bottom: 20vw;
+      }
+    }
+
+    @include med.media(sp) {
+      width: 89.33vw;
+      margin-top: 13.33vw;
+    }
+  }
+
+  &__description {
+    font-size: 1.32vw;
+    line-height: 1.78;
+    @include med.media(sp) {
+      font-size: 4.27vw;
+      line-height: 1.5625;
+    }
+
+    > a {
+      font-weight: bold;
+      text-decoration: underline;
+      @include mix.lightHover;
+    }
+  }
+
+  &__pageList {
+    margin-top: 7.33vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    > li {
+      width: 48%;
+      > a {
+        transition: opacity 0.3s;
+        display: block;
+        position: relative;
+
+        &:hover {
+          opacity: 0.7;
+          .p-sub__pageImg {
+            > img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+
+    &.--multiColumn {
+      > li {
+        margin-bottom: 3.66vw;
+        @include med.media(sp) {
+          margin-bottom: 10.67vw;
+          &:last-child {
+            margin-bottom: 0;
+          }  
+        }
+      }
+    }
+
+    @include med.media(sp) {
+      margin-top: 20vw;
+      display: block;
+      > li {
+        width: 100%;
+        margin-bottom: 10.67vw;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__pageImg {
+    width: 100%;
+    overflow: hidden;
+    > img {
+      transition: transform 0.5s;
+      width: 100%;
+    }
+  }
+
+  &__pageTextArea {
+    position: absolute;
+    bottom: 2.2vw;
+    left: -1.2vw;
+    @include med.media(sp) {
+      bottom: 5.3vw;
+      left: -2.5vw;
+    }
+  }
+
+  &__pageLabel {
+    > span {
+      font-size: 1.47vw;
+      padding: 0.44vw;
+      display: inline-block;
+      color: #FFF;
+      background-color: var.$LIST_LABEL_COLOR;
+      @include med.media(sp) {
+        font-size: 4.53vw;
+        padding: 1.07vw;
+      }
+    }
+
+    &.sales {
+      > span {
+        background-color: var.$SALES_COLOR;
+      }
+    }
+
+    &.se {
+      > span {
+        background-color: var.$SE_COLOR;
+      } 
+    }
+  }
+
+  &__pageText {
+    position: relative;
+    width: 30.77vw;
+    margin-top: 1.6vw;
+    margin-left: 2.2vw;
+    color: #FFF;
+    font-size: 1.32vw;
+    line-height: 1.78;
+    &::after {
+      content: "";
+      position: absolute;
+      right: -2.5vw;
+      bottom: 0;
+      background-image: url(../images/common/icon_arrow_right_white.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 0.586vw;
+      height: 1.465vw;
+
+      @include med.media(sp) {
+        width: 1.6vw;
+        height: 4vw;
+      }
+    }
+
+    @include med.media(sp) {
+      width: 73.33vw;
+      font-size: 4.27vw;
+      letter-spacing: 0.085vw;
+      margin-top: 4.7vw;
+      margin-left: 8vw;
+    }
+  }
+}

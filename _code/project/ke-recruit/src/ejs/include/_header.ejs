@@ -1,0 +1,6 @@
+<%# topPageのみ別Headerを利用 %>
+<% if (data.page === 'top') { %>
+  <%- include('_headerTop.ejs') %>
+<% } else { %>
+  <%- include('_headerCommon.ejs') %>
+<% } %>

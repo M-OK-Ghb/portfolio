@@ -1,0 +1,233 @@
+<%
+  const data = {
+    isTop: false,
+    title: "People | NOS 新卒採用サイト",
+    description: "",
+    path: "..",
+    imgPath: "../images",
+    commonImgPath: "../images/common",
+    current: "people",
+    hierarchy: "second",
+    crumbsText: "PEOPLE -社員インタビュー",
+    crumbsUrl: "",
+    crumbsParentText: "",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../include/common/_header.ejs', {data: data}); %>
+      <main class="p-sub__main">
+        <%- include('../include/common/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-sub__fv">
+          <div class="p-sub__fvImg js-sub-fvImg">
+            <img class="is-pc" src="<%= data.imgPath %>/kv/people.webp" alt="キービジュアル <%= data.crumbsText %>">
+            <img class="is-sp" src="<%= data.imgPath %>/kv/people_sp.webp" alt="キービジュアル <%= data.crumbsText %>">
+          </div>
+          <section class="p-sub__topSection">
+            <h1 class="c-heading --people p-sub__topHeading js-sub-titleTop">
+              <img src="<%= data.commonImgPath %>/heading_people.svg" alt="<%= data.current %>">
+            </h1>
+            <p class="c-headingSub"><span>社員インタビュー</span></p>
+          </section>
+        </div>
+        <div class="p-sub__contents js-scrollFadeIn --block">
+          <p class="p-sub__description">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+        </div>
+        <div class="p-people">
+          <ul class="p-people__cardList">
+            <li class="c-peopleCard js-scrollFadeIn --block">
+              <a href="<%= data.path %>/people/01/">
+                <div class="c-peopleCard__img">
+                  <img src="<%= data.imgPath %>/top/swiper_person_1.jpg" alt="person 1" loading="lazy">
+                </div>
+                <div class="c-peopleCard__linkBtn">
+                  <span class="text">詳しくみる</span>
+                  <span class="icon">
+                    <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                  </span>
+                </div>
+                <div class="c-peopleCard__text">
+                  <p class="c-peopleCard__label"><span class="se">SE</span></p>
+                  <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                  <p class="c-peopleCard__message">
+                    <span>テキストが入ります。テキス</span>
+                    <span>トが入ります。テキス</span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="c-peopleCard js-scrollFadeIn --block">
+              <a href="<%= data.path %>/people/sample/">
+                <div class="c-peopleCard__img">
+                  <img src="<%= data.imgPath %>/top/swiper_person_2.jpg" alt="person 2" loading="lazy">
+                </div>
+                <div class="c-peopleCard__linkBtn">
+                  <span class="text">詳しくみる</span>
+                  <span class="icon">
+                    <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                  </span>
+                </div>
+                <div class="c-peopleCard__text">
+                  <p class="c-peopleCard__label"><span class="sales">営業</span></p>
+                  <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                  <p class="c-peopleCard__message">
+                    <span>テキストが入ります。テキス</span>
+                    <span>トが入ります。テキス</span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="c-peopleCard js-scrollFadeIn --block">
+              <a href="#">
+                <div class="c-peopleCard__img">
+                  <img src="<%= data.imgPath %>/top/swiper_person_3.jpg" alt="person 3" loading="lazy">
+                </div>
+                <div class="c-peopleCard__linkBtn">
+                  <span class="text">詳しくみる</span>
+                  <span class="icon">
+                    <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                  </span>
+                </div>
+                <div class="c-peopleCard__text">
+                  <p class="c-peopleCard__label"><span class="sales">営業</span></p>
+                  <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                  <p class="c-peopleCard__message">
+                    <span>テキストが入ります。テキス</span>
+                    <span>トが入ります。テキス</span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="c-peopleCard js-scrollFadeIn --block">
+              <a href="#">
+                <div class="p-top__peopleVisual">
+                  <div class="c-peopleCard__img">
+                    <img src="<%= data.imgPath %>/top/swiper_person_4.jpg" alt="person 4" loading="lazy">
+                  </div>
+                  <div class="c-peopleCard__linkBtn">
+                    <span class="text">詳しくみる</span>
+                    <span class="icon">
+                      <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                    </span>
+                  </div>
+                </div>
+                <div class="c-peopleCard__text">
+                  <p class="c-peopleCard__label"><span class="se">SE</span></p>
+                  <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                  <p class="c-peopleCard__message">
+                    <span>テキストが入ります。テキス</span>
+                    <span>トが入ります。テキス</span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="c-peopleCard js-scrollFadeIn --block">
+              <a href="#">
+                <div class="c-peopleCard__img">
+                  <img src="<%= data.imgPath %>/top/swiper_person_5.jpg" alt="person 5" loading="lazy">
+                </div>
+                <div class="c-peopleCard__linkBtn">
+                  <span class="text">詳しくみる</span>
+                  <span class="icon">
+                    <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                  </span>
+                </div>
+                <div class="c-peopleCard__text">
+                  <p class="c-peopleCard__label"><span class="se">SE</span></p>
+                  <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                  <p class="c-peopleCard__message">
+                    <span>テキストが入ります。テキス</span>
+                    <span>トが入ります。テキス</span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="c-peopleCard js-scrollFadeIn --block">
+              <a href="#">
+                <div class="c-peopleCard__img">
+                  <img src="<%= data.imgPath %>/top/swiper_person_6.jpg" alt="person 6" loading="lazy">
+                </div>
+                <div class="c-peopleCard__linkBtn">
+                  <span class="text">詳しくみる</span>
+                  <span class="icon">
+                    <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                  </span>
+                </div>
+                <div class="c-peopleCard__text">
+                  <p class="c-peopleCard__label"><span class="sales">営業</span></p>
+                  <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                  <p class="c-peopleCard__message">
+                    <span>テキストが入ります。テキス</span>
+                    <span>トが入ります。テキス</span>
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="c-peopleCard js-scrollFadeIn --block">
+              <a href="#">
+                <div class="c-peopleCard__img">
+                  <img src="<%= data.imgPath %>/top/swiper_person_7.jpg" alt="person 7" loading="lazy">
+                </div>
+                <div class="c-peopleCard__linkBtn">
+                  <span class="text">詳しくみる</span>
+                  <span class="icon">
+                    <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                  </span>
+                </div>
+                <div class="c-peopleCard__text">
+                  <p class="c-peopleCard__label"><span class="se">SE</span></p>
+                  <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                  <p class="c-peopleCard__message">
+                    <span>テキストが入ります。テキス</span>
+                    <span>トが入ります。テキス</span>
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="p-people__shapeImg">
+            <img src="<%= data.imgPath %>/people/shape_1.webp" alt="shape 1">
+          </div>
+        </div>
+        <div class="c-interviewArea --peopleTop">
+          <h3 class="c-interviewArea__heading">
+            <span class="icon">
+              <img src="<%= data.commonImgPath %>/icon_interview.svg" alt="MOVIE Icon" loading="lazy">
+            </span>
+            <span class="text">INTERVIEW MOVIES</span>
+          </h3>
+          <p class="c-interviewArea__text --people">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          <ul class="c-interviewArea__movie">
+            <li>
+              <div class="c-interviewArea__img js-modalOpenBtn">
+                <img src="<%= data.commonImgPath %>/movie_sales_thumb.png" alt="営業インタビュー　サムネイル" loading="lazy">
+                <button>
+                  <img src="<%= data.commonImgPath %>/icon_movie_start.svg" alt="再生ボタン" loading="lazy">
+                </button>
+              </div>
+              <p class="c-interviewArea__label">営業インタビュー</p>
+            </li>
+            <li>
+              <div class="c-interviewArea__img js-modalOpenBtn">
+                <img src="<%= data.commonImgPath %>/movie_se_thumb.png" alt="SEインタビュー　サムネイル" loading="lazy">
+                <button>
+                  <img src="<%= data.commonImgPath %>/icon_movie_start.svg" alt="再生ボタン" loading="lazy">
+                </button>
+              </div>
+              <p class="c-interviewArea__label">SEインタビュー</p>
+            </li>
+          </ul>
+        </div>
+        <%- include('../include/common/_entryBottom.ejs', {data: data}); %>
+      </main>
+      <%- include('../include/common/_scrollTop.ejs', {data: data}); %>
+      <%- include('../include/common/_modal.ejs', {data: data}); %>
+      <%- include('../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

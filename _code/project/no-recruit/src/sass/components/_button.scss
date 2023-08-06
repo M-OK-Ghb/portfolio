@@ -1,0 +1,72 @@
+// -------------------------------------------------------------------
+// 	button.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-button {
+  width: 100%;
+
+  > a {
+    position: relative;
+    text-align: center;
+  }
+
+  &.--whiteBack {
+    > a {
+      transition: background-color 0.3s;
+      background-color: #FFF;
+      border: 1px solid var.$ACCENT_BLUE;
+      display: block;
+      height: 4.4vw;
+      line-height: 4.4vw;
+      @include med.media(sp) {
+        height: 17.07vw;
+        line-height: 17.07vw;
+      }
+
+      > span {
+        transition: color 0.3s;
+        font-weight: bold;
+        font-size: 1.17vw;
+        color: var.$ACCENT_BLUE;
+        @include med.media(sp) {
+          font-size: 3.73vw;
+        }
+      }
+
+      > svg {
+        position: absolute;
+        width: 1.17vw;
+        height: 1.17vw;
+        top: 50%;
+        right: 2.2vw;
+        transform: translateY(-50%);
+        @include med.media(sp) {
+          width: 3.47vw;
+          height: 3.47vw;
+          right: 5.3vw;
+        }
+      }
+
+      &:hover {
+        background-color: var.$ACCENT_BLUE;
+
+        > span {
+          color: #FFF;
+        }
+  
+        svg {
+          line {
+            stroke: #FFF;
+          }
+  
+          path {
+            stroke: #FFF;
+          }
+        }  
+      }
+    }
+  }
+}

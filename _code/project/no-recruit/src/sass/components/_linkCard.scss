@@ -1,0 +1,58 @@
+// -------------------------------------------------------------------
+// 	linkCard.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.c-linkCard {
+  padding: 11.7vw 0 0;
+  width: 76.2vw;
+  margin: auto;
+  @include med.media(sp) {
+    width: 89.33vw;
+    padding: 29.3vw 0 0;
+  }
+}
+
+.c-linkCardList {
+  width: 97%;
+  margin: 4.4vw auto 0;
+  display: flex;
+  justify-content: space-between;
+  @include med.media(sp) {
+    width: 89.3vw;
+    margin-top: 14.67vw;
+    display: block;
+    > li {
+      width: 100%;
+      margin-bottom: 10.67vw;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &.--single {
+    justify-content: center;
+  }
+}
+
+.c-linkCardItem {
+  position: relative;
+  width: 48%;
+  > a {
+    transition: opacity 0.3s;
+    display: block;
+    position: relative;
+
+    &:hover {
+      opacity: 0.7;
+      .p-sub__pageImg {
+        > img {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

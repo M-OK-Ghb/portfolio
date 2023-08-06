@@ -1,0 +1,45 @@
+@charset "UTF-8";
+// -------------------------------------------------------------------
+//  style.scss
+// -------------------------------------------------------------------
+
+// Base
+// -------------------------------------------------------------------
+@use "base/normalize";
+@use "base/destyle";
+@use "base/structure";
+@use "base/state";
+
+// Components
+// -------------------------------------------------------------------
+@use "components/button";
+@use "components/section";
+@use "components/text";
+@use "components/heading";
+@use "components/peopleCard";
+@use "components/movieModal";
+@use "components/floatFadeIn";
+@use "components/scrollTop";
+@use "components/breadCrumbs";
+@use "components/fadeInFv";
+@use "components/linkCard";
+@use "components/interviewArea";
+@use "components/entryBottom";
+
+
+// Layout
+// -------------------------------------------------------------------
+@use "layout/header";
+@use "layout/footer";
+
+// Pages
+// -------------------------------------------------------------------
+@use "pages/top";
+@use "pages/sub";
+@use "pages/mission";
+@use "pages/culture";
+@use "pages/faq";
+@use "pages/recruit";
+@use "pages/people";
+@use "pages/peopleDetail";
+@use "pages/work";

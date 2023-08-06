@@ -1,0 +1,201 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/_head.ejs', { data: dataSet } ) %>
+  <body>
+    <div>
+      <%- include('../../include/_header.ejs', { data: dataSet } ) %>
+      <main class="c-subPage__main">
+        <div class="c-breadCrumbs">
+          <ul class="c-breadCrumbs__list">
+            <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+            <li><a href="<%= dataSet.srcpath %>people/">PEOPLE -社員インタビュー</a></li>
+          </ul>
+        </div>
+        <div class="p-peopleDetail">
+          <div class="p-peopleDetail__firstVisual js-loadFadeIn">
+            <div class="p-peopleDetail__topImg">
+              <img class="pc" src="<%= dataSet.srcpath %>images/detail_firstvisual_9.jpg" alt="インタビュー詳細 ファーストビジュアル">
+              <img class="sp" src="<%= dataSet.srcpath %>images/detail_firstvisual_sp_9.jpg" alt="インタビュー詳細 ファーストビジュアル">
+            </div>
+            <div class="p-peopleDetail__topTextWrap">
+              <p class="p-peopleDetail__topLabel sales">
+                <span>営業</span>
+              </p>
+              <p class="p-peopleDetail__topLead">お客様の「基盤」を支えている誇り、<br>それがモチベーション。</p>
+              <p class="p-peopleDetail__topName">K.M. / インダストリアルサービス一部（第一課）</p>
+              <p class="p-peopleDetail__topText">2010年新卒として入社。<br>お客様向けに、ITインフラ（ハードウェア、ソフトウェア、ネットワーク）やセキュリティ製品などを幅広く販売している。</p>
+            </div>
+          </div>
+          <div class="p-peopleDetail__content js-scrollFloatFadeIn">
+            <div class="p-peopleDetail__contentInner">
+              <div class="p-peopleDetail__contentBg"></div>
+              <div class="p-peopleDetail__contentWrap">
+                <div class="p-peopleDetail__spSpace">
+                  <div class="p-peopleDetail__contentFirst">
+                    <div class="p-peopleDetail__contentFirstImg">
+                      <img src="<%= dataSet.srcpath %>images/detail_left_9.jpg" alt="インタビュー　素材1">
+                    </div>
+                    <div class="p-peopleDetail__contentFirstText p-peopleDetail__info">
+                      <h3>大切なのは、お客様の<br>「温度感」を把握すること。</h3>
+                      <p>自然豊かな島根県で学生時代を過ごし、就職活動を始めた当初は「SEになろうかな」と考えていました。でも研修期間を経て一転、今は営業が天職だと感じています。周りからも「あなたは営業が合っている」と言われますね。</p>
+                      <p>業務では、<span>お客様の「温度感」を敏感に察知できるよう意識</span>しています。たとえばトラブルが起きた際は、お客様の現在の状況や業務影響、そういったものの総体である「温度感」を把握することが最も大切です。</p>
+                      <p>目下の業務に影響が出ているのか、それとも今は落ち着いていて原因究明をしたいのか。それによって対応は異なってきます。会話などのコミュニケーションを通して「温度感」を察知することで、本当にお客様の望む対応ができるのです。もともと感覚的なタイプですが、目の前のことを一生懸命やってきた結果、「相手の状況を把握する力」は特に身についたと思います。</p>
+                    </div>
+                  </div>
+                  <div class="p-peopleDetail__contentSecond">
+                    <div class="p-peopleDetail__contentSecondImg">
+                      <img src="<%= dataSet.srcpath %>images/detail_right_9.jpg" alt="インタビュー　素材2">
+                    </div>
+                    <div class="p-peopleDetail__contentSecondText p-peopleDetail__info">
+                      <h3>お客様の基盤を、<br>KELが支えている。</h3>
+                      <p>入社3年目のとき、先輩社員と一緒にある大手のお客様を担当させていただくことになったんです。そのお客様は当社と何十年もお付き合いがあり、私たちが日常的にサービスを受ける際のベースとなるようなものを提供されている企業でした。お客様がサービスを提供する、まさにその基盤をKELが担っていることを知り、改めて「世の中の役に立っているのだな」という実感があったのを覚えています。<span>ビジネスのベースとなる部分を、KELが支えている。このことが、私の誇りです。</span></p>
+                      <p>当社ではマルチベンダーとして多種多様なメーカーの製品を扱い、お客様ごとにカスタマイズして提供しています。幅広い製品を扱えるからこそ、「これが欲しい」というニーズに答えるだけではなく、お客様がまだ気づいてないような課題や潜在的なニーズまで考えてご提案できるのが理想ですね。私も日々、お客様の求めることに向き合い、それを実現するために何をすべきか考え抜いています。</p>
+                    </div>
+                  </div>
+                  <div class="p-peopleDetail__contentCenterText p-peopleDetail__info">
+                    <h3>KELの良さは「人」、<br>ボトムアップで成長し合える環境がある。</h3>
+                    <p>KELの好きなところは、なんといっても「人」です。気さくで素敵な方ばかりで、その風通しのよさと人材の豊富さは当社の強みだと思います。新人の頃から業務のことだけでなく、仕事における考え方なども、先輩たちが親身になってアドバイスしてくれました。先輩だろうが他部署の人であろうが、「教えてください」とお願いして適当に対応する人はいません。忙しい中でもお互いを思いやる、温かい雰囲気がありますね。</p>
+                    <p>特に近年はそれぞれの優れたところを共有し合い、みんなでボトムアップしていこうという雰囲気があり、いいなと思います。1人ひとりが尊重される環境で、「この型にはまらなくては」というガチガチの規制はありません。<span>やる気さえあれば、自分の素材をそのまま生かして活躍できるはずです。</span></p>
+                    <p>最近は課長代理として、課の数字をまとめる業務を教えていただくようになりました。まだ数ヶ月なので、なかなか全体を見ることはできていませんが、管理職の視野や考えていることを少しずつ学んでいます。こうして色々なことを教えてもらえる立場や環境にあることが、ありがたいし幸せだと感じます。せっかくチャンスを与えられたからには、私もしっかり貢献していきたいですね。</p>
+                  </div>
+                </div>
+                <div class="p-peopleDetail__contentImg">
+                  <img src="<%= dataSet.srcpath %>images/detail_middle_9.jpg" alt="メインイメージ">
+                </div>
+                <div class="p-peopleDetail__clientMessage p-peopleDetail__info">
+                  <h3>心に残るお客様の一言</h3>
+                  <h4>「本当に助かりました！ありがとうございます！」</h4>
+                  <p>今はそれほど多くありませんが、お客様の大事なシステムの導入作業中に障害が起き、休日に対応したことがありました。上司やSEとも相談し、お客様の温度感を察知。会社一丸となって真摯に対応したところ、「ありがとう！KELさんのおかげで助かったよ」という言葉をかけていただきました。お客様の「今」の状況をどう改善できるか、考え抜いてよかったと思えた瞬間です。</p>
+                </div>
+                <div class="p-peopleDetail__offtime">
+                  <div class="p-peopleDetail__offtimeLabel sales">
+                    <span>OFF TIME</span>
+                  </div>
+                  <div class="p-peopleDetail__offtimeContents">
+                    <p class="p-peopleDetail__offtimeText">カフェや自宅でのんびり過ごします。気心の知れた信頼できる知人と、お茶を飲みながら話している時間が特に好きです。いろいろな話をする中で多くの気づきが得られますし、有意義な時間を過ごしていると感じます。</p>
+                    <div class="p-peopleDetail__offtimeImg">
+                      <img src="<%= dataSet.srcpath %>images/detail_offtime_9.jpg" alt="オフタイム">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--営業とSEで管理-->
+        <div class="p-peopleDetail__otherMember js-scrollFloatFadeIn">
+          <h3 class="p-peopleDetail__otherMemberHeading">同職種の社員インタビュー</h3>
+          <ul class="p-peopleDetail__otherMemberList">
+            <li>
+              <a href="#">
+                <div class="p-peopleDetail__memberImg">
+                  <img src="<%= dataSet.srcpath %>images/other_interview_6.jpg" alt="">
+                  <span class="se">SE</span>
+                </div>
+                <div class="p-peopleDetail__memberText">
+                  <p class="p-peopleDetail__memberLead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                  <p class="p-peopleDetail__memberName">第一ソリューション営業本部部長<br><span>S.N.</span></p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="p-peopleDetail__memberImg">
+                  <img src="<%= dataSet.srcpath %>images/other_interview_7.jpg" alt="">
+                  <span class="se">SE</span>
+                </div>
+                <div class="p-peopleDetail__memberText">
+                  <p class="p-peopleDetail__memberLead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                  <p class="p-peopleDetail__memberName">第一ソリューション営業本部部長<br><span>S.N.</span></p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="p-peopleDetail__memberImg">
+                  <img src="<%= dataSet.srcpath %>images/other_interview_8.jpg" alt="">
+                  <span class="se">SE</span>
+                </div>
+                <div class="p-peopleDetail__memberText">
+                  <p class="p-peopleDetail__memberLead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                  <p class="p-peopleDetail__memberName">第一ソリューション営業本部部長<br><span>S.N.</span></p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="p-peopleDetail__memberImg">
+                  <img src="<%= dataSet.srcpath %>images/other_interview_10.jpg" alt="">
+                  <span class="se">SE</span>
+                </div>
+                <div class="p-peopleDetail__memberText">
+                  <p class="p-peopleDetail__memberLead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                  <p class="p-peopleDetail__memberName">第一ソリューション営業本部部長<br><span>S.N.</span></p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--インタビュー一覧と共通パーツ-->
+        <div class="p-people__movieArea detailPage js-scrollFloatFadeIn">
+          <div class="p-mainPeople__talkInfo peoplePage">
+            <div class="p-mainPeople__textWrap peoplePage">
+              <h3 class="p-mainPeople__talkHeading">社員インタビュー</h3>
+              <p>KELで働く営業、エンジニアの先輩社員に職種別でインタビュー。<br>入社したきっかけ、仕事内容、社内の雰囲気や仕事のやりがいについて<br class="pc">語っていただきました。</p>
+            </div>
+          </div>
+          <div class="p-mainPeople__videoWrap peoplePage">
+            <div class="p-mainPeople__video">
+              <button class="p-mainPeople__videoThumb js-modalOpenBtn">
+                <span class="p-mainPeople__videoBtn">
+                  <span>
+                    <img src="<%= dataSet.srcpath %>images/movie_btn.svg" alt="btn">
+                  </span>
+                  <span class="p-mainPeople__videoBtnText">PLAY MOVIE</span>
+                </span>
+                <img src="<%= dataSet.srcpath %>images/top_talk_sales_thumb.png" alt="営業インタビュー">
+                <span class="p-mainPeople__overLay"></span>
+              </button>
+              <p>社員インタビュー 営業編</p>
+            </div>
+            <div class="p-mainPeople__video p-mainPeople__video--second">
+              <button class="p-mainPeople__videoThumb js-modalOpenBtn">
+                <span class="p-mainPeople__videoBtn">
+                  <span>
+                    <img src="<%= dataSet.srcpath %>images/movie_btn.svg" alt="btn">
+                  </span>
+                  <span class="p-mainPeople__videoBtnText">PLAY MOVIE</span>
+                </span>
+                <img src="<%= dataSet.srcpath %>images/top_talk_se_thumb.png" alt="SEインタビュー">
+                <span class="p-mainPeople__overLay"></span>
+              </button>
+              <p>社員インタビュー SE編</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-people__movieAreaBtnWrap">
+          <div class="c-circleBtn p-peopleMovieArea">
+            <a href="<%= dataSet.srcpath %>people/">
+              <span class="c-circleBtn__circle">
+                <span class="c-circleBtn__arrow"></span>
+              </span>
+              <span class="c-circleBtn__text">全ての社員インタビューを見る</span>
+            </a>
+          </div>
+        </div>
+        <%- include('../../include/_movieModal.ejs', { data: dataSet } ) %>
+        <%- include('../../include/parts/_entryBtn.ejs') %>
+      </main>
+      <%- include('../../include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../include/_head.ejs', { data: dataSet } ) %>
+
+<body>
+  <div>
+    <%- include('../include/_header.ejs', { data: dataSet } ) %>
+    <main class="p-missionMain c-subPage__main">
+      <div class="c-breadCrumbs">
+        <ul class="c-breadCrumbs__list">
+          <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+          <li><span>事業概要・社長メッセージ</span></li>
+        </ul>
+      </div>
+      <div class="p-missionMain__content">
+        <div class="p-missionMain__firstVisual c-subPage__firstVisual">
+          <img src="<%= dataSet.srcpath %>images/mission_mv.jpg" alt="mission image">
+          <div class="c-subPage__textWrap">
+            <div class="c-subPage__textInner">
+              <div class="c-subPage__headingWrap">
+                <div class="c-subPage__headingInner">
+                  <h2 class="c-subPage__heading js-subpage-titleAnimation">MISSION</h2>
+                  <p class="c-subPage__subText js-subpage-titleAnimation">-事業概要・社長メッセージ</p>
+                </div>
+              </div>
+              <p class="c-subPage__detailText mission js-loadFadeIn">KEL Spirit -お客様のために一生懸命！-<br>KELは「仕事は楽しく」をモットーに、常にお客様の満足度を意識し信頼と価値を想像する企業集団を目指します。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-mission__philosophy js-loadFloatFadeIn">
+        <div class="p-mission__philosophyInner">
+          <div class="p-mission__philosophyGrayBack"></div>
+          <h3 class="c-subPage__genre--heading">Corporate Philosophy</h3>
+          <p class="c-subPage__genre--headingSub">KELの企業理念</p>
+          <div class="p-mission__philosophyTop">
+            <div class="p-mission__philosophyLead">
+              <div class="p-mission__philosophyLeadInner">
+                <span class="bracketsStart"><img src="<%= dataSet.srcpath %>images/brackets_start.png" alt="「"></span>
+                <h3>顧客第一主義</h3>
+                <span class="bracketsEnd"><img src="<%= dataSet.srcpath %>images/brackets_end.png" alt="」"></span>
+              </div>
+              <p><span class="leadEn">KEL Spirit</span><span class="leadJa">お客様のために一生懸命！</span></p>
+              <p>信頼と価値を創造する企業集団を目指します。</p>
+            </div>
+            <div class="p-mission__philosophyImg">
+              <img src="<%= dataSet.srcpath %>images/people_meeting.png" alt="企業理念 イメージ">
+            </div>
+          </div>
+          <div class="p-mission__philosophyBottom">
+            <ul class="p-mission__philosophyList">
+              <li>
+                <p>01</p>
+                <div>
+                  <p>お客様第一主義</p>
+                  <p>私たちは、<br>常にお客様の満足度を意識し、<br>信頼ある行動をします。</p>  
+                </div>
+              </li>
+              <li>
+                <p>02</p>
+                <div>
+                  <p>新しい価値の創造</p>
+                  <p>お客様に真に評価される<br>システム・サービスを<br>幅広く提供します。</p>  
+                </div>
+              </li>
+              <li>
+                <p>03</p>
+                <div>
+                  <p>新しい価値の創造</p>
+                  <p>法令を遵守し、<br>公正で透明性の高い<br>企業活動を行います。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="p-mission__overview js-scrollFloatFadeIn" id="missionoverview">
+        <div class="p-mission__overviewInner">
+          <div class="p-mission__overviewGrayBack"></div>
+          <div class="p-mission__overviewHeadingWrap">
+            <h3 class="c-subPage__genre--heading">Business Overview</h3>
+            <p class="c-subPage__genre--headingSub">KELの事業概要</p>
+          </div>
+          <div class="p-mission__overviewTop">
+            <div class="p-mission__overviewTopText">
+              <p>お客様の成長につながるITソリューションを<br>最適な形にコーディネートし提供していきます。</p>
+              <p>KELのお客様は大企業から中堅企業を中心に、製造業、金融業、流通業、サービス業、公共・文教分野等多岐に渡ります。
+                それぞれの業種に合った、ITソリューションをコーディネートして提供しています。また、近年ではお客様の海外展開をサポートするために海外でもITソリューションを提供しております。</p>
+            </div>
+            <div class="p-mission__overviewTopImg">
+              <img src="<%= dataSet.srcpath %>images/overview_graph.png" alt="業種別売上高構成比率">
+            </div>
+          </div>
+          <div class="p-mission__overviewMiddle">
+            <div class="p-mission__overviewChartText--sp">
+              <p>企業の成長に繋がるITライフサイクルをお客様と共に</p>
+              <p>ITシステムは、企業の成長、他社との競争力向上等において重要な役割を果たしています。
+                KELは、企業のITシステムの企画・設計・販売・構築・保守・運用というITライフサイクルをビジネス戦略の段階からお客様のパートナーとして共に考えます。</p>
+            </div>
+            <div class="p-mission__overviewChart">
+              <img class="pc" src="<%= dataSet.srcpath %>images/overview_chart_pc.png" alt="会社概要チャート PC">
+              <img class="sp" src="<%= dataSet.srcpath %>images/overview_chart_sp.png" alt="会社概要チャート SP">
+            </div>
+          </div>
+          <div class="p-mission__overviewMiddleText">
+            <div class="pc">
+              <p>企業の成長に繋がるITライフサイクルを<br>お客様と共に</p>
+              <p>ITシステムは、企業の成長、他社との競争力向上等において重要な役割を果たしています。
+                KELは、企業のITシステムの企画・設計・販売・構築・保守・運用というITライフサイクルをビジネス戦略の段階からお客様のパートナーとして共に考えます。</p>
+            </div>
+            <div>
+              <p>お客様視点を最重要視した<br>ITソリューションを提供</p>
+              <p>
+                ITインフラサービスに関わる分野はKELの強みであり、お客様の大規模なITシステムが安定稼動するために必要なサーバー（処理装置）やストレージ（記憶装置）、ネットワーク（通信機器）などのITシステム装置をメーカーにとらわれることなく、ITインフラサービスとしてコーディネートをし、販売・設計・構築・保守・運用までワンストップで提供しております。<br>
+                また、仮想化、クラウド、グローバル、セキュリティ等のソリューションも提供しています。</p>
+            </div>
+          </div>
+          <div class="p-mission__overviewInfra">
+            <div class="p-mission__overviewInfraText">
+              <p>ITインフラとは？</p>
+              <p>一般的にインフラといえば人の生活を支えるために不可欠な電気・ガス・水道・道路・鉄道などといった社会基盤のことを指します。<br>
+                企業が事業活動を進めていくために必要不可欠な会計や販売管理システムなどのITシステムにも基盤となる「ITインフラ」というものがあります。<br>
+                KELは様々なお客様が抱える問題を洗い出し、業務の効率化やパフォーマンスを向上できるよう考え、お客様の発展につながるような最適なITインフラを提供していくことが仕事です。</p>
+            </div>
+            <div class="p-mission__overviewInfraImg">
+              <img class="pc" src="<%= dataSet.srcpath %>images/infra_image_pc.png" alt="ITインフラ PC">
+              <img class="sp" src="<%= dataSet.srcpath %>images/infra_image_sp.png" alt="ITインフラ SP">
+            </div>
+          </div>
+          <div class="p-mission__overviewGrayBack--sp"></div>
+        </div>
+      </div>
+      <div class="p-mission__message js-scrollFloatFadeIn">
+        <div class="p-mission__headingWrap">
+          <h3 class="c-subPage__genre--heading">President’s Message</h3>
+          <p class="c-subPage__genre--headingSub">社長メッセージ</p>
+        </div>
+        <div class="p-mission__contentWrap">
+          <div class="p-mission__presidentWrap">
+            <img src="<%= dataSet.srcpath %>images/president_img.jpg" alt="代表取締役　社長執行役員 渡辺亮">
+          </div>
+          <div class="p-mission__presidentText">
+            <p>デジタルトランスフォーメーションを担うのは、<br>人間力を備えた人材</p>
+            <p>代表取締役　社長執行役員<br>渡辺 亮</p>
+          </div>
+          <div class="p-mission__messageText">
+            <p>兼松エレクトロニクス株式会社は、親会社である総合商社の兼松株式会社から、電子機器類の調整ならびにメンテナンスを担う会社として、1968年に設立しました。電子機器のメンテナンスから始まりましたが、その後、多種多様なITベンダーの製品を扱うようになり業績を伸ばしてきました。今ではハードウェア販売にとどまらず、デバイスからプラットフォームまでのIT全般をビジネス領域としています。</p>
+            <p>私が入社した頃は、IT業界で半導体が先端技術として話題となっていました。私は半導体を検証するシミュレーターのアプリケーションを扱っており、単身でアメリカのシリコンバレーへ渡り、有能なスタートアップ企業の情報を収集し、良い製品があれば日本へ持ち帰り、お客様に検証していただき、購入いただくといったことをしていました。</p>
+            <p>思えば、当時から自由な社風で、親しみやすい会社というのは今と変わりませんが、営業手法は違っていました。当時は一人完結型で、製品を見つけるところから、マーケティング、資料作成、価格の決定、さらには保守体制の構築まで、すべてひとりで行なっていました。</p>
+            <p>現在でも、若手のうちからお客様への提案にはじまり、受注から納品まで、第一線で活躍するという点では昔と変わりませんが、上司がしっかりとマネジメントしますから、成長を実感しながら安心して業務を進めることができます。ちなみに、私のモットーは、「仕事は楽しく」です。なぜなら、我慢は続かないからです。楽しく仕事に取り組める環境を常に目指しています。</p>
+            <p>これから日本ではデジタルトランスフォーメーション（DX）の流れが一層加速すると思われます。そうしたビジネス環境の中で、私たちはお客様にとっての戦略的パートナーであることが求められます。そのためには、高い技術力、製品の豊富なラインナップはもちろん、より一層の信頼関係が重要となります。DXが進んだとしても、最後は人間力だということです。</p>
+            <p>実際、当社には40～50年にわたってお付き合いをしているお客様がいますが、「KELさんは一緒に取り組んでくれるから安心」という嬉しいお言葉をいただいています。これから入社する人たちにも、お客様の信頼を勝ち取るための気遣いとコミュニケーションを上司や先輩から受け継ぎ、KELが持続的に成長するための力になってほしいと思っています。</p>
+            <p>自由な発想と、失敗を恐れないチャレンジ精神を持って、私たちと一緒にこれからのIT業界をリードしていきましょう。</p>
+          </div>
+        </div>      
+      </div>
+      <%- include('../include/parts/_entryBtn.ejs') %>
+    </main>
+    <%- include('../include/_footer.ejs', { data: dataSet } ) %>
+  </div>
+  <script src="<%= dataSet.srcpath %>js/common.js"></script>
+</body>
+
+</html>

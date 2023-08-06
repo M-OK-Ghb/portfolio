@@ -1,0 +1,47 @@
+// -------------------------------------------------------------------
+// 	breadCrumbs.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.c-breadCrumbs {
+  padding-left: 3.75%;
+  @include med.media(sp) {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+
+    > li {
+      line-height: 2.5;
+      &::after {
+        content: ">";
+        margin-right: 10px;
+        margin-left: 10px;
+        color: #999999;
+      }
+      &:last-child {
+        &::after {
+          content: none;
+        }
+      }
+
+      > a {
+        font-size: 16px;
+        color: #999999;
+        transition: opacity 0.3s;
+        &:hover {
+          text-decoration: underline;
+          opacity: 0.7;
+        }
+      }
+
+      > span {
+        font-size: 16px;
+        color: #999999;
+      }
+    }
+  }
+}

@@ -1,0 +1,700 @@
+// -------------------------------------------------------------------
+//  People - people.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.p-people {
+  &__listWrap {
+    margin-top: 160px;
+    padding-left: 12.5%;
+    @include med.media(sp) {
+      margin-top: 40vw;
+      padding-left: 6.5vw;
+    }
+  }
+
+  &__listInner {
+    position: relative;
+  }
+
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 95%;
+    background-color: #FAFAFA;
+    z-index: -1;
+    @include med.media(sp) {
+      width: 80vw;
+      height: 103.5%;
+      right: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 10%;
+    padding-top: 100px;
+
+    @include med.media(sp) {
+      padding-left: 0;
+      padding-top: 8vw;
+    }
+
+    > li {
+      width: 32%;
+
+      @include med.media(sp) {
+        width: 45%;
+      }
+
+      > a {
+        display: block;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 0.7;
+          .p-people__itemImg {
+            > img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
+      &:nth-child(odd) {
+        margin-right: 8.5%;
+        @include med.media(sp) {
+          margin-right: 5%;
+        }
+      }
+
+      &:nth-child(even) {
+        margin-top: 10%;
+        @include med.media(sp) {
+          margin-top: 20%;
+        }
+      }
+    }
+  }
+
+  &__itemImg {
+    position: relative;
+    overflow: hidden;
+    > img {
+      width: 100%;
+      transition: transform 0.5s;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px;
+    height: 32px;
+    line-height: 32px;
+    font-weight: bold;
+    text-align: center;
+
+    @include med.media(sp) {
+      font-size: 3.2vw;
+      line-height: 5.33vw;
+      height: 5.33vw;
+    }
+
+    &.sales {
+      background-color: #f78733;
+    }
+
+    &.se {
+      background-color: #4abdac;
+    }
+  }
+
+  &__itemLead {
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.5;
+    @include med.media(sp) {
+      font-size: 3.6vw;
+    }
+  }
+
+  &__itemName {
+    color: #666;
+    font-weight: bold;
+    margin-top: 24px;
+    font-size: 16px;
+    @include med.media(sp) {
+      font-size: 3.2vw;
+
+      br {
+        display: none;
+      }
+
+      span {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  &__movieArea {
+    position: relative;
+    padding-left: 12.5%;
+    margin-top: 180px;
+    margin-bottom: 180px;
+    @include med.media(sp) {
+      padding-left: 0;
+      width: 90%;
+      margin: 40vw auto;
+    }
+
+    &.detailPage {
+      margin-bottom: 80px;
+      @include med.media(sp) {
+        margin: 40vw auto 10vw;
+      }
+    }
+  }
+}
+
+/* interview Detail Design */
+.p-peopleDetail {
+  &__firstVisual {
+    position: relative;
+  }
+
+  &__topTextWrap {
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 40%;
+    @include med.media(sp) {
+      position: static;
+      width: 82.5%;
+      margin: 5vw auto 0;
+    }
+  }
+
+  &__topLabel {
+    > span {
+      font-size: 1.25vw;
+      color: #fff;
+      font-weight: bold;
+      display: inline-block;
+      height: 2.75vw;
+      line-height: 2.75vw;
+      text-align: center;
+      width: 11.5vw;
+      @include med.media(sp) {
+        font-size: 3.4vw;
+        height: 6vw;
+        line-height: 6vw;
+        width: 20vw;
+      }
+    }
+
+    &.sales {
+      > span {
+        background-color: #f78733;
+      }
+    }
+
+    &.se {
+      > span {
+        background-color: #4abdac;
+      }
+    }
+  }
+
+  &__topLead {
+    font-size: 1.95vw;
+    margin-top: 2.1vw;
+    font-weight: bold;
+    line-height: 1.8;
+    @include med.media(sp) {
+      font-size: 4vw;
+      margin-top: 3vw;
+    }
+  }
+
+  &__topName {
+    font-size: 1.4vw;
+    font-weight: bold;
+    margin-top: 2.1vw;
+    @include med.media(sp) {
+      font-size: 3.4vw;
+    }
+  }
+
+  &__topText {
+    font-size: 1.15vw;
+    line-height: 2;
+    margin-top: 1.4vw;
+    @include med.media(sp) {
+      font-size: 3.2vw;
+      margin-top: 5vw;
+    }
+  }
+
+  &__topImg {
+    > img {
+      width: 100%;
+      aspect-ratio: 16/7;
+      object-fit: cover;
+
+      &.sp {
+        display: none;
+      }
+
+      @include med.media(sp) {
+        aspect-ratio: 75/64;
+
+        &.pc {
+          display: none;
+        }
+
+        &.sp {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__contentInner {
+    position: relative;
+    padding: 0 12.5%;
+    margin-top: 100px;
+    @include med.media(sp) {
+      padding: 0;
+      margin-top: 10vw;
+    }
+  }
+
+  &__contentBg {
+    position: absolute;
+    width: 56.25vw;
+    height: 103%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    background-color: #FAFAFA;
+    z-index: -1;
+    @include med.media(sp) {
+      width: 80vw;
+      height: 101%;
+    }
+  }
+
+  &__info {
+    > h3 {
+      font-weight: bold;
+      font-size: 20px;
+      color: #333;
+      line-height: 2;
+      &::first-line {
+        line-height: 1;
+      }
+
+      @include med.media(sp) {
+        font-size: 4vw;
+        &::first-line {
+          line-height: 2;
+        }
+
+        margin-top: 5vw;
+      }
+
+    }
+
+    > p {
+      margin-top: 24px;
+      font-size: 16px;
+      line-height: 1.8;
+      @include med.media(sp) {
+        font-size: 3.2vw;
+        margin-top: 5vw;
+      }
+
+      > span {
+        background:linear-gradient(transparent 60%, #ff6 60%);
+      }
+    }
+  }
+
+  &__contentWrap {
+    padding-top: 100px;
+    @include med.media(sp) {
+      padding-top: 10vw;
+    }
+  }
+
+  &__spSpace {
+    @include med.media(sp) {
+      padding: 0 8%;
+    }
+  }
+
+  &__contentFirst {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    @include med.media(sp) {
+      flex-wrap: wrap;
+      margin-bottom: 12vw;
+    }
+  }
+
+  &__contentFirstImg {
+    width: 45%;
+    order: 0;
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__contentFirstText {
+    width: 50%;
+    order: 1;
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  &__contentSecond {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+    @include med.media(sp) {
+      flex-wrap: wrap;
+      margin-bottom: 12vw;
+    }
+  }
+
+  &__contentSecondImg {
+    width: 45%;
+    order: 1;
+
+    @include med.media(sp) {
+      width: 100%;
+      order: 0;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__contentSecondText {
+    width: 50%;
+    order: 0;
+
+    @include med.media(sp) {
+      width: 100%;
+      order: 1;
+    }
+  }
+
+  &__contentCenterText {
+    width: 55%;
+    margin: auto;
+
+    > h3 {
+      width: 85%;
+      margin: auto;
+      line-height: 2;
+      &::first-line {
+        line-height: 2;
+      }
+    }
+
+    @include med.media(sp) {
+      width: 100%;
+
+      > h3 {
+        width: 100%;
+      }
+    }
+
+    &.contentAdd {
+      margin: 32px auto 0;
+    }
+  }
+
+  &__contentImg {
+    width: 100%;
+    margin-top: 80px;
+    > img {
+      width: 100%;
+    }
+
+    @include med.media(sp) {
+      margin-top: 12vw;
+    }
+  }
+
+  &__clientMessage {
+    width: 55%;
+    margin:120px auto 0;
+    background-color: #FFF;
+    padding: 4%;
+
+    @include med.media(sp) {
+      width: 70%;
+      padding: 8% 5%;
+      margin: 20vw auto 0;
+    }
+
+    > h3 {
+      text-align: center;
+    }
+
+    > h4 {
+      text-align: center;
+      color: #666666;
+      font-size: 18px;
+      font-weight: bold;
+      line-height: 2;
+      margin-top: 20px;
+
+      @include med.media(sp) {
+        font-size: 3.6vw;
+      }
+    }
+
+    > p {
+      margin-top: 10px;
+    }
+  }
+
+  &__offtime {
+    position: relative;
+    width: 90%;
+    border: 2px dotted #666666;
+    border-radius: 20px;
+    padding: 3% 5%;
+    margin:60px auto 0;
+    background-color: #fff;
+    @include med.media(sp) {
+      padding: 3% 5%;
+    }
+  }
+
+  &__offtimeLabel {
+    position: absolute;
+    left: -3%;
+    top: 6%;
+    width: 16%;
+    min-width: 160px;
+
+    @include med.media(sp) {
+      top: -1%;
+      left: -1%;
+      min-width: auto;
+      width: 40%;
+
+      > span {
+        font-size: 4.5vw;
+      }
+    }
+
+    > span {
+      display: inline-block;
+      font-family: var.$FONT_RALEWAY;
+      font-weight: bold;
+      color: #FFF;
+      font-size: 18px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      width: 100%;
+      @include med.media(sp) {
+        font-size: 4.5vw;
+        height: 8vw;
+        line-height: 8vw;
+      }
+    }
+
+    &.sales {
+      > span {
+        background-color: #f78733;
+      }
+    }
+
+    &.se {
+      > span {
+        background-color: #4ABDAC;
+      }
+    }
+  }
+
+  &__offtimeContents {
+    display: flex;
+    justify-content: space-between;
+    @include med.media(sp) {
+      flex-wrap: wrap;
+    }
+  }
+  
+  &__offtimeText {
+    width: 55%;
+    font-size: 16px;
+    line-height: 1.8;
+    padding-top: 8%;
+
+    @include med.media(sp) {
+      order: 1;
+      width: 100%;
+      font-size: 3.2vw;
+    }
+  }
+
+  &__offtimeImg {
+    width: 35%;
+    > img {
+      width: 100%;
+    }
+
+    @include med.media(sp) {
+      order: 0;
+      width: 100%;
+    }
+  }
+
+
+  &__otherMember {
+    width: 85%;
+    margin: 16% auto 0;
+    @include med.media(sp) {
+      margin: 30% auto 0;
+    }
+  }
+
+  &__otherMemberHeading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 28px;
+    @include med.media(sp) {
+      font-size: 4.8vw;
+    }
+  }
+
+  &__otherMemberList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 70px;
+
+    @include med.media(sp) {
+      margin-top: 6.5vw;
+    }
+
+    > li {
+      width: 23.5%;
+      margin-bottom: 60px;
+      @include med.media(sp) {
+        width: 47.5%;
+        margin-bottom: 8vw;
+      }
+
+      > a {
+        display: block;
+        transition: opacity 0.3s;
+        &:hover {
+          opacity: 0.7;
+          .p-peopleDetail__memberImg {
+            > img {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__memberImg {
+    position: relative;
+    overflow: hidden;
+    > img {
+      width: 100%;
+      transition: transform 0.5s;
+    }
+
+    > span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 16px;
+      text-align: center;
+      display: inline-block;
+      height: 32px;
+      line-height: 32px;
+      color: #FFF;
+      width: 100px;
+      font-weight: bold;
+
+      @include med.media(sp) {
+        width: 17.33vw;
+        height: 5.33vw;
+        line-height: 5.33vw;
+        font-size: 3.3vw;
+      }
+
+      &.sales {
+        background-color: #f78733;
+      }
+
+      &.se {
+        background-color: #4abdac;
+      }
+    }
+  }
+
+  &__memberText {
+    margin-top: 24px;
+    line-height: 1.6;
+    @include med.media(sp) {
+      margin-top: 3.2vw;
+    }
+  }
+
+  &__memberLead {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    @include med.media(sp) {
+      font-size: 3.4vw;
+    }
+  }
+
+  &__memberName {
+    font-size: 16px;
+    font-weight: bold;
+    color: #666;
+    margin-top: 20px;
+    @include med.media(sp) {
+      font-size: 2.8vw;
+      margin-top: 3.2vw;
+
+      br {
+        display: none;
+      }
+
+      > span {
+        margin-left: 8px;
+      }
+    }
+  }
+}

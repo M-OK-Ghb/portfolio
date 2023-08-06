@@ -1,0 +1,1131 @@
+// -------------------------------------------------------------------
+//  Recruit - recruit.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.p-recruit {
+  /*Recruit Top*/
+  &__topBottom {
+    margin-top: 440px;
+    @include med.media(sp) {
+      margin-top: 44vw;
+    }
+  }
+
+
+  &__scheduleAnchor {
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 140px;
+    opacity: 0;
+
+    @include med.media(sp) {
+      left: 8.5vw;
+      right: inherit;
+      top: inherit;
+      bottom: -90%;
+      flex-wrap: wrap;
+    }
+    
+
+    > li {
+      margin-right: 20px;
+      @include med.media(sp) {
+        margin-right: 10.5vw;
+      }
+
+      &:last-child {
+        @include med.media(sp) {
+          margin-top: 5vw;
+        }
+      }
+    }
+
+    .c-circleBtn {
+      .c-circleBtn__circle {
+        width: 30px;
+        height: 30px;
+        margin-right: 8px;
+        transform: rotate(90deg);
+
+        @include med.media(sp) {
+          width: 6vw;
+          height: 6vw;
+          margin-right: 3vw;
+        }
+      }
+
+      .c-circleBtn__arrow {
+        width: 13px;
+        height: 3px;
+        @include med.media(sp) {
+          width: 2vw;
+          height: 0.5vw;
+        }
+      }
+
+      .c-circleBtn__text {
+        font-size: 15px;
+        @include med.media(sp) {
+          font-size: 3.8vw;
+        }
+      }
+    }
+  }
+
+  &__guideLineWrap {
+    margin-top: 14vw;
+    padding-left: 9vw;
+    @include med.media(sp) {
+      margin-top: 50vw;
+      padding-left: 4.65vw;
+    }
+  }
+
+  &__guideLineInner {
+    position: relative;
+    background-color: #FAFAFA;
+    padding-top: 200px;
+    padding-bottom: 130px;
+    @include med.media(sp) {
+      padding: 0;
+      background-color: inherit;
+    }
+  }
+
+  &__guideLineHeadingWrap {
+    position: absolute;
+    top:-30px;
+    left: 5%;
+    @include med.media(sp) {
+      position: static;
+    }
+  }
+
+  &__guideLineContent {
+    @include med.media(sp) {
+      margin-top: 6.5vw;
+    }
+  }
+
+  &__guideLineBg--sp {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+      position: absolute;
+      background-color: #FAFAFA;
+      width: 84vw;
+      height: 101%;
+      z-index: -1;
+      top: 8vw;
+      right: 0;
+    }
+  }
+
+  &__policy {
+    margin-top: 175px;
+    @include med.media(sp) {
+      margin-top: 40vw;
+    }
+  }
+
+  &__policyInner {
+    position: relative;
+  }
+
+  &__policyImg {
+    width: 84.5%;
+    > img {
+      width: 100%;
+      object-fit: cover;
+      aspect-ratio: 5/2;
+    }
+
+    @include med.media(sp) {
+      width: 100%;
+      > img {
+        aspect-ratio: 5/3;
+      }
+    }
+  }
+
+  &__policyText {
+    position: absolute;
+    top: 31vw;
+    left: 11.25vw;
+    width: 81.5%;
+    background: #505050;
+    color: #FFF;
+    padding: 105px 6% 100px 5.7%;
+    @include med.media(sp) {
+      width: 85%;
+      left: 0;
+      right: 0;
+      margin: auto;
+      padding: 22.5% 6% 9.3%;
+      // top: 66vw;
+      top: 55vw;
+    }
+  }
+
+  &__policyTextInner {
+    position: relative;
+  }
+
+  &__policyCatch {
+    position: absolute;
+    top: -70px;
+    left: 5%;
+    @include med.media(sp) {
+      position: static;
+    }
+  }
+
+  &__policyCatchInner {
+    position: relative;
+
+    @include med.media(sp) {
+      width: 60%;
+      margin: auto;
+    }
+
+    > h3 {
+      font-weight: bold;
+      font-size: 26px;
+      line-height: 60px;
+      text-align: center;
+      width: 15vw;
+      @include med.media(sp) {
+        font-size: 6.5vw;
+        width: 100%;
+        line-height: 13vw;
+        letter-spacing: 2px;
+      }
+    }
+  
+    > span {
+      position: absolute;
+
+      > img {
+        width: 2.25vw;
+        @include med.media(sp) {
+          width: 5vw;
+        }
+      }
+
+      &.start {
+        top: 0;
+        left: 0;
+        @include med.media(sp) {
+          left: -1vw;
+        }
+      }
+
+      &.end {
+        bottom: 0;
+        right: 0;
+        @include med.media(sp) {
+          right: -1vw;
+        }
+      }
+    }
+  }
+
+  &__policyHeadingWrap {
+    position: absolute;
+    top: -145px;
+    left: 45%;
+    @include med.media(sp) {
+      left: 0;
+      right: 0;
+      top: -32vw;
+      text-align: center;
+    }
+  }
+
+  &__policyHeading {
+    color: #CCCCCC;
+    font-weight: bold;
+    font-family: var.$FONT_RALEWAY;
+    font-size: 70px;
+    @include med.media(sp) {
+      font-size: 14vw;
+    }
+  }
+
+  &__policyHeadingSub {
+    font-weight: bold;
+    font-size: 24px;
+    padding-left: 45px;
+    @include med.media(sp) {
+      font-size: 4.8vw;
+      padding-left: 0;
+      padding-right: 6vw;
+    }
+  }
+
+  &__policyBottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    @include med.media(sp) {
+      display: block;
+    }
+  }
+
+  &__policyDetail {
+    width: 40%;
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+
+    > p {
+      line-height: 2;
+      font-size: 16px;
+      @include med.media(sp) {
+        font-size: 3.6vw;
+      }
+    }
+  }
+
+  &__policyListWrap {
+    width: 50%;
+
+    @include med.media(sp) {
+      width: 100%;
+      margin-top: 10vw;
+    }
+
+    > h4 {
+      span {
+        font-size: 16px;
+        padding-bottom: 4px;
+        font-weight: bold;
+        border-bottom: 1px solid #FFF;
+        display: inline-block;
+        @include med.media(sp) {
+          font-size: 3.8vw;
+        }
+      }
+    }
+  }
+
+  &__policyList {
+    margin-top: 32px;
+
+    @include med.media(sp) {
+      margin-top: 6vw;
+    }
+
+    > li {
+      font-size: 18px;
+      margin-bottom: 30px;
+      font-weight: bold;
+
+      @include med.media(sp) {
+        font-size: 4vw;
+        margin-bottom: 6vw;
+        line-height: 1.6;
+      }
+      
+      &:nth-child(2) {
+        text-indent: 1em;
+        @include med.media(sp) {
+          text-indent: 0;
+        }
+      }
+
+      &:nth-child(3) {
+        text-indent: 2em;
+        margin-bottom: 0;
+        @include med.media(sp) {
+          text-indent: 0;
+        }
+      }
+    }
+  }
+
+  &__flow {
+    position: relative;
+    margin-top: 680px;
+    background-color: #FAFAFA;
+    padding-top: 195px;
+    padding-bottom: 105px;
+    @include med.media(sp) {
+      margin-top: 180vw;
+      padding-top: 24vw;
+      padding-bottom: 14vw;
+    }
+  }
+
+  &__flowHeadingWrap {
+    position: absolute;
+    top: -40px;
+    left: 11.875vw;
+    @include med.media(sp) {
+      top: -9vw;
+      left: 6.65vw;
+    }
+  }
+
+  &__flowContentWrap {
+    @include med.media(sp) {
+      width: 84%;
+      margin: auto;
+    }
+  }
+
+  &__flowList {
+    width: 65%;
+    margin: auto;
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+
+    > dl {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 60px;
+
+      @include med.media(sp) {
+        display: block;
+        margin-bottom: 13.3vw;
+      }
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+
+      dt {
+        width: 15%;
+        font-size:  18px;
+        line-height: 2;
+        @include med.media(sp) {
+          width: 100%;
+          font-size: 4.2vw;
+          margin-bottom: 5vw;
+        }
+      }
+
+      dd {
+        width: 80%;
+        font-size: 16px;
+        line-height: 2;
+        @include med.media(sp) {
+          width: 100%;
+        }
+
+        > ul {
+          margin-bottom: 20px;
+          @include med.media(sp) {
+            margin-bottom: 6vw;
+          }
+
+          > li {
+            @include med.media(sp) {
+              font-size: 3.6vw;
+            }
+          }
+        }
+
+        > p {
+          @include med.media(sp) {
+            font-size: 3.6vw;
+          }
+        }
+      }
+    }
+  }
+
+  &__flowEntryDocs {
+    > p {
+      &:last-of-type {
+        font-size: 14px;
+        margin-top: 10px;
+
+        @include med.media(sp) {
+          font-size: 3.4vw;
+          br {
+            display: none;
+          }
+        }
+
+        > span {
+          text-indent: 1em;
+          display: inline-block;
+          @include med.media(sp) {
+            text-indent: 0;
+          }
+
+          a {
+            color: #6C4225;
+            text-decoration: underline;
+            transition: opacity 0.3s;
+
+            &:hover {
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__flowImg {
+    width: 70%;
+    margin:90px auto 0;
+
+    @include med.media(sp) {
+      width: 100%;
+      margin: 12.5vw auto 0;
+    }
+
+    > img {
+      width: 100%;
+      &.pc {
+        @include med.media(sp) {
+          display: none;
+        }
+      }
+
+      &.sp {
+        display: none;
+        @include med.media(sp) {
+          display: block;
+        }    
+      }
+    }
+  }
+
+  &__bottomDetailText {
+    margin-top: 60px;
+    font-size: 16px;
+    text-align: center;
+    line-height: 2;
+    @include med.media(sp) {
+      font-size: 3.4vw;
+      text-align: left;
+      margin-top: 10.65vw;
+    }
+  }
+
+  /*message*/
+  &__messageBg--sp {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+      position: absolute;
+      width: 85%;
+      height: 102%;
+      background-color: #FAFAFA;
+      top: 2%;
+      right: 0;
+      z-index: -1;
+    }
+  }
+
+  &__messageWrap {
+    margin-top: 10vw;
+    padding-left: 13.125%;
+    @include med.media(sp) {
+      margin-top: 24vw;
+      padding-left: 0;
+    }
+  }
+
+  &__messageWrapInner {
+    position: relative;
+    background-color: #FAFAFA;
+    padding: 120px 18% 120px 28%;
+    @include med.media(sp) {
+      background-color: inherit;
+      padding: 0 8.5% 0 4%;
+    }
+  }
+
+  &__messageHeadingWrap {
+    position: absolute;
+    top: -40px;
+    left: 0;
+
+    @include med.media(sp) {
+      position: static;
+    }
+  }
+
+  &__messageTextTop {
+    @include med.media(sp) {
+      padding-left: 5%;
+      margin-top: 6.5vw;
+    }
+
+    > p {
+      font-size: 16px;
+      line-height: 2;
+      margin-top: 30px;
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @include med.media(sp) {
+        font-size: 3.6vw;
+        margin-top: 6.5vw;
+      }
+    }
+  }
+
+  &__messageList {
+    margin-top: 40px;
+    @include med.media(sp) {
+      padding-left: 5%;
+      margin-top: 18vw;
+    }
+    > li {
+      border-bottom: 3px dotted #004FA2;
+      padding-bottom: 60px;
+      margin-bottom: 60px;
+      @include med.media(sp) {
+        padding-bottom: 10vw;
+        margin-bottom: 10vw;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        border-bottom: none;
+      }
+
+      > p {
+        margin-top: 40px;
+        font-size: 16px;
+        line-height: 2;
+        @include med.media(sp) {
+          font-size: 3.6vw;
+          margin-top: 6vw;
+        }
+      }
+    }
+  }
+
+  &__messageListTop {
+    display: flex;
+    align-items: center;
+    @include med.media(sp) {
+      justify-content: space-between;
+    }
+  }
+
+  &__messageNumber {
+    margin-right: 60px;
+    @include med.media(sp) {
+      margin-right: 0;
+      width: 20%;
+    }
+
+    > span {
+      display: inline-block;
+      width: 70px;
+
+      @include med.media(sp) {
+        width: 100%;
+      }
+
+      > svg {
+        width: 100%;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__messageTitle {
+    font-weight: bold;
+    font-size: 24px;
+    @include med.media(sp) {
+      font-size: 4.8vw;
+      width: 70%;
+      line-height: 1.6;
+    }
+  }
+
+  &__messageCatch {
+    margin-top: 80px;
+    @include med.media(sp) {
+      margin-top: 12vw;
+    }
+
+    > img {
+      width: 80%;
+      @include med.media(sp) {
+        width: 90%;
+      }
+      + img {
+        margin-top: 30px;
+        margin-left: 20px;
+        @include med.media(sp) {
+          margin-top: 20px;
+          margin-left: 15px;
+        }
+      }
+    }
+
+    > p {
+      line-height: 1;
+      font-weight: bold;
+      font-size: 28px;
+      color: #666666;
+      margin-top: 20px;
+      @include med.media(sp) {
+        font-size: 5.2vw;
+        margin-top: 5vw;
+        line-height: 1.5;
+      }
+    }
+  }
+
+
+  /*training*/
+  &__trainingBg--sp {
+    display: none;
+    @include med.media(sp) {
+      background-color: #FAFAFA;
+      display: block;
+      position: absolute;
+      width: 85%;
+      height: 102%;
+      top: 8vw;
+      right: 0;
+      z-index: -1;
+    }
+  }
+
+  &__trainingWrap {
+    margin-top: 10vw;
+    padding-left: 10vw;
+    @include med.media(sp) {
+      margin-top: 30vw;
+      padding: 0;
+    }
+  }
+
+  &__trainingWrapInner {
+    background-color: #FAFAFA;
+    position: relative;
+    @include med.media(sp) {
+      background-color: inherit;
+    }
+  }
+
+  &__trainingHeadingWrap {
+    position: absolute;
+    top: -40px;
+    left: 5%;
+    @include med.media(sp) {
+      position: static;
+      padding-left: 4.5vw;
+    }
+  }
+
+  &__trainingInner--spAdjust {
+    @include med.media(sp) {
+      padding: 0 8.65%;
+    }
+  }
+
+  &__trainingContent {
+    padding-top: 160px;
+    padding-bottom: 130px;
+    width: 75%;
+    padding-left: 10%;
+
+    @include med.media(sp) {
+      padding: 0;
+      width: auto;
+    }
+  }
+
+  &__trainingTopText {
+    font-size: 16px;
+    line-height: 2;
+    @include med.media(sp) {
+      font-size: 3.6vw;
+      margin-top: 6.65vw;
+    }
+  }
+
+  &__trainingTarget {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+    @include med.media(sp) {
+      margin-top: 18.5vw;
+    }
+  }
+
+  &__trainingTargetText {
+    width: 55%;
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+
+    > div {
+      &:nth-of-type(2) {
+        margin-top: 80px;
+        @include med.media(sp) {
+          margin-top: 18.5vw;
+        }
+      }
+    }
+  }
+
+  &__targetList {
+    margin-top: 10px;
+    > li {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 2;
+      @include med.media(sp) {
+        font-size: 4vw;
+      }
+    }
+
+    @include med.media(sp) {
+      margin-top: 5.3vw;
+    }
+  }
+
+  &__targetList--detail {
+    margin-top: 24px;
+    > li {
+      font-size: 16px;
+      line-height: 2;
+      @include med.media(sp) {
+        font-size: 3.6vw;
+      }
+    }
+
+    @include med.media(sp) {
+      margin-top: 5.3vw;
+    }
+  }
+
+  &__trainingTargetImgWrap {
+    width: 42%;
+    > div {
+      &:nth-of-type(2) {
+        margin-top: 20px;
+      }
+    }
+
+    @include med.media(sp) {
+      display: none;
+    }
+  }
+
+  &__trainingTargetImg {
+    width: 100%;
+    > img {
+      width: 100%;
+      aspect-ratio: 429/305;
+      object-fit: cover;
+    }
+
+    &.sp {
+      display: none;
+      @include med.media(sp) {
+        display: block;
+        margin-top: 5.3vw;
+      }
+    }
+  }
+
+  &__trainingSchedule {
+    margin-top: 90px;
+    @include med.media(sp) {
+      margin-top: 16vw;
+    }
+  }
+
+  &__trainingScheduleImg {
+    margin-top: 40px;
+    > img {
+      width: 100%;
+
+      &.sp {
+        display: none;
+        @include med.media(sp) {
+          display: block;
+          transform: scale(1.15);
+        }
+      }
+
+      &.pc {
+        @include med.media(sp) {
+          display: none;
+        }
+      }
+    }
+
+    @include med.media(sp) {
+      margin-top: 14vw;
+    }
+  }
+
+  &__afterTraining {
+    margin-top: 130px;
+    @include med.media(sp) {
+      margin-top: 24vw;
+    }
+  }
+
+  &__afterList {
+    > dl {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 50px;
+      line-height: 2;
+
+      @include med.media(sp) {
+        margin-top: 9.33vw;
+        display: block;
+      }
+
+      dt {
+        font-size: 18px;
+        font-weight: bold;
+        display: inline-block;
+        width: 20%;
+
+        @include med.media(sp) {
+          font-size: 3.6vw;
+          display: block;
+          width: 100%;
+        }
+      }
+
+      dd {
+        font-size: 16px;
+        display: inline-block;
+        width: 75%;
+
+        @include med.media(sp) {
+          font-size: 3.6vw;
+          display: block;
+          width: 100%;
+          margin-top: 4.8vw;
+        }
+      }
+    }
+  }
+}
+
+.p-guideLineTable {
+  padding-left: calc(5% + 45px);
+  padding-right: 20%;
+
+  @include med.media(sp) {
+    padding-left: 3%;
+    padding-right: 8%;
+  }
+
+  > li {
+    border-bottom: 1px dotted #707070;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    @include med.media(sp) {
+      padding-top: 4vw;
+      padding-bottom: 4vw;
+    }
+
+    &:first-child {
+      @include med.media(sp) {
+        border-top: 1px dotted #707070;
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    dl {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      @include med.media(sp) {
+        display: block;
+        font-size: 3.6vw;
+      }
+
+      dt {
+        width:20%;
+        font-weight: bold;
+        @include med.media(sp) {
+          font-size: 3.6vw;
+          width: 100%;
+          line-height: 2;
+          color: #666666;
+        }
+      }
+
+      dd {
+        width: 74%;
+
+        br.sp {
+          display: none;
+          @include med.media(sp) {
+            display: block;
+          }
+        }
+
+        @include med.media(sp) {
+          font-size: 3.6vw;
+          width: 100%;
+          line-height: 2;
+          margin-top: 2.5vw;
+        }
+      }
+    }
+  }
+
+  &__detailWrap {
+    > div {
+      &:nth-of-type(1) {
+        margin-bottom: 40px;
+        @include med.media(sp) {
+          margin-bottom: 3vw;
+        }
+      }
+
+      h4 {
+        font-weight: bold;
+      }
+
+      p {
+        line-height: 2;
+        margin-top: 10px;
+        @include med.media(sp) {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &.startingSalary {
+      > div {
+        @include med.media(sp) {
+          display: flex;
+
+          > h4 {
+            width: 33%;
+          }
+
+          > p {
+            > span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__link {
+    color: #6C4225;
+    text-decoration: underline;
+    transition: opacity 0.3;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__multiLine {
+    > p {
+      line-height: 2;
+    }
+
+    > a {
+      display: inline-block;
+      margin-top: 24px;
+      @include med.media(sp) {
+        margin-top: 5vw;
+      }
+    }
+  }
+
+  &__welfareDetail {
+    p {
+      margin-bottom: 20px;
+
+      @include med.media(sp) {
+        display: flex;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      > span {
+        display: inline-block;
+        &:nth-of-type(1) {
+          font-weight: bold;
+          @include med.media(sp) {
+            width: 20%;
+          }
+        }
+
+        &:nth-of-type(2) {
+          @include med.media(sp) {
+            width: 68%;
+          }
+        }
+      }
+    }
+  }
+
+  &__area {
+    > div {
+      margin-bottom: 30px;
+
+      @include med.media(sp) {
+        margin-bottom: 4vw;
+      }
+
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      h4 {
+        margin-bottom: 10px;
+
+        @include med.media(sp) {
+          margin-bottom: 1.5vw;
+        }
+
+        span {
+          font-weight: bold;
+        }
+      }
+
+      p {
+        line-height: 2;
+      }
+    }
+  }
+}
+
+.p-recruit__brotherLink {
+  margin-top: 150px;
+  @include med.media(sp) {
+    margin-top: 30vw;
+    &.training {
+      margin-top: 50vw;
+    }
+  }
+}
+

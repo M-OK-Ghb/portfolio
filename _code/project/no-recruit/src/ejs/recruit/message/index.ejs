@@ -1,0 +1,108 @@
+<%
+  const data = {
+    isTop: false,
+    title: "Recruit | NOS 新卒採用サイト",
+    description: "",
+    path: "../..",
+    imgPath: "../../images",
+    commonImgPath: "../../images/common",
+    current: "recruit",
+    hierarchy: "third",
+    crumbsText: "採用担当からのメッセージ",
+    crumbsUrl: "message",
+    crumbsParentText: "RECRUIT",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../../include/common/_header.ejs', {data: data}); %>
+      <main class="p-sub__main">
+        <%- include('../../include/common/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-sub__fv">
+          <div class="p-sub__fvImg js-sub-fvImg">
+            <img class="is-pc" src="<%= data.imgPath %>/kv/recruit_message.webp" alt="キービジュアル <%= data.crumbsText %>">
+            <img class="is-sp" src="<%= data.imgPath %>/kv/recruit_message_sp.webp" alt="キービジュアル <%= data.crumbsText %>">
+          </div>
+          <section class="p-sub__topSection">
+            <h1 class="c-heading --recruit p-sub__topHeading js-sub-titleTop">
+              <img src="<%= data.commonImgPath %>/heading_recruit.svg" alt="<%= data.current %>">
+            </h1>
+            <p class="c-headingSub"><span>採用担当からのメッセージ</span></p>
+          </section>
+        </div>
+        <div class="p-sub__contents js-scrollFadeIn --block">
+          <p class="p-sub__description">新卒採用に携わる担当者から応募者に向けてメッセージをお伝えします。</p>
+        </div>
+        <section class="p-recruit__message">
+          <div class="p-recruit__messageInner">
+            <h2><span class="c-heading--sectionTitle --grayBack">採用担当者より</span></h2>
+            <div class="p-recruit__messageTextTop">
+              <p>日本オフィス・システム株式会社の新卒採用サイトをご覧いただき、ありがとうございます。</p>
+              <p> NOSは「お客様第一主義」の経営理念の基、お客様の成長に繋がるITソリューションの提供を行っています。1982年に設立となり、現在は東証プライム上場の兼松エレクトロニクス株式会社の100％子会社となっています。安定した財務基盤を持っているので腰を据えて働くことが出来る企業です。このサイトにはNOSを理解するための情報がたくさん掲載されていますので、NOSへの理解を深めて興味をお持ちいただけたらと思います。</p>
+              <p>ここでは、求める人材について、また面接のアドバイスについて学生の皆さんにお伝えしたいと思います。</p>
+            </div>
+            <div class="p-recruit__messageImg">
+              <img src="<%= data.imgPath %>/recruit/message_shape_1.webp" alt="shape 1">
+            </div>
+            <ul class="p-recruit__adviceList">
+              <li>
+                <dl class="p-recruit__adviceItem">
+                  <dt>
+                    <span class="number">
+                      <img src="<%= data.imgPath %>/recruit/advice_01.svg" alt="アドバイス 01">
+                    </span>
+                    <span class="text">求める人材について</span>
+                  </dt>
+                  <dd>
+                    <h3>求める人材について</h3>
+                    <p>ITに対する興味・関心を高く持ち、常に最新の情報を学ぼうとする姿勢のある方を求めています。IT業界は変化が激しいので興味・関心を常に持ちアンテナを張って最新情報を取り入れる姿勢が必要になるためです。</p>
+                    <p>また取り入れた情報をお客様や社内に伝えるコミュニケーション力も必要になります。これらは特別な力ではないのでIT業界で活躍できる可能性は皆さんお持ちだと思います。</p>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl class="p-recruit__adviceItem">
+                  <dt>
+                    <span class="number">
+                      <img src="<%= data.imgPath %>/recruit/advice_02.svg" alt="アドバイス 02">
+                    </span>
+                    <span class="text">面接のアドバイスについて</span>
+                  </dt>
+                  <dd>
+                    <h3>面接のアドバイスについて</h3>
+                    <p>どうしてIT業界で働きたいのか、をお聞きしたいと考えています。失敗しないようにとテンプレートのような言葉ではなく、きっかけとなった皆さんの経験を自分らしい言葉で話してもらいたいと思います。</p>
+                    <p>NOSとしては皆さんが話しやすい雰囲気を作って面接を実施するようにしています。</p>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl class="p-recruit__adviceItem">
+                  <dt>
+                    <span class="number">
+                      <img src="<%= data.imgPath %>/recruit/advice_03.svg" alt="アドバイス 03">
+                    </span>
+                    <span class="text">NOSで働くということ</span>
+                  </dt>
+                  <dd>
+                    <h3>NOSで働くということ</h3>
+                    <p>NOSではお客様のIT分野をトータルで支援することが出来ます、NOSさんにお願いして良かった、～さんにお願いして良かったと言ってもらえる環境があります。</p>
+                    <p>またさまざまなことにチャレンジ出来るチャンスがあり、若いうちから成長が出来ます。メリハリを持って働けるので仕事はもちろんプライベートも満喫し社会人として充実した生活を送ることが可能です。</p>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <%- include('../_linkCard.ejs', {data: data}); %>
+        <%- include('../../include/common/_entryBottom.ejs', {data: data}); %>
+      </main>
+      <%- include('../../include/common/_scrollTop.ejs', {data: data}); %>
+      <%- include('../../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

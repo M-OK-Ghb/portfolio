@@ -1,0 +1,622 @@
+// -------------------------------------------------------------------
+//  work.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.p-work {
+  &__tabArea {
+    display: flex;
+    width: 82.05vw;
+    margin:15.38vw auto 0;
+    > li {
+      width: 50%;
+      height: 13.4vw;
+      background-color: transparent;
+
+      &.is-active {
+        background-color: #fff;
+        border-radius: 1.47vw 1.47vw 0 0;
+        box-shadow: 0px 3px 6px #00000029;
+        @include med.media(sp) {
+          border-radius: 2.67vw 2.67vw 0 0;
+        }
+      }
+    }
+
+    @include med.media(sp) {
+      width: 94.67vw;
+      margin-top: 36vw;
+    }
+  }
+
+  &__tabBtn {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__tabInner {
+    position: absolute;
+    width: 35.9vw;
+    height: 20.5vw;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: -8vw;
+    cursor: pointer;
+    &:hover {
+      transition: opacity 0.3s;
+      opacity: 0.8;
+    }
+
+    @include med.media(sp) {
+      width: 41.33vw;
+      height: 32vw;
+      top: -18vw;
+    }
+
+    > img {
+      width: 100%;
+      @include med.media(sp) {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    > span { 
+      display: inline-block;
+      padding: 0.44vw;
+      position: absolute;
+      font-size: 1.47vw;
+      font-weight: bold;
+      color: #FFF;
+      z-index: 5;
+      left: -0.75vw;
+      bottom: 2.2vw;
+
+      &.sales {
+        background-color: var.$SALES_COLOR;
+      }
+
+      &.se {
+        background-color: var.$SE_COLOR;
+      }
+
+      &.is-pc {
+        @include med.media(sp) {
+          display: none;
+        }  
+      }
+
+      &.is-sp {
+        @include med.media(pc) {
+          display: none;
+        }
+
+        @include med.media(sp) {
+          display: inline;
+          padding: 0.8vw;
+          font-size: 3.73vw;
+
+          &.--firstLine {
+            bottom: 8.2vw;
+          }
+
+          &.--endLine {
+            bottom: 3.2vw;
+          }
+        }
+      }
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    &.is-active {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__schedule {
+    width: 82.05vw;
+    margin: auto;
+    background: #FFF;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0px 6px 5px #00000029;
+    border-radius: 0 1.47vw 1.47vw 1.47vw;
+    padding-top: 5.86vw;
+    padding-bottom: 7.33vw;
+
+    @include med.media(sp) {
+      width: 94.67vw;
+      padding-top: 21.33vw;
+      padding-bottom: 26.67vw;
+      border-radius: 0 2.67vw 2.67vw 2.67vw;
+    }
+
+    &.is-right {
+      border-radius: 1.47vw 0 1.47vw 1.47vw;
+      @include med.media(sp) {
+        border-radius: 2.67vw 0 2.67vw 2.67vw;
+      }
+    }
+  }
+
+  &__scheduleBlock {
+    width: 76.2vw;
+    margin: auto;
+    display: none;
+    &.is-active {
+      display: block;
+    }
+
+    @include med.media(sp) {
+      width: 90.67vw;
+    }
+  }
+
+  &__scheduleBlockInner {
+    position: relative;
+  }
+
+  &__scheduleMain {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__border {
+    position: absolute;
+    height: 100%;
+    top: -2vw;
+    z-index: 0;
+    > img {
+      height: 100%;
+    }
+
+    @include med.media(sp) {
+      top: -8vw;
+    }
+
+    &.--left {
+      left: 1.75%;
+      @include med.media(sp) {
+        left: 5%;
+      }
+    }
+
+    &.--right  {
+      right: 1.75%;
+      @include med.media(sp) {
+        right: 5%;
+      }
+    }
+  }
+
+  &__scheduleList {
+    margin-top: 7.3vw;
+    @include med.media(sp) {
+      margin-top: 18.67vw;
+    }
+
+    > li {
+      margin-bottom: 5.13vw;
+      @include med.media(sp) {
+        margin-bottom: 25.3vw;
+      }
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__scheduleItem {
+    padding-left: 2.93vw;
+    position: relative;
+    @include med.media(sp) {
+      padding-left: 8vw;
+    }
+
+    &.--right {
+      padding-left: 0;
+      padding-right: 2.93vw;
+      @include med.media(sp) {
+        padding-right: 8vw;
+      }
+    }
+  }
+
+  &__scheduleNumber {
+    position: absolute;
+    width: 4.4vw;
+    height: 4.4vw;
+    top: -2.2vw;
+    left: 0;
+
+    &.--right {
+      left: inherit;
+      right: 0;
+    }
+
+    @include med.media(sp) {
+      width: 10.67vw;
+      height: 10.67vw;
+      top: -5.3vw;
+    }
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__scheduleContents {
+    padding: 3.66vw 2.93vw;
+    border: 1px solid var.$ACCENT_BLUE;
+    border-radius: 1.47vw;
+    @include med.media(sp) {
+      padding: 9.33vw 5.33vw;
+      border-radius: 2.67vw;
+    }
+  }
+
+  &__scheduleContentsInner {
+    display: flex;
+    align-items: center;
+    margin-top: 2.2vw;
+    @include med.media(sp) {
+      display: block;
+    }
+  }
+
+  &__scheduleIcon {
+    width: 12.45vw;
+    margin-right: 1.47vw;
+    flex-shrink: 0;
+    > img {
+      width: 100%;
+    }
+
+    @include med.media(sp) {
+      width: 53.3vw;
+      margin: auto;
+    }
+  }
+
+  &__scheduleHeading {
+    font-size: 1.32vw;
+    font-weight: bold;
+    color: var.$ACCENT_BLUE;
+    text-align: center;
+
+    &.--pc {
+      @include med.media(sp) {
+        display: none;
+      }
+    }
+
+    &.--sp {
+      font-size: 4.5vw;
+      margin-top: 6.67vw;
+      @include med.media(pc) {
+        display: none;
+      }
+    }
+  }
+
+  &__scheduleText {
+    > p {
+      color: #121212;
+      font-size: 1.03vw;
+      margin-bottom: 1.47vw;
+      line-height: 1.71;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include med.media(sp) {
+        font-size: 3.47vw;
+        margin-bottom: 6.4vw;
+      }
+    }
+
+    @include med.media(sp) {
+      margin-top: 9.33vw;
+    }
+  }
+
+  &__heading {
+    &.--bottom {
+      margin-top: 7.33vw;
+      @include med.media(sp) {
+        margin-top: 26.67vw;
+      }
+    }
+
+    &.--right {
+      text-align: right;
+    }
+  }
+
+  &__details {
+    margin-top: 5.86vw;
+
+    @include med.media(sp) {
+      margin-top: 20vw;
+    }
+
+    > li {
+      width: 65.2vw;
+      margin-bottom: 5.13vw;
+      padding-left: 2.93vw;
+      &:last-child {
+        background-color: #FFF;
+        margin-bottom: 0;
+      }
+
+      @include med.media(sp) {
+        width: 100%;
+        padding-left: 0;
+        margin-bottom: 20vw;
+      }
+    }
+
+    &.--right {
+      > li {
+        padding-left: 0;
+        padding-right: 2.93vw;
+        margin-left: 11vw;
+
+        @include med.media(sp) {
+          margin-left: 0;
+          padding-right: 0;
+        }
+
+        &.--noPictureRight {
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+
+  &__detailInner {
+    display: flex;
+    justify-content: space-between;
+    @include med.media(sp) {
+      display: block;
+      padding-left: 8.33vw;
+    }
+
+    &.--right {
+      @include med.media(sp) {
+        padding-left: 0;
+        padding-right: 8.33vw;
+      }
+    }
+
+    &.--noPictureRight {
+      justify-content: flex-end;
+      @include med.media(sp) {
+        padding-left: 0;
+        padding-right: 8.33vw;
+      }
+    }
+  }
+
+  &__detailText {
+    width: 32.96vw;
+    &.--noPicture {
+      width: 46.89vw;
+      @include med.media(sp) {
+        width: 100%;
+      }
+    }
+
+    > p {
+      margin-top: 0.88vw;
+      font-size: 1.03vw;
+      line-height: 1.71;
+      @include med.media(sp) {
+        font-size: 3.47vw;
+        margin-top: 4vw;
+      }
+    }
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+
+    &.--right {
+      order: 1;
+    }
+  }
+
+  &__detailHead {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    > span {
+      display: inline-block;
+      font-weight: bold;
+
+      &.label {
+        font-family: var.$EN_FONT_BASIC;
+        font-size: 1.61vw;
+        background-color: var.$ACCENT_BLUE;
+        color: #FFF;
+        padding: 0.36vw 0.51vw;
+        margin-right: 1.47vw;
+        @include med.media(sp) {
+          font-size: 4.67vw;
+          padding: 1.33vw;
+          margin-right: 2.67vw;
+        }
+      }
+
+      &.text {
+        font-size: 1.32vw;
+        color: var.$ACCENT_BLUE;
+        @include med.media(sp) {
+          font-size: 4.27vw;
+        }
+      }
+    }
+
+    &::before {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: -2.06vw;
+      width: 1.03vw;
+      height: 1.03vw;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background: var.$ACCENT_BLUE;
+      @include med.media(sp) {
+        width: 2.67vw;
+        height: 2.67vw;
+        left: -4.9vw;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      background: var.$ACCENT_BLUE;
+      top: 50%;
+      height: 1px;
+      transform: translateY(-50%);
+      width: 1.1vw;
+      left: -1.1vw;
+      @include med.media(sp) {
+        width: 3vw;
+        left: -3vw;
+        height: 0.4vw;
+      }
+    }
+
+    &.--right {
+      justify-content: flex-end;
+
+      > span {
+        &.label {
+          order: 1;
+          margin-right: 0;
+        }
+
+        &.text {
+          margin-right: 2.67vw;
+        }
+      }
+
+      &::before {
+        left: inherit;
+        right: -2.06vw;
+
+        @include med.media(sp) {
+          right: -4.9vw;
+        }
+      }
+
+      &::after {
+        left: inherit;
+        right: -1.1vw;
+
+        @include med.media(sp) {
+          right: -3vw;
+        }
+      }
+    }
+  }
+
+  &__detailImg {
+    width: 27.1vw;
+    flex-shrink: 0;
+
+    @include med.media(sp) {
+      width: 100%;
+      margin-top: 6.67vw;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__genreChangeBtn {
+    margin-top: 5vw;
+
+    @include med.media(sp) {
+      margin-top: 20vw;
+    }
+
+    > button {
+      transition: color 0.3s, background-color 0.3s;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      padding: 1.61vw 0;
+      font-size: 1.17vw;
+      font-weight: bold;
+
+      @include med.media(sp) {
+        font-size: 3.73vw;
+        padding: 6.67vw 0;
+        padding-right: 6vw;
+      }
+
+      &:hover {
+        > svg {
+          line,path {
+            stroke: #fff;
+          }
+        }
+      }
+
+      &.--sales {
+        border: 1px solid var.$SALES_COLOR;
+        color: var.$SALES_COLOR;
+        &:hover {
+          color: #fff;
+          background-color: var.$SALES_COLOR;
+        }
+      }
+
+      &.--se {
+        border: 1px solid var.$SE_COLOR;
+        color: var.$SE_COLOR;
+        &:hover {
+          color: #FFF;
+          background-color: var.$SE_COLOR;
+        }
+      }
+
+      > svg {
+        width: 1.17vw;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2.2vw;
+        @include med.media(sp) {
+          width: 3.47vw;
+          right: 5.33vw;
+        }
+      }
+    }
+  }
+}

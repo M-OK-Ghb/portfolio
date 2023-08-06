@@ -1,0 +1,433 @@
+// -------------------------------------------------------------------
+//  Common - header.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.l-header {
+  width:100%;
+  padding-left: 3.75%;
+  height: 160px;
+  background-color: #FFF;
+  position: fixed;
+  top:0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s;
+
+  @include med.media(sp) {
+    opacity:  1;
+    z-index: 100;
+    padding-left: 0;
+    height: 16vw;
+  }
+
+  &.is-fadeIn {
+    opacity: 1;
+    z-index: 100;
+  }
+
+  &__headWrap {
+    margin-top: 20px;
+    @include med.media(sp) {
+      margin-top: 0;
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  &__headInner {
+    display: flex;
+    align-items: center;
+    @include med.media(sp) {
+      display: block;
+      padding-top: 3.2vw;
+      padding-left: 3.2vw;
+    }
+  }
+
+  &__logo {
+    margin-right: 30px;
+    @include med.media(sp) {
+      margin-right: 0;
+    }
+
+    > a {
+      display: inline-block;
+      width: 120px;
+      transition: opacity 0.3s;
+      @include med.media(sp) {
+        width: 18.6vw;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      img {
+        width:100%;
+      }
+    }
+  }
+
+  &__heading {
+    color: #666;
+    font-size: 20px;
+    font-family: var.$FONT_ZENKAKU;
+    @include med.media(sp) {
+      font-size: 2.66vw;
+      margin-top: 1.33vw;
+    }
+  }
+
+  &__category {
+    margin: 10px auto 0;
+    width:84%;
+    @include med.media(sp) {
+      margin: 0;
+      padding-bottom: 6vw;
+      width: 100%;
+      position: fixed;
+      width: 93%;
+      height: 100vh;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      background-color: #555555;
+      top: 0;
+      right: -100%;
+      transition: right 0.5s ease-in-out;
+
+      &.is-menu-open {
+        right: 0;
+      }
+
+      > nav {
+        padding: 8vw 6vw 3vw;
+      }
+    }
+  }
+
+  &__globalMenu {
+    display: flex;
+    justify-content: space-between;
+    @include med.media(sp) {
+      display: block;
+    }
+  }
+
+  &__globalItem {
+    text-align: center;
+    a {
+      display: inline-block;
+      transition: opacity 0.5s;
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        margin: auto;
+        width: 2px;
+        height: 10px;
+        background: #003F93;
+        left: 0;
+        right: 0;
+        top: -8px;
+        opacity: 0;
+        transition: opacity 0.5s;
+        @include med.media(sp) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        opacity: 0.5;
+
+        &::before {
+          opacity: 0.5;
+        }
+    
+        .l-header__linkHead {
+          color: #999;
+        }
+      }
+
+      @include med.media(sp) {
+        display: flex;
+      }
+    }
+
+    &.is-sp {
+      display: none;
+      @include med.media(sp) {
+        display: block;
+      }
+    }
+
+    @include med.media(sp) {
+      text-align: left;
+      padding-bottom: 5vw;
+      margin-bottom: 5vw;
+      border-bottom: 1px solid #A3B3BB;
+
+      br {
+        display: none;
+      }
+
+      &.mt-adjust {
+        margin-top: 10vw;
+      }
+    }
+
+    &.l-header__globalItem--spTop {
+      display: none;
+      @include med.media(sp) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__spLogoWrap {
+    width: 26.5vw;
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__menuCloseBtn {
+    font-size: 12vw;
+    padding-bottom: 2vw;
+    color: #FFF;
+  }
+
+  &__linkHead {
+    font-family: var.$FONT_RALEWAY;
+    font-weight: bold;
+    font-size: 28px;
+
+    @include med.media(sp) {
+      color: #FFF;
+      font-size: 4vw;
+      margin-right: 2vw;
+    }
+  }
+
+  &__linkFoot {
+    color: #999;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 4px;
+    > span {
+      display: none;
+    }
+    @include med.media(sp) {
+      color: #FFF;
+      font-size: 4vw;
+      font-weight: bold;
+      margin-top: 0px;
+      > span {
+        display: inline-block;
+        margin-right: 2vw;
+      }
+    }
+  }
+
+  &__thirdPageLink {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+      padding:4vw 3vw 0;
+      > a {
+        display: inline-block;
+        color: #FFF;
+        font-weight: bold;
+        line-height: 2.5;
+        font-size: 4vw;
+
+        &:first-child {
+          margin-right: 3vw;
+        }
+
+        > span {
+          color: var.$ACCENT_YELLOW;
+          margin-right: 1vw;
+        }
+      } 
+    }
+  }
+
+  &__globalEntryBtnWrap {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__btnWrap {
+    display: flex;
+    height: 54px;
+    @include med.media(sp) {
+      height: auto;
+    }
+  }
+
+  &__btn {
+    width: 200px;
+    height: 54px;
+
+    @include med.media(sp) {
+      width: 16vw;
+      height: 16vw;
+    }
+
+    > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      color:#fff;
+      font-family: var.$FONT_RALEWAY;
+      font-weight: bold;
+      font-size: 18px;
+      transition: opacity 0.3s;
+
+      @include med.media(sp) {
+        font-size: 2.4vw;
+        text-align: center;
+        flex-flow: column;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      > span {
+        margin-right: 8px;
+        @include med.media(sp) {
+          margin-right: 0;
+        }
+      }
+
+      svg {
+        fill: #FFF;
+        vertical-align: top;
+        @include med.media(sp) {
+          width: 2.15vw;
+          height: 2.15vw;
+          margin-top: 1.6vw;
+        }
+      }
+
+      br {
+        display: none;
+        @include med.media(sp) {
+          display: block;
+        }
+      }
+    }
+
+    &.--rikunabi {
+      > a {
+        border-left: none;
+      }
+    }
+  }
+
+  &__btn--entry {
+    > a {
+      background-color: #003F93;
+    }
+  }
+
+  &__btn--external {
+    > a {
+      color: #003F93;
+      border: 1px solid #003F93;
+      svg {
+        fill: #003F93;
+      }
+    }
+    @include med.media(sp) {
+      display: none;
+    }
+  }
+
+  &__btn--hamburger {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+      background-color: var.$BASE_TEXT_COLOR;
+    }
+  }
+
+  &__menuOpenBtn {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+    > span {
+      position: absolute;
+      display: inline-block;
+      width: 42%;
+      background-color: #FFF;
+      height: 1px;
+      left:0;
+      right:0;
+      margin: auto;
+      &:nth-child(1) {
+        top: 6vw;
+      }
+
+      &:nth-child(2) {
+        top: 8vw; 
+      }
+
+      &:nth-child(3) {
+        top: 10vw;
+      }
+    }
+  }
+
+  /*current*/
+  &__currentItem {
+    position: relative;
+    display: inline-block;
+    opacity: 0.5;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      margin: auto;
+      width: 2px;
+      height: 10px;
+      background: #003F93;
+      left: 0;
+      right: 0;
+      top: -8px;
+      @include med.media(sp) {
+        display: none;
+      }
+    }
+
+    @include med.media(sp) {
+      opacity: 1;
+    }
+
+    .l-header__linkHead {
+      color: #999;
+      @include med.media(sp) {
+        color: #FFF;
+      }
+    }
+  }
+}

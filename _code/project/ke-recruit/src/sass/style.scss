@@ -1,0 +1,51 @@
+@charset "UTF-8";
+// -------------------------------------------------------------------
+//  style.scss
+// -------------------------------------------------------------------
+
+// Base
+// -------------------------------------------------------------------
+@use "base/normalize";
+@use "base/destyle";
+@use "base/structure";
+@use "base/state";
+
+// Helpers
+// -------------------------------------------------------------------
+@use "helpers/utility";
+@use "helpers/variables" as var;
+@use "helpers/mixin" as mix;
+@use "helpers/mediaquery" as med;
+
+
+// Components
+// -------------------------------------------------------------------
+@use "components/button";
+@use "components/loading";
+@use "components/label";
+@use "components/heading";
+@use "components/breadCrumbs";
+@use "components/subPage";
+@use "components/floatFadeIn";
+@use "components/movieModal";
+
+// Layout
+// -------------------------------------------------------------------
+@use "layout/header";
+@use "layout/footer";
+
+// Pages
+// -------------------------------------------------------------------
+@use "pages/top";
+@use "pages/topfirstvisual";
+@use "pages/topmission";
+@use "pages/topmessage";
+@use "pages/toppeople";
+@use "pages/topculture";
+@use "pages/work";
+@use "pages/mission";
+@use "pages/recruit";
+@use "pages/culture";
+@use "pages/faq";
+@use "pages/people";
+

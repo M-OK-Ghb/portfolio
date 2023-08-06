@@ -1,0 +1,26 @@
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><%= data.title %></title>
+  <meta name="description" content="<%= data.description %>">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <meta property="og:url" content="">
+  <% if(data.isTop) { %>
+  <meta property="og:type" content="website">
+  <% } else { %>
+  <meta property="og:type" content="article">
+  <% } %>
+  <meta property="og:title" content="<%= data.title %>">
+  <meta property="og:description" content="<%= data.description %>">
+  <meta property="og:site_name" content="日本オフィス・システム株式会社">
+  <meta property="og:image" content="">
+  <meta name="twitter:card" content="">
+  <meta name="twitter:title" content="<%= data.title %>">
+  <meta name="twitter:description" content="<%= data.description %>">
+  <meta name="twitter:image" content="">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+  <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+  <link rel="stylesheet" href="<%= data.path %>/css/swiper.min.css">
+  <link rel="stylesheet" href="<%= data.path %>/css/style.css">
+</head>

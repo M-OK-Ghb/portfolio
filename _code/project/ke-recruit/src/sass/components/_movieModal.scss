@@ -1,0 +1,86 @@
+// -------------------------------------------------------------------
+// 	movieModal.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.c-movieModal {
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -2;
+  background-color: rgba(0,0,0,0.7);
+  transition: opacity 0.3s;
+
+  &.is-show {
+    opacity: 1;
+    z-index: 200;
+  }
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__contentWrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__content {
+    display: none;
+    width: 50vw;
+    height: 30vw;
+
+    @include med.media(sp) {
+      width: 90vw;
+      height: 60vw;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
+
+    button {
+      outline: none;
+      position: absolute;
+      right: -3.5vw;
+      top: -3.5vw;
+      width: 3.5vw;
+      height: 3.5vw;
+      font-size: 3.5vw;
+      color: #FFF;
+      background-color: #666;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      justify-content: center;
+      border-radius: 50%;
+
+      > img {
+        width: 50%;
+      }
+
+      @include med.media(sp) {
+        width: 8vw;
+        height: 8vw;
+        font-size: 8vw;
+        right: 0;
+        top: -10vw;
+      }
+    }
+
+    &.is-show {
+      display: block;
+    }
+  }
+}

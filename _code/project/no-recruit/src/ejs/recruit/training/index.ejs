@@ -1,0 +1,76 @@
+<%
+  const data = {
+    isTop: false,
+    title: "Recruit | NOS 新卒採用サイト",
+    description: "",
+    path: "../..",
+    imgPath: "../../images",
+    commonImgPath: "../../images/common",
+    current: "recruit",
+    hierarchy: "third",
+    crumbsText: "教育研修",
+    crumbsUrl: "training",
+    crumbsParentText: "RECRUIT",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../../include/common/_header.ejs', {data: data}); %>
+      <main class="p-sub__main">
+        <%- include('../../include/common/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-sub__fv">
+          <div class="p-sub__fvImg js-sub-fvImg">
+            <img class="is-pc" src="<%= data.imgPath %>/kv/recruit_training.webp" alt="キービジュアル <%= data.crumbsText %>">
+            <img class="is-sp" src="<%= data.imgPath %>/kv/recruit_training_sp.webp" alt="キービジュアル <%= data.crumbsText %>">
+          </div>
+          <section class="p-sub__topSection">
+            <h1 class="c-heading --recruit p-sub__topHeading js-sub-titleTop">
+              <img src="<%= data.commonImgPath %>/heading_recruit.svg" alt="<%= data.current %>">
+            </h1>
+            <p class="c-headingSub"><span>教育研修</span></p>
+          </section>
+        </div>
+        <div class="p-sub__contents js-scrollFadeIn --block">
+          <p class="p-sub__description">新入社員研修や研修スケジュール、<br class="is-sp">その他の各種研修制度についてご紹介します。</p>
+        </div>
+        <section class="p-recruit__training --top">
+          <div class="p-recruit__trainingInner --top">
+            <h2><span class="c-heading--sectionTitle --grayBack">新人社員研修</span></h2>
+            <div class="p-recruit__trainingImg" data-simplebar data-simplebar-auto-hide="false">
+              <img src="<%= data.imgPath %>/recruit/training_graph.svg" alt="新人社員研修 グラフ">
+            </div>
+          </div>
+        </section>
+        <section class="p-recruit__training --bottom">
+          <div class="p-recruit__trainingInner">
+            <h2><span class="c-heading--sectionTitle --grayBack">その後の研修</span></h2>
+            <div class="p-recruit__trainingContents">
+              <div class="p-recruit__trainingCap">
+                <img src="<%= data.imgPath %>/recruit/after_training_cap.png" alt="その後の研修 イメージ">
+              </div>
+              <div class="p-recruit__trainingTextArea">
+                <div class="p-recruit__trainingText">
+                  <h3>研修</h3>
+                  <p>配属後は、各配属部署で行われるスキルアップ研修、各階層に求められる階層別研修、業界の変化に合わせ、それぞれの目的に応じて目的別研修を行っており、外部企業主催の研修参加など幅広く行っています。</p>
+                </div>
+                <div class="p-recruit__trainingText">
+                  <h3>資格取得奨励制度</h3>
+                  <p>自己啓発支援として、社員の知識・技能の向上を目的とした資格取得奨励制度があります。各種資格について会社で認められた資格は、奨励金が支給されます。社員一人一人がこの制度を利用して自己のスキルアップに努めています。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <%- include('../_linkCard.ejs', {data: data}); %>
+        <%- include('../../include/common/_entryBottom.ejs', {data: data}); %>
+      </main>
+      <%- include('../../include/common/_scrollTop.ejs', {data: data}); %>
+      <%- include('../../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

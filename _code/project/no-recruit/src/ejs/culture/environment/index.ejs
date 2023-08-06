@@ -1,0 +1,206 @@
+<%
+  const data = {
+    isTop: false,
+    title: "Culture | NOS 新卒採用サイト",
+    description: "",
+    path: "../..",
+    imgPath: "../../images",
+    commonImgPath: "../../images/common",
+    current: "culture",
+    hierarchy: "third",
+    crumbsText: "NOSの働く環境",
+    crumbsUrl: "environment",
+    crumbsParentText: "CULTURE",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../../include/common/_header.ejs', {data: data}); %>
+      <main class="p-sub__main">
+        <%- include('../../include/common/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-sub__fv">
+          <div class="p-sub__fvImg js-sub-fvImg">
+            <img class="is-pc" src="<%= data.imgPath %>/kv/culture_environment.webp" alt="キービジュアル <%= data.crumbsText %>">
+            <img class="is-sp" src="<%= data.imgPath %>/kv/culture_environment_sp.webp" alt="キービジュアル <%= data.crumbsText %>">
+          </div>
+          <section class="p-sub__topSection">
+            <h1 class="c-heading --culture p-sub__topHeading js-sub-titleTop">
+              <img src="<%= data.commonImgPath %>/heading_culture.svg" alt="<%= data.current %>">
+            </h1>
+            <p class="c-headingSub"><span>NOSの働く環境</span></p>
+          </section>
+        </div>
+        <div class="p-sub__contents js-scrollFadeIn --block">
+          <p class="p-sub__description">NOSが考える働きやすい環境とは？<br>オフィス風景と合わせてご紹介します。</p>
+        </div>
+        <section class="p-culture__envTop">
+          <div class="p-culture__envTopInner">
+            <h2 class="p-culture__heading">
+              <span class="c-heading--sectionTitle --grayBack">NOSが考える働きやすい環境とは</span>
+            </h2>
+            <ul class="p-culture__envTopList">
+              <li>
+                <div class="p-culture__envTopImg">
+                  <img src="<%= data.imgPath %>/culture/env_location.png" alt="立地 イメージ">
+                </div>
+                <div class="p-culture__envTopText">
+                  <h3>立地</h3>
+                  <dl>
+                    <dt>有明本社</dt>
+                    <dd>りんかい線「国際展示場駅」から徒歩5分、ゆりかもめ「東京ビッグサイト駅」から徒歩1分</dd>
+                  </dl>
+                  <dl>
+                    <dt>京橋事業所</dt>
+                    <dd>都営浅草線「宝町駅」目の前、複数路線を利用できるのでアクセスが便利です。</dd>
+                  </dl>
+                  <p>両事業所を結ぶシャトル便があるので移動が便利です。</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__envTopImg">
+                  <img src="<%= data.imgPath %>/culture/env_conference.png" alt="会議室・リモートワークスペース イメージ">
+                </div>
+                <div class="p-culture__envTopText">
+                  <h3>会議室・リモートワークスペース</h3>
+                  <dl>
+                    <dt>有明本社</dt>
+                    <dd>海の見える会議室となっており開放感があります。</dd>
+                  </dl>
+                  <dl>
+                    <dt>京橋事業所</dt>
+                    <dd>打合せスペースが全面改装になりました。日当たりもよく、社内外の打合せで利用します。</dd>
+                  </dl>
+                  <p>個人で利用できる集中スペースがあります。</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__envTopImg">
+                  <img src="<%= data.imgPath %>/culture/env_room.png" alt="執務室 イメージ">
+                </div>
+                <div class="p-culture__envTopText">
+                  <h3>執務室</h3>
+                  <dl>
+                    <dt>有明本社/京橋事業所</dt>
+                    <dd>執務室はそこまで広くないので社員同士の顔がわかりやすい作りになっていて、フリーテーブルがあるので打合せや作業スペースとして利用可能です。</dd>
+                  </dl>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <section class="p-culture__envSwiperArea">
+          <h2>
+            <span class="c-heading--sectionTitle --grayBack">NOSのオフィス風景</span>
+          </h2>
+          <div class="p-culture__envSwiperArea swiper-culture-first js-culture-swiper">
+            <ul class="p-culture__envSwiper swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="p-culture__swiperImg">
+                  <img src="<%= data.imgPath %>/culture/office_1.png" alt="オフィスイメージ 01">
+                  <span>有明オフィスの執務室</span>
+                </div>
+                <p>一人で作業を集中して行いたいときに利用されている集中ゾーン。気分屋業務に応じて自分だけのスペースを確保できます。</p>
+              </li>
+              <li class="swiper-slide">
+                <div class="p-culture__swiperImg">
+                  <img src="<%= data.imgPath %>/culture/office_2.png" alt="オフィスイメージ 02">
+                  <span>有明オフィスの執務室</span>
+                </div>
+                <p>一人で作業を集中して行いたいときに利用されている集中ゾーン。気分屋業務に応じて自分だけのスペースを確保できます。</p>
+              </li>
+              <li class="swiper-slide">
+                <div class="p-culture__swiperImg">
+                  <img src="<%= data.imgPath %>/culture/office_3.png" alt="オフィスイメージ 03">
+                  <span>ダミー</span>
+                </div>
+                <p>ダミーダミーダミーダミーダミーダミー</p>
+              </li>
+              <li class="swiper-slide">
+                <div class="p-culture__swiperImg">
+                  <img src="<%= data.imgPath %>/culture/office_4.png" alt="オフィスイメージ 04">
+                  <span>ダミー2 ダミー2</span>
+                </div>
+                <p>ダミーダミーダミーダミーダミーダミー</p>
+              </li>
+              <li class="swiper-slide">
+                <div class="p-culture__swiperImg">
+                  <img src="<%= data.imgPath %>/culture/office_5.png" alt="オフィスイメージ 05">
+                  <span>有明オフィスの執務室</span>
+                </div>
+                <p>一人で作業を集中して行いたいときに利用されている集中ゾーン。気分屋業務に応じて自分だけのスペースを確保できます。</p>
+              </li>
+              <li class="swiper-slide">
+                <div class="p-culture__swiperImg">
+                  <img src="<%= data.imgPath %>/culture/office_6.png" alt="オフィスイメージ 06">
+                  <span>有明オフィスの執務室 ダミー</span>
+                </div>
+                <p>一人で作業を集中して行いたいときに利用されている集中ゾーン。気分屋業務に応じて自分だけのスペースを確保できます。</p>
+              </li>
+              <li class="swiper-slide">
+                <div class="p-culture__swiperImg">
+                  <img src="<%= data.imgPath %>/culture/office_7.png" alt="オフィスイメージ 07">
+                  <span>有明オフィス</span>
+                </div>
+                <p>一人で作業を集中して行いたいときに利用されている集中ゾーン。気分屋業務に応じて自分だけのスペースを確保できます。</p>
+              </li>
+            </ul>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <section class="p-culture__envSwiperArea">
+          <h2>
+            <span class="c-heading--sectionTitle --grayBack">NOSで働く人たち</span>
+          </h2>
+          <div class="p-culture__envSwiperArea swiper-culture-first js-culture-swiper --peopleSwiper">
+            <ul class="p-culture__envSwiper swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="p-culture__swiperImg">
+                  <img src="<%= data.imgPath %>/culture/people_1.png" alt="働く人たち 01">
+                  <span>京橋オフィス</span>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="p-culture__swiperImg">
+                  <img src="<%= data.imgPath %>/culture/people_2.png" alt="働く人たち 02">
+                  <span>京橋オフィス</span>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="p-culture__swiperImg">
+                  <img src="<%= data.imgPath %>/culture/people_3.png" alt="働く人たち 03">
+                  <span>ダミー</span>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="p-culture__swiperImg">
+                  <img src="<%= data.imgPath %>/culture/people_4.png" alt="働く人たち 04">
+                  <span>ダミー2 ダミー2</span>
+                </div>
+              </li>
+              <li class="swiper-slide">
+                <div class="p-culture__swiperImg">
+                  <img src="<%= data.imgPath %>/culture/people_5.png" alt="働く人たち 05">
+                  <span>京橋オフィス ダミー2</span>
+                </div>
+              </li>
+            </ul>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+        <%- include('../_linkCard.ejs', {data: data}); %>
+        <%- include('../../include/common/_entryBottom.ejs', {data: data}); %>
+      </main>
+      <%- include('../../include/common/_scrollTop.ejs', {data: data}); %>
+      <%- include('../../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<div class="c-linkCard">
+  <h4 class="c-linkCard__heading"><span class="c-heading--sectionTitle">他の働く環境・各種制度のメニューを見る</span></h4>
+  <ul class="c-linkCardList">
+    <% if(data.crumbsUrl === 'environment') { %>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/culture/welfare/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/culture/welfare_thumb.webp" alt="NOSの働く環境 イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel">
+            <span>福利厚生・各種制度</span>
+          </div>
+          <p class="p-sub__pageText">NOSが考える働きやすい環境とは？オフィス風景と合わせてご紹介します。</p>
+        </div>
+      </a>
+    </li>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/culture/number/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/culture/number_thumb.webp" alt="数字で見るNOS イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel">
+            <span>数字で見るNOS</span>
+          </div>
+          <p class="p-sub__pageText">NOSはどのような会社か？会社について、働く人について、特徴的な数字を集めてみました。</p>
+        </div>
+      </a>
+    </li>
+    <% } else if(data.crumbsUrl === 'welfare') { %>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/culture/environment/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/culture/environment_thumb.webp" alt="NOSの働く環境 イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel">
+            <span>NOSの働く環境</span>
+          </div>
+          <p class="p-sub__pageText">NOSが考える働きやすい環境とは？オフィス風景と合わせてご紹介します。</p>
+        </div>
+      </a>
+    </li>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/culture/number/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/culture/number_thumb.webp" alt="数字で見るNOS イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel">
+            <span>数字で見るNOS</span>
+          </div>
+          <p class="p-sub__pageText">NOSはどのような会社か？会社について、働く人について、特徴的な数字を集めてみました。</p>
+        </div>
+      </a>
+    </li>
+    <% } else if(data.crumbsUrl === 'number') { %>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/culture/environment/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/culture/environment_thumb.webp" alt="NOSの働く環境 イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel">
+            <span>NOSの働く環境</span>
+          </div>
+          <p class="p-sub__pageText">NOSが考える働きやすい環境とは？オフィス風景と合わせてご紹介します。</p>
+        </div>
+      </a>
+    </li>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/culture/welfare/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/culture/welfare_thumb.webp" alt="NOSの働く環境 イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel">
+            <span>福利厚生・各種制度</span>
+          </div>
+          <p class="p-sub__pageText">NOSが考える働きやすい環境とは？オフィス風景と合わせてご紹介します。</p>
+        </div>
+      </a>
+    </li>
+    <% } %>
+  </ul>
+</div>

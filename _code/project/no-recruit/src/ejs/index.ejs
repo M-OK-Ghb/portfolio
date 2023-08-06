@@ -1,0 +1,35 @@
+<%
+  const data = {
+    isTop: true,
+    title: "NOS 新卒採用サイト",
+    description: "NOS 新卒採用サイト description",
+    path: ".",
+    imgPath: "./images",
+    commonImgPath: "./images/common",
+    current: "top"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-top__container">
+      <%- include('include/common/_header.ejs', {data: data}); %>
+      <main class="p-top__main">
+        <%- include('include/top/_fv.ejs', {data: data}); %>
+        <%- include('include/top/_news.ejs', {data: data}); %>
+        <%- include('include/top/_mission.ejs', {data: data}); %>
+        <%- include('include/top/_people.ejs', {data: data}); %>
+        <%- include('include/top/_culture.ejs', {data: data}); %>
+        <div class="p-top__entry">
+          <%- include('include/common/_entryBottom.ejs', {data: data}); %>
+        </div>
+      </main>
+      <%- include('include/common/_modal.ejs', {data: data}); %>
+      <%- include('include/common/_footer.ejs', {data: data}); %>
+      <%- include('include/common/_scrollTop.ejs', {data: data}); %>
+    </div>
+    <%- include('include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

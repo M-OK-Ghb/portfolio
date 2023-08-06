@@ -1,0 +1,432 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/_head.ejs', { data: dataSet } ) %>
+  <body>
+    <div>
+      <%- include('../../include/_header.ejs', { data: dataSet } ) %>
+      <main class="p-recruitMain c-subPage__main">
+        <div class="c-breadCrumbs">
+          <ul class="c-breadCrumbs__list">
+            <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+            <li><a href="<%= dataSet.srcpath %>recruit/">採用情報</a></li>
+            <li><span>募集要項・採用スケジュール</span></li>
+          </ul>
+        </div>
+        <div class="p-recruitMain__content">
+          <div class="p-recruitMain__firstVisual c-subPage__firstVisual">
+            <img src="<%= dataSet.srcpath %>images/recruit_schedule_mv.jpg" alt="recruit schedule image">
+            <div class="c-subPage__textWrap">
+              <div class="c-subPage__textInner">
+                <div class="c-subPage__headingWrap">
+                  <div class="c-subPage__headingInner">
+                    <h2 class="c-subPage__heading js-subpage-titleAnimation">RECRUIT</h2>
+                    <p class="c-subPage__subText js-subpage-titleAnimation">-募集要項・採用スケジュール</p>
+                  </div>
+                </div>
+                <p class="c-subPage__detailText recruitSchedule js-loadFadeIn">採用に関する募集要項、採用方針、採用スケジュールについて<br>ご案内します。</p>
+                <ul class="p-recruit__scheduleAnchor js-loadFadeIn">
+                  <li>
+                    <div class="c-circleBtn">
+                      <a href="#guideline">
+                        <span class="c-circleBtn__circle">
+                          <span class="c-circleBtn__arrow"></span>
+                        </span>
+                        <span class="c-circleBtn__text">募集要項</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="c-circleBtn">
+                      <a href="#policy">
+                        <span class="c-circleBtn__circle">
+                          <span class="c-circleBtn__arrow"></span>
+                        </span>
+                        <span class="c-circleBtn__text">採用方針</span>
+                      </a>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="c-circleBtn">
+                      <a href="#flow">
+                        <span class="c-circleBtn__circle">
+                          <span class="c-circleBtn__arrow"></span>
+                        </span>
+                        <span class="c-circleBtn__text">選考スケジュール</span>
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-recruit__guideLineWrap js-loadFloatFadeIn" id="guideline">
+          <div class="p-recruit__guideLineInner">
+            <div class="p-recruit__guideLineHeadingWrap">
+              <h3 class="c-subPage__genre--heading">Guidelines</h3>
+              <p class="c-subPage__genre--headingSub recruitSchedule">募集要項</p>  
+            </div>
+            <div class="p-recruit__guideLineContent">
+              <ul class="p-guideLineTable">
+                <li>
+                  <dl>
+                    <dt>会社名</dt>
+                    <dd class="u-fw-bold">兼松エレクトロニクス株式会社</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>募集職種</dt>
+                    <dd>
+                      <div class="p-guideLineTable__detailWrap">
+                        <div>
+                          <h4>総合職</h4>
+                          <p>・営業職・SE（システムエンジニア）職・間接職（人事、総務、経理など会社の基幹業務）<br>※職種別ではなく、総合職として採用。入社後、約2ヶ月半の研修期間に本人の希望と適性を見て各職種に配属。</p>
+                        </div>
+                        <div>
+                          <h4>エリア一般職</h4>
+                          <p>・事務職（各職種の補佐・主に定型的な業務）</p>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>契約期間</dt>
+                    <dd>期間の定めなし</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>試用期間</dt>
+                    <dd>入社後6か月間</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>募集人数</dt>
+                    <dd>
+                      <div class="p-guideLineTable__detailWrap">
+                        <div>
+                          <h4>総合職</h4>
+                          <p>50名程度</p>
+                        </div>
+                        <div>
+                          <h4>エリア一般職</h4>
+                          <p>若干名</p>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>募集大学</dt>
+                    <dd>全国の国公私立大学および海外大学</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>募集学科</dt>
+                    <dd>全学部・全学科</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>応募資格</dt>
+                    <dd>
+                      <div class="p-guideLineTable__detailWrap">
+                        <div>
+                          <h4>総合職</h4>
+                          <p>2022年4月から2023年3月に四年制大学・大学院を卒業・修了予定の方</p>
+                        </div>
+                        <div>
+                          <h4>エリア一般職</h4>
+                          <p>2023年3月に四年制大学を卒業予定の方</p>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>選考方法</dt>
+                    <dd>筆記試験（学力試験）、<br class="sp">面接（複数回）</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>選考スケジュール</dt>
+                    <dd>
+                      <a href="#flow" class="p-guideLineTable__link">詳細はこちら</a>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>事業内容</dt>
+                    <dd class="p-guideLineTable__multiLine">
+                      <p>お客様の成長に繋がるITシステムに対して、お客様視点を最重要視した、ITソリューションを提供しています。<br>中でも、ITインフラサービスに関わる分野はKELの強みであり、お客様の大規模なITシステムが安定稼動するために必要なサーバー（処理装置）やストレージ（記憶装置）、ネットワーク（通信機器）などのITシステム装置をメーカーにとらわれることなく、ITインフラサービスとしてコーディネートをし、販売・設計・構築・保守・運用までワンストップで提供しております。<br>また、ビックデータ(経営分析)、アプリケーション、企業向けSNS、グループウェア、製造業の設計・工程管理アプリケーション等も提供しています。</p>
+                      <!--仮のhash値を入れる-->
+                      <a href="<%= dataSet.srcpath %>mission/index.html?#missionoverview" class="p-guideLineTable__link">詳細はこちら</a>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>初任給</dt>
+                    <dd>
+                      <div class="p-guideLineTable__detailWrap startingSalary">
+                        <div>
+                          <h4>総合職</h4>
+                          <p><span>【大卒】240,000円</span> <span>【院卒】260,000円</span></p>
+                        </div>
+                        <div>
+                          <h4>エリア一般職</h4>
+                          <p>【大卒】210,000円</p>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>諸手当</dt>
+                    <dd class="p-guideLineTable__multiLine">
+                      <p>時間外手当、通勤費全額支給<br>※各手当は当社規定に基づき支給</p>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>昇給</dt>
+                    <dd>年1回（7月）</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>賞与</dt>
+                    <dd>年2回（6月、12月）</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>勤務地</dt>
+                    <dd>
+                      <div class="p-guideLineTable__detailWrap">
+                        <div>
+                          <h4>総合職</h4>
+                          <p>東京、大阪、名古屋　他</p>
+                        </div>
+                        <div>
+                          <h4>エリア一般職</h4>
+                          <p>東京　他</p>
+                        </div>
+                      </div>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>勤務時間</dt>
+                    <dd>9:00〜17:20（休憩時間12:00〜13:00）</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>時間外労働</dt>
+                    <dd>あり</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>休日休暇</dt>
+                    <dd class="p-guideLineTable__multiLine">
+                      <p>完全週休2日制（土・日）、祝日、年末年始休暇、有給休暇（初年度14日、最高20日）、特別休暇、記念日休暇（誕生日、結婚記念日）、ボランティア休暇</p>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>保険</dt>
+                    <dd>健康保険、厚生年金保険、雇用保険、労災保険</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>福利厚生</dt>
+                    <dd class="p-guideLineTable__welfareDetail">
+                      <p><span>制&emsp;度：</span><span>財形貯蓄、社員持株会、退職金、資格取得奨励</span></p>
+                      <p><span>施&emsp;設：</span><span>独身寮、社宅(転勤者)</span></p>
+                      <p><span>その他：</span><span>宿泊・レジャー・スポーツ等の会員制福利厚生支援サービスに加入</span></p>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>社内クラブ</dt>
+                    <dd>テニス、スキー、サッカー、野球、ゴルフ、フットサルなど</dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>採用実績校（抜粋）</dt>
+                    <dd class="p-guideLineTable__area">
+                      <div>
+                        <h4>＜<span>北海道・東北</span>＞</h4>
+                        <p>北見工業大学、公立はこだて未来大学、北海道大学、北海道教育大学、岩手大学、東北大学</p>
+                      </div>
+                      <div>
+                        <h4>＜<span>関東・甲信越</span>＞</h4>
+                        <p>青山学院大学、茨城大学、学習院大学、慶応義塾大学、埼玉大学、上智大学、白百合女子大学、成城大学、聖心女子大学、高崎経済大学、多摩美術大学、千葉大学、中央大学、筑波大学、電気通信大学、東海大学、東京大学、東京海洋大学、東京都立大学、東京理科大学、日本大学、法政大学、明治大学、明治学院大学、横浜市立大学、横浜国立大学、立教大学、早稲田大学、新潟大学</p>
+                      </div>
+                      <div>
+                        <h4>＜<span>北陸・東海</span>＞</h4>
+                        <p>金沢大学、富山大学、愛知県立大学、静岡大学、名古屋大学、名古屋市立大学、名古屋工業大学、南山大学、三重大学</p>
+                      </div>
+                      <div>
+                        <h4>＜<span>近畿</span>＞</h4>
+                        <p>大阪大学、大阪市立大学、大阪府立大学、関西大学、関西外国語大学、関西学院大学、京都大学、京都工芸繊維大学、神戸大学、神戸市外国語大学、滋賀大学、同志社大学、兵庫県立大学、立命館大学、和歌山大学</p>
+                      </div>
+                      <div>
+                        <h4>＜<span>中国・四国・九州・海外</span>＞</h4>
+                        <p>岡山大学、岡山県立大学、県立広島大学、島根大学、下関市立大学、鳥取大学、広島大学、広島市立大学、愛媛大学、香川大学、鹿児島大学、北九州市立大学、九州大学、佐賀大学、西南学院大学、長崎大学、立命館アジア太平洋大学、国立台湾師範大学</p>
+                      </div>
+                      <div>
+                        <p>他</p>
+                      </div>
+                    </dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+            <div class="p-recruit__guideLineBg--sp"></div>
+          </div>
+        </div>
+        <div class="p-recruit__policy js-scrollFloatFadeIn" id="policy">
+          <div class="p-recruit__policyInner">
+            <div class="p-recruit__policyImg">
+              <img src="<%= dataSet.srcpath %>images/policy_mv.jpg" alt="policy image">
+            </div>
+            <div class="p-recruit__policyText">
+              <div class="p-recruit__policyTextInner">
+                <div class="p-recruit__policyHeadingWrap">
+                  <h2 class="p-recruit__policyHeading">Policy</h2>
+                  <p class="p-recruit__policyHeadingSub">採用方針</p>
+                </div>
+                <div class="p-recruit__policyCatch">
+                  <div class="p-recruit__policyCatchInner">
+                    <span class="brackets start">
+                      <img src="<%= dataSet.srcpath %>images/brackets_start.png" alt="「">
+                    </span>
+                    <h3>人物重視</h3>
+                    <span class="brackets end">
+                      <img src="<%= dataSet.srcpath %>images/brackets_end.png" alt="」">
+                    </span>
+                  </div>
+                </div>
+                <div class="p-recruit__policyBottom">
+                  <div class="p-recruit__policyDetail">
+                    <p>変化の早いITのビジネス環境において、既成の枠にとらわれることなく新しいテクノロジーを柔軟に取り入れ、自ら問題意識を持ち解決のために主体的に取り組み、次世代を切り拓く新しい商材・サービスを創出するためチームワークと行動力を発揮できる人材を求めています。</p>
+                  </div>
+                  <div class="p-recruit__policyListWrap">
+                    <h4><span>KELの求める人材</span></h4>
+                    <ul class="p-recruit__policyList">
+                      <li>自ら未来を切り拓くチャレンジ精神</li>
+                      <li>何事にも主体的に取り組む前向きな姿勢</li>
+                      <li>信頼を創り成長を果たすチームワークと行動力</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-recruit__flow js-scrollFloatFadeIn" id="flow">
+          <div class="p-recruit__flowHeadingWrap">
+            <h3 class="c-subPage__genre--heading">FLOW</h3>
+            <p class="c-subPage__genre--headingSub">選考スケジュール</p>
+          </div>
+          <div class="p-recruit__flowContentWrap">
+            <div class="p-recruit__flowList">
+              <dl>
+                <dt>総合職採用</dt>
+                <dd>
+                  <ul>
+                    <li>・営業職</li>
+                    <li>・SE（システムエンジニア）職</li>
+                    <li>・間接職（人事、総務、経理など会社の基幹業務）</li>
+                  </ul>
+                  <p class="u-fw-bold">採用選考時には、配属を決めず総合職として採用します。（希望職種は確認します。）<br>入社後の約2ヶ月半の研修期間に本人の希望と、適性を見て営業職、SE職、間接職に配属します。</p>
+                </dd>
+              </dl>
+              <dl>
+                <dt>応募書類</dt>
+                <dd class="p-recruit__flowEntryDocs">
+                  <p>履歴書（写真添付）、成績証明書、卒業（見込）証明書</p>
+                  <p>※提出いただきました応募書類は返却いたしませんので予めご了承ください。<br><span>当社の<a href="<%= dataSet.srcpath %>images/pi.pdf" target="_blank">採用選考時の個人情報の取り扱いについて</a>に従い適切な取り扱いを行います。</span></p>
+                </dd>
+              </dl>
+            </div>
+            <div class="p-recruit__flowImg">
+              <img class="pc" src="<%= dataSet.srcpath %>images/schedule_flow_pc.png" alt="選考スケジュール チャート PC">
+              <img class="sp" src="<%= dataSet.srcpath %>images/schedule_flow_sp.png" alt="選考スケジュール チャート SP">
+            </div>
+            <p class="p-recruit__bottomDetailText">状況により選考回数、内容は異なる場合があります。<br>詳細は会社説明会でご説明させて頂きます。</p>
+          </div>
+        </div>
+        <div class="c-subPage__brotherLinkArea p-recruit__brotherLink">
+           <p>他の採用情報のメニューを見る</p>
+           <div class="c-subPage__brotherLinkWrap">
+             <div class="c-subPage__brotherLink">
+               <a href="<%= dataSet.srcpath %>recruit/training/">
+                <img src="<%= dataSet.srcpath %>images/recruit_training_banner.jpg" alt="教育研修">
+                <div class="c-subPage__brotherLinkText">
+                  <h3>教育研修</h3>
+                  <div class="c-subPage__brotherLinkBottom">
+                    <p>新入社員研修や研修スケジュール、その他の各種研修制度についてご紹介します。</p>
+                    <div class="c-circleBtn">
+                      <span class="c-circleBtn__circle">
+                        <span class="c-circleBtn__arrow"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+               </a>
+             </div>
+             <div class="c-subPage__brotherLink">
+               <a href="<%= dataSet.srcpath %>recruit/message/">
+                <img src="<%= dataSet.srcpath %>images/recruit_message_banner.jpg" alt="採用担当からのメッセージ">
+                <div class="c-subPage__brotherLinkText">
+                  <h3>採用担当からのメッセージ</h3>
+                  <div class="c-subPage__brotherLinkBottom">
+                    <p>新卒採用に携わる担当者から応募者に向けてメッセージをお伝えします。</p>
+                    <div class="c-circleBtn">
+                      <span class="c-circleBtn__circle">
+                        <span class="c-circleBtn__arrow"></span>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+               </a>
+             </div>
+           </div>
+        </div>
+        <div class="p-recruitMain__bottom">
+          <%- include('../../include/parts/_entryBtn.ejs') %>
+        </div>
+      </main>
+      <%- include('../../include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script>
+  </body>
+</html>

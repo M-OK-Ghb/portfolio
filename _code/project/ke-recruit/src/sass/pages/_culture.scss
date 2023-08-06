@@ -1,0 +1,609 @@
+// -------------------------------------------------------------------
+//  Mission - mission.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.p-culture {
+  /*Common*/
+  &__commonWrap {
+    margin-top: 210px;
+    @include med.media(sp) {
+      margin-top: 24vw;
+    }
+  }
+
+  &__brotherLink {
+    margin-top: 160px;
+    @include med.media(sp) {
+      margin-top: 24vw;
+    }
+  }
+
+  /*CultureTop*/
+  &__topBottom {
+    margin-top: 440px;
+    @include med.media(sp) {
+      margin-top: 44vw;
+    }
+  }
+
+  /*Welfare*/
+  &__welfareWrap {
+    margin-top: 210px;
+    @include med.media(sp) {
+      margin-top: 34vw;
+    }
+  }
+
+  &__welfare {
+    padding-left: 7.5%;
+  }
+
+  &__welfareGrayBg--sp {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+      position: absolute;
+      width: 85%;
+      height: 100%;
+      background-color: #FAFAFA;
+      z-index: -1;
+      right: 0;
+      top: 0;
+    }
+  }
+
+  &__welfareInner {
+    background-color: #FAFAFA;
+    position: relative;
+    padding-top: 160px;
+    padding-bottom: 80px;
+    @include med.media(sp) {
+      background-color: inherit;
+      padding-top: 20vw;
+      padding-bottom: 10vw;
+    }
+  }
+
+  &__welfareHeadingWrap {
+    position: absolute;
+    left: 6.5%;
+    top: -40px;
+    @include med.media(sp) {
+      left: 0;
+      top: -10.65vw;
+    }
+  }
+
+  &__welfareTable {
+    padding-left: 12%;
+    padding-right: 21%;
+    @include med.media(sp) {
+      padding-left: 0;
+      padding-right: 8%;
+    }
+  }
+
+  &__welfareList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include med.media(sp) {
+      display: block;
+    }
+
+    > li {
+      width: 45%;
+
+      @include med.media(sp) {
+        width: 100%;
+      }
+
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+
+      @include med.media(sp) {
+        padding-bottom: 5vw;
+        margin-bottom: 5vw;
+      }
+
+      > dl {
+        dt {
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 2;
+
+          @include med.media(sp) {
+            font-size: 4.27vw;
+          }
+
+          &.spaceAdjust {
+            padding-top: 2em;
+            @include med.media(sp) {
+              padding-top: 0;
+            }
+          }
+        }
+
+        dd {
+          font-size: 16px;
+          line-height: 2;
+          margin-top: 10px;
+
+          @include med.media(sp) {
+            font-size: 3.4vw;
+          }
+        }
+      }
+    }
+
+    &.multiLine {
+      > li {
+        border-bottom: 1px dotted #C1C1C1;
+
+        &.noLine {
+          border: none;
+
+          @include med.media(sp) {
+            border-bottom: 1px dotted #C1C1C1;
+          }
+        }
+
+        @include med.media(sp) {
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+    }
+
+    &.singleContent {
+      > li {
+        width: 100%;
+      }
+    }
+
+  }
+
+  /*Number*/
+
+  &__numberInner {
+    padding: 0 7.25% 0 10%;
+    @include med.media(sp) {
+      padding: 0 6%;
+    }
+  }
+
+  &__numberItem {
+    margin-bottom: 200px;
+    @include med.media(sp) {
+      margin-bottom: 21.35vw;
+    }
+  }
+
+  &__numberHeading {
+    color: #323232;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    padding-left: 10%;
+
+    @include med.media(sp) {
+      display: block;
+      padding-left: 0;
+      font-size: 5vw;
+      margin-bottom: 2vw;
+    }
+
+    > span {
+      font-family: var.$FONT_RALEWAY;
+      color: #8C9091;
+      display: inline-block;
+      margin-right: 20px;
+      font-size: 40px;
+      @include med.media(sp) {
+        display: block;
+        font-size: 10.65vw;
+        margin-right: 0;
+        margin-bottom: 2vw;
+      }
+    }
+  }
+
+  &__numberGraph {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @include med.media(sp) {
+      display: block;
+      margin-top: 8.5vw;
+    }
+
+    > li {
+      width: 32.5%;
+      background: #FAFAFA;
+      margin-bottom: 20px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      position: relative;
+      @include med.media(sp) {
+        width: 100%;
+        margin-bottom: 5.35vw;
+        padding-top: 5.35vw;
+        padding-bottom: 5.35vw;
+      }
+    }
+
+    &.singleLine {
+      margin-top: 0;
+      > li {
+        width: 100%;
+      }
+    }
+  }
+
+  &__numberGraphTitle {
+    font-weight: bold;
+    font-size: 18px;
+    color: #323232;
+    text-align: center;
+    @include med.media(sp) {
+      font-size: 4.6vw;
+    }
+  }
+
+  &__numberGraphImg {
+    width: 80%;
+    margin:20px auto 0;
+    text-align: center;
+    > img {
+      width: 100%;
+      aspect-ratio: 5/4;
+      object-fit: contain;
+    }
+
+    @include med.media(sp) {
+      margin: 5.35vw auto 0;
+    }
+  }
+
+  &__numberGraphImg--single {
+    width: 75%;
+    margin: 20px auto 0;
+    padding-bottom: 20px;
+    text-align: center;
+    @include med.media(sp) {
+      width: 80%;
+      margin: 5.35vw auto 0;
+      padding-bottom: 5.35vw;
+    }
+
+    > img {
+      width: 100%;
+      &.pc {
+        @include med.media(sp) {
+          display: none;
+        }
+      }
+
+      &.sp {
+        display: none;
+        @include med.media(sp) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__numberGraphDate {
+    color: #666666;
+    text-align: center;
+    margin-top: 20px;
+    @include med.media(sp) {
+      font-size: 3.2vw;
+      margin-top: 5.35vw;
+    }
+
+    &.single {
+      position: absolute;
+      margin-top: 0;
+      top: 20px;
+      right: 15%;
+      @include med.media(sp) {
+        position: static;
+      }
+    }
+  }
+
+  /*Environment*/
+  &__environmentTop {
+    padding: 0 12.5%;
+    @include med.media(sp) {
+      position: relative;
+      padding: 0 8.65%;
+    }
+  }
+
+  &__environmentHeadingWrap {
+    @include med.media(sp) {
+      position: absolute;
+      left: 4.5%;
+      top: 0;
+    }
+  }
+
+  &__environmentAppeal {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+
+    @include med.media(sp) {
+      margin-top: 0;
+      padding-top: 35vw;
+      display: block;
+    }
+
+    > li {
+      width: 31.5%;
+      @include med.media(sp) {
+        width: 100%;
+        margin-bottom: 14.65vw;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      > p {
+        color: #666666;
+        line-height: 2;
+        font-size: 12px;
+        @include med.media(sp) {
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+
+  &__environmentAppealImg {
+    position: relative;
+    > img {
+        width: 100%;
+        aspect-ratio: 9/8;
+        object-fit: contain;
+
+        @include med.media(sp) {
+          aspect-ratio: 62/38;
+          object-fit: cover;
+        }
+    }
+
+    > svg {
+      position: absolute;
+      bottom: -20px;
+      left: 10%;
+      width: 60px;
+      height: 70px;
+      @include med.media(sp) {
+        width: 13.05vw;
+        height: 14vw;
+        object-fit: contain;
+        left: 15%;
+        bottom: -8vw;
+      }
+    }
+  }
+
+  &__appealHeading {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 40px;
+    height: 80px;
+    position: relative;
+
+    @include med.media(sp) {
+      height: auto;
+      font-size: 4.8vw;
+      padding-left: 2vw;
+      margin-top: 8.5vw;
+      margin-bottom: 6vw;
+    }
+  }
+
+  &__appealList {
+    > li {
+      border-bottom: 2px dotted #BABABA;
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+      @include med.media(sp) {
+        padding-bottom: 5vw;
+        margin-bottom: 5vw;
+      }
+
+      > p {
+        position: relative;
+        padding-left: 16px;
+        font-size: 14px;
+        line-height: 2;
+
+        @include med.media(sp) {
+          font-size: 3.4vw;
+          padding-left: 6vw;
+        }
+
+        &::before {
+          content:"";
+          display:inline-block;
+          width:10px;
+          height:2px;
+          background-color:#173E8E;
+          position:absolute;
+          top:12px;
+          left:0;
+
+          @include med.media(sp) {
+            width: 3vw;
+            top: 3vw;
+          }
+        }
+      }
+    }
+
+    &.borderAdjust {
+      > li {
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 8px;
+        }
+      }
+    }
+  }
+
+  &__environmentSwiper {
+    margin-top: 180px;
+
+    @include med.media(sp) {
+      margin-top: 24vw;
+    }
+
+    &.bottom {
+      margin-top: 140px;
+      @include med.media(sp) {
+        margin-top: 10.65vw;
+      }
+    }
+  }
+
+  &__environmentSwiperHeading {
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #323232;
+    @include med.media(sp) {
+      font-size: 5vw;
+    }
+  }
+
+  // Swiper スタイル調整
+  &__swiper-wrapper {
+    > li {
+      transform: translateX(50%);
+      @include med.media(sp) {
+        transform: translateX(12%);
+      }
+
+      > img {
+        aspect-ratio: 86/45;
+        width: 100%;
+
+        @include med.media(sp) {
+          object-fit: cover;
+          aspect-ratio: 3/2;
+        }
+      }
+    }
+  }
+
+  &__swiperParent {
+    margin-top: 60px;
+    position: relative;
+
+    @include med.media(sp) {
+      margin-top: 8vw;
+    }
+
+    > div {
+
+      &.p-culture__carouselBtn {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        text-align: center;
+        transition: opacity 0.3s;
+        top: 25%;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        &:after {
+          font-size: 32px;
+          color: #004FA2;
+        }
+
+        @include med.media(sp) {
+          display: none;
+        }
+      }
+
+
+      &.p-culture__carouselPrev {
+        left: 20%;
+      }
+
+      &.p-culture__carouselNext {
+        right: 17%;
+      }
+    }
+  }
+
+  &__swiperBg {
+    position: absolute;
+    width: 100vw;
+    background-color: #FAFAFA;
+    bottom: 0;
+    height: 70%;
+    @include med.media(sp) {
+      height: 80%;
+    }
+  }
+
+  &__environmentText {
+    color: #666666;
+    padding-top: 40px;
+    padding-bottom: 100px;
+    position: relative;
+    opacity: 0;
+
+    @include med.media(sp) {
+      padding-bottom: 12vw;
+      padding-top: 12vw;
+    }
+
+    > h4 {
+      font-weight: bold;
+      font-size: 20px;
+      text-align: center;
+      @include med.media(sp) {
+        font-size: 5vw;
+      }
+    }
+
+    > p {
+      line-height: 2;
+      font-size: 18px;
+      width: 90%;
+      margin: 40px auto 0;
+      @include med.media(sp) {
+        width: 100%;
+        margin: 5vw auto 0;
+        font-size: 3.4vw;
+      }
+    }
+  }
+}
+
+.swiper-slide-active {
+  .p-culture__environmentText {
+    opacity: 1;
+  }
+}
+

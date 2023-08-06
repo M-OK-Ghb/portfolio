@@ -1,0 +1,180 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/_head.ejs', { data: dataSet } ) %>
+  <body>
+    <div>
+      <%- include('../../include/_header.ejs', { data: dataSet } ) %>
+      <main class="p-cultureMain c-subPage__main">
+        <div class="c-breadCrumbs">
+          <ul class="c-breadCrumbs__list">
+            <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+            <li><a href="<%= dataSet.srcpath %>culture/">働く環境</a></li>
+            <li><span>数字で見るKEL</span></li>
+          </ul>
+        </div>
+        <div class="p-cultureMain__content">
+          <div class="c-subPage__firstVisual">
+            <img src="<%= dataSet.srcpath %>images/culture_number_mv.jpg" alt="culture number image">
+            <div class="c-subPage__textWrap">
+              <div class="c-subPage__textInner">
+                <div class="c-subPage__headingWrap">
+                  <div class="c-subPage__headingInner">
+                    <h2 class="c-subPage__heading js-subpage-titleAnimation">CULTURE</h2>
+                    <p class="c-subPage__subText js-subpage-titleAnimation">-数字で見るKEL</p>
+                  </div>
+                </div>
+                <p class="c-subPage__detailText cultureWelfare js-loadFadeIn">KELはどのような会社か？会社について、働く人について、<br>特徴的な数字を集めてみました。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-culture__commonWrap">
+          <div class="p-culture__numberInner">
+            <div class="p-culture__numberItem js-loadFloatFadeIn">
+              <h3 class="p-culture__numberHeading"><span>＃1</span>KEL全体（全社員）の数字</h3>
+              <ul class="p-culture__numberGraph">
+                <li>
+                  <p class="p-culture__numberGraphTitle">出身校の所在地</p>
+                  <div class="p-culture__numberGraphImg">
+                    <img src="<%= dataSet.srcpath %>images/number_area.png" alt="出身校の所在地">
+                  </div>
+                  <p class="p-culture__numberGraphDate">2022年2月1日時点</p>
+                </li>
+                <li>
+                  <p class="p-culture__numberGraphTitle">男女比</p>
+                  <div class="p-culture__numberGraphImg">
+                    <img src="<%= dataSet.srcpath %>images/number_gender.png" alt="男女比">
+                  </div>
+                  <p class="p-culture__numberGraphDate">2021年3月31日時点</p>
+                </li>
+                <li>
+                  <p class="p-culture__numberGraphTitle">職種の割合</p>
+                  <div class="p-culture__numberGraphImg">
+                    <img src="<%= dataSet.srcpath %>images/number_job.png" alt="職種の割合">
+                  </div>
+                  <p class="p-culture__numberGraphDate">2022年2月1日時点</p>
+                </li>
+                <li>
+                  <p class="p-culture__numberGraphTitle">文理の割合</p>
+                  <div class="p-culture__numberGraphImg">
+                    <img src="<%= dataSet.srcpath %>images/number_degreetype.png" alt="文理の割合">
+                  </div>
+                  <p class="p-culture__numberGraphDate">2022年2月1日時点</p>
+                </li>
+                <li>
+                  <p class="p-culture__numberGraphTitle">年齢層の割合</p>
+                  <div class="p-culture__numberGraphImg">
+                    <img src="<%= dataSet.srcpath %>images/number_age.png" alt="年齢層の割合">
+                  </div>
+                  <p class="p-culture__numberGraphDate">2021年3月31日時点</p>
+                </li>
+                <li>
+                  <p class="p-culture__numberGraphTitle">新卒・中途の割合</p>
+                  <div class="p-culture__numberGraphImg">
+                    <img src="<%= dataSet.srcpath %>images/number_timing.png" alt="新卒・中途の割合">
+                  </div>
+                  <p class="p-culture__numberGraphDate">2021年3月31日時点</p>
+                </li>
+              </ul>
+              <ul class="p-culture__numberGraph singleLine">
+                <li>
+                  <p class="p-culture__numberGraphTitle">勤続年数</p>
+                  <div class="p-culture__numberGraphImg--single">
+                    <img class="pc" src="<%= dataSet.srcpath %>images/number_length_pc.png" alt="勤続年数 PC">
+                    <img class="sp" src="<%= dataSet.srcpath %>images/number_length_sp.png" alt="勤続年数 SP">
+                  </div>
+                  <p class="p-culture__numberGraphDate single">2021年3月31日時点</p>
+                </li>
+              </ul>
+            </div>
+            <div class="p-culture__numberItem js-scrollFloatFadeIn">
+              <h3 class="p-culture__numberHeading"><span>＃2</span>若手社員のみ（入社5年目以内）の数字</h3>
+              <ul class="p-culture__numberGraph">
+                <li>
+                  <p class="p-culture__numberGraphTitle">学生時代の部活・サークルは？</p>
+                  <div class="p-culture__numberGraphImg">
+                    <img src="<%= dataSet.srcpath %>images/number_club.png" alt="学生時代の部活・サークルの割合">
+                  </div>
+                  <p class="p-culture__numberGraphDate">2021年3月31日時点</p>
+                </li>
+                <li>
+                  <p class="p-culture__numberGraphTitle">就業時の服装で多いのは？</p>
+                  <div class="p-culture__numberGraphImg">
+                    <img src="<%= dataSet.srcpath %>images/number_clothes.png" alt="就業時の服装の割合">
+                  </div>
+                  <p class="p-culture__numberGraphDate">2021年3月31日時点</p>
+                </li>
+                <li>
+                  <p class="p-culture__numberGraphTitle">ランチはどうする？</p>
+                  <div class="p-culture__numberGraphImg">
+                    <img src="<%= dataSet.srcpath %>images/number_meal.png" alt="ランチの割合">
+                  </div>
+                  <p class="p-culture__numberGraphDate">2021年3月31日時点</p>
+                </li>
+              </ul>
+              <ul class="p-culture__numberGraph singleLine">
+                <li>
+                  <p class="p-culture__numberGraphTitle">上司・同僚のスゴイと思えるところは？</p>
+                  <div class="p-culture__numberGraphImg--single">
+                    <img class="pc" src="<%= dataSet.srcpath %>images/number_strongpoints_pc.png" alt="上司・同僚のスゴイと思えるところは？ PC">
+                    <img class="sp" src="<%= dataSet.srcpath %>images/number_strongpoints_sp.png" alt="上司・同僚のスゴイと思えるところは？ SP">
+                  </div>
+                  <p class="p-culture__numberGraphDate single">2021年3月31日時点</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-subPage__brotherLinkArea p-culture__brotherLink">
+          <p>他の働く環境・各種制度のメニューを見る</p>
+          <div class="c-subPage__brotherLinkWrap">
+            <div class="c-subPage__brotherLink">
+              <a href="<%= dataSet.srcpath %>culture/environment/">
+               <img src="<%= dataSet.srcpath %>images/culture_environment_banner.jpg" alt="KELの働く環境">
+               <div class="c-subPage__brotherLinkText c-subPage__brotherLinkText--culture">
+                 <h3>KELの働く環境</h3>
+                 <div class="c-subPage__brotherLinkBottom c-subPage__brotherLinkBottom--culture">
+                   <p>KEL風景が考える働きやすい環境とは？オフィスと合わせてご紹介します。</p>
+                   <div class="c-circleBtn">
+                     <span class="c-circleBtn__circle">
+                       <span class="c-circleBtn__arrow"></span>
+                     </span>
+                   </div>
+                 </div>
+               </div>
+              </a>
+            </div>
+            <div class="c-subPage__brotherLink">
+              <a href="<%= dataSet.srcpath %>culture/welfare/">
+               <img src="<%= dataSet.srcpath %>images/culture_welfare_banner.jpg" alt="数字で見るKEL">
+               <div class="c-subPage__brotherLinkText c-subPage__brotherLinkText--culture">
+                 <h3>福利厚生・各種制度</h3>
+                 <div class="c-subPage__brotherLinkBottom c-subPage__brotherLinkBottom--culture welfare">
+                   <p>KELでは柔軟性の高い働き方を実現するための各種制度を策定しています。その制度について詳しくご案内します。</p>
+                   <div class="c-circleBtn">
+                     <span class="c-circleBtn__circle">
+                       <span class="c-circleBtn__arrow"></span>
+                     </span>
+                   </div>
+                 </div>
+               </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <%- include('../../include/parts/_entryBtn.ejs') %>
+      </main>
+      <%- include('../../include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script>
+  </body>
+</html>

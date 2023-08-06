@@ -1,0 +1,136 @@
+// -------------------------------------------------------------------
+// 	button.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+$CIRCLE_COLOR: #004FA2;
+
+.c-circleBtn {
+  > a {
+    display: flex;
+    align-items: center;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &.p-peopleMovieArea {
+    margin-bottom: 180px;
+    @include med.media(sp) {
+      margin-bottom: 32vw;
+    }
+    > a {
+      justify-content: center;
+    }
+  }
+
+  .c-subPage__circleBtnInner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  &__circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    margin-right: 16px;
+    background-color: $CIRCLE_COLOR;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include med.media(sp) {
+      width: 16.66vw;
+      height: 16.66vw;
+    }
+  }
+
+  &__arrow {
+    display: inline-block;
+    width: 22px;
+    height: 5px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: skew(45deg);
+    @include med.media(sp) {
+      width: 5.33vw;
+      height: 1.26vw;
+    }
+  }
+
+  &__text {
+    display: inline-block;
+    color: #323232;
+    font-size: 18px;
+    font-weight: bold;
+    @include med.media(sp) {
+      font-size: 4vw;
+    }
+  }
+}
+
+.c-entryBtn {
+  > a {
+    background-color: #003F93;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFF;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    svg {
+      fill: #FFF;
+      width: 24px;
+      height: 24px;
+      @include med.media(sp) {
+        width: 3.6vw;
+        height: 3.6vw;
+      }
+    }
+
+    @include med.media(sp) {
+      height: 32vw;
+    }
+
+    &.l-header__globalEntryBtn {
+      @include med.media(sp) {
+        height: 20vw;
+      }
+    }
+  }
+
+  &__text {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: var.$FONT_BARLOW;
+    display: inline-block;
+    margin-right: 16px;
+    @include med.media(sp) {
+      font-size: 4.8vw;
+    }
+  }
+
+  &.--changeColor {
+    > a {
+      border: 1px solid #003F93;
+      background-color: #FFF;
+      color: #003F93;
+
+      svg {
+        fill: #003F93;
+      }
+    }
+  }
+}

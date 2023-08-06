@@ -1,0 +1,15 @@
+// -------------------------------------------------------------------
+// 	label.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-label {
+  &.--subTitle {
+    background-color: var.$ACCENT_BLUE;
+    color: #FFF;
+    font-size: 24px;
+    // font-size: 1.76vw;
+    font-weight: bold;
+  }
+}

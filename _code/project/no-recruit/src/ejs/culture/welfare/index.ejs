@@ -1,0 +1,229 @@
+<%
+  const data = {
+    isTop: false,
+    title: "Culture | NOS 新卒採用サイト",
+    description: "",
+    path: "../..",
+    imgPath: "../../images",
+    commonImgPath: "../../images/common",
+    current: "culture",
+    hierarchy: "third",
+    crumbsText: "各種制度・福利厚生",
+    crumbsUrl: "welfare",
+    crumbsParentText: "CULTURE",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../../include/common/_header.ejs', {data: data}); %>
+      <main class="p-sub__main">
+        <%- include('../../include/common/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-sub__fv">
+          <div class="p-sub__fvImg js-sub-fvImg">
+            <img class="is-pc" src="<%= data.imgPath %>/kv/culture_welfare.webp" alt="キービジュアル <%= data.crumbsText %>">
+            <img class="is-sp" src="<%= data.imgPath %>/kv/culture_welfare_sp.webp" alt="キービジュアル <%= data.crumbsText %>">
+          </div>
+          <section class="p-sub__topSection">
+            <h1 class="c-heading --culture p-sub__topHeading js-sub-titleTop">
+              <img src="<%= data.commonImgPath %>/heading_culture.svg" alt="<%= data.current %>">
+            </h1>
+            <p class="c-headingSub"><span>各種制度・福利厚生</span></p>
+          </section>
+        </div>
+        <div class="p-sub__contents js-scrollFadeIn --block">
+          <p class="p-sub__description">NOSでは柔軟性の高い働き方を実現するための各種制度を策定しています。<br>その制度について詳しくご案内します。</p>
+        </div>
+        <section class="p-culture__welfare">
+          <h2 class="p-culture__welfareHeading">
+            <span class="c-heading--sectionTitle">各種制度</span>
+          </h2>
+          <div class="p-culture__welfareCard">
+            <h3 class="p-culture__welfareCardHeading">
+              <span class="icon">
+                <img src="<%= data.imgPath %>/culture/icon_system.svg" alt="アイコン 制度">
+              </span>
+              <span class="text">制度</span>
+            </h3>
+            <ul class="p-culture__welfareDetail">
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>財形貯蓄</p>
+                  <p>給与からの天引きで行う貯蓄制度です。</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>社員持株会</p>
+                  <p>親会社の兼松エレクトロニクスの株を取得できる従業員持株会を導入しています。</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>退職金</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>資格取得奨励</p>
+                  <p>会社として必要な資格を取得することを奨励する制度です。 業務に必要な情報系の資格だけでなく、TOEICなど自己啓発に繋がる資格も対象としており、当社で定めた資格の取得者に対して奨励金を支給しています。</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>結婚祝金</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>子女出生祝金</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="p-culture__welfareCard">
+            <h3 class="p-culture__welfareCardHeading">
+              <span class="icon">
+                <img src="<%= data.imgPath %>/culture/icon_building.svg" alt="アイコン 施設">
+              </span>
+              <span class="text">施設</span>
+            </h3>
+            <ul class="p-culture__welfareDetail">
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>社員寮</p>
+                  <p>条件に該当する新入社員は入居が可能です。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="p-culture__welfareCard">
+            <h3 class="p-culture__welfareCardHeading">
+              <span class="icon">
+                <img src="<%= data.imgPath %>/culture/icon_break.svg" alt="アイコン 休暇">
+              </span>
+              <span class="text">休暇</span>
+            </h3>
+            <ul class="p-culture__welfareDetail">
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>完全週休2日制（土・日）</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>祝日</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>年末年始休暇</p>
+                  <p>12/29～1/3</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>有給休暇（初年度14日、最大20日）</p>
+                  <p>1時間単位でも取得可能</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>特別休暇</p>
+                  <p>本人の結婚、子の誕生日など</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>ボランティア休暇</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>産休育休</p>
+                  <p>現在取得中の方や、復帰後活躍されている方もいます。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="p-culture__welfareCard">
+            <h3 class="p-culture__welfareCardHeading">
+              <span class="icon">
+                <img src="<%= data.imgPath %>/culture/icon_insurance.svg" alt="アイコン 保険">
+              </span>
+              <span class="text">保険</span>
+            </h3>
+            <ul class="p-culture__welfareDetail">
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>健康保険</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>厚生年金保険</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>雇用保険</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>労災保険</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="p-culture__welfareCard --health">
+            <h3 class="p-culture__welfareCardHeading">
+              <span class="icon">
+                <img src="<%= data.imgPath %>/culture/icon_health.svg" alt="アイコン 健康">
+              </span>
+              <span class="text">健康</span>
+            </h3>
+            <ul class="p-culture__welfareDetail">
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>健康診断</p>
+                  <p>年に1回、健康診断を実施します。</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="p-culture__welfareCard --other">
+            <h3 class="p-culture__welfareCardHeading">
+              <span class="icon">
+                <img src="<%= data.imgPath %>/culture/icon_other.svg" alt="アイコン その他">
+              </span>
+              <span class="text">その他</span>
+            </h3>
+            <ul class="p-culture__welfareDetail">
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>福利厚生サービス</p>
+                  <p>リゾート施設やスポーツジム、旅行、通信講座などの利用補助制度があります。</p>
+                </div>
+              </li>
+              <li>
+                <div class="p-culture__welfareDetailInner">
+                  <p>服装自由化</p>
+                  <p>服装を自由化することで、職場の自由でリラックスした雰囲気を醸成し、社員のコミュニケーションの活性化、柔軟かつ新たなアイデアの創出、積極的な行動や生産性の向上を図ることを目的としています。（一部ドレスコードあり）</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <%- include('../_linkCard.ejs', {data: data}); %>
+        <%- include('../../include/common/_entryBottom.ejs', {data: data}); %>
+      </main>
+      <%- include('../../include/common/_scrollTop.ejs', {data: data}); %>
+      <%- include('../../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

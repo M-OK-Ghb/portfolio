@@ -1,0 +1,34 @@
+<div class="c-linkCard">
+  <h4 class="c-linkCard__heading"><span class="c-heading--sectionTitle">他のNOSの仕事のメニューを見る</span></h4>
+  <ul class="c-linkCardList --single">
+    <% if(data.crumbsUrl === 'se') { %>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/work/sales/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/work/sales_thumb.webp" alt="営業の仕事 イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel sales">
+            <span>営業の仕事</span>
+          </div>
+          <p class="p-sub__pageText">NOSの営業の仕事内容をポイント解説と<br class="is-pc">1日の流れ（ある1日）でご紹介します。</p>
+        </div>
+      </a>
+    </li>
+    <% } else if(data.crumbsUrl === 'sales') { %>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/work/se/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/work/se_thumb.webp" alt="SEの仕事 イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel se">
+            <span>SEの仕事</span>
+          </div>
+          <p class="p-sub__pageText">NOSのSE（システムエンジニア）の仕事内容をポイント解説と1日の流れ（ある1日）でご紹介します。</p>
+        </div>
+      </a>
+    </li>
+    <% } %>
+  </ul>
+</div>

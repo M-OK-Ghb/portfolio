@@ -1,0 +1,36 @@
+// -------------------------------------------------------------------
+//  structure.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+html, body {
+  height: 100%;  
+}
+
+body {
+  @include mix.fontsize(var.$BASE_FONT_SIZE);
+  color: var.$BASE_TEXT_COLOR;
+  font-family: var.$BASE_FONT_FAMILY;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  @include med.media(sp) {
+    overflow-x: hidden;
+  }
+
+  &.is-menu-open {
+    overflow-y: hidden;
+  }
+
+  &.is-modal-open {
+    overflow-y: hidden;
+  }
+
+  &.is-show-subpage {
+    opacity: 1;
+  }
+}

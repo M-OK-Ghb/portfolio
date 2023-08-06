@@ -1,0 +1,322 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/_head.ejs', { data: dataSet } ) %>
+  <body>
+    <div>
+      <%- include('../../include/_header.ejs', { data: dataSet } ) %>
+      <main class="c-subPage__main">
+        <div class="c-breadCrumbs">
+          <ul class="c-breadCrumbs__list">
+            <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+            <li><a href="<%= dataSet.srcpath %>work/">Work</a></li>
+            <li><span>SEの仕事</span></li>
+          </ul>
+        </div>
+        <div class="p-seMain__content">
+          <div class="p-seMain__firstVisual c-subPage__firstVisual">
+            <img src="<%= dataSet.srcpath %>images/work_se_mv.jpg" alt="se image">
+            <div class="c-subPage__textWrap">
+              <div class="c-subPage__textInner">
+                <div class="c-subPage__headingWrap">
+                  <div class="c-subPage__headingInner">
+                    <h2 class="c-subPage__heading js-subpage-titleAnimation">WORK</h2>
+                    <p class="c-subPage__subText js-subpage-titleAnimation">-SEの仕事</p>
+                  </div>
+                </div>
+                <p class="c-subPage__detailText se js-loadFadeIn">KELのSE(システムエンジニア)の仕事内容をポイント解説と<br>1日の流れ（ある1日）でご紹介します。</p>
+                <div class="p-work__accentBg se"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-work__point js-loadFloatFadeIn">
+            <div class="p-work__headingWrap">
+              <h3 class="c-subPage__genre--heading">Point</h3>
+              <p class="c-subPage__genre--headingSub se">KELのSEの仕事内容を知る<br>3つのポイント</p>
+            </div>
+            <ul class="p-work__pointList">
+              <li>
+                <div class="p-work__pointItem">
+                  <div class="p-work__pointTextWrap">
+                    <dl>
+                      <dt>01</dt>
+                      <dd>課題を聞いて<br>解決策を提案します。</dd>
+                    </dl>
+                    <p>お客様の課題をヒアリングするのは、営業だけではありません。営業とともに、直接お客様のお困りごとを聞くこともあります。技術的な視点から解決策を考え、最適な提案とするために営業への技術的なアドバイスやサポートをします。サポートだけでなく、実際にSE自らお客様へ説明や提案を行うこともあります。</p>
+                  </div>
+                  <div class="p-work__pointImgWrap first">
+                    <img src="<%= dataSet.srcpath %>images/se_point_01.svg" alt="KELのSE内容イラスト 01">
+                  </div>
+                  <div class="p-work__pointGrayBg first"></div>
+                </div>
+              </li>
+              <li>
+                <div class="p-work__pointItem">
+                  <div class="p-work__pointTextWrap second">
+                    <dl>
+                      <dt>02</dt>
+                      <dd>解決策を<br>具現化します。</dd>
+                    </dl>
+                    <p>提案がKELに決まり正式に受注となった後、提案内容を実際にシステムとして使えるように「システム構築」します。<br>
+                      システム構築では、①要件定義、②基本設計、③詳細設計・構築、④テスト検証、⑤導入という順に進めていきます。<br>
+                      また、システム構築にあたり、社内でプログラミングをすることはありません。要件定義後、プログラミングが必要な場合は、専門業者へすべて委託します。ただ、プログラミングを理解していれば、業者との連携はスムーズに行えます。
+                    </p>
+                  </div>
+                  <div class="p-work__pointImgWrap second">
+                    <img src="<%= dataSet.srcpath %>images/se_point_02.svg" alt="KELのSE内容イラスト 02">
+                  </div>
+                  <div class="p-work__pointGrayBg second"></div>
+                </div>
+              </li>
+              <li>
+                <div class="p-work__pointItem">
+                  <div class="p-work__pointTextWrap third">
+                    <dl>
+                      <dt>03</dt>
+                      <dd>将来的には大規模システム構築 or<br>ITシステムをコーディネートします。</dd>
+                    </dl>
+                    <div class="p-work__multiLineWrap">
+                      <ul class="p-work__pointMultiLine">
+                        <li>・プロジェクトマネージャー（PM）としてシステム構築をコーディネートします。</li>
+                        <li>大規模システム構築の場合には複数のSEでシステムを構築します。プロジェクトマネージャー（PM）としてシステム構築が①〜⑤の順でスケジュール通り進むように、マネジメントします。</li>
+                      </ul>
+                      <ul class="p-work__pointMultiLine mb-adjust">
+                        <li>・ITコンサルタントとして、ITシステムをコーディネートします。</li>
+                        <li>担当したお客様のITシステム環境を熟知し、コンサルタントとして提案活動や、システム設計・構築を行い、お客様のITシステムをより良いカタチにコーディネートします。</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="p-work__pointImgWrap third">
+                    <img src="<%= dataSet.srcpath %>images/se_point_03.svg" alt="KELのSE内容イラスト 03">
+                  </div>
+                  <div class="p-work__pointGrayBg third"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="p-work__daySchedule js-scrollFloatFadeIn">
+            <div class="p-work__dayScheduleInner">
+              <div class="p-work__headingWrap daySchedule">
+                <h3 class="c-subPage__genre--heading">A DAY</h3>
+                <p class="c-subPage__genre--headingSub se">KELのSEの1日</p>
+              </div>
+              <div class="p-work__scheduleWrap">
+                <div class="p-work__scheduleLeft">
+                  <ul class="p-work__scheduleItem left">
+                    <li>
+                      <div class="p-work__scheduleImgWrap">
+                        <img src="<%= dataSet.srcpath %>images/se_time_01.jpg" alt="10:00 客先訪問">
+                        <div class="p-work__scheduleLabelWrap right">
+                          <div class="p-work__scheduleLabel">
+                            <span class="time">10:00</span>
+                            <span class="content">客先訪問</span>
+                          </div>
+                        </div>
+                      </div>
+                      <p>D社様のシステム提案にあたり、営業と同行して業界の動向について説明します。</p>
+                    </li>
+                    <li>
+                      <div class="p-work__scheduleImgWrap">
+                        <img src="<%= dataSet.srcpath %>images/se_time_03.jpg" alt="15:00 資料作成">
+                        <div class="p-work__scheduleLabelWrap right">
+                          <div class="p-work__scheduleLabel">
+                            <span class="time">15:00</span>
+                            <span class="content">資料作成</span>
+                          </div>
+                          <div></div>
+                        </div>
+                      </div>
+                      <p>システム設計構築では、全体のスケジュール管理をして作業を進めます。そのため、システム構築の作業分解図（work breakdown structure）を作成し、併せてシステム設計書、作業手順書等を作成します。</p>                      
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-work__scheduleRight">
+                  <ul class="p-work__scheduleItem right">
+                    <li>
+                      <div class="p-work__scheduleImgWrap">
+                        <img src="<%= dataSet.srcpath %>images/se_time_02.jpg" alt="13:00 社内打ち合わせ">
+                        <div class="p-work__scheduleLabelWrap left">
+                          <div class="p-work__scheduleLabel">
+                            <span class="time">13:00</span>
+                            <span class="content">社内打ち合わせ</span>
+                          </div>
+                        </div>
+                      </div>
+                      <p>E社様の要件を基に、システムの設計内容を社内で確認します。</p>
+                    </li>
+                    <li>
+                      <div class="p-work__scheduleImgWrap">
+                        <img src="<%= dataSet.srcpath %>images/se_time_04.jpg" alt="17:00 システム構築・テスト検証">
+                        <div class="p-work__scheduleLabelWrap left">
+                          <div class="p-work__scheduleLabel">
+                            <span class="time">17:00</span>
+                            <span class="content">システム構築・テスト検証</span>
+                          </div>
+                        </div>
+                      </div>
+                      <p>自分達が設計したシステムを、実機（マシン）で構築し、設計通りの動きをするか確認します。（テスト・検証）</p>
+                    </li>
+                  </ul>
+                </div>
+                <!--PCとSPでDOMの管理を分ける-->
+                <ul class="p-work__scheduleAll--sp">
+                  <li>
+                    <div class="p-work__scheduleImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/se_time_01.jpg" alt="10:00 客先訪問">
+                      <div class="p-work__scheduleLabelWrap left">
+                        <div class="p-work__scheduleLabel">
+                          <span class="time">10:00</span>
+                          <span class="content">客先訪問</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p>D社様のシステム提案にあたり、営業と同行して業界の動向について説明します。</p>
+                  </li>
+                  <li>
+                    <div class="p-work__scheduleImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/se_time_02.jpg" alt="13:00 社内打ち合わせ">
+                      <div class="p-work__scheduleLabelWrap left">
+                        <div class="p-work__scheduleLabel">
+                          <span class="time">13:00</span>
+                          <span class="content">社内打ち合わせ</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p>E社様の要件を基に、システムの設計内容を社内で確認します。</p>
+                  </li>
+                  <li>
+                    <div class="p-work__scheduleImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/se_time_03.jpg" alt="15:00 客先訪問">
+                      <div class="p-work__scheduleLabelWrap left">
+                        <div class="p-work__scheduleLabel">
+                          <span class="time">15:00</span>
+                          <span class="content">資料作成</span>
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                    <p>システム設計構築では、全体のスケジュール管理をして作業を進めます。そのため、システム構築の作業分解図（work breakdown structure）を作成し、併せてシステム設計書、作業手順書等を作成します。</p>
+                  </li>
+                  <li>
+                    <div class="p-work__scheduleImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/se_time_04.jpg" alt="17:00 資料作成">
+                      <div class="p-work__scheduleLabelWrap left">
+                        <div class="p-work__scheduleLabel">
+                          <span class="time">17:00</span>
+                          <span class="content">システム構築・テスト検証</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p>自分達が設計したシステムを、実機（マシン）で構築し、設計通りの動きをするか確認します。（テスト・検証）</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-work__dayScheduleBorderHide"></div>
+            </div>
+          </div>
+          <div class="p-work__interviewArea js-scrollFloatFadeIn">
+            <h3 class="p-work__interviewHeading">「SE」職のインタビュー記事を見る</h3>
+            <div class="p-work__interviewListWrap">
+              <ul class="p-work__interviewList oddContent">
+                <li>
+                  <a href="#">
+                    <div class="p-work__interviewImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/interview_se_01.jpg" alt="">
+                      <span class="p-work__interviewLabel se">SE</span>
+                    </div>
+                    <div class="p-work__interviewText">
+                      <p class="lead">IT業界は、奥深い。この分野なら、知りたいことを探求できる。</p>
+                      <p class="name">第二システム部<br>O.R.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="p-work__interviewImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/interview_se_02.jpg" alt="">
+                      <span class="p-work__interviewLabel se">SE</span>
+                    </div>
+                    <div class="p-work__interviewText">
+                      <p class="lead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                      <p class="name">第一ソリューションSE本部部長<br>S.N.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="p-work__interviewImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/interview_se_03.jpg" alt="">
+                      <span class="p-work__interviewLabel se">SE</span>
+                    </div>
+                    <div class="p-work__interviewText">
+                      <p class="lead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                      <p class="name">第一ソリューションSE本部部長<br>S.N.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="p-work__interviewImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/interview_se_04.jpg" alt="">
+                      <span class="p-work__interviewLabel se">SE</span>
+                    </div>
+                    <div class="p-work__interviewText">
+                      <p class="lead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                      <p class="name">第一ソリューションSE本部部長<br>S.N.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="p-work__interviewImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/interview_se_05.jpg" alt="">
+                      <span class="p-work__interviewLabel se">SE</span>
+                    </div>
+                    <div class="p-work__interviewText">
+                      <p class="lead">セキュリティ分野の最新知見で、お客様の経営計画をサポートする。</p>
+                      <p class="name">第三システム部<br>K.R.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-work__otherJobLink js-scrollFloatFadeIn">
+            <h3 class="p-work__otherJobHeading">営業の仕事を見る</h3>
+            <div class="p-work__genreWrap--subPage">
+              <div class="c-subPage__genreCard workPage">
+                <a href="<%= dataSet.srcpath %>work/sales/">
+                  <img src="<%= dataSet.srcpath %>images/work_sales.jpg" alt="営業の仕事">
+                  <div class="c-subPage__linkArea c-subPage__linkArea--sales">
+                    <div class="c-subPage__linkAreaInner">
+                      <h3>営業の仕事</h3>
+                      <p>KELの営業の仕事内容をポイント解説と1日の流れ（ある1日）でご紹介します。</p>
+                      <div class="c-circleBtn p-work__circleBtn--sales">
+                        <div class="c-subPage__circleBtnInner">
+                          <span class="c-circleBtn__circle">
+                            <span class="c-circleBtn__arrow"></span>
+                          </span>
+                          <span class="c-circleBtn__text">詳しく見る</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%- include('../../include/parts/_entryBtn.ejs' ) %>  
+      </main>
+      <%- include('../../include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script>
+  </body>
+</html>

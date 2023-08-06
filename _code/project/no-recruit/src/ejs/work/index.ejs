@@ -1,0 +1,75 @@
+<%
+  const data = {
+    isTop: false,
+    title: "Work | NOS 新卒採用サイト",
+    description: "",
+    path: "..",
+    imgPath: "../images",
+    commonImgPath: "../images/common",
+    current: "work",
+    hierarchy: "second",
+    crumbsText: "WORK -NOSの仕事",
+    crumbsUrl: "",
+    crumbsParentText: "",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../include/common/_header.ejs', {data: data}); %>
+      <main class="p-sub__main">
+        <%- include('../include/common/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-sub__fv">
+          <div class="p-sub__fvImg js-sub-fvImg">
+            <img class="is-pc" src="<%= data.imgPath %>/kv/work_top.webp" alt="キービジュアル <%= data.crumbsText %>">
+            <img class="is-sp" src="<%= data.imgPath %>/kv/work_top_sp.webp" alt="キービジュアル <%= data.crumbsText %>">
+          </div>
+          <section class="p-sub__topSection">
+            <h1 class="c-heading --work p-sub__topHeading js-sub-titleTop">
+              <img src="<%= data.commonImgPath %>/heading_work.svg" alt="<%= data.current %>">
+            </h1>
+            <p class="c-headingSub"><span>NOSの仕事</span></p>
+          </section>
+        </div>
+        <div class="p-sub__contents js-scrollFadeIn --block">
+          <p class="p-sub__description">NOSでの仕事を、営業・SEの職種別で<br class="is-sp">ご紹介します。</p>
+          <ul class="p-sub__pageList">
+            <li>
+              <a href="<%= data.path %>/work/sales/">
+                <div class="p-sub__pageImg">
+                  <img src="<%= data.imgPath %>/work/sales_thumb.webp" alt="営業の仕事 イメージ">
+                </div>
+                <div class="p-sub__pageTextArea">
+                  <div class="p-sub__pageLabel sales">
+                    <span>営業の仕事</span>
+                  </div>
+                  <p class="p-sub__pageText">NOSの営業の仕事内容をポイント解説と<br class="is-pc">1日の流れ（ある1日）でご紹介します。</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="<%= data.path %>/work/se/">
+                <div class="p-sub__pageImg">
+                  <img src="<%= data.imgPath %>/work/se_thumb.webp" alt="SEの仕事 イメージ">
+                </div>
+                <div class="p-sub__pageTextArea">
+                  <div class="p-sub__pageLabel se">
+                    <span>SEの仕事</span>
+                  </div>
+                  <p class="p-sub__pageText">NOSのSE（システムエンジニア）の仕事内容をポイント解説と1日の流れ（ある1日）でご紹介します。</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <%- include('../include/common/_entryBottom.ejs', {data: data}); %>
+      </main>
+      <%- include('../include/common/_scrollTop.ejs', {data: data}); %>
+      <%- include('../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

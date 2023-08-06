@@ -1,0 +1,714 @@
+// -------------------------------------------------------------------
+//  Work - work.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.p-workMain {
+  &__bottom {
+    margin-top: 420px;
+    @include med.media(sp) {
+      margin-top: 44vw;
+    }
+  }
+}
+
+.p-work {
+  &__genreWrap--subPage {
+    background-color: #FAFAFA;
+    padding-bottom: 240px;
+    @include med.media(sp) {
+      padding-bottom: 20vw;
+    }
+  }
+
+  /*sales se 共通*/
+  &__accentBg {
+    position: absolute;
+    width: 13.75vw;
+    height: 12.5vw;
+    z-index: 0;
+    left: 0;
+    top: -10vw;
+    &.sales {
+      background-color: #F78733;
+    }
+
+    &.se {
+      background-color: #4ABDAC;
+    }
+
+    @include med.media(sp) {
+      width: 30vw;
+      height: 18.65vw;
+      top: -12vw;
+    }
+  }
+
+  &__scheduleWrap {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    @include med.media(sp) {
+      display: block;
+      width: 100%;
+      border-left: 2px dotted #707070;
+      padding-left: 10%;
+      padding-top: 15%;
+    }
+  }
+
+  &__scheduleLeft {
+    width: 50%;
+    padding-right: 10%;
+    margin-right: 10%;
+    border-right: 3px dotted #707070;
+    padding-top: 40px;
+    @include med.media(sp) {
+      display: none;
+    }
+  }
+
+  &__scheduleRight {
+    width: 40%;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    @include med.media(sp) {
+      display: none;
+    }
+  }
+
+  &__scheduleImgWrap {
+    position: relative;
+    > img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      @include med.media(sp) {
+        aspect-ratio: 26/15;
+        object-position: 0 10%;
+      }
+    }
+  }
+
+  &__scheduleItem {
+    > li {
+      > p {
+        font-size: 16px;
+        line-height: 2;
+        margin-top: 10px;
+        @include med.media(sp) {
+          font-size: 3.6vw;
+          margin-top: 3.5vw;
+        }
+      }
+    }
+
+    &.left {
+      > li {
+        &:first-child {
+          margin-bottom: 60px;
+        }
+      }
+    }
+
+    &.right {
+      > li {
+        &:first-child {
+          margin-bottom: 120px;
+        }
+      }
+    }
+  }
+
+  &__scheduleLabelWrap {
+    position: absolute;
+    top: -14px;
+
+    &.right {
+      right: -20px;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        right: calc(-6.5vw + 16.5px);
+        width: calc(6.5vw - 16.5px);
+        top: 50%;
+        height: 1px;
+        background: #8c9091;
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        right: calc(-6.75vw + 14px );
+        width: 14px;
+        height: 14px;
+        top: calc(50% - 7px);
+        border-radius: 50%;
+        background: #8c9091;
+      }
+    }
+
+    &.left {
+      left: -20px;
+
+      @include med.media(sp) {
+        left: -4vw;
+        top: -10%;
+      }
+
+      &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: calc(-6.5vw + 15px);
+        width: calc(6.5vw - 15px);
+        top: 50%;
+        height: 1px;
+        background: #8c9091;
+
+        @include med.media(sp) {
+          left: -4.5vw;
+          width: 4.5vw;
+        }
+      }
+
+      &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: calc(-6.75vw + 14px);
+        width: 14px;
+        height: 14px;
+        top: calc(50% - 7px);
+        border-radius: 50%;
+        background: #8c9091;
+
+        @include med.media(sp) {
+          top: calc(50% - 1.07vw);
+          width: 2.14vw;
+          height: 2.14vw;
+          left: -5.25vw;
+        }
+      }
+    }
+  }
+
+  &__scheduleLabel {
+    display: flex;
+    justify-content: space-between;
+    background-color: #8C9091;
+    color: #FFF;
+    padding: 10px;
+    position: relative;
+
+    @include med.media(sp) {
+      padding: 2.5vw 4vw;
+    }
+
+    > span {
+      display: inline-block;
+      font-size: 18px;
+
+      @include med.media(sp) {
+        font-size: 4vw;
+      }
+
+      &.time {
+        font-family: var.$FONT_BARLOW;
+        margin-right: 18px;
+        @include med.media(sp) {
+          margin-right: 3.2vw;
+        }
+      }
+
+      &.content {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__scheduleAll--sp {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+      > li {
+        margin-bottom: 18.65vw;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        > p {
+          font-size: 3.6vw;
+          margin-top: 3.5vw;
+          line-height: 2;
+        }
+      }
+    }
+  }
+
+  &__dayScheduleBorderHide {
+    position: absolute;
+    bottom: 5%;
+    background-color: #FAFAFA;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 8px;
+    height: 20%;
+
+    @include med.media(sp) {
+      bottom: 3%;
+      left: -2px;
+      right: inherit;
+      height: 8%;
+    }
+  }
+
+  &__interviewArea {
+    padding-top: 150px;
+    @include med.media(sp) {
+      padding-top: 19.5vw;
+    }
+  }
+
+  &__interviewHeading {
+    font-size: 26px;
+    font-weight: bold;
+    text-align: center;
+    @include med.media(sp) {
+      font-size: 4.8vw;
+    }
+  }
+
+  &__interviewListWrap {
+    width: 67.5%;
+    margin: 70px auto 0;
+    @include med.media(sp) {
+      width: 90%;
+      margin: 6.65vw auto 0;
+    }
+  }
+
+  &__interviewList {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    > li {
+      width: 30%;
+      margin-bottom: 70px;
+
+      @include med.media(sp) {
+        width: 47%;
+        margin-bottom: 8vw;
+      }
+
+      > a {
+        display: block;
+        width: 100%;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 0.7;
+
+          .p-work__interviewImgWrap > img {
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+
+    &.oddContent {
+      justify-content: center;
+
+      @include med.media(sp) {
+        justify-content: space-between;
+      }
+
+      > li {
+        &:nth-child(2) {
+          margin-left: 5%;
+          margin-right: 5%;
+          @include med.media(sp) {
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+  
+        &:nth-child(5) {
+          margin-right: 5%;
+          margin-left: 5%;
+          @include med.media(sp) {
+            margin-right: 0;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__interviewImgWrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 32/27;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s;
+    }
+  }
+
+  &__interviewLabel {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #FFF;
+    width: 100px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+
+    &.sales {
+      background-color: #F78733;
+    }
+
+    &.se {
+      background-color: #4ABDAC;
+    }
+
+    @include med.media(sp) {
+      width: 17.33vw;
+      height: 5.33vw;
+      line-height: 5.33vw;
+      font-size: 3.3vw;
+    }
+  }
+
+  &__interviewText {
+    margin-top: 24px;
+    line-height: 1.8;
+    @include med.media(sp) {
+      margin-top: 3.2vw;
+    }
+
+    .lead {
+      font-size: 18px;
+      color: #333;
+      font-weight: bold;
+      @include med.media(sp) {
+        font-size: 3.4vw;
+      }
+    }
+
+    .name {
+      font-size: 16px;
+      color: #666666;
+      font-weight: bold;
+      margin-top: 20px;
+      @include med.media(sp) {
+        font-size: 2.8vw;
+        margin-top: 3.2vw;
+      }
+    }
+  }
+
+  &__otherJobLink {
+    margin-top: 200px;
+    margin-bottom: 120px;
+    @include med.media(sp) {
+      margin-top: 21.5vw;
+      margin-bottom: 22.65vw;
+    }
+  }
+
+  &__otherJobHeading {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    padding-bottom: 130px;
+
+    @include med.media(sp) {
+      font-size: 4.8vw;
+      padding-bottom: 28vw;
+    }
+  }
+
+  &__point {
+    width: 72.5%;
+    margin: 10vw auto 0;
+    @include med.media(sp) {
+      width: 82.5%;
+      margin: 20vw auto 0;
+    }
+  }
+
+  &__pointList {
+    margin-top: 100px;
+
+    @include med.media(sp) {
+      margin-top: 13.7vw;
+    }
+
+    > li {
+      margin-bottom: 180px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include med.media(sp) {
+        margin-bottom: 24vw;  
+      }
+
+      &:nth-child(2) {
+        @include med.media(sp) {
+          margin-bottom: 30vw;
+        }
+      }
+    }
+  }
+
+  &__pointItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    @include med.media(sp) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__pointTextWrap {
+    width: 50%;
+
+    @include med.media(sp) {
+      width: 100%;
+      order: 1;
+      margin-top: 7.73vw;
+    }
+
+    > dl {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      > dt {
+        font-family: var.$FONT_RALEWAY;
+        font-weight: normal;
+        color: #003F93;
+        font-size: 60px;
+        margin-right: 30px;
+        @include med.media(sp) {
+          font-size: 14vw;
+          margin-right: 5.6vw;
+        }
+      }
+
+      > dd {
+        font-weight: bold;
+        font-size: 24px;
+        padding-top: 6px;
+        line-height: 1.4;
+        @include med.media(sp) {
+          font-size: 4.8vw;
+          padding-top: 2vw;
+        }
+      }
+    }
+
+    > p {
+      margin-top: 30px;
+      font-size: 16px;
+      line-height: 2;
+      @include med.media(sp) {
+        font-size: 3.6vw;
+        margin-top: 8vw;
+      }
+    }
+
+    &.second {
+      order: 1;
+    }
+
+    &.third {
+      > dl {
+        align-items: center;
+      }
+    }
+  }
+
+  &__pointImgWrap {
+    width: 45%;
+
+    @include med.media(sp) {
+      order: 0;
+    }
+
+    &.first {
+      padding-top: 50px;
+      @include med.media(sp) {
+        width: 90%;
+        margin: auto;
+        padding-top: 0;
+      }
+    }
+
+    &.second {
+      order: 0;
+      width: 40%;
+      padding-top: 15px;
+
+      @include med.media(sp) {
+        width: 85%;
+        padding-top: 0;
+      }
+    }
+
+    &.third {
+      width: 40%;
+      padding-top: 80px;
+      @include med.media(sp) {
+        width: 80%;
+        padding-top: 0;
+        margin-left: 5%;
+      }
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__multiLineWrap {
+    margin-top: 30px;
+    @include med.media(sp) {
+      margin-top: 8vw;
+    }
+  }
+
+  &__pointMultiLine {
+    margin-bottom: 20px;
+
+    @include med.media(sp) {
+      margin-bottom: 8vw;
+
+      &.mb-adjust {
+        margin-bottom: 0;
+      }
+    }
+
+    > li {
+      font-size: 16px;
+      line-height: 2;
+
+      @include med.media(sp) {
+        font-size: 3.6vw;
+      }
+
+      &:first-child {
+        font-weight: bold;
+      }
+
+      &:nth-child(2) {
+        margin-top: 20px;
+        @include med.media(sp) {
+          margin-top: 8vw;
+        }
+      }
+    }
+  }
+
+  &__pointGrayBg {
+    position: absolute;
+    background-color: #FAFAFA;
+    z-index: -1;
+
+    &.first {
+      width: 80%;
+      height: 105%;
+      top: 5%;
+      left: 8%;
+      @include med.media(sp) {
+        width: 85%;
+        height: 102%;
+        left: inherit;
+        right: 0;
+      }
+    }
+
+    &.second {
+      width: 72.5%;
+      height: 103%;
+      left: 6%;
+      top: 12%;
+      @include med.media(sp) {
+        width: 85%;
+        left: 5%;
+        top: 12.5%;
+        height: 100%;
+      }
+    }
+
+    &.third {
+      width: 72.5%; 
+      height: 102%;
+      top: 12%;
+      left: 12.5%;
+      @include med.media(sp) {
+        width: 85%;
+        left: 9%;
+        height: 100%;
+      }
+    }
+  }
+
+  &__daySchedule {
+    margin-top: 220px;
+    background-color: #FAFAFA;
+    @include med.media(sp) {
+      margin-top: 53.5vw;
+    }
+  }
+
+  &__dayScheduleInner {
+    position: relative;
+    width: 70%;
+    margin: auto;
+    padding-top: 180px;
+    padding-bottom: 100px;
+    @include med.media(sp) {
+      padding-top: 26.5vw;
+      padding-bottom: 14vw;
+      width: 80%;
+      margin: 0 10% 0 6.5%;
+    }
+  }
+
+  &__headingWrap {
+    &.daySchedule {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      @include med.media(sp) {
+        top: -9vw;
+        left: 30vw;
+      }
+    }
+  }
+}
+

@@ -1,0 +1,313 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../include/_head.ejs', { data: dataSet } ) %>
+
+<body>
+  <div>
+    <%- include('../include/_header.ejs', { data: dataSet } ) %>
+    <main class="p-faqMain c-subPage__main">
+      <div class="c-breadCrumbs">
+        <ul class="c-breadCrumbs__list">
+          <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+          <li><span>FAQ</span></li>
+        </ul>
+      </div>
+      <div class="p-faqMain__content">
+        <div class="c-subPage__firstVisual">
+          <img src="<%= dataSet.srcpath %>images/faq_mv.jpg" alt="faq image">
+          <div class="c-subPage__textWrap">
+            <div class="c-subPage__textInner">
+              <div class="c-subPage__headingWrap faq">
+                <div class="c-subPage__headingInner">
+                  <h2 class="c-subPage__heading js-subpage-titleAnimation">FAQ</h2>
+                  <p class="c-subPage__subText js-subpage-titleAnimation">-よくある質問</p>
+                </div>
+              </div>
+              <p class="c-subPage__detailText faq js-loadFadeIn">KELの採用情報について、よくある質問を掲載しています。</p>
+            </div>
+          </div>
+        </div>
+      <div class="p-faq__itemWrap">
+        <div class="p-faq__item js-loadFloatFadeIn">
+          <h3 class="p-faq__itemHeading">「 採用 」に関する質問</h3>
+          <ul class="p-faq__list">
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>説明会に参加するにはどうすればよいですか。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>マイナビからエントリー後にマイページ案内が届きますのでそこからログインするか、<br>
+                  もしくは右上<a href="https://mypage.3050.i-webs.jp/kel2024/" target="_blank">「MYPAGE2023」</a>よりマイページ登録をしてください。<br>
+                  マイページにログインいただいた方へ説明会をご案内しております。<br>
+                  また、<a href="<%= dataSet.srcpath %>recruit/schedule/index.html?#flow">選考プロセスはこちら</a>をご覧ください。</p>
+              </div>
+            </li>
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>応募にあたりITの知識は必要ですか。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>もちろん学生時代に専門的に学ばれたITに関する技術的知識等は歓迎いたしますが、応募に必ず必要なわけではありません。<br>
+                  入社直後の研修を始めとし、以降も継続的なITスキル教育を実施しており、必要とされる専門的なスキルを適宜身につけていただける環境を用意しています。<br>
+                  技術革新の早い世界ですので常に新しいテクノロジーに興味をもち、自ら知識を蓄えるスタンスとそれらの知識をお客様のビジネスに役立つようサービスとして提供できることが重要と考えます。</p>
+              </div>
+            </li>
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>文系、理系の制限はありますか。文系でもSE（システムエンジニア）になれますか。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>SEは、理系の仕事と思われていますが、当社では、文系出身のSEも多数在籍しており、文系でもSEになれます。<br>
+                  また、当社は採用においてもその後の配属においても、学生の皆さんの学部学科は問いません。<br>
+                  新卒入社5年目までのSE配属者の文理比率は、文系出身74%、理系出身26％です。<br>
+                  当社のSEの仕事は、お客様とのコミュニケーションが特に重要であることが多く、文系出身者もSEとして活躍しています。また、理系出身の営業も多数おり、活躍しています。</p>
+              </div>
+            </li>
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>OB/OG訪問について</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>応募者皆さんの公平性を保つため、当社人事からの社員紹介は控えております。<br>
+                  社員と個別に連絡をお取り頂いてお会い頂くことは構いませんので、大学の先輩や就職課の方などを通じて、調べてみて下さい。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="p-faq__item js-scrollFloatFadeIn">
+          <h3 class="p-faq__itemHeading">「 仕事、配属 」に関する質問</h3>
+          <ul class="p-faq__list">
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>新入社員研修はどのようなことを学ぶのでしょうか。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>新入社員研修においては、約2ヶ月半の研修を通して、配属された現場で戦力になれるよう、マナー研修、ヒューマンスキル、 ITスキルなどを総合的に行っていきます。<br><a href="<%= dataSet.srcpath %>recruit/training/">詳細はこちら</a></p>
+              </div>
+            </li>
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>配属はどのように決まるのでしょうか。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>当社では職種別の採用ではなく、総合職としての一括採用となります。<br>
+                  入社後約2ヶ月半の研修期間に、本人の希望、現場の人員ニーズ、会社から見た本人の適性などから総合的に判断して配属を決定します。</p>
+              </div>
+            </li>
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>勤務地はどこになるのですか。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>新入社員の配属実績は東京・大阪・名古屋のいずれかです。<br>
+                  新人育成の観点からも この３拠点が主な候補になります。<br>
+                  割合としては東京配属が多くなっています。</p>
+              </div>
+            </li>
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>SE（システムエンジニア）の具体的な仕事を教えて下さい。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>入社後は配属先で、担当したITシステムの設計、構築作業を行います。<br>
+                  案件対応の経験を積み、自分の得意な技術を身に付けながら、業務の幅を広げていきます。<br>
+                  将来的には①大規模システム構築案件を統括するPM(プロジェクトマネージャー)、②担当したお客様のITシステムを熟知し、提案活動や、システム設計・構築を行うSE(ITコンサルタント)の役割が期待されています。</p>
+              </div>
+            </li>
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>海外と関わるビジネスができますか。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>海外と関わる仕事については、海外メーカーとの交渉、会議、新製品セミナー出席等の海外出張があります。<br>
+                  また、当社のお客様の海外進出をサポートするため、海外でのシステム構築もあります。<br>
+                  近年は中国、タイ、に現地法人の設立や、米国企業と提携するなどグローバル展開を進めています。<br>
+                  当社設立時より、海外メーカーの製品を日本企業に紹介するのも重要な仕事であり、多種多様な製品を取り扱えることはKELにとって大きな強みです。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="p-faq__item js-scrollFloatFadeIn">
+          <h3 class="p-faq__itemHeading">「 その他 」に関する質問</h3>
+          <ul class="p-faq__list">
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>職種別の人員構成を教えて下さい。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>職種別の人員構成は大きく3つに分けられます。<br>
+                  グループ会社も合わせるとそれぞれ営業職約19％、技術職約64％、間接職約17％となっており技術職の比率が高いことが特徴です。<br>
+                  これはKELグループが単なる商品の販売ではなく、そこに独自の技術・開発力に基づいた付加価値の提供に注力している結果です。<br>※KEL単体で見ると営業職約49％、技術職約26％、間接職約25％となっており、営業の比率が高いです。IT業界の中でも、営業力が強いという特徴があります。技術職26％というのは、KELのSEは、設計・構築を担当し、グループ内外のチームを率いて対応するのでこの割合になっています。</p>
+              </div>
+            </li>
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>残業は多いのでしょうか。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>一人一人の仕事の範囲が大きいので、結構忙しいです。<br>
+                  エンジニアは、お客様のシステム休止中に作業をする場合もあります。<br>
+                  しかし、振替休日・代休取得で補う制度がありますので心配いりません。</p>
+              </div>
+            </li>
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>離職率はどれくらいですか。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>2019年度の離職率は2.6％でした。比較的低い水準であると考えています。<br>
+                  また、入社後3年離職率は7％となっております。</p>
+              </div>
+            </li>
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>育児休暇は取れますか。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>産前産後休暇は産前6週間・産後8週間で、育児休業は最長で子が2歳に達するまで取得することができます。出産した社員はほぼ100%取得しています。</p>
+              </div>
+            </li>
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>社員が経営や事業に対し「意見・提案」をできる機会がありますか。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>人事評価の過程において上司と面談する機会があり、評価の結果は本人にフィードバックされます。発展的な意見・提案・要望事項等あれば、そういった場で上司に伝えることができ、それは書面に残り、人事課に送られます。<br>
+                  そのほか、経営との交流会等の場でも、経営や事業に対する自分の意見を伝えることはできます。またKEL社内の風土として、常日頃から発展的な意見交換を上司や部下などの関係に関わらず行なうことができます。</p>
+              </div>
+            </li>
+            <li>
+              <div class="p-faq__itemText p-faq__question js-faq-menuTrigger">
+                <span>Q.</span>
+                <p>クラブ活動や同好会などはありますか。</p>
+                <div class="p-faq__toggleBtnWrap">
+                  <div class="p-faq__toggleBtn">
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+              <div class="p-faq__itemText p-faq__answer js-faq-answer">
+                <span>A.</span>
+                <p>会社が活動を補助する社内クラブがあり、フットサル、テニス、スキー、ゴルフ、野球、サッカークラブが東京と大阪で活動しています。<br>
+                  また、同じ趣味を持つ人同士が集まり、有志で同好会として活動しているものもあります。クラブ活動を通して、他部署や他の会社の人達と交流を行っています。</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="p-faqMain__bottom">
+        <%- include('../include/parts/_entryBtn.ejs') %>
+      </div>
+    </main>
+    <%- include('../include/_footer.ejs', { data: dataSet } ) %>
+  </div>
+  <script src="<%= dataSet.srcpath %>js/common.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/_head.ejs', { data: dataSet } ) %>
+  <body>
+    <div>
+      <%- include('../include/_header.ejs', { data: dataSet } ) %>
+      <main class="p-workMain c-subPage__main">
+        <div class="c-breadCrumbs">
+          <ul class="c-breadCrumbs__list">
+            <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+            <li><span>KELの仕事</span></li>
+          </ul>
+        </div>
+        <div class="p-workMain__content">
+          <div class="p-workMain__firstVisual c-subPage__firstVisual">
+            <img src="<%= dataSet.srcpath %>images/work_mv.jpg" alt="work image">
+            <div class="c-subPage__textWrap">
+              <div class="c-subPage__textInner">
+                <div class="c-subPage__headingWrap">
+                  <div class="c-subPage__headingInner">
+                    <h2 class="c-subPage__heading js-subpage-titleAnimation">Work</h2>
+                    <p class="c-subPage__subText js-subpage-titleAnimation">-KELの仕事</p>
+                  </div>
+                </div>
+                <p class="c-subPage__detailText js-loadFadeIn">KELでの仕事を、営業・SEの職種別でご紹介します。</p>
+              </div>
+            </div>
+          </div>
+          <div class="c-subPage__genreWrap js-loadFloatFadeIn">
+            <div class="c-subPage__genreCard">
+              <a href="<%= dataSet.srcpath %>work/sales/">
+                <img src="<%= dataSet.srcpath %>images/work_sales.jpg" alt="営業の仕事">
+                <div class="c-subPage__linkArea c-subPage__linkArea--sales">
+                  <div class="c-subPage__linkAreaInner">
+                    <h3>営業の仕事</h3>
+                    <p>KELの営業の仕事内容をポイント解説と 1日の流れ（ある1日）でご紹介します。</p>
+                    <div class="c-circleBtn p-work__circleBtn--sales">
+                      <div class="c-subPage__circleBtnInner">
+                        <span class="c-circleBtn__circle">
+                          <span class="c-circleBtn__arrow"></span>
+                        </span>
+                        <span class="c-circleBtn__text">詳しく見る</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="c-subPage__genreCard">
+              <a href="<%= dataSet.srcpath %>work/se/">
+                <img src="<%= dataSet.srcpath %>images/work_se.jpg" alt="SEの仕事">
+                <div class="c-subPage__linkArea c-subPage__linkArea--se">
+                  <div class="c-subPage__linkAreaInner">
+                    <h3>SEの仕事</h3>
+                    <p>KELのSE（システムエンジニア）の 仕事内容をポイント解説と1日の流れ（ある1日）でご紹介します。</p>
+                    <div class="c-circleBtn p-work__circleBtn--se">
+                      <div class="c-subPage__circleBtnInner">
+                        <span class="c-circleBtn__circle">
+                          <span class="c-circleBtn__arrow"></span>
+                        </span>
+                        <span class="c-circleBtn__text">詳しく見る</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="p-workMain__bottom">
+            <%- include('../include/parts/_entryBtn.ejs') %>
+          </div>
+        </div>
+      </main>
+      <%- include('../include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script>
+  </body>
+</html>

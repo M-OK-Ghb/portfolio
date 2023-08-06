@@ -1,0 +1,476 @@
+<%
+  const data = {
+    isTop: false,
+    title: "WORK | NOS 新卒採用サイト",
+    description: "",
+    path: "../..",
+    imgPath: "../../images",
+    commonImgPath: "../../images/common",
+    current: "work",
+    hierarchy: "third",
+    crumbsText: "SEの仕事",
+    crumbsUrl: "se",
+    crumbsParentText: "WORK",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../../include/common/_header.ejs', {data: data}); %>
+      <main class="p-sub__main">
+        <%- include('../../include/common/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-sub__fv">
+          <div class="p-sub__fvImg js-sub-fvImg">
+            <img class="is-pc" src="<%= data.imgPath %>/kv/work_se.webp" alt="キービジュアル <%= data.crumbsText %>">
+            <img class="is-sp" src="<%= data.imgPath %>/kv/work_se_sp.webp" alt="キービジュアル <%= data.crumbsText %>">
+          </div>
+          <section class="p-sub__topSection">
+            <h1 class="c-heading --work p-sub__topHeading js-sub-titleTop">
+              <img src="<%= data.commonImgPath %>/heading_work.svg" alt="<%= data.current %>">
+            </h1>
+            <p class="c-headingSub"><span>SE(システムエンジニア)の仕事</span></p>
+          </section>
+        </div>
+        <div class="p-sub__contents js-scrollFadeIn --block">
+          <p class="p-sub__description">NOSのSE(システムエンジニア)の仕事内容をポイント解説と1日の流れ（ある1日）で<br class="is-pc">ご紹介します。</p>
+        </div>
+        <div class="p-work__day js-scrollFadeIn --block">
+          <ul class="p-work__tabArea">
+            <li class="js-tab-triggerWrap">
+              <div class="p-work__tabBtn">
+                <div class="p-work__tabInner js-tab-trigger">
+                  <img src="<%= data.imgPath %>/work/se_tab_1.png" alt="tab 1">
+                  <span class="se is-pc">インフラエンジニア</span>
+                  <span class="se is-sp --firstLine">インフラエンジ</span>
+                  <span class="se is-sp --endLine">ニア</span>
+                </div>
+              </div>
+            </li>
+            <li class="js-tab-triggerWrap">
+              <div class="p-work__tabBtn">
+                <div class="p-work__tabInner js-tab-trigger">
+                  <img src="<%= data.imgPath %>/work/se_tab_2.png" alt="tab 2">
+                  <span class="se is-pc">開発</span>
+                  <span class="se is-sp">開発</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="p-work__schedule" id="js-schedule">
+            <div class="p-work__scheduleBlock js-schedule-block">
+              <div class="p-work__scheduleBlockInner">
+                <div class="p-work__scheduleMain">
+                  <h2 class="p-work__heading">
+                    <span class="c-heading--sectionTitle --grayBack --longInline">NOSのSEの仕事を知る3つのポイント</span>
+                  </h2>
+                  <ol class="p-work__scheduleList">
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__scheduleItem">
+                        <div class="p-work__scheduleNumber">
+                          <img src="<%= data.imgPath %>/work/01.svg" alt="01">
+                        </div>
+                        <div class="p-work__scheduleContents">
+                          <h3 class="p-work__scheduleHeading --pc">技術的に案件成立のサポート</h3>
+                          <div class="p-work__scheduleContentsInner">
+                            <div class="p-work__scheduleIcon">
+                              <img src="<%= data.imgPath %>/work/se_img_1.svg" alt="SE 技術的に案件成立のサポート イメージ">
+                            </div>
+                            <h3 class="p-work__scheduleHeading --sp">技術的に案件成立のサポート</h3>
+                            <div class="p-work__scheduleTextArea">
+                              <div class="p-work__scheduleText">
+                                <p>SEは営業の提案活動をサポートします。</p>
+                                <p>お客様へのヒアリングのため打合せへ同席し、提案内容の技術的な裏付けのための調査や、作業費の算出などを行います。</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__scheduleItem">
+                        <div class="p-work__scheduleNumber">
+                          <img src="<%= data.imgPath %>/work/02.svg" alt="02">
+                        </div>
+                        <div class="p-work__scheduleContents">
+                          <h3 class="p-work__scheduleHeading --pc">提案内容実現のプロセス</h3>
+                          <div class="p-work__scheduleContentsInner">
+                            <div class="p-work__scheduleIcon">
+                              <img src="<%= data.imgPath %>/work/se_img_2.svg" alt="SE　提案内容実現のプロセス イメージ">
+                            </div>
+                            <h3 class="p-work__scheduleHeading --sp">提案内容実現のプロセス</h3>
+                            <div class="p-work__scheduleTextArea">
+                              <div class="p-work__scheduleText">
+                                <p>受注後はSEが主体となり①要件定義、②基本設計、③詳細設計、④構築、⑤テスト、⑥納品の順に進めます。</p>
+                                <p>①要件定義…採用する構成要素を明確にします。<br>②基本設計…各構成要素をどのような方針で実装するかを設計します。<br>③詳細設計…基本設計に従って、各設定値に落とし込みます。<br>④構築…詳細設計に従って、各機器を設定します。<br>⑤テスト…設定した内容が設計通りになっていることを確認します。<br>⑥納品…各工程で作成した資料と共に、構築した機器を引き渡します。</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__scheduleItem">
+                        <div class="p-work__scheduleNumber">
+                          <img src="<%= data.imgPath %>/work/03.svg" alt="03">
+                        </div>
+                        <div class="p-work__scheduleContents">
+                          <h3 class="p-work__scheduleHeading --pc">システムに適した土台の構築</h3>
+                          <div class="p-work__scheduleContentsInner">
+                            <div class="p-work__scheduleIcon">
+                              <img src="<%= data.imgPath %>/work/sales_img_3.svg" alt="システムに適した土台の構築">
+                            </div>
+                            <h3 class="p-work__scheduleHeading --sp">システムに適した土台の構築</h3>
+                            <div class="p-work__scheduleTextArea">
+                              <div class="p-work__scheduleText">
+                                <p>システムサービス部では物理/仮想/クラウドを問わずサーバ機器やネットワーク機器を構築します。</p>
+                                <p>インフラはシステムの土台となる仕組みのため、その上のアプリケーションはお客様の会社ホームページなどのWEBサイトであったり、小売店向けの販売管理システムであったり様々です。</p>
+                                <p>環境の変化に応じて、従来物理サーバや物理ネットワーク機器で構成されていたシステムを仮想環境やクラウドに移行する案件などもあります。</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ol>
+                  <h2 class="p-work__heading --bottom">
+                  <span class="c-heading--sectionTitle --grayBack">NOSのSEの1日</span>
+                  </h2>
+                  <ul class="p-work__details">
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__detailInner">
+                        <div class="p-work__detailText">
+                          <h4 class="p-work__detailHead">
+                            <span class="label">10:00</span>
+                            <span class="text">出社、社内週次ミーティング</span>
+                          </h4>
+                          <p>自分が担当している案件の進捗・課題をチーム内で報告したり、技術的な情報共有などを行います。</p>
+                        </div>
+                        <div class="p-work__detailImg">
+                          <img src="<%= data.imgPath %>/work/se_time_01.png" alt="10:00 出社、社内週次ミーティング イメージ">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__detailInner">
+                        <div class="p-work__detailText">
+                          <h4 class="p-work__detailHead">
+                            <span class="label">11:00</span>
+                            <span class="text">資料作成</span>
+                          </h4>
+                          <p>A社様の要件をもとに、作業見積を作成します。</p>
+                        </div>
+                        <div class="p-work__detailImg">
+                          <img src="<%= data.imgPath %>/work/se_time_02.png" alt="11:00 資料作成 イメージ">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__detailInner">
+                        <div class="p-work__detailText">
+                          <h4 class="p-work__detailHead">
+                            <span class="label">14:00</span>
+                            <span class="text">サーバ構築・テスト</span>
+                          </h4>
+                          <p>B社様の設計書をもとに、機器の設定を行います。また、設定が設計通りの内容となっているかテストします。</p>
+                        </div>
+                        <div class="p-work__detailImg">
+                          <img src="<%= data.imgPath %>/work/se_time_03.png" alt="14:00 サーバ構築・テスト">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__detailInner">
+                        <div class="p-work__detailText">
+                          <h4 class="p-work__detailHead">
+                            <span class="label">18:00</span>
+                            <span class="text">資料作成</span>
+                          </h4>
+                          <p>B社様のその日のテスト結果を資料に反映します。</p>
+                        </div>
+                        <div class="p-work__detailImg">
+                          <img src="<%= data.imgPath %>/work/se_time_04.png" alt="18:00 資料作成イメージ">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__detailInner">
+                        <div class="p-work__detailText">
+                          <h4 class="p-work__detailHead">
+                            <span class="label">18:20</span>
+                            <span class="text">退社</span>
+                          </h4>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-work__border --left">
+                  <img src="<%= data.imgPath %>/work/dasshed_border.svg" alt="- - -">
+                </div>
+              </div>
+              <div class="p-work__genreChangeBtn">
+                <button class="js-genreChange --se">
+                  <span>「開発」の仕事内容を見る</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18.81" height="18.392" viewBox="0 0 18.81 18.392">
+                    <g transform="translate(1.398 17.392) rotate(-90)">
+                      <line x2="8" transform="translate(0 8)" fill="none" stroke="#008b92" stroke-linecap="round" stroke-width="2"/>
+                      <path d="M0,6.139,8.318,0S14.285,4.6,16,6.139" transform="translate(16.139) rotate(90)" fill="none" stroke="#008b92" stroke-linecap="round" stroke-width="2"/>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="p-work__scheduleBlock js-schedule-block">
+              <div class="p-work__scheduleBlockInner">
+                <div class="p-work__scheduleMain">
+                  <h2 class="p-work__heading --right">
+                    <span class="c-heading--sectionTitle --grayBack --longInline">NOSのSEの仕事を知る3つのポイント</span>
+                  </h2>
+                  <ol class="p-work__scheduleList">
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__scheduleItem --right">
+                        <div class="p-work__scheduleNumber --right">
+                          <img src="<%= data.imgPath %>/work/01.svg" alt="01">
+                        </div>
+                        <div class="p-work__scheduleContents">
+                          <h3 class="p-work__scheduleHeading --pc">多種多様なお客様にチームでアプローチ</h3>
+                          <div class="p-work__scheduleContentsInner">
+                            <div class="p-work__scheduleIcon">
+                              <img src="<%= data.imgPath %>/work/se_img_4.svg" alt="多種多様なお客様にチームでアプローチ イメージ">
+                            </div>
+                            <h3 class="p-work__scheduleHeading --sp">多種多様なお客様にチームでアプローチ</h3>
+                            <div class="p-work__scheduleTextArea">
+                              <div class="p-work__scheduleText">
+                                <p>普段接するのは情報システム部門の方が多いですが、システム開発時には実際にご利用される営業、経理など現場部門の方に直接ご要望をヒアリングしていきます。</p>
+                                <p>提案やプロジェクトの開始時などでは社長、役員、部長といったマネジメント層の方々ともシステム化方針などについて直接意見を交換するような場面もあります。</p>
+                                <p>規模的には個人もしくは3～5名程度のチームで対応するプロジェクトが多く、チームで取り組む場合はプロジェクトマネージャ、システムエンジニア、プログラマなど各人のスキルに応じた役割を割り当てられます。</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__scheduleItem --right">
+                        <div class="p-work__scheduleNumber --right">
+                          <img src="<%= data.imgPath %>/work/02.svg" alt="02">
+                        </div>
+                        <div class="p-work__scheduleContents">
+                          <h3 class="p-work__scheduleHeading --pc">提案からサービスインまで、プロジェクト全体に関わる仕事</h3>
+                          <div class="p-work__scheduleContentsInner">
+                            <div class="p-work__scheduleIcon">
+                              <img src="<%= data.imgPath %>/work/se_img_5.svg" alt="提案からサービスインまで、プロジェクト全体に関わる仕事 イメージ">
+                            </div>
+                            <h3 class="p-work__scheduleHeading --sp">提案からサービスインまで、プロジェクト全体に関わる仕事</h3>
+                            <div class="p-work__scheduleTextArea">
+                              <div class="p-work__scheduleText">
+                                <p>大きな案件ではRFPという提案依頼書がお客様からご提示されますので、営業と一緒に内容を確認して、不明点はお客様に確認する等、提案書を作成していきます。</p>
+                                <p>受注後はお客様のご要望をヒアリングする要件定義フェーズを実施して、構築するシステムの全体を取りまとめます。その後、プログラムの処理ロジック、システム間のインターフェース、システムの運用方法などの設計作業を実施します。</p>
+                                <p>設計された内容に従いプログラム開発や設定を行い、プログラム個別のテストや機能間・システム間のテストを実施します。最後にシステム運用にかかわるテストを実施してサービスインとなります。</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__scheduleItem --right">
+                        <div class="p-work__scheduleNumber --right">
+                          <img src="<%= data.imgPath %>/work/03.svg" alt="03">
+                        </div>
+                        <div class="p-work__scheduleContents">
+                          <h3 class="p-work__scheduleHeading --pc">論理的思考とITを学ぶ力</h3>
+                          <div class="p-work__scheduleContentsInner">
+                            <div class="p-work__scheduleIcon">
+                              <img src="<%= data.imgPath %>/work/se_img_6.svg" alt="論理的思考とITを学ぶ力">
+                            </div>
+                            <h3 class="p-work__scheduleHeading --sp">論理的思考とITを学ぶ力</h3>
+                            <div class="p-work__scheduleTextArea">
+                              <div class="p-work__scheduleText">
+                                <p>システム開発というとプログラミングスキルをイメージするかもしれませんが、お客様の要望を正しく理解して自分達が対応すべき作業内容を組み立てて説明できる、論理的な思考力が求められます。</p>
+                                <p>新しい技術やサービスが次々に生み出されてきますので、常にアンテナを張って情報をアップデートすることと、自ら実践してみる意識を持つことが大切となります。</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ol>
+                  <h2 class="p-work__heading --bottom --right">
+                    <span class="c-heading--sectionTitle --grayBack">NOSのSEの1日</span>
+                  </h2>
+                  <ul class="p-work__details --right">
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__detailInner --noPictureRight">
+                        <div class="p-work__detailText --noPicture --right">
+                          <h4 class="p-work__detailHead --right">
+                            <span class="label">9:00</span>
+                            <span class="text">出社・メール確認<br><small>(時差出勤)</small></span>
+                          </h4>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__detailInner --right">
+                        <div class="p-work__detailText --right">
+                          <h4 class="p-work__detailHead --right">
+                            <span class="label">9:30</span>
+                            <span class="text">プログラム開発・単体テスト</span>
+                          </h4>
+                          <p>作成された設計書に従って、プログラムの開発およびプログラム単体での実行テストを行います。</p>
+                        </div>
+                        <div class="p-work__detailImg">
+                          <img src="<%= data.imgPath %>/work/se_time_right_01.png" alt="9:30 プログラム開発・単体テスト">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__detailInner --right">
+                        <div class="p-work__detailText --right">
+                          <h4 class="p-work__detailHead --right">
+                            <span class="label">14:00</span>
+                            <span class="text">客先訪問</span>
+                          </h4>
+                          <p>提案のため営業に同行してお客様先を訪問、要望事項をヒアリングします。</p>
+                        </div>
+                        <div class="p-work__detailImg">
+                          <img src="<%= data.imgPath %>/work/se_time_right_02.png" alt="14:00 客先訪問">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__detailInner --right">
+                        <div class="p-work__detailText --right">
+                          <h4 class="p-work__detailHead --right">
+                            <span class="label">15:30</span>
+                            <span class="text">夕会実施</span>
+                          </h4>
+                          <p>プロジェクトのチームメンバーで集まって、進捗状況や課題項目の確認を実施します。</p>
+                        </div>
+                        <div class="p-work__detailImg">
+                          <img src="<%= data.imgPath %>/work/se_time_right_03.png" alt="15:30 夕会実施">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="js-scrollFadeIn --block">
+                      <div class="p-work__detailInner --right">
+                        <div class="p-work__detailText --right">
+                          <h4 class="p-work__detailHead --right">
+                            <span class="label">17:00</span>
+                            <span class="text">プログラムリリース</span>
+                          </h4>
+                          <p>お客様の業務終了後に、作成したプログラムをお客様環境に導入して利用できるようにします。</p>
+                        </div>
+                        <div class="p-work__detailImg">
+                          <img src="<%= data.imgPath %>/work/se_time_right_04.png" alt="17:00 プログラムリリース">
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-work__border --right">
+                  <img src="<%= data.imgPath %>/work/dasshed_border.svg" alt="- - -">
+                </div>
+              </div>
+              <div class="p-work__genreChangeBtn">
+                <button class="js-genreChange --se">
+                  <span>「インフラエンジニア」の仕事内容を見る</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18.81" height="18.392" viewBox="0 0 18.81 18.392">
+                    <g transform="translate(1.398 17.392) rotate(-90)">
+                      <line x2="8" transform="translate(0 8)" fill="none" stroke="#008b92" stroke-linecap="round" stroke-width="2"/>
+                      <path d="M0,6.139,8.318,0S14.285,4.6,16,6.139" transform="translate(16.139) rotate(90)" fill="none" stroke="#008b92" stroke-linecap="round" stroke-width="2"/>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-peopleDetail__same --workPage">
+          <div class="p-peopleDetail__sameInner --workPage">
+            <h3 class="p-peopleDetail__sameHeading --longText">
+              <span class="icon"><img src="<%= data.imgPath %>/people/icon_same_job.svg" alt="メモ アイコン"></span>
+              <span class="text">「SE」職のインタビュー記事を見る</span>
+            </h3>
+            <p class="p-peopleDetail__sameText">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <div class="p-peopleDetail__cardListWrap">
+              <ul class="p-people__cardList --detailPage">
+                <li class="c-peopleCard js-scrollFadeIn --block">
+                  <a href="<%= data.path %>/people/01/">
+                    <div class="c-peopleCard__img">
+                      <img src="<%= data.imgPath %>/top/swiper_person_1.jpg" alt="person 1" loading="lazy">
+                    </div>
+                    <div class="c-peopleCard__linkBtn">
+                      <span class="text">詳しくみる</span>
+                      <span class="icon">
+                        <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                      </span>
+                    </div>
+                    <div class="c-peopleCard__text">
+                      <p class="c-peopleCard__label"><span class="se">SE</span></p>
+                      <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                      <p class="c-peopleCard__message">
+                        <span>テキストが入ります。テキス</span>
+                        <span>トが入ります。テキス</span>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li class="c-peopleCard js-scrollFadeIn --block">
+                  <a href="<%= data.path %>/people/sample/">
+                    <div class="c-peopleCard__img">
+                      <img src="<%= data.imgPath %>/top/swiper_person_2.jpg" alt="person 2" loading="lazy">
+                    </div>
+                    <div class="c-peopleCard__linkBtn">
+                      <span class="text">詳しくみる</span>
+                      <span class="icon">
+                        <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                      </span>
+                    </div>
+                    <div class="c-peopleCard__text">
+                      <p class="c-peopleCard__label"><span class="se">SE</span></p>
+                      <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                      <p class="c-peopleCard__message">
+                        <span>テキストが入ります。テキス</span>
+                        <span>トが入ります。テキス</span>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li class="c-peopleCard js-scrollFadeIn --block">
+                  <a href="#">
+                    <div class="c-peopleCard__img">
+                      <img src="<%= data.imgPath %>/top/swiper_person_3.jpg" alt="person 3" loading="lazy">
+                    </div>
+                    <div class="c-peopleCard__linkBtn">
+                      <span class="text">詳しくみる</span>
+                      <span class="icon">
+                        <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                      </span>
+                    </div>
+                    <div class="c-peopleCard__text">
+                      <p class="c-peopleCard__label"><span class="se">SE</span></p>
+                      <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                      <p class="c-peopleCard__message">
+                        <span>テキストが入ります。テキス</span>
+                        <span>トが入ります。テキス</span>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <%- include('../_linkCard.ejs', {data: data}); %>
+        <%- include('../../include/common/_entryBottom.ejs', {data: data}); %>
+      </main>
+      <%- include('../../include/common/_scrollTop.ejs', {data: data}); %>
+      <%- include('../../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

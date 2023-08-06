@@ -1,0 +1,103 @@
+// -------------------------------------------------------------------
+// 	heading.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-heading {
+  overflow-y: hidden;
+  > img {
+    opacity: 0;
+    transition: transform 1s, opacity 1.25s;
+    width: 100%;
+    transform: translateY(100%);
+  }
+
+  &.--mission {
+    width: 42.5vw;
+    @include med.media(sp) {
+      width: 88.8vw;
+    }
+  }
+
+  &.--people {
+    width: 39.6vw;
+    @include med.media(sp) {
+      width: 83.47vw;
+    }
+  }
+
+  &.--culture {
+    width: 46.9vw;
+    @include med.media(sp) {
+      width: 96.7vw;
+    }
+  }
+
+  &.--work {
+    width: 33.33vw;
+    @include med.media(sp) {
+      width: 70vw;
+    }
+  }
+
+  &.--recruit {
+    width: 44.03vw;
+    @include med.media(sp) {
+      width: 92.9vw;
+    }
+  }
+
+  &.--faq {
+    width: 19.8vw;
+    @include med.media(sp) {
+      width: 41.33vw;
+    }
+  }
+}
+
+.c-headingSub {
+  margin-top: 0.73vw;
+
+  @include med.media(sp) {
+    margin-top: 3.2vw;
+  }
+  
+  > span {
+    display: inline-block;
+    color: #fff;
+    background-color: var.$ACCENT_BLUE;
+    font-weight: bold;
+    font-size: 1.76vw;
+    padding: 0.29vw;
+    @include med.media(sp) {
+      font-size: 4.27vw;
+      padding: 0.53vw;
+    }
+  }
+}
+
+.c-heading--sectionTitle {
+  display: inline-block;
+  background-color: #FFF;
+  color: var.$ACCENT_BLUE;
+  font-size: 1.9vw;
+  font-weight: bold;
+  padding: 0.44vw;
+
+  @include med.media(sp) {
+    font-size: 5.6vw;
+    padding: 1.07vw;
+  }
+
+  &.--grayBack {
+    background-color: #F2F2F2;
+  }
+
+  &.--longInline {
+    @include med.media(sp) {
+      display: inline;
+      box-decoration-break: clone;
+    }
+  }
+}

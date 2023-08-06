@@ -1,0 +1,87 @@
+// -------------------------------------------------------------------
+//  people.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.p-people {
+  position: relative;
+  background: #FFF;
+  margin-top: 7.33vw;
+  padding-top: 7.33vw;
+
+  &__cardList {
+    position: relative;
+    z-index: 1;
+    width: 76.2vw;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+
+    @include med.media(sp) {
+      width: 89.3vw;
+      display: block;
+      padding-bottom: 15.33vw;
+    }
+
+    > li {
+      width: 30.4%;
+      margin-bottom: 5.86vw;
+
+      @include med.media(pc) {
+        margin-right: 3.846%;
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+
+        &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11) {
+          margin-top: 2.93vw;
+        }
+      }
+
+      @include med.media(sp) {
+        width: 85.5%;
+        margin-bottom: 10.67vw;
+        margin-left: 14.5%;
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &:nth-child(even) {
+          margin-left: 0;
+          margin-right: 14.5%;
+        }
+      }
+    }
+
+    &.--detailPage {
+      > li {
+        @include med.media(pc) {
+          &:nth-child(2), &:nth-child(5), &:nth-child(8), &:nth-child(11) {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__shapeImg {
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: -22vw;
+    width: 32.38vw;
+
+    @include med.media(sp) {
+      width: 94.67vw;
+      bottom: -155vw;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+}

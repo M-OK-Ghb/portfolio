@@ -1,0 +1,323 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/_head.ejs', { data: dataSet } ) %>
+  <body>
+    <div>
+      <%- include('../../include/_header.ejs', { data: dataSet } ) %>
+      <main class="c-subPage__main">
+        <div class="c-breadCrumbs">
+          <ul class="c-breadCrumbs__list">
+            <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+            <li><a href="<%= dataSet.srcpath %>work/">Work</a></li>
+            <li><span>営業の仕事</span></li>
+          </ul>
+        </div>
+        <div class="p-salesMain__content">
+          <div class="p-salesMain__firstVisual c-subPage__firstVisual">
+            <img src="<%= dataSet.srcpath %>images/work_sales_mv.jpg" alt="sales image">
+            <div class="c-subPage__textWrap">
+              <div class="c-subPage__textInner">
+                <div class="c-subPage__headingWrap">
+                  <div class="c-subPage__headingInner">
+                    <h2 class="c-subPage__heading js-subpage-titleAnimation">WORK</h2>
+                    <p class="c-subPage__subText js-subpage-titleAnimation">-営業の仕事</p>
+                  </div>
+                </div>
+                <p class="c-subPage__detailText sales js-loadFadeIn">KELの営業の仕事内容をポイント解説と<br>1日の流れ（ある1日）でご紹介します。</p>
+                <div class="p-work__accentBg sales"></div>
+              </div>
+            </div>
+          </div>
+          <div class="p-work__point js-loadFloatFadeIn">
+            <div class="p-work__headingWrap">
+              <h3 class="c-subPage__genre--heading">Point</h3>
+              <p class="c-subPage__genre--headingSub sales">KELの営業の仕事内容を知る<br>3つのポイント</p>
+            </div>
+            <ul class="p-work__pointList">
+              <li>
+                <div class="p-work__pointItem">
+                  <div class="p-work__pointTextWrap">
+                    <dl>
+                      <dt>01</dt>
+                      <dd>お客様との信頼関係を<br>構築します。</dd>
+                    </dl>
+                    <p>お客様との信頼関係はとても重要です。そのため、企業の情報システム部門の方や経営層の方々とのコミュニケーションは欠かせません。お客様からの質問や、「もっとこうしたい」といった課題に対しては、マルチベンダーの特性を生かし、中立的な視点からIT技術やIT動向を踏まえた情報を提供します。迅速かつ誠実なコミュニケーションの積み重ねが、より良い信頼関係の構築へとつながります。<br>KELの顔として、あらゆる取引の窓口となり、お客様の成長とともに自らの成長を促します。</p>
+                  </div>
+                  <div class="p-work__pointImgWrap first">
+                    <img src="<%= dataSet.srcpath %>images/sales_point_01.svg" alt="KELの営業内容イラスト 01">
+                  </div>
+                  <div class="p-work__pointGrayBg first"></div>
+                </div>
+              </li>
+              <li>
+                <div class="p-work__pointItem">
+                  <div class="p-work__pointTextWrap second">
+                    <dl>
+                      <dt>02</dt>
+                      <dd>課題解決提案にあたり、<br>高いチーム力を醸成します。</dd>
+                    </dl>
+                    <p>お客様の課題は様々です。解決策を提案するにも営業担当一人のアイデアには限りがあります。そのため、営業が主導して解決策を導き出すプロジェクトチームを結成します。<br>技術的な知識で営業をサポートしてくれるプリセールスや、製品情報に精通した製品担当、ときには社外のメーカー担当者も加わり、プロジェクトを進めます。<br>お客様の課題に対して、最適なITソリューションをコーディネートする。その原動力となるのは、社内コミュニケーションでもあるのです。</p>
+                  </div>
+                  <div class="p-work__pointImgWrap second">
+                    <img src="<%= dataSet.srcpath %>images/sales_point_02.svg" alt="KELの営業内容イラスト 02">
+                  </div>
+                  <div class="p-work__pointGrayBg second"></div>
+                </div>
+              </li>
+              <li>
+                <div class="p-work__pointItem">
+                  <div class="p-work__pointTextWrap third">
+                    <dl>
+                      <dt>03</dt>
+                      <dd>精度の高い提案で、<br>お客様の期待を上回る。</dd>
+                    </dl>
+                    <p>プロジェクトチームを結成したら、メンバーと共同でお客様の課題をより深く検討し、提案する内容を決めていきます。日々更新される最新のIT技術にもアンテナを張りながら、お客様の課題解決に適したITソリューションを見つけ出します。<br>営業は、お客様が求めることをプロジェクトチームに伝え、チームが向かう方向を示します。意図する方向へチームを導いた結果を提案資料としてまとめ、チームの考えをお客様に伝える役割も担います。こうした一連のチームワークにより、お客様が期待する以上の提案ができるのです。</p>
+                  </div>
+                  <div class="p-work__pointImgWrap third">
+                    <img src="<%= dataSet.srcpath %>images/sales_point_03.svg" alt="KELの営業内容イラスト 03">
+                  </div>
+                  <div class="p-work__pointGrayBg third"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="p-work__daySchedule js-scrollFloatFadeIn">
+            <div class="p-work__dayScheduleInner">
+              <div class="p-work__headingWrap daySchedule">
+                <h3 class="c-subPage__genre--heading">A DAY</h3>
+                <p class="c-subPage__genre--headingSub sales">KELの営業の1日</p>
+              </div>
+
+              <div class="p-work__scheduleWrap">
+                <div class="p-work__scheduleLeft">
+                  <ul class="p-work__scheduleItem left">
+                    <li>
+                      <div class="p-work__scheduleImgWrap">
+                        <img src="<%= dataSet.srcpath %>images/sales_time_01.jpg" alt="10:00 客先訪問">
+                        <div class="p-work__scheduleLabelWrap right">
+                          <div class="p-work__scheduleLabel">
+                            <span class="time">10:00</span>
+                            <span class="content">客先訪問</span>
+                          </div>
+                        </div>
+                      </div>
+                      <p>現在進めているインフラシステム導入について定例ミーティングのためA社様に訪問。前回からの進捗の確認と、今後の進め方、お客様からの質問に対する答えなどを事前に用意します。</p>
+                    </li>
+                    <li>
+                      <div class="p-work__scheduleImgWrap">
+                        <img src="<%= dataSet.srcpath %>images/sales_time_03.jpg" alt="15:00 客先訪問">
+                        <div class="p-work__scheduleLabelWrap right">
+                          <div class="p-work__scheduleLabel">
+                            <span class="time">15:00</span>
+                            <span class="content">客先訪問</span>
+                          </div>
+                          <div></div>
+                        </div>
+                      </div>
+                      <p>新規取引開拓のため、C社様に訪問して、お客様が所属している業界のITシステム動向の情報を提供します。また、併せてお客様ITシステム環境をヒアリングします。</p>                      
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-work__scheduleRight">
+                  <ul class="p-work__scheduleItem right">
+                    <li>
+                      <div class="p-work__scheduleImgWrap">
+                        <img src="<%= dataSet.srcpath %>images/sales_time_02.jpg" alt="13:00 社内打ち合わせ">
+                        <div class="p-work__scheduleLabelWrap left">
+                          <div class="p-work__scheduleLabel">
+                            <span class="time">13:00</span>
+                            <span class="content">社内打ち合わせ</span>
+                          </div>
+                        </div>
+                      </div>
+                      <p>3社競合のB社様向けシステム案件について、社内の有識者を集めて提案内容を検討。どのようなソリューションがいいかアイデアを出し合い、提案内容を決めます。</p>
+                    </li>
+                    <li>
+                      <div class="p-work__scheduleImgWrap">
+                        <img src="<%= dataSet.srcpath %>images/sales_time_04.jpg" alt="17:00 資料作成">
+                        <div class="p-work__scheduleLabelWrap left">
+                          <div class="p-work__scheduleLabel">
+                            <span class="time">17:00</span>
+                            <span class="content">資料作成</span>
+                          </div>
+                        </div>
+                      </div>
+                      <p>社内打ち合わせで決まった内容について、お客様への提案資料にまとめるとともに、お見積書も用意します。明日のお客様との定例を前に、打ち合わせ内容をまとめた資料を再度確認します。</p>
+                    </li>
+                  </ul>
+                </div>
+                <!--PCとSPでDOMの管理を分ける-->
+                <ul class="p-work__scheduleAll--sp">
+                  <li>
+                    <div class="p-work__scheduleImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/sales_time_01.jpg" alt="10:00 客先訪問">
+                      <div class="p-work__scheduleLabelWrap left">
+                        <div class="p-work__scheduleLabel">
+                          <span class="time">10:00</span>
+                          <span class="content">客先訪問</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p>現在進めているインフラシステム導入について定例ミーティングのためA社様に訪問。前回からの進捗の確認と、今後の進め方、お客様からの質問に対する答えなどを事前に用意します。</p>
+                  </li>
+                  <li>
+                    <div class="p-work__scheduleImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/sales_time_02.jpg" alt="13:00 社内打ち合わせ">
+                      <div class="p-work__scheduleLabelWrap left">
+                        <div class="p-work__scheduleLabel">
+                          <span class="time">13:00</span>
+                          <span class="content">社内打ち合わせ</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p>3社競合のB社様向けシステム案件について、社内の有識者を集めて提案内容を検討。どのようなソリューションがいいかアイデアを出し合い、提案内容を決めます。</p>
+                  </li>
+                  <li>
+                    <div class="p-work__scheduleImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/sales_time_03.jpg" alt="15:00 客先訪問">
+                      <div class="p-work__scheduleLabelWrap left">
+                        <div class="p-work__scheduleLabel">
+                          <span class="time">15:00</span>
+                          <span class="content">客先訪問</span>
+                        </div>
+                        <div></div>
+                      </div>
+                    </div>
+                    <p>新規取引開拓のため、C社様に訪問して、お客様が所属している業界のITシステム動向の情報を提供します。また、併せてお客様ITシステム環境をヒアリングします。</p>
+                  </li>
+                  <li>
+                    <div class="p-work__scheduleImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/sales_time_04.jpg" alt="17:00 資料作成">
+                      <div class="p-work__scheduleLabelWrap left">
+                        <div class="p-work__scheduleLabel">
+                          <span class="time">17:00</span>
+                          <span class="content">資料作成</span>
+                        </div>
+                      </div>
+                    </div>
+                    <p>社内打ち合わせで決まった内容について、お客様への提案資料にまとめるとともに、お見積書も用意します。明日のお客様との定例を前に、打ち合わせ内容をまとめた資料を再度確認します。</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-work__dayScheduleBorderHide"></div>
+            </div>
+          </div>
+          <div class="p-work__interviewArea js-scrollFloatFadeIn">
+            <h3 class="p-work__interviewHeading">「営業」職のインタビュー記事を見る</h3>
+            <div class="p-work__interviewListWrap">
+              <ul class="p-work__interviewList">
+                <li>
+                  <a href="#">
+                    <div class="p-work__interviewImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/interview_sales_01.jpg" alt="">
+                      <span class="p-work__interviewLabel sales">営業</span>
+                    </div>
+                    <div class="p-work__interviewText">
+                      <p class="lead">課題を引き出すには、信頼関係が何より大切。</p>
+                      <p class="name">第一ソリューション営業部<br>M.K.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="p-work__interviewImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/interview_sales_02.jpg" alt="">
+                      <span class="p-work__interviewLabel sales">営業</span>
+                    </div>
+                    <div class="p-work__interviewText">
+                      <p class="lead">育児休暇後でも、働きやすい職場環境。</p>
+                      <p class="name">第一ソリューション営業本部<br>I.T.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="p-work__interviewImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/interview_sales_03.jpg" alt="">
+                      <span class="p-work__interviewLabel sales">営業</span>
+                    </div>
+                    <div class="p-work__interviewText">
+                      <p class="lead">知ろうという気持ちが、信頼関係を生む。</p>
+                      <p class="name">第一ソリューション営業本部<br>K.F.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="p-work__interviewImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/interview_sales_04.jpg" alt="">
+                      <span class="p-work__interviewLabel sales">営業</span>
+                    </div>
+                    <div class="p-work__interviewText">
+                      <p class="lead">正解がないことが、逆に魅力。最強のIT営業マンを目指して。</p>
+                      <p class="name">第二ソリューション営業本部<br>Y.S.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="p-work__interviewImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/interview_sales_05.jpg" alt="">
+                      <span class="p-work__interviewLabel sales">営業</span>
+                    </div>
+                    <div class="p-work__interviewText">
+                      <p class="lead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                      <p class="name">第一ソリューション営業本部部長<br>S.N.</p>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="p-work__interviewImgWrap">
+                      <img src="<%= dataSet.srcpath %>images/interview_sales_06.jpg" alt="">
+                      <span class="p-work__interviewLabel sales">営業</span>
+                    </div>
+                    <div class="p-work__interviewText">
+                      <p class="lead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                      <p class="name">第一ソリューション営業本部部長<br>S.N.</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="p-work__otherJobLink js-scrollFloatFadeIn">
+            <h3 class="p-work__otherJobHeading">SEの仕事を見る</h3>
+            <div class="p-work__genreWrap--subPage">
+              <div class="c-subPage__genreCard workPage">
+                <a href="<%= dataSet.srcpath %>work/se/">
+                  <img src="<%= dataSet.srcpath %>images/work_se.jpg" alt="SEの仕事">
+                  <div class="c-subPage__linkArea c-subPage__linkArea--se">
+                    <div class="c-subPage__linkAreaInner">
+                      <h3>SEの仕事</h3>
+                      <p>KELのSE（システムエンジニア）の仕事内容をポイント解説と1日の流れ（ある1日）でご紹介します。</p>
+                      <div class="c-circleBtn p-work__circleBtn--se">
+                        <div class="c-subPage__circleBtnInner">
+                          <span class="c-circleBtn__circle">
+                            <span class="c-circleBtn__arrow"></span>
+                          </span>
+                          <span class="c-circleBtn__text">詳しく見る</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <%- include('../../include/parts/_entryBtn.ejs' ) %>  
+      </main>
+      <%- include('../../include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script>
+  </body>
+</html>

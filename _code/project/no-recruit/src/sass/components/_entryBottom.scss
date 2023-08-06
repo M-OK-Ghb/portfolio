@@ -1,0 +1,124 @@
+// -------------------------------------------------------------------
+// 	entryBottom.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.c-entryBottom {
+  display: flex;
+  justify-content: space-between;
+  width: 76.2vw;
+  padding: 11.7vw 0;
+  margin: auto;
+  @include med.media(sp) {
+    display: block;
+    width: 94.7vw;
+    padding: 29.3vw 0;
+
+    > li {
+      &:nth-child(1) {
+        margin-bottom: 2.67vw;
+      }
+    }
+  }
+
+  &__btn {
+    width: 49%;
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+
+    > a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0 2.2vw;
+      height: 7.33vw;
+      line-height: 7.33vw;
+      transition: background-color 0.3s;
+
+      @include med.media(sp) {
+        height: 21.33vw;
+        line-height: 21.33vw;
+      }
+
+      &.myNavi {
+        background-color: var.$MYNAVI_COLOR;
+        border: 1px solid var.$MYNAVI_COLOR;
+
+        &:hover {
+          background-color: #fff;
+  
+          > span {
+            color: var.$MYNAVI_COLOR;
+          }
+  
+          > svg {
+            line {
+              stroke: var.$MYNAVI_COLOR;
+            }
+  
+            path {
+              stroke: var.$MYNAVI_COLOR;
+              fill:var.$MYNAVI_COLOR;
+            }
+          }
+        }
+      }
+
+      &.rikuNabi {
+        background-color: var.$RIKUNABI_COLOR;
+        border: 1px solid var.$RIKUNABI_COLOR;
+
+        &:hover {
+          background-color: #fff;
+  
+          > span {
+            color: var.$RIKUNABI_COLOR;
+          }
+  
+          > svg {
+            line {
+              stroke: var.$RIKUNABI_COLOR;
+            }
+  
+            path {
+              stroke: var.$RIKUNABI_COLOR;
+              fill:var.$RIKUNABI_COLOR;
+            }
+          }
+        }
+      }
+
+      > span {
+        font-family: var.$EN_FONT_BASIC;
+        color: #FFF;
+        font-weight: bold;
+        font-size: 1.9vw;
+        letter-spacing: 0.23vw;
+        transition: color 0.3s;
+        @include med.media(sp) {
+          font-size: 4.53vw;
+          letter-spacing: 0.73vw;
+          margin-right: 1vw;
+        }
+      }
+
+      > svg {
+        width: 1.47vw;
+        height: 1.47vw;
+        @include med.media(sp) {
+          width: 3.2vw;
+          height: 3.2vw;
+        }
+
+        line, path {
+          transition: stroke 0.3s, fill 0.3s;
+        }
+      }
+    }
+  }
+}

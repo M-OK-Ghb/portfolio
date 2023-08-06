@@ -1,0 +1,159 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/_head.ejs', { data: dataSet } ) %>
+  <body>
+    <div>
+      <%- include('../../include/_header.ejs', { data: dataSet } ) %>
+      <main class="p-recruitMain c-subPage__main">
+        <div class="c-breadCrumbs">
+          <ul class="c-breadCrumbs__list">
+            <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+            <li><a href="<%= dataSet.srcpath %>recruit">採用情報</a></li>
+            <li><span>教育研修</span></li>
+          </ul>
+        </div>
+        <div class="p-recruitMain__content">
+          <div class="p-recruitMain__firstVisual c-subPage__firstVisual">
+            <img src="<%= dataSet.srcpath %>images/recruit_training_mv.jpg" alt="recruit training image">
+            <div class="c-subPage__textWrap">
+              <div class="c-subPage__textInner">
+                <div class="c-subPage__headingWrap">
+                  <div class="c-subPage__headingInner">
+                    <h2 class="c-subPage__heading js-subpage-titleAnimation">RECRUIT</h2>
+                    <p class="c-subPage__subText js-subpage-titleAnimation">-教育研修</p>
+                  </div>
+                </div>
+                <p class="c-subPage__detailText recruitTraining js-loadFadeIn">新入社員研修や研修スケジュール、その他の各種研修制度について<br>ご紹介します。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-recruit__trainingWrap js-loadFloatFadeIn">
+          <div class="p-recruit__trainingWrapInner">
+            <div class="p-recruit__trainingBg--sp"></div>
+            <div class="p-recruit__trainingHeadingWrap">
+              <h3 class="c-subPage__genre--heading">Training</h3>
+              <p class="c-subPage__genre--headingSub recruitTraining">新人社員研修</p>  
+            </div>
+            <div class="p-recruit__trainingContent">
+              <div class="p-recruit__trainingInner--spAdjust">
+                <p class="p-recruit__trainingTopText">入社後約2ヶ月半の新人研修においては、マナー研修、ヒューマンスキル、 ITスキルなどの研修を総合的に行っていきます。配属後も、OJTや部門それぞれで企画される研修などがあり、徐々に専門的な内容を行っていきます。</p>
+                <div class="p-recruit__trainingTarget">
+                  <div class="p-recruit__trainingTargetText">
+                    <div>
+                      <h4 class="c-headingBorderDouble recruitTraining"><span class="title">研修の内容</span><span class="detail">※総合職（営業・SE・間接職 共通）</span><span class="c-headingBorderBase"></span></h4>
+                      <ul class="p-recruit__targetList">
+                        <li>●社会人としてのビジネスマナーの習得</li>
+                        <li>●IT技術・業務スキルの基礎知識習得</li>
+                        <li>●業務に必要なビジネススキルの習得</li>
+                      </ul>
+                      <ul class="p-recruit__targetList--detail">
+                        <li>約2ヶ月半の新人研修後は、以下の教育研修があります。</li>
+                        <li>・各配属先でのOJT</li>
+                        <li>・各部門の研修</li>
+                      </ul>
+                      <div class="p-recruit__trainingTargetImg sp">
+                        <img src="<%= dataSet.srcpath %>images/training_content_image.jpg" alt="研修の内容　イメージ">
+                      </div>
+                    </div>
+                    <div>
+                      <h4 class="c-headingBorderDouble recruitTraining"><span class="title">研修の目的</span><span class="detail">※総合職（営業・SE・間接職 共通）</span><span class="c-headingBorderBase"></span></h4>
+                      <ul class="p-recruit__targetList">
+                        <li>1.学生から社会人への意識の切替えをする。</li>
+                        <li>2.自主的に行動する姿勢を身に付ける。</li>
+                        <li>3.現場で即戦力となるための基礎づくり。</li>
+                      </ul>
+                      <div class="p-recruit__trainingTargetImg sp">
+                        <img src="<%= dataSet.srcpath %>images/training_target_image.jpg" alt="研修の目的 イメージ">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="p-recruit__trainingTargetImgWrap">
+                    <div class="p-recruit__trainingTargetImg">
+                      <img src="<%= dataSet.srcpath %>images/training_content_image.jpg" alt="研修の内容　イメージ">
+                    </div>
+                    <div class="p-recruit__trainingTargetImg">
+                      <img src="<%= dataSet.srcpath %>images/training_target_image.jpg" alt="研修の目的 イメージ">
+                    </div>
+                  </div>
+                </div>
+                <div class="p-recruit__trainingSchedule">
+                  <h4 class="c-headingBorderDouble recruitTraining"><span class="title">研修スケジュール</span><span class="c-headingBorderBase"></span></h4>
+                  <div class="p-recruit__trainingScheduleImg">
+                    <img class="pc" src="<%= dataSet.srcpath %>images/training_schedule_pc.png" alt="研修スケジュール　PC">
+                    <img class="sp" src="<%= dataSet.srcpath %>images/training_schedule_sp.png" alt="研修スケジュール　SP">
+                  </div>
+                </div>
+                <div class="p-recruit__afterTraining">
+                  <h4 class="c-headingBorderDouble recruitTraining"><span class="title">その後の研修</span><span class="c-headingBorderBase"></span></h4>
+                  <div class="p-recruit__afterList">
+                    <dl>
+                      <dt>研修</dt>
+                      <dd>配属後の研修は、各配属部署で行われるスキルアップ研修、各階層に求められる階層別研修、時流に合わせ、それぞれの目的に応じて目的別研修を行っており、外部企業主催の研修参加など幅広く行っています。</dd>
+                    </dl>
+                    <dl>
+                      <dt>資格取得奨励制度</dt>
+                      <dd>自己啓発支援として、社員の知識・技能の向上を目的とした資格取得奨励制度があります。各種資格(国家資格、公的資格、民間資格、社内資格)について、会社で認められた資格は、受験料と奨励金が支給されます。現在の資格取得総数は、1591件となっており、社員一人一人がこの制度を利用して自己のスキルアップに努めています。</dd>
+                    </dl>
+                  </div>
+                  <div class="p-recruit__trainingScheduleImg">
+                    <img class="pc" src="<%= dataSet.srcpath %>images/training_schedule_after_pc.png" alt="その後の研修 PC">
+                    <img class="sp" src="<%= dataSet.srcpath %>images/training_schedule_after_sp.png" alt="その後の研修 SP">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="c-subPage__brotherLinkArea p-recruit__brotherLink training">
+          <p>他の採用情報のメニューを見る</p>
+          <div class="c-subPage__brotherLinkWrap">
+            <div class="c-subPage__brotherLink">
+              <a href="<%= dataSet.srcpath %>recruit/schedule/">
+               <img src="<%= dataSet.srcpath %>images/recruit_schedule_banner.jpg" alt="募集要項・採用スケジュール">
+               <div class="c-subPage__brotherLinkText">
+                 <h3>募集要項・採用スケジュール</h3>
+                 <div class="c-subPage__brotherLinkBottom">
+                   <p>採用に関する募集要項、採用方針や採用スケジュールについてご案内します。</p>
+                   <div class="c-circleBtn">
+                     <span class="c-circleBtn__circle">
+                       <span class="c-circleBtn__arrow"></span>
+                     </span>
+                   </div>
+                 </div>
+               </div>
+              </a>
+            </div>
+            <div class="c-subPage__brotherLink">
+              <a href="<%= dataSet.srcpath %>recruit/message/">
+               <img src="<%= dataSet.srcpath %>images/recruit_message_banner.jpg" alt="教育研修">
+               <div class="c-subPage__brotherLinkText">
+                 <h3>採用担当からのメッセージ</h3>
+                 <div class="c-subPage__brotherLinkBottom">
+                   <p>新卒採用に携わる担当者から応募者に向けてメッセージをお伝えします。</p>
+                   <div class="c-circleBtn">
+                     <span class="c-circleBtn__circle">
+                       <span class="c-circleBtn__arrow"></span>
+                     </span>
+                   </div>
+                 </div>
+               </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <%- include('../../include/parts/_entryBtn.ejs') %>
+      </main>
+      <%- include('../../include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script>
+  </body>
+</html>

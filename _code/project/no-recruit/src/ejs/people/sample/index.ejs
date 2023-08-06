@@ -1,0 +1,234 @@
+<%
+  const data = {
+    isTop: false,
+    title: "PEOPLE | NOS 新卒採用サイト",
+    description: "",
+    path: "../..",
+    imgPath: "../../images",
+    commonImgPath: "../../images/common",
+    current: "people",
+    hierarchy: "third",
+    crumbsText: "SAMPLE",
+    crumbsUrl: "sample",
+    crumbsParentText: "PEOPLE -社員インタビュー"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../../include/common/_header.ejs', {data: data}); %>
+      <main class="p-peopleDetail__main" id="js-people-main">
+        <div class="p-peopleDetail__fv">
+          <%- include('../../include/common/_breadCrumbs.ejs', {data: data}); %>
+          <section class="p-peopleDetail__topSection">
+            <h1 class="c-heading --people p-sub__topHeading js-sub-titleTop">
+              <img src="<%= data.commonImgPath %>/heading_people.svg" alt="<%= data.current %>">
+            </h1>
+            <p class="c-headingSub"><span>社員インタビュー</span></p>
+            <div class="p-peopleDetail__mainImg">
+              <div class="p-peopleDetail__mainImgInner">
+                <img src="<%= data.imgPath %>/people/sample_fv_top.png" alt="sample">
+              </div>
+            </div>
+            <div class="p-peopleDetail__dataTop">
+              <div class="p-peopleDetail__labelArea">
+                <span class="label --sales" id="js-jobtype-detail">営業</span>
+                <span class="label">システムエンジニアリング・サービス</span>
+              </div>
+              <div class="p-peopleDetail__catchCopy">
+                <span>テキストが入ります。テキストが入ります。テキス</span>
+              </div>
+              <p class="p-peopleDetail__fvBottomText">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            </div>
+          </section>
+        </div>
+        <div class="p-peopleDetail__contents">
+          <div class="p-peopleDetail__contentsTop">
+            <div class="p-peopleDetail__firstBlock js-scrollFadeIn --block">
+              <div class="p-peopleDetail__capImg --first">
+                <img src="<%= data.imgPath %>/people/sample_item_1.png" alt="dummy">
+              </div>
+              <div class="p-peopleDetail__textArea">
+                <h3 class="p-peopleDetail__head--h3">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</h3>
+                <div class="p-peopleDetail__textBlock">
+                  <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                  <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキスト</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-peopleDetail__secondBlock js-scrollFadeIn --block">
+              <div class="p-peopleDetail__capImg --second">
+                <img src="<%= data.imgPath %>/people/sample_item_2.png" alt="dummy 2">
+              </div>
+              <div class="p-peopleDetail__textArea --second">
+                <h3 class="p-peopleDetail__head--h3">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</h3>
+                <div class="p-peopleDetail__textBlock">
+                  <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                  <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキスト</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-peopleDetail__thirdBlock js-scrollFadeIn --block">
+              <div class="p-peopleDetail__capImg --third">
+                <img src="<%= data.imgPath %>/people/sample_item_3.png" alt="dummy 3">
+              </div>
+              <div class="p-peopleDetail__textArea">
+                <h3 class="p-peopleDetail__head--h3">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</h3>
+                <div class="p-peopleDetail__textBlock">
+                  <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキスト</p>
+                  <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-peopleDetail__contentsMiddle js-scrollFadeIn --block">
+            <div class="p-peopleDetail__middleInner">
+              <p class="p-peopleDetail__middleHead">心に残るお客様の一言</p>
+              <div class="p-peopleDetail__middleText">
+                <h3>「テキストが入ります。<br class="is-sp">テキストが入ります。」</h3>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              </div>
+            </div>
+          </div>
+          <div class="p-peopleDetail__offtime js-scrollFadeIn --block">
+            <div class="p-peopleDetail__offtimeImg">
+              <img src="<%= data.imgPath %>/people/sample_offtimeshot.png" alt="offtimeショット">
+            </div>
+            <div class="p-peopleDetail__offtimeText">
+              <div class="p-peopleDetail__offtimeLabel--sp">
+                <span>
+                  <img src="<%= data.imgPath %>/people/icon_offtime_coffee.svg" alt="offtime アイコン">
+                </span>
+              </div>
+              <div class="p-peopleDetail__offtimeTextInner">
+                <div class="p-peopleDetail__offtimeLabel--pc">
+                  <span>
+                    <img src="<%= data.imgPath %>/people/icon_offtime_coffee.svg" alt="offtime アイコン">
+                  </span>
+                </div>
+                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-peopleDetail__same js-scrollFadeIn --block">
+          <div class="p-peopleDetail__sameInner">
+            <h3 class="p-peopleDetail__sameHeading">
+              <span class="icon"><img src="<%= data.imgPath %>/people/icon_same_job.svg" alt="メモ アイコン"></span>
+              <span class="text">同職種の社員インタビュー</span>
+            </h3>
+            <p class="p-peopleDetail__sameText">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+            <div class="p-peopleDetail__cardListWrap">
+              <ul class="p-people__cardList --detailPage">
+                <li class="c-peopleCard js-scrollFadeIn --block">
+                  <a href="<%= data.path %>/people/01/">
+                    <div class="c-peopleCard__img">
+                      <img src="<%= data.imgPath %>/top/swiper_person_1.jpg" alt="person 1" loading="lazy">
+                    </div>
+                    <div class="c-peopleCard__linkBtn">
+                      <span class="text">詳しくみる</span>
+                      <span class="icon">
+                        <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                      </span>
+                    </div>
+                    <div class="c-peopleCard__text">
+                      <p class="c-peopleCard__label"><span class="sales">営業</span></p>
+                      <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                      <p class="c-peopleCard__message">
+                        <span>テキストが入ります。テキス</span>
+                        <span>トが入ります。テキス</span>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li class="c-peopleCard js-scrollFadeIn --block">
+                  <a href="<%= data.path %>/people/sample/">
+                    <div class="c-peopleCard__img">
+                      <img src="<%= data.imgPath %>/top/swiper_person_2.jpg" alt="person 2" loading="lazy">
+                    </div>
+                    <div class="c-peopleCard__linkBtn">
+                      <span class="text">詳しくみる</span>
+                      <span class="icon">
+                        <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                      </span>
+                    </div>
+                    <div class="c-peopleCard__text">
+                      <p class="c-peopleCard__label"><span class="sales">営業</span></p>
+                      <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                      <p class="c-peopleCard__message">
+                        <span>テキストが入ります。テキス</span>
+                        <span>トが入ります。テキス</span>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+                <li class="c-peopleCard js-scrollFadeIn --block">
+                  <a href="#">
+                    <div class="c-peopleCard__img">
+                      <img src="<%= data.imgPath %>/top/swiper_person_3.jpg" alt="person 3" loading="lazy">
+                    </div>
+                    <div class="c-peopleCard__linkBtn">
+                      <span class="text">詳しくみる</span>
+                      <span class="icon">
+                        <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                      </span>
+                    </div>
+                    <div class="c-peopleCard__text">
+                      <p class="c-peopleCard__label"><span class="sales">営業</span></p>
+                      <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                      <p class="c-peopleCard__message">
+                        <span>テキストが入ります。テキス</span>
+                        <span>トが入ります。テキス</span>
+                      </p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <ul class="c-interviewArea__movie --detailPage">
+                <li>
+                  <div class="c-interviewArea__img js-modalOpenBtn">
+                    <img src="<%= data.commonImgPath %>/movie_sales_thumb.png" alt="営業インタビュー　サムネイル" loading="lazy">
+                    <button>
+                      <img src="<%= data.commonImgPath %>/icon_movie_start.svg" alt="再生ボタン" loading="lazy">
+                    </button>
+                  </div>
+                  <p class="c-interviewArea__label">営業インタビュー</p>
+                </li>
+                <!-- <li>
+                  <div class="c-interviewArea__img js-modalOpenBtn">
+                    <img src="<%= data.commonImgPath %>/movie_se_thumb.png" alt="SEインタビュー　サムネイル" loading="lazy">
+                    <button>
+                      <img src="<%= data.commonImgPath %>/icon_movie_start.svg" alt="再生ボタン" loading="lazy">
+                    </button>
+                  </div>
+                  <p class="c-interviewArea__label">SEインタビュー</p>
+                </li> -->
+              </ul>
+              <div class="p-peopleDetail__bottomLink">
+                <div class="c-button --whiteBack">
+                  <a href="<%= data.path %>/people/">
+                    <span>全ての社員インタビュー記事を見る</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18.392" height="18.81" viewBox="0 0 18.392 18.81">
+                      <g transform="translate(1 1.398)">
+                        <line x2="8" transform="translate(0 8)" fill="none" stroke="#150578" stroke-linecap="round" stroke-width="2"></line>
+                        <path d="M0,6.139,8.318,0S14.285,4.6,16,6.139" transform="translate(16.139) rotate(90)" fill="none" stroke="#150578" stroke-linecap="round" stroke-width="2"></path>
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <%- include('../../include/common/_entryBottom.ejs', {data: data}); %>
+        </div>
+      </main>
+      <%- include('../../include/common/_scrollTop.ejs', {data: data}); %>
+      <%- include('../../include/common/_modal.ejs', {data: data}); %>
+      <%- include('../../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

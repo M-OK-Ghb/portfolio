@@ -1,0 +1,19 @@
+<div class="c-breadCrumbsArea">
+  <ul class="c-breadCrumbs">
+    <li>
+      <a href="/">トップ</a>
+    </li>
+    <% if(data.hierarchy === 'second')  { %>
+    <li>
+      <a href="<%= data.path %>/<%= data.current %>/"><%= data.crumbsText %></a>
+    </li>
+    <% } else if(data.hierarchy === 'third') { %>
+    <li>
+      <a href="<%= data.path %>/<%= data.current %>/"><%= data.crumbsParentText %></a>
+    </li>
+    <li>
+      <a href="<%= data.path %>/<%= data.current %>/<%= data.crumbsUrl %>/"><%= data.crumbsText %></a>
+    </li>
+    <% } %>
+  </ul>
+</div>

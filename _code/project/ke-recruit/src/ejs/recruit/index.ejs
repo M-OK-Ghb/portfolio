@@ -1,0 +1,105 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/_head.ejs', { data: dataSet } ) %>
+  <body>
+    <div>
+      <%- include('../include/_header.ejs', { data: dataSet } ) %>
+      <main class="p-recruitMain c-subPage__main">
+        <div class="c-breadCrumbs">
+          <ul class="c-breadCrumbs__list">
+            <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+            <li><span>採用情報</span></li>
+          </ul>
+        </div>
+        <div class="p-recruitMain__content">
+          <div class="c-subPage__firstVisual">
+            <img src="<%= dataSet.srcpath %>images/recruit_mv.jpg" alt="recruit image">
+            <div class="c-subPage__textWrap">
+              <div class="c-subPage__textInner">
+                <div class="c-subPage__headingWrap">
+                  <div class="c-subPage__headingInner">
+                    <h2 class="c-subPage__heading js-subpage-titleAnimation">RECRUIT</h2>
+                    <p class="c-subPage__subText js-subpage-titleAnimation">採用情報</p>
+                  </div>
+                </div>
+                <p class="c-subPage__detailText recruitTop js-loadFadeIn">兼松エレクトロニクスの新卒採用に関する情報をお知らせします。</p>
+              </div>
+            </div>
+          </div>
+          <div class="c-subPage__genreWrap recruitTop js-loadFloatFadeIn">
+            <div class="c-subPage__genreCard">
+              <a href="<%= dataSet.srcpath %>recruit/schedule/">
+                <img src="<%= dataSet.srcpath %>images/recruit_list_schedule.jpg" alt="募集要項・採用スケジュール イメージ">
+                <div class="c-subPage__linkArea c-subPage__linkArea--recruit">
+                  <div class="c-subPage__linkAreaInner">
+                    <h3>募集要項・採用スケジュール</h3>
+                    <p>採用に関する募集要項、採用方針、採用スケジュールについてご案内します。</p>
+                    <div class="c-circleBtn p-recruit__circleBtn--common">
+                      <div class="c-subPage__circleBtnInner">
+                        <span class="c-circleBtn__circle">
+                          <span class="c-circleBtn__arrow"></span>
+                        </span>
+                        <span class="c-circleBtn__text">詳しく見る</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="c-subPage__genreCard">
+              <a href="<%= dataSet.srcpath %>recruit/training/">
+                <img src="<%= dataSet.srcpath %>images/recruit_list_training.jpg" alt="教育研修 イメージ">
+                <div class="c-subPage__linkArea c-subPage__linkArea--recruit">
+                  <div class="c-subPage__linkAreaInner">
+                    <h3>教育研修</h3>
+                    <p>新入社員研修や研修スケジュール、その他の各種研修制度についてご紹介します。</p>
+                    <div class="c-circleBtn p-recruit__circleBtn--common">
+                      <div class="c-subPage__circleBtnInner">
+                        <span class="c-circleBtn__circle">
+                          <span class="c-circleBtn__arrow"></span>
+                        </span>
+                        <span class="c-circleBtn__text">詳しく見る</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div class="c-subPage__genreCard recruitLastCard">
+              <a href="<%= dataSet.srcpath %>recruit/message/">
+                <img src="<%= dataSet.srcpath %>images/recruit_list_message.jpg" alt="採用担当からのメッセージ イメージ">
+                <div class="c-subPage__linkArea c-subPage__linkArea--recruit">
+                  <div class="c-subPage__linkAreaInner">
+                    <h3>採用担当からのメッセージ</h3>
+                    <p>新卒採用に携わる担当者から応募者に向けてメッセージをお伝えします。</p>
+                    <div class="c-circleBtn p-recruit__circleBtn--common">
+                      <div class="c-subPage__circleBtnInner">
+                        <span class="c-circleBtn__circle">
+                          <span class="c-circleBtn__arrow"></span>
+                        </span>
+                        <span class="c-circleBtn__text">詳しく見る</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="p-recruit__topBottom">
+          <%- include('../include/parts/_entryBtn.ejs') %>
+        </div>
+      </main>
+      <%- include('../include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script> 
+  </body>
+</html>

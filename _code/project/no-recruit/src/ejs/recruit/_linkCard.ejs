@@ -1,0 +1,87 @@
+<div class="c-linkCard">
+  <h4 class="c-linkCard__heading"><span class="c-heading--sectionTitle">他の採用情報のメニューを見る</span></h4>
+  <ul class="c-linkCardList">
+    <% if(data.crumbsUrl === 'schedule') { %>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/recruit/training/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/recruit/training_thumb.webp" alt="教育研修 イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel">
+            <span>教育研修</span>
+          </div>
+          <p class="p-sub__pageText">新入社員研修や研修スケジュール、その他の各種研修制度についてご紹介します。</p>
+        </div>
+      </a>
+    </li>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/recruit/message/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/recruit/message_thumb.webp" alt="採用担当からのメッセージ イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel">
+            <span>採用担当からのメッセージ</span>
+          </div>
+          <p class="p-sub__pageText">新卒採用に携わる担当者から応募者に向けてメッセージをお伝えします。</p>
+        </div>
+      </a>
+    </li>
+    <% } else if(data.crumbsUrl === 'message') { %>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/recruit/schedule/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/recruit/schedule_thumb.webp" alt="募集要項・採用スケジュール イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel">
+            <span>募集要項・採用スケジュール</span>
+          </div>
+          <p class="p-sub__pageText">採用に関する募集要項、採用方針や採用スケジュールについてご案内します。</p>
+        </div>
+      </a>
+    </li>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/recruit/training/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/recruit/training_thumb.webp" alt="教育研修 イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel">
+            <span>教育研修</span>
+          </div>
+          <p class="p-sub__pageText">新入社員研修や研修スケジュール、その他の各種研修制度についてご紹介します。</p>
+        </div>
+      </a>
+    </li>
+    <% } else if(data.crumbsUrl === 'training') { %>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/recruit/schedule/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/recruit/schedule_thumb.webp" alt="募集要項・採用スケジュール イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel">
+            <span>募集要項・採用スケジュール</span>
+          </div>
+          <p class="p-sub__pageText">採用に関する募集要項、採用方針や採用スケジュールについてご案内します。</p>
+        </div>
+      </a>
+    </li>
+    <li class="c-linkCardItem">
+      <a href="<%= data.path %>/recruit/message/">
+        <div class="p-sub__pageImg">
+          <img src="<%= data.imgPath %>/recruit/message_thumb.webp" alt="採用担当からのメッセージ イメージ">
+        </div>
+        <div class="p-sub__pageTextArea">
+          <div class="p-sub__pageLabel">
+            <span>採用担当からのメッセージ</span>
+          </div>
+          <p class="p-sub__pageText">新卒採用に携わる担当者から応募者に向けてメッセージをお伝えします。</p>
+        </div>
+      </a>
+    </li>
+    <% } %>
+  </ul>
+</div>

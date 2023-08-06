@@ -1,0 +1,471 @@
+// -------------------------------------------------------------------
+//  Top - toppeople.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.p-mainPeople {
+  margin-top: 140px;
+  margin-bottom: 410px;
+  padding-left: 7.5%;
+
+  @include med.media(sp) {
+    padding-left: 0;
+    margin-top: 15.33vw;
+    margin-bottom: 56vw;
+  }
+
+  &__content {
+    background-color: #fafafa;
+    padding-top: 60px;
+    position: relative;
+    @include med.media(sp) {
+      padding-top: 0;
+    }
+  }
+
+  &__topWrap {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
+    @include med.media(sp) {
+      display: none;
+    }
+  }
+
+  &__titleSup {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    padding-right: 70px;
+  }
+
+  &__titleWrap--sp {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+      text-align: right;
+      padding-right: 4vw;
+    }
+  }
+
+  &__titleSup--sp {
+    font-size: 4.27vw;
+    font-weight: bold;
+    padding-right: 10vw;
+  }
+
+  &__link {
+    margin-right: 5.5%;
+  }
+
+  &__carouselParent {
+    margin-top: 60px;
+    position: relative;
+    @include med.media(sp) {
+      margin-top: 28vw;
+    }
+
+    > div {
+
+      &.p-mainPeople__carouselBtn {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #FFF;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+
+        &:after {
+          font-size: 24px;
+          color: #004FA2;
+          @include med.media(sp) {
+            font-size: 4vw;
+          }
+        }
+
+        @include med.media(sp) {
+          width: 8vw;
+          height: 8vw;
+          transform: translateY(-100px);
+        }
+      }
+
+
+      &.p-mainPeople__carouselPrev {
+        left: 3%;
+      }
+
+      &.p-mainPeople__carouselNext {
+        right: 3%;
+      }
+    }
+  }
+
+  &__carouselWrap {
+    width: 80%;
+    @include med.media(sp) {
+      width: 75%;
+    }
+  }
+
+  &__spLink {
+    display: none;
+    @include med.media(sp) {
+      margin-top: -20px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__data {
+    position: relative;
+    align-items: flex-end;
+    > li {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+
+      img {
+        width: 100%;
+        transition: transform 0.3s ease-in;
+        &:hover {
+          transform: scale(1.05);
+        }
+
+        @include med.media(sp) {
+          height: 70vw;
+          object-fit: contain;
+          margin-top: 5.33vw;
+        }
+      }
+
+      a {
+        display: inline-block;
+        width: 100%;
+        transition: opacity 0.3s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__leadText {
+    position: absolute;
+    top: 0;
+    left: 0;
+    writing-mode: vertical-rl;
+    line-height: 1.5;
+    font-size:16px;
+    font-weight: bold;
+    @include med.media(sp) {
+      position: static;
+      writing-mode: inherit;
+      font-size: 3vw;
+      padding-right: 1vw;
+      height: 8vw;
+
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &__dataBottom {
+    line-height: 1.5;
+    font-size:16px;
+    font-weight: bold;
+
+    @include med.media(sp) {
+      font-size: 3.2vw;
+      height: 8vw;
+
+      br {
+        display: none;
+      }
+
+      > span {
+        @include med.media(sp) {
+          display: inline-block;
+          margin-left: 8px;
+        }
+      }
+    }
+  }
+
+  &__label {
+    margin-top: 10px;
+    width: 100px;
+    display: inline-block;
+    @include med.media(sp) {
+      width: 17.33vw;
+      height: 5.33vw;
+      margin-top: 2.65vw;
+    }
+
+
+    > span {
+      display: inline-block;
+      font-size: 16px;
+      line-height: 32px;
+      height: 32px;
+      text-align: center;
+      color: #FFF;
+      width: 100%;
+      height: 100%;
+      
+      @include med.media(sp) {
+        line-height: 5.33vw;
+        font-size: 3.3vw;
+      }
+    }
+
+    &.sales {
+      > span {
+        background-color: #f78733;
+      }
+    }
+
+    &.se {
+      > span {
+        background-color: #4abdac;
+      }
+    }
+  }
+
+  &__talkInfo {
+    width: 90%;
+    margin: 120px auto 0;
+    padding-bottom: 240px;
+    padding-left: 3%;
+    @include med.media(sp) {
+      margin-top: 20vw;
+      padding-left: 0;
+      padding-bottom: 120vw;
+    }
+
+    &.peoplePage {
+      width: 100%;
+      padding-bottom: 50px;
+      margin: 0;
+      padding-left: 8%;
+      @include med.media(sp) {
+        margin-top: 0;
+        padding-left: 0;
+        padding-bottom: 8vw;
+      }
+    }
+  }
+
+  &__textWrap {
+    display: flex;
+    align-items: center;
+    > p {
+      font-size: 18px;
+      line-height: 1.5;
+      padding-left: 3%;
+      margin-left: 3%;
+      border-left: 1px solid #d2d2d2;
+      @include med.media(sp) {
+        font-size: 3.47vw;
+        margin-top: 6.67vw;
+        border: none;
+
+        br {
+          &.pc {
+            display: none;
+          }
+        }
+      }
+    }
+
+    @include med.media(sp) {
+      display: block;
+    }
+
+    &.peoplePage {
+      > p {
+        padding-left: 4.5%;
+        margin-left: 4.5%;
+        @include med.media(sp) {
+          padding-left: 0;
+          margin-left: 0;
+          width: 95%;
+          margin: 6.67vw auto 0;
+        }
+      }
+    }
+  }
+
+  &__talkHeading {
+    font-size: 28px;
+    font-weight: bold;
+    @include med.media(sp) {
+      text-align: center;
+      padding-right: 0;
+      margin-right: 0;
+      border: none;
+      font-size: 4.8vw;
+    }
+  }
+
+  &__videoWrap {
+    display: flex;
+    position: absolute;
+    width: 80%;
+    left: 0;
+    right: 0;
+    bottom: -240px;
+    margin: auto;
+    @include med.media(sp) {
+      width: 90%;
+      display: block;
+      bottom: -25vw;
+    }
+
+    &.peoplePage {
+      position: static;
+      width: 100%;
+    }
+  }
+
+  &__video {
+    width: 48%;
+    max-width: 560px;
+    margin-right: 50px;
+
+    @include med.media(sp) {
+      width:100%;
+      max-width: none;
+      margin-right: 0;
+    }
+
+    > p {
+      text-align: center;
+      font-size: 20px;
+      margin-top: 20px;
+      @include med.media(sp) {
+        font-size: 3.8vw;
+      }
+    }
+
+    &.p-mainPeople__video--second {
+      margin-top: 60px;
+      @include med.media(sp) {
+        margin-top: 5.3vw;
+      }
+    }
+  }
+
+  &__videoThumb {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    outline: none;
+
+    > img {
+      width: 100%;
+      max-height: 315px;
+      object-fit: cover;
+      transition: transform 0.5s, opacity 0.3s;
+      @include med.media(sp) {
+        aspect-ratio: 68 / 42;
+        max-height: none;
+      }
+    }
+
+    &:hover {
+      opacity: 0.8;
+      > img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__videoBtn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform : translate(-50%, -50%);
+    z-index: 3;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    width: 100%;
+
+    > span {
+      display: inline-block;
+
+      img {
+        width: 60px;
+        height: 60px;
+        @include med.media(sp) {
+          width: 10vw;
+          height: 10vw;
+        }
+      }
+
+      &.p-mainPeople__videoBtnText {
+        color: #FFF;
+        font-size: 20px;
+        font-weight: bold;
+        font-family: var.$FONT_BARLOW;
+
+        @include med.media(sp) {
+          font-size: 3.47vw;
+        }
+
+        &:before {
+          content: "";
+          display: inline-block;
+          width: 30px;
+          height: 1px;
+          background-color: #fff;
+          vertical-align: middle;
+          margin-left: -10px;
+          margin-right: 10px;
+          @include med.media(sp) {
+            width: 4.67vw;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__overLay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    background: #323232;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+    display: block;
+
+    &.is-hover {
+      opacity: 0.2;
+    }
+  }
+
+  .swiper-container {
+    @include med.media(sp) {
+      transform : translateY(-20%);
+    }
+  }
+}

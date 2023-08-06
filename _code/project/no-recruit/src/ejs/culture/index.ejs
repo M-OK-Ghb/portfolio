@@ -1,0 +1,88 @@
+<%
+  const data = {
+    isTop: false,
+    title: "Culture | NOS 新卒採用サイト",
+    description: "",
+    path: "..",
+    imgPath: "../images",
+    commonImgPath: "../images/common",
+    current: "culture",
+    hierarchy: "second",
+    crumbsText: "CULTURE-働く環境・各種制度",
+    crumbsUrl: "",
+    crumbsParentText: "",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../include/common/_header.ejs', {data: data}); %>
+      <main class="p-sub__main">
+        <%- include('../include/common/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-sub__fv">
+          <div class="p-sub__fvImg js-sub-fvImg">
+            <img class="is-pc" src="<%= data.imgPath %>/kv/culture_top.webp" alt="キービジュアル <%= data.crumbsText %>">
+            <img class="is-sp" src="<%= data.imgPath %>/kv/culture_top_sp.webp" alt="キービジュアル <%= data.crumbsText %>">
+          </div>
+          <section class="p-sub__topSection">
+            <h1 class="c-heading --culture p-sub__topHeading js-sub-titleTop">
+              <img src="<%= data.commonImgPath %>/heading_culture.svg" alt="<%= data.current %>">
+            </h1>
+            <p class="c-headingSub"><span>働く環境・各種制度</span></p>
+          </section>
+        </div>
+        <div class="p-sub__contents js-scrollFadeIn --block">
+          <p class="p-sub__description">常にチャレンジし続けられるためには、我々自身が心身ともにベストな環境であることが必要です。<br>NOSでは、社員が健康かつ快適に働くために、様々な制度・環境整備に取り組んでいます。</p>
+          <ul class="p-sub__pageList --multiColumn">
+            <li>
+              <a href="<%= data.path %>/culture/environment/">
+                <div class="p-sub__pageImg">
+                  <img src="<%= data.imgPath %>/culture/environment_thumb.webp" alt="NOSの働く環境 イメージ">
+                </div>
+                <div class="p-sub__pageTextArea">
+                  <div class="p-sub__pageLabel">
+                    <span>NOSの働く環境</span>
+                  </div>
+                  <p class="p-sub__pageText">NOSが考える働きやすい環境とは？オフィス風景と合わせてご紹介します。</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="<%= data.path %>/culture/welfare/">
+                <div class="p-sub__pageImg">
+                  <img src="<%= data.imgPath %>/culture/welfare_thumb.webp" alt="福利厚生・各種制度 イメージ">
+                </div>
+                <div class="p-sub__pageTextArea">
+                  <div class="p-sub__pageLabel">
+                    <span>福利厚生・各種制度</span>
+                  </div>
+                  <p class="p-sub__pageText">NOSでは柔軟性の高い働き方を実現するための各種制度を策定しています。その制度について詳しくご案内します。</p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="<%= data.path %>/culture/number/">
+                <div class="p-sub__pageImg">
+                  <img src="<%= data.imgPath %>/culture/number_thumb.webp" alt="数字で見るNOS イメージ">
+                </div>
+                <div class="p-sub__pageTextArea">
+                  <div class="p-sub__pageLabel">
+                    <span>数字で見るNOS</span>
+                  </div>
+                  <p class="p-sub__pageText">NOSはどのような会社か？会社について、働く人について、特徴的な数字を集めてみました。</p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <%- include('../include/common/_entryBottom.ejs', {data: data}); %>
+      </main>
+      <%- include('../include/common/_scrollTop.ejs', {data: data}); %>
+      <%- include('../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

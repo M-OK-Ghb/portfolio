@@ -1,0 +1,150 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/_head.ejs', { data: dataSet } ) %>
+  <body>
+    <div>
+      <%- include('../../include/_header.ejs', { data: dataSet } ) %>
+      <main class="p-recruitMain c-subPage__main">
+        <div class="c-breadCrumbs">
+          <ul class="c-breadCrumbs__list">
+            <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+            <li><a href="<%= dataSet.srcpath %>recruit/">採用情報</a></li>
+            <li><span>採用担当からのメッセージ</span></li>
+          </ul>
+        </div>
+        <div class="p-recruitMain__content">
+          <div class="p-recruitMain__firstVisual c-subPage__firstVisual">
+            <img src="<%= dataSet.srcpath %>images/recruit_message_mv.jpg" alt="recruit message image">
+            <div class="c-subPage__textWrap">
+              <div class="c-subPage__textInner">
+                <div class="c-subPage__headingWrap">
+                  <div class="c-subPage__headingInner">
+                    <h2 class="c-subPage__heading js-subpage-titleAnimation">RECRUIT</h2>
+                    <p class="c-subPage__subText js-subpage-titleAnimation">-採用担当からのメッセージ</p>
+                  </div>
+                </div>
+                <p class="c-subPage__detailText js-loadFadeIn">新卒採用に携わる担当者から応募者に向けてメッセージをお伝えします。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-recruit__messageWrap js-loadFloatFadeIn">
+          <div class="p-recruit__messageWrapInner">
+            <div class="p-recruit__messageBg--sp"></div>
+            <div class="p-recruit__messageHeadingWrap">
+              <h3 class="c-subPage__genre--heading">Message</h3>
+              <p class="c-subPage__genre--headingSub recruitMessage">採用担当より</p>
+            </div>
+            <div class="p-recruit__messageTextTop">
+              <p>兼松エレクトロニクス株式会社の新卒採用サイトをご覧いただき、ありがとうございます。</p>
+              <p>KELは「顧客第一主義」の経営理念の基、お客様の成長に繋がるITソリューションの提供を行っています。<br>1968年の設立となりますが、「JPX 日経中小型株指数」構成銘柄への選定、安定した財務体質（10年以上無借金経営）に加え、近年時価総額も1,111億円（2022年2月時点）を超える1,200名（KELグループ全体）規模の「隠れた成長企業」です！<br>このサイトには、KELを理解するための情報がたくさん掲載されていますので、KELへの理解を深めてもらえたらと思います。</p>
+              <p>ここでは、活躍している社員について、また、面接のアドバイスについて学生の皆さんにお伝えしたいと思います。</p>
+            </div>
+            <ul class="p-recruit__messageList">
+              <li>
+                <div class="p-recruit__messageListTop">
+                  <p class="p-recruit__messageNumber">
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="86" height="93" viewBox="0 0 86 93">
+                        <g transform="translate(-603 -1649.225)">
+                          <text transform="translate(643 1663.225)" fill="#003f93" font-size="16" font-family="YuGo-Bold, YuGothic" font-weight="700" letter-spacing="-0.02em"><tspan x="-39.36" y="0">アドバイス</tspan></text>
+                          <text transform="translate(604 1725.225)" fill="#003f93" font-size="72" font-family="Helvetica" letter-spacing="0.06em"><tspan x="0" y="0">01</tspan></text>
+                        </g>
+                      </svg>                    
+                    </span>
+                  </p>
+                  <p class="p-recruit__messageTitle">活躍している社員について＝求める人材</p>
+                </div>
+                <p>活躍している社員に共通していることは、「コミュニケーション力が高いこと」です。 これは経営理念の顧客第一主義(お客様のために一生懸命)を代言していると思います。 お客様が求めていることを理解すること、求められている以上のことを提供出来ること、また、より良いモノを提供するために多くの人から協力を得られること、そのためにはコミュニケーション力が必要となるからです。</p>
+              </li>
+              <li>
+                <div class="p-recruit__messageListTop">
+                  <p class="p-recruit__messageNumber">
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="82" height="93" viewBox="0 0 82 93">
+                        <g transform="translate(-603 -2072.225)">
+                          <text transform="translate(643 2086.225)" fill="#003f93" font-size="16" font-family="YuGo-Bold, YuGothic" font-weight="700" letter-spacing="-0.02em"><tspan x="-39.36" y="0">アドバイス</tspan></text>
+                          <text transform="translate(604 2148.225)" fill="#003f93" font-size="72" font-family="Helvetica"><tspan x="0" y="0">02</tspan></text>
+                        </g>
+                      </svg>
+                    </span>
+                  </p>
+                  <p class="p-recruit__messageTitle">面接のアドバイスについて</p>
+                </div>
+                <p>コミュニケーション力が必要なKELにおいて、面接の場は学生の皆さんとの相互理解の場にすることが重要だと考えています。自分達と一緒に働く仲間を見つけていくため、色々な質問をしますので、カッコいいお手本のような台詞ではなく、自分の言葉で想いを伝えて欲しいと思います。</p>
+              </li>
+              <li>
+                <div class="p-recruit__messageListTop">
+                  <p class="p-recruit__messageNumber">
+                    <span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="82" height="93" viewBox="0 0 82 93">
+                        <g transform="translate(-603 -2458.225)">
+                          <text transform="translate(643 2472.225)" fill="#003f93" font-size="16" font-family="YuGo-Bold, YuGothic" font-weight="700" letter-spacing="-0.02em"><tspan x="-39.36" y="0">アドバイス</tspan></text>
+                          <text transform="translate(604 2534.225)" fill="#003f93" font-size="72" font-family="Helvetica"><tspan x="0" y="0">03</tspan></text>
+                        </g>
+                      </svg>
+                    </span>
+                  </p>
+                  <p class="p-recruit__messageTitle">最後にKELで働くということ=「可能性、君次第！」</p>
+                </div>
+                <p>働いている中で、KELの魅力だと感じるのは、お客様のため、お客様が求めることに応えるためであれば、自分の仕事に「カタやワクがなく」個人に裁量が任されるところだと思います。<br>厳しいけれど、自分の可能性を誰か(お客様)のために生かせる場所、若いうちから成長出来るチャンスがあります。KELには、会社も仕事もこんなことをやってみたい！と思う自分次第で、無限の可能性があります。</p>
+                <div class="p-recruit__messageCatch">
+                  <img src="<%= dataSet.srcpath %>images/message_catch.svg" alt="「可能性、キミシダイ」">
+                  <img src="<%= dataSet.srcpath %>images/message_lead.svg" alt="皆さんにお会いできることを楽しみにしています。">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="c-subPage__brotherLinkArea p-recruit__brotherLink">
+          <p>他の採用情報のメニューを見る</p>
+          <div class="c-subPage__brotherLinkWrap">
+            <div class="c-subPage__brotherLink">
+              <a href="<%= dataSet.srcpath %>recruit/schedule/">
+               <img src="<%= dataSet.srcpath %>images/recruit_schedule_banner.jpg" alt="募集要項・採用スケジュール">
+               <div class="c-subPage__brotherLinkText">
+                 <h3>募集要項・採用スケジュール</h3>
+                 <div class="c-subPage__brotherLinkBottom">
+                   <p>採用に関する募集要項、採用方針や採用スケジュールについてご案内します。</p>
+                   <div class="c-circleBtn">
+                     <span class="c-circleBtn__circle">
+                       <span class="c-circleBtn__arrow"></span>
+                     </span>
+                   </div>
+                 </div>
+               </div>
+              </a>
+            </div>
+            <div class="c-subPage__brotherLink">
+              <a href="<%= dataSet.srcpath %>recruit/training/">
+               <img src="<%= dataSet.srcpath %>images/recruit_training_banner.jpg" alt="教育研修">
+               <div class="c-subPage__brotherLinkText">
+                 <h3>教育研修</h3>
+                 <div class="c-subPage__brotherLinkBottom">
+                   <p>新入社員研修や研修スケジュール、その他の各種研修制度についてご紹介します。</p>
+                   <div class="c-circleBtn">
+                     <span class="c-circleBtn__circle">
+                       <span class="c-circleBtn__arrow"></span>
+                     </span>
+                   </div>
+                 </div>
+               </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <%- include('../../include/parts/_entryBtn.ejs') %>
+      </main>
+      <%- include('../../include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script>
+  </body>
+</html>

@@ -1,0 +1,482 @@
+<%
+  const data = {
+    isTop: false,
+    title: "WORK | NOS 新卒採用サイト",
+    description: "",
+    path: "../..",
+    imgPath: "../../images",
+    commonImgPath: "../../images/common",
+    current: "work",
+    hierarchy: "third",
+    crumbsText: "営業の仕事",
+    crumbsUrl: "sales",
+    crumbsParentText: "WORK",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../../include/common/_head.ejs', {data: data}); %>
+
+<body>
+  <div class="p-sub__container">
+    <%- include('../../include/common/_header.ejs', {data: data}); %>
+    <main class="p-sub__main">
+      <%- include('../../include/common/_breadCrumbs.ejs', {data: data}); %>
+      <div class="p-sub__fv">
+        <div class="p-sub__fvImg js-sub-fvImg">
+          <img class="is-pc" src="<%= data.imgPath %>/kv/work_sales.webp" alt="キービジュアル <%= data.crumbsText %>">
+          <img class="is-sp" src="<%= data.imgPath %>/kv/work_sales_sp.webp" alt="キービジュアル <%= data.crumbsText %>">
+        </div>
+        <section class="p-sub__topSection">
+          <h1 class="c-heading --work p-sub__topHeading js-sub-titleTop">
+            <img src="<%= data.commonImgPath %>/heading_work.svg" alt="<%= data.current %>">
+          </h1>
+          <p class="c-headingSub"><span>営業の仕事</span></p>
+        </section>
+      </div>
+      <div class="p-sub__contents js-scrollFadeIn --block">
+        <p class="p-sub__description">NOSの営業の仕事内容をポイント解説と1日の流れ（ある1日）でご紹介します。</p>
+      </div>
+      <div class="p-work__day js-scrollFadeIn --block" id="js-schedule-wrap">
+        <ul class="p-work__tabArea">
+          <li class="js-tab-triggerWrap">
+            <div class="p-work__tabBtn">
+              <div class="p-work__tabInner js-tab-trigger">
+                <img src="<%= data.imgPath %>/work/sales_tab_1.png" alt="tab 1">
+                <span class="sales is-pc">ソリューション営業部</span>
+                <span class="sales is-sp --firstLine">ソリューション</span>
+                <span class="sales is-sp --endLine">営業部</span>
+              </div>
+            </div>
+          </li>
+          <li class="js-tab-triggerWrap">
+            <div class="p-work__tabBtn">
+              <div class="p-work__tabInner js-tab-trigger">
+                <img src="<%= data.imgPath %>/work/sales_tab_2.png" alt="tab 2">
+                <span class="sales is-pc">ソリューション戦略室</span>
+                <span class="sales is-sp --firstLine">ソリューション</span>
+                <span class="sales is-sp --endLine">戦略室</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="p-work__schedule" id="js-schedule">
+          <div class="p-work__scheduleBlock js-schedule-block">
+            <div class="p-work__scheduleBlockInner">
+              <div class="p-work__scheduleMain">
+                <h2 class="p-work__heading">
+                  <span class="c-heading--sectionTitle --grayBack --longInline">NOSの営業の仕事内容を知る3つのポイント</span>
+                </h2>
+                <ol class="p-work__scheduleList">
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__scheduleItem">
+                      <div class="p-work__scheduleNumber">
+                        <img src="<%= data.imgPath %>/work/01.svg" alt="01">
+                      </div>
+                      <div class="p-work__scheduleContents">
+                        <h3 class="p-work__scheduleHeading --pc">お客様との信頼関係</h3>
+                        <div class="p-work__scheduleContentsInner">
+                          <div class="p-work__scheduleIcon">
+                            <img src="<%= data.imgPath %>/work/sales_img_1.svg" alt="営業 お客様との信頼関係 イメージ">
+                          </div>
+                          <h3 class="p-work__scheduleHeading --sp">お客様との信頼関係</h3>
+                          <div class="p-work__scheduleTextArea">
+                            <div class="p-work__scheduleText">
+                              <p>お客様が感じている課題、潜在的なニーズを察知し解決することが営業の仕事です。</p>
+                              <p>お客様の課題を本音で話してもらえる信頼関係を築くためにも、訪問回数を増やしつつ最新の情報を提供し、また他のお客様に対して行っているサービスを一例としてお伝えすることで、お客様にNOSで実現可能なサービスをお伝えし、お客様から感謝されること。</p>
+                              <p>そうして信頼関係が構築できれば、そのお客様がかかえている課題にあった提案をすることができます。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__scheduleItem">
+                      <div class="p-work__scheduleNumber">
+                        <img src="<%= data.imgPath %>/work/02.svg" alt="02">
+                      </div>
+                      <div class="p-work__scheduleContents">
+                        <h3 class="p-work__scheduleHeading --pc">社内を巻き込んだチーム力</h3>
+                        <div class="p-work__scheduleContentsInner">
+                          <div class="p-work__scheduleIcon">
+                            <img src="<%= data.imgPath %>/work/sales_img_2.svg" alt="営業　社内を巻き込んだチーム力 イメージ">
+                          </div>
+                          <h3 class="p-work__scheduleHeading --sp">社内を巻き込んだチーム力</h3>
+                          <div class="p-work__scheduleTextArea">
+                            <div class="p-work__scheduleText">
+                              <p>課題に対して具体的な解決策を考えるため、技術サポートのSEや、製品情報に詳しいソリューション戦略室などを巻き込み打ち合わせを行います。</p>
+                              <p>各専門的な知識を持ったメンバーと話し合いをすることで、いわゆる「物売り」ではなく、お客様ごとに合った形で製品やサービスを提供することができます。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__scheduleItem">
+                      <div class="p-work__scheduleNumber">
+                        <img src="<%= data.imgPath %>/work/03.svg" alt="03">
+                      </div>
+                      <div class="p-work__scheduleContents">
+                        <h3 class="p-work__scheduleHeading --pc">お客様それぞれに寄り添った対応</h3>
+                        <div class="p-work__scheduleContentsInner">
+                          <div class="p-work__scheduleIcon">
+                            <img src="<%= data.imgPath %>/work/sales_img_3.svg" alt="お客様それぞれに寄り添った対応">
+                          </div>
+                          <h3 class="p-work__scheduleHeading --sp">お客様それぞれに寄り添った対応</h3>
+                          <div class="p-work__scheduleTextArea">
+                            <div class="p-work__scheduleText">
+                              <p>NOSでは提案、導入までして終了ではなく、運用支援、保守までサポートをしています。</p>
+                              <p>導入の先のフォローはSE主体になりますが、「お客様第一主義」として、お客様の仕事に寄り添ったサポートを続けていきます。</p>
+                              <p>ソリューション戦力室が専門分野でのサポートによって安心感を与える役割であるのに対し、営業は一社ごとに寄り添い、お客様の一番の理解者である必要があります。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+                <h2 class="p-work__heading --bottom">
+                <span class="c-heading--sectionTitle --grayBack">NOSの営業の1日</span>
+                </h2>
+                <ul class="p-work__details">
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__detailInner">
+                      <div class="p-work__detailText">
+                        <h4 class="p-work__detailHead">
+                          <span class="label">9:30</span>
+                          <span class="text">出社、メールチェック、ToDo確認<br><small>(時差出勤)</small></span>
+                        </h4>
+                        <p>出社時はその日に取り組むToDoを整理し業務に取り掛かります。</p>
+                      </div>
+                      <div class="p-work__detailImg">
+                        <img src="<%= data.imgPath %>/work/sales_time_01.png" alt="9:30 出社イメージ">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__detailInner">
+                      <div class="p-work__detailText">
+                        <h4 class="p-work__detailHead">
+                          <span class="label">10:00</span>
+                          <span class="text">お客様訪問①</span>
+                        </h4>
+                        <p>新規顧客へ訪問します。事前に準備したIT情報提供やお客様の抱える課題をヒアリングし、ソリューション提案に繋げます。</p>
+                      </div>
+                      <div class="p-work__detailImg">
+                        <img src="<%= data.imgPath %>/work/sales_time_02.png" alt="10:00 お客様訪問 1">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__detailInner">
+                      <div class="p-work__detailText">
+                        <h4 class="p-work__detailHead">
+                          <span class="label">13:00</span>
+                          <span class="text">社内打ち合わせ</span>
+                        </h4>
+                        <p>提案中の案件について、SEやソリューションセールスを交えて提案方針のディスカッションをします。</p>
+                      </div>
+                      <div class="p-work__detailImg">
+                        <img src="<%= data.imgPath %>/work/sales_time_03.png" alt="13:00 社内打ち合わせ">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__detailInner">
+                      <div class="p-work__detailText">
+                        <h4 class="p-work__detailHead">
+                          <span class="label">15:00</span>
+                          <span class="text">お客様訪問②</span>
+                        </h4>
+                        <p>インフラシステム提案中の顧客に訪問。提案内容の説明や追加ヒアリングを実施し、今後の進め方について合意を目指します。</p>
+                      </div>
+                      <div class="p-work__detailImg">
+                        <img src="<%= data.imgPath %>/work/sales_time_04.png" alt="15:00 お客様訪問②">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__detailInner">
+                      <div class="p-work__detailText --noPicture">
+                        <h4 class="p-work__detailHead">
+                          <span class="label">17:00</span>
+                          <span class="text">資料作成</span>
+                        </h4>
+                        <p>お客様との打ち合わせをもとに、見積書や提案資料を作成します。仕入先との交渉や、社内SEのスケジュール調整などお客様とのやり取り以外の業務を社内にいる時間でこなします。</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="p-work__border --left">
+                <img src="<%= data.imgPath %>/work/dasshed_border.svg" alt="- - -">
+              </div>
+            </div>
+            <div class="p-work__genreChangeBtn">
+              <button class="js-genreChange --sales">
+                <span>「ソリューション戦略室」の仕事内容を見る</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18.81" height="18.392" viewBox="0 0 18.81 18.392">
+                  <g transform="translate(1.398 17.392) rotate(-90)">
+                    <line x2="8" transform="translate(0 8)" fill="none" stroke="#a53860" stroke-linecap="round" stroke-width="2"/>
+                    <path d="M0,6.139,8.318,0S14.285,4.6,16,6.139" transform="translate(16.139) rotate(90)" fill="none" stroke="#a53860" stroke-linecap="round" stroke-width="2"/>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="p-work__scheduleBlock js-schedule-block">
+            <div class="p-work__scheduleBlockInner">
+              <div class="p-work__scheduleMain">
+                <h2 class="p-work__heading --right">
+                  <span class="c-heading--sectionTitle --grayBack --longInline">NOSの営業の仕事内容を知る3つのポイント</span>
+                </h2>
+                <ol class="p-work__scheduleList">
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__scheduleItem --right">
+                      <div class="p-work__scheduleNumber --right">
+                        <img src="<%= data.imgPath %>/work/01.svg" alt="01">
+                      </div>
+                      <div class="p-work__scheduleContents">
+                        <h3 class="p-work__scheduleHeading --pc">陰から支える縁の下の力持ち</h3>
+                        <div class="p-work__scheduleContentsInner">
+                          <div class="p-work__scheduleIcon">
+                            <img src="<%= data.imgPath %>/work/sales_img_4.svg" alt="営業 陰から支える縁の下の力持ち イメージ">
+                          </div>
+                          <h3 class="p-work__scheduleHeading --sp">陰から支える縁の下の力持ち</h3>
+                          <div class="p-work__scheduleTextArea">
+                            <div class="p-work__scheduleText">
+                              <p>よく一般的にイメージされる「営業」はお客様の課題をヒアリングし、どの製品が一番最適か提案を行います。一方で、営業でありながらも、営業支援に近いのが「ソリューション戦略室」の仕事。</p>
+                              <p>ソリューション戦略室のメンバーはそれぞれネットワーク、サーバなど、異なった専門分野を持っており、SEの技術的な専門性とはまた別の面で専門家としての知識が豊富です。</p>
+                              <p>製品のプロとして、製品に対してNOSではどんなサービスをすることができるか、営業の打合せに同席し、提案の方法をアドバイスします。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__scheduleItem --right">
+                      <div class="p-work__scheduleNumber --right">
+                        <img src="<%= data.imgPath %>/work/02.svg" alt="02">
+                      </div>
+                      <div class="p-work__scheduleContents">
+                        <h3 class="p-work__scheduleHeading --pc">様々な場での情報発信</h3>
+                        <div class="p-work__scheduleContentsInner">
+                          <div class="p-work__scheduleIcon">
+                            <img src="<%= data.imgPath %>/work/sales_img_5.svg" alt="営業　様々な場での情報発信 イメージ">
+                          </div>
+                          <h3 class="p-work__scheduleHeading --sp">様々な場での情報発信</h3>
+                          <div class="p-work__scheduleTextArea">
+                            <div class="p-work__scheduleText">
+                              <p>セミナーやイベント展示会の企画・開催など、多くの方々の前でお話しをすることが多いのもまた特徴。</p>
+                              <p>イベントの場で製品に興味を持っていただいたお客様から、NOS宛に連絡があり、営業が課題解決のためヒアリングをする…といった形で、新規案件を作り出す窓口としての在り方も大きいです。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__scheduleItem --right">
+                      <div class="p-work__scheduleNumber --right">
+                        <img src="<%= data.imgPath %>/work/03.svg" alt="03">
+                      </div>
+                      <div class="p-work__scheduleContents">
+                        <h3 class="p-work__scheduleHeading --pc">専門家として日々勉強</h3>
+                        <div class="p-work__scheduleContentsInner">
+                          <div class="p-work__scheduleIcon">
+                            <img src="<%= data.imgPath %>/work/sales_img_6.svg" alt="専門家として日々勉強">
+                          </div>
+                          <h3 class="p-work__scheduleHeading --sp">専門家として日々勉強</h3>
+                          <div class="p-work__scheduleTextArea">
+                            <div class="p-work__scheduleText">
+                              <p>ソリューション戦略室は新しい製品へのアンテナを張り、詳しい知識を持っている必要があります。</p>
+                              <p>そのため、ベンダーやメーカーと打ち合わせが多く、紹介したい製品があるとお声がけいただくこともあれば、より詳しい製品情報を知るためこちらからお声がけする場合もあります。</p>
+                              <p>社内から、「この製品といえばこの人」というイメージを持ってもらえるのが魅力であり、頼られる存在であるための努力は日々欠かせません。</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ol>
+                <h2 class="p-work__heading --bottom --right">
+                  <span class="c-heading--sectionTitle --grayBack">NOSの営業の1日</span>
+                </h2>
+                <ul class="p-work__details --right">
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__detailInner --right">
+                      <div class="p-work__detailText --right">
+                        <h4 class="p-work__detailHead --right">
+                          <span class="label">9:00</span>
+                          <span class="text">資料作成</span>
+                        </h4>
+                        <p>お客様への提案資料を作成します。提案内容は社内打ち合わせを実施し担当営業やSEと相談して決定します。</p>
+                      </div>
+                      <div class="p-work__detailImg">
+                        <img src="<%= data.imgPath %>/work/sales_time_right_01.png" alt="9:00 資料作成イメージ">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__detailInner --right">
+                      <div class="p-work__detailText --right">
+                        <h4 class="p-work__detailHead --right">
+                          <span class="label">11:00</span>
+                          <span class="text">社内打ち合わせ</span>
+                        </h4>
+                        <p>週に一度、ソリューション戦略室のメンバーで案件進捗の確認を実施します。お客様によりよい提案ができるよう互いにアドバイスや情報交換等行います。</p>
+                      </div>
+                      <div class="p-work__detailImg">
+                        <img src="<%= data.imgPath %>/work/sales_time_right_02.png" alt="11:00 社内打ち合わせ イメージ">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__detailInner --right">
+                      <div class="p-work__detailText --right">
+                        <h4 class="p-work__detailHead --right">
+                          <span class="label">14:00</span>
+                          <span class="text">社内打ち合わせ</span>
+                        </h4>
+                        <p>ソリューション戦略室は社内打ち合わせが多いです。この日は製品情報を提供できるよう新しいホームページの作成を企画しました。</p>
+                      </div>
+                      <div class="p-work__detailImg">
+                        <img src="<%= data.imgPath %>/work/sales_time_right_03.png" alt="14:00 社内打ち合わせ イメージ">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="js-scrollFadeIn --block">
+                    <div class="p-work__detailInner --right">
+                      <div class="p-work__detailText --right">
+                        <h4 class="p-work__detailHead --right">
+                          <span class="label">16:00</span>
+                          <span class="text">ソリューション提案</span>
+                        </h4>
+                        <p>お客様と打ち合わせを実施し最適なソリューションを提案します。今はWeb会議が多いですが客先訪問もあります。</p>
+                      </div>
+                      <div class="p-work__detailImg">
+                        <img src="<%= data.imgPath %>/work/sales_time_right_04.png" alt="16:00 ソリューション提案">
+                      </div>
+                    </div>
+                  </li>
+                  <!-- <li class="js-scrollFadeIn --block">
+                    <div class="p-work__detailInner --noPictureRight">
+                      <div class="p-work__detailText --noPicture --right">
+                        <h4 class="p-work__detailHead --right">
+                          <span class="label">17:00</span>
+                          <span class="text">資料作成</span>
+                        </h4>
+                        <p>お客様との打ち合わせをもとに、見積書や提案資料を作成します。仕入先との交渉や、社内SEのスケジュール調整などお客様とのやり取り以外の業務を社内にいる時間でこなします。</p>
+                      </div>
+                    </div>
+                  </li> -->
+                </ul>
+              </div>
+              <div class="p-work__border --right">
+                <img src="<%= data.imgPath %>/work/dasshed_border.svg" alt="- - -">
+              </div>
+            </div>
+            <div class="p-work__genreChangeBtn">
+              <button class="js-genreChange --sales">
+                <span>「ソリューション営業部」の仕事内容を見る</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18.81" height="18.392" viewBox="0 0 18.81 18.392">
+                  <g transform="translate(1.398 17.392) rotate(-90)">
+                    <line x2="8" transform="translate(0 8)" fill="none" stroke="#a53860" stroke-linecap="round" stroke-width="2"/>
+                    <path d="M0,6.139,8.318,0S14.285,4.6,16,6.139" transform="translate(16.139) rotate(90)" fill="none" stroke="#a53860" stroke-linecap="round" stroke-width="2"/>
+                  </g>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="p-peopleDetail__same --workPage">
+        <div class="p-peopleDetail__sameInner --workPage">
+          <h3 class="p-peopleDetail__sameHeading --longText">
+            <span class="icon"><img src="<%= data.imgPath %>/people/icon_same_job.svg" alt="メモ アイコン"></span>
+            <span class="text">「営業」職のインタビュー記事を見る</span>
+          </h3>
+          <p class="p-peopleDetail__sameText">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
+          <div class="p-peopleDetail__cardListWrap">
+            <ul class="p-people__cardList --detailPage">
+              <li class="c-peopleCard js-scrollFadeIn --block">
+                <a href="<%= data.path %>/people/01/">
+                  <div class="c-peopleCard__img">
+                    <img src="<%= data.imgPath %>/top/swiper_person_1.jpg" alt="person 1" loading="lazy">
+                  </div>
+                  <div class="c-peopleCard__linkBtn">
+                    <span class="text">詳しくみる</span>
+                    <span class="icon">
+                      <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                    </span>
+                  </div>
+                  <div class="c-peopleCard__text">
+                    <p class="c-peopleCard__label"><span class="sales">営業</span></p>
+                    <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                    <p class="c-peopleCard__message">
+                      <span>テキストが入ります。テキス</span>
+                      <span>トが入ります。テキス</span>
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="c-peopleCard js-scrollFadeIn --block">
+                <a href="<%= data.path %>/people/sample/">
+                  <div class="c-peopleCard__img">
+                    <img src="<%= data.imgPath %>/top/swiper_person_2.jpg" alt="person 2" loading="lazy">
+                  </div>
+                  <div class="c-peopleCard__linkBtn">
+                    <span class="text">詳しくみる</span>
+                    <span class="icon">
+                      <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                    </span>
+                  </div>
+                  <div class="c-peopleCard__text">
+                    <p class="c-peopleCard__label"><span class="sales">営業</span></p>
+                    <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                    <p class="c-peopleCard__message">
+                      <span>テキストが入ります。テキス</span>
+                      <span>トが入ります。テキス</span>
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li class="c-peopleCard js-scrollFadeIn --block">
+                <a href="#">
+                  <div class="c-peopleCard__img">
+                    <img src="<%= data.imgPath %>/top/swiper_person_3.jpg" alt="person 3" loading="lazy">
+                  </div>
+                  <div class="c-peopleCard__linkBtn">
+                    <span class="text">詳しくみる</span>
+                    <span class="icon">
+                      <img src="<%= data.commonImgPath %>/icon_more_btn_people.svg" alt="→ ボタン" loading="lazy">
+                    </span>
+                  </div>
+                  <div class="c-peopleCard__text">
+                    <p class="c-peopleCard__label"><span class="sales">営業</span></p>
+                    <p class="c-peopleCard__depart"><span>システムエンジニアリング・サービス</span></p>
+                    <p class="c-peopleCard__message">
+                      <span>テキストが入ります。テキス</span>
+                      <span>トが入ります。テキス</span>
+                    </p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <%- include('../_linkCard.ejs', {data: data}); %>
+      <%- include('../../include/common/_entryBottom.ejs', {data: data}); %>
+    </main>
+    <%- include('../../include/common/_scrollTop.ejs', {data: data}); %>
+    <%- include('../../include/common/_footer.ejs', {data: data}); %>
+  </div>
+  <%- include('../../include/common/_script.ejs', {data: data}); %>
+</body>
+
+</html>

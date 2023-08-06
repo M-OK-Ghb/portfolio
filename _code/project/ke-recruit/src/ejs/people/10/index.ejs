@@ -1,0 +1,200 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/_head.ejs', { data: dataSet } ) %>
+  <body>
+    <div>
+      <%- include('../../include/_header.ejs', { data: dataSet } ) %>
+      <main class="c-subPage__main">
+        <div class="c-breadCrumbs">
+          <ul class="c-breadCrumbs__list">
+            <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+            <li><a href="<%= dataSet.srcpath %>people/">PEOPLE -社員インタビュー</a></li>
+          </ul>
+        </div>
+        <div class="p-peopleDetail">
+          <div class="p-peopleDetail__firstVisual js-loadFadeIn">
+            <div class="p-peopleDetail__topImg">
+              <img class="pc" src="<%= dataSet.srcpath %>images/detail_firstvisual_10.jpg" alt="インタビュー詳細 ファーストビジュアル">
+              <img class="sp" src="<%= dataSet.srcpath %>images/detail_firstvisual_sp_10.jpg" alt="インタビュー詳細 ファーストビジュアル">
+            </div>
+            <div class="p-peopleDetail__topTextWrap">
+              <p class="p-peopleDetail__topLabel se">
+                <span>SE</span>
+              </p>
+              <p class="p-peopleDetail__topLead">お客様に最適なご提案をするために、<br>日々、製品知識を蓄える。</p>
+              <p class="p-peopleDetail__topName">Y.Y. / 第三システム部 ソリューションビジネス推進グループ</p>
+              <p class="p-peopleDetail__topText">2012年新卒として入社。<br>SEとして、大手企業3社の担当を任されるほか、幅広い業種のお客様10社を担当している。</p>
+            </div>
+          </div>
+          <div class="p-peopleDetail__content js-scrollFloatFadeIn">
+            <div class="p-peopleDetail__contentInner">
+              <div class="p-peopleDetail__contentBg"></div>
+              <div class="p-peopleDetail__contentWrap">
+                <div class="p-peopleDetail__spSpace">
+                  <div class="p-peopleDetail__contentFirst">
+                    <div class="p-peopleDetail__contentFirstImg">
+                      <img src="<%= dataSet.srcpath %>images/detail_left_10.jpg" alt="インタビュー　素材1">
+                    </div>
+                    <div class="p-peopleDetail__contentFirstText p-peopleDetail__info">
+                      <h3>入社後にも変わらない、<br>面接で感じた人の良さ。</h3>
+                      <p>大学では文系の学部でしたので、当初、IT業界は候補として考えていませんでした。ただ、視野を広く様々な業界を見ていく中で、KELの説明会で理系や情報システムの学部でない方も働いていることを知り、興味を持ちました。採用面接では、ITについての知識などを聞かれることもなく、むしろ学生時代のヨット部のエピソードなど、私という個人について興味を持っていてくれること、<span>何より面接などで会う人がみなさん話やすく、この会社で働きたいと思いました。</span>実際に入社しても、みなさん暖かく、よく相談にも乗ってくれます。</p>
+                      <p>私はいまSEとして仕事をしていますが、実は営業職として入社したんです。ただ、3ヶ月の研修を通して仕事を見ていくなかで、私の適正はSEだということに気づきました。人事の方とも私の適正について相談し、希望が叶いSEとしてキャリアをスタートすることになりました。</p>
+                    </div>
+                  </div>
+                  <div class="p-peopleDetail__contentSecond">
+                    <div class="p-peopleDetail__contentSecondImg">
+                      <img src="<%= dataSet.srcpath %>images/detail_right_10.jpg" alt="インタビュー　素材2">
+                    </div>
+                    <div class="p-peopleDetail__contentSecondText p-peopleDetail__info">
+                      <h3>基礎から学べる環境で、<br>IT力が身に付く。</h3>
+                      <p>入社後は、ソリューションビジネス推進グループで、インフラ全般を扱っています。サーバー、ストレージ、ネットワーク、それらに関するアプリケーションなどを総合的に設計、構築を担当していました。設計段階では、すでにどういった製品を使うのか、ある程度は決まっていますので、動作の部分やUI（ユーザーインターフェース）などについて、お客様と打ち合わせを重ねて、形にしていきます。</p>
+                      <p>現在は、プリセールスといって、設計、構築の前段階となる製品選定をする立場で仕事をしています。設計、構築では製品知識を狭く深く掘り下げることが求められますが、プリセールスではお客様のニーズを実現するための製品を提案しなければいけないので、幅広い製品知識が必要になります。</p>
+                      <p>私は元々文系出身でしたが、入社してから5年間、知識がゼロの状態から技術の基礎を学ぶことで、IT力が身に付きました。<span>KELではITに関する知識、技術を学ぶことができるので安心してキャリアを積める</span>と思います。</p>
+                    </div>
+                  </div>
+                  <div class="p-peopleDetail__contentCenterText p-peopleDetail__info">
+                    <h3>最適なご提案をするために、<br>製品知識を身に付ける。</h3>
+                    <p>設計、構築の仕事では、すでにお客様の要望がすでにはっきりした状態で仕事を進めることができましたが、提案の仕事はそうではありません。お客様のご要望が明確でないこともあります。そのためお客様と一緒になって課題について考え、その解決を数ある製品から導き出さなければいけません。</p>
+                    <p>現在の部署に移ってからまだ1年ほどですので、今は製品知識を蓄えているところです。設計、構築の仕事で培ったお客様目線での使いやすさといったことを意識しながら、<span>より最適なご提案ができるように経験を積んでいきたい</span>と思っています。</p>
+                  </div>
+                </div>
+                <div class="p-peopleDetail__contentImg">
+                  <img src="<%= dataSet.srcpath %>images/detail_middle_10.jpg" alt="メインイメージ">
+                </div>
+                <div class="p-peopleDetail__clientMessage p-peopleDetail__info">
+                  <h3>心に残るお客様の一言</h3>
+                  <h4>「ありがとうございました」</h4>
+                  <p>とてもシンプルではありますが、プロジェクトを終えたときにお客様から改めてこう言われると、とてもうれしいです。プロジェクトの最初の頃は、私に対してお客様も「どんな人だろう？」と構えているのを感じるのですが、長い期間、一緒にプロジェクトを進めるうちに気心も知れますし、お客様も相談してくださるようになります。そうした関係になれたからこそ、この一言のありがたみが感じられます。</p>
+                </div>
+                <div class="p-peopleDetail__offtime">
+                  <div class="p-peopleDetail__offtimeLabel se">
+                    <span>OFF TIME</span>
+                  </div>
+                  <div class="p-peopleDetail__offtimeContents">
+                    <p class="p-peopleDetail__offtimeText">学生の頃は運動部で体を動かしていたのですが、社会人になると運動しなくなるので体も鈍ってきてしまいます。特にSEはデスクワークが多いので、なおさらです。それで運動をしたいなと思ったときに、学生の頃にやっていたバドミントンの社会人サークルに入りました。そのサークルの方がロードバイクに乗る人も多く、私も乗るようになり、休日に一緒に遠くまで乗りに行くことが増えました。</p>
+                    <div class="p-peopleDetail__offtimeImg">
+                      <img src="<%= dataSet.srcpath %>images/detail_offtime_10.jpg" alt="オフタイム">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--営業とSEで管理-->
+        <div class="p-peopleDetail__otherMember js-scrollFloatFadeIn">
+          <h3 class="p-peopleDetail__otherMemberHeading">同職種の社員インタビュー</h3>
+          <ul class="p-peopleDetail__otherMemberList">
+            <li>
+              <a href="#">
+                <div class="p-peopleDetail__memberImg">
+                  <img src="<%= dataSet.srcpath %>images/other_interview_6.jpg" alt="">
+                  <span class="se">SE</span>
+                </div>
+                <div class="p-peopleDetail__memberText">
+                  <p class="p-peopleDetail__memberLead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                  <p class="p-peopleDetail__memberName">第一ソリューション営業本部部長<br><span>S.N.</span></p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="p-peopleDetail__memberImg">
+                  <img src="<%= dataSet.srcpath %>images/other_interview_7.jpg" alt="">
+                  <span class="se">SE</span>
+                </div>
+                <div class="p-peopleDetail__memberText">
+                  <p class="p-peopleDetail__memberLead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                  <p class="p-peopleDetail__memberName">第一ソリューション営業本部部長<br><span>S.N.</span></p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="p-peopleDetail__memberImg">
+                  <img src="<%= dataSet.srcpath %>images/other_interview_8.jpg" alt="">
+                  <span class="se">SE</span>
+                </div>
+                <div class="p-peopleDetail__memberText">
+                  <p class="p-peopleDetail__memberLead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                  <p class="p-peopleDetail__memberName">第一ソリューション営業本部部長<br><span>S.N.</span></p>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <div class="p-peopleDetail__memberImg">
+                  <img src="<%= dataSet.srcpath %>images/other_interview_10.jpg" alt="">
+                  <span class="se">SE</span>
+                </div>
+                <div class="p-peopleDetail__memberText">
+                  <p class="p-peopleDetail__memberLead">リード文章が入ります。リード文章が入ります。リード文章が入ります。</p>
+                  <p class="p-peopleDetail__memberName">第一ソリューション営業本部部長<br><span>S.N.</span></p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <!--インタビュー一覧と共通パーツ-->
+        <div class="p-people__movieArea detailPage js-scrollFloatFadeIn">
+          <div class="p-mainPeople__talkInfo peoplePage">
+            <div class="p-mainPeople__textWrap peoplePage">
+              <h3 class="p-mainPeople__talkHeading">社員インタビュー</h3>
+              <p>KELで働く営業、エンジニアの先輩社員に職種別でインタビュー。<br>入社したきっかけ、仕事内容、社内の雰囲気や仕事のやりがいについて<br class="pc">語っていただきました。</p>
+            </div>
+          </div>
+          <div class="p-mainPeople__videoWrap peoplePage">
+            <div class="p-mainPeople__video">
+              <button class="p-mainPeople__videoThumb js-modalOpenBtn">
+                <span class="p-mainPeople__videoBtn">
+                  <span>
+                    <img src="<%= dataSet.srcpath %>images/movie_btn.svg" alt="btn">
+                  </span>
+                  <span class="p-mainPeople__videoBtnText">PLAY MOVIE</span>
+                </span>
+                <img src="<%= dataSet.srcpath %>images/top_talk_sales_thumb.png" alt="営業インタビュー">
+                <span class="p-mainPeople__overLay"></span>
+              </button>
+              <p>社員インタビュー 営業編</p>
+            </div>
+            <div class="p-mainPeople__video p-mainPeople__video--second">
+              <button class="p-mainPeople__videoThumb js-modalOpenBtn">
+                <span class="p-mainPeople__videoBtn">
+                  <span>
+                    <img src="<%= dataSet.srcpath %>images/movie_btn.svg" alt="btn">
+                  </span>
+                  <span class="p-mainPeople__videoBtnText">PLAY MOVIE</span>
+                </span>
+                <img src="<%= dataSet.srcpath %>images/top_talk_se_thumb.png" alt="SEインタビュー">
+                <span class="p-mainPeople__overLay"></span>
+              </button>
+              <p>社員インタビュー SE編</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-people__movieAreaBtnWrap">
+          <div class="c-circleBtn p-peopleMovieArea">
+            <a href="<%= dataSet.srcpath %>people/">
+              <span class="c-circleBtn__circle">
+                <span class="c-circleBtn__arrow"></span>
+              </span>
+              <span class="c-circleBtn__text">全ての社員インタビューを見る</span>
+            </a>
+          </div>
+        </div>
+        <%- include('../../include/_movieModal.ejs', { data: dataSet } ) %>
+        <%- include('../../include/parts/_entryBtn.ejs') %>
+      </main>
+      <%- include('../../include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script>
+  </body>
+</html>

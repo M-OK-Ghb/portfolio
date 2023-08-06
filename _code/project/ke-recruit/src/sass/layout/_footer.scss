@@ -1,0 +1,215 @@
+// -------------------------------------------------------------------
+//  footer.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.l-footer {
+  background-color: var.$DARK_GRAY;
+
+  &__main {
+    display: flex;
+    padding:40px 5% 80px;
+    justify-content: space-between;
+
+    @include med.media(sp) {
+      display: block;
+      padding: 10.75vw 8%;
+    }
+  }
+
+  &__logo {
+    flex-basis: 10%;
+    @include med.media(sp) {
+      width:30%;
+    }
+    a {
+      display: block;
+      > img {
+        width:100%;
+      }
+    }
+  }
+
+  &__menu {
+    flex-basis: 85%;
+    color: #fff;
+    margin-top: 10px;
+    @include med.media(sp) {
+      margin-top: 10.6vw;
+    }
+
+    > nav {
+      margin-top: 40px;
+      @include med.media(sp) {
+        margin-top: 10.6vw;
+      }
+    }
+  }
+
+  &__menuTop {
+    @include med.media(sp) {
+      a {
+        font-size: 3.2vw;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__globalItem {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    > li {
+      flex-basis: 30%;
+      @include med.media(sp) {
+        margin-bottom: 5.33vw;
+      }
+    }
+
+    @include med.media(sp) {
+      display: block;
+      margin-top: 0;
+    }
+  }
+
+  &__globalItemHead {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    font-family: var.$FONT_RALEWAY;
+
+    > a {
+      display: inline-block;
+      transition: opacity 0.2s;
+      font-weight: bold;
+      &:hover {
+        opacity: 0.6;
+      }
+
+      > span {
+        margin-left: 16px;
+      }
+
+      @include med.media(sp) {
+        font-size: 3.2vw;
+      }
+    }
+
+    @include med.media(sp) {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__globalItemSecond {
+    margin-top: 20px;
+    padding-left: 20px;
+    > li {
+      margin-bottom: 20px;
+
+      a {
+        display: block;
+        transition: opacity 0.2s;
+        font-weight: bold;
+        &:hover {
+          opacity: 0.6;
+        }
+
+        @include med.media(sp) {
+          font-size: 3.2vw;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include med.media(sp) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include med.media(sp) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 5.33vw;
+      padding-left: 5.33vw;
+      > li {
+        margin-right: 5.33vw;
+        &:nth-child(3) {
+          margin-top: 5.33vw;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    background-color: #FFF;
+    padding:16px 5%;
+    display: flex;
+    justify-content: space-between;
+
+    @include med.media(sp) {
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      padding: 5vw 8%;
+    }
+  }
+
+  &__copyRight {
+    color: var.$LIGHT_TEXT_COLOR;
+    font-family: var.$FONT_RALEWAY;
+    font-size: 12px;
+    span {
+      font-size: 16px;
+      vertical-align: middle;
+    }
+
+    @include med.media(sp) {
+      font-size: 3.2vw;
+      margin-top: 5.33vw;
+      order: 2;
+    }
+  }
+
+  &__externalLink {
+    color: var.$LIGHT_TEXT_COLOR;
+    font-size: 12px;
+    display: flex;
+
+    @include med.media(sp) {
+      font-size: 3.2vw;
+    }
+
+    > li {
+      a {
+        transition: opacity 0.3s;
+        &:hover {
+          opacity: 0.7;
+        }
+
+        svg {
+          fill: var.$LIGHT_TEXT_COLOR;
+          width: 12px;
+          height: 12px;
+          @include med.media(sp) {
+            width: 3.2vw;
+            height: 3.2vw;
+          }
+        }
+      }
+    }
+
+    > li:first-child {
+      border-right: 1px solid var.$LIGHT_TEXT_COLOR;
+      margin-right:10px;
+      padding-right:10px;
+      @include med.media(sp) {
+        border: none;
+        margin-right: 2.65vw;
+        padding-right: 2.65vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,656 @@
+// -------------------------------------------------------------------
+//  Mission - mission.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.p-missionMain {
+  color: #333;
+}
+
+.p-mission {
+  &__philosophy {
+    margin-top: 10vw;
+    padding-left: 12vw;
+    padding-right: 9vw;
+
+    @include med.media(sp) {
+      margin-top: 36vw;
+      padding-left: 4.65vw;
+      padding-right: 4.65vw;
+    }
+  }
+
+  &__philosophyInner {
+    position: relative;
+  }
+
+  &__philosophyGrayBack {
+    position: absolute;
+    background: #FAFAFA;
+    width: 80%;
+    height: 85%;
+    z-index: -1;
+    top: 40px;
+    left: 10%;
+    @include med.media(sp) {
+      width: 75%;
+      height: 102%;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+  }
+
+  &__philosophyTop {
+    margin-top: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include med.media(sp) {
+      display: block;
+      margin-top: 16vw;
+    }  
+  }
+
+  &__philosophyLeadInner {
+    position: relative;
+
+    @include med.media(sp) {
+      width: 84%;
+      margin-left: 6%;
+    }
+
+    > h3 {
+      font-size: 60px;
+      line-height: 90px;
+      font-family: serif;
+      color: #003f93;
+      margin: auto;
+      text-align: center;
+      @include med.media(sp) {
+        font-size: 10vw;
+        line-height: 20vw;
+      }
+    }
+
+    > span {
+      position: absolute;
+      width: 3vw;
+
+      @include med.media(sp) {
+        width: 10vw;
+      }
+
+      &.bracketsStart {
+        top: 0;
+        left: 0;
+      }
+
+      &.bracketsEnd {
+        bottom: 0;
+        right: 0;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  &__philosophyLead {
+    > h3 {
+      font-family: serif;
+      color: #707070;
+      span {
+        font-size: 60px;
+        @include med.media(sp) {
+          font-size: 10vw;
+        }
+        &.text {
+          color: #003F93;
+          margin-left: 6px;
+          margin-right: 6px;
+        }
+      }
+    }
+
+    > p {
+      padding-left: 40px;
+      @include med.media(sp) {
+        padding-left: 6vw;
+      }
+      &:nth-of-type(1) {
+        font-size: 24px;
+        margin-top: 40px;
+        
+
+        @include med.media(sp) {
+          font-size: 5.8vw;
+        }
+
+        span {
+          display: inline-block;
+          font-weight: bold;
+          &.leadEn {
+            font-family: var.$FONT_RALEWAY;
+            margin-right: 20px;
+            @include med.media(sp) {
+              margin-right: 0;
+            }
+            color: #8C9091;
+          }
+
+          &.leadJa {
+            @include med.media(sp) {
+              margin-top: 2.65vw;
+            }
+          }
+        }
+      }
+
+      &:nth-of-type(2) {
+        margin-top: 25px;
+        font-size: 18px;
+        @include med.media(sp) {
+          font-size: 3.8vw;
+        }
+      }
+    }
+  }
+
+  &__philosophyImg {
+    width: 40%;
+
+    @include med.media(sp) {
+      width: 85%;
+      margin:8.65vw auto 0;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__philosophyBottom {
+    margin-top: 65px;
+    @include med.media(sp) {
+      margin-top: 15vw;
+    }
+  }
+
+  &__philosophyList {
+    display: flex;
+    justify-content: center;
+
+    @include med.media(sp) {
+      display: block;
+    }
+
+
+    > li {
+      text-align: center;
+      width:30%;
+
+      @include med.media(sp) {
+        text-align: left;
+        width: 80%;
+        border-bottom: 2px dotted;
+        margin: auto;
+        display: flex;
+        padding-bottom: 5.33vw;
+        margin-bottom: 5.33vw;
+        &:nth-of-type(3) {
+          margin-bottom: 0;
+        }
+      }
+
+      &:nth-of-type(2) {
+        border-left: 2px dotted;
+        border-right: 2px dotted;
+        @include med.media(sp) {
+          border-left: none;
+          border-right: none;
+        }
+      }
+
+      > p {
+        font-family: var.$FONT_BARLOW;
+        color: #003F93;
+        font-size: 45px;
+
+        @include med.media(sp) {
+          font-size: 9.5vw;
+          width: 20%
+        }
+      }
+
+      div {
+        @include med.media(sp) {
+          margin-top: 3vw;
+        }
+        > p {
+          &:nth-child(1) {
+            color: #323232;
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            @include med.media(sp) {
+              margin-top: 0;
+              font-size: 5vw;
+            }
+          }
+
+          &:nth-child(2) {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 2;
+            font-weight: normal;
+
+            @include med.media(sp) {
+              font-size: 3.62vw;
+              margin-top: 6vw;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__overview {
+    margin-top: 240px;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    @include med.media(sp) {
+      overflow: hidden;
+      margin-top: 28vw;
+      padding-left: 9.5vw;
+      padding-right: 9.5vw;
+    }
+  }
+
+  &__overviewInner {
+    position: relative;
+  }
+
+  &__overviewGrayBack {
+    position: absolute;
+    background: #FAFAFA;
+    z-index: -1;
+    width: 100%;
+    height: 105%;
+    top: 40px;
+    right: -12vw;
+    @include med.media(sp) {
+      right: -9.5vw;
+    }
+  }
+
+  &__overviewGrayBack--sp {
+    display: none;
+    background: #FAFAFA;
+    width: 100%;
+    height: 100px;
+    @include med.media(sp) {
+      display: block;
+      height: 100px;
+      position: relative;
+      bottom: -100px;
+      z-index: -1;
+    }
+  }
+
+  &__overviewHeadingWrap {
+    @include med.media(sp) {
+      position: absolute;
+    }
+  }
+
+  &__overviewTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+
+    @include med.media(sp) {
+      display: block;
+      padding-top: 50vw;
+      margin-top: 0;
+    }
+  }
+
+  &__overviewTopText {
+    width: 45%;
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+    > p {
+      &:nth-child(1) {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 2;
+        color: #323232;
+
+        @include med.media(sp) {
+          font-size: 5.8vw;
+          line-height: 1.5;
+
+          br {
+            display: none;
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        font-size: 16px;
+        line-height: 2;
+        margin-top: 40px;
+
+        @include med.media(sp) {
+          font-size: 3.8vw;
+          margin-top: 3vw;
+        }
+      }
+    }
+  }
+
+  &__overviewTopImg {
+    width: 45%;
+
+    @include med.media(sp) {
+      width: 100%;
+      margin-top: 5vw;
+    }
+
+    > img {
+      width: 100%;
+    }
+  }
+
+  &__overviewMiddle {
+    margin-top: 140px;
+    @include med.media(sp) {
+      margin-top: 20vw;
+    }
+  }
+  
+  &__overviewChartText--sp {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+
+      > p {
+        line-height: 2;
+        &:nth-child(1) {
+          font-size: 5.8vw;
+          font-weight: bold;
+          line-height: 1.5;
+        }
+
+        &:nth-child(2) {
+          font-size: 3.8vw;
+          margin-top: 3vw;
+        }
+      }
+    }
+  }
+
+  &__overviewChart {
+    width: 100%;
+
+    > img {
+      width: 100%;
+      &.pc {
+        @include med.media(sp) {
+          display: none;
+        }
+      }
+
+      &.sp {
+        display: none;
+        @include med.media(sp) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__overviewMiddleText {
+    width: 90%;
+    margin:30px auto 0;
+    display: flex;
+    justify-content: space-between;
+
+    @include med.media(sp) {
+      display: block;
+      width: 100%;
+      margin-top: 20vw;
+    }
+
+    > div {
+      width: 45%;
+      > p {
+        &:nth-child(1) {
+          font-size: 18px;
+          font-weight: bold;
+          line-height: 2;
+
+          @include med.media(sp) {
+            font-size: 5.8vw;
+            line-height: 1.5;
+
+            br {
+              display: none;
+            }
+          }
+        }
+
+        &:nth-child(2) {
+          font-size: 16px;
+          line-height: 2;
+          margin-top: 36px;
+
+          br {
+            display: none;
+          }
+
+          @include med.media(sp) {
+            font-size: 3.8vw;
+            margin-top: 3vw;
+
+            br {
+              display: block;
+            }
+          }
+        }
+      }
+
+      @include med.media(sp) {
+        width: 100%;
+
+        &.pc {
+          display: none;     
+        }
+      }
+    }
+  }
+
+  &__overviewInfra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding: 5%;
+    background: #FFF;
+    border-radius: 18px;
+    border: 2px dotted #003F93;
+
+    @include med.media(sp) {
+      display: block;
+      padding: 8% 7.5%;
+      margin-top: 20vw;
+    }
+  }
+
+  &__overviewInfraText {
+    width: 35%;
+
+    @include med.media(sp) {
+      width: 100%;
+    }
+
+    > p {
+      &:nth-child(1) {
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 2;
+
+        @include med.media(sp) {
+          font-size: 5vw;
+
+           br {
+             display: none;
+           }
+        }
+      }
+
+      &:nth-child(2) {
+        font-size: 16px;
+        line-height: 2;
+        margin-top: 40px;
+
+        @include med.media(sp) {
+          font-size: 3.8vw;
+          margin-top: 2.5vw;
+        }
+      }
+    }
+  }
+
+  &__overviewInfraImg {
+    width: 60%;
+
+    @include med.media(sp) {
+      width: 100%;
+      margin-top: 3vw;
+    }
+
+    > img {
+      width: 100%;
+
+      &.pc {
+        @include med.media(sp) {
+          display: none;
+        }
+      }
+
+      &.sp {
+        display: none;
+        @include med.media(sp) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__message {
+    position: relative;
+    margin-top: 360px;
+    padding-top: 150px;
+    padding-bottom: 130px;
+    background: #FAFAFA;
+    @include med.media(sp) {
+      margin-top: 29.5vw; 
+      padding-top: 40vw;
+      padding-bottom: 24vw;
+    }
+  }
+
+  &__headingWrap {
+    position: absolute;
+    top: -50px;
+    left: 12vw;
+  }
+
+  &__contentWrap {
+    width:70%;
+    margin:0 auto;
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  &__presidentWrap {
+    width: 100%;
+    > img {
+      width: 100%;
+      object-fit: cover;
+      @include med.media(sp) {
+        aspect-ratio: 150/79;
+      }
+    }
+  }
+
+  &__presidentText {
+    width: 88%;
+    margin:0 auto;
+    background: #FFF;
+    padding: 45px 7% 45px 11.5%;
+
+    @include med.media(sp) {
+      width: 82.5%;
+      padding: 6.65vw 5.3vw;
+    }
+
+    > p {
+      &:nth-child(1) {
+        font-weight: bold;
+        font-size: 22px;
+        line-height: 2;
+        @include med.media(sp) {
+          font-size: 4vw;
+          line-height: 1.5;
+        }
+      }
+
+      &:nth-child(2) {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 2;
+        display: flex;
+        justify-content: flex-end;
+        @include med.media(sp) {
+          font-size: 3.6vw;
+          margin-top: 4vw;
+          line-height: 1.4;
+        }
+      }
+    }
+  }
+
+  &__messageText {
+    margin: 40px auto 0;
+    width: 70%;
+
+    @include med.media(sp) {
+      width: 80%;
+      margin: 7.3vw auto 0;
+    }
+
+    > p {
+      line-height: 2;
+      font-size: 16px;
+      margin-top: 40px;
+      &:first-child {
+        margin-top: 0;
+      }
+
+      @include med.media(sp) {
+        font-size: 3.8vw;
+      }
+    }
+  }
+
+}

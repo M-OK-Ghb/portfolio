@@ -1,0 +1,172 @@
+<%
+  const data = {
+    isTop: false,
+    title: "Mission | NOS 新卒採用サイト",
+    description: "",
+    path: "..",
+    imgPath: "../images",
+    commonImgPath: "../images/common",
+    current: "mission",
+    hierarchy: "second",
+    crumbsText: "MISSION -事業概要・社長メッセージ",
+    crumbsUrl: "",
+    crumbsParentText: "",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../include/common/_header.ejs', {data: data}); %>
+      <main class="p-sub__main">
+        <%- include('../include/common/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-sub__fv">
+          <div class="p-sub__fvImg js-sub-fvImg">
+            <img class="is-pc" src="<%= data.imgPath %>/kv/mission.webp" alt="キービジュアル <%= data.crumbsText %>">
+            <img class="is-sp" src="<%= data.imgPath %>/kv/mission_sp.webp" alt="キービジュアル <%= data.crumbsText %>">
+          </div>
+          <section class="p-sub__topSection">
+            <h1 class="c-heading --mission p-sub__topHeading js-sub-titleTop">
+              <img src="<%= data.commonImgPath %>/heading_mission.svg" alt="<%= data.current %>">
+            </h1>
+            <p class="c-headingSub"><span>事業概要・社長メッセージ</span></p>
+          </section>
+        </div>
+        <div class="p-sub__contents js-scrollFadeIn --block --pb">
+          <p class="p-sub__description">NOSは、創業から一貫してこだわっている考えがあります。<br>経営理念に込めた思いとこれから作りたい未来についてご説明します。</p>
+        </div>
+        <section class="p-mission__philosophy">
+          <h2 class="p-mission__heading --philosophy">
+            <span class="c-heading--sectionTitle --grayBack">企業理念</span>
+          </h2>
+          <div class="p-mission__philosophyTextArea">
+            <h3 class="p-mission__title">信頼と価値を創造する<br>ＩＴ総合サービス会社を目指します。</h3>
+            <ol class="p-mission__philosophyList">
+              <li class="p-mission__philosophyItem">
+                <dl>
+                  <dt>01.</dt>
+                  <dd>
+                    <p>お客さま第一主義</p>
+                    <p>私たちは、常にお客様の満足度を意識し、信頼ある行動をします。</p>
+                  </dd>
+                </dl>
+              </li>
+              <li class="p-mission__philosophyItem">
+                <dl>
+                  <dt>02.</dt>
+                  <dd>
+                    <p>新しい価値の創造</p>
+                    <p>お客様に真に評価されるシステム・サービスを幅広く提供します。</p>
+                  </dd>
+                </dl>
+              </li>
+              <li class="p-mission__philosophyItem">
+                <dl>
+                  <dt>03.</dt>
+                  <dd>
+                    <p>ＣＳＲの追求</p>
+                    <p>法令を遵守し、公正で透明性の高い企業活動を行います。</p>
+                  </dd>
+                </dl>
+              </li>
+            </ol>
+          </div>
+          <div class="p-mission__philosophyImg">
+            <img src="<%= data.imgPath %>/mission/shape_1.webp" alt="philosophyImg shape 1" loading="lazy">
+          </div>
+          <div class="p-mission__philosophyVision">
+            <img class="is-pc" src="<%= data.imgPath %>/mission/vision.svg" alt="vision">
+            <img class="is-sp" src="<%= data.imgPath %>/mission/vision_sp.svg" alt="vision">
+          </div>
+        </section>
+        <section class="p-mission__business" id="js-business">
+          <h2 class="p-mission__heading --business">
+            <span class="c-heading--sectionTitle">事業内容</span>
+          </h2>
+          <div class="p-mission__businessTop">
+            <h3 class="p-mission__title">お客様の良きパートナーとして、<br>ITライフサイクル全般にわたるサービス<br class="is-sp">を提供しています。</h3>
+            <div class="p-mission__businessText">
+              <p>日本オフィス・システム(株)は、中堅・中小企業に強いビジネス基盤を持ち、ITライフサイクル全般にわたるサービス<span>【情報サービス事業】</span>と<span>【システム販売事業】</span>を提供しています。</p>
+              <p>営業部門と技術部門が一体となって、お客様それぞれにとって最適な課題解決策をお客様に寄り添いながら共に考え、クラウド・サービスを含めた多様な選択肢の中から総合的にITソリューションを提供しています。またお客様の情報システムの運営を包括的に受託（ITアウトソーシング）しています。当社の強みであるアプリ開発～インフラ構築～システム運用まで、ワンストップで提供できることを活かしつつ、注力分野である新しいアプリビジネスの創出等によりますますの成長を目指します。</p>
+              <p>また現在は東証プライム上場の兼松エレクトロニクス(株)のグループ会社として協業体制を確立し、グループで互いの強みを活かし、安定成長中。今後もさらなる収益基盤の強化、拡大に努めてまいります。</p>
+            </div>
+          </div>
+          <div class="p-mission__graphArea">
+            <dl class="p-mission__graphList">
+              <dt>
+                <span class="--number --first">
+                  <img src="<%= data.commonImgPath %>/01_white.svg" alt="01">
+                </span>
+                <span class="--text">情報サービス事業</span>
+              </dt>
+              <dd>
+                <img class="is-pc" src="<%= data.imgPath %>/mission/it_cycle_pc.svg" alt="お客様のIT化サイクル グラフ PC">
+                <img class="is-sp" src="<%= data.imgPath %>/mission/it_cycle_sp.svg" alt="お客様のIT化サイクル グラフ SP">
+              </dd>
+            </dl>
+            <dl class="p-mission__graphList">
+              <dt>
+                <span class="--number --second">
+                  <img src="<%= data.commonImgPath %>/02_white.svg" alt="02">
+                </span>
+                <span class="--text">システム販売事業</span>
+              </dt>
+              <dd>
+                <ul class="p-mission__systemList">
+                  <li>
+                    <div class="p-mission__systemIcon">
+                      <img src="<%= data.imgPath %>/mission/icon_hardware.svg" alt="ハードウェア アイコン">
+                    </div>
+                    <p class="p-mission__systemText">ハードウェアの販売</p>
+                  </li>
+                  <li>
+                    <div class="p-mission__systemIcon">
+                      <img src="<%= data.imgPath %>/mission/icon_software.svg" alt="ソフトウェア アイコン">
+                    </div>
+                    <p class="p-mission__systemText">ソフトウェアの販売</p>
+                  </li>
+                </ul>
+              </dd>
+            </dl>
+          </div>
+          <div class="p-mission__businessImg">
+            <img src="<%= data.imgPath %>/mission/shape_2.webp" alt="philosophyImg shape 2" loading="lazy">
+          </div>
+        </section>
+        <section class="p-mission__message">
+          <h2 class="p-mission__heading --message">
+            <span class="c-heading--sectionTitle --grayBack">社長メッセージ</span>
+          </h2>
+          <div class="p-mission__messageContents">
+            <h3 class="p-mission__presidentCopy">感謝の気持ちが最良のチームを生み、<br class="is-sp">お客様の喜びを支える</h3>
+            <div class="p-mission__messageText">
+              <p>日本オフィス・システム株式会社（NOS）は、1982年に設立されました。今も社長室には、設立に尽力された方々の署名が綴られた寄せ書きが飾られ、IBM社長のお名前もあります。当時、IBMといえば現在のGAFAを一社で担うほどの存在感でした。NOSは、IBMが直販のみならず間接営業をはじめるにあたり、特約店制度を創設した際の第一号として設立されたのです。</p>
+              <p>新人時代のことで今も覚えていることがあります。新人にはユーザーのリストが手渡され、電話で営業するというタスクがありました。リストには、ある大手法人の連絡先があったのですが、先輩方は「うちのような会社は相手にしてくれない」と電話をかけていない様子でした。新人時代にはそうした固定観念もありませんから、愚直に営業電話をしたところ、担当者がお時間をくれたのです。そこから通い詰めて、入社から3年目にして、若手では考えられない億を超えるビジネスをすることができました。</p>
+              <p>当時と比べれば、製品に対する知識力や、さまざまな提案力が求められるようになりましたが、現在も変わらないことがあります。それはNOSのDNAともいえる「目の前のお客様に一生懸命」になれることです。お客様によい提案をするにあたり、大切なのはお客様を会社という規模で捉えるのではなく、自分の目の前にいる担当者の方を「お客様」として捉えることです。その方に喜んでいただくために一生懸命になることが基本であり、最も大事なことなのです。</p>
+              <p>NOSのDNAとともに、私が大切にしているのが「現場第一主義」です。お客様に喜んでいただくためには、そのお客様と日々、向かい合う現場の社員が伸び伸びと仕事をできることが何より大切です。そのための組織づくりを常に心がけています。一方で、仕事というのは一人ではできません。チームでやるからこそ、大きな成果を出すことができます。良いチームであるためには、お互いが感謝の念をもって尊重し合う気持ちがなければなりません。</p>
+              <p>私の座右の銘は、「いつもすべてにありがとう」です。 今の時代にこそ、感謝の気持ちが大切ではないでしょうか。特に社員のみなさんには、一番身近なご家族への感謝を忘れないでほしいと思っています。プライベートが充実してこそ、いいチームが作られ、仕事のパフォーマンスも発揮されます。</p>
+              <p>これからのIT業界はデジタルトランスフォーメーション（DX）をはじめ、社会の中でより一層重要度を増していきます。IT人材の不足が社会課題とされる中で、お客様がイノベーションを生み出すためのエンジンとして、私たちがお客様とともに進んでいくことが求められています。これからNOSの一員となられる方たちにも、お客様とともに歩み、お客様に喜んでいただくことを働く原動力にして、NOSのDNAを継承していってほしいと思っています。</p>
+              <p>一人ではできないことも、チームでなら実現できます。私たちと一緒にIT業界のこれからをつくっていきましょう。</p>
+            </div>
+            <div class="p-mission__president">
+              <div class="p-mission__presidentImg">
+                <img class="is-pc" src="<%= data.imgPath %>/mission/president.png" alt="代表取締役社長 近藤 壮一">
+                <img class="is-sp" src="<%= data.imgPath %>/mission/president_sp.png" alt="代表取締役社長 近藤 壮一 sp">
+              </div>
+              <div class="p-mission__presidentLabel">
+                <p class="p-mission__presidentTitle"><span>代表取締役社長</span></p>
+                <p class="p-mission__presidentName"><span>近藤 壮一</span></p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <%- include('../include/common/_entryBottom.ejs', {data: data}); %>
+      </main>
+      <%- include('../include/common/_scrollTop.ejs', {data: data}); %>
+      <%- include('../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

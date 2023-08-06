@@ -1,0 +1,558 @@
+// -------------------------------------------------------------------
+//  culture.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.p-culture {
+  // Environment
+  &__envTop {
+    background-color: #FFF;
+    margin-top: 7.33vw;
+    padding-top: 7.33vw;
+    padding-bottom: 7.33vw;
+    @include med.media(sp) {
+      margin-top: 20vw;
+      padding-top: 20vw;
+      padding-bottom: 20vw;
+    }
+  }
+
+  &__envTopInner {
+    width: 76.2vw;
+    margin: 0 auto;
+    @include med.media(sp) {
+      width: 89.33vw;
+    }
+  }
+
+  &__envTopList {
+    margin: 4.4vw auto 0;
+    display: flex;
+    justify-content: space-between;
+    > li {
+      width: 30.77%;
+    }
+
+    @include med.media(sp) {
+      margin-top: 10.67vw;
+      display: block;
+      > li {
+        width: 100%;
+        margin-bottom: 17.33vw;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__envTopImg {
+    position: relative;
+    > img {
+      position: relative;
+      width: 96.875%;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      width: 96.875%;
+      height: 100%;
+      border: 1px solid var.$ACCENT_BLUE;
+      top: 3%;
+      left: 3%;
+    }
+  }
+
+  &__envTopText {
+    margin-top: 2.2vw;
+
+    @include med.media(sp) {
+      margin-top: 8vw;
+    }
+
+    > h3 {
+      font-size: 1.32vw;
+      font-weight: bold;
+      color: var.$ACCENT_BLUE;
+      position: relative;
+      padding-left: 1.47vw;
+      margin-bottom: 2vw;
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 0.73vw;
+        height: 1px;
+        background-color: var.$ACCENT_BLUE;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @include med.media(sp) {
+          width: 2.67vw;
+        }
+      }
+
+      @include med.media(sp) {
+        font-size: 4.27vw;
+        padding-left: 5.34vw;
+        margin-bottom: 5.34vw;
+      }
+    }
+
+    > dl {
+      margin-bottom: 1.47vw;
+      @include med.media(sp) {
+        margin-bottom: 5.33vw;
+      }
+
+      dt {
+        font-weight: bold;
+        margin-bottom: 0.73vw;
+        @include med.media(sp) {
+          margin-bottom: 2.67vw;
+        }
+      }
+      dt,dd {
+        font-size: 1.03vw;
+        line-height: 1.71;
+        @include med.media(sp) {
+          font-size: 3.47vw;
+        }
+      }
+    }
+
+    > p {
+      font-size: 1.03vw;
+      line-height: 1.71;
+      @include med.media(sp) {
+        font-size: 3.47vw;
+      }
+    }
+  }
+
+  &__envSwiperArea {
+    background-color: #FFF;
+    padding-bottom: 7.33vw;
+    > h2 {
+      margin-left: 11.2vw;
+      @include med.media(sp) {
+        margin-left: 5.33vw;
+      }
+    }
+  }
+
+  &__envSwiperArea {
+    position: relative;
+    overflow-x: hidden;
+    // Swiper custom
+    .swiper-pagination {
+      position: static;
+      margin-top: 2.2vw;
+      @include med.media(sp) {
+        margin-top: 10.67vw;
+      }
+    }
+
+    .swiper-button-prev, .swiper-container-rtl .swiper-button-prev {
+      left: 22%;
+      top: 39%;
+      @include med.media(sp) {
+        left: 5.33%;
+        top: 40%;
+      }
+    }
+
+    .swiper-button-next, .swiper-container-rtl .swiper-button-next {
+      right: 22%;
+      top: 39%;
+      @include med.media(sp) {
+        right: 5.33%;
+        top: 40%;
+      }
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      width: 3.2vw;
+      height: 3.2vw;
+      background-color: #FFF;
+      border-radius: 50%;
+      box-shadow: 0px 3px 6px #00000029;
+      &:hover {
+        transition: opacity 0.2s;
+        opacity: 0.8;
+      }
+
+      &::after {
+        font-size: 1.5vw;
+        font-weight: bold;
+        color: var.$ACCENT_BLUE;
+        @include med.media(sp) {
+          font-size: 3.5vw;
+        }
+      }
+
+      @include med.media(sp) {
+        width: 9.33vw;
+        height: 9.33vw;
+      }
+    }
+
+    .swiper-pagination-bullet {
+      width: 0.59vw;
+      height: 0.59vw;
+      background-color: var.$ACCENT_BLUE;
+      margin: 0 0.733vw !important;
+      @include med.media(sp) {
+        width: 2.13vw;
+        height: 2.13vw;
+        margin: 0 2.665vw !important;
+      }
+    }
+
+    &.--peopleSwiper {
+      .swiper-button-prev, .swiper-container-rtl .swiper-button-prev {
+        @include med.media(sp) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+
+      .swiper-button-next, .swiper-container-rtl .swiper-button-next {
+        @include med.media(sp) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+
+  &__envSwiper {
+    margin-top: 4.4vw;
+    @include med.media(sp) {
+      margin-top: 14.4vw;
+    }
+    > li {
+      > p {
+        font-size: 1.03vw;
+        line-height: 1.43;
+        margin-top: 0.73vw;
+        @include med.media(sp) {
+          font-size: 3.47vw;
+          margin-top: 2.67vw;
+        }
+      }
+    }
+  }
+
+  &__swiperImg {
+    position: relative;
+    > img {
+      width: 100%;
+    }
+
+    > span {
+      position: absolute;
+      background-color: #FFF;
+      display: inline-block;
+      padding: 0.44vw;
+      font-size: 1.03vw;
+      font-weight: bold;
+      bottom: 0.6vw;
+      left: -0.6vw;
+
+      @include med.media(sp) {
+        padding: 0.8vw;
+        font-size: 3.47vw;
+        bottom: 1.6vw;
+        left: -1.6vw;
+      }
+    }
+  }
+
+  // Welfare
+  &__welfare {
+    width: 76.2vw;
+    margin: 7.32vw auto 0;
+    @include med.media(sp) {
+      width: 89.3vw;
+      margin-top: 20vw;
+    }
+  }
+
+  &__welfareHeading {
+    margin-bottom: 2.93vw;
+    @include med.media(sp) {
+      margin-bottom: 10.67vw;
+    }
+  }
+
+  &__welfareCard {
+    margin-bottom: 2.2vw;
+    background-color: #FFF;
+    border-radius: 0.73vw;
+    padding: 3.66vw 2.93vw 1.46vw;
+    box-shadow: 0px 3px 6px #00000014;
+
+    @include med.media(sp) {
+      padding: 10.67vw 5.33vw;
+      margin-bottom: 5.33vw;
+      border-radius: 2.67vw;
+    }
+
+    &.--other {
+      margin-bottom: 0;
+    }
+  }
+
+  &__welfareCardHeading {
+    display: flex;
+    align-items: center;
+    > span {
+      display: inline-block;
+
+      &.icon {
+        width: 1.47vw;
+        margin-right: 0.36vw;
+        > img {
+          width: 100%;
+        }
+
+        @include med.media(sp) {
+          width: 5.07vw;
+          margin-right: 1.33vw;
+        }
+      }
+
+      &.text {
+        font-size: 1.32vw;
+        font-weight: bold;
+        color: var.$ACCENT_BLUE;
+
+        @include med.media(sp) {
+          font-size: 4.27vw;
+        }
+      }
+    }
+  }
+
+  &__welfareDetail {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2.93vw;
+    justify-content: space-between;
+    > li {
+      width: 47.5%;
+      margin-bottom: 2.2vw;
+    }
+
+    @include med.media(sp) {
+      margin-top: 8vw;
+      > li {
+        width: 100%;
+        margin-bottom: 6.7vw;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__welfareDetailInner {
+    padding-left: 1.47vw;
+    border-left: 2px solid #BABABA;
+
+    @include med.media(sp) {
+      padding-left: 4vw;
+      border-left: 1px solid #BABABA;
+    }
+
+    > p {
+      font-size: 1.03vw;
+      line-height: 1.71;
+
+      @include med.media(sp) {
+        font-size: 3.47vw;
+      }
+
+      &:nth-child(1) {
+        font-weight: bold;
+      }
+
+      &:nth-child(2) {
+        color: #121212;
+        margin-top: 0.73vw;
+        @include med.media(sp) {
+          margin-top: 2.67vw;
+        }
+      }
+    }
+  }
+
+  // Number
+  &__number {
+    width: 76.2vw;
+    margin: 7.7vw auto 0;
+    @include med.media(sp) {
+      width: 94.67vw;
+      margin-top: 20vw;
+    }
+  }
+
+  &__numberTitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5.5vw;
+
+    @include med.media(sp) {
+      margin-bottom: 10.67vw;
+    }
+
+    > span {
+      display: inline-block;
+
+      &.icon {
+        margin-right: 2.42vw;
+        > img {
+          width: 100%;
+        }
+
+        @include med.media(sp) {
+          margin-right: 4vw;
+        }
+
+        &.--first {
+          width: 5.5vw;
+          @include med.media(sp) {
+            width: 16.67vw;
+          }
+        }
+
+        &.--second {
+          width: 6.74vw;
+          @include med.media(sp) {
+            width: 20vw;
+          }
+        }
+      }
+
+      &.text {
+        font-size: 1.9vw;
+        font-weight: bold;
+        color: var.$ACCENT_BLUE;
+        background-color: #FFF;
+        padding: 0.44vw;
+
+        @include med.media(sp) {
+          font-size: 5.6vw;
+          padding: 1.07vw;
+        }
+      }
+    }
+  }
+
+  &__graphArea {
+    position: relative;
+    background-color: #FFF;
+    border-radius: 0.73vw;
+    box-shadow: 0px 3px 6px #00000029;
+    padding: 7.33vw 5.86vw;
+    @include med.media(sp) {
+      border-radius: 1.33vw;
+      padding: 20vw 2.67vw;
+    }
+  }
+
+  &__graphDate {
+    position: absolute;
+    font-size: 0.88vw;
+    color: var.$GRAY_3C;
+    top: 3.08vw;
+    right: 3.66vw;
+    @include med.media(sp) {
+      font-size: 2.67vw;
+      top: 2.67vw;
+      right: 2.67vw;
+    }
+  }
+
+  &__graph {
+    &--top {
+      padding-bottom: 4.4vw;
+      text-align: center;
+      > img {
+        width: 46.5vw;
+        @include med.media(sp) {
+          width: 100%;
+        }
+      }
+
+      @include med.media(sp) {
+        padding-bottom: 13.33vw;
+      }
+    }
+
+    &--middle {
+      border-top: 1px dashed var.$ACCENT_BLUE;
+      display: flex;
+      flex-wrap: wrap;
+      > li {
+        width: 50%;
+        &:nth-child(1) {
+          border-right: 1px dashed var.$ACCENT_BLUE;
+          padding-right: 2.93vw;
+          @include med.media(sp) {
+            padding-right: 2.67vw;
+          }
+        }
+
+        &:nth-child(2) {
+          padding-left: 2.93vw;
+          @include med.media(sp) {
+            padding-left: 2.67vw;
+          }
+        }
+      }
+
+      &.--noBorder {
+        border: none;
+      }
+
+      &.--spOneClm {
+        @include med.media(sp) {
+          > li {
+            width: 100%;
+            &:nth-child(1) {
+              padding-right: 0;
+              border-right: none;
+              border-bottom: 1px dashed var.$ACCENT_BLUE;
+            }
+
+            &:nth-child(2) {
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__graphImgWrap {
+    padding: 4.4vw 0;
+    > img {
+      width: 29.3vw;
+      @include med.media(sp) {
+        // width: 42vw;
+        width: 100%;
+      }
+    }
+
+    @include med.media(sp) {
+      padding: 13.33vw 0;
+    }
+  }
+}

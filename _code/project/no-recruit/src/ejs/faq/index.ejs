@@ -1,0 +1,225 @@
+<%
+  const data = {
+    isTop: false,
+    title: "Faq | NOS 新卒採用サイト",
+    description: "",
+    path: "..",
+    imgPath: "../images",
+    commonImgPath: "../images/common",
+    current: "faq",
+    hierarchy: "second",
+    crumbsText: "FAQ -よくある質問",
+    crumbsUrl: "",
+    crumbsParentText: "",
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="p-sub__container">
+      <%- include('../include/common/_header.ejs', {data: data}); %>
+      <main class="p-sub__main">
+        <%- include('../include/common/_breadCrumbs.ejs', {data: data}); %>
+        <div class="p-sub__fv">
+          <div class="p-sub__fvImg js-sub-fvImg">
+            <img class="is-pc" src="<%= data.imgPath %>/kv/faq.webp" alt="キービジュアル <%= data.crumbsText %>">
+            <img class="is-sp" src="<%= data.imgPath %>/kv/faq_sp.webp" alt="キービジュアル <%= data.crumbsText %>">
+          </div>
+          <section class="p-sub__topSection">
+            <h1 class="c-heading --faq p-sub__topHeading js-sub-titleTop">
+              <img src="<%= data.commonImgPath %>/heading_faq.svg" alt="<%= data.current %>">
+            </h1>
+            <p class="c-headingSub"><span>よくある質問</span></p>
+          </section>
+        </div>
+        <div class="p-sub__contents js-scrollFadeIn --block">
+          <p class="p-sub__description">NOSの採用情報について、よくある質問を掲載しています。<br>質問が見当たらない場合は、<a href="#" target="_blank">こちら</a>からお問い合わせください。</p>
+        </div>
+        <div class="p-faq">
+          <section class="p-faq__section">
+            <h2>採用・選考に関する質問</h2>
+            <ul class="p-faq__list">
+              <li>
+                <dl class="p-faq__listItem">
+                  <dt class="js-faq-menuTrigger">
+                    <div class="p-faq__question">
+                      <span class="p-faq__initials">Q.</span>
+                      <span class="p-faq__text">選考にはどのように参加すればよいですか。</span>
+                    </div>
+                    <button class="p-faq__menuTrigger">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </dt>
+                  <dd class="js-faq-answer">
+                    <div class="p-faq__answer">
+                      <span class="p-faq__initials">A.</span>
+                      <span class="p-faq__text">マイナビ、リクナビよりエントリーのうえ、まずは説明会にご参加ください。</span>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl class="p-faq__listItem">
+                  <dt class="js-faq-menuTrigger">
+                    <div class="p-faq__question">
+                      <span class="p-faq__initials">Q.</span>
+                      <span class="p-faq__text">ITの知識は必要ですか。</span>
+                    </div>
+                    <button class="p-faq__menuTrigger">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </dt>
+                  <dd class="js-faq-answer">
+                    <div class="p-faq__answer">
+                      <span class="p-faq__initials">A.</span>
+                      <span class="p-faq__text">ITを学ばれている方、知識のある方は歓迎いたしますが、応募時点では必要ありません。<br>入社後の研修や、OJT期間で充分に学習していただくことができます。<br>ITに対する興味・関心を高く持ち、常に最新の情報を学ぼうとする姿勢のある方を採用いたします。</span>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl class="p-faq__listItem">
+                  <dt class="js-faq-menuTrigger">
+                    <div class="p-faq__question">
+                      <span class="p-faq__initials">Q.</span>
+                      <span class="p-faq__text">文系でも応募できますか。</span>
+                    </div>
+                    <button class="p-faq__menuTrigger">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </dt>
+                  <dd class="js-faq-answer">
+                    <div class="p-faq__answer">
+                      <span class="p-faq__initials">A.</span>
+                      <span class="p-faq__text">各職種で文理学部で制限は設けておりません。<br>過去3年間の採用実績では、80%以上が文系学生です。<br>文系出身のSEや、理系出身の営業など、出身学部を問わず、各方面で活躍している先輩社員が多数在籍しています。<br>入社後は研修を通してITの基礎をしっかり学べます。</span>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </section>
+          <section class="p-faq__section">
+            <h2>配属に関する質問</h2>
+            <ul class="p-faq__list">
+              <li>
+                <dl class="p-faq__listItem">
+                  <dt class="js-faq-menuTrigger">
+                    <div class="p-faq__question">
+                      <span class="p-faq__initials">Q.</span>
+                      <span class="p-faq__text">研修はどのように実施しますか。</span>
+                    </div>
+                    <button class="p-faq__menuTrigger">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </dt>
+                  <dd class="js-faq-answer">
+                    <div class="p-faq__answer">
+                      <span class="p-faq__initials">A.</span>
+                      <span class="p-faq__text">入社後の社会人マナー研修、ヒューマンスキル研修、ITスキル研修を約3か月弱行います。<br>その後仮配属となります。<br>本配属となるのは、入社から1年後の4月です。<br>本配属までの期間が長いのがNOSの特徴で、それまでの期間は研修や、先輩の下での仮配属の中でじっくりと基礎的な技術や知識を身につけてもらいます。</span>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl class="p-faq__listItem">
+                  <dt class="js-faq-menuTrigger">
+                    <div class="p-faq__question">
+                      <span class="p-faq__initials">Q.</span>
+                      <span class="p-faq__text">配属はどのように決まりますか。</span>
+                    </div>
+                    <button class="p-faq__menuTrigger">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </dt>
+                  <dd class="js-faq-answer">
+                    <div class="p-faq__answer">
+                      <span class="p-faq__initials">A.</span>
+                      <span class="p-faq__text">研修の中での適性や、ご本人の希望、現場のニーズをみて判断いたします。<br>まずは採用時にご本人の希望を確認します。</span>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl class="p-faq__listItem">
+                  <dt class="js-faq-menuTrigger">
+                    <div class="p-faq__question">
+                      <span class="p-faq__initials">Q.</span>
+                      <span class="p-faq__text">異動希望はだせますか。</span>
+                    </div>
+                    <button class="p-faq__menuTrigger">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </dt>
+                  <dd class="js-faq-answer">
+                    <div class="p-faq__answer">
+                      <span class="p-faq__initials">A.</span>
+                      <span class="p-faq__text">1年に1回異動希望を申請する仕組みがあります。<br>ただ現場のニーズのを考慮のうえ判断しますので、異動をお約束するものではありません。</span>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </section>
+          <section class="p-faq__section">
+            <h2>その他に関する質問</h2>
+            <ul class="p-faq__list">
+              <li>
+                <dl class="p-faq__listItem">
+                  <dt class="js-faq-menuTrigger">
+                    <div class="p-faq__question">
+                      <span class="p-faq__initials">Q.</span>
+                      <span class="p-faq__text">職種別の人員構成を教えてください。</span>
+                    </div>
+                    <button class="p-faq__menuTrigger">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </dt>
+                  <dd class="js-faq-answer">
+                    <div class="p-faq__answer">
+                      <span class="p-faq__initials">A.</span>
+                      <span class="p-faq__text">SE約71％、営業約15％、管理部門約14％となっています。ITサービスをワンストップサービスで提供しているのでSEが多い割合になっています。</span>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+              <li>
+                <dl class="p-faq__listItem">
+                  <dt class="js-faq-menuTrigger">
+                    <div class="p-faq__question">
+                      <span class="p-faq__initials">Q.</span>
+                      <span class="p-faq__text">残業は多いのでしょうか。</span>
+                    </div>
+                    <button class="p-faq__menuTrigger">
+                      <span></span>
+                      <span></span>
+                    </button>
+                  </dt>
+                  <dd class="js-faq-answer">
+                    <div class="p-faq__answer">
+                      <span class="p-faq__initials">A.</span>
+                      <span class="p-faq__text">担当する業務によって異なりますが、全体としてはそこまで多くありません。メリハリを持って働ける環境です。</span>
+                    </div>
+                  </dd>
+                </dl>
+              </li>
+            </ul>
+          </section>
+          <p class="p-faq__bottomText">質問が見当たらない場合は、<a href="#" target="_blank">こちら</a>からお問い合わせください。</p>
+        </div>
+        <%- include('../include/common/_entryBottom.ejs', {data: data}); %>
+      </main>
+      <%- include('../include/common/_scrollTop.ejs', {data: data}); %>
+      <%- include('../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

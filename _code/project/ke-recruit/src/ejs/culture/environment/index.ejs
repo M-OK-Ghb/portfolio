@@ -1,0 +1,340 @@
+<%
+  const dataSet = {
+    title: 'KEL 新卒採用サイト',
+    desc: 'KEL 新卒採用サイト description',
+    srcpath: '../../'
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/_head.ejs', { data: dataSet } ) %>
+  <body data-page="culture-environment">
+    <div>
+      <%- include('../../include/_header.ejs', { data: dataSet } ) %>
+      <main class="p-cultureMain c-subPage__main">
+        <div class="c-breadCrumbs">
+          <ul class="c-breadCrumbs__list">
+            <li><a href="<%= dataSet.srcpath %>">トップ</a></li>
+            <li><a href="<%= dataSet.srcpath %>culture/">働く環境</a></li>
+            <li><span>KELの働く環境</span></li>
+          </ul>
+        </div>
+        <div class="p-cultureMain__content">
+          <div class="c-subPage__firstVisual">
+            <img src="<%= dataSet.srcpath %>images/culture_environment_mv.jpg" alt="culture environment image">
+            <div class="c-subPage__textWrap">
+              <div class="c-subPage__textInner">
+                <div class="c-subPage__headingWrap">
+                  <div class="c-subPage__headingInner">
+                    <h2 class="c-subPage__heading js-subpage-titleAnimation">CULTURE</h2>
+                    <p class="c-subPage__subText js-subpage-titleAnimation">-KELの働く環境</p>
+                  </div>
+                </div>
+                <p class="c-subPage__detailText cultureEnvironment js-loadFadeIn">KELが考える働きやすい環境とは？<br>オフィス風景と合わせてご紹介します。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-culture__commonWrap">
+          <div class="p-culture__environmentTop js-loadFloatFadeIn">
+            <div class="p-culture__environmentHeadingWrap">
+              <h3 class="c-subPage__genre--heading">Environment</h3>
+              <p class="c-subPage__genre--headingSub">働きやすい環境</p>
+            </div>
+            <ul class="p-culture__environmentAppeal">
+              <li>
+                <div class="p-culture__environmentAppealImg">
+                  <img src="<%= dataSet.srcpath %>images/environment_meetingroom.jpg" alt="執務室・打ち合わせスペース">
+                  <!--fukidashi_01.svg-->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="79" viewBox="0 0 60 79">
+                    <g transform="translate(-348 -1527)">
+                      <g transform="translate(0 -4)">
+                        <circle cx="30" cy="30" r="30" transform="translate(348 1531)" fill="#003f93"/>
+                        <path d="M7.5,0,15,25H0Z" transform="translate(386 1610) rotate(180)" fill="#003f93"/>
+                      </g>
+                      <text transform="translate(363 1567)" fill="#fff" font-size="30" font-family="Raleway-Medium, Raleway" font-weight="500" letter-spacing="-0.02em"><tspan x="0" y="0">01</tspan></text>
+                    </g>
+                  </svg>
+                </div>
+                <div class="p-culture__appealHeadingWrap">
+                  <h3 class="p-culture__appealHeading">執務室・打ち合わせスペース</h3>
+                </div>
+                <ul class="p-culture__appealList borderAdjust">
+                  <li>
+                    <p>部署（職種）ごとにフロアが分かれており、それぞれの部署の特色がでたフロアになっています。</p>
+                  </li>
+                  <li>
+                    <p>ガラス張りの会議室は日当たりもよく、大事な会議の際に利用されています。</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="p-culture__environmentAppealImg">
+                  <img src="<%= dataSet.srcpath %>images/environment_cafespace.jpg" alt="カフェスペース・リモートワークスペース">
+                  <!--fukidashi_02.svg-->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="79" viewBox="0 0 60 79">
+                    <g transform="translate(-348 -1527)">
+                      <g transform="translate(0 -4)">
+                        <circle cx="30" cy="30" r="30" transform="translate(348 1531)" fill="#003f93"/>
+                        <path d="M7.5,0,15,25H0Z" transform="translate(386 1610) rotate(180)" fill="#003f93"/>
+                      </g>
+                      <text transform="translate(363 1567)" fill="#fff" font-size="30" font-family="Raleway-Medium, Raleway" font-weight="500" letter-spacing="-0.02em"><tspan x="0" y="0">02</tspan></text>
+                    </g>
+                  </svg>                  
+                </div>
+                <div class="p-culture__appealHeadingWrap">
+                  <h3 class="p-culture__appealHeading">カフェスペース・<br>リモートワークスペース</h3>
+                </div>
+                <ul class="p-culture__appealList">
+                  <li>
+                    <p>開放的なスペース</p>
+                  </li>
+                  <li>
+                    <p>休憩スペースとしても、一人で作業したい人にも</p>
+                  </li>
+                  <li>
+                    <p>完全個室のリモートワークスペースがあります</p>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <div class="p-culture__environmentAppealImg">
+                  <img src="<%= dataSet.srcpath %>images/environment_nearstation.jpg" alt="駅から近い">
+                  <!--fukidashi_03.svg-->
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="79" viewBox="0 0 60 79">
+                    <g transform="translate(-348 -1527)">
+                      <g transform="translate(0 -4)">
+                        <circle cx="30" cy="30" r="30" transform="translate(348 1531)" fill="#003f93"/>
+                        <path d="M7.5,0,15,25H0Z" transform="translate(386 1610) rotate(180)" fill="#003f93"/>
+                      </g>
+                      <text transform="translate(363 1567)" fill="#fff" font-size="30" font-family="Raleway-Medium, Raleway" font-weight="500" letter-spacing="-0.02em"><tspan x="0" y="0">03</tspan></text>
+                    </g>
+                  </svg>                  
+                </div>
+                <div class="p-culture__appealHeadingWrap">
+                  <h3 class="p-culture__appealHeading">駅から近い</h3>
+                </div>
+                <ul class="p-culture__appealList">
+                  <li>
+                    <p>宝町駅の目の前に本社ビルがあり好立地</p>
+                  </li>
+                  <li>
+                    <p>京橋駅や八丁堀駅からの通勤も可能</p>
+                  </li>
+                  <li>
+                    <p>終業後の買い物や食事も楽しめます</p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="p-culture__environmentSwiper js-scrollFloatFadeIn">
+            <h4 class="p-culture__environmentSwiperHeading">KELのオフィス環境</h4>
+            <div class="p-culture__swiperParent">
+              <div class="p-culture__swiperCarouselWrap swiper-container">
+                <ul class="swiper-wrapper p-culture__swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_office_1.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>エントランス/東京オフィス</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_office_2.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>会議室/東京オフィス</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_office_3.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>セミナールーム/東京オフィス</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_office_4.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>執務室/東京オフィス</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_office_5.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>リモートワークスペース/東京オフィス</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_office_6.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>打ち合わせスペース/東京オフィス</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_office_7.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>エントランス/大阪オフィス</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_office_8.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>エントランス/名古屋オフィス</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_office_9.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>会議室/名古屋オフィス</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_office_10.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>執務室/名古屋オフィス</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_office_11.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>打ち合わせスペース/名古屋オフィス</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_office_12.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>打ち合わせスペース/名古屋オフィス</h4>
+                    </div>
+                  </li>
+                </ul>
+                <div class="p-culture__swiperBg"></div>
+              </div>
+              <div class="swiper-button-prev p-culture__carouselPrev p-culture__carouselBtn"></div>
+              <div class="swiper-button-next p-culture__carouselNext p-culture__carouselBtn"></div>
+            </div>
+          </div>
+          <div class="p-culture__environmentSwiper bottom js-scrollFloatFadeIn">
+            <h4 class="p-culture__environmentSwiperHeading">KELで働く人たち</h4>
+            <div class="p-culture__swiperParent">
+              <div class="p-culture__swiperCarouselWrap swiper-container">
+                <ul class="swiper-wrapper p-culture__swiper-wrapper">
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_people_1.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>東京オフィス（1/7)</h4>
+                      <!-- <p>元のキャプション本文時のDOM</p> -->
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_people_2.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>東京オフィス（2/7)</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_people_3.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>東京オフィス（3/7)</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_people_4.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>東京オフィス（4/7)</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_people_5.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>東京オフィス（5/7)</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_people_6.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>東京オフィス（6/7)</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_people_7.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>東京オフィス（7/7)</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_people_8.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>大阪オフィス（1/4)</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_people_9.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>大阪オフィス（2/4)</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_people_10.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>大阪オフィス（3/4)</h4>
+                    </div>
+                  </li>
+                  <li class="swiper-slide">
+                    <img src="<%= dataSet.srcpath %>images/environment_people_11.jpg" alt="">
+                    <div class="p-culture__environmentText">
+                      <h4>大阪オフィス（4/4)</h4>
+                    </div>
+                  </li>
+                </ul>
+                <div class="p-culture__swiperBg"></div>
+              </div>
+              <div class="swiper-button-prev p-culture__carouselPrev p-culture__carouselBtn"></div>
+              <div class="swiper-button-next p-culture__carouselNext p-culture__carouselBtn"></div>
+            </div>
+          </div>
+        </div>
+        <div class="c-subPage__brotherLinkArea p-culture__brotherLink">
+          <p>他の働く環境・各種制度のメニューを見る</p>
+          <div class="c-subPage__brotherLinkWrap">
+            <div class="c-subPage__brotherLink">
+              <a href="<%= dataSet.srcpath %>culture/welfare/">
+               <img src="<%= dataSet.srcpath %>images/culture_welfare_banner.jpg" alt="福利厚生・各種制度">
+               <div class="c-subPage__brotherLinkText c-subPage__brotherLinkText--culture">
+                 <h3>福利厚生・各種制度</h3>
+                 <div class="c-subPage__brotherLinkBottom c-subPage__brotherLinkBottom--culture welfare">
+                   <p>KELでは柔軟性の高い働き方を実現するための各種制度を策定しています。その制度について詳しくご案内します。</p>
+                   <div class="c-circleBtn">
+                     <span class="c-circleBtn__circle">
+                       <span class="c-circleBtn__arrow"></span>
+                     </span>
+                   </div>
+                 </div>
+               </div>
+              </a>
+            </div>
+            <div class="c-subPage__brotherLink">
+              <a href="<%= dataSet.srcpath %>culture/number/">
+               <img src="<%= dataSet.srcpath %>images/culture_number_banner.jpg" alt="数字で見るKEL">
+               <div class="c-subPage__brotherLinkText c-subPage__brotherLinkText--culture">
+                 <h3>数字で見るKEL</h3>
+                 <div class="c-subPage__brotherLinkBottom c-subPage__brotherLinkBottom--culture">
+                   <p>KELはどのような会社か？会社について、働く人について、特徴的な数字を集めてみました。</p>
+                   <div class="c-circleBtn">
+                     <span class="c-circleBtn__circle">
+                       <span class="c-circleBtn__arrow"></span>
+                     </span>
+                   </div>
+                 </div>
+               </div>
+              </a>
+            </div>
+          </div>
+        </div>
+        <%- include('../../include/parts/_entryBtn.ejs') %>
+      </main>
+      <%- include('../../include/_footer.ejs', { data: dataSet } ) %>
+    </div>
+    <script src="<%= dataSet.srcpath %>js/swiper.min.js"></script>
+    <script src="<%= dataSet.srcpath %>js/common.js"></script>
+  </body>
+</html>

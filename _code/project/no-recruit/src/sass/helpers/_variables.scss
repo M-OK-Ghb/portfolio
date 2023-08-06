@@ -1,0 +1,45 @@
+// -------------------------------------------------------------------
+//  variables.scss
+// -------------------------------------------------------------------
+
+// Width
+// -------------------------------------------------------------------
+$ADJUST_SP_POINT: 640px;
+$BREAK_POINT_SP: 960px;
+$BREAK_POINT_TABLET: 960px;
+
+// Font
+// -------------------------------------------------------------------
+$BASE_FONT_FAMILY: "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック体", "YuGothic", "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+$EN_FONT_BASIC: Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans", Meiryo, sans-serif;
+
+@font-face {
+  font-family: "游ゴシック体 StdN E";
+  src: url("../font/YuGoStdN-E.woff") format("woff");
+}
+
+@font-face {
+  font-family: "游ゴシック体 StdN H";
+  src: url("../font/YuGoStdN-H.woff") format("woff");
+}
+
+$YU_GO_E: "游ゴシック体 StdN E";
+$YU_GO_H: "游ゴシック体 StdN H";
+
+// Color
+// -------------------------------------------------------------------
+$BASE_TEXT_COLOR: #000;
+$BASE_BG: #FFF;
+$ACCENT_BLUE: #150578;
+$LIGHT_BLUE: #0E1279;
+$BG_CREAM: #FAFAFA;
+$GRAY_3C: #3C3C3C;
+
+$SE_COLOR: #008B92;
+$SALES_COLOR: #A53860;
+
+$LIST_LABEL_COLOR: #846C5B;
+
+$MYNAVI_COLOR: #2473BD;
+$RIKUNABI_COLOR: #A53860;
+

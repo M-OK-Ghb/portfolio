@@ -1,0 +1,112 @@
+// -------------------------------------------------------------------
+// 	heading.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.c-heading {
+  &--pageTitle {
+    color: #8C9091;
+    font-size: 90px;
+    line-height: 1;
+    font-weight: bold;
+    font-family: var.$FONT_RALEWAY;
+
+    @include med.media(sp) {
+      font-size: 14.67vw;
+    }
+  }
+}
+
+.c-headingBorderDouble {
+  position: relative;
+  display: flex;
+  align-items: center;
+  line-height: 2;
+
+  > span {
+    display: inline-block;
+
+    &.title {
+      font-size: 20px;
+      color: #323232;
+      position: relative;
+      z-index: 1;
+      margin-right: 15px;
+      border-bottom: 2px solid #003F93;
+      font-weight: bold; 
+    }
+
+    &.detail {
+      color: #666666;
+      font-size: 16px;
+    }
+  }
+
+  .c-headingBorderBase {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #CCCCCC;
+  }
+
+  &.welfare {
+    margin-bottom: 30px;
+
+    @include med.media(sp) {
+      margin-bottom: 5vw;
+    }
+
+    > span {
+      &.title {
+        color: #666;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        padding-bottom: 6px;
+
+        @include med.media(sp) {
+          font-size: 4.5vw;
+        }
+
+        > img {
+          width: 32px;
+          height: 32px;
+          margin-right: 8px;
+
+          @include med.media(sp) {
+            width: 7vw;
+            height: 7vw;
+            margin-right: 2.2vw;
+          }
+        }
+
+        > span {
+          padding-right: 4px;
+        }
+      }
+    }
+
+    .c-headingBorderBase {
+      background-color: #C1C1C1;
+    }
+  }
+
+  &.recruitTraining {
+    @include med.media(sp) {
+      > span {
+        &.title {
+          font-size: 4.5vw;
+          margin-right: 3vw;
+        }
+
+        &.detail {
+          font-size: 3.4vw;
+        }
+      }
+    }
+  }
+}

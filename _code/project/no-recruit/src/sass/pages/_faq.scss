@@ -1,0 +1,164 @@
+// -------------------------------------------------------------------
+//  faq.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/mixin" as mix;
+
+.p-faq {
+  width: 76.2vw;
+  margin: 7.32vw auto 0;
+
+  @include med.media(sp) {
+    width: 90vw;
+    margin-top: 22vw;
+  }
+
+  &__section {
+    background-color: #FFF;
+    padding: 3.66vw 2.93vw;
+    border-radius: 0.73vw;
+    box-shadow: 0px 3px 6px #00000014;
+    margin-bottom: 2.2vw;
+
+    > h2 {
+      font-size: 1.32vw;
+      font-weight: bold;
+      color: var.$ACCENT_BLUE;
+      @include med.media(sp) {
+        font-size: 4.27vw;
+      }
+    }
+
+    @include med.media(sp) {
+      padding: 10.67vw 5.33vw;
+      border-radius: 2.67vw;
+      margin-bottom: 5.33vw;
+    }
+  }
+
+  &__bottomText {
+    font-size: 1.32vw;
+    > a {
+      font-weight: bold;
+      text-decoration: underline;
+      @include mix.lightHover;
+    }
+
+    @include med.media(sp) {
+      font-size: 4.27vw;
+      line-height: 1.5625;
+    }
+  }
+
+  &__list {
+    > li {
+      border-bottom: 1px solid #D8D8D8;
+      padding: 2.2vw 0;
+      @include med.media(sp) {
+        padding: 6.6vw 0;
+      }
+    }
+  }
+
+  &__listItem {
+    > dt {
+      cursor: pointer;
+      font-weight: normal;
+      display: flex;
+      justify-content: space-between;
+      @include mix.lightHover;
+
+      &.is-open {
+        .p-faq__menuTrigger {
+          > span {
+            &:nth-child(2) {
+              opacity: 0;
+            }
+          }    
+        }
+      }
+    }
+
+    > dd {
+      transition: max-height 0.5s;
+      overflow: hidden;
+      max-height: 0;
+
+      &.is-open {
+        max-height: 500px;
+      }
+
+      a {
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__menuTrigger {
+    position: relative;
+    width: 0.88vw;
+    height: 0.88vw;
+
+    @include med.media(sp) {
+      width: 4.53vw;
+      height: 4.53vw;
+    }
+
+    > span {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: var.$ACCENT_BLUE;
+
+      &:nth-child(2) {
+        transition: opacity 0.3s;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &__initials {
+    font-size: 1.17vw;
+    line-height: 1.6;
+    font-weight: bold;
+    font-family: var.$EN_FONT_BASIC;
+    color: var.$ACCENT_BLUE;
+    margin-right: 0.73vw;
+    @include med.media(sp) {
+      font-size: 4vw;
+      margin-right: 1.33vw;
+    }
+  }
+
+  &__text {
+    width: 64.5vw;
+    font-size: 1.03vw;
+    line-height: 1.71;
+    @include med.media(sp) {
+      font-size: 3.47vw;
+    }
+  }
+
+  &__question {
+    display: flex;
+    > span {
+      display: inline-block;
+    }
+  }
+
+  &__answer {
+    display: flex;
+    padding-top: 1.2vw;
+
+    @include med.media(sp) {
+      padding-top: 5.3vw;
+    }
+
+    > span {
+      display: inline-block;
+    }
+  }
+}
