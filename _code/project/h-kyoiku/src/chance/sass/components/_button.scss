@@ -1,0 +1,63 @@
+// -------------------------------------------------------------------
+// 	button.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-linkButton {
+  margin-top: 20px;
+  width: 625px;
+  height: 150px;
+  line-height: 150px;
+
+  @include med.media(sp) {
+    width: 100%;
+    height: 20vw;
+    line-height: 20vw;
+  }
+
+  > a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var.$ACCENT_TEXT_COLOR;
+    background-color: #fff;
+    text-align: center;
+    font-family: var.$EM_FONT_FAMILY;
+    font-size: 33px;
+    letter-spacing: 1.65px;
+    border: 3px solid var.$ACCENT_TEXT_COLOR;
+    border-radius: 6px;
+    box-shadow: 3px 3px var.$ACCENT_TEXT_COLOR;
+    @include med.media(sp) {
+      font-size: 4.4vw;
+    }
+
+    > svg {
+      width: 26px;
+      height: 26px;
+      margin-left: 4px;
+      @include med.media(sp) {
+        width: 3.46vw;
+        height: 3.46vw;
+        margin-left: 0.533vw;
+      }
+    }
+
+    &:hover {
+      transition: color 0.3s, background-color 0.3s;
+      color: #fff;
+      background-color: var.$ACCENT_TEXT_COLOR;
+      > svg {
+        g {
+          > path {
+            transition: fill 0.3s;
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+}

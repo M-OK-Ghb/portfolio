@@ -1,0 +1,48 @@
+// -------------------------------------------------------------------
+// 	backLink.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-backLink {
+  text-align: center;
+  &.top {
+    text-align: left;
+    > a {
+      svg {
+        width: 22px;
+        height: 22px;
+        vertical-align: text-top;
+        @include med.media(sp) {
+          width: 3vw;
+          height: 3vw;
+        }
+      }
+    }
+  }
+  > a {
+    display: inline-block;
+    color: var.$ACCENT_TEXT_COLOR;
+    font-family: var.$EM_FONT_FAMILY;
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: 1.2px;
+
+    &:hover {
+      transition: 0.3s;
+      opacity: 0.5;
+    }
+
+    > img {
+      vertical-align: middle;
+    }
+
+    @include med.media(sp) {
+      font-size: 3.2vw;
+      letter-spacing: 0.16vw;
+      > img {
+        width: 3.465vw;
+      }
+    }
+  }
+}

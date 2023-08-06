@@ -1,0 +1,48 @@
+// -------------------------------------------------------------------
+// 	navBottom.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-navBottom {
+  width: 88%;
+  max-width: 1200px;
+  margin: 90px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include med.media(sp) {
+    width: 92%;
+    margin-top: 12vw;
+    align-items: flex-start;
+  }
+}
+
+.c-navBackLink {
+  width: 625px;
+  @include med.media(sp) {
+    width: 27vw;
+    padding-top: 25vw;
+  }
+}
+
+.c-navLinkWrap {
+  width: 210px;
+  > a {
+    display: block;
+    width: 100%;
+    > img {
+      width: 100%;
+    }
+
+    &:hover {
+      transition: 0.3s opacity;
+      opacity: 0.5;
+    }
+  }
+
+  @include med.media(sp) {
+    width: 27.33vw;
+  }
+}
