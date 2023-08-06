@@ -1,0 +1,119 @@
+// -------------------------------------------------------------------
+//  top.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.p-top {
+  &__bg {
+    background-image: url("../images/bg_top_ decoration.png");
+    background-size: 100% auto;
+  }
+
+  &__fv {
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    @include med.media(sp) {
+      height: calc(var(--vh, 1vh) * 100);
+    }
+  }
+
+  &__fvImg {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 8s cubic-bezier(0.37, 0, 0.63, 1);
+    }
+
+    &.is-zoom {
+      > img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__fvLogo {
+    width: 26.5%;
+    position: absolute;
+    left: 4.4%;
+    bottom: 60px;
+    > img {
+      width: 100%;
+    }
+
+    @include med.media(sp) {
+      max-width: 460px;
+      width: 61%;
+      left: 5.3%;
+      bottom: 8vw;
+    }
+  }
+
+  &__scrollSign {
+    width: 0.73%;
+    min-width: 10px;
+    position: absolute;
+    right: 4.4%;
+    bottom: 0;
+
+    > img {
+      width: 100%;
+    }
+
+    @include med.media(sp) {
+      display: none;
+    }
+  }
+
+  &__sponsor {
+    width: 720px;
+    margin: auto;
+    @include med.media(sp) {
+      width: 81.5%;
+    }
+  }
+
+  &__sponsorText {
+    text-align: center;
+    font-family: var.$SEMPLI_FAMILY;
+    font-size: 12px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    color: #585858;
+  }
+
+  &__sponsorList {
+    margin-top: 15px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+
+    @include med.media(sp) {
+      flex-wrap: wrap;
+      margin-top: 2.65vw;
+      margin-bottom: 13.33vw;
+    }
+
+    > li {
+      > img {
+        width: auto;
+        height: 42px;
+        @include med.media(sp) {
+          height: 12.4vw;
+        }
+      }
+
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+  }
+
+
+}

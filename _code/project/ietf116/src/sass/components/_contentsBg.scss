@@ -1,0 +1,13 @@
+// -------------------------------------------------------------------
+//  contentsBg.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-contentsBg {
+  background-image: url("../images/bg_top_ decoration.png");
+  background-size: 100% auto;
+  @include med.media(sp) {
+    background-size: 300% auto;
+  }
+}

@@ -1,0 +1,34 @@
+// -------------------------------------------------------------------
+//  footer.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.l-footer {
+  text-align: center;
+  padding-bottom: 15px;
+
+  @include med.media(sp) {
+    padding-bottom: 20px;
+  }
+
+  &__copyright {
+    font-family: var.$SEMPLI_FAMILY;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+    font-weight: 300;
+    color: #767676;
+  }
+
+  &__logo {
+    margin: 0 auto 10px;
+    width: 5.86vw;
+    > img {
+      width: 100%;
+    }
+
+    @include med.media(sp) {
+      width: 16vw;
+    }
+  }
+}

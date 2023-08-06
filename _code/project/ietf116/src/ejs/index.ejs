@@ -1,0 +1,28 @@
+<%
+  const data = {
+    isTop: true,
+    title: "TOP",
+    description: "",
+    path: ".",
+    commonImgPath: "images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('include/common/_head.ejs', {data: data}); %>
+  <body class="p-top__body js-top-body">
+    <div class="c-contentsBg">
+      <%- include('include/common/_header.ejs', {data: data}); %>
+      <main class="p-top__main">
+        <%- include('include/top/_fv.ejs', {data: data}); %>
+        <%- include('include/top/_news.ejs', {data: data}); %>
+        <%- include('include/top/_sponsor.ejs', {data: data}); %>
+        <%- include('include/common/_scrollTop.ejs', {data: data}); %>
+        <%- include('include/common/_bgLogo.ejs', {data: data}); %>
+      </main>
+      <%- include('include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

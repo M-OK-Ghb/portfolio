@@ -1,0 +1,26 @@
+// -------------------------------------------------------------------
+//  logoBg.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-bgLogo {
+  position: fixed;
+  z-index: -1;
+  bottom: 10px;
+  right: 0;
+  opacity: 0.1;
+  // [contentsWrapWidth(91.5vw) - {(headingWidth(86.25px) + contentsWidth(720px)}] / 2 = space
+  // width = space + rightSpace(4.25vw)
+  width: calc((91.5vw - 806.25px) / 2 + 3.25vw);
+  max-width: 400px;
+
+  @include med.media(sp) {
+    width: 45vw;
+    max-width: none;
+  }
+
+  > img {
+    width: 100%;
+  }
+}

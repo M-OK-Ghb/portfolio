@@ -1,0 +1,200 @@
+// -------------------------------------------------------------------
+//  header.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.l-header {
+  position: relative;
+  &__content {
+    width: 100%;
+    height: 50px;
+    padding-top: 15px;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background: transparent;
+    @include med.media(sp) {
+      padding-top: 0;
+    }
+  }
+
+  &__border {
+    position: fixed;
+    top: 51px;
+    z-index: 10;
+    width: 100%;
+    height: 1px;
+    background: rgba(255,255,255,.9);
+    mix-blend-mode: soft-light;
+    @include med.media(sp) {
+      display: none;
+    }
+  }
+
+  &__menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    > li {
+      margin-right: 30px;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include med.media(sp) {
+        margin-right: 0;
+        margin-bottom: 6.65vw;
+      }
+    }
+
+    @include med.media(sp) {
+      display: none;
+      text-align: center;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+  }
+
+  &__menuItem {
+    > a {
+      font-family: var.$SEMPLI_FAMILY;
+      font-size: 14px;
+      letter-spacing: 0.85px;
+      font-weight: 600;
+      color: #fff;
+
+      &:hover {
+        transition: opacity 0.5s;
+        opacity: 0.6;
+      }
+
+      @include med.media(sp) {
+        font-size: 6.4vw;
+        letter-spacing: 0.386vw;
+      }
+    }
+  }
+
+  &__menuTrigger {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+    }
+  }
+
+  &__menuBtnWrap {
+    display: none;
+    @include med.media(sp) {
+      display: block;
+    }
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__menuBtn {
+    position: relative;
+    width: 12.5vw;
+    height: 26.5vw;
+    > span {
+      display: inline-block;
+    }
+  }
+
+  &__menuBtnLine {
+    transition: transform 0.3s;
+    position: absolute;
+    background-color: #FFF;
+    height: 10.65vw;
+    width: 0.5325vw;
+    top: 0;
+    left: 50%;
+  }
+
+  &__menuBtnText {
+    color: #FFF;
+    font-family: var.$SEMPLI_FAMILY;
+    font-weight: bold;
+    font-size: 3.33vw;
+    letter-spacing: 0.65vw;
+    line-height: 1;
+    transform: rotate(90deg);
+    position: absolute;
+    top: 18.65vw;
+  }
+}
+
+/*MenuOpen CSS*/
+.l-header__content {
+  &.is-open {
+    height: 100vh;
+    background-color: rgba(0, 39, 44, 0.51);
+    display: flex;
+    align-items: center;
+
+    .l-header__menu {
+      display: block;      
+    }
+  }
+}
+
+.l-header__menuBtn {
+  &.is-open {
+    .l-header__menuBtnLine {
+      width: 0.26625vw;
+      &.first {
+        transform: rotate(15deg);
+      }
+
+      &.second {
+        transform: rotate(-15deg);
+      }
+    }
+
+    .l-header__menuBtnText {
+      padding-top: 1.75vw;
+    }
+  }
+}
+
+/*Link Color Change*/
+.l-header__menu {
+  &.is-colorChange {
+    .l-header__menuItem {
+      > a {
+        color: #000;
+        @include med.media(sp) {
+          color: #FFF;
+        }
+      }
+    }
+  }
+}
+
+.l-header__menuBtn {
+  &.is-colorChange {
+    .l-header__menuBtnLine {
+      background: #000;
+    }
+
+    .l-header__menuBtnText {
+      color: #000;
+    }
+
+    &.is-open {
+      .l-header__menuBtnLine {
+        background: #fff;
+      }
+  
+      .l-header__menuBtnText {
+        color: #fff;
+      } 
+    }
+  }
+}
+
+
+

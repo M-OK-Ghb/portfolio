@@ -1,0 +1,72 @@
+// -------------------------------------------------------------------
+//  heading.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-heading {
+  &--sectionTop {
+    color: var.$ACCENT_COLOR;
+  }
+
+  &--genreTitle {
+    color: var.$ACCENT_COLOR_TITLE;
+    font-family: var.$SEMPLI_FAMILY;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    line-height: 1.1;
+    padding-left: 10px;
+    border-left: 3px solid var.$ACCENT_COLOR; 
+    
+    @include med.media(sp) {
+      font-size: 5.33vw;
+      padding-left: 1.3vw;
+      letter-spacing: 0.106vw;
+    }
+  }
+
+  &--miniTitle {
+    color: var.$ACCENT_COLOR_TITLE;
+    font-family: var.$SEMPLI_FAMILY;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.48px;
+    line-height: 1.1;
+    @include med.media(sp) {
+      font-size: 4.53vw;
+      letter-spacing: 0.091vw;
+    }
+  }
+
+  &--italicTitle {
+    color: #000;
+    font-family: var.$SEMPLI_FAMILY;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 0.8px;
+    line-height: 1.5;
+    @include med.media(sp) {
+      font-size: 4vw;
+      letter-spacing: 0.16vw;
+    }
+  }
+
+  &--subTitle {
+    color: #313131;
+    font-family: var.$SEMPLI_FAMILY;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 28px;
+    letter-spacing: 1.44px;
+    opacity: 0.6;
+    margin-bottom: 10px;
+    @include med.media(sp) {
+      font-size: 3.33vw;
+      line-height: 3.73vw;
+      letter-spacing: 0.27vw;
+      margin-bottom: 1.33vw;
+    }
+  }
+}

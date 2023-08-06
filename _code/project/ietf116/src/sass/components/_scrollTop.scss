@@ -1,0 +1,35 @@
+// -------------------------------------------------------------------
+//  scrollTop.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-scrollTop {
+  position: fixed;
+  bottom: 30px;
+  right: 4.4%;
+  z-index: 3;
+
+  @include med.media(sp) {
+    bottom: 20px;
+    right: 2%;
+  }
+
+  > button {
+    display: block;
+    &:hover {
+      transition: opacity 0.3s;
+      opacity: 0.7;
+    }
+
+    img {
+      width: 14px;
+      height: 128px;
+      object-fit: contain;
+      @include med.media(sp) {
+        width: 3.74vw;
+        height: 34.2vw;
+      }
+    }
+  }
+}

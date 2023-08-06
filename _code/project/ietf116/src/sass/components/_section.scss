@@ -1,0 +1,321 @@
+// -------------------------------------------------------------------
+//  section.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+@mixin LightCapText {
+  color: #000;
+  font-family: var.$SEMPLI_FAMILY;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 2.5;
+  letter-spacing: 0.96px;
+  opacity: 0.6;
+}
+
+.c-section {
+  position: relative;
+  width: 91.5%;
+  margin: auto;
+  padding-bottom: 120px;
+  @include med.media(sp) {
+    width: 100%;
+  }
+
+  &__heading {
+    display: inline-block;
+    color: var.$ACCENT_COLOR;
+    font-family: var.$SEMPLI_FAMILY;
+    font-size: 75px;
+    letter-spacing: 4.5px;
+    writing-mode: vertical-lr;
+    white-space: nowrap;
+    transform: rotate(180deg);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+
+    @include med.media(sp) {
+      font-size: 12vw;
+    }
+  }
+
+  &__contentsArea {
+    width: 720px;
+    margin: auto;
+    @include med.media(sp) {
+      width: 81vw;
+      margin-left: 15vw;
+    }
+
+    > div {
+      &:first-child {
+        padding-top: 0;
+      }
+    }
+  }
+
+  &__contentWrap {
+    position: relative;
+    padding: 70px 0;
+    &.bgBlue {
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      background: rgba(242,246,247,0.7);
+      @include med.media(sp) {
+        margin-left: -15vw;
+        padding-left: 15vw;
+        padding-right: 5vw;
+      }
+    }
+
+    @include med.media(sp) {
+      padding: 13.33vw 0;
+    }
+  }
+
+  &__contentInner {
+    width: 720px;
+    margin: auto;
+    @include med.media(sp) {
+      width: 100%;
+    }
+  }
+
+  &__imgList {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include med.media(sp) {
+      margin-top: 8vw;
+    }
+
+    > li {
+      img {
+        width: 100%;
+      }
+
+      p {
+        @include LightCapText;
+      }
+    }
+
+    &.--single {
+      > li {
+        width: 100%;
+        margin-bottom: 3%;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      @include med.media(sp) {
+        display: block;
+      }
+    }
+
+    &.--twoClm {
+      > li {
+        width: 48.6%;
+        margin-bottom: 2.8%;
+        &:nth-child(odd) {
+          margin-right: 2.8%;
+          @include med.media(sp) {
+            margin: 0 auto 8%;
+          }
+        }
+
+        &:last-child {
+          @include med.media(sp) {
+            margin-bottom: 0;
+          }
+        }
+
+
+        @include med.media(sp) {
+          width: 74%;
+          margin: 0 auto 8%;
+        }
+      }
+
+      @include med.media(sp) {
+        display: block;
+      }
+    }
+
+    &.--threeClm {
+      > li {
+        width: 31.5%;
+        margin-right: 2.75%;
+        margin-bottom: 2.75%;
+        &:nth-child(3n) {
+          margin-right: 0;
+          @include med.media(sp) {
+            margin-right: 4.6%;
+          }
+        }
+
+        @include med.media(sp) {
+          width: 47.7%;
+          margin-right: 4.6%;
+          margin-bottom: 4.6%;
+
+          &:nth-child(2n) {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &__arrangeContent {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    @include med.media(sp) {
+      display: block;
+      margin-top: 8vw;
+    }
+  }
+
+  &__arrangeImg {
+    width: 340px;
+    @include med.media(sp) {
+      width: 100%;
+    }
+
+    > img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      @include med.media(sp) {
+        height: auto;
+      }
+    }
+
+    > p {
+      @include LightCapText;
+    }
+  }
+
+  &__arrangeText {
+    width: 350px;
+    padding-top: 20px;
+    @include med.media(sp) {
+      width: 100%;
+      padding-top: 0;
+      margin-top: 4vw;
+    }
+  }
+
+  &__newsList {
+    position: relative;
+    margin-top: 40px;
+    max-height: 300px;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.01);
+
+    > li {
+      border-top: 1px solid rgb(0 0 0 / 10%);
+
+      &:last-child {
+        border-bottom: 1px solid rgba(0,0,0,.1);
+      }
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      width: 100%;
+      height: 20px;
+      position: sticky;
+      bottom: 0;
+      background: linear-gradient(rgba(0,0,0,.05),rgba(0,0,0,.3));
+      filter: blur(16px);
+    }
+
+    @include med.media(sp) {
+      max-height: 90vw;
+      margin-top: 8vw;
+    }
+
+    &.top {
+      margin-top: 0;
+    }
+  }
+
+  &__newsItem {
+    padding:20px;
+
+    > a {
+      display: block;
+      &:hover {
+        transition: opacity 0.5s;
+        opacity: 0.7;
+
+        .c-link__icon {
+          svg {
+            fill: var.$ACCENT_COLOR_LINK;
+            path {
+              stroke: #FFF;
+            }
+          }
+        }
+      }
+    }
+
+    @include med.media(sp) {
+      padding: 8vw 4vw;
+    }
+  }
+
+  &__newsItemInner {
+    display: flex;
+
+    @include med.media(sp) {
+      display: block;
+    }
+
+    dt {
+      line-height: 1;
+      font-family: var.$SEMPLI_FAMILY;
+      font-weight: bold;
+      font-size: 14px;
+      width: 140px;
+      @include med.media(sp) {
+        width: 100%;
+        font-size: 3.33vw;
+        letter-spacing: 0.27vw;
+      }
+    }
+
+    dd {
+      flex: 1;
+    }
+  }
+
+  &__newsItemText {
+    display: flex;
+    justify-content: space-between;
+    > p {
+      width: 85%;
+      font-size: 18px;
+      line-height: 1.6;
+      // 1行目のline-height上 <font-size18 * 0.6 / 2 = 5.4px>
+      margin-top: -5.4px;
+
+      @include med.media(sp) {
+        font-size: 3.73vw;
+        letter-spacing: 0.3vw;
+        margin-top: 0;
+      }
+    }
+
+    @include med.media(sp) {
+      align-items: center;
+      margin-top: 6.5vw;
+    }
+  }
+}

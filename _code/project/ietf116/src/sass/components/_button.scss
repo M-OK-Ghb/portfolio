@@ -1,0 +1,55 @@
+// -------------------------------------------------------------------
+//  button.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-buttonWrap {
+  margin-top: 40px;
+  display: flex;
+
+  &.left {
+    justify-content: flex-start;
+  }
+
+  &.center {
+    justify-content: center;
+  }
+
+  &.right {
+    justify-content: flex-end;
+  }
+
+  @include med.media(sp) {
+    margin-top: 13.33vw;
+  }
+}
+
+.c-button {
+  display: block;
+  width: 320px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-family: var.$SEMPLI_FAMILY;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1.12px;
+  color: var.$ACCENT_COLOR_LINK;
+  border: 3px solid var.$ACCENT_COLOR_LINK;
+  border-radius: 100px;
+  &:hover {
+    transition: color 0.3s, background-color 0.3s;
+    color: #FFF;
+    background-color: var.$ACCENT_COLOR_LINK;
+  }
+
+  @include med.media(sp) {
+    width: 100%;
+    font-size: 3.33vw;
+    letter-spacing: 0.27vw;
+    height: 15.33vw;
+    line-height: 15.33vw;
+    border-radius: 13.33vw;
+  }
+}

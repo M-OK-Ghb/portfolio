@@ -1,0 +1,36 @@
+// -------------------------------------------------------------------
+//  structure.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+html, body {
+  height: 100%;
+  height: -webkit-fill-available;
+}
+
+body {
+  font-family: var.$BASE_FONT_FAMILY;
+  color: var.$BASE_TEXT_COLOR;
+  background-color: #FAFAFA;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+
+  &.p-top__body {
+    opacity: 0;
+    transition: 1s opacity cubic-bezier(0, 0.55, 0.45, 1);
+    &.is-show {
+      opacity: 1;
+    }
+  }
+}
+
+@include med.media(sp) {
+  body {
+    &.is-open {
+      overflow-y: hidden;
+    }
+  }
+}

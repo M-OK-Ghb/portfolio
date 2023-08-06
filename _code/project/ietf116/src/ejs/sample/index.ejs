@@ -1,0 +1,31 @@
+<%
+  const data = {
+    title: "SAMPLE",
+    description: "",
+    path: "..",
+    commonImgPath: "../images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../include/common/_head.ejs', {data: data}); %>
+  <body>
+    <div class="c-contentsBg">
+      <%- include('../include/common/_header.ejs', {data: data}); %>
+      <main class="p-sub__main">
+        <%- include('../include/sub/_fv.ejs', {data: data}); %>
+        <section class="c-section">
+          <h1 class="c-section__heading js-topLevel-heading">SAMPLE</h1>
+          <div class="c-section__contentsArea">
+            <%- include('_contents.ejs', {data: data}); %>
+          </div>
+        </section>
+        <%- include('../include/common/_scrollTop.ejs', {data: data}); %>
+        <%- include('../include/common/_bgLogo.ejs', {data: data}); %>
+      </main>
+      <%- include('../include/common/_footer.ejs', {data: data}); %>
+    </div>
+    <%- include('../include/common/_script.ejs', {data: data}); %>
+  </body>
+</html>

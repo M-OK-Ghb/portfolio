@@ -1,0 +1,118 @@
+// -------------------------------------------------------------------
+//  sponsors.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+@mixin FiveClmPc {
+  width: 131px;
+  margin-bottom: 16px;
+  margin-right: 16px;
+  &:nth-child(5n) {
+    margin-right: 0;
+  }
+}
+
+@mixin TwoClmSp {
+  width: 48.3%;
+  margin-right: 3.4%;
+  margin-bottom: 3.4%;
+  &:nth-child(even){
+    margin-right: 0;
+  }
+}
+
+
+.p-sponsors {
+  &__rank {
+    margin-bottom: 70px;
+    @include med.media(sp) {
+      margin-bottom: 10.5vw;
+    }
+
+    &.contributor {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    @include med.media(sp) {
+      margin-top: 8vw;
+    }
+
+    > li {
+      > img {
+        width: 100%;
+      }
+    }
+
+    &.platinum {
+      > li {
+        width: 345px;
+        margin-bottom: 30px;
+        &:nth-child(odd) {
+          margin-right: 30px;
+          @include med.media(sp) {
+            margin-right: 0;
+          }
+        }
+
+        @include med.media(sp) {
+          width: 100%;
+          margin-bottom: 3.5vw;
+        }
+      }
+    }
+
+    &.gold {
+      > li {
+        width: 222px;
+        margin-bottom: 26px;
+        margin-right: 26px;
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+
+        @include med.media(sp) {
+          @include TwoClmSp;
+        }
+      }
+    }
+
+    &.silver {
+      > li {
+        width: 165px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+
+        @include med.media(sp) {
+          @include TwoClmSp;
+        }
+      }
+    }
+
+    &.bronze {
+      > li {
+        @include FiveClmPc;
+        @include med.media(sp) {
+          @include TwoClmSp;
+        }
+      }
+    }
+
+    &.contributor {
+      > li {
+        @include FiveClmPc;
+        @include med.media(sp) {
+          @include TwoClmSp;
+        }
+      }
+    }
+  }
+}
