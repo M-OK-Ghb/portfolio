@@ -1,0 +1,110 @@
+extends ../include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `"Experiences that move the heart" Interviews｜SEGA SAMMY HOLDINGS`,
+      description: `"Experiences that move the heart" is the value we have been pursuiting. You can find the interviews of developers etc. supporting this value.`,
+      pathname: `/interviews/index.html`,
+      dataPage: "interviews",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body
+  
+    //- cookiePolicy contents
+    include ../include/components/_cookiePolicy
+    div.u-app__wrapper#js-app-wrapper
+    
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #0082CA",
+          sub: "background: #BF36A0",
+          isTop: false
+        }
+      include ../include/components/_background
+
+      - var mainDustsColor = "#0082CA";
+      - var subDustsColor = "#BF36A0";
+      include ../include/components/_carouselDusts
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- loading
+      //- include ../include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.p-report.fade-in(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "Interviews",
+                  link: `${config.page_link}` + 'interviews/index.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div.l-container__page-title.u-lg_pd-tp-150.u-lg_mg-bt-180
+              div.c-page-title
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--6
+                  h2
+                    span “Experiences that
+                      br
+                      |move the heart”
+                    |Interviews
+                img.c-page-title__jumbotron.c-page-title__mv06.u-page-img-animation-6(src=`${config.assets_link}` + "images/06_mv.png" alt="Arle")
+              span.copy-right.copy-right-report.u-lg_pos-bt-m170__imp ©SEGA
+
+            div.l-container__detail.u-lg_mg-bt-30.u-sp_pos-top-50
+                div.l-container__detail__inner
+                  div.p-report__introduction.u-lg_mg-bt-60
+                    p "Experiences that move the heart" is the value SEGA SAMMY Group has been pursuiting that exceed customers’ expectations. We introduce the scenes you can only find here such as behind-the-scenes of the development process, feature artcles and others.
+                    //- a(href="https://www.segasammy.co.jp/english/ir/library/stockholder/", target="_blank").c-button.c-button__blank.u-lg_mg-lf-50 See Business Reports
+
+                  div#js-briefing-article-container
+
+                  a(href=`${config.page_link}` + "interviews/archive.html").c-button__report.c-button__blank.u-lg_mg-center.u-lg_mg-tp-80.u-sp_mg-tp-40
+                    img.read-icon(src=`${config.assets_link}` + "images/more-read.svg" alt="")
+                    |See archives of the interview
+                    img.arrow-icon(src=`${config.assets_link}` + "images/more-read-arrow.svg" alt="")
+
+                  div.p-report__more
+                    span.p-report__more--text
+                      |Interviews in and before FY2020/3 are
+                      br
+                      |posted in Business Reports
+                    a(href="https://www.segasammy.co.jp/english/ir/library/stockholder/", target="_blank").c-button.c-button__blank.u-lg_mg-center See Business Reports
+
+            - 
+              var navigatorObject = {
+                text: "Back to TOP page",
+                rootClass: "c-navigator__01",
+                imgPath: `${config.assets_link}` + "images/01_mv.png",
+                alt: "SONIC",
+                link: `${config.page_link}` + "index.html",
+                textClass: "c-navigator__text--01"
+              }
+            include ../include/components/_navigator
+            span.copy-right ©SEGA
+
+            //- contents end /////////////////////////////////////////////////
+        
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

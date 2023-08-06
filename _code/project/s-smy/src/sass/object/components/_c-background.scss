@@ -1,0 +1,71 @@
+.c-background {
+    width: 100vw;
+    height: 500%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+
+    &__canvas {
+        position: fixed;
+        top: 0;
+        user-select: none;
+        pointer-events: none;
+        z-index: 0;
+        height: 100%;
+    }
+    
+    &__square--main {
+        width: vw(300px);
+        height: 300vw;
+        position: absolute;
+        top: 0;
+        right: 70.5%;
+        transform: skewX(-24deg);
+        transition: .3s;
+        z-index: 10;
+
+        @include media(sp) {
+            width: sp_vw(256px);
+            height: 500vw;
+            right: sp_vw(35px);
+        }
+    }
+    
+    &__square--sub {
+        width: vw(300px);
+        height: 300vw;
+        position: absolute;
+        top: 0;
+        right: 76.5%;
+        transform: skewX(-24deg);
+        transition: .3s;
+        z-index: 5;
+
+        @include media(sp) {
+            width: sp_vw(256px);
+            height: 500vw;
+            right: sp_vw(93.75px);
+        }
+    }
+
+    &--top {
+    
+        .c-background__square--main {
+    
+            @include media(sp) {
+                width: sp_vw(187.5px);
+                height: 500vw;
+                right: sp_vw(285px);
+            }
+        }
+        
+        .c-background__square--sub {
+    
+            @include media(sp) {
+                width: sp_vw(187.5px);
+                height: 500vw;
+                right: sp_vw(343.75px);
+            }
+        }
+    }
+}

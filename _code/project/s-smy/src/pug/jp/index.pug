@@ -1,0 +1,346 @@
+extends ./include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: true,
+      title: `個人投資家のみなさまへ｜セガサミーホールディングス`,
+      description: `セガサミーホールディングス株式会社の事業内容や経営戦略、直近の業績や株主還元などについて個人投資家のみなさまに分かりやすくご説明いたします。`,
+      pathname: `/`,
+      dataPage: "top",
+      page_link: "",
+      assets_link: "../../../assets/",
+      lang_link: "../../../"
+    }
+
+//- body contents
+block pageContent
+  body.u-sitetop(style={opacity: 0})
+    div.u-app__wrapper#js-app-wrapper
+
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #79bd36",
+          sub: "background: #1482ca",
+          isTop: true
+        }
+      include ./include/components/_background
+
+      //- header contents
+      include ./include/basic/_header
+
+      //- loading
+      //- include ./include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.p-top.fade-in.u-top-page-pt-remove.u-top-0.u-pd-bt-0(data-page=config.dataPage)
+
+            //- contents start ///////////////////////////////////////////////
+
+            include ./include/components/_topCarousel
+            
+            div.l-container__page-title.u-lg_mg-tp-90.u-lg_mg-bt-60.u-sp_mg-tp-60#js-header-trigger
+              div.c-page-title.js-scroll-box__to-top
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--1
+                  h2#about セガサミーに
+                    br
+                    |ついて
+                  div.c-page-title__decoration-bar--under
+                  div.c-anchorlink
+                      ul.c-anchorlink__list
+                          li.c-anchorlink__list--item
+                              a(href="#group-mission") セガサミーグループミッション
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#vision") ビジョン
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#esg-sdgs") ESG/SDGs
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#history") セガサミーのあゆみ
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                img.c-page-title__jumbotron.c-page-title__mv01(src=`${config.assets_link}` + "images/01_mv.png" alt="ソニック" style="opacity: 1;")
+              span.copy-right ©SEGA
+
+            div.l-container__detail.u-lg_mg-bt-150.u-sp_mg-bt-60#group-mission
+                div.l-container__detail__inner
+                  div.p-top__box.u-flexbox.u-lg_mg-bt-80.js-scroll-box__to-top
+                    div.p-top__box--text.u-lg_mg-rt-65.u-lg_width-385
+                      div.content-bodrer-top.u-gradation__background--1
+                      h3 セガサミー
+                        br
+                        |グループミッション
+                      p.u-sp_mg-bt-75 私たちは、セガ、サミーをはじめとしたグループ各社の事業の指針となるミッションピラミッドを定め、共有しています。ミッションピラミッドは、私たちのValue（価値観・DNA）、Mission（存在意義）、そしてVision（ありたい姿）です。このミッションピラミッドを、グループ社員全員が明確に理解し、企業価値向上に向け邁進しています。
+                    img.p-top__box--img(src=`${config.assets_link}` + "images/top-vmv.svg" alt="グループ各社の事業の指針となるミッションピラミッド")
+                  div.p-top__hr.u-lg_mg-bt-40
+                  div.p-top__box.js-scroll-box__to-top
+                    div.p-top__box--message
+                      h4 トップメッセージ
+                      div.wrapper-01
+                        img(src=`${config.assets_link}` + "images/ceo_msg.png" alt="代表取締役社長 グループCEO 里見 治紀")
+                        div.text-block
+                          //- p 新・中期計画のもと、
+                          //-   br
+                          //-   |経済的価値と社会的価値を
+                          //-   br
+                          //-   |創出します
+                          dl
+                            dt 代表取締役社長 グループCEO
+                            dd 里見 治紀
+                          a(href="https://www.segasammy.co.jp/japanese/ir/management/message/#CEO", target="_blank").c-button.c-button__blank トップメッセージを読む
+
+            div.l-container__detail.u-lg_mg-bt-60.u-sp_mg-bt-60#vision
+                div.l-container__detail__inner
+                  div.p-top__box.p-top__box--vision.js-scroll-box__to-top
+                    img.u-is-pc(src=`${config.assets_link}` + "images/top-vision.svg" alt="グループ各社の事業の指針となるミッションピラミッド")
+                    img.u-is-sp(src=`${config.assets_link}` + "images/top-vision-sp.svg" alt="グループ各社の事業の指針となるミッションピラミッド")
+                    div.p-top__box--text.u-sp_mg-bt-447
+                      div.content-bodrer-top.u-gradation__background--1
+                      h3 ビジョン
+                      p この度、2030年3月期をゴールとする、新たな長期目標を制定いたしました。その道筋の最初の3ヶ年の中期計画として「Beyond the Status Quo～現状を打破し、サステナブルな企業へ～」を策定し、各事業の重点戦略を推し進めるほか、資本効率に軸を置いたマネジメントシステムへの移行を進めます。また、これに合わせて財務戦略の抜本的な見直しを進め、株主還元方針の見直しを行いました。
+                      a(href="https://www.segasammy.co.jp/japanese/ir/library/pdf/settlement/2021/202103_4q_presentation_midtermplan_j.pdf", target="_blank").c-button.c-button__blank 中期計画についてはこちら
+
+            div.l-container__detail.u-lg_mg-bt-150.u-sp_mg-bt-140#esg-sdgs
+                div.l-container__detail__inner
+                  div.p-top__box.p-top__box--esg
+                    div.p-top__box--text.u-flexbox.u-lg_mg-bt-60.js-scroll-box__to-top
+                      div._flex-wrapper.u-lg_mg-rt-80
+                        div.content-bodrer-top.u-gradation__background--1
+                        h3 ESG/SDGs
+                      p セガサミーグループは、各事業を通して提供している感動体験の価値を再認識し、持続的な社会課題の解決と企業価値向上を実現するための取り組むべきマテリアリティとして、「人」「製品/サービス」「環境」「依存症」「ガバナンス」の5つを掲げています。
+                    img.u-is-pc.js-scroll-box__to-top(src=`${config.assets_link}` + "images/top-esg.svg" alt="グループにおけるマテリアリティ")
+                    img.u-is-sp.js-scroll-box__to-top(src=`${config.assets_link}` + "images/top-esg-sp.svg" alt="グループにおけるマテリアリティ")
+
+                    div.p-top__more
+                      span.p-top__more--text もっと詳しく知りたい方へ
+                      div.p-top__more--btns
+                        a(href="https://www.segasammy.co.jp/japanese/pr/commu/csr_library/", target="_blank").c-button.c-button__blank SDGs・ESG
+                        a(href="https://www.segasammy.co.jp/japanese/pr/corp/governance/", target="_blank").c-button.c-button__blank コーポレート・ガバナンス
+
+            div.l-container__content#history
+              div.p-top__box.p-top__box--history.u-lg_mg-bt-90
+                div.content-bodrer-top.u-gradation__background--1.u-mg-center
+                h3 セガサミーのあゆみ
+                p 世の中に革新的な製品を生み出してきたセガと様々な業界初の製品を送り出してきたサミー が2004年10月に経営統合して誕生したのがセガサミーグループです。経営統合以降も、各社が感動体験を生み出し続け、2012年にはリゾート事業へも本格的に参入するなど、新たな感動体験を創造し続けています。
+              div.p-integration
+                div.p-integration__before.u-lg_mg-bt-120#js-top-before-int
+                  div.c-integration.sega_color
+                    dl.c-integration__title
+                      dt SEGA
+                      dd
+                        span 1960
+                        span 年 設立
+                    ul.c-integration__list
+                      li.c-integration__list--item
+                        figure
+                          div.img-block
+                            img(src=`${config.assets_link}` + "images/history_megadrive.png" alt="SEGA メガドライブ")
+                          figcaption.text-block
+                            span.year 1988
+                            dl
+                              dt メガドライブ
+                              dd 高性能CPU（16bit）を搭載した家庭用ゲーム機「メガドライブ」発売
+                                span.copy-right ©SEGA
+
+                      li.c-integration__list--item
+                        figure
+                          div.img-block
+                            img(src=`${config.assets_link}` + "images/history_sega03.png" alt="SEGA バーチャファイター")
+                          figcaption.text-block
+                            span.year 1993
+                            dl
+                              dt バーチャファイター
+                              dd 世界初の業務用3D-CG格闘ゲーム「バーチャファイター」稼働開始
+                                span.copy-right ©SEGA
+                      li.c-integration__list--item
+                        figure
+                          div.img-block
+                            img(src=`${config.assets_link}` + "images/history_sega05.png" alt="SEGA ドリームキャスト")
+                          figcaption.text-block
+                            span.year 1998
+                            dl
+                              dt ドリームキャスト
+                              dd 業界で初めてインターネット通信機能を実装した家庭用ゲーム機「ドリームキャスト」発売
+                                span.copy-right ©SEGA
+
+                    div.c-integration__line
+                      div.c-integration__line--circle
+                      div.c-integration__line--line-1
+                      div.c-integration__line--line-2
+                      div.c-integration__line--line-3
+
+                  div.c-integration.sammy_color
+                    dl.c-integration__title
+                      dt SAMMY
+                      dd
+                        span 1975
+                        span 年 設立
+                    ul.c-integration__list
+                      li.c-integration__list--item
+                        figure
+                          div.img-block
+                            img(src=`${config.assets_link}` + "images/history_02__.png" alt="Sammy アラジン")
+                          figcaption.text-block
+                            span.year 1989
+                            dl
+                              dt アラジン
+                              dd 業界ではじめてシングルボーナス「集中役」を実装したパチスロ遊技機「アラジン」発売
+                                span.copy-right ©Sammy
+                      li.c-integration__list--item
+                        figure
+                          div.img-block
+                            img(src=`${config.assets_link}` + "images/history_p54_moujyuuou-s.png" alt="Sammy 獣王")
+                          figcaption.text-block
+                            span.year 2001
+                            dl
+                              dt 獣王
+                              dd AT（アシストタイム）機能を搭載したパチスロ遊技機「獣王」発売
+                                span.copy-right ©Sammy
+                      li.c-integration__list--item
+                        figure
+                          div.img-block
+                            img(src=`${config.assets_link}` + "images/history_hokuto01.png" alt="Sammy パチスロ北斗の拳")
+                          figcaption.text-block
+                            span.year 2003
+                            dl
+                              dt パチスロ北斗の拳
+                              dd 現在も更新されていない前人未到の販売記録を打ち立てたパチスロ遊技機「パチスロ北斗の拳」発売
+                                span.copy-right ©武論尊・原哲夫／NSP 1983　　©Sammy
+
+                    div.c-integration__line
+                      div.c-integration__line--circle
+                      div.c-integration__line--line-1
+                      div.c-integration__line--line-2
+                      div.c-integration__line--line-3
+
+                div.p-integration__after
+                  div.c-integration.u-lg_width-465.u-mg-center
+                    dl.c-integration__title
+                      dt.u-lg_mg-bt-10
+                        img(src=`${config.assets_link}` + "images/segasammy_logomark.png" alt="セガサミー コーポレートロゴ")
+                      dd
+                        span 2004
+                        span 年 経営統合
+
+                  div.c-integration.u-mg-center.u-lg_mg-bt-100#js-top-after-int
+                    ul.c-integration__list--after#js-create-dom-entrypoint_01
+                      li.c-integration__list--after--item.js-fit-stack-list-item
+                        span.year 2005
+                        figure
+                          img(src=`${config.assets_link}` + "images/segasam01.png" alt="龍が如く")
+                          figcaption
+                            dl
+                              dt 龍が如く
+                              dd 大ヒットシリーズとなる家庭用ゲーム初代「龍が如く」が登場
+                                span.copy-right ©SEGA
+
+                      li.c-integration__list--after--item--even.js-fit-stack-list-item
+                        span.year 2008
+                        figure
+                          figcaption
+                            dl
+                              dt ぱちんこＣＲ北斗の拳
+                              dd 当社のパチンコ史上最大の販売台数となる「ぱちんこCR北斗の拳」発売
+                                span.copy-right ©武論尊・原哲夫／NSP1983, ©NSP 2007 版権許諾証SAE-307　　©Sammy
+                          img(src=`${config.assets_link}` + "images/cr-hokuto.png" alt="ぱちんこＣＲ北斗の拳")
+
+                      li.c-integration__list--after--item.js-fit-stack-list-item
+                        span.year 2009
+                        figure
+                          img(src=`${config.assets_link}` + "images/segasam04.png" alt="パチスロ 交響詩篇エウレカセブン")
+                          figcaption
+                            dl
+                              dt パチスロ 交響詩篇エウレカセブン
+                              dd 5号機に新たなゲーム性を盛り込んだ「パチスロ交響詩篇エウレカセブン」発売
+                                span.copy-right ©2005 BONES/Project EUREKA
+                                  br
+                                  |©Sammy　©BNEI
+
+                      li.c-integration__list--after--item--even.js-fit-stack-list-item
+                        span.year 2012
+                        figure
+                          figcaption
+                            dl
+                              dt ファンタシースターオンライン2
+                              dd PC向けオンラインRPG「ファンタシースターオンライン2」配信開始
+                                span.copy-right ©SEGA
+                          img(src=`${config.assets_link}` + "images/P55_PSO2_global.png" alt="ファンタシースターオンライン2")
+
+                        figure
+                          figcaption
+                            dl
+                              dt フェニックス・シーガイア・リゾート
+                              dd フェニックスリゾート（株）を完全子会社化
+                                span.copy-right ©フェニックスリゾート
+                          img(src=`${config.assets_link}` + "images/P55_seagaia.png" alt="フェニックス・シーガイア・リゾート")
+
+                      li.c-integration__list--after--item.js-fit-stack-list-item
+                        span.year 2016
+                        figure
+                          img(src=`${config.assets_link}` + "images/segasam07.png" alt="ペルソナ5")
+                          figcaption
+                            dl
+                              dt ペルソナ5
+                              dd 家庭用ゲーム「ペルソナ5」発売
+                                span.copy-right ©ATLUS ©SEGA All rights reserved.
+
+                      li.c-integration__list--after--item--even.js-fit-stack-list-item
+                        span.year 2017
+                        figure
+                          figcaption
+                            dl
+                              dt PARADISE CITY
+                              dd 韓国初の統合型リゾート施設「PARADISE CITY」開業
+                                span.copy-right ©PARADISE SEGASAMMY Co., Ltd. All rights reserved.
+                          img(src=`${config.assets_link}` + "images/P55_paradise_city.png" alt="PARADISE CITY")
+
+                      li.c-integration__list--after--item.js-fit-stack-list-item
+                        span.year 2020
+                        figure
+                          img(src=`${config.assets_link}` + "images/p55_SONIC_jpn_B1_6.png" alt="ソニック・ザ・ムービー")
+                          figcaption
+                            dl
+                              dt ソニック・ザ・ムービー
+                              dd 映画「ソニック・ザ・ムービー」の公開
+                                span.copy-right ©2020 PARAMOUNT PICTURES AND SEGA OF AMERICA, INC. ALL RIGHTS RESERVED.
+                        figure
+                          img(src=`${config.assets_link}` + "images/pj_sekai_ayumi.jpg" alt="プロジェクトセカイ カラフルステージ")
+                          figcaption
+                            dl
+                              dt プロジェクトセカイ カラフルステージ！ feat. 初音ミク
+                              dd 「プロジェクトセカイ カラフルステージ ！ feat. 初音ミク」発売
+
+                    div.c-integration__list--afterline
+                      div.c-integration__list--afterline--circle
+                      div.c-integration__list--afterline--line-1
+
+            div.c-button__center
+              a(href="https://www.segasammy.co.jp/japanese/pr/corp/history/", target="_blank").c-button__more-history.c-button__blank.u-mg-center
+                |セガサミーのあゆみに
+                br.u-is-sp
+                |ついて詳しく見る
+
+            - 
+              var navigatorObject = {
+                text: "事業",
+                rootClass: "c-navigator__02",
+                imgPath: `${config.assets_link}` + "images/02_mv.png",
+                alt: "エイリやん",
+                link: `${config.page_link}` + "business/index.html",
+                textClass: "c-navigator__text--02"
+              }
+            include ./include/components/_navigator
+            span.copy-right ©Sammy
+
+            //- contents end /////////////////////////////////////////////////
+
+        //- footer contents
+        include ./include/basic/_footer
+
+      //- script
+      include ./include/basic/_script

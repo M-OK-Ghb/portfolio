@@ -1,0 +1,65 @@
+div.c-carousel__container#js-top-carousel
+    div.c-carousel__container--first#js-carousel-first
+        div.c-carousel__tag
+            div.c-carousel__tag--hide-block
+            p 個人投資家のみなさまへ
+        div.l-container__carousel
+            div.text-block.js-new-icon-sp.js-new-icon-sp-ss
+                a(href="#about").js-carousel-link
+                    h2.first-carousel#js-scroll-trigger
+                        |セガサミーに
+                        br
+                        |ついて
+                    img.c-carousel__jumbotron--1#js-carousel-load-animation(src=`${config.assets_link}` + "images/01_mv.png" alt="ソニック" style="opacity: 0;")
+                div.p-indv-progress-bar-container
+                    div.progress-bar-body#js-progress-bar-first-body(style="background: linear-gradient(45deg, #1482CA, #79BD36)")
+                    div.progress-bar-dummy#js-progress-bar-first
+                div.c-anchorlink#js-anchorlink-list-first
+                    ul.c-anchorlink__list
+                        li.c-anchorlink__list--item
+                            a(href="#group-mission") セガサミーグループミッション
+                                img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                        li.c-anchorlink__list--item
+                            a(href="#vision") ビジョン
+                                img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                        li.c-anchorlink__list--item
+                            a(href="#esg-sdgs") ESG/SDGs
+                                img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                        li.c-anchorlink__list--item
+                            a(href="#history") セガサミーのあゆみ
+                                img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+        span.c-carousel__copyright#js-carousel-copyright_1 ©SEGA
+
+    div.c-carousel__container--second.is-hide#js-carousel-second
+        div.c-carousel__tag
+            div.c-carousel__tag--hide-block
+            p 個人投資家のみなさまへ
+        div.l-container__carousel
+            div.text-block.js-new-icon-sp.js-new-icon-sp-ss
+                a(href=`${config.page_link}` + "business/").js-carousel-link
+                    h2 セガサミーの
+                        br
+                        |事業
+                    img.c-carousel__jumbotron--2(src=`${config.assets_link}` + "images/02_mv.png" alt="エイリやん")
+                div.p-indv-progress-bar-container
+                    div.progress-bar-body#js-progress-bar-second-body(style="background: linear-gradient(45deg, #79BD36, #F4E232)")
+                    div.progress-bar-dummy#js-progress-bar-second
+                div.c-anchorlink#js-anchorlink-list-second
+                    ul.c-anchorlink__list
+                        li.c-anchorlink__list--item
+                            a(href=`${config.page_link}` + "business/index.html#segasammy_business") 事業概要
+                                img(src=`${config.assets_link}` + "images/anchor-list-arrow-other.svg" alt="")
+                        li.c-anchorlink__list--item
+                            a(href=`${config.page_link}` + "business/index.html#segasammy_forte") セガサミーの強み
+                                img(src=`${config.assets_link}` + "images/anchor-list-arrow-other.svg" alt="")
+        span.c-carousel__copyright#js-carousel-copyright_2 ©Sammy
+
+    div.c-carousel__container--sp-bg.u-is-sp
+    
+    include ./_carouselcontroller
+    include ./_latestNews
+    include ./_mvBanner
+
+    - var mainDustsColor = "#79BD36";
+    - var subDustsColor = "#1482CA";
+    include ./_carouselDusts

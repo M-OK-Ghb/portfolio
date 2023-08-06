@@ -1,0 +1,97 @@
+.c-mv-banner {
+    @include en {
+        display: none !important;
+    }
+    width: vw(160px);
+    height: vw(160px);
+    position: absolute;
+    right: vw(-176px);
+    bottom: vw(20px);
+    z-index: 10;
+    display: none;
+
+    @include media(sp) {
+        width: sp_vw(130px);
+        height: sp_vw(130px);
+        left: sp_vw(16px);
+        right: auto;
+        top: 25.5vw;
+        bottom: auto;
+    }
+
+    img {
+        width: vw(160px);
+        height: vw(160px);
+        object-fit: contain;
+        font-family: 'object-fit: contain;';
+        position: absolute;
+        user-select: none;
+
+        @include media(sp) {
+            width: sp_vw(130px);
+            height: sp_vw(130px);
+        }
+    }
+
+    .text-block {
+        position: absolute;
+        text-align: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        margin-top: vw(10px);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include media(sp) {
+            margin-top: 0;
+            top: sp_vw(18px);
+        }
+
+        .title {
+            font-size: vw(16px);
+            font-weight: 500;
+            color: #FFF;
+            margin-bottom: vw(7px);
+
+            @include media(sp) {
+                font-size: sp_vw(14px);
+                margin-bottom: sp_vw(7px);
+            }
+        }
+        
+        .event-date {
+            font-size: vw(12px);
+            font-weight: 500;
+            color: #FF8F00;
+            border-radius: vw(3px);
+            background: #fff;
+            padding: vw(2px) vw(10px) vw(2px);
+
+            @include media(sp) {
+                width: sp_vw(112px);
+                height: sp_vw(22px);
+                font-size: sp_vw(12px);
+                padding: sp_vw(2px) sp_vw(10px) sp_vw(2px);
+                border-radius: sp_vw(3px);
+
+                @include en {
+                    height: auto;
+                }
+            }
+
+            time {
+                font-size: vw(12px);
+                font-weight: 500;
+
+                @include media(sp) {
+                    font-size: sp_vw(12px);
+                }
+            }
+        }
+    }
+}

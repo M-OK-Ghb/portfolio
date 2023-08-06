@@ -1,0 +1,228 @@
+extends ../include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `市場動向｜セガサミーホールディングス`,
+      description: `当社の対峙する各市場の動向についてご説明しています。`,
+      pathname: `/market/index.html`,
+      dataPage: "market",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body
+
+    div#chartjs-tooltip.c-tooltip.u-is-pc
+    div.u-app__wrapper#js-app-wrapper
+    
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #FDAD30",
+          sub: "background: #F4E232",
+          isTop: false
+        }
+      include ../include/components/_background
+
+      - var mainDustsColor = "#FDAD30";
+      - var subDustsColor = "#F4E232";
+      include ../include/components/_carouselDusts
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- loading
+      //- include ../include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.p-market.fade-in(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "市場動向",
+                  link: `${config.page_link}` + 'market/index.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div#chartjs-tooltip
+
+            div.l-container__page-title.u-lg_pd-tp-150.u-lg_mg-bt-150
+              div.c-page-title
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--3
+                  h2 市場動向
+                  div.c-page-title__decoration-bar--under
+                  div.c-anchorlink
+                      ul.c-anchorlink__list
+                          li.c-anchorlink__list--item
+                              a(href="#entertainment") エンタメ市場
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#pachislot") 遊技場市場
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                img.c-page-title__jumbotron.c-page-title__mv03.u-page-img-animation-3(src=`${config.assets_link}` + "images/03_mv.png" alt="Dr.エッグマン")
+              span.copy-right ©SEGA
+
+            div.l-container__detail.u-lg_mg-bt-60#entertainment
+                div.l-container__detail__inner
+                  div.p-market__box.u-flexbox.u-lg_mg-bt-60
+                    div.p-market__box--text
+                      div.content-bodrer-top.u-gradation__background--3
+                      div.wrapper-01.u-pc_width-100
+                        h3.u-pc_width-256.u-lg_mg-rt-65 エンタメ市場
+                        p デジタル配信ゲームの市場規模はオンライン配信や、ゲーム配信プラットフォームの増加を背景に、グローバルで市場規模の拡大傾向が見られています。グローバルの市場拡大に合わせて、グローバルヒットタイトル創出を目指しています。
+                  div.p-market__chart.js-scroll-canvas__to-top-1
+                    p グローバルゲーム市場
+
+                    div.c-chart__label
+                      span.c-chart__label--y-axes 兆円
+                    div(class='c-chart bar_01 js-scroll-canvas' id='js-chart-bar_01')
+                      div.lead-scroll.u-is-sp.scroll-remove
+                        |スワイプしてください
+                        img(src=`${config.assets_link}` + "images/lead-swipe-arrow.svg")
+                      img.inset-shadow.u-is-sp.scroll-remove(src=`${config.assets_link}` + "images/inset-shadow.png")
+
+                      ul.c-chart__scalelabels.u-is-pc
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #0082CA")
+                          span.text 日本
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #2A96D3")
+                          span.text アジア
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #55ACDD")
+                          span.text 北米
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #8FC8E8")
+                          span.text 欧州
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #CCE6F5")
+                          span.text その他
+
+                      div.c-chart__canvas-wrapper
+                        div.c-chart__canvas
+                          div.c-chart__canvas-inner
+                            canvas
+                        canvas(class="js-yAxis1" width="0")
+
+                    ul.c-chart__scalelabels.u-is-sp
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #0082CA")
+                        span.text 日本
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #2A96D3")
+                        span.text アジア
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #55ACDD")
+                        span.text 北米
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #8FC8E8")
+                        span.text 欧州
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #CCE6F5")
+                        span.text その他
+                  
+                  div.p-market__addendum 出所：「Newzoo Global Games Market Data July 2022」のデータを元に自社推計（※1USD＝130円で算出）
+
+                  div.p-market__more
+                    span.p-market__more--text もっと詳しく知りたい方へ
+                    a(href="https://www.segasammy.co.jp/japanese/ir/management/market/entertainment/", target="_blank").c-button.c-button__blank
+                        |エンタメ市場の
+                        br.u-is-sp
+                        |動向について
+
+            div.l-container__detail#pachislot
+                div.l-container__detail__inner
+                  div.p-market__box.u-flexbox.u-lg_mg-bt-60
+                    div.p-market__box--text
+                      div.content-bodrer-top.u-gradation__background--3
+                      div.wrapper-01.u-pc_width-100
+                        h3.u-pc_width-256.u-lg_mg-rt-65 遊技場市場
+                        p 1995年以降緩やかに遊技人口が減少傾向にあり、パチンコホールの軒数や設置台数も長期減少トレンドを辿っています。こうした市場環境の中、利益率の改善を進め、収益性を確保してまいります。
+                  div.p-market__chart.js-scroll-canvas__to-top-2
+                    p パチスロパチンコ市場規模、販売台数
+                    div.c-chart__label
+                      span.c-chart__label--y-axes 億円
+                      span.c-chart__label--y-axes 千台
+                    div(class='c-chart bar_02 js-scroll-canvas' id='js-chart-bar_02')
+
+                      div.lead-scroll.u-is-sp.scroll-remove
+                        |スワイプしてください
+                        img(src=`${config.assets_link}` + "images/lead-swipe-arrow.svg")
+                      img.inset-shadow.u-is-sp.scroll-remove(src=`${config.assets_link}` + "images/inset-shadow.png")
+
+                      ul.c-chart__scalelabels.u-is-pc
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #AED785")
+                          span.text パチンコ市場規模（左軸）
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #549318")
+                          span.text パチンコ販売台数（右軸）
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #79BD36")
+                          span.text パチスロ市場規模（左軸）
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #234600")
+                          span.text パチスロ販売台数（右軸）
+
+                      div.c-chart__canvas-wrapper
+                        div.c-chart__canvas
+                          div.c-chart__canvas-inner
+                            canvas
+                        canvas(class="js-yAxis1" width="0")
+                        canvas(class="js-yAxis2" width="0")
+
+                    ul.c-chart__scalelabels.u-is-sp
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #AED785")
+                        span.text パチンコ市場規模（左軸）
+                      li.c-chart__scalelabels--item
+                        span.color-block-micro(style="background-color: #549318")
+                        span.text パチンコ販売台数（右軸）
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #79BD36")
+                        span.text パチスロ市場規模（左軸）
+                      li.c-chart__scalelabels--item
+                        span.color-block-micro(style="background-color: #234600")
+                        span.text パチスロ販売台数（右軸）
+                  
+                  div.p-market__addendum 出所：矢野経済研究所「パチンコ関連メーカーの動向とマーケットシェア」（日本国内市場の調査）
+
+                  div.p-market__more
+                    span.p-market__more--text もっと詳しく知りたい方へ
+                    a(href="https://www.segasammy.co.jp/japanese/ir/management/market/", target="_blank").c-button.c-button__blank
+                      |遊技場市場の
+                      br.u-is-sp
+                      |動向について
+            - 
+              var navigatorObject = {
+                text: "業績・株主還元",
+                rootClass: "c-navigator__04",
+                imgPath: `${config.assets_link}` + "images/04_mv.png",
+                alt: "ペルソナ5",
+                link: `${config.page_link}` + "operating-results/index.html",
+                textClass: "c-navigator__text--04",
+                attachClass: "attach__arrow--market"
+              }
+            include ../include/components/_navigator
+            span.copy-right ©ATLUS ©SEGA All rights reserved
+
+            //- contents end /////////////////////////////////////////////////
+
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

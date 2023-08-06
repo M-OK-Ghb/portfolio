@@ -1,0 +1,45 @@
+.c-tooltip {
+    opacity: 1;
+    z-index: 50;
+    transition: .3s;
+    background-color: rgba(0,0,0,0);
+
+    &__inner {
+        padding: vw(10px) vw(15px);
+        border-radius: vw(10px);
+        background-color: #fff;
+    }
+
+    span {
+        color: #333;
+        font-size: vw(14px);
+    }
+
+    .flex-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .color-block {
+        width: vw(15px);
+        height: vw(10px);
+        display: block;
+        border-radius: vw(2px);
+        margin-right: vw(10px);
+    }
+
+    .color-block-micro {
+        width: vw(15px);
+        height: vw(2px);
+        display: block;
+        border-radius: vw(2px);
+        margin-right: vw(10px);
+    }
+
+    .c-tooltip__count {
+        font-size: vw(20px);
+        font-weight: bold;
+        font-family: "din";
+        margin-left: vw(10px);
+    };
+};

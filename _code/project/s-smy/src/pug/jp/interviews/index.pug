@@ -1,0 +1,104 @@
+extends ../include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `感動体験レポート｜セガサミーホールディングス`,
+      description: `セガサミーが追及している、お客様のご期待を超える価値「感動体験」。ここでしかご覧いただけない、開発者インタビューなどを掲載しています。`,
+      pathname: `/interviews/index.html`,
+      dataPage: "interviews",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body
+    div.u-app__wrapper#js-app-wrapper
+    
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #0082CA",
+          sub: "background: #BF36A0",
+          isTop: false
+        }
+      include ../include/components/_background
+
+      - var mainDustsColor = "#0082CA";
+      - var subDustsColor = "#BF36A0";
+      include ../include/components/_carouselDusts
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- loading
+      //- include ../include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.p-report.fade-in(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "感動体験レポート",
+                  link: `${config.page_link}` + 'interviews/index.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div.l-container__page-title.u-lg_pd-tp-150.u-lg_mg-bt-150
+              div.c-page-title
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--6
+                  h2 感動体験
+                    br
+                    |レポート
+                img.c-page-title__jumbotron.c-page-title__mv06.u-page-img-animation-6(src=`${config.assets_link}` + "images/06_mv.png" alt="アルル")
+              span.copy-right.copy-right-report ©SEGA
+
+            div.l-container__detail.u-lg_mg-bt-30.u-sp_pos-top-50
+                div.l-container__detail__inner
+                  div.p-report__introduction.u-lg_mg-bt-60
+                    p セガサミーグループが時代を超えて追及しているお客様のご期待を超える価値「感動体験」。開発者などのインタビューや特集記事など、ここでしかご覧いただけない様々なレポートをお届けします。
+
+                  div#js-briefing-article-container
+                  
+                  a(href=`${config.page_link}` + "interviews/archive.html").c-button__report.c-button__blank.u-lg_mg-center.u-lg_mg-tp-80.u-sp_mg-tp-40
+                    img.read-icon(src=`${config.assets_link}` + "images/more-read.svg" alt="")
+                    |レポートアーカイブを見る
+                    img.arrow-icon(src=`${config.assets_link}` + "images/more-read-arrow.svg" alt="")
+
+                  div.p-report__more
+                    span.p-report__more--text
+                      |2020年3月期以前の「感動体験レポート」は
+                      br
+                      |株主通信に掲載しています
+                    a(href="https://www.segasammy.co.jp/japanese/ir/library/stockholder/", target="_blank").c-button.c-button__blank.u-lg_mg-center 株主通信を見る
+
+            - 
+              var navigatorObject = {
+                text: "TOPに戻る",
+                rootClass: "c-navigator__01",
+                imgPath: `${config.assets_link}` + "images/01_mv.png",
+                link: "ソニック",
+                link: `${config.page_link}` + "index.html",
+                textClass: "c-navigator__text--01"
+              }
+            include ../include/components/_navigator
+            span.copy-right ©SEGA
+
+            //- contents end /////////////////////////////////////////////////
+
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

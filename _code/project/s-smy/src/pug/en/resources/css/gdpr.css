@@ -1,0 +1,417 @@
+@charset 'utf-8';
+
+a.inline {
+    color: #0000ff;
+    transition: color .3s;
+}
+
+a.inline:hover {
+    color: #0A2D88;
+}
+
+a.underlined {
+    text-decoration: underline;
+}
+
+.l-gdpr {
+}
+
+.l-gdpr .l-gdpr__overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background: rgba(0,0,0,0.4);
+    opacity: 0;
+    transition: opacity .3s;
+    pointer-events: none;
+}
+
+.l-gdpr .l-gdpr__overlay.is-show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+.l-gdpr .l-gdpr__primary {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    background: #0082CA;
+    color: #fff;
+    padding: 24px 0;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+.l-gdpr .l-gdpr__primary.is-show {
+    transform: translateY(0);
+}
+
+.l-gdpr .l-gdpr__secondary {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    width: 37%;
+    max-width: 510px;
+    min-width: 350px;
+    background: #0082CA;
+    color: #fff;
+    overflow-y: scroll;
+    transform: translateX(-100%);
+    transition: transform .3s;
+}
+
+.l-gdpr .l-gdpr__secondary.is-show {
+    transform: translateX(0);
+}
+
+/* 画面下 バナー部 */
+.l-gdpr-banner {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    padding-right: 88px;
+}
+
+.l-gdpr-banner .l-gdpr-banner__texts {
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.l-gdpr-banner .l-gdpr-banner__title {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.l-gdpr-banner .l-gdpr-banner__buttons {
+    display: flex;
+    margin-left: 27px;
+} 
+
+.l-gdpr-banner .l-gdpr-banner__button {
+    white-space: nowrap;
+}
+
+.l-gdpr-banner .l-gdpr-banner__button:not(:last-child) {
+    margin-right: 10px;
+}
+
+.l-gdpr-banner .l-gdpr-banner__closer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    font-weight: 500;
+}
+
+.l-gdpr-banner .l-gdpr-banner__closer a {
+    color: #fff;
+}
+
+.l-gdpr-banner .l-gdpr-banner__closer a:before {
+    content: "\ea06";
+    display: inline-block;
+    vertical-align: baseline;
+    font-family: "iconfont";
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.l-gdpr-banner .l-gdpr-banner__closer a span {
+    display: block;
+}
+
+
+/* 画面左 パネル部 */
+.l-gdpr-settings {
+    padding: 30px;
+}
+
+.l-gdpr-settings .l-gdpr-settings__item {
+    padding: 0 0 26px;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.l-gdpr-settings .l-gdpr-settings__item:not(:first-child) {
+    padding-top: 15px;
+    border-top: 1px solid #fff;
+}
+
+.l-gdpr-settings .l-gdpr-settings__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.l-gdpr-settings__checkbox {
+    width: 88px;
+    margin-left: 10px;
+}
+
+.l-gdpr-settings .l-gdpr-settings__choices {
+    display: flex;
+    margin-top: 20px;
+}
+
+.l-gdpr-settings .l-gdpr-settings__choice:not(:last-child) {
+    margin-right: 10px;
+}
+
+.l-gdpr-settings .l-gdpr-settings__closer {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    line-height: 1;
+    text-align: center;
+    font-weight: 500;
+}
+
+.l-gdpr-settings .l-gdpr-settings__closer a {
+    color: #fff;
+}
+
+.l-gdpr-settings .l-gdpr-settings__closer a:before {
+    content: "\ea06";
+    display: inline-block;
+    vertical-align: baseline;
+    font-family: "iconfont";
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #fff;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+
+.l-gdpr-settings .l-gdpr-settings__closer a span {
+    display: block;
+}
+
+/* パネルエリア トグルボタン */
+.l-gdpr-switch {
+    position: relative;
+    border-radius: 50px;
+    border: 4px solid #0A2D88;
+    background-color: #0A2D88;
+    outline: none;
+}
+
+.l-gdpr-switch__label {
+    display: flex;
+    margin: 0;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.l-gdpr-switch__input {
+    margin: 0;
+    padding: 0;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+
+.l-gdpr-switch__on,
+.l-gdpr-switch__off {
+    flex: 1;
+    flex-basis: 50%;
+    width: 50%;
+    min-width: 40px;
+    text-align: center;
+    z-index: 2;
+    font-size: 13px;
+    padding: 0 6px;
+    font-weight: normal;
+    white-space: nowrap;
+}
+
+.l-gdpr-switch__on {
+    color: #fff;
+    font-weight: 500;
+}
+
+.l-gdpr-switch__off {
+    color: #ccc;
+}
+
+.l-gdpr-switch__toggle {
+    display: block;
+    width: 50%;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    border-radius: 50px;
+    transition: all .4s ease;
+    background-color: #0082CA;
+}
+
+.l-gdpr-switch input:checked ~ .l-gdpr-switch__toggle {
+    left: 50%;
+}
+
+/* 画面左下 Cアイコン */
+.l-gdpr .l-gdpr__toggle {
+    position: fixed;
+    left: 0;
+    bottom: 0;    
+    z-index: 1001;
+    width: 72px;
+}
+
+.l-gdpr .l-gdpr__toggle a:before{
+    content: '';
+    display: block;
+    padding-top: 100%;
+    background: url(/english/resources/img/icon-gdpr.svg) no-repeat left bottom;
+    background-size: contain;
+    margin-bottom: -1px;
+}
+
+.l-gdpr .l-gdpr__toggle a span {
+    display: none;
+}
+
+
+@media only screen and (min-width:769px) and (max-width: 1024px) {
+    .l-gdpr-banner .l-gdpr-banner__buttons {
+        display: block;
+    } 
+
+    .l-gdpr-banner .l-gdpr-banner__button {
+        white-space: nowrap;
+    }
+
+    .l-gdpr-banner .l-gdpr-banner__button:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .l-gdpr .l-gdpr__primary {
+        padding: 30px 20px;
+    }
+
+    .l-gdpr .l-gdpr__secondary {
+        width: 335px;
+    }
+
+    .l-gdpr .l-gdpr__toggle {
+        z-index: 1;
+    }
+    
+    .l-gdpr-banner {
+        display: block;
+        width: auto;
+        padding-right: 0;
+    }
+    
+    .l-gdpr-banner .l-gdpr-banner__texts {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+    
+    .l-gdpr-banner .l-gdpr-banner__title {
+        margin-bottom: 10px;
+        padding-right: 50px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    
+    .l-gdpr-banner .l-gdpr-banner__buttons {
+        display: block;
+        margin-top: 25px;
+        margin-left: 0;
+    } 
+    
+    .l-gdpr-banner .l-gdpr-banner__button {
+        white-space: nowrap;
+    }
+    
+    .l-gdpr-banner .l-gdpr-banner__button:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+        
+    .l-gdpr-banner .l-gdpr-banner__closer a:before {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+    
+    .l-gdpr-banner .l-gdpr-banner__closer a span {
+        display: none;
+    }
+
+    .l-gdpr-settings {
+        padding: 20px;
+    }
+
+    .l-gdpr-settings .l-gdpr-settings__item {
+        padding: 0 0 30px;
+    }
+
+    .l-gdpr-settings .l-gdpr-settings__item:not(:first-child) {
+        padding-top: 20px;
+    }
+
+    .l-gdpr-settings .l-gdpr-settings__header {
+        display: flex;
+        margin-bottom: 10px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+    .l-gdpr-settings .l-gdpr-settings__closer {
+        top: 10px;
+        right: 10px;
+    }
+
+    .l-gdpr-settings .l-gdpr-settings__closer a:before {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    .l-gdpr-settings .l-gdpr-settings__closer a span {
+        display: none;
+    }
+
+    .l-gdpr-settings .l-gdpr-settings__choices {
+        display: block;
+    }
+
+    .l-gdpr-settings .l-gdpr-settings__choice:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+}

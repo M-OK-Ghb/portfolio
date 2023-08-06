@@ -1,0 +1,368 @@
+extends ./include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: true,
+      title: `For Individual Investors｜SEGA SAMMY HOLDINGS`,
+      description: `You can find various information of SEGA SAMMY such as business summary, management strategies, results, shareholder return, etc.`,
+      pathname: `/`,
+      dataPage: "top",
+      page_link: "",
+      assets_link: "../../../assets/",
+      lang_link: "../../../"
+    }
+
+//- body contents
+block pageContent
+  body.u-sitetop(style={opacity: 0})
+  
+    //- cookiePolicy contents
+    include ./include/components/_cookiePolicy
+    div.u-app__wrapper#js-app-wrapper
+
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #79bd36",
+          sub: "background: #1482ca",
+          isTop: true
+        }
+      include ./include/components/_background
+
+      //- header contents
+      include ./include/basic/_header
+
+      //- loading
+      //- include ./include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.p-top.fade-in.u-top-page-pt-remove.u-top-0.u-pd-bt-0(data-page=config.dataPage)
+
+            //- contents start ///////////////////////////////////////////////
+            include ./include/components/_topCarousel
+            
+            div.l-container__page-title.u-lg_mg-tp-90.u-lg_mg-bt-60.u-sp_mg-tp-60#js-header-trigger
+              div.c-page-title.js-scroll-box__to-top
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--1
+                  h2#about
+                    | About
+                    span SEGA SAMMY
+                  div.c-page-title__decoration-bar--under
+                  div.c-anchorlink
+                      ul.c-anchorlink__list
+                          li.c-anchorlink__list--item
+                              a(href="#group-mission") SEGA SAMMY Group Mission
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#vision") Vision
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#esg-sdgs") ESG/SDGs
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#history") History
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                img.c-page-title__jumbotron.c-page-title__mv01(src=`${config.assets_link}` + "images/01_mv.png" alt="SONIC" style="opacity: 1;")
+              span.copy-right ©SEGA
+
+            div.l-container__detail.u-lg_mg-bt-150.u-sp_mg-bt-60#group-mission
+                div.l-container__detail__inner
+                  div.p-top__box.u-flexbox.u-lg_mg-bt-80.js-scroll-box__to-top
+                    div.p-top__box--text.u-lg_mg-rt-65.u-lg_width-385
+                      div.content-bodrer-top.u-gradation__background--1
+                      h3 SEGA SAMMY
+                        br
+                        |Group Mission
+                      p.u-sp_mg-bt-75 SEGA SAMMY has established a Mission Pyramid, shared across the Group, to guide the business activities of SEGA and SAMMY and other group companies. The Mission Pyramid consists of Value (Mindset/DNA), Mission (Raison d’être), and Vision (Ideal self). The Group is striving to ensure that all its employees clearly understand the Mission Pyramid and work together to enhance corporate value.
+                    img.p-top__box--img(src=`${config.assets_link}` + "images/top-vmv-en.svg" alt="グループ各社の事業の指針となるミッションピラミッド")
+                  div.p-top__hr.u-lg_mg-bt-40
+                  div.p-top__box.js-scroll-box__to-top
+                    div.p-top__box--message
+                      h4 Message from Top
+                      div.wrapper-01
+                        img(src=`${config.assets_link}` + "images/ceo_msg.png" alt="President and Group CEO, Representative Director Haruki Satomi")
+                        div.text-block
+                          //- p Our new medium-term plan will guide the Group in building economic and social value.
+                          dl
+                            dt President and Group CEO, Representative Director
+                            dd Haruki Satomi
+                          a(href="https://www.segasammy.co.jp/english/ir/management/message/#CEO", target="_blank").c-button.c-button__blank
+                            |View the message
+                            br
+                            |from top.
+
+            div.l-container__detail.u-lg_mg-bt-60.u-sp_mg-bt-60#vision
+                div.l-container__detail__inner
+                  div.p-top__box.p-top__box--vision.js-scroll-box__to-top
+                    img.u-is-pc(src=`${config.assets_link}` + "images/top-vision-en.svg" alt="グループ各社の事業の指針となるミッションピラミッド")
+                    img.u-is-sp(src=`${config.assets_link}` + "images/top-vision-en-sp.svg" alt="グループ各社の事業の指針となるミッションピラミッド")
+                    div.p-top__box--text.u-sp_mg-bt-447
+                      div.content-bodrer-top.u-gradation__background--1
+                      h3 Vision
+                      p SEGA SAMMY Group has established a new long-term vision which set the fiscal year ending March 2030 as a goal. We set ”Beyond the Status Quo -Breaking the Current Situation and Becoming a Sustainable Company-” as a goal of medium-term plan for the first three years of that pathway and while push forward the key strategies for each business, we also proceed the shift to the management system based on capital efficiency. Also, we have conducted a fundamental review of our financial strategy along with them and revised our shareholder return policy.
+                      a(href="https://www.segasammy.co.jp/english/ir/library/pdf/settlement/2021/202103_4q_presentation_midtermplan_e.pdf", target="_blank").c-button.c-button__blank
+                        |Click here for
+                        br
+                        |the mid-term plan
+
+            div.l-container__detail.u-lg_mg-bt-150.u-sp_mg-bt-140#esg-sdgs
+                div.l-container__detail__inner
+                  div.p-top__box.p-top__box--esg
+                    div.p-top__box--text.u-flexbox.u-lg_mg-bt-60.js-scroll-box__to-top
+                      div._flex-wrapper.u-lg_mg-rt-80
+                        div.content-bodrer-top.u-gradation__background--1
+                        h3 ESG/SDGs
+                        p SEGA SAMMY Group defines 5 material issues to be addressed, which are the human resources, products and services, environment, addiction, and governance in order to reaffirm the value of the experiences that move the heart the Group provides through each of its business areas, and to guide our efforts to realize sustainable solutions to social issues and enhance corporate value.
+                      
+                    img.u-is-pc.js-scroll-box__to-top(src=`${config.assets_link}` + "images/top-esg-en.svg" alt="グループにおけるマテリアリティ")
+                    img.u-is-sp.js-scroll-box__to-top(src=`${config.assets_link}` + "images/top-esg-en-sp.svg" alt="グループにおけるマテリアリティ")
+
+                    div.p-top__more
+                      span.p-top__more--text
+                        |For those who would like to know
+                        br.u-is-pc
+                        |more details
+                      div.p-top__more--btns
+                        a(href="https://www.segasammy.co.jp/english/pr/commu/csr_library/", target="_blank").c-button.c-button__blank To SDGs・ESG
+                        a(href="https://www.segasammy.co.jp/english/pr/corp/governance/", target="_blank").c-button.c-button__blank To Corporate Governance
+
+            div.l-container__content#history
+              div.p-top__box.p-top__box--history.u-lg_mg-bt-90
+                div.content-bodrer-top.u-gradation__background--1.u-mg-center
+                h3 History of SEGA SAMMY
+                p The SEGA SAMMY Group was formed in October 2004 through the management integration of SEGA, a creator of wellknown innovative products, and Sammy, a developer of various industry-first products. Since the management integration, SEGA SAMMY Group companies have continued to offer experiences that move the heart for consumers and create new experiences through the full-scale entry into the Resort Business in 2012 and other initiatives.
+              div.p-integration
+                div.p-integration__before.u-lg_mg-bt-120#js-top-before-int
+                  div.c-integration.sega_color
+                    dl.c-integration__title
+                      dt SEGA
+                      dd
+                        span 1960
+                        span Established
+                    ul.c-integration__list
+                      li.c-integration__list--item
+                        figure
+                          div.img-block
+                            img(src=`${config.assets_link}` + "images/history_megadrive.png" alt="SEGA メガドライブ")
+                          figcaption.text-block
+                            span.year 1988
+                            dl
+                              dt Mega Drive
+                              dd Launched the "Mega Drive" home video game console powered by a high-performance 16-bit CPU
+                                span.copy-right ©SEGA
+
+                      li.c-integration__list--item
+                        figure
+                          div.img-block
+                            img(src=`${config.assets_link}` + "images/history_sega03.png" alt="SEGA バーチャファイター")
+                          figcaption.text-block
+                            span.year 1993
+                            dl
+                              dt Virtua Fighter
+                              dd Started rolling out "Virtua Fighter", a world first 3D computer graphics (CG) fighting game
+                                span.copy-right ©SEGA
+                      li.c-integration__list--item
+                        figure
+                          div.img-block
+                            img(src=`${config.assets_link}` + "images/history_sega05.png" alt="SEGA ドリームキャスト")
+                          figcaption.text-block
+                            span.year 1998
+                            dl
+                              dt Dreamcast
+                              dd Launched "Dreamcast", the industry’s first home video console with internet connectivity
+                                span.copy-right ©SEGA
+
+                    div.c-integration__line
+                      div.c-integration__line--circle
+                      div.c-integration__line--line-1
+                      div.c-integration__line--line-2
+                      div.c-integration__line--line-3
+
+                  div.c-integration.sammy_color
+                    dl.c-integration__title
+                      dt SAMMY
+                      dd
+                        span 1975
+                        span Established
+                    ul.c-integration__list
+                      li.c-integration__list--item
+                        figure
+                          div.img-block
+                            img(src=`${config.assets_link}` + "images/history_02__.png" alt="Sammy アラジン")
+                          figcaption.text-block
+                            span.year 1989
+                            dl
+                              dt ALADDIN
+                              dd Launched "ALADDIN", the industry’s first single-bonus hitter pachislot machine
+                                span.copy-right ©Sammy
+                      li.c-integration__list--item
+                        figure
+                          div.img-block
+                            img(src=`${config.assets_link}` + "images/history_p54_moujyuuou-s.png" alt="Sammy 獣王")
+                          figcaption.text-block
+                            span.year 2001
+                            dl
+                              dt Beast King
+                              dd Launched "Beast King", a pachislot machine with assist time (AT)
+                                span.copy-right ©Sammy
+                      li.c-integration__list--item
+                        figure
+                          div.img-block
+                            img(src=`${config.assets_link}` + "images/history_hokuto01.png" alt="Sammy パチスロ北斗の拳")
+                          figcaption.text-block
+                            span.year 2003
+                            dl
+                              dt Pachislot Hokuto No Ken
+                              dd Launched "Pachislot Hokuto No Ken", which set an unprecedented sales record unbeaten to this day
+                                span.copy-right ©Buronson &amp; Tetsuo Hara／NSP 1983　　©Sammy
+
+                    div.c-integration__line
+                      div.c-integration__line--circle
+                      div.c-integration__line--line-1
+                      div.c-integration__line--line-2
+                      div.c-integration__line--line-3
+
+                div.p-integration__after
+                  div.c-integration.u-lg_width-465.u-mg-center
+                    dl.c-integration__title
+                      dt.u-lg_mg-bt-10
+                        img(src=`${config.assets_link}` + "images/segasammy_logomark.png" alt="セガサミー コーポレートロゴ")
+                      dd
+                        span 2004
+                        span Management Integration
+
+                  div.c-integration.u-mg-center.u-lg_mg-bt-100#js-top-after-int
+                    ul.c-integration__list--after#js-create-dom-entrypoint_01
+                      li.c-integration__list--after--item.js-fit-stack-list-item
+                        span.year 2005
+                        figure
+                          img(src=`${config.assets_link}` + "images/segasam01.png" alt="龍が如く")
+                          figcaption
+                            dl
+                              dt Ryu ga Gotoku
+                              dd Launched "Ryu ga Gotoku", the first title in a blockbuster series of home video games
+                                span.copy-right ©SEGA
+
+                      li.c-integration__list--after--item--even.js-fit-stack-list-item
+                        span.year 2008
+                        figure
+                          figcaption
+                            dl
+                              dt Pachinko CR Hokuto No Ken
+                              dd Launched "Pachinko CR Hokuto No Ken", the Company’s best-selling pachinko machine by number of units
+                                span.copy-right ©Buronson &amp; Tetsuo Hara／NSP 1983
+                                  br
+                                  |©NSP2007, Approved No. SAE-307
+                                  br
+                                  |©Sammy
+                          img(src=`${config.assets_link}` + "images/cr-hokuto.png" alt="ぱちんこＣＲ北斗の拳")
+
+                      li.c-integration__list--after--item.js-fit-stack-list-item
+                        span.year 2009
+                        figure
+                          img(src=`${config.assets_link}` + "images/segasam04.png" alt="パチスロ 交響詩篇エウレカセブン")
+                          figcaption
+                            dl
+                              dt Pachislot Psalms of Planets Eureka Seven
+                              dd Launched Pachislot Psalms of Planets Eureka Seven, which introduced new gameplay characteristics into No. 5 models
+                                span.copy-right ©2005 BONES/Project EUREKA
+                                  br
+                                  |©Sammy　©BNEI
+
+                      li.c-integration__list--after--item--even.js-fit-stack-list-item
+                        span.year 2012
+                        figure
+                          figcaption
+                            dl
+                              dt PHANTASY STAR ONLINE 2
+                              dd Started distribution of PC online RPG "PHANTASY STAR ONLINE 2"
+                                span.copy-right ©SEGA
+                          img(src=`${config.assets_link}` + "images/P55_PSO2_global.png" alt="ファンタシースターオンライン2")
+
+                        figure
+                          figcaption
+                            dl
+                              dt Phoenix Seagaia Resort
+                              dd Made PHOENIX RESORT CO., LTD., a wholly owned subsidiary
+                                span.copy-right ©Phoenix Resort
+                          img(src=`${config.assets_link}` + "images/P55_seagaia.png" alt="フェニックス・シーガイア・リゾート")
+
+                      li.c-integration__list--after--item.js-fit-stack-list-item
+                        span.year 2016
+                        figure
+                          img(src=`${config.assets_link}` + "images/segasam07.png" alt="ペルソナ5")
+                          figcaption
+                            dl
+                              dt Persona 5
+                              dd Launched home video console game Persona 5
+                                span.copy-right ©ATLUS ©SEGA All rights reserved.
+
+                      li.c-integration__list--after--item--even.js-fit-stack-list-item
+                        span.year 2017
+                        figure
+                          figcaption
+                            dl
+                              dt PARADISE CITY
+                              dd Opened PARADISE CITY, South Korea’s first integrated resort
+                                span.copy-right ©PARADISE SEGASAMMY Co., Ltd. All rights reserved.
+                          img(src=`${config.assets_link}` + "images/P55_paradise_city.png" alt="PARADISE CITY")
+
+                      li.c-integration__list--after--item.js-fit-stack-list-item
+                        span.year 2020
+                        figure
+                          figcaption
+                            dl
+                              dt Sonic The Hedgehog
+                              dd Released the Sonic the Hedgehog movie
+                                span.copy-right ©2020 PARAMOUNT PICTURES AND SEGA OF AMERICA, INC. ALL RIGHTS RESERVED.
+                          img(src=`${config.assets_link}` + "images/p55_SONIC_jpn_B1_6.png" alt="ソニック・ザ・ムービー")
+                        figure
+                          figcaption
+                            dl
+                              dt Project SEKAI COLORFUL STAGE! feat. Hatsune Miku
+                              dd Launched Project SEKAI COLORFUL STAGE! feat. Hatsune Miku
+                          img(src=`${config.assets_link}` + "images/pj_sekai_ayumi.jpg" alt="Project SEKAI COLORFUL STAGE")
+
+                      li.c-integration__list--after--item--even.js-fit-stack-list-item.--enLastTweak
+                        span.year 2022
+                        figure
+                          img(src=`${config.assets_link}` + "images/SONIC2_movie_jp.jpg" alt="Sonic the Hedgehog 2")
+                          figcaption
+                            dl
+                              dt Sonic the Hedgehog 2
+                              dd Sonic the Hedgehog 2 became a worldwide hit.
+                                span.copy-right ©2022 PARAMOUNT PICTURES CORPORATION AND SEGA OF AMERICA, INC
+
+                    div.c-integration__list--afterline
+                      div.c-integration__list--afterline--circle
+                      div.c-integration__list--afterline--line-1
+
+            div.c-button__center
+              a(href="https://www.segasammy.co.jp/english/pr/corp/history/", target="_blank").c-button__more-history.c-button__blank.u-mg-center
+                |See more details about 
+                br
+                |History of SEGA SAMMY Group
+
+            - 
+              var navigatorObject = {
+                text: "Business",
+                rootClass: "c-navigator__02",
+                imgPath: `${config.assets_link}` + "images/02_mv.png",
+                alt: "ALIYAN",
+                link: `${config.page_link}` + "business/index.html",
+                textClass: "c-navigator__text--02"
+              }
+            include ./include/components/_navigator
+            span.copy-right ©Sammy
+
+            //- contents end /////////////////////////////////////////////////
+
+        //- footer contents
+        include ./include/basic/_footer
+
+      //- script
+      include ./include/basic/_script

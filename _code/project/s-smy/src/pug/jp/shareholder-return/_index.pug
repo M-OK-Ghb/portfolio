@@ -1,0 +1,116 @@
+extends ../include/template/_template
+
+//- SS通信ページへ移行したため、ファイルは保存するがdistしないように変更
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `株主還元｜セガサミーホールディングス`,
+      description: `株主になると利益の一部を配当金として受領いただけます。`,
+      pathname: `/shareholder-return/index.html`,
+      dataPage: "shareholder-return",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body
+    div.u-app__wrapper#js-app-wrapper
+
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #BF36A0",
+          sub: "background: #CE090F",
+          isTop: false
+        }
+      include ../include/components/_background
+
+      - var mainDustsColor = "#BF36A0";
+      - var subDustsColor = "#CE090F";
+      include ../include/components/_carouselDusts
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- loading
+      //- include ../include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.reduction.fade-in(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "株主還元",
+                  link: `${config.page_link}` + 'shareholder-return/index.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div.l-container__page-title.u-lg_pd-tp-200.u-lg_mg-bt-200
+              div.c-page-title
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--5
+                  h2 株主還元
+                img.c-page-title__jumbotron.c-page-title__mv05.u-page-img-animation-5(src=`${config.assets_link}` + "images/05_mv.png" alt="")
+              span.copy-right ©PARADISE SEGASAMMY Co., Ltd.All rights reserved.
+
+            div.l-container__detail.u-lg_mg-bt-60.u-sp_pos-top-85
+                div.l-container__detail__inner
+                  div.p-reduction__box.u-lg_mg-bt-60
+                    div.p-reduction__box--text
+                      div.content-bodrer-top.u-gradation__background--5
+                      h3 株主としてセガサミーホールディングスに
+                        br.u-is-pc
+                        |出資いただくことで、利益の一部を
+                        br.u-is-pc
+                        |配当金として受領いただけます。
+
+                  div.p-reduction__btns.u-lg_mg-bt-60
+                      a(href="https://www.segasammy.co.jp/japanese/ir/stock/share/", target="_blank").c-button.c-button__blank.c-button__high.u-lg_mg-center
+                        img(src=`${config.assets_link}` + "images/noun_coin.svg" alt="")
+                        div.btn-text-wrapper
+                          span.btn-title 配当実績
+                          span.btn-text
+                            |過去の配当実績
+                            br.u-is-sp
+                            |を詳しく見る
+                      a(href="https://www.segasammy.co.jp/japanese/ir/stock/stockprice/", target="_blank").c-button.c-button__blank.c-button__high.u-lg_mg-center
+                        img(src=`${config.assets_link}` + "images/noun_increase.svg" alt="")
+                        div.btn-text-wrapper
+                          span.btn-title 株価情報
+                          span.btn-text
+                            |株価情報
+                            br.u-is-sp
+                            |を詳しく見る
+
+                  div.p-reduction__more
+                    span.p-reduction__more--text もっと詳しく知りたい方へ
+                    a(href="https://www.segasammy.co.jp/japanese/ir/stock/", target="_blank").c-button.c-button__blank.u-lg_mg-center その他株式情報はこちら
+            - 
+              var navigatorObject = {
+                text: "感動体験レポート",
+                rootClass: "c-navigator__06",
+                imgPath: `${config.assets_link}` + "images/06_mv.png",
+                link: `${config.page_link}` + "interviews/index.html",
+                textClass: "c-navigator__text--06"
+              }
+            include ../include/components/_navigator
+            span.copy-right ©SEGA
+
+            //- contents end /////////////////////////////////////////////////
+
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

@@ -1,0 +1,13 @@
+.content-bodrer-top {
+    width: vw(64px);
+    height: vw(3px);
+    margin-bottom: vw(25px);
+    border-radius: vw(20px);
+
+    @include media(sp) {
+        width: sp_vw(60px);
+        height: sp_vw(3px);
+        margin-bottom: sp_vw(20px);
+        border-radius: sp_vw(20px);
+    }
+}

@@ -1,0 +1,357 @@
+extends ../include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `Business of SEGA SAMMY｜SEGA SAMMY HOLDINGS`,
+      description: `You can find about the business of SEGA SAMMY and our strength.`,
+      pathname: `/business/index.html`,
+      dataPage: "business",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body
+  
+    //- cookiePolicy contents
+    include ../include/components/_cookiePolicy
+    div.u-app__wrapper#js-app-wrapper
+
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #F4E232",
+          sub: "background: #79BD36",
+          isTop: false
+        }
+      include ../include/components/_background
+
+      - var mainDustsColor = "#F4E232";
+      - var subDustsColor = "#79BD36";
+      include ../include/components/_carouselDusts
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- loading
+      //- include ../include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.p-business.fade-in(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "Business of SEGA SAMMY",
+                  link: `${config.page_link}` + 'business/index.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div.l-container__page-title.u-lg_pd-tp-90.u-lg_mg-bt-60
+              div.c-page-title
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--2
+                  h2
+                    |Business
+                    span of SEGA SAMMY
+                  div.c-page-title__decoration-bar--under
+                  div.c-anchorlink
+                      ul.c-anchorlink__list
+                          li.c-anchorlink__list--item
+                              a(href="#business-summary") Business Summary
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#strength") Strength
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                img.c-page-title__jumbotron.c-page-title__mv02.u-page-img-animation-2(src=`${config.assets_link}` + "images/02_mv.png" alt="ALIYAN")
+              span.copy-right ©Sammy
+
+            div.l-container__detail.u-lg_mg-bt-30#business-summary
+                div.l-container__detail__inner
+                  div.p-business__box.u-flexbox.u-lg_mg-bt-60
+                    div.p-business__box--text
+                      div.content-bodrer-top.u-gradation__background--2
+                      div.wrapper-01
+                        h3.u-pc_width-256.u-lg_mg-rt-65 Business Summary
+                        p SEGA SAMMY Group has established unique positions in each of its three pillars of business: Entertainment Contents Business, Pachislot and Pachinko Machines Business, and Resort Business. We will deliver new added value globally by creating synergy among the segments.
+                  div.p-business__detail.js-scroll-box__to-top
+                    div.p-business__detail--image.u-lg_mg-rt-65
+                      img(src=`${config.assets_link}` + "images/business_01.png" alt="エンタテインメントコンテンツ事業")
+                      span.copy-right ©SEGA
+                    div.p-business__detail--text
+                      h4 Entertainment Contents Business
+                      p The Group aims to grow its business and maximize profits by expanding globally, particularly within the Consumer Games area by generating content such as games for video game consoles, PCs, and smartphones by utilizing SEGA’s unparalleled development capabilities, which have been launching innovative products across a wide range of business areas.
+                      a(href="https://www.segasammy.co.jp/english/pr/business/entertainment/", target="_blank").c-button.c-button__blank See details
+
+                  div.p-business__detail.u-sp_fd-c-r.js-scroll-box__to-top
+                    div.p-business__detail--text
+                      h4 Pachislot and Pachinko Machines Business
+                      p In the Pachislot and Pachinko Machines Business, the Group is developing pachislot and pachinko machines, games for PCs and smartphones that use pachislot and pachinko content, and gaming equipment for casinos. 
+                      a(href="https://www.segasammy.co.jp/english/pr/business/pachislot/", target="_blank").c-button.c-button__blank See details
+                    div.p-business__detail--image.u-lg_mg-lf-65
+                      img(src=`${config.assets_link}` + "images/business_02.png" alt="遊技機事業")
+                      span.copy-right ©Buronson &amp; Tetsuo Hara／NSP 1983, ©NSP 2007 Approved No.YSE-020　　©Sammy / ©Sammy
+
+                  div.p-business__detail.js-scroll-box__to-top
+                    div.p-business__detail--image.u-lg_mg-rt-65
+                      img(src=`${config.assets_link}` + "images/business_03.png" alt="リゾート事業")
+                      span.copy-right ©Phoenix Resort
+                    div.p-business__detail--text
+                      h4 Resort Business
+                      p Having started with Phoenix Seagaia Resort, SEGA SAMMY has continued to offer out-of-the-ordinary experiences that move the heart of facility users through the development and operation of South Korea’s first integrated resort, PARADISE CITY. The Group will also pursue investment possibilities in the gaming area as a whole, including opportunities for entry into the integrated resort business in Japan and overseas as well as overseas online casino and sports betting.
+                      a(href="https://www.segasammy.co.jp/english/pr/business/resort/", target="_blank").c-button.c-button__blank See details
+
+                  div.p-business__movie.js-scroll-box__to-top
+                    div.p-business__movie--head
+                      h3
+                        img(src=`${config.assets_link}` + "images/youtube-logo.svg", alt="公式YouTubeチャンネル")
+                      div.p-business__movie--titlewrap
+                        span Official YouTube Channel
+                        span A variety of movie contents including product promotion movies are available.
+                    ul.p-business__movie--list
+                      li
+                        a(href="https://www.youtube.com/@segasammygroup1063/videos", target="_blank")
+                          div.img-wrapper
+                            img(src=`${config.assets_link}` + "images/segasammy_logomark.png" alt="セガサミー ロゴ")(style="width:90%;")
+                          div.u-flexbox.link-wrapper
+                            span SEGA SAMMY GROUP
+                            img(src=`${config.assets_link}` + "images/movie-list-link.svg" alt="")
+                      li
+                        a(href="https://www.youtube.com/user/SEGA/featured", target="_blank")
+                          div.img-wrapper
+                            img.u-sp_width-85(src=`${config.assets_link}` + "images/sega-logo.svg" alt="SEGA ロゴ")
+                          div.u-flexbox.link-wrapper
+                            span SEGA
+                            img(src=`${config.assets_link}` + "images/movie-list-link.svg" alt="外部リンク")
+                      li
+                        a(href="https://www.youtube.com/user/SammyCorporation/featured", target="_blank")
+                          div.img-wrapper
+                            img.u-sp_width-60(src=`${config.assets_link}` + "images/sammy-logo.svg" alt="Sammy ロゴ")(style="width:65%;")
+                          div.u-flexbox.link-wrapper
+                            span Sammy Channel
+                            img(src=`${config.assets_link}` + "images/movie-list-link.svg" alt="")
+                      li
+                        a(href="https://www.youtube.com/channel/UCYpAbVaWXmTIWG1G2vHx0ag", target="_blank")
+                          div.img-wrapper
+                            img.u-sp_width-85(src=`${config.assets_link}` + "images/psr-logo.svg" alt="フェニックスシーガイアリゾート ロゴ")
+                          div.u-flexbox.link-wrapper
+                            span Phoenix Seagaia Resort
+                            img(src=`${config.assets_link}` + "images/movie-list-link.svg" alt="")
+                      li
+                        a(href="https://www.youtube.com/channel/UCsDi26MGE_ck9vEgHDBkivA", target="_blank")
+                          div.img-wrapper
+                            img.u-sp_width-100per(src=`${config.assets_link}` + "images/paradaise-city-logo.png" alt="パラダイスシティ ロゴ")
+                          div.u-flexbox.link-wrapper
+                            span PARADISE CITY
+                            img(src=`${config.assets_link}` + "images/movie-list-link.svg" alt="")
+
+            div.l-container__detail.u-lg_mg-bt-150#strength
+                div.l-container__detail__inner
+                  div.p-business__forte
+                    div.p-business__forte--text
+                      div.content-bodrer-top.u-gradation__background--2
+                      h3 Strength of SEGA SAMMY
+
+                    div.p-business__forte--block.js-scroll-box__to-top
+                      div.topic-wrapper
+                        span.numbers 01
+                        h4 Wide range of business domains
+                        p The Group has been developing business which spanning a wide range of entertainment domains, and has growing its various business areas while seizing diverse profit opportunities and hedging risks. 
+                      img.single-img.u-is-pc(src=`${config.assets_link}` + "images/business_forte_en_01.png" alt="幅広いエンタテインメント領域にまたがるバランスが取れた事業ポートフォリオ")
+                      img.single-img.u-is-sp(src=`${config.assets_link}` + "images/business_forte_en_sp_01.png" alt="幅広いエンタテインメント領域にまたがるバランスが取れた事業ポートフォリオ")
+                      p.credit-text
+                        span.credit-text--blue Entertainment Contents Business
+                        |："Detective Conan: The Scarlet Bullet"©2020 GOSHO AOYAMA/DETECTIVE CONAN COMMITTEE All Rights Reserved │ "PHANTASY STAR ONLINE 2 NEW GENESIS"©SEGA │ "Persona 5 Strikers"©ATLUS. ©SEGA. / ©KOEI TECMO GAMES. All rights reserved. │ "ASTRO CITY mini"©SEGA ©SEGATOYS │ "UFO CATCHER TRIPLE TWIN"©SEGA　 
+                        span.credit-text--green Pachislot and Pachinko Machines Business
+                        |："P Psalms of Planets Eureka Seven HI-EVOLUTION ZERO"©2017 BONES/Project EUREKA MOVIE, ©BANDAI NAMCO Entertainment Inc., ©Sammy│ "Pachislot Initial D"©Shuichi Shigeno / Kodansha･2014 New Movie "Initial D" Production Committee, ©Shuichi Shigeno / Kodansha･2015 New Movie "Initial D" L2 Production Committee, ©Shuichi Shigeno / Kodansha･2016 New Movie "Initial D" L3 Production Committee, ©Sammy　 
+                        span.credit-text--orange Resort Business
+                        |："Phoenix Seagaia Resort"©Phoenix Resort
+
+                    div.p-business__forte--block.js-scroll-box__to-top
+                      div.topic-wrapper
+                        span.numbers 02
+                        h4 A Robust Financial Foundation
+                        p Many of the Group’s businesses are “hit-making businesses,” in which continuous investment in development is required to generate hit titles, and the presence or lack of a hit has a significant impact on earnings. Financial stability and cash flow generated by the Pachislot and Pachinko Machines Business and other segments underpin stable development investment, and are also the foundation that enable the Group to continue doing business in pursuit of future growth, even amid harsh operating conditions.
+                      img.single-img.u-is-pc(src=`${config.assets_link}` + "images/business_forte_02.jpeg" alt="強固な財務基盤 イメージ")
+                      img.single-img.u-is-sp(src=`${config.assets_link}` + "images/business_forte_sp_02.png" alt="強固な財務基盤 イメージ")
+
+                    div.p-business__forte--block
+                      div.topic-wrapper.last-topic.js-scroll-box__to-top
+                        span.numbers 03
+                        h4 Hit-Making Power “Innovative DNA”
+                        p Throughout its history, the SEGA SAMMY Group has produced numerous hits. These kinds of hits become our IPs* and they are not limited to a single medium, but spread across a wide range of fields such as pachislot, pachinko, consumer games, amusement machines, animation, and toys. 
+                        span.small-text *IP: Intellectual property
+                      ul.saleslist
+
+                        li.saleslist__item
+                          img.bg-img.u-is-pc(src=`${config.assets_link}` + "images/business_forte_03a1.jpg" alt="ソニック シリーズ 背景")
+                          img.bg-img.u-is-sp(src=`${config.assets_link}` + "images/business_forte_sp_03a.png" alt="ソニック シリーズ 背景")
+                          div.saleslist__item--container.right-pos.js-scroll-box__to-top
+                            dl.explane-block
+                              dt Sonic the Hedgehog series
+                              dd Sonic the Hedgehog, SEGA’s iconic IP, appeared in 1991 as a high-speed action game in which Sonic runs through game stages, passing through various ups and downs and loops at the speed of sound. This innovative IP continues to win the hearts of users around the world. The live-action movie Sonic the Hedgehog, released in 2020, was a huge hit worldwide.
+                            div.salesquantity-block
+                              span.quantity-bf Cumulative number of units in series
+                              span.quantity
+                                span.unit Over
+                                span.quantity-inner.js-set-count#js-countup-1
+                                span.unit billion
+                              span.annotation-text (Units and downloads*), (Full games and F2P total)
+                                br
+                                |*Including F2P title downloads
+                              ul.product-list
+                                li(style="align-items: center")
+                                  span.numbers Product 1
+                                  span.title Sonic Mania
+                                    span.company / ©SEGA
+                                li(style="align-items: center")
+                                  span.numbers Product 2
+                                  span.title Team Sonic Racing
+                                    span.company / ©SEGA
+                            div.product-images.product-images__pos--01.js-scroll-box__to-top--d500_1
+                             img(src=`${config.assets_link}` + "images/business_forte_03a2.png" alt="ソニックマニア ").u-pc_width-160.u-sp_width-120
+                             img(src=`${config.assets_link}` + "images/business_forte_03a3.png" alt="チームソニックレーシング").u-pc_width-160.u-sp_width-120
+                          span.copy-right ©SEGA
+
+                        li.saleslist__item
+                          img.bg-img.u-is-pc(src=`${config.assets_link}` + "images/business_forte_03b1.jpg" alt="北斗の拳 シリーズ 背景")
+                          img.bg-img.u-is-sp(src=`${config.assets_link}` + "images/business_forte_sp_03b.png" alt="北斗の拳 シリーズ 背景")
+                          div.saleslist__item--container.left-pos.js-scroll-box__to-top
+                            dl.explane-block
+                              dt Hokuto No Ken series
+                              dd The initial "Pachislot Hokuto No Ken" machine boasts the largest sales volume ever in the pachislot market, with cumulative sales of approx.
+                                br
+                                | 620,000 units. Series subsequent machines have continued to be hits and leads the pachislot and pachinko market.
+                                br
+                                | In 2019, it was expanded into smartphone title as well.
+                            div.salesquantity-block
+                              span.quantity-bf Cumulative number of units in series
+                              span.quantity
+                                span.unit Over
+                                span.quantity-inner.js-set-count#js-countup-2
+                                span.unit million
+                              span.annotation-text （Units and downloads）(pachislot and pachinko machines, full games, F2P and amusement machines total)
+                              ul.product-list
+                                li
+                                  span.numbers Product 1
+                                  span.title Pachislot Hokuto No Ken Tenshou
+                                    span.company
+                                      br
+                                      |©Buronson & Tetsuo Hara／NSP 1983,
+                                      br
+                                      |©NSP 2007 Approved No.YAF-420　　©Sammy
+                                li
+                                  span.numbers Product 2
+                                  span.title P Hokuto No Ken 8 Haou
+                                    span.company
+                                      br
+                                      |©Buronson & Tetsuo Hara／NSP 1983,
+                                      br
+                                      |©NSP 2007 Approved No.YSE-020　　©Sammy
+                            div.product-images.product-images__pos--02.js-scroll-box__to-top--d500_2
+                             img(src=`${config.assets_link}` + "images/business_forte_03b2.png" alt="パチスロ北斗の拳 天昇").u-pc_width-128.u-sp_width-120
+                             img(src=`${config.assets_link}` + "images/business_forte_03b3.png" alt="P北斗の拳8覇王").u-pc_width-128.u-sp_width-120
+                          span.copy-right.copy-right-sp ©Buronson &amp; Tetsuo Hara／NSP 1983, ©NSP 2007 Approved No.YAF-420　　©Sammy
+
+                        li.saleslist__item
+                          img.bg-img.u-is-pc(src=`${config.assets_link}` + "images/business_forte_03c1.jpg" alt="獣王 シリーズ 背景")
+                          img.bg-img.u-is-sp(src=`${config.assets_link}` + "images/business_forte_sp_03c.png" alt="獣王 シリーズ 背景")
+                          div.saleslist__item--container.right-pos.js-scroll-box__to-top
+                            dl.explane-block
+                              dt Beast King series
+                              dd The first "Beast King" title was released in 2001. This was the machine that
+                                br
+                                |set off the AT* machine boom, which is a central chapter in the history of
+                                br
+                                |pachislot machines. With its “Savannah Chance,” the innovative,
+                                br
+                                |medal-increasing gameplay that overturned conventional concepts of
+                                br
+                                |pachislot, Beast King attracted a wide range of fans and became a
+                                br
+                                |huge hit, generating sales of 140,000 units. Subsequent series have
+                                br
+                                |continued to evolve and continue to attract users even today.
+                                br
+                                span.small-text *Models equipped with assist time functions.
+                            div.salesquantity-block
+                              span.quantity-bf Cumulative unit sales:
+
+                              span.quantity
+                                span.unit Approx
+                                span.quantity-inner.js-set-count#js-countup-3
+                                span.lg-unit K
+                                span.unit units
+                              span.annotation-text (Pachislot and pachinko machines and amusement machines total)
+                              ul.product-list
+                                li(style="align-items: center")
+                                  span.numbers Product 1
+                                  span.title Beast King
+                                    span.company / ©Sammy
+                                li(style="align-items: center")
+                                  span.numbers Product 2
+                                  span.title Pachislot Beast King Oujya no kakusei
+                                    span.company / ©Sammy
+                            div.product-images.product-images__pos--03.js-scroll-box__to-top--d500_3
+                             img(src=`${config.assets_link}` + "images/business_forte_03c2.png" alt="獣王").u-pc_width-128.u-sp_width-120
+                             img(src=`${config.assets_link}` + "images/business_forte_03c3.png" alt="パチスロ獣王 王者の覚醒").u-pc_width-128.u-sp_width-120
+                          span.copy-right ©Sammy
+
+                        li.saleslist__item
+                          img.bg-img.u-is-pc(src=`${config.assets_link}` + "images/business_forte_03d1.jpg" alt="龍が如く シリーズ 背景")
+                          img.bg-img.u-is-sp(src=`${config.assets_link}` + "images/business_forte_sp_03d.png" alt="龍が如く シリーズ 背景")
+                          div.saleslist__item--container.left-pos.js-scroll-box__to-top
+                            dl.explane-block
+                              dt Ryu ga Gotoku series
+                              dd The IP that showcases “SEGA innovation,” Ryu ga Gotoku introduced a novel concept to the gaming scene in 2005, and has been a huge hit ever since, with a cumulative total of 14 million package sales to date. The game has garnered tremendous support due to its one-of-a-kind gameplay that features a huge red-light district full of reality, the drama of the hot men who live there, and exhilarating battles.
+                            div.salesquantity-block
+                              span.quantity-bf Cumulative unit sales:
+                              span.quantity
+                                span.unit Approx.
+                                span.quantity-inner.js-set-count#js-countup-4
+                                span.unit million (Units)
+                              span.annotation-text (Units)(Full games total)
+                              ul.product-list
+                                li(style="align-items: center")
+                                  span.numbers Product 1
+                                  span.title Ryu ga Gotoku
+                                    span.company / ©SEGA
+                                li(style="align-items: center")
+                                  span.numbers Product 2
+                                  span.title Yakuza: Like a Dragon
+                                    span.company / ©SEGA
+                            div.product-images.product-images__pos--04.js-scroll-box__to-top--d500_4
+                             img(src=`${config.assets_link}` + "images/business_forte_03d2.png" alt="龍が如く").u-pc_width-128.u-sp_width-120
+                             img(src=`${config.assets_link}` + "images/business_forte_03d3.png" alt="龍が如く7 光と闇の行方").u-pc_width-128.u-sp_width-120
+                          span.copy-right ©SEGA
+
+
+            - 
+              var navigatorObject = {
+                text: "Market Trend",
+                rootClass: "c-navigator__03",
+                imgPath: `${config.assets_link}` + "images/03_mv.png",
+                alt: "Dr.EGGMAN",
+                link: `${config.page_link}` + "market/index.html",
+                textClass: "c-navigator__text--03"
+              }
+            include ../include/components/_navigator
+            span.copy-right ©SEGA
+
+            //- contents end /////////////////////////////////////////////////¥
+
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

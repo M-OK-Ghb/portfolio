@@ -1,0 +1,105 @@
+.c-latest-news {
+    position: absolute;
+    left: vw(-162px);
+    bottom: vw(20px);
+    display: inline-flex;
+    align-items: center;
+    z-index: 10;
+
+    @include media(sp) {
+        width: 100%;
+        height: sp_vw(40px);
+        left: 0;
+        bottom: 0;
+        background: #888888;
+    }
+
+    &__time {
+        font-size: vw(12px);
+        color: #fff;
+        margin-right: vw(10px);
+        padding: 0 vw(10px) vw(1px);
+        background: #888;
+
+        @include media(sp) {
+            font-size: sp_vw(12px);
+            color: #888;
+            background: #fff;
+            margin-left: sp_vw(20px);
+            margin-right: sp_vw(10px);
+            padding: 0 sp_vw(10px) sp_vw(1px);
+        }
+    }
+
+    &__title {
+        max-width: vw(355px);
+        line-height: 1em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+        padding: 0 0 vw(1px);
+        margin: 0;
+
+        @include media(sp) {
+            max-width: sp_vw(255px);
+            padding: 0 sp_vw(20px) sp_vw(2px) 0;
+            line-height: 1.5em;
+            color: #fff;
+            position: relative;
+        }
+
+        a {
+            font-size: vw(12px);
+            color: #000;
+            margin-left: vw(20px);
+
+            @include media(sp) {
+                font-size: sp_vw(12px);
+                margin-left: sp_vw(20px);
+                color: #fff;
+            }
+        }
+
+        &::before {
+            width: vw(11.9px);
+            height: vw(15px);
+            content: "";
+            background: url("../images/pdf-icon-blk.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+
+            @include media(sp) {
+                width: sp_vw(11.9px);
+                height: sp_vw(15px);
+                left: 0;
+                background: url("../images/pdf-icon-wht.svg");
+            }
+        }
+
+        &::after {
+            width: vw(8px);
+            height: vw(8px);
+            content: "";
+            background: url("../images/external-link-icon-blk.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: vw(-15px);
+            margin: auto;
+
+            @include media(sp) {
+                width: sp_vw(8px);
+                height: sp_vw(8px);
+                right: 0;
+                background: url("../images/external-link-icon-wht.svg");
+            }
+        }
+    }
+}

@@ -1,0 +1,100 @@
+extends ../include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `Archives of "Experiences that move the heart" Interviews ｜SEGA SAMMY HOLDINGS`,
+      description: `You can view the "Experiences that move the heart" interviews released in the past.`,
+      pathname: `/interviews/archive.html`,
+      union: `interviews`,
+      dataPage: "interview-archive",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body
+  
+    //- cookiePolicy contents
+    include ../include/components/_cookiePolicy
+    div.u-app__wrapper#js-app-wrapper
+    
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #0082CA",
+          sub: "background: #BF36A0",
+          isTop: false
+        }
+      include ../include/components/_background
+
+      - var mainDustsColor = "#0082CA";
+      - var subDustsColor = "#BF36A0";
+      include ../include/components/_carouselDusts
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- loading
+      //- include ../include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.p-report.fade-in(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "Interviews",
+                  link: `${config.page_link}` + 'interviews/index.html',
+                },
+                {
+                  text: "Interviews Archive",
+                  link: `${config.page_link}` + 'interviews/archive.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div.l-container__page-title.u-lg_pd-tp-150.u-lg_mg-bt-180
+              div.c-page-title.u-sp_mg-bt-270
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--6
+                  h2
+                    span.small-text "Experiences that
+                      br
+                      |move the heart"
+                      br
+                      |Interviews
+                    |Archive
+                img.c-page-title__jumbotron.c-page-title__mv06.u-page-img-animation-6(src=`${config.assets_link}` + "images/06_mv.png" alt="Arle")
+              span.copy-right.copy-right-report.u-lg_pos-bt-m170__imp ©SEGA
+
+            div.l-container__detail.u-lg_mg-bt-100.u-sp_mg-bt-110
+                div.l-container__detail__inner
+
+                  include ../include/components/_archiveToggleButton
+
+                  div#js-briefing-article-container
+
+                  div.p-report__more
+                    span.p-report__more--text
+                      |Interviews in and before FY2020/3 are
+                      br
+                      |posted in Business Reports
+                    a(href="https://www.segasammy.co.jp/english/ir/library/stockholder/", target="_blank").c-button.c-button__blank.u-lg_mg-center
+                      |See Business Reports
+
+            //- contents end /////////////////////////////////////////////////
+        
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

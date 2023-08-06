@@ -1,0 +1,51 @@
+// -------------------------------------------------------------------
+// 	button.scss
+// -------------------------------------------------------------------
+.p-indv- {
+    &progress-bar-container {
+        position: relative;
+        width: vw(440px);
+        padding: 2vw 0;
+
+        @include media(sp) {
+            width: 100vw;
+            padding: 0;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: sp_vw(3px);
+        }
+
+        .progress-bar-body {
+            position: absolute;
+            width: vw(440px);
+            height: vw(2px);
+            transition: .1s;
+            -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+
+            @include media(sp) {
+                width: 100vw;
+                height: sp_vw(3px);
+                left: 0;
+                right: auto;
+            }
+        }
+
+        .progress-bar-dummy {
+            position: absolute;
+            width: vw(440px);
+            height: vw(2px);
+            background-color: #dddddd;
+            transition: .1s;
+            right: 0;
+            -webkit-backface-visibility:hidden;
+            backface-visibility:hidden;
+
+            @include media(sp) {
+                width: 100vw;
+                height: sp_vw(3px);
+            }
+        }
+    }
+}

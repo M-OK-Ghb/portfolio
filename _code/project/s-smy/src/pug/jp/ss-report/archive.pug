@@ -1,0 +1,246 @@
+extends ../include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `SS通信アーカイブ｜セガサミーホールディングス`,
+      description: `過去の「SS通信」がご覧いただけます。`,
+      pathname: `/ss-report/archive.html`,
+      union: `ss-report`,
+      dataPage: "ss-report-archive",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body(data-page=config.dataPage)
+    div.u-app__wrapper#js-app-wrapper
+
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #BF36A0",
+          sub: "background: #CE090F",
+          isTop: false
+        }
+      include ../include/components/_background
+
+      - var mainDustsColor = "#BF36A0";
+      - var subDustsColor = "#CE090F";
+      include ../include/components/_carouselDusts
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.reduction.fade-in._attach-ssreport(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "SS通信",
+                  link: `${config.page_link}` + 'ss-report/index.html',
+                },
+                {
+                  text: "SS通信アーカイブ",
+                  link: `${config.page_link}` + 'ss-report/archive.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div.l-container__page-title.u-lg_pd-tp-150.u-lg_mg-bt-170
+              div.c-page-title
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--5
+                  h2
+                    span.small-text SS通信
+                    br
+                    |アーカイブ
+                img.c-page-title__jumbotron.c-page-title__mv05.u-page-img-animation-5(src=`${config.assets_link}` + "images/05_mv.png" alt="")
+              span.copy-right ©SEGA ©Sammy
+            div.l-container__detail#js-scroll-target
+              div.l-container__detail__inner
+                //- アーカイブボタン
+                include ../include/components/_archiveToggleButton
+                div.p-ssreport__toptext
+                  h3#js-issue
+                  p#js-range.p-ssreport__range
+                  p#js-summary
+            div.l-container__detail
+              div.l-container__detail__inner
+                div.p-ssreport__box#ceo
+                  div.p-ssreport__box--text
+                    div.content-bodrer-top.u-gradation__background--5
+                    div
+                      h3 CEO業績報告
+                div.p-ssreport__ceobox
+                  div.p-ssreport__ceoimg
+                    img(src="" alt="ceo 画像")#js-ceoimg
+                  div.p-ssreport__ceodetail
+                    h3#js-shorttitle 
+                    p#js-position.p-ssreport__position 
+                    p#js-ceoname.p-ssreport__ceoname 
+                p#js-maintext.p-ssreport__ceomaintext
+            div.l-container__detail.u-lg_mg-bt-60#highlight
+                div.l-container__detail__inner
+                  div.p-ssreport__box.u-flexbox.u-lg_mg-bt-60
+                    div.p-ssreport__box--text
+                      div.content-bodrer-top.u-gradation__background--5
+                      div.u-flexbox.u-pc_width-100
+                        h3.u-pc_width-256.u-lg_mg-rt-65 業績ハイライト
+
+                  div.p-ssreport__chart.u-chart-block.js-scroll-box__to-top
+                    p 連結業績
+
+                    table.p-ssreport__table.js-table-set-value
+                      tr.p-ssreport__table--heads
+                        th.u-lg_width-240 （単位：億円）
+                        th.u-lg_width-360.u-bg-000.second-keep
+                        th 前年同期比
+                      tr.p-ssreport__table--bodies
+                        td.first-body 売上高
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td.last-body
+                          span.js-scroll-box__to-right--d350
+                      tr.p-ssreport__table--bodies
+                        td.first-body 営業利益
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td.last-body
+                          span.js-scroll-box__to-right--d350
+                      tr.p-ssreport__table--bodies
+                        td.first-body 経常利益
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td.last-body
+                          span.js-scroll-box__to-right--d350
+                      tr.p-ssreport__table--bodies
+                        td.first-body
+                          |親会社株主に帰属する
+                          br
+                          |当期純利益
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td.last-body
+                          span.js-scroll-box__to-right--d350
+
+                  div.p-ssreport__hr
+
+                  div.p-ssreport__chart.u-chart-block.js-scroll-box__to-top
+                    p セグメント別の業績
+
+                    table.p-ssreport__table.u-sp_mg-bt-40.js-table.js-table-set-value
+                      tr.p-ssreport__table--heads(style="background-color: #222")
+                        th.u-lg_width-240(colspan="2") （単位：億円）
+                        th.u-lg_width-360.u-bg-000.second-keep
+                        th 前年同期比
+                      tr.p-ssreport__table--bodies
+                        td(rowspan="3").item-head
+                          | 売<br>上<br>高
+                        td.item-genre(style="background-color: #0082CA; color: #fff") エンタメ
+                        td
+                          span(style="color: #0082CA").js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                            span
+                      tr.p-ssreport__table--bodies
+                        td.item-genre(style="background-color: #7EBB41; color: #fff") 遊技機
+                        td
+                          span(style="color: #7EBB41").js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                            span
+                      tr.p-ssreport__table--bodies
+                        td.item-genre(style="background-color: #FDAD30; color: #fff") リゾート
+                        td
+                          span(style="color: #FDAD30").js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                            span
+                      tr.p-ssreport__table--bodies
+                        td(rowspan="3").item-head
+                          | 経<br>常<br>利<br>益
+                        td.item-genre(style="background-color: #0082CA; color: #fff") エンタメ
+                        td
+                          span(style="color: #0082CA").js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                            span
+                      tr.p-ssreport__table--bodies
+                        td.item-genre(style="background-color: #7EBB41; color: #fff") 遊技機
+                        td
+                          span(style="color: #7EBB41").js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                            span
+                      tr.p-ssreport__table--bodies
+                        td.item-genre(style="background-color: #FDAD30; color: #fff") リゾート
+                        td
+                          span(style="color: #FDAD30").js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                            span
+                    div.p-ssreport__business-list
+                      div.p-operating__business-list
+                        ul
+                          li
+                            dl
+                              dt(style="background-color: #0082CA;") エンタメ
+                              dd#js-review-entertainment 
+                          li
+                            dl
+                              dt(style="background-color: #7EBB41;") 遊技機
+                              dd#js-review-pachinko 
+                          li
+                            dl
+                              dt(style="background-color: #FDAD30;") リゾート
+                              dd#js-review-resort
+
+                  div.p-ssreport__add-text#js-addBlock
+                    div.p-ssreport__hr.bottom
+                    h3#js-addBlock-title
+                    p#js-addBlock-text
+                    p 
+                      a(href="" target="_blank")#js-addBlock-link
+                    div.p-ssreport__add-imgwrap#js-addBlock-imgWrap
+                      img(src="" alt="連結業績予想")#js-addBlock-img
+                    //- p
+                    //-   span(style="font-weight:bold;") 【2022年3月14日追記】
+                    //-   br
+                    //-   span 2022年2月10日に、再度連結業績予想を修正いたしました。
+                    //-   br
+                    //-   a(href="https://www.segasammy.co.jp/japanese/pdf/release/20220210_forecast_j_final.pdf", target="_blank") 修正計画の詳細は、2022年2月10日公表の「業績予想の修正に関するお知らせ」をご参照ください。
+
+
+                  div.p-ssreport__more
+                    span.p-ssreport__more--text もっと詳しく知りたい方へ
+                    div.p-ssreport__more--btns
+                      a(href="https://www.segasammy.co.jp/japanese/ir/library/presentation/presentation.do", target="_blank").c-button.c-button__blank 決算・その他資料
+                      a(href="https://www.segasammy.co.jp/japanese/ir/finance/profits/", target="_blank").c-button.c-button__blank 財務・業績情報
+                      a(href="https://www.segasammy.co.jp/japanese/ir/library/pdf/settlement/2021/202103_4q_presentation_midtermplan_j.pdf", target="_blank").c-button.c-button__blank 中期計画
+            div.l-container__detail.u-lg_mg-bt-30.u-sp_mg-bt-110#latest-topics
+               div.l-container__detail__inner
+                 div.p-ssreport__box.u-flexbox
+                    div.p-ssreport__box--text
+                      div.content-bodrer-top.u-gradation__background--5
+                      div.u-flexbox.u-pc_width-100
+                        h3.u-pc_width-256.u-lg_mg-rt-65 最新トピックス
+                 div#js-briefing-article-container.p-ssreport__latest
+                 include ../include/components/_archiveToggleButtonBottom
+
+            //- contents end /////////////////////////////////////////////////
+
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

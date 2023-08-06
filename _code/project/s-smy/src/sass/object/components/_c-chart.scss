@@ -1,0 +1,212 @@
+$left_pos_variable: vw(80px);
+$left_pos_variable_negative: vw(8px);
+
+.c-chart {
+    width: vw(960px);
+    height: vw(500px);
+    margin: 0 auto;
+    position: relative;
+
+    @include media(sp) {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__canvas {
+      height: 100%;
+        &-wrapper {
+          position: relative;
+          height: 100%;
+          > canvas {
+            position: absolute; /* これにより、上の div と重なる位置に canvas が配置される */
+            top: 0;
+            background-color: #fff; /* ここをコメントアウトすると、背景色が透明になるので、Y軸を透かしてグラフ部分が見えるようになる */
+            pointer-events: none;
+          }
+        }
+        &-inner {
+          height: 100%;
+          @include media(sp) {
+            width: sp_vw(500px);
+            height: sp_vw(324px);
+            position: relative;
+          }
+        }
+      @include media(sp) {
+        overflow-x: scroll;
+        position: relative;
+      }
+
+        canvas {
+            width: calc(100% - 1.09375vw);
+            height: 100%;
+            //position: absolute;
+            top: 0;
+            left: vw(14px);
+    
+            @include media(sp) {
+                width: 100%;
+                height: sp_vw(324px);
+                top: auto;
+                left: auto;
+                position: static;
+            }
+        }
+
+        .copy-axes-canvas {
+            width: 73.333vw;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__label {
+        width: 100%;
+        margin-bottom: 10px;
+        //position: absolute;
+        //left: vw(14px);
+        pointer-events: none;
+        display: flex;
+        justify-content: space-between;
+
+        @include media(sp) {
+            width: 100%;
+            //height: sp_vw(485px);
+            //left: auto;
+            //position: fixed;
+        }
+
+        span {
+            font-size: vw(14px);
+            color: #333333;
+
+            @include media(sp) {
+                font-size: sp_vw(11px);
+            }
+        }
+    }
+
+    &__scalelabels {
+        position: absolute;
+        bottom: vw(-75px);
+        right: 0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+
+        @include media(sp) {
+            position: static;
+            order: 1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            bottom: auto;
+            margin-top: sp_vw(40px);
+        }
+
+        &--item {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            margin-right: vw(30px);
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            @include media(sp) {
+                margin-right: sp_vw(20px);
+                margin-bottom: sp_vw(10px);
+
+                &:last-child {
+                    margin-right: sp_vw(20px);
+                }
+            }
+
+            .color-block {
+                width: vw(15px);
+                height: vw(10px);
+                border-radius: vw(2px);
+                display: block;
+                margin-right: vw(10px);
+
+                @include media(sp) {
+                    width: sp_vw(15px);
+                    height: sp_vw(10px);
+                    border-radius: sp_vw(2px);
+                    margin-right: sp_vw(10px);
+                }
+            };
+
+            .color-block-micro {
+                width: vw(15px);
+                height: vw(2px);
+                border-radius: vw(2px);
+                display: block;
+                margin-right: vw(10px);
+
+                @include media(sp) {
+                    width: sp_vw(15px);
+                    height: sp_vw(2px);
+                    border-radius: sp_vw(2px);
+                    margin-right: sp_vw(10px);
+                }
+            }
+
+            .text {
+                font-size: vw(14px);
+                color: #333333;
+
+                @include media(sp) {
+                    font-size: sp_vw(14px);
+                }
+            }
+        }
+    }
+
+    .lead-scroll {
+
+        @include media(sp) {
+
+            width: sp_vw(200px);
+            height: sp_vw(42px);
+            background-color: rgba(0,0,0,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: sp_vw(12px);
+            border-radius: sp_vw(20px);
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            left: 0;
+            right: 0;
+            position: absolute;
+            z-index: 5;
+            pointer-events: none;
+    
+            img {
+                width: sp_vw(16px);
+                height: sp_vw(16px);
+                margin-left: sp_vw(10px);
+            }
+        }
+    }
+
+    .inset-shadow {
+
+        @include media(sp) {
+            position: absolute;
+            height: 100%;
+            width: sp_vw(40px);
+            right: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+    }
+}

@@ -1,0 +1,74 @@
+@use 'sass:math';
+
+.c-landscape-alert {
+    @function vh($value, $root) {
+        @return math.div($value, $root) * 100 + vh;
+    }
+
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .3s ease;
+
+    &[hidden] {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s linear .3s, opacity .3s ease;
+    }
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    overflow: hidden;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: -1;
+        width: 200%;
+        min-width: 200vh;
+        height: 200%;
+        min-height: 200vw;
+        background-image: linear-gradient(to right, #1482CA 0%, #1482CA 50%, #79BD36, 50%, #79BD36 100%);
+        transform: translate(-50%, -50%) translateX(#{percentage(math.div(8, 1200))}) rotate(23deg);
+    }
+
+    &__inner {
+        width: 100%;
+        height: 100%;
+        padding-top: vh(16, 375);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__image {
+        width: vh(130, 375);
+
+        img {
+            width: 100%;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+
+    &__text {
+        padding-top: vh(30, 375);
+
+        strong {
+            display: block;
+            font-size: vh(20, 375);
+            font-weight: bold;
+            font-family: "std";
+            line-height: 1.6;
+            text-align: center;
+            color: #fff;
+        }
+    }
+}

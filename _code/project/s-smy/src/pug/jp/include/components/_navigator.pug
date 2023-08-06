@@ -1,0 +1,9 @@
+div.c-navigator.js-scroll-box__navigator(class=`${navigatorObject.rootClass}`)
+    img(src=`${navigatorObject.imgPath}` alt=navigatorObject.alt).c-navigator__jumbotron
+    a(href=navigatorObject.link)
+        div.c-navigator__bg
+            div.c-navigator__bg--main
+            div.c-navigator__bg--sub
+        div.c-navigator__text
+            p.c-navigator__text--content(class=navigatorObject.textClass) #{navigatorObject.text}
+            img(src=`${config.assets_link}` + "images/navigator-arrow-icon.svg" alt="" class=`${navigatorObject.attachClass ? navigatorObject.attachClass : ""}`)

@@ -1,0 +1,193 @@
+@use 'sass:math';
+
+.c-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    padding-top: vw(15px);
+    padding-left: vw(240px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: "std";
+    background-color: #fff;
+    visibility: hidden;
+    @include media(sp) {
+        padding-left: sp_vw(40px);
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 1;
+    }
+
+    &__logo {
+        width: vw(173px);
+        height: auto;
+        display: block;
+        object-fit: cover;
+        font-family: 'object-fit: cover;';
+        @include media(sp) {
+            width: sp_vw(173px);
+        }
+
+        svg {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__heading {
+        margin-top: vw(35px);
+        font-family: inherit;
+        font-size: vw(54px);
+        font-weight: 700;
+        line-height: math.div(70, 54);
+        @include media(sp) {
+            margin-top: sp_vw(35px);
+            font-size: sp_vw(40px);
+            line-height: math.div(52, 40);
+        }
+    }
+
+    &__content {
+        position: relative;
+        margin-top: vw(60px);
+        opacity: 0;
+        @include media(sp) {
+            margin-top: sp_vw(60px);
+        }
+    }
+
+    &__ornament {
+        display: flex;
+        align-items: center;
+        &:last-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+
+    &__ornament-item {
+        & + & {
+            margin-left: vw(14px);
+            @include media(sp) {
+                margin-left: sp_vw(14px);
+            }
+        }
+
+        &--sonic {
+            width: vw(50px);
+            height: auto;
+            margin-left: vw(20px);
+            display: block;
+            @include media(sp) {
+                width: sp_vw(50px);
+                margin-left: sp_vw(20px);
+            }
+        }
+
+        &--alien {
+            width: vw(55px);
+            height: auto;
+            margin-left: vw(20px);
+            display: block;
+            @include media(sp) {
+                width: sp_vw(55px);
+                margin-left: sp_vw(20px);
+            }
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &__ornament-bg {
+        width: vw(10px);
+        height: vw(9px);
+        transform: skewX(-20deg);
+        @include media(sp) {
+            width: sp_vw(10px);
+            height: sp_vw(9px);
+        }
+
+        &--sonic {
+            background-color: #0082ca;
+        }
+
+        &--alien {
+            background-color: #79bd36;
+        }
+
+        &--025 {
+            opacity: 0.25;
+        }
+
+        &--05 {
+            opacity: 0.5;
+        }
+
+        &--075 {
+            opacity: 0.75;
+        }
+    }
+
+    &__copyright {
+        margin-top: vw(-5px);
+        display: block;
+        font-size: vw(11px);
+        font-weight: 500;
+        color: #888888;
+        @include media(sp) {
+            margin-top: sp_vw(10px);
+            font-size: sp_vw(11px);
+        }
+    }
+
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 0;
+    }
+
+    &__bg-item {
+        position: absolute;
+        top: 0;
+        right: 16%;
+        bottom: 0;
+        transform: skewX(-24deg);
+        width: vw(300px);
+        height: 100%;
+        display: block;
+        @include media(sp) {
+            right: -45%;
+            width: sp_vw(234px);
+        }
+
+        &--blue {
+            right: 22%;
+            z-index: 0;
+            background-color: #0082ca;
+            @include media(sp) {
+                right: -30%;
+            }
+        }
+
+        &--green {
+            z-index: 1;
+            background-color: #79bd36;
+        }
+    }
+}

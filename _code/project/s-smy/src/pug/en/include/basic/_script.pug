@@ -1,0 +1,12 @@
+script(src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/16.1.0/smooth-scroll.min.js")
+script(crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=default%2CArray.prototype.find%2CIntersectionObserver")
+script(src="https://www.promisejs.org/polyfills/promise-7.0.4.min.js")
+script(src=`${config.assets_link}` + "js/main.js")
+script(src=`${config.lang_link}` + "/english/resources/js/gdpr.js")
+script
+    |var scroll = new SmoothScroll('a[href*="#"]', {
+    |    speedAsDuration:true,
+    |    speed:1000,
+    |    easing:'easeInOutQuint',
+    |    header: '[data-scroll-header]'
+    |});

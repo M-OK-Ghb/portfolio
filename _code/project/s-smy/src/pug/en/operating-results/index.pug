@@ -1,0 +1,449 @@
+extends ../include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `Results/Return｜SEGA SAMMY HOLDINGS`,
+      description: `You can find about the latest results and forecast of SEGA SAMMY.`,
+      pathname: `/operating-results/index.html`,
+      dataPage: "operating-results",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body
+
+    div#chartjs-tooltip.c-tooltip.u-is-pc
+  
+    //- cookiePolicy contents
+    include ../include/components/_cookiePolicy
+    div.u-app__wrapper#js-app-wrapper
+    
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #CE090F",
+          sub: "background: #FDAD30",
+          isTop: false
+        }
+      include ../include/components/_background
+
+      - var mainDustsColor = "#CE090F";
+      - var subDustsColor = "#FDAD30";
+      include ../include/components/_carouselDusts
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- loading
+      //- include ../include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.p-operating.fade-in(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "Results/Return",
+                  link: `${config.page_link}` + 'operating-results/index.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div.l-container__page-title.u-lg_pd-tp-120.u-lg_mg-bt-100
+              div.c-page-title.u-sp_mg-bt-225
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--4
+                  h2 Results/
+                    br
+                    |Return
+                  div.c-page-title__decoration-bar--under
+                  div.c-anchorlink
+                      ul.c-anchorlink__list
+                          li.c-anchorlink__list--item
+                              a(href="#latest-results") Latest Results
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#forecast") Forecast
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#holderreturn") Shareholder Return
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                img.c-page-title__jumbotron.c-page-title__mv04.u-page-img-animation-4(src=`${config.assets_link}` + "images/04_mv.png" alt="Persona 5")
+              span.copy-right ©ATLUS ©SEGA All rights reserved
+
+            div.l-container__detail.u-lg_mg-bt-60#latest-results
+                div.l-container__detail__inner
+                  div.p-operating__box.u-flexbox.u-lg_mg-bt-60
+                    div.p-operating__box--text
+                      div.content-bodrer-top.u-gradation__background--4
+                      div.u-flexbox.u-pc_width-100
+                        h3.u-pc_width-256.u-lg_mg-rt-65 Latest Results
+
+                  .p-operating__chart.u-lg_mg-bt-150.js-scroll-canvas__to-top-3
+                    p SEGA SAMMY Group Operating Results
+                    
+                    div.c-chart__label
+                      span.c-chart__label--y-axes Billion yen
+                      span.c-chart__label--y-axes Billion yen
+
+                    div(class='c-chart bar_03 js-scroll-canvas' id='js-chart-bar_03')
+
+                      div.lead-scroll.u-is-sp.scroll-remove
+                        |Please swipe it.
+                        img(src=`${config.assets_link}` + "images/lead-swipe-arrow.svg")
+                      img.inset-shadow.u-is-sp.scroll-remove(src=`${config.assets_link}` + "images/inset-shadow.png")
+
+                      ul.c-chart__scalelabels.u-is-pc
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #0082CA")
+                          span.text Net Sales (left)
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #222222")
+                          span.text Ordinary income (right)
+
+                      div.c-chart__canvas-wrapper
+                        div.c-chart__canvas
+                          div.c-chart__canvas-inner
+                            canvas
+                        canvas(class="js-yAxis1" width="0")
+                        canvas(class="js-yAxis2" width="0")
+
+                    ul.c-chart__scalelabels.u-is-sp
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #0082CA")
+                          span.text Net Sales (left)
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #222222")
+                          span.text Ordinary income (right)
+
+                  div.p-operating__hr
+
+                  div.p-operating__chart.u-chart-block.js-scroll-box__to-top
+                    p Results Highlights
+
+                    table.p-operating__table.u-lg_mg-bt-80.js-table-set-value
+                      tr.p-operating__table--heads
+                        th.u-lg_width-240 (Billion yen)
+                        th.u-lg_width-240
+                        th.u-lg_width-240.u-bg-000
+                        th.u-lg_width-240
+                          |Change 
+                          span.small-text (%)
+                      tr.p-operating__table--bodies
+                        td.first-body Net Sales
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td.last-body
+                          span.js-scroll-box__to-right--d350
+                      tr.p-operating__table--bodies
+                        td.first-body Operating Income
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td.last-body
+                          span.js-scroll-box__to-right--d350
+                      tr.p-operating__table--bodies
+                        td.first-body Ordinary Income
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td.last-body
+                          span.js-scroll-box__to-right--d350
+                      tr.p-operating__table--bodies
+                        td.first-body
+                          |Profit attributable to
+                          br
+                          |owners of parent
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td.last-body
+                          span.js-scroll-box__to-right--d350
+
+                  div.p-operating__hr
+
+                  div.p-operating__chart.u-chart-block.js-scroll-box__to-top
+                    p
+                      |Segment Results (Ordinary Income)
+
+                    table.p-operating__table.u-sp_mg-bt-40.js-table.js-table-set-value
+                      tr.p-operating__table--heads(style="background-color: #222")
+                        th.u-lg_width-240 (Billion yen)
+                        th.u-lg_width-360
+                        th.u-bg-000
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #0082CA; color: #fff") Entertainment
+                        td
+                          span(style="color: #0082CA").js-scroll-box__to-right--d350
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350
+                            span(style="color: #0082CA")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#0082CA')
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #7EBB41; color: #fff") Pachislot and Pachinko
+                        td
+                          span(style="color: #7EBB41").js-scroll-box__to-right--d350
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350
+                            span(style="color: #7EBB41")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#7EBB41')
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #FDAD30; color: #fff") Resort
+                        td
+                          span(style="color: #FDAD30").js-scroll-box__to-right--d350
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350
+                            span(style="color: #FDAD30")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#FDAD30')
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #888; color: #fff")
+                          |Other/
+                          br.u-is-sp
+                          |Elimination
+                        td
+                          span(style="color: #888").js-scroll-box__to-right--d350
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350
+                            span(style="color: #888")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#888')
+
+                    span.p-operating__addendum *Arrows indicate year-on-year increase/decrease.
+
+                    div.p-operating__business-list
+                      ul
+                        li
+                          dl
+                            dt(style="background-color: #0082CA;") Entertainment
+                            dd Strong performance of new titles in Consumer area and strong performance in the prize category in Amusement Machine Sales area.
+                        li
+                          dl
+                            dt.u-lg_en-exfs-1(style="background-color: #7EBB41;") Pachislot and Pachinko
+                            dd V-shaped recovery from deficit of the previous fiscal year and secured stable earnings.
+                        li
+                          dl
+                            dt(style="background-color: #FDAD30;") Resort
+                            dd Individual customers are recovering despite the negative impact of COVID-19 in domestic but ontinued to be affected by the restriction of foreign visitors in oversea.  Cancellation of Yokohama IR.
+
+                  div.p-operating__more
+                    span.p-operating__more--text
+                      |For those who would like to know
+                      br
+                      |more details
+                    div.p-operating__more--btns
+                      a(href="https://www.segasammy.co.jp/english/ir/library/presentation/presentation.do", target="_blank").c-button.c-button__blank To Results Presentation, etc.
+                      a(href="https://www.segasammy.co.jp/english/ir/finance/profits/", target="_blank").c-button.c-button__blank To Earnings Information
+
+            div.l-container__detail.u-lg_mg-bt-60#forecast
+                div.l-container__detail__inner
+                  div.p-operating__box.u-flexbox.u-lg_mg-bt-60
+                    div.p-operating__box--text
+                      div.content-bodrer-top.u-gradation__background--4
+                      div.wrapper-01.u-pc_width-100
+                        h3.u-pc_width-256.u-lg_mg-rt-65 Forecast
+                  
+                  div.p-operating__chart.js-scroll-box__to-top
+                    p Operating Forecast
+
+                    table.p-operating__table.u-sp_mg-bt-40.js-table.js-table-set-value
+                      tr.p-operating__table--heads(style="background-color: #222")
+                        th.u-lg_width-240(colspan="2")  (Billion yen)
+                        th.u-lg_width-240
+                        th.u-lg_width-240
+                        th.u-lg_width-240.u-bg-000
+                          br.u-is-sp
+                          | (Forecast)
+                      tr.p-operating__table--bodies
+                        td.first-body(colspan="2") Net Sales
+                        td.big-title
+                          span.js-scroll-box__to-right--d350
+                        td.big-title
+                          span.js-scroll-box__to-right--d350
+                        td.big-title.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350.u-lg_pos-right-65
+                            span(style="color: #222")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#222')
+                      tr.p-operating__table--bodies
+                        td.first-body(colspan="2") Ordinary Income
+                        td.big-title
+                          span.js-scroll-box__to-right--d350
+                        td.big-title
+                          span.js-scroll-box__to-right--d350
+                        td.big-title.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350.u-lg_pos-right-65
+                            span(style="color: #222")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#222')
+                      tr.p-operating__table--bodies
+                        td.row-block.first-body(rowspan="4") 
+                          span.rotate-text Breakdown
+                        td.first-body(style="background-color: #0082CA; color: #fff") Entertainment
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #0082CA")
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #0082CA")
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350.u-lg_pos-right-65
+                            span(style="color: #0082CA")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#0082CA')
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #7EBB41; color: #fff") Pachislot and Pachinko
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #7EBB41")
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #7EBB41")
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350.u-lg_pos-right-65
+                            span(style="color: #7EBB41")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#7EBB41')
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #FDAD30; color: #fff") Resort
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #FDAD30")
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #FDAD30")
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350.u-lg_pos-right-65
+                            span(style="color: #FDAD30")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#FDAD30')
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #888; color: #fff; border-radius: 0")
+                          |Other/
+                          br.u-is-sp
+                          |Elimination
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #888")
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #888")
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350.u-lg_pos-right-65
+                            span(style="color: #888")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#888')
+
+                    span.p-operating__addendum.u-lg_mg-bt-60 *Arrows indicate year-on-year increase/decrease.
+                    
+                    div.c-chart__label
+                      span.c-chart__label--y-axes Billion yen
+
+                    div(class='c-chart bar_04 js-scroll-canvas__to-top-4' id='js-chart-bar_04')
+
+                      ul.c-chart__scalelabels.u-is-pc
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #1482CA")
+                          span.text Entertainment
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #7EBB41")
+                          span.text Pachislot and Pachinko
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #FDAD30")
+                          span.text Resort
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #888888")
+                          span.text Other/Elimination
+
+                      div.c-chart__canvas-wrapper
+                        div.c-chart__canvas
+                          div.c-chart__canvas-inner.u-sp_width-100per
+                            canvas
+                        canvas(class="js-yAxis1" width="0")
+
+                    ul.c-chart__scalelabels.u-is-sp
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #1482CA")
+                          span.text Entertainment
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #7EBB41")
+                          span.text Pachislot and Pachinko
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #FDAD30")
+                          span.text Resort
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #888888")
+                          span.text Other/Elimination
+
+                  div.p-operating__business-list.u-lg_mg-tp-130
+                    span.p-operating__business-list--title FY Ending March 2023 Forecasts
+                    ul
+                      li
+                        dl
+                          dt(style="background-color: #0082CA;") Entertainment
+                          dd Significant increase in new title lineups in Consumer area and maintain strong performance in prize categories in Amusement Machines area.
+                      li
+                        dl
+                          dt.u-lg_en-exfs-1(style="background-color: #7EBB41;") Pachislot and Pachinko
+                          dd Expect to increase unit sales while responding to the relaxation of regulation but component procurement status continuously needs to be monitored closely.
+                      li
+                        dl
+                          dt(style="background-color: #FDAD30;") Resort
+                          dd Expect the reduction in loss margin （Assume the relaxation of behavioral restriction associated with COVID-19）
+
+            div.l-container__detail.u-lg_mg-bt-60#holderreturn
+                div.l-container__detail__inner
+                  div.p-reduction__box.u-lg_mg-bt-60
+                    div.p-reduction__box--text
+                      div.content-bodrer-top.u-gradation__background--4
+                      h3 Shareholder Return
+                      p By investing in SEGA SAMMY Holdings as a shareholder, you can receive a portion of the company profits as dividends.
+
+                  div.p-reduction__btns.u-lg_mg-bt-60
+                      a(href="https://www.segasammy.co.jp/english/ir/stock/share/", target="_blank").c-button.c-button__blank.c-button__high.u-lg_mg-center
+                        img(src=`${config.assets_link}` + "images/noun_coin.svg" alt="")
+                        div.btn-text-wrapper
+                          span.btn-title Dividends Information
+                          span.btn-text
+                            |See more details of dividends information
+                      a(href="https://www.segasammy.co.jp/english/ir/stock/stockprice/", target="_blank").c-button.c-button__blank.c-button__high.u-lg_mg-center
+                        img(src=`${config.assets_link}` + "images/noun_increase.svg" alt="")
+                        div.btn-text-wrapper
+                          span.btn-title Stock Information
+                          span.btn-text
+                            |See more details of stock information
+
+                  div.p-reduction__more
+                    span.p-reduction__more--text
+                      |For those who would like to know
+                      br
+                      |more details
+                    a(href="https://www.segasammy.co.jp/english/ir/stock/", target="_blank").c-button.c-button__blank.u-lg_mg-center Other Stock Related Information
+            - 
+              var navigatorObject = {
+                text: "SS Report",
+                rootClass: "c-navigator__05",
+                imgPath: `${config.assets_link}` + "images/05_mv.png",
+                alt: "PARADISE CITY",
+                link: `${config.page_link}` + "ss-report/index.html",
+                textClass: "c-navigator__text--05"
+              }
+            include ../include/components/_navigator
+            span.copy-right ©SEGA ©Sammy
+
+            //- contents end /////////////////////////////////////////////////
+        
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

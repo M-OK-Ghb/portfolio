@@ -1,0 +1,40 @@
+@use 'sass:math';
+
+// -------------------------------------------------------------------
+//  mixin.scss
+// -------------------------------------------------------------------
+
+// color
+// -------------------------------------------------------------------
+@function colors($key) {
+  @return map-get($KEY_COLOR, $key);
+}
+
+// vw
+// -------------------------------------------------------------------
+@function vw($pixelsVw) {
+  @return math.div($pixelsVw, $SITE-WIDTH) * 100vw;
+}
+
+@function sp_vw($pixelsVw) {
+  @return math.div($pixelsVw, $SP-SITE-WIDTH) * 100vw;
+}
+
+// hover
+// -------------------------------------------------------------------
+@mixin hover {
+
+  @include media(pc) {
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin en {
+  @at-root {
+    [lang="en"] & {
+      @content;
+    }
+  }
+}

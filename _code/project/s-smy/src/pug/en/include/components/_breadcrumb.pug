@@ -1,0 +1,7 @@
+ul.c-breadcrumb#js-breadcrumb
+    li.c-breadcrumb__item
+        a(href=`${config.page_link}index.html`)
+            img(src=`${config.assets_link}` + "images/breadcrumb-home.svg" alt="トップページ").c-breadcrumb__item--home
+    each data in breadclumb
+        li.c-breadcrumb__item 
+            a(href= data.link) #{data.text}

@@ -1,0 +1,250 @@
+extends ../include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `Market Trend｜SEGA SAMMY HOLDINGS`,
+      description: `You can find about the trends of each market our Group faces.`,
+      pathname: `/market/index.html`,
+      dataPage: "market",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body
+
+    div#chartjs-tooltip.c-tooltip.u-is-pc
+  
+    //- cookiePolicy contents
+    include ../include/components/_cookiePolicy
+    div.u-app__wrapper#js-app-wrapper
+    
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #FDAD30",
+          sub: "background: #F4E232",
+          isTop: false
+        }
+      include ../include/components/_background
+
+      - var mainDustsColor = "#FDAD30";
+      - var subDustsColor = "#F4E232";
+      include ../include/components/_carouselDusts
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- loading
+      //- include ../include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.p-market.fade-in(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "Market Trend",
+                  link: `${config.page_link}` + 'market/index.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div#chartjs-tooltip
+
+            div.l-container__page-title.u-lg_pd-tp-150.u-lg_mg-bt-150
+              div.c-page-title
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--3
+                  h2 Market
+                    br
+                    |Trend
+                  div.c-page-title__decoration-bar--under
+                  div.c-anchorlink
+                      ul.c-anchorlink__list
+                          li.c-anchorlink__list--item
+                              a(href="#entertainment") Entertainment
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#pachislot") Pachislot &amp; Pachinko
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                img.c-page-title__jumbotron.c-page-title__mv03.u-page-img-animation-3(src=`${config.assets_link}` + "images/03_mv.png" alt="Dr.EGGMAN")
+              span.copy-right ©SEGA
+
+            div.l-container__detail.u-lg_mg-bt-60#entertainment
+                div.l-container__detail__inner
+                  div.p-market__box.u-flexbox.u-lg_mg-bt-60
+                    div.p-market__box--text
+                      div.content-bodrer-top.u-gradation__background--3
+                      div.wrapper-01.u-pc_width-100
+                        h3.u-pc_width-256.u-lg_mg-rt-65 Entertainment
+                        p The scale of the digital distribution game market is expanding globally against the backdrop of increases in online distribution and game distribution platforms. We aim to create global hit titles in line with the expansion of the global market.
+                  div.p-market__chart.js-scroll-canvas__to-top-1
+                    p Global game market size
+
+                    div.c-chart__label
+                      span.c-chart__label--y-axes Trillion yen
+                    div(class='c-chart bar_01 js-scroll-canvas' id='js-chart-bar_01')
+
+                      div.lead-scroll.u-is-sp.scroll-remove
+                        |Please swipe it.
+                        img(src=`${config.assets_link}` + "images/lead-swipe-arrow.svg")
+                      img.inset-shadow.u-is-sp.scroll-remove(src=`${config.assets_link}` + "images/inset-shadow.png")
+
+                      ul.c-chart__scalelabels.u-is-pc
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #0082CA")
+                          span.text Japan
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #2A96D3")
+                          span.text Asia
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #55ACDD")
+                          span.text NA
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #8FC8E8")
+                          span.text EU
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #CCE6F5")
+                          span.text Others
+                      div.c-chart__canvas-wrapper
+                        div.c-chart__canvas
+                          div.c-chart__canvas-inner
+                            canvas
+                        canvas(class="js-yAxis1" width="0")
+                    ul.c-chart__scalelabels.u-is-sp
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #0082CA")
+                        span.text Japan
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #2A96D3")
+                        span.text Asia
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #55ACDD")
+                        span.text NA
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #8FC8E8")
+                        span.text EU
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #CCE6F5")
+                        span.text Others
+                  
+                  div.p-market__addendum Source: SEGA SAMMY estimates based on data from "Newzoo Global Games Market Data (July 2022)" (US$1=¥130)
+
+                  div.p-market__more
+                    span.p-market__more--text For those who would like to know more details
+                    a(href="https://www.segasammy.co.jp/english/ir/management/market/entertainment/", target="_blank").c-button.c-button__blank
+                        |To Entertainment market trend
+
+            div.l-container__detail#pachislot
+                div.l-container__detail__inner
+                  div.p-market__box.u-flexbox.u-lg_mg-bt-60
+                    div.p-market__box--text
+                      div.content-bodrer-top.u-gradation__background--3
+                      div.wrapper-01.u-pc_width-100
+                        h3.u-pc_width-256.u-lg_mg-rt-65 Pachislot &amp; Pachinko
+                        p The number of players has been gradually declining since 1995, and the number of pachinko halls and installed units have also been on a long-term downtrend.  Under these market conditions, we will improve our profit margins and ensure profitability. 
+                  div.p-market__chart.js-scroll-canvas__to-top-2
+                    p Market size and unit sales of Pachislot and Pachinko
+
+                    div.c-chart__label
+                      span.c-chart__label--y-axes Billion yen
+                      span.c-chart__label--y-axes Thousands units
+
+                    div(class='c-chart bar_02 js-scroll-canvas' id='js-chart-bar_02')
+
+                      div.lead-scroll.u-is-sp.scroll-remove
+                        |Please swipe it.
+                        img(src=`${config.assets_link}` + "images/lead-swipe-arrow.svg")
+                      img.inset-shadow.u-is-sp.scroll-remove(src=`${config.assets_link}` + "images/inset-shadow.png")
+
+                      ul.c-chart__scalelabels.u-is-pc
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #AED785")
+                          span.text Pachinko machines
+                            br.u-is-pc
+                            |market size (left)
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #549318")
+                          span.text Pachinko machines
+                            br.u-is-pc
+                            |units sold (right)
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #79BD36")
+                          span.text Pachislot machines
+                            br.u-is-pc
+                            |market size (left)
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #234600")
+                          span.text Pachislot machines
+                            br.u-is-pc
+                            |units sold (right)
+
+                      div.c-chart__canvas-wrapper
+                        div.c-chart__canvas
+                          div.c-chart__canvas-inner
+                            canvas
+                        canvas(class="js-yAxis1" width="0")
+                        canvas(class="js-yAxis2" width="0")
+
+
+                    ul.c-chart__scalelabels.u-is-sp
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #AED785")
+                        span.text Pachinko machines
+                          br.u-is-pc
+                          |market size (left)
+                      li.c-chart__scalelabels--item
+                        span.color-block-micro(style="background-color: #549318")
+                        span.text Pachinko machines
+                          br.u-is-pc
+                          |units sold (right)
+                      li.c-chart__scalelabels--item
+                        span.color-block(style="background-color: #79BD36")
+                        span.text Pachislot machines
+                          br.u-is-pc
+                          |market size (left)
+                      li.c-chart__scalelabels--item
+                        span.color-block-micro(style="background-color: #234600")
+                        span.text Pachislot machines
+                          br.u-is-pc
+                          |units sold (right)
+                  
+                  div.p-market__addendum Sources: Yano Research Institute Ltd. "Pachinko Manufacturer Trends 2022"(Research of Japanese Market)
+
+                  div.p-market__more
+                    span.p-market__more--text
+                      |For those who would like to know
+                      br.u-is-pc
+                      |more details
+                    a(href="https://www.segasammy.co.jp/english/ir/management/market/", target="_blank").c-button.c-button__blank
+                      |To Pachislot and Pachinko market trend
+            - 
+              var navigatorObject = {
+                text: "Results/Return",
+                rootClass: "c-navigator__04",
+                imgPath: `${config.assets_link}` + "images/04_mv.png",
+                alt: "Persona 5",
+                link: `${config.page_link}` + "operating-results/index.html",
+                textClass: "c-navigator__text--04",
+                attachClass: "attach__arrow--market"
+              }
+            include ../include/components/_navigator
+            span.copy-right ©ATLUS ©SEGA All rights reserved
+
+            //- contents end /////////////////////////////////////////////////
+        
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

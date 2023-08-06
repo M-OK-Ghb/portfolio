@@ -1,0 +1,177 @@
+include ../components/_loader.pug
+include ../components/_landscapeAlert.pug
+
+header.c-header(data-scroll-header)
+    div.c-header__navbar#js-nav-bar
+        a(href="https://www.segasammy.co.jp/").c-header__navbar--sitelogo
+            h1
+                img(src=`${config.assets_link}` + "images/segasammy_logomark.png" alt="セガサミー コーポレートロゴ")
+        ul.c-header__navbar--list
+            -
+              var list = [
+                {
+                  text: "TOP",
+                  link: `${config.page_link}` + 'index.html',
+                  current: "",
+                },
+                {
+                  text: "セガサミーについて",
+                  link: `${config.page_link}` + 'index.html?about',
+                  current: "top",
+                },
+                {
+                  text: "事業",
+                  link: `${config.page_link}` + 'business/index.html',
+                  current: "business",
+                },
+                {
+                  text: "市場動向",
+                  link: `${config.page_link}` + 'market/index.html',
+                  current: "market",
+                },
+                {
+                  text: "業績・株主還元",
+                  link: `${config.page_link}` + 'operating-results/index.html',
+                  current: "operating-results",
+                },
+                {
+                  text: "SS通信",
+                  link: `${config.page_link}` + 'ss-report/index.html',
+                  current: "ss-report",
+                },
+                {
+                  text: "感動体験レポート",
+                  link: `${config.page_link}` + 'interviews/index.html',
+                  current: "interviews",
+                }
+              ]
+            each item in list
+                if item.current == config.dataPage
+                    li(class=`c-header__navbar-item--${item.current}`).c-header__navbar-item.c-header__navbar-item--current
+                        a(href=item.link) #{item.text}
+
+                else if item.current === config.union
+                    li(class=`c-header__navbar-item--${item.current}`).c-header__navbar-item.c-header__navbar-item--current
+                        a(href=item.link) #{item.text}
+                else
+                    li.c-header__navbar-item
+                        a(href=item.link) #{item.text}
+        div.c-header__navbar--menubtn#js-menu-btn
+            span
+            span
+            span
+
+    div.c-header__body#js-nav-body
+        div.c-header__body--inner
+            div.c-header__body--nav
+                nav.c-nav
+                    ul.c-nav__list
+                        li.c-nav__list--single 
+                            a(href=`${config.page_link}` + 'index.html') TOP
+                        li.c-nav__list--ex.u-is-sp.js-briefing-banner-menu
+                            a(href=`${config.page_link}` + "event/index.html").c-button__nav--ex.c-button__blank.js-briefing-banner-menu 個人投資家様向け説明会
+                        li.c-nav__list--tree
+                            ul
+                                li.top-border-bg-1
+                                    a(href=`${config.page_link}` + "index.html?about") セガサミーについて
+                                li
+                                    a(href=`${config.page_link}` + "index.html?group-mission") セガサミーグループミッション
+                                li
+                                    a(href=`${config.page_link}` + "index.html?vision") ビジョン
+                                li
+                                    a(href=`${config.page_link}` + "index.html?esg-sdgs") ESG/SDGs
+                                li
+                                    a(href=`${config.page_link}` + "index.html?history") セガサミーのあゆみ
+                        li.c-nav__list--tree
+                            ul
+                                li.top-border-bg-2
+                                    a(href=`${config.page_link}` + "business/index.html") 事業
+                                li
+                                    a(href=`${config.page_link}` + "business/index.html?business-summary") 事業概要
+                                li
+                                    a(href=`${config.page_link}` + "business/index.html?strength") セガサミーの強み
+                        li.c-nav__list--tree
+                            ul
+                                li.top-border-bg-3
+                                    a(href=`${config.page_link}` + "market/index.html") 市場動向
+                                li
+                                    a(href=`${config.page_link}` + "market/index.html?entertainment") エンタメ市場
+                                li
+                                    a(href=`${config.page_link}` + "market/index.html?pachislot") 遊技場市場
+                        li.c-nav__list--tree
+                            ul
+                                li.top-border-bg-4
+                                    a(href=`${config.page_link}` + "operating-results/index.html") 業績・株主還元
+                                li
+                                    a(href=`${config.page_link}` + "operating-results/index.html?latest-results") 直近業績
+                                li
+                                    a(href=`${config.page_link}` + "operating-results/index.html?forecast") 今後の見通し
+                                li
+                                    a(href=`${config.page_link}` + "operating-results/index.html?holderreturn") 株主還元
+                        li.c-nav__list--tree
+                            ul
+                                li.top-border-bg-5
+                                    a(href=`${config.page_link}` + "ss-report/index.html") SS通信
+                                li
+                                    a(href=`${config.page_link}` + "ss-report/index.html?ceo") CEO業績報告
+                                li
+                                    a(href=`${config.page_link}` + "ss-report/index.html?highlight") 業績ハイライト
+                                li.js-header-topics
+                                    a(href=`${config.page_link}` + "ss-report/index.html?latest-topics") 最新トピックス
+                                    
+                        li.c-nav__list--tree
+                            ul
+                                li.top-border-bg-6
+                                    a(href=`${config.page_link}` + "interviews/index.html") 感動体験レポート
+                        li.c-nav__list--outside
+                            ul
+                                li
+                                    a(href="https://www.segasammy.co.jp/japanese/index.html", target="_blank") セガサミーホールディングスHOME
+                                li
+                                    a(href="https://www.segasammy.co.jp/japanese/ir/", target="_blank") 投資家情報TOPへ
+                                li
+                                    a(href="https://www.segasammy.co.jp/japanese/etc/faq/", target="_blank") よくあるご質問
+                                li
+                                    a(href="https://www.segasammy.co.jp/japanese/etc/request/printingRequest.do", target="_blank") 資料請求
+                                li
+                                    a(href="https://www.segasammy.co.jp/japanese/etc/policy/", target="_blank") 免責事項
+            div.c-header__body--contents
+                div.c-content__stack1
+                    div.c-content__stack1--wrap.c-content__stack1--mail
+                        a(href="https://www.segasammy.co.jp/japanese/ir/service/", target="_blank") メルマガ会員登録はこちら
+                    div.c-content__stack1--wrap.c-content__stack1--questionnaire
+                        a(href="https://magicalir.net/survey/main/1e583206e611ac6ed22ac21a72988ca3", target="_blank") アンケートにご協力ください
+                div.c-stockprice
+                    span.c-stockprice__text 最新株価
+                        span.c-stockprice__text--small （リアルタイム）
+                    time.js-stockprice-time
+                    dl
+                        dt 現在値
+                        dd.js-stockprice-last
+                    dl
+                        dt 前日比
+                        dd.js-stockprice-change
+                    dl.stockprice-pseudo_jp
+                        dt 出来高
+                        dd.js-stockprice-volume
+                div.c-content__sns
+                    a(href="https://sega.jp/sns/", target="_blank").c-button__nav.c-button__blank セガ SNS 公式アカウント紹介ページ
+                    a(href="https://www.sammy.co.jp/japanese/sns/", target="_blank").c-button__nav.c-button__blank サミー SNS 公式アカウント紹介ページ
+                    a(href=`${config.page_link}` + "event/index.html").c-button__nav--ex.u-is-pc.c-button__blank.js-briefing-banner-menu 個人投資家様向け説明会
+                ul.c-content__outside.u-is-sp
+                    li
+                        a(href="https://www.segasammy.co.jp/japanese/index.html", target="_blank") セガサミーホールディングスHOME
+                    li
+                        a(href="https://www.segasammy.co.jp/japanese/ir/", target="_blank") 投資家情報TOPへ
+                    li
+                        a(href="https://www.segasammy.co.jp/japanese/etc/faq/", target="_blank") よくあるご質問
+                    li
+                        a(href="https://www.segasammy.co.jp/japanese/etc/request/printingRequest.do", target="_blank") 資料請求
+                    li
+                        a(href="https://www.segasammy.co.jp/japanese/etc/policy/", target="_blank") 免責事項
+            ul.c-header__body--language
+                li.c-language__item
+                    a(href=`${config.lang_link}` + "english/ir/individual/index.html") EN
+                li.c-language__item.c-language__select JP
+            
+    div.c-header__bg#js-nav-bg

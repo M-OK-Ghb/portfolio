@@ -1,0 +1,117 @@
+extends ../include/template/_template
+
+//- SS通信ページへ移行したため、ファイルは保存するがdistしないように変更
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `Shareholder Return｜SEGA SAMMY HOLDINGS`,
+      description: `You can receive a portion of the company profits as dividends if you become a shareholder of SEGA SAMMY.`,
+      pathname: `/shareholder-return/index.html`,
+      dataPage: "shareholder-return",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body
+  
+    //- cookiePolicy contents
+    include ../include/components/_cookiePolicy
+    div.u-app__wrapper#js-app-wrapper
+
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #BF36A0",
+          sub: "background: #CE090F",
+          isTop: false
+        }
+      include ../include/components/_background
+
+      - var mainDustsColor = "#BF36A0";
+      - var subDustsColor = "#CE090F";
+      include ../include/components/_carouselDusts
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- loading
+      //- include ../include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.reduction.fade-in(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "Shareholder Return",
+                  link: `${config.page_link}` + 'shareholder-return/index.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div.l-container__page-title.u-lg_pd-tp-200.u-lg_mg-bt-200
+              div.c-page-title
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--5
+                  h2 Shareholder
+                    br
+                    |Return
+                img.c-page-title__jumbotron.c-page-title__mv05.u-page-img-animation-5(src=`${config.assets_link}` + "images/05_mv.png" alt="PARADISE CITY")
+              span.copy-right ©PARADISE SEGASAMMY Co., Ltd.All rights reserved.
+
+            div.l-container__detail.u-lg_mg-bt-60.u-sp_pos-top-85
+                div.l-container__detail__inner
+                  div.p-reduction__box.u-lg_mg-bt-60
+                    div.p-reduction__box--text
+                      div.content-bodrer-top.u-gradation__background--5
+                      h3 By investing in SEGA SAMMY Holdings as a shareholder, you can receive a portion of the company profits as dividends.
+
+                  div.p-reduction__btns.u-lg_mg-bt-60
+                      a(href="https://www.segasammy.co.jp/english/ir/stock/share/", target="_blank").c-button.c-button__blank.c-button__high.u-lg_mg-center
+                        img(src=`${config.assets_link}` + "images/noun_coin.svg" alt="")
+                        div.btn-text-wrapper
+                          span.btn-title Dividends Information
+                          span.btn-text
+                            |See more details of dividends information
+                      a(href="https://www.segasammy.co.jp/english/ir/stock/stockprice/", target="_blank").c-button.c-button__blank.c-button__high.u-lg_mg-center
+                        img(src=`${config.assets_link}` + "images/noun_increase.svg" alt="")
+                        div.btn-text-wrapper
+                          span.btn-title Stock Information
+                          span.btn-text
+                            |See more details of stock information
+
+                  div.p-reduction__more
+                    span.p-reduction__more--text
+                      |For those who would like to know
+                      br
+                      |more details
+                    a(href="https://www.segasammy.co.jp/english/ir/stock/", target="_blank").c-button.c-button__blank.u-lg_mg-center Other Stock Related Information
+            - 
+              var navigatorObject = {
+                text: "Interviews",
+                rootClass: "c-navigator__06",
+                imgPath: `${config.assets_link}` + "images/06_mv.png",
+                alt: "Arle",
+                link: `${config.page_link}` + "interviews/index.html",
+                textClass: "c-navigator__text--06"
+              }
+            include ../include/components/_navigator
+            span.copy-right ©SEGA
+
+            //- contents end /////////////////////////////////////////////////
+        
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

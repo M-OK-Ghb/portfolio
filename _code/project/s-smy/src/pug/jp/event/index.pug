@@ -1,0 +1,69 @@
+extends ../include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `個人投資家様向け説明会｜セガサミーホールディングス`,
+      description: `個人投資家様を対象とした説明会などについての情報はこちらからご確認ください。`,
+      pathname: `/event/index.html`,
+      dataPage: "event",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body
+    div.u-app__wrapper#js-app-wrapper
+
+      //- canvas contents
+      include ../include/components/_backgroundOnly
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- loading
+      //- include ../include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.p-briefing.fade-in(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "個人投資家様向け 説明会",
+                  link: `${config.page_link}` + 'event/index.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div.l-container__page-title.u-lg_pd-tp-90.u-lg_mg-bt-60
+              div.c-page-title.u-sp_mg-bt-50
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--7
+                  h2.briefing-title 個人投資家様向け
+                    br.u-is-pc
+                    |説明会
+
+            div.l-container__detail.u-lg_mg-bt-100.u-sp_mg-bt-120
+                div.l-container__detail__inner
+                  div.p-briefing__box
+                    p 個人投資家の皆様に向けて、セガサミーへの理解を深めていただける説明会を開催しております。
+
+                  div.p-briefing__article-box#js-briefing-article-container
+                    p loading...
+
+            //- contents end /////////////////////////////////////////////////
+
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

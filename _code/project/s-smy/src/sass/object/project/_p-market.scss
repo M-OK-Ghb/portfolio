@@ -1,0 +1,119 @@
+.p-market {
+
+    &__box {
+    
+        &--text {
+
+            @include media(sp) {
+                margin-bottom: sp_vw(40px);
+            }
+    
+            h3 {
+                margin: 0;
+                margin-right: vw(65px);
+                width: vw(256px);
+
+                @include media(sp) {
+                    width: auto;
+                    margin-right: 0;
+                    margin-bottom: sp_vw(30px);
+                }
+            }
+    
+            p {
+                width: vw(640px);
+                margin: 0;
+
+                @include media(sp) {
+                    width: auto;
+                }
+            }
+
+            .wrapper-01 {
+                display: flex;
+
+                @include media(sp) {
+                    flex-direction: column;
+                }
+            }
+        }
+      }
+    
+      &__chart {
+        margin-bottom: vw(110px);
+
+          p {
+              font-size: vw(28px);
+              font-weight: bold;
+              line-height: 1.4em;
+              margin-bottom: vw(20px);
+
+              @include media(sp) {
+                font-size: sp_vw(24px);
+                margin-bottom: sp_vw(30px);
+              }
+          }
+
+          img {
+              width: 100%;
+          }
+    }
+
+    &__addendum {
+        font-size: vw(14px);
+        font-weight: lighter;
+        font-family: "std";
+        color: #333333;
+        margin-top: vw(10px);
+        margin-bottom: vw(40px);
+        display: block;
+        text-align: right;
+  
+        @include media(sp) {
+          font-size: sp_vw(14px);
+          margin-top: sp_vw(10px);
+          margin-bottom: sp_vw(40px);
+          display: none;
+        }
+    }
+    
+    &__more {
+        width: 100%;
+        height: vw(180px);
+        padding: 0 vw(64px);
+        background-color: #F8F8F8;
+        border-radius: vw(25px);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include media(sp) {
+            height: auto;
+            padding: sp_vw(40px) sp_vw(20px);
+            border-radius: sp_vw(25px);
+            flex-direction: column;
+        }
+
+        &--text {
+            font-size: vw(16px);
+            font-weight: bold;
+
+            @include media(sp) {
+                font-size: sp_vw(16px);
+                margin-bottom: sp_vw(20px);
+            }
+        }
+
+        .c-button {
+            width: vw(544px);
+            margin: 0;
+
+            @include media(sp) {
+                width: 100%;
+                height: sp_vw(75px);
+            }
+        }
+  }
+}
+    
+    

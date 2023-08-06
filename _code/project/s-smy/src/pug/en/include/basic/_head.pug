@@ -1,0 +1,45 @@
+- 
+  var siteName = `SEGA SAMMY HOLDINGS`
+  var siteURL = `https://www.segasammy.co.jp/english/ir/individual/`
+  var rootDirectory = `https://www.segasammy.co.jp/english/ir/individual`
+  var dirBase = `./`
+
+head
+  meta(charset=`UTF-8`)
+  meta(name=`viewport`, content=`width=device-width`)
+
+  title=config.title
+
+  meta(name=`description`, content=config.description)
+  meta(name=`format-detection`, content=`telephone=no`)
+
+  link(rel=`start`, href=siteURL, title=`HOME`)
+  link(rel=`canonical`, href=`${rootDirectory}${config.pathname}`)
+  link(rel="icon" type="image/png" sizes="16x16" href=`${config.assets_link}` + "icon/favicon-16x16.png")
+  link(rel="icon" type="image/png" sizes="32x32" href=`${config.assets_link}` + "icon/favicon-32x32.png")
+  link(rel="apple-touch-icon" sizes="180x180" href=`${config.assets_link}` + "icon/apple-touch-icon_en.png")
+
+  meta(property=`og:type`, content=`${config.isTop ? `website` : `article`}`)
+  meta(property=`og:site_name`, content=`${siteName}`)
+  meta(property=`og:title`, content=config.title)
+  meta(property=`og:url`, content=`${rootDirectory}${config.pathname}`)
+  meta(property=`og:description`, content=config.description)
+  meta(property=`og:image`, content=`${config.assets_link}` + "icon/og_img_en.png")
+  script(src="https://code.jquery.com/jquery-1.8.0.min.js" integrity="sha256-jFdOCgY5bfpwZLi0YODkqNXQdIxKpm6y5O/fy0baSzE=" crossorigin="anonymous")
+  script(type="text/javascript" src="/japanese/common/js/gafunctions.js")
+  script(src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js" integrity="sha256-0H3Nuz3aug3afVbUlsu12Puxva3CP4EhJtPExqs54Vg=" crossorigin="anonymous")
+
+  link(rel=`stylesheet` href=`${config.assets_link}` + "css/style.css")
+  link(rel=`stylesheet` href=`${config.lang_link}` + "english/resources/css/gdpr.css")
+  link(rel=`stylesheet` href=`https://use.fontawesome.com/releases/v5.15.1/css/all.css`)
+  link(rel="preload" as="font" href=`${config.assets_link}` + "fonts/Corporate-Logo-Bold.woff" crossorigin)
+  link(rel="preload" as="font" href=`${config.assets_link}` + "fonts/Corporate-Logo-Medium.woff" crossorigin)
+  link(rel="preload" as="font" href=`${config.assets_link}` + "fonts/DINCondensed.woff" crossorigin)
+  link(rel="preload" as="font" href=`${config.assets_link}` + "fonts/Montserrat-Light.woff" crossorigin)
+  link(rel="preload" as="font" href=`${config.assets_link}` + "fonts/Montserrat-Medium.woff" crossorigin)
+  link(rel="preload" as="font" href=`${config.assets_link}` + "fonts/Montserrat-Regular.woff" crossorigin)
+  link(rel="preload" as="font" href=`${config.assets_link}` + "fonts/Montserrat-Bold.woff" crossorigin)
+  link(rel="preload" as="font" href=`${config.assets_link}` + "fonts/NotoSansCJKjp-DemiLight.otf" crossorigin)
+  link(rel="preload" as="font" href=`${config.assets_link}` + "fonts/NotoSansCJKjp-Regular.otf" crossorigin)
+  link(rel="preload" as="font" href=`${config.assets_link}` + "fonts/NotoSansCJKjp-Medium.otf" crossorigin)
+  link(rel="preload" as="font" href=`${config.assets_link}` + "fonts/NotoSansCJKjp-Bold.otf" crossorigin)

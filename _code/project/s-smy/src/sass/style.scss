@@ -1,0 +1,52 @@
+
+@charset "UTF-8";
+
+// -------------------------------------------------------------------
+//  FLOCSSに基づいた設計とする
+// -------------------------------------------------------------------
+
+// Foundation
+// -------------------------------------------------------------------
+@import "foundation/reseter";
+@import "foundation/variables";
+@import "foundation/mixin";
+@import "foundation/mediaquery";
+@import "foundation/base";
+
+// Layout
+// -------------------------------------------------------------------
+@import "layout/l-header";
+@import "layout/l-contents";
+@import "layout/l-footer";
+
+// Object
+// -------------------------------------------------------------------
+@import "object/components/c-button";
+@import "object/components/c-background";
+@import "object/components/c-progressbar";
+@import "object/components/c-carousel";
+@import "object/components/c-pagetitle";
+@import "object/components/c-loader";
+@import "object/components/c-border";
+@import "object/components/c-integration";
+@import "object/components/c-navigator";
+@import "object/components/c-article";
+@import "object/components/c-latestNews";
+@import "object/components/c-mvbanner";
+@import "object/components/c-breadclumb";
+@import "object/components/c-chart";
+@import "object/components/c-archiveToggleButton";
+@import "object/components/c-landscapeAlert";
+@import "object/components/c-tooltip";
+@import "object/components/c-newicon";
+@import "object/components//c-icon";
+@import "object/project/p-top";
+@import "object/project/p-business.scss";
+@import "object/project/p-market.scss";
+@import "object/project/p-operating.scss";
+@import "object/project/p-reduction.scss";
+@import "object/project/p-report.scss";
+@import "object/project/p-briefing.scss";
+@import "object/utility/u-utility.scss";
+@import "object/utility/u-animation.scss";
+@import "object/project/p-ssreport.scss";

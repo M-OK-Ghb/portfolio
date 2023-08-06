@@ -1,0 +1,444 @@
+extends ../include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `業績・株主還元｜セガサミーホールディングス`,
+      description: `セガサミーの直近業績、見通し、株主還元についてご説明します。`,
+      pathname: `/operating-results/index.html`,
+      dataPage: "operating-results",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body
+
+    div#chartjs-tooltip.c-tooltip.u-is-pc
+    div.u-app__wrapper#js-app-wrapper
+    
+      //- canvas contents
+      - 
+        var bgColors = {
+          main: "background: #CE090F",
+          sub: "background: #FDAD30",
+          isTop: false
+        }
+      include ../include/components/_background
+
+      - var mainDustsColor = "#CE090F";
+      - var subDustsColor = "#FDAD30";
+      include ../include/components/_carouselDusts
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- loading
+      //- include ../include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.p-operating.fade-in(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "業績・株主還元",
+                  link: `${config.page_link}` + 'operating-results/index.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div.l-container__page-title.u-lg_pd-tp-120.u-lg_mg-bt-100
+              div.c-page-title.u-sp_mg-bt-225
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--4
+                  h2 業績・<br>株主還元
+                  div.c-page-title__decoration-bar--under
+                  div.c-anchorlink
+                      ul.c-anchorlink__list
+                          li.c-anchorlink__list--item
+                              a(href="#latest-results") 直近業績
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#forecast") 今後の見通し
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                          li.c-anchorlink__list--item
+                              a(href="#holderreturn") 株主還元
+                                  img(src=`${config.assets_link}` + "images/anchor-list-arrow.svg" alt="")
+                img.c-page-title__jumbotron.c-page-title__mv04.u-page-img-animation-4(src=`${config.assets_link}` + "images/04_mv.png" alt="ペルソナ5")
+              span.copy-right ©ATLUS ©SEGA All rights reserved
+
+            div.l-container__detail.u-lg_mg-bt-60#latest-results
+                div.l-container__detail__inner
+                  div.p-operating__box.u-flexbox.u-lg_mg-bt-60
+                    div.p-operating__box--text
+                      div.content-bodrer-top.u-gradation__background--4
+                      div.u-flexbox.u-pc_width-100
+                        h3.u-pc_width-256.u-lg_mg-rt-65 直近業績
+
+                  div.p-operating__chart.u-lg_mg-bt-150.js-scroll-canvas__to-top-3
+                    p セガサミーグループの
+                      br.u-is-sp
+                      |連結業績推移
+                    div.c-chart__label
+                      span.c-chart__label--y-axes 億円
+                      span.c-chart__label--y-axes 億円
+                    div(class='c-chart bar_03 js-scroll-canvas' id='js-chart-bar_03')
+
+                      div.lead-scroll.u-is-sp.scroll-remove
+                        |スワイプしてください
+                        img(src=`${config.assets_link}` + "images/lead-swipe-arrow.svg")
+                      img.inset-shadow.u-is-sp.scroll-remove(src=`${config.assets_link}` + "images/inset-shadow.png")
+
+                      ul.c-chart__scalelabels.u-is-pc
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #0082CA")
+                          span.text 売上高（左軸）
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #222222")
+                          span.text 経常利益（右軸）
+
+                      div.c-chart__canvas-wrapper
+                        div.c-chart__canvas
+                          div.c-chart__canvas-inner
+                            canvas
+                        canvas(class="js-yAxis1" width="0")
+                        canvas(class="js-yAxis2" width="0")
+
+
+                    ul.c-chart__scalelabels.u-is-sp
+                        li.c-chart__scalelabels--item
+                          span.color-block(style="background-color: #0082CA")
+                          span.text 売上高（左軸）
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #222222")
+                          span.text 経常利益（右軸）
+
+                  div.p-operating__hr
+
+                  div.p-operating__chart.u-chart-block.js-scroll-box__to-top
+                    p 業績ハイライト
+
+                    table.p-operating__table.u-lg_mg-bt-80.js-table-set-value
+                      tr.p-operating__table--heads
+                        th.u-sp_width-70.u-lg_width-240 （億円）
+                        th.u-lg_width-240
+                        th.u-lg_width-240.u-bg-000
+                        th.u-lg_width-240 増減率
+                          br.u-is-sp
+                          span.small-text （％）
+                      tr.p-operating__table--bodies
+                        td.first-body 売上高
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td.last-body
+                          span.js-scroll-box__to-right--d350
+                      tr.p-operating__table--bodies
+                        td.first-body 営業利益
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td.last-body
+                          span.js-scroll-box__to-right--d350
+                      tr.p-operating__table--bodies
+                        td.first-body 経常利益
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td.last-body
+                          span.js-scroll-box__to-right--d350
+                      tr.p-operating__table--bodies
+                        td.first-body
+                          |親会社株主に帰属する
+                          br
+                          |当期純利益
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td
+                          span.js-scroll-box__to-right--d350
+                        td.last-body
+                          span.js-scroll-box__to-right--d350
+
+                  div.p-operating__hr
+
+                  div.p-operating__chart.u-chart-block.js-scroll-box__to-top
+                    p
+                      |事業セグメント別の
+                      br.u-is-sp
+                      |業績（経常利益）
+
+                    table.p-operating__table.u-sp_mg-bt-40.js-table.js-table-set-value
+                      tr.p-operating__table--heads(style="background-color: #222")
+                        th.u-lg_width-240 （億円）
+                        th.u-lg_width-360
+                        th.u-bg-000
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #0082CA; color: #fff") エンタメ
+                        td
+                          span(style="color: #0082CA").js-scroll-box__to-right--d350
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350
+                            span(style="color: #0082CA")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#0082CA')
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #7EBB41; color: #fff") 遊技機
+                        td
+                          span(style="color: #7EBB41").js-scroll-box__to-right--d350
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350
+                            span(style="color: #7EBB41")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#7EBB41')
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #FDAD30; color: #fff") リゾート
+                        td
+                          span(style="color: #FDAD30").js-scroll-box__to-right--d350
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350
+                            span(style="color: #FDAD30")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#FDAD30')
+
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #888; color: #fff")
+                          |その他・
+                          br.u-is-sp
+                          |消去等
+                        td
+                          span(style="color: #888").js-scroll-box__to-right--d350
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350
+                            span(style="color: #888")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#888')
+
+                    span.p-operating__addendum ※矢印は前年比での増減を表しています
+
+                    div.p-operating__business-list
+                      ul
+                        li
+                          dl
+                            dt(style="background-color: #0082CA;") エンタメ
+                            dd コンシューマ分野で新作タイトルが好調に推移したほか、AM機器分野において<br class="u-is-pc">プライズカテゴリーが好調に推移
+                        li
+                          dl
+                            dt(style="background-color: #7EBB41;") 遊技機
+                            dd 前期赤字からV字回復し、安定収益を確保
+                        li
+                          dl
+                            dt(style="background-color: #FDAD30;") リゾート
+                            dd 国内は、新型コロナのマイナス影響を受けながらも個人客は回復傾向、海外は渡航制限の影響継続<br>横浜IRの中止
+
+                  div.p-operating__more
+                    span.p-operating__more--text もっと詳しく知りたい方へ
+                    div.p-operating__more--btns
+                      a(href="https://www.segasammy.co.jp/japanese/ir/library/presentation/presentation.do", target="_blank").c-button.c-button__blank 決算・その他資料
+                      a(href="https://www.segasammy.co.jp/japanese/ir/finance/profits/", target="_blank").c-button.c-button__blank 財務・業績情報
+
+            div.l-container__detail.u-lg_mg-bt-60#forecast
+                div.l-container__detail__inner
+                  div.p-operating__box.u-flexbox.u-lg_mg-bt-60
+                    div.p-operating__box--text
+                      div.content-bodrer-top.u-gradation__background--4
+                      div.wrapper-01.u-pc_width-100
+                        h3.u-pc_width-256.u-lg_mg-rt-65 今後の見通し
+                  
+                  div.p-operating__chart.js-scroll-box__to-top
+                    p 事業計画
+
+                    table.p-operating__table.u-sp_mg-bt-40.js-table.js-table-set-value
+                      tr.p-operating__table--heads(style="background-color: #222")
+                        th(colspan="2") （億円）
+                        th.u-lg_width-240
+                        th.u-lg_width-240
+                        th.u-lg_width-240.u-bg-000
+                          br.u-is-sp
+                          span.small-text （計画）
+                      tr.p-operating__table--bodies
+                        td.first-body(colspan="2") 売上高
+                        td.big-title
+                          span.js-scroll-box__to-right--d350
+                        td.big-title
+                          span.js-scroll-box__to-right--d350
+                        td.big-title.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350.u-lg_pos-right-65
+                            span(style="color: #222")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#222')
+                      tr.p-operating__table--bodies
+                        td.first-body(colspan="2") 経常利益
+                        td.big-title
+                          span.js-scroll-box__to-right--d350
+                        td.big-title
+                          span.js-scroll-box__to-right--d350
+                        td.big-title.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350.u-lg_pos-right-65
+                            span(style="color: #222")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#222')
+                      tr.p-operating__table--bodies
+                        td.row-block.first-body(rowspan="4") 
+                          span.wrapper
+                            span 内
+                            span 訳
+                        td.first-body(style="background-color: #0082CA; color: #fff") エンタメ
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #0082CA")
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #0082CA")
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350.u-lg_pos-right-65
+                            span(style="color: #0082CA")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#0082CA')
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #7EBB41; color: #fff") 遊技機
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #7EBB41")
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #7EBB41")
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350.u-lg_pos-right-65
+                            span(style="color: #7EBB41")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#7EBB41')
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #FDAD30; color: #fff") リゾート
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #FDAD30")
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #FDAD30")
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350.u-lg_pos-right-65
+                            span(style="color: #FDAD30")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#FDAD30')
+                      tr.p-operating__table--bodies
+                        td.first-body(style="background-color: #888; color: #fff; border-radius: 0") その他・消去等
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #888")
+                        td
+                          span.js-scroll-box__to-right--d350(style="color: #888")
+                        td.u-lg_flexbox-just-c
+                          span.arrow-wrapper.js-scroll-box__to-right--d350.u-lg_pos-right-65
+                            span(style="color: #888")
+                            svg.js-table-svgs.u-is-pc(xmlns='http://www.w3.org/2000/svg' width='25.379' height='25.379' viewBox='0 0 25.379 25.379')
+                              path(d='M12.689,0A12.689,12.689,0,1,0,25.379,12.689,12.686,12.686,0,0,0,12.689,0ZM9.517,3.172h6.345v9.517h6.345l-9.517,9.517L3.172,12.689H9.517Z' transform='translate(25.379 25.379) rotate(180)' fill='#888')
+
+                    span.p-operating__addendum.u-lg_mg-bt-60 ※矢印は前年比での増減を表しています
+
+                    div.c-chart__label
+                      span.c-chart__label--y-axes 億円
+                    div(class='c-chart bar_04 js-scroll-canvas__to-top-4' id='js-chart-bar_04')
+
+                      ul.c-chart__scalelabels.u-is-pc
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #1482CA")
+                          span.text エンタメ
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #7EBB41")
+                          span.text 遊技機
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #FDAD30")
+                          span.text リゾート
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #888888")
+                          span.text その他
+
+                      div.c-chart__canvas-wrapper
+                        div.c-chart__canvas
+                          div.c-chart__canvas-inner.u-sp_width-100per
+                            canvas
+                        canvas(class="js-yAxis1" width="0")
+
+                    ul.c-chart__scalelabels.u-is-sp
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #1482CA")
+                          span.text エンタメ
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #7EBB41")
+                          span.text 遊技機
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #FDAD30")
+                          span.text リゾート
+                        li.c-chart__scalelabels--item
+                          span.color-block-micro(style="background-color: #888888")
+                          span.text その他
+
+                  div.p-operating__business-list.u-lg_mg-tp-130
+                    span.p-operating__business-list--title 2023年3月期計画
+                    ul
+                      li
+                        dl
+                          dt(style="background-color: #0082CA;") エンタメ
+                          dd コンシューマ分野において新作ラインナップを大幅に増加するほか、AM機器分野におけるプライズカテゴリーの好調維持を見込む
+                      li
+                        dl
+                          dt(style="background-color: #7EBB41;") 遊技機
+                          dd 規制緩和にも対応し販売台数増加を見込むが、部材調達は引き続き注視が必要
+                      li
+                        dl
+                          dt(style="background-color: #FDAD30;") リゾート
+                          dd 損失幅の縮小を見込む（新型コロナに伴う行動制限の緩和を前提）
+            
+            div.l-container__detail.u-lg_mg-bt-60#holderreturn
+                div.l-container__detail__inner
+                  div.p-reduction__box.u-lg_mg-bt-60
+                    div.p-reduction__box--text
+                      div.content-bodrer-top.u-gradation__background--4
+                      h3 株主還元
+                      p 株主としてセガサミーホールディングスに出資いただくことで、利益の一部を配当金として受領いただけます。
+
+                  div.p-reduction__btns.u-lg_mg-bt-60
+                      a(href="https://www.segasammy.co.jp/japanese/ir/stock/share/", target="_blank").c-button.c-button__blank.c-button__high.u-lg_mg-center
+                        img(src=`${config.assets_link}` + "images/noun_coin.svg" alt="")
+                        div.btn-text-wrapper
+                          span.btn-title 配当実績
+                          span.btn-text
+                            |過去の配当実績
+                            br.u-is-sp
+                            |を詳しく見る
+                      a(href="https://www.segasammy.co.jp/japanese/ir/stock/stockprice/", target="_blank").c-button.c-button__blank.c-button__high.u-lg_mg-center
+                        img(src=`${config.assets_link}` + "images/noun_increase.svg" alt="")
+                        div.btn-text-wrapper
+                          span.btn-title 株価情報
+                          span.btn-text
+                            |株価情報
+                            br.u-is-sp
+                            |を詳しく見る
+
+                  div.p-reduction__more
+                    span.p-reduction__more--text もっと詳しく知りたい方へ
+                    a(href="https://www.segasammy.co.jp/japanese/ir/stock/", target="_blank").c-button.c-button__blank.u-lg_mg-center その他株式情報はこちら
+            - 
+              var navigatorObject = {
+                text: "SS通信",
+                rootClass: "c-navigator__05",
+                imgPath: `${config.assets_link}` + "images/05_mv.png",
+                alt: "PARADISE CITY",
+                link: `${config.page_link}` + "ss-report/index.html",
+                textClass: "c-navigator__text--05"
+              }
+            include ../include/components/_navigator
+            span.copy-right ©SEGA ©Sammy
+
+            //- contents end /////////////////////////////////////////////////
+
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

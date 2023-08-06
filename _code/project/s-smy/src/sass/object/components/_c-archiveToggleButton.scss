@@ -1,0 +1,236 @@
+.c-archive-toggle-button {
+    position: relative;
+
+    &__toggle {
+        width: vw(576px);
+        height: vw(60px);
+        background: #222;
+        border-radius: vw(10px);
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        cursor: pointer;
+        transition: .2s;
+
+        @include hover {
+            background-color: #333;
+        }
+  
+        @include media(sp) {
+          width: auto;
+          height: sp_vw(60px);
+          border-radius: sp_vw(10px);
+          margin-bottom: sp_vw(60px);
+        }
+  
+        span {
+          font-size: vw(16px);
+          font-weight: lighter;
+          color: #fff;
+  
+          @include media(sp) {
+              font-size: sp_vw(16px);
+          }
+      }
+  
+        img {
+            width: vw(23px);
+            height: vw(23px);
+            position: absolute;
+            right: vw(25px);
+            transition: .2s;
+            margin-top: vw(1px);
+  
+            @include media(sp) {
+              width: sp_vw(16px);
+              height: sp_vw(16px);
+              right: sp_vw(20px);
+              margin-top: sp_vw(5px);
+            }
+        }
+    }
+
+    &__wrapper {
+        @include media(sp) {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+
+        &.ssReport--archiveBottom {
+            @include media(sp) {
+                position: inherit;
+            }
+        }
+    }
+
+    &__arrow {
+        width: vw(30px);
+        height: vw(15px);
+        margin: 0 auto;
+        background-image: url("../images/articleToggle-arrow.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+  
+        @include media(sp) {
+            width: sp_vw(30px);
+            height: sp_vw(15px);
+            position: absolute;
+            top: sp_vw(62px);
+            left: 0;
+            right: 0;
+        }
+
+        &.ssReport--archiveBottom {
+            transform: rotate(180deg);
+            @include media(sp) {
+                position: inherit;
+                top: 0;
+            }
+        }
+    }
+
+    &__container {
+        width: 100%;
+        max-height: vw(300px);
+        background-color: #222222;
+        border-radius: vw(10px);
+        position: absolute;
+        // top: vw(17px);
+        padding: vw(20px) vw(65px) 0;
+        box-shadow: vw(-10px) vw(50px) vw(30px) #0000000F;
+        overflow: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+  
+        @include media(sp) {
+            width: sp_vw(315px);
+            height: sp_vw(450px);
+            max-height: sp_vw(250px);
+            border-radius: sp_vw(10px);
+            top: sp_vw(75px);
+            right: sp_vw(-20px);
+            padding: sp_vw(20px) sp_vw(20px) 0;
+            box-shadow: sp_vw(-10px) sp_vw(50px) sp_vw(30px) #0000000F;
+        }
+
+        &.ssReport--archiveBottom {
+            bottom: vw(15px);
+            @include media(sp) {
+                top: auto;
+                bottom: sp_vw(15px);;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            display:none;
+        }
+
+        &--list {
+            margin: 0;
+            padding: 0;
+            padding-bottom: vw(20px);
+
+            li {
+                list-style: none;
+                border-bottom: vw(1px) solid #333;
+                transition: .2s;
+
+                @include hover {
+                    background-color: #333;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+  
+                @include media(sp) {
+                    border-bottom: sp_vw(1px) solid #333;
+                    padding-bottom: sp_vw(20px);
+                }
+
+                a {
+                    text-decoration: none;
+                    color: #fff;
+
+                    @include hover {
+                        text-decoration: none;
+                        color: #fff;
+                    }
+
+                    article {
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+                        padding: vw(13px) 0;
+                        position: relative;
+  
+                        @include media(sp) {
+                            flex-direction: column;
+                            align-items: flex-start;
+                            padding: sp_vw(10px) 0;
+                        }
+
+                        time, h2 {
+                            color: #fff;
+                            font-size: vw(16px);
+  
+                            @include media(sp) {
+                                font-size: sp_vw(16px);
+                            }
+                        }
+
+                        time {
+                            width: vw(80px);
+                            font-weight: lighter;
+                            margin-right: vw(30px);
+                            white-space: nowrap;
+                        }
+
+                        h2 {
+                            display: inline-block;
+                            align-items: center;
+                            width: vw(700px);
+                            white-space: nowrap;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            font-weight: normal;
+  
+                            @include media(sp) {
+                                width: sp_vw(250px);
+                                white-space: normal;
+                                text-overflow: clip;
+                                overflow: auto;
+                            }
+
+                            &::after {
+                                content: "";
+                                display: inline-block;
+                                width: vw(8px);
+                                height: vw(4px);
+                                background-image: url("../images/articleToggle-arrow-bt.svg");
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                margin-bottom: vw(3px);
+                                margin-left: vw(8px);
+  
+                                @include media(sp) {
+                                    width: sp_vw(8px);
+                                    height: sp_vw(4px);
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    right: 0;
+                                    margin: auto;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

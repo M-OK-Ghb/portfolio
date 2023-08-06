@@ -1,0 +1,72 @@
+.p-report {
+
+&__introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    @include media(sp) {
+        flex-direction: column;
+
+        p {
+            margin-bottom: sp_vw(40px);
+        }
+
+        .c-button {
+            margin-bottom: sp_vw(60px);
+        }
+    }
+  }
+    
+  &__more {
+      width: 100%;
+      height: vw(180px);
+      padding: 0 vw(64px);
+      background-color: #F8F8F8;
+      border-radius: vw(25px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: vw(80px);
+
+      @include media(sp) {
+          height: auto;
+          padding: sp_vw(40px) sp_vw(20px);
+          border-radius: sp_vw(25px);
+          flex-direction: column;
+          margin-top: vw(40px);
+      }
+
+      &--text {
+          font-size: vw(16px);
+          font-weight: bold;
+
+          @include media(sp) {
+              font-size: sp_vw(16px);
+              margin-bottom: sp_vw(20px);
+          }
+      }
+
+      .c-button {
+          width: vw(500px);
+          margin: 0;
+
+          @include media(sp) {
+              width: 100%;
+              height: sp_vw(75px);
+              padding-top: sp_vw(5px);
+          }
+      }
+
+      &.ssreport-bottom {
+          margin-top: 6.25vw;
+          @include media(sp) {
+            margin-top: 16vw;
+          }
+      }
+    }
+}

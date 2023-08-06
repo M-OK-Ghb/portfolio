@@ -1,0 +1,267 @@
+// -------------------------------------------------------------------
+//  contents.scss
+// -------------------------------------------------------------------
+.l-container__detail {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin: 50px 0;
+
+    &.ssArchiveAdjust {
+      &--top {
+        margin-bottom: 0;
+        .l-container__detail__inner {
+            border-radius: 50px 0 0 0;
+            @include media(sp) {
+                border-radius: sp_vw(25px) 0px 0px 0px;
+            }
+        }
+      }
+
+      &--bottom {
+        margin: 0;
+        .l-container__detail__inner {
+            border-radius: 0 0 0 50px;
+            padding: 2vw vw(128px) vw(128px);
+            @include media(sp) {
+                border-radius: 0px 0px 0px sp_vw(25px);
+                padding: sp_vw(20px) sp_vw(40px) sp_vw(40px);
+            }
+        }
+      }
+    }
+    
+    &__inner {
+        width: 95vw;
+        background-color: #fff;
+        box-shadow: -10px 50px 30px #0000000F;
+        border-radius: 50px 0px 0px 50px;
+        padding: vw(100px) vw(128px);
+        position: relative;
+
+        @include media(sp) {
+            width: sp_vw(355px);
+            background-color: #fff;
+            box-shadow: sp_vw(-10px) sp_vw(50px) sp_vw(30px) #0000000F;
+            border-radius: sp_vw(25px) 0px 0px sp_vw(25px);
+            padding: sp_vw(40px);
+        }
+
+        h3 {
+          font-size: vw(36px);
+          font-weight: bold;
+          line-height: 1.4em;
+          color: #000;
+
+          @include media(sp) {
+            font-size: sp_vw(30px);
+          }
+        }
+
+        h4 {
+            font-size: vw(28px);
+            font-weight: normal;
+            line-height: 1.3em;
+            color: #000;
+
+            @include media(sp) {
+                line-height: 1.5em;
+            }
+        }
+      
+        p {
+          font-size: vw(16px);
+          font-weight: lighter;
+          line-height: 2.2em;
+          color: #333;
+
+          @include media(sp) {
+            font-size: sp_vw(16px);
+          }
+        }
+    }
+}
+
+.l-container__content {
+    width: vw(960px);
+    margin: 0 auto;
+
+    @include media(sp) {
+        width: sp_vw(335px);
+    }
+}
+
+.l-container__carousel {
+    width: vw(896px);
+    margin: 0 auto;
+    position: relative;
+
+    @include media(sp) {
+        width: 100%;
+        position: static;
+    }
+
+    .text-block {
+        position: relative;
+        bottom: 0;
+
+        @include media(sp) {
+            position: static;
+        }
+
+        h2 {
+            font-family: "cl";
+            @include hover {
+                &::after {
+                    transform: translate(vw(10px),vw(6px));
+                }
+            }
+        }
+
+        h2::after {
+            content: "";
+            width: vw(57px);
+            height: vw(57px);
+            display: inline-block;
+            background-image: url("../images/page-transition-icon_2.svg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            margin-left: vw(20px);
+            transition: .2s;
+            transform: translateY(vw(6px));
+            @include en {
+                vertical-align: bottom;
+                transform: translateY(0);
+            }
+
+            @include media(sp) {
+                width: sp_vw(57px);
+                height: sp_vw(57px);
+                margin-left: sp_vw(10px);
+                background-image: url("../images/page-transition-icon-wht_2.svg");
+                transform: translateY(sp_vw(6px));
+                @include en {
+                    transform: translateY(0);
+                }
+            }
+        }
+
+        .first-carousel {
+            @include hover {
+                &::after {
+                    transform: translateY(vw(10px));
+                }
+            }
+
+            &::after {
+                content: "";
+                width: vw(57px);
+                height: vw(57px);
+                display: inline-block;
+                background-image: url("../images/page-transition-icon.svg");
+                background-size: cover;
+                background-repeat: no-repeat;
+                margin-left: vw(20px);
+                transition: .2s;
+                @include en {
+                    vertical-align: bottom;
+                }
+
+                @include media(sp) {
+                    width: sp_vw(57px);
+                    height: sp_vw(57px);
+                    margin-left: sp_vw(10px);
+                    background-image: url("../images/page-transition-icon-wht.svg");
+                }
+            }
+        }
+    }
+}
+
+.l-container__page-title {
+    width: vw($PAGE_TITLE_WIDTH);
+    margin: 0 auto;
+
+    @include media(sp) {
+        width: 100%;
+        padding: sp_vw(50px) sp_vw(40px) 0;
+    }
+}
+
+.l-container__page-title, main.p-top, main.p-business, main.p-market, main.p-operating, main.reduction, main.p-report {
+    position: relative;
+    & > .copy-right {
+        font-size: vw(11px);
+        line-height: vw(16px);
+        color: #888888;
+        position: absolute;
+    }
+    @include media(sp) {
+        & > .copy-right {
+            font-size: sp_vw(11px);
+            line-height: sp_vw(16px);
+        }    
+    }
+}
+.l-container__page-title {
+    & > .copy-right {
+        bottom: vw(-50px);
+        right: vw(-128px);
+        @include media(sp) {
+            bottom: sp_vw(-225px);
+            right: sp_vw(20px);
+            color: #fff;
+        }
+    }
+    &.u-lg_mg-bt-150 {
+        & > .copy-right {
+            bottom:  vw(-140px);
+            @include media(sp) {
+                bottom: sp_vw(-225px);
+                &.copy-right-report {
+                    bottom: sp_vw(-265px);
+                }
+            }
+        }
+    }
+    &.u-lg_mg-bt-200 {
+        & > .copy-right {
+            bottom:  vw(-190px);
+            @include media(sp) {
+                bottom: sp_vw(-310px);
+            }
+        }
+    }
+}
+main.p-top {
+    & > .copy-right {
+        bottom: vw(-150px);
+        right: vw(40px);
+        @include media(sp) {
+            bottom: vw(-120px);
+            right: sp_vw(21px);
+        }
+    }
+}
+main.p-business, main.p-operating, main.reduction, main.p-report {
+    & > .copy-right {
+        bottom: vw(90px);
+        right: vw(40px);
+        @include media(sp) {
+            bottom: sp_vw(-40px);
+            right: sp_vw(21px);
+        }
+    }
+}
+main.p-market {
+    & > .copy-right {
+        bottom: vw(90px);
+        right: vw(40px);
+        @include media(sp) {
+            bottom: vw(-120px);
+            right: sp_vw(21px);
+        }
+    }
+
+}

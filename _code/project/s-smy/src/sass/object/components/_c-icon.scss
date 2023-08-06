@@ -1,0 +1,85 @@
+
+    i[class^=c-icon] {
+        display: inline-block;
+        vertical-align: baseline;
+        font-family: "iconfont";
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .c-icon--arrowDown:after {
+    content: "\EA01";
+    }
+    
+    .c-icon--arrowLeft:after {
+    content: "\EA02";
+    }
+    
+    .c-icon--arrowRight:after {
+    content: "\EA03";
+    }
+    
+    .c-icon--arrowUp:after {
+    content: "\EA04";
+    }
+    
+    .c-icon--blank:after {
+    content: "\EA05";
+    }
+    
+    .c-icon--close:after {
+    content: "\EA06";
+    }
+    
+    .c-icon--dot:after {
+    content: "\EA07";
+    }
+    
+    .c-icon--download:after {
+    content: "\EA08";
+    }
+    
+    .c-icon--hamburger:after {
+    content: "\EA09";
+    }
+    
+    .c-icon--investor:after {
+    content: "\EA0A";
+    }
+    
+    .c-icon--minus:after {
+    content: "\EA0B";
+    }
+    
+    .c-icon--plus:after {
+    content: "\EA0C";
+    }
+    
+    .c-icon--rss:after {
+    content: "\EA0D";
+    }
+    
+    .c-icon--search:after {
+    content: "\EA0E";
+    }
+
+    .c-icon--latest-news {
+        background: #ce090f;
+        color: #fff;
+        font-weight: 700;
+        font-size: 0.9375vw;
+        border-radius: 2px;
+        margin-left: 0.625vw;
+        width: 3vw;
+        display: inline-block;
+        text-align: center;
+        line-height: 1.667;
+        vertical-align: middle;
+        margin-bottom: 0.3125vw;
+        @include media(sp) {
+            width: 10.133vw;
+            font-size: 3.7333vw;
+            margin-left: 2.666vw;
+        }
+    }

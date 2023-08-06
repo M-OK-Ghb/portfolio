@@ -1,0 +1,75 @@
+//- 最新版(2022.6 ~ )より掲載削除 備忘としてファイル保存
+extends ../include/template/_template
+
+//- head contents
+block head
+  - 
+    var config = {
+      isTop: false,
+      title: `Briefing for Individual Investors｜SEGA SAMMY HOLDINGS`,
+      description: `Please find about the information on briefings and other events for individual investors here.`,
+      pathname: `/event/index.html`,
+      dataPage: "event",
+      page_link: "../",
+      assets_link: "../../../../assets/",
+      lang_link: "../../../../"
+    }
+
+//- body contents
+block pageContent
+  body
+  
+    //- cookiePolicy contents
+    include ../include/components/_cookiePolicy
+    div.u-app__wrapper#js-app-wrapper
+
+      //- canvas contents
+      include ../include/components/_backgroundOnly
+
+      //- header contents
+      include ../include/basic/_header
+
+      //- loading
+      //- include ../include/components/_loader
+
+      //- main contents
+      div.u-overflow-content#js-fit-content
+        main.p-briefing.fade-in(data-page=config.dataPage)
+
+            //- breadcrumb
+            -
+              var breadclumb = [
+                {
+                  text: "Upcoming Events for Individual Investors",
+                  link: `${config.page_link}` + 'event/index.html',
+                }
+              ]
+            include ../include/components/_breadcrumb
+
+            //- contents start ///////////////////////////////////////////////
+
+            div.l-container__page-title.u-lg_pd-tp-90.u-lg_mg-bt-60
+              div.c-page-title.u-sp_mg-bt-50
+                div.c-page-title__text--block
+                  div.c-page-title__decoration-bar--top.c-page-title__decoration-bar--height3vw.u-gradation__background--7
+                  h2.briefing-title.u-is-pc Upcoming Events for
+                    br
+                    |Individual Investors
+
+                  h2.briefing-title.u-is-sp Upcoming Events for Individual Investors
+
+            div.l-container__detail.u-lg_mg-bt-100.u-sp_mg-bt-120
+                div.l-container__detail__inner
+                  div.p-briefing__box
+                    p We are holding a briefing session for individual investors to deepen your understanding of SEGA SAMMY.
+
+                  div.p-briefing__article-box#js-briefing-article-container
+                    p loading...
+
+            //- contents end /////////////////////////////////////////////////
+
+        //- footer contents
+        include ../include/basic/_footer
+
+      //- script
+      include ../include/basic/_script

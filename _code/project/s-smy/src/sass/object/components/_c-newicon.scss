@@ -1,0 +1,80 @@
+.c-newicon {
+    position: absolute;
+    top: vw(-30px);
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: vw(40px);
+    height: vw(26.83px);
+
+    @include media(sp) {
+        width: sp_vw(50px);
+        height: sp_vw(40px);
+        left: auto;
+        right: sp_vw(55px) !important;
+        top: sp_vw(52.5px) !important;
+
+        @include en {
+            right: sp_vw(3.75px) !important;
+            top: sp_vw(17.5px) !important;
+        }
+    }
+}
+
+.c-newicon--ss {
+    position: absolute;
+    top: vw(-30px);
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: vw(40px);
+    height: vw(26.83px);
+    
+    @include media(sp) {
+        width: sp_vw(50px);
+        height: sp_vw(40px);
+        left: auto;
+        right: sp_vw(105px) !important;
+        top: sp_vw(-157.5px) !important;
+
+        @include en {
+            right: sp_vw(98px) !important;
+            top: sp_vw(-41.25px) !important;
+        }
+    }
+}
+
+
+
+.c-newicon--header {
+    font-size: vw(11px);
+    font-weight: bold;
+    color: #BB3E9F;
+    position: absolute;
+    top: vw(15px);
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+
+    &.p-ssreport__icon {
+        color:#CE090F;
+    }
+}
+
+.c-newicon--nav {
+    font-size: vw(16px);
+    font-weight: bold;
+    color: #BB3E9F;
+    position: absolute;
+    right: vw(25px);
+
+    &.p-ssreport__icon {
+        color:#CE090F;
+    }
+
+    @include media(sp) {
+        font-size: sp_vw(16px);
+        right: sp_vw(25px);
+    }
+}

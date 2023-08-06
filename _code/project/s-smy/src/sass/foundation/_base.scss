@@ -1,0 +1,152 @@
+* {
+  font-family: "std";
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+  width: 100%;
+  // position: relative;
+  position: relative;
+  z-index: 10;
+  // overflow: hidden;
+  // padding-top: vw(80px);
+  top: vw(80px);
+  left: 0;
+  padding-bottom: vw(80px);
+
+  @include media(sp) {
+    // padding-top: sp_vw(70px);
+    top: sp_vw(70px);
+    padding-bottom: 0;
+  }
+}
+
+h1,h2,h3,h4 {
+  margin: 0;
+}
+
+//  fonts
+// -------------------------------------------------------------------
+
+@font-face {
+    font-family: 'cl';
+    src: url('../fonts/Corporate-Logo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+@font-face {
+    font-family: 'cl';
+    src: url('../fonts/Corporate-Logo-Medium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+      font-family: 'monts';
+      src: url('../fonts/Montserrat-Bolder.woff') format('woff');
+      font-weight: bolder;
+      font-style: normal;
+      font-display: swap;
+    }
+  
+  @font-face {
+      font-family: 'monts';
+      src: url('../fonts/Montserrat-Bold.woff') format('woff');
+      font-weight: bold;
+      font-style: normal;
+      font-display: swap;
+    }
+    
+    @font-face {
+        font-family: 'monts';
+        src: url('../fonts/Montserrat-Medium.woff') format('woff');
+        font-weight: 500;
+        font-style: normal;
+        font-display: swap;
+      }
+
+    @font-face {
+        font-family: 'monts';
+        src: url('../fonts/Montserrat-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+    
+    @font-face {
+        font-family: 'monts';
+        src: url('../fonts/Montserrat-Light.woff') format('woff');
+        font-weight: lighter;
+        font-style: normal;
+        font-display: swap;
+      }
+
+  @font-face {
+    font-family: 'std';
+    src: url('../fonts/NotoSansCJKjp-Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'std';
+    src: url('../fonts/NotoSansCJKjp-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'std';
+    src: url('../fonts/NotoSansCJKjp-Regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'std';
+    src: url('../fonts/NotoSansCJKjp-DemiLight.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'std';
+    src: url('../fonts/NotoSansCJKjp-Light.otf') format('opentype');
+    font-weight: lighter;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'din';
+    src: url('../fonts/DINCondensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  h1 {font-family: "monts";}
+
+@font-face {
+  font-family: "iconfont";
+    src: url("/english/resources/fonts/icon/iconfont.eot");
+    src: url("/english/resources/fonts/icon/iconfont.eot?#iefix") format("eot"), url("/english/resources/fonts/icon/iconfont.woff") format("woff"), url("/english/resources/fonts/icon/iconfont.ttf") format("truetype"), url("/english/resources/fonts/icon/iconfont.svg#iconfont") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}

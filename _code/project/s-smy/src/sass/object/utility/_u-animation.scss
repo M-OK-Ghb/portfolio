@@ -1,0 +1,374 @@
+// -------------------------------------------------------------------
+//  animation.scss
+// -------------------------------------------------------------------
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+        visibility: visible;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        transform: translateY(0px);
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+        visibility: hidden;
+    }
+}
+
+.fade-in {
+    animation: fade-in 0.4s forwards;
+}
+
+.fade-out {
+    animation: fade-out 0.4s forwards;
+}
+
+@keyframes fade-in_std {
+    from {
+        opacity: 0;
+        visibility: hidden;
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@keyframes fade-out_std {
+    from {
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.fade-in_std {
+    animation: fade-in_std 0.2s forwards;
+}
+
+.fade-out_std {
+    animation: fade-out_std 0.2s forwards;
+}
+
+@keyframes carousel-fade-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes carousel-fade-out {
+    from {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(50px);
+    }
+}
+
+.carousel-fade-in {
+    animation: carousel-fade-in 0.4s forwards;
+}
+
+.carousel-fade-out {
+    animation: carousel-fade-out 0.4s forwards;
+}
+
+@keyframes toggle-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes toggle-fade-out {
+    from {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+    }
+}
+
+.toggle-fade-in {
+    animation: toggle-fade-in 0.2s forwards;
+}
+
+.toggle-fade-out {
+    animation: toggle-fade-out 0.2s forwards;
+}
+
+@keyframes carousel-dust-animation {
+    from {
+        opacity: 0;
+        transform: translateX(vw(40px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.u-carousel-dust-animation {
+    animation: carousel-dust-animation 0.4s forwards;
+    animation-delay: .2s;
+}
+
+@keyframes carousel-img-animation {
+    from {
+        opacity: 0;
+        transform: translateX(vw(200px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes carousel-img-animation-sp {
+    from {
+        opacity: 0;
+        transform: translateX(sp_vw(150px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.u-carousel-img-animation {
+
+    @include media(pc) {
+        animation: carousel-img-animation 0.4s 0.6s forwards;
+    }
+
+    @include media(sp) {
+        animation: carousel-img-animation-sp 0.4s 0.6s forwards;
+    }
+}
+
+@keyframes page-img-animation-2 {
+    from {
+        opacity: 0;
+        transform: translateX(vw(150px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes page-img-animation-sp-2 {
+    from {
+        opacity: 0;
+        transform: translateX(sp_vw(150px)) scale(1.6);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1.6);
+    }
+}
+
+.u-page-img-animation-2 {
+
+    @include media(pc) {
+        animation: page-img-animation-2 0.4s 0.3s forwards;
+    }
+
+    @include media(sp) {
+        animation: page-img-animation-sp-2 0.4s forwards;
+    }
+}
+
+@keyframes page-img-animation-3 {
+    from {
+        opacity: 0;
+        transform: translateX(vw(150px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes page-img-animation-sp-3 {
+    from {
+        opacity: 0;
+        transform: translateX(sp_vw(150px)) scale(1.7);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1.7);
+    }
+}
+
+.u-page-img-animation-3 {
+
+    @include media(pc) {
+        animation: page-img-animation-3 0.4s 0.3s forwards;
+    }
+
+    @include media(sp) {
+        animation: page-img-animation-sp-3 0.4s forwards;
+    }
+}
+
+@keyframes page-img-animation-4 {
+    from {
+        opacity: 0;
+        transform: translateX(vw(150px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes page-img-animation-sp-4 {
+    from {
+        opacity: 0;
+        transform: translateX(sp_vw(150px)) scale(1.85);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1.85);
+    }
+}
+
+.u-page-img-animation-4 {
+
+    @include media(pc) {
+        animation: page-img-animation-4 0.4s 0.3s forwards;
+    }
+
+    @include media(sp) {
+        animation: page-img-animation-sp-4 0.4s forwards;
+    }
+}
+
+@keyframes page-img-animation-5 {
+    from {
+        opacity: 0;
+        transform: translateX(vw(150px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes page-img-animation-sp-5 {
+    from {
+        opacity: 0;
+        transform: translateX(sp_vw(150px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.u-page-img-animation-5 {
+
+    @include media(pc) {
+        animation: page-img-animation-5 0.4s 0.3s forwards;
+    }
+
+    @include media(sp) {
+        animation: page-img-animation-sp-5 0.4s forwards;
+    }
+}
+
+@keyframes page-img-animation-6 {
+    from {
+        opacity: 0;
+        transform: translateX(vw(150px));
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+@keyframes page-img-animation-sp-6 {
+    from {
+        opacity: 0;
+        transform: translateX(sp_vw(150px)) scale(1.15);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px) scale(1.15);
+    }
+}
+
+.u-page-img-animation-6 {
+
+    @include media(pc) {
+        animation: page-img-animation-6 0.4s 0.3s forwards;
+    }
+
+    @include media(sp) {
+        animation: page-img-animation-sp-6 0.4s forwards;
+    }
+}
+
+.u-cookie-policy-btn-animation {
+
+    @include media(pc) {
+        animation: cookie-policy-btn-animation-pc 0.1s forwards;
+    }
+
+    @include media(sp) {
+        animation: cookie-policy-btn-animation-sp 0.1s forwards;
+    }
+}
+
+@keyframes cookie-policy-btn-animation-pc {
+    from {
+        left: 0px;
+    }
+    to {
+        left: vw(-72px);
+    }
+}
+
+@keyframes cookie-policy-btn-animation-sp {
+    from {
+        left: 0px;
+    }
+    to {
+        left: sp_vw(-72px);
+    }
+}
