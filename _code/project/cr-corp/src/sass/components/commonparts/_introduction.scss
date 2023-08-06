@@ -1,0 +1,67 @@
+@use "../../helpers/mediaquery" as med;
+
+.common-introduction {
+  margin-top: 80px;
+  padding:0 20px 60px;
+
+  @include med.media(pc) {
+    width: 980px;
+    padding:0 0 60px;
+    margin: 80px auto 0;
+  }
+
+  h2 {
+    margin-bottom: 40px;
+    @include med.media(pc) {
+      width: 980px;
+    }
+  }
+
+  &__btnArea {
+    @include med.media(pc) {
+      display: flex;
+      justify-content: space-between;
+      width: 980px;
+    }
+
+    .common-button--black {
+      @include med.media(pc) {
+        width: 310px;
+      }
+    }
+  }
+
+  &__btnWrap {
+    margin-bottom: 10px; 
+  }
+
+  &__plus {
+    text-align: center;
+    margin-bottom: 10px;
+    > img {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__complement {
+    margin-bottom: 40px;
+    @include med.media(pc) {
+      width: 980px;
+      .common-button--black {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__text {
+    color:#222427;
+    font-size: 14px;
+    line-height: 1.8;
+    @include med.media(pc) {
+      font-size:16px;
+      padding:0 90px;
+    }
+  }
+}

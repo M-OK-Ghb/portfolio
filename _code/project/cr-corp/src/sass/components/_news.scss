@@ -1,0 +1,97 @@
+@use "../helpers/mediaquery" as med;
+
+.news {
+  padding: 80px 5.3%;
+  @include med.media(pc) {
+    padding: 80px 15.5%;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    @include med.media(pc) {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+  }
+
+  &__heading {
+    font-family: 'Barlow', sans-serif;
+    font-size: 48px;
+    color:#222427;
+    line-height: 1;
+    span {
+      font-size: 16px;
+      margin-left: 12px;
+    }
+  }
+
+  &__arrow {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 10px;
+    width:56px;
+  }
+
+  &__backBtn {
+    cursor: pointer;
+    border-bottom: solid 2px #222427;
+    border-left: solid 2px #222427;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+  }
+
+  &__nextBtn {
+    cursor: pointer;
+    border-top: solid 2px #222427;
+    border-right: solid 2px #222427;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+  }
+
+  &__detail {
+    margin-top: 30px;
+    @include med.media(pc) {
+      max-width: 980px;
+      margin: 30px auto 0;
+    }
+  }
+
+  &__label {
+    font-size:12px;
+  }
+
+  &__icon {
+    background-color: #42434E;
+    color: #fff;
+    font-size: 13px;
+    width: 90px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 2px;
+    line-height: 1.5;
+    margin-right: 20px
+  }
+
+  &__page {
+    text-align: right;
+    font-weight: bold;
+    @include med.media(pc) {
+      font-size: 16px;
+    }
+  }
+
+  &__control {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  &__listLink {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px 0;
+  }
+}

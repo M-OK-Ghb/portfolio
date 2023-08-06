@@ -1,0 +1,117 @@
+<%
+path = '../';
+category = '';
+page = 'home';
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../include/_headNewsRelease.ejs'); %>
+
+<body>
+  <div class="container" id="js-container">
+    <%- include('../include/_header.ejs'); %>
+    <main id="js-main" class="main">
+      <div class="common-breadCrumbWrapper">
+        <ul class="common-breadCrumb">
+          <li>
+            <a href="#">トップ /</a>
+          </li>
+          <li>
+            <a href="#">企業・グループ情報</a>
+          </li>
+        </ul>
+      </div>
+      <div class="common-mainVisual common-mainVisual--aboutUs">
+        <img src="<%= path %>images/about_us/kv_img_pc_about_us.png" alt="企業・グループ情報" class="common-mainVisual--pc">
+        <img src="<%= path %>images/about_us/kv_img_sp_about_us.png" alt="企業・グループ情報" class="common-mainVisual--sp">
+        <h1 class="common-heading--h1">企業・グループ情報<br><span></span></h1>
+      </div>
+
+      <div class="common-container common-container--top">
+        <p class="common-mb--section common-text--center common-text--normal">C&Rグループは、プロフェッショナルの能力を最大限に引き出し、人と社会の幸せのために貢献します</p>
+
+        <h2><a href="#" class="aboutUs__heading">ごあいさつ<span></span></a></h2>
+        <div class="aboutUs__president">
+          <img src="<%= path %>images/about_us/president_img.jpg" alt="">
+          <div class="aboutUs__president__text">
+            <p class="aboutUs__president__text__lead">世界がどんなに変わろうとも、私たちは進化を止めない。</p>
+            <p class="aboutUs__president__text__name">代表取締役社長　井川 幸広</p>
+          </div>
+        </div>
+
+        <div class="aboutUs__grid">
+          <div class="aboutUs__col">
+            <h2><a href="#" class="aboutUs__heading">クリーク･アンド･リバー社について<span></span></a></h2>
+            <figure class="aboutUs__img"><img src="<%= path %>images/about_us/aboutUs_01.JPG" alt=""></figure>
+          </div>
+          <div class="aboutUs__col">
+            <h2><a href="#" class="aboutUs__heading">C&amp;Rグループについて<span></span></a></h2>
+            <figure class="aboutUs__img"><img src="<%= path %>images/about_us/aboutUs_02.jpg" alt=""></figure>
+          </div>
+          <div class="aboutUs__col">
+            <h2><a href="#" class="aboutUs__heading">理念・ミッション<span></span></a></h2>
+            <figure class="aboutUs__img"><img src="<%= path %>images/about_us/aboutUs_03.png" alt=""></figure>
+          </div>
+          <div class="aboutUs__col">
+            <h2><a href="#" class="aboutUs__heading">ビジネスモデル<span></span></a></h2>
+            <figure class="aboutUs__img"><img src="<%= path %>images/about_us/aboutUs_04.png" alt=""></figure>
+          </div>
+          <div class="aboutUs__col">
+            <h2><a href="#" class="aboutUs__heading">ビジネスフィールド<span></span></a></h2>
+            <figure class="aboutUs__img"><img src="<%= path %>images/about_us/aboutUs_05.png" alt=""></figure>
+          </div>
+          <div class="aboutUs__col">
+            <h2><a href="#" class="aboutUs__heading">文化・オフィス紹介<span></span></a></h2>
+            <figure class="aboutUs__img"><img src="<%= path %>images/about_us/aboutUs_06.jpg" alt=""></figure>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="multiField">
+        <a href="#">
+          <img src="<%= path %>images/multifield_bottom.png" alt="50分野構想イメージ">
+          <p>50分野構想</p>
+        </a>
+      </div>
+
+      <div class="common-mainBottom">
+        <div class="common-mainBottom__btnWrap">
+          <div class="common-button--whiteArrowBtn">
+            <a href="#">事業分野・サービス<div class="arrow--grayBtn"><span class="arrow"></span></div></a>
+          </div>
+          <div class="common-button--whiteArrowBtn">
+            <a href="#">強み・特徴<div class="arrow--grayBtn"><span class="arrow"></span></div></a>
+          </div>
+          <div class="common-button--whiteArrowBtn">
+            <a href="#">IR情報<div class="arrow--grayBtn"><span class="arrow"></span></div></a>
+          </div>
+          <div class="common-button--whiteArrowBtn">
+            <a href="#">サスティナビリティ<div class="arrow--grayBtn"><span class="arrow"></span></div></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="common-container">
+        <div class="aboutUs__link">
+          <a href="#" class="aboutUs__link__item">
+            <img src="<%= path %>images/about_us/professional.jpg" alt="">
+            <p class="aboutUs__link__title">プロフェッショナルの皆さまへ<span></span></p>
+          </a>
+          <a href="#" class="aboutUs__link__item">
+            <img src="<%= path %>images/dummy_common/dummy_common_carousel_01.png" alt="">
+            <p class="aboutUs__link__title">採用情報<span></span></p>
+          </a>
+        </div>
+      </div>
+
+
+      <%- include('../include/_footer.ejs'); %>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.2.0/browser/pixi.js"></script>
+  <script src="<%= path %>js/main.js"></script>
+  <script src="<%= path %>js/vendor.js"></script>
+</body>
+
+</html>

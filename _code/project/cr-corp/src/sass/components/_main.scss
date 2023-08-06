@@ -1,0 +1,32 @@
+.main {
+  transition: left 0.5s;
+}
+
+body {
+  &[data-page="top"] {
+    overflow-x: hidden;
+    .main {
+      margin-top:0;
+      &__inner {
+        position: relative;
+        z-index: 5;
+        background-color: #fff;
+        margin-top: 100vh;
+      }
+    }    
+  }
+}
+
+.container.is-open {
+  .main {
+    position: fixed;
+    left: 0;
+    width: 100%;
+  }
+
+  &.is-slide {
+    .main {
+      left: -82.85%;
+    }
+  }
+}

@@ -1,0 +1,306 @@
+@use "../helpers/mediaquery" as med;
+
+.secondMv {
+  background-color: #F8F9FA;
+  width: 100vw;
+
+  &__inner {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 80px;
+  }
+
+  &__heading {
+    font-family: 'Barlow', sans-serif;
+    position: absolute;
+    width: 90.2vw;
+    top: 17.4vh;
+    left: 5.4vw;
+    font-size: 13.9vw;
+    line-height: 1;
+
+    @include med.media(pc) {
+      width: 36vw;
+      font-size: 6.08vw;
+      top: 12vh;
+      left: 15vw;
+    }
+
+    @include med.media(tb) {
+      font-size: 11vw;
+    }
+
+    span {
+      color: #D28903;
+    }
+
+    .grayArrowBtn {
+      width: 44vw;
+      text-align: center;
+      position: absolute;
+      bottom: 4px;
+      right: 0;
+      transition: opacity 0.3s;
+      opacity: 0;
+
+      &.is-showButton {
+        opacity: 1;
+      }
+
+      @include med.media(pc) {
+        width: 13.5vw;
+        bottom: 2.2%;
+      }
+
+      a {
+        position: relative;
+        height: 7.5vh;
+        line-height: 7.5vh;
+        font-size: 4.26vw;
+        padding: 0 5.33vw;
+
+        @include med.media(pc) {
+          font-size: 16px;
+          line-height: 60px;
+          height: 60px;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  &__detail {
+    margin-top: 63vh;
+    padding:0 5.4vw;
+    color: #000;
+    h3 {
+      font-family: 'Barlow', sans-serif;
+      font-size: 8.53vw;
+    }
+
+    @include med.media(pc) {
+      margin-top: 100vh;
+    }
+
+    @include med.media(tb) {
+      margin-top: 80vh;
+    }
+  }
+
+  &__detailList {
+    margin-top: 20px;
+    dt {
+      font-family: 'Barlow', sans-serif;
+      font-size: 6.93vw;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    dd {
+      line-height: 1;
+      margin-top: 20px;
+
+      > span {
+        line-height: 1;
+        display: inline-block;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__detailNumber {
+    font-family: "din-condensed", "sans-serif";
+    font-size: 26.5vw;
+
+    @include med.media(pc) {
+      font-size: 120px;
+    }
+  }
+
+  &__detailText {
+    font-size: 6.4vw;
+
+    @include med.media(pc) {
+      font-size: 35px;
+    }
+  }
+
+  h4 {
+    font-size: 6.4vw;
+    margin-top: 60px;
+  }
+
+  &__goalText {
+    font-size: 4.8vw;
+    margin-top: 30px;
+  }
+
+  &.is-sticky {
+    @include med.media(pc) {
+      .secondMv__inner {
+        overflow: visible;
+        display: flex;
+        align-items: stretch;
+        padding-bottom: 40vh;
+      }
+  
+      .secondMv__mainText {
+        width: 60vw;
+      }
+
+      .secondMv__heading {
+        position: sticky;
+      }
+
+      .secondMv__detail {
+        margin-top: 100vh;
+        padding: 0;
+        width: 40vw;
+
+        h3 {
+          font-size: 2.4vw;
+        }
+
+        h4 {
+          font-size: 1.8vw;
+        }
+      }
+
+      .secondMv__detailList {
+        dt {
+          font-size: 1.95vw;
+        }
+      }
+
+      .secondMv__goalText{
+        font-size: 1.35vw;
+      }
+
+    }
+  }
+
+  &__cmBanner--sp {
+    @include med.media(pc) {
+      display: none;
+    }
+
+    @include med.media(tb) {
+      display: none;
+    }
+
+    @include med.media(sp) {
+      margin-top:80px;
+      > a {
+        display: block;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__cmBanner--pc {
+    text-align: center;
+    padding-bottom: 10vh;
+    a {
+      width: 50%;
+      display: inline-block;
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 0.7;
+      }
+
+      @include med.media(tb) {
+        width:80%;
+      }
+
+      > img {
+        width:100%;
+      }
+    }
+    @include med.media(sp) {
+      display: none;
+    }
+  }
+}
+
+body.is-landscape {
+  @include med.media(tb) {
+    .secondMv {
+      &__heading {
+        width: 36vw;
+        font-size: 6.08vw;
+        top: 15vh;
+        left: 15vw;
+      }
+
+      .grayArrowBtn {
+        width: 13.5vw;
+        bottom: 2.2%;
+
+        a {
+          font-size: 16px;
+          line-height: 60px;
+          height: 60px;
+          padding: 0;
+        }
+      }
+
+      .secondMv__detailList {
+        dt {
+          font-size: 1.95vw;
+        }
+
+        dd {
+          span {
+            &.secondMv__detailNumber {
+              font-size: 120px;
+            }
+
+            &.secondMv__detailText {
+              font-size: 35px;
+            }
+          }
+        }
+      }
+
+      .secondMv__detail {
+        h3 {
+          font-size: 2.4vw;
+        }
+
+        h4 {
+          font-size: 1.8vw;
+        }
+      }
+
+      .secondMv__detail {
+        margin-top: 100vh;
+        padding: 0;
+        width: 40vw;
+      }
+
+      &.is-sticky {
+        .secondMv__inner {
+          overflow: visible;
+          display: flex;
+          align-items: stretch;
+          padding-bottom: 40vh;
+        }
+    
+        .secondMv__mainText {
+          width: 60vw;
+        }
+  
+        .secondMv__heading {
+          position: sticky;
+        }
+  
+        .secondMv__goalText{
+          font-size: 1.35vw;
+        }
+      }
+    }
+
+  }
+}

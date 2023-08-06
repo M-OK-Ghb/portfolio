@@ -1,0 +1,83 @@
+// -------------------------------------------------------------------
+// 	button.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+
+.grayArrowBtn {
+  position: relative;
+  max-width: 335px;
+  margin:0 auto;
+  > a {
+    width:100%;
+    display: block;
+    background-color: #F5F6F7;
+    color: #222427;
+    font-size:16px;
+    font-weight: bold;
+    padding:0 20px;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+    border:1px solid #222427;
+    transition: color 0.3s, border-color 0.3s;
+
+    &:hover {
+      color:#D28903;
+      border-color:#D28903;
+
+      .arrow--grayBtn .arrow{
+        background-color: #D28903;
+      }
+
+      .arrow--grayBtn .arrow:before,
+      .arrow--grayBtn .arrow:after{
+        background-color: #D28903;
+      }
+    }
+  }
+
+  .arrow--grayBtn {
+    position: absolute;
+    right: 18px;
+    bottom: 0;
+  }
+  
+  .arrow--grayBtn .arrow{
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 2px;
+    background-color: #222427;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .arrow--grayBtn .arrow:before,
+  .arrow--grayBtn .arrow:after{
+    content: "";
+    display: block;
+    width: 8px;
+    height: 2px;
+    background-color: #222427;
+    position: absolute;
+    right: 0;
+    transition: 0.3s;
+  }
+  .arrow--grayBtn .arrow:before{
+    top: -3px;
+  }
+  .arrow--grayBtn .arrow:after{
+    bottom: -3px;
+  }
+  
+  .arrow--grayBtn .arrow:before{
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+  .arrow--grayBtn .arrow:after{
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+  }
+}

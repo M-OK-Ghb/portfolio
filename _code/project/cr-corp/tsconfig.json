@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@*": ["src/ts*"],
+    },
+    "module": "es2015",
+    "target": "es5",
+    "moduleResolution": "node",
+    "strict": true,
+    "strictPropertyInitialization": false,
+    "allowSyntheticDefaultImports": true,
+    "lib": ["dom", "es2015", "es2015.promise"],
+    "types": ["google.maps"]
+  }
+}

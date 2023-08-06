@@ -1,0 +1,22 @@
+.scrollTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 5;
+  width: 20px;
+  opacity: 0;
+  transition: opacity 0.5s;
+  a {
+    display: block;
+    cursor: pointer;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &.is-show {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,101 @@
+@use "../helpers/mediaquery" as med;
+
+@-webkit-keyframes load3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes load3 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loadingWrap {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+
+  &__inner {
+    width:100vw;
+    height:100vh;
+    position: relative;
+    z-index: 100;
+    background-color: #fff;
+    transition: height 0.5s;
+    overflow: hidden;
+
+    > picture {
+      position: absolute;
+      /*アドレスバー含めた中央配置*/
+      top: 42vh;
+      left: 50vw;
+      transform: translate(-50%, -50%);
+      width:147px;
+      @include med.media(tb) {
+        width:236px;
+      }
+      @include med.media(pc) {
+        top: 45vh;
+        width:294px;
+      }
+      > img {
+        width: 100%;
+      }
+    }
+  }
+  &__loader {
+    top: 60vh;
+    left: 49.2vw;
+    opacity: .8;
+    display: none;
+    transform: translate(-50%, -50%, 0);
+    position: absolute;
+    font-size: 10px;
+    text-indent: -9999em;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #d28904;
+    background: linear-gradient(to right, #d28904 10%, rgba(255, 255, 255, 0) 42%);
+    animation: load3 1.4s infinite linear;
+    &::before {
+      width: 50%;
+      height: 50%;
+      background: #d28904;
+      border-radius: 100% 0 0 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      content: '';
+    }
+    &::after {
+      background: #fff;
+      width: 75%;
+      height: 75%;
+      border-radius: 50%;
+      content: '';
+      margin: auto;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+    }
+    &.is-show {
+      display: block;
+    }
+  }
+
+  &.is-loading {
+    .loadingWrap__inner {
+      height: 0;
+    }
+  }
+}

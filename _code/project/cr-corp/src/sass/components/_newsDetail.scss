@@ -1,0 +1,333 @@
+@use "../helpers/mediaquery" as med;
+
+.newsDetail {
+  &__topWrapper {
+    @include med.media(sp) {
+      padding: 0 20px;
+    }
+  }
+  &__wrapper {
+    padding-bottom: 120px;
+    @include med.media(sp) {
+      padding: 0 10px 80px 10px;
+    }
+    &--noPadding {
+      padding-bottom: 0;
+    }
+  }
+  &__heading {
+    font-size: 24px;
+    margin-bottom: 25px;
+    &__sub {
+      font-size: 80%;
+      display: block;
+      margin-top: 14px;
+    }
+  }
+  &__subHeading {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  &__text {
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+  &__note {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+    &--pcLeft {
+      text-align: left;
+      @include med.media(sp) {
+        text-align: center;
+      }
+    }
+  }
+  &__lamp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__date {
+    font-size: 16px;
+  }
+  &__sns {
+    display: flex;
+    align-items: center;
+    @include med.media(sp) {
+      display: none;
+    }
+    &__icon {
+      margin-right: 20px;
+      &:last-child {
+        margin-right: 0;
+      }
+      img {
+        width: 30px;
+      }
+    }
+  }
+  &__company {
+    font-size: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    &::before {
+      content: '';
+      width: 20px;
+      height: 2px;
+      background: #222427;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+  &__labelArea {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    .newsLabel {
+      margin-right: 5px;
+    }
+    .newsLabel:last-child {
+      margin-right: 0;
+    }
+  }
+  &__image {
+    margin-bottom: 45px;
+    img {
+      width: 100%;
+    }
+    &--thin {
+      max-width: 500px;
+      margin: auto;
+      margin-bottom: 45px;
+    }
+  }
+  &__table {
+    width: 70%;
+    margin-bottom: 30px;
+    @include med.media(sp) {
+      width: 100%;
+    }
+    th {
+      font-size: 14px;
+      text-align: left;
+    }
+    td {
+      font-size: 14px;
+      text-align: right;
+    }
+  }
+  &__prev {
+    font-size: 16px;
+    color: #1F2224;
+    text-decoration: none;
+    display: inline-block;
+    height: 40px;
+    background: #F5F6F7;
+    border: 1px solid #000;
+    min-width: 140px;
+    padding: 0 40px 0 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include med.media(sp) {
+      &--spNone {
+        display: none;
+      }
+    }
+    &:hover {
+      opacity: .6;
+    }
+    span {
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translate(0, -50%);
+      &::before {
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-left: 2px solid #000;
+        border-bottom: 2px solid #000;
+        position: absolute;
+        top: -10px;
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin: left bottom;
+      }
+      &::after {
+        content: '';
+        width: 15px;
+        height: 2px;
+        background: #000;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(0, -50%);
+      }
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 80px;
+    @include med.media(sp) {
+      margin-bottom: 55px;
+    }
+    &__li {
+      padding-bottom: 5px;
+      @include med.media(sp) {
+        padding-bottom: 20px;
+      }
+      &:last-child {
+        padding-bottom: 0;
+      }
+      a {
+        color: #000;
+      }
+    }
+  }
+  &__sp {
+    &__grayBox {
+      background: #F5F6F7;
+      &__inner {
+        padding: 60px 0;
+        max-width: 980px;
+        margin: auto;
+        @include med.media(sp) {
+          padding: 40px 20px;
+        }
+      }
+    }
+    &__heading {
+      font-size: 28px;
+      margin-bottom: 5px;
+      @include med.media(sp) {
+        font-size: 26px;
+        margin-bottom: 30px;
+      }
+    }
+    &__sns {
+      padding: 25px 0;
+      display: none;
+      @include med.media(sp) {
+        display: block;
+      }
+      &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      &__icon {
+        margin: 0 10px;
+        img {
+          width: 30px;
+        }
+      }
+    }
+    &__buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-column-gap: 20px;
+      margin-bottom: 60px;
+      @include med.media(sp) {
+        grid-template-columns: 1fr;
+        grid-row-gap: 10px;
+        margin-bottom: 30px;
+      }
+    }
+    &__connection {
+      @include med.media(sp) {
+        background: #F5F6F7;
+      }
+      &__inner {
+        padding: 100px 0 0 0;
+        max-width: 980px;
+        margin: auto;
+        @include med.media(sp) {
+          padding: 40px 20px 80px 20px;
+        }
+      }
+    }
+    &__flex {
+      display: flex;
+    }
+    &__buttonCol {
+      .sustain__pdfLinkWrap {
+        width: 100%;
+        margin-top: 0;
+      }
+      .common-button--whiteArrowBtn {
+        max-width: none;
+      }
+    }
+  }
+  &__margin {
+    margin-bottom: 20px;
+  }
+  &__pc {
+    &__none {
+      display: none;
+      @include med.media(sp) {
+        display: block;
+      }
+    }
+  }
+  &__mainHeading {
+    font-size: 38px;
+    font-weight: bold;
+    position: relative;
+    padding-bottom: 18px;
+    margin: 80px 0 60px 0;
+    text-align: center;
+    &::before {
+      content: '';
+      width: 60px;
+      height: 5px;
+      background: #000;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      @include med.media(sp) {
+        width: 50px;
+      }
+    }
+  }
+  &__topLink {
+    display: flex;
+    justify-content: flex-end;
+    margin: 30px 0;
+  }
+}
+
+#st-1 .st-btn > img {
+  width: 30px !important;
+  height: 30px !important;
+  top: 2px !important;
+}
+
+.st-btn {
+  padding: 0 !important;
+}
+
+#st-1 .st-btn[data-network='facebook'] {
+  border-radius: 50% !important;
+}
+
+#st-2 {
+  text-align: center !important;
+}
+
+#st-2 .st-btn > img {
+  width: 30px !important;
+  height: 30px !important;
+  top: 2px !important;
+}
+
+.st-last {
+  display: inline-block !important;
+}

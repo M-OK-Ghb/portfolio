@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/subpages/_subpageHead.ejs', {path: "../../",title: "企業理念", description: "企業理念。クリーク･アンド･リバー社とC&Rグループは、映像、ゲーム、Web、広告・出版、医療、会計、法曹、建築、コンピュータサイエンスなどのプロフェショナル･エージェンシーのパイオニア。プロフェショナルの叡智を掛け合わせ、革新的な事業を創造しています。"}); %>
+  <body>
+    <%- include('../../include/_header.ejs'); %>
+    <main id="philosophy" class="subpage">
+      <div class="breadcrumb">
+        <ol class="breadcrumb__list">
+          <li>
+            <a href="/">TOP</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a href="../">企業・グループ情報</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a>企業理念</a>
+          </li>
+        </ol>
+        <!-- /.breadcrumb -->
+      </div>
+      <div class="common-mainVisual">
+        <img src="../../images/1000_F_296643772_CWHxtgGGuoeopFjb7RMBMbFFbVe14zj6.jpg" alt="ダミー">
+        <h1 class="common-heading--h1">企業理念<br><span></span></h1>
+      </div>
+      <div class="contentWrap md">
+        <section id="management" class="management">
+          <h2 class="commonTtl">経営理念</h2>
+          <div class="management__leadBlk">
+            <p class="management__lead">人の能力は、<br>無限の可能性を秘めています。</p>
+            <p class="management__lead">私たちは、<br>その能力を最大限に引き出し、</p>
+            <p class="management__lead">人と社会の幸せのために貢献します</p>
+          </div>
+        </section>
+        <section id="mission" class="mission">
+          <h2 class="commonTtl">ビジョン／ミッション</h2>
+          <div class="mission__blk">
+            <img src="../../images/about_us/philosophy__txt.png" alt="">
+          </div>
+          <ul class="mission__list">
+            <li>
+              <h3 class="mission__subttl -uLine">Vision　めざすべき社会</h3>
+              <p class="mission__lead mt">私たちは、プロフェッショナルを支援することで、人と社会の豊かさを創生します。</p>
+            </li>
+            <li>
+              <h3 class="mission__subttl -uLine">Mission　果たすべき使命</h3>
+              <p class="mission__disc mt">1. プロフェッショナルの生涯価値の向上</p>
+              <p class="mission__disc">2. クライアントの価値創造への貢献</p>
+              <p class="mission__lead">才能豊かなプロフェッショナルを発掘し、育て、支援し、活躍できる環境を構築していきます。<br>そして、その才能を組み合わせることにより新たな価値を生み出し、私たちに関わる全ての方の幸せを追求していきます。</p>
+            </li>
+          </ul>
+        </section>
+        <section id="logo" class="logo">
+          <h2 class="commonTtl">ロゴの意味</h2>
+          <figure>
+            <img src="../../images/common/corp_logo.png" alt="">
+          </figure>
+          <p class="logo__lead -en">In the universe,infinite numbers of nebulous whirls are continuously being born and dying. We follow the birth of the whirls and attempt to ascertain how the stars come being.</p>
+          <p class="logo__lead -jp">ビッグバンから138億年。 今、この瞬間も宇宙は成長を続けています。 無数に点在する星の一つひとつがまったく違った歴史を持ち、未来を描きつづけています。 生命の源である星の誕生。その瞬間のエネルギーは人知をはるかに超えるものです。 静から動への瞬間。 無限の成長を内に秘め、今まさに誕生しようとするその瞬間。 永遠の時の流れの中で、無限の可能性を秘め、やがて世界の人々の頭上に燦然と輝く 夢と希望の星へと成長していくその誕生の瞬間。C&Rグループのロゴマークは、終わり無き無限大の前進をめざし、その瞬間の莫大なエネルギーの象徴を表現したものなのです。</p>
+        </section>
+      </div> 
+      <ul class="ankerLinks ankerFixed">
+        <li><a href="#management">経営理念</a></li>
+        <li><a href="#mission">ミッション</a></li>
+        <li><a href="#logo">ロゴの意味</a></li>
+      </ul>
+    </main>
+    <%- include('../../include/_footer.ejs'); %>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script>
+     $('.ankerLinks').hide();
+          var startPos = 0,winScrollTop = 0;
+          $(window).on('scroll',function(){
+            winScrollTop = $(this).scrollTop();
+            if (winScrollTop >= startPos) {
+                $('.ankerLinks').fadeOut();
+            } else {
+                $('.ankerLinks').fadeIn();
+            }
+            startPos = winScrollTop;
+          });
+  </script>
+</html>

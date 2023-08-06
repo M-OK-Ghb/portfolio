@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <title>404 | エラーページ</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <!--DIN Condensed-->
+  <link rel="stylesheet" href="https://use.typekit.net/plm5wws.css">
+  <!--Barlow-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/commonparts.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/subpage.css">
+</head>
+
+
+<body>
+  <div class="container" id="js-container">
+    <%- include('include/_header.ejs'); %>
+    <main id="js-main" class="main errorPage">
+      <div class="errorPage__heading">
+        <h1 class="common-heading--h1">お探しのページが見つかりません<br><span></span></h1>
+      </div>
+      <div class="errorPage__text">
+        <div class="errorPage__textInner">
+          <p>
+            申し訳ございません。<br>
+            お客様がアクセスしようとしたページが見つかりませんでした。<br>
+            ページが移動または削除されたか、URLの入力間違いの可能性があります。<br>
+            トップページまたはページ上部のメニューから、ご覧になりたい情報をお探しください。
+          </p>
+          <div class="errorPage__btnWrap">
+            <div class="grayArrowBtn">
+              <a href="#">トップページ<div class="arrow--grayBtn"><span class="arrow"></span></div></a>
+            </div>
+            <!-- <div class="grayArrowBtn">
+              <a href="#">サイトマップ<div class="arrow--grayBtn"><span class="arrow"></span></div></a>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </main>
+    <%- include('include/_footer.ejs'); %>
+  </div>
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
+</body>
+
+</html>

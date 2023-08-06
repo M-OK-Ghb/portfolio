@@ -1,0 +1,157 @@
+@use "../helpers/mediaquery" as med;
+
+.toProfessional {
+  padding:80px 5.3% 0;
+  @include med.media(pc) {
+    padding: 40px 10px 0;
+    max-width:2000px;
+    margin:auto;
+  }
+
+  &__topImg {
+    position: relative;
+    width:100%;
+    margin: 0 auto;
+    @include med.media(pc) {
+      max-width: 1346px;
+    }
+    > a {
+      color: #222427;
+      text-decoration: none;
+      display: block;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    img {
+      width:100%;
+      @include med.media(pc) {
+        height: 340px;
+        object-fit: cover;
+      }
+    }
+
+    p {
+      position: absolute;
+      bottom: 11.3%;
+      width: 100%;
+      text-align: center;
+      font-size: 5.33vw;
+      font-weight: bold;
+      background: rgba(255,255,255,0.7);
+
+      @include med.media(pc) {
+        font-size: 24px;
+        height: 50px;
+        line-height: 50px;
+      }
+    }
+  }
+
+  &__contents {
+    margin-top: 80px;
+    @include med.media(pc) {
+      padding:0 15.5%;
+    }
+  }
+
+  &__headWrap {
+    @include med.media(pc) {
+      display: flex;
+      align-items: flex-end;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+  }
+
+  &__heading {
+    font-size: 48px;
+    line-height: 1;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  &__genre {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 20px;
+    @include med.media(pc) {
+      margin-left: 20px;
+    }
+  }
+
+  &__category {
+    margin-top:40px;
+    &.bottom {
+      margin-top: 60px;
+    }
+    @include med.media(pc) {
+      max-width: 980px;
+      margin: 40px auto 0;
+      &.bottom {
+        margin: 60px auto 0;
+      }
+    }
+  }
+
+  &__categoryHeading {
+    font-size: 26px;
+    font-weight: bold;
+    line-height: 1;
+    font-family: 'Barlow', sans-serif;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    > li {
+      width:47.5%;
+      margin-right: 5%;
+      margin-bottom: 30px;
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+
+      @include med.media(pc) {
+        width: 23.4%;
+        margin-right: 2.13333%;
+        &:nth-child(2n) {
+          margin-right: 2.13333%;
+        }
+        &:nth-child(4n) {
+          margin-right: 0;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 40px;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 6px;
+        box-shadow: 2px 2px 6px #E8E9EA;
+      }
+      > p {
+        line-height: 1;
+        margin-top: 10px;
+        color: #707070;
+      }
+    }
+  }
+  &__tumb {
+    width: 100%;
+    border-radius: 6px;
+    aspect-ratio: 3/2;
+    position: relative;
+    overflow: hidden;
+    > img {
+      object-fit: contain;
+      height: 100%;
+    }
+  }
+}

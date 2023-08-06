@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('./include/subpages/_subpageHead.ejs', {path: "../../",title: "仮タイトル", description: "仮ディスクリップション"}); %>
+  <body>
+    <%- include('./include/_header.ejs'); %>
+    <main id="library" class="subpage">
+      <div class="breadcrumb">
+        <ol class="breadcrumb__list">
+          <li>
+            <a href="/">TOP</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a href="../">IR情報</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a>IRニュース</a>
+          </li>
+        </ol>
+        <!-- /.breadcrumb -->
+      </div>
+      <div class="kv">
+        <h1 class="kv__ttl">IRライブラリ</h1>
+        <span class="kv__line"></span>
+      </div><!-- /.kv -->
+      <div class="contentWrap">
+        <section>
+          
+        </section>
+        <%- include('./include/subpages/_irDlBlk.ejs',); %>
+        <!-- /.dlBlk -->
+        <%- include('./include/subpages/_irLinkBlk.ejs',); %>
+        <!-- /.linkBlk -->
+      </div>
+      <%- include('./include/subpages/_irBnrBlk.ejs',); %>
+      <!-- /.bnrBlk -->
+    </main>
+    <%- include('./include/_footer.ejs'); %>
+  </body>
+</html>

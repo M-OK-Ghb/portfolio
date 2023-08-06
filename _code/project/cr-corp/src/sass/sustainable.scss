@@ -1,0 +1,211 @@
+@use "helpers/mediaquery"as med;
+
+.sustain {
+  &__president {
+    margin-top: 12px;
+    line-height: 2;
+  }
+
+  &__mainImg {
+    > img {
+      width: 100%;
+    }
+
+    &.graphWrap {
+      margin-top: 28px;
+    }
+  }
+
+  &__message {
+    > p:nth-of-type(1) {
+      font-weight: normal;
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    margin-top: 20px;
+
+    > h4 {
+      font-size:16px;
+    }
+
+    > p {
+      margin-top: 8px;
+      line-height:1.8;
+
+      a {
+        color:inherit;
+        &:visited {
+          color:inherit;
+        }
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__example {
+    margin-bottom: 20px;
+
+    > h4 {
+      font-size: 16px;
+    }
+  }
+
+  &__exampleLink {
+    > p {
+      margin-top: 20px;
+      line-height: 1.8;
+
+      a {
+        word-wrap: break-word;
+        color:inherit;
+        &:visited {
+          color:inherit;
+        }
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+
+  &__genreWrap {
+    margin-top: 40px;
+  }
+
+  &__linkWrap {
+    margin-top: 20px;
+
+    > a {
+      color:inherit;
+      &:visited {
+        color:inherit;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    &.contentBottom {
+      margin-top:60px;
+      padding-bottom:100px;
+    }
+  }
+
+  &__icon-pdf {
+    width:20px;
+    display: inline-block;
+    margin-right: 12px;
+    > img {
+      width:100%;
+    }
+  }
+
+  &-table {
+    margin-top: 20px;
+  }
+
+  &-table__list {
+    display: table;
+    width: 100%;
+    border-bottom:1px solid #aaa;
+    border-left:1px solid #aaa;
+
+    > dt {
+      display: table-cell;
+      border-right:1px solid #aaa;
+      font-size:15px;
+      padding:17.5px 0 17.5px 8px;
+      line-height: 1;
+      @include med.media(sp) {
+        padding:8px 4px;
+        font-size:13px;
+        vertical-align: middle;
+      }
+      width:25%;
+    }
+    > dd {
+      display: table-cell;
+      border-right:1px solid #aaa;
+      text-align: center;
+      font-size:15px;
+      padding:17.5px 0;
+      line-height: 1;
+      vertical-align: middle;
+      @include med.media(sp) {
+        padding:8px 4px;
+        font-size:13px;
+      }
+      width:25%;
+    }
+
+    &.itemHead {
+      background-color: #eee;
+      border-top:1px solid #aaa;
+    }
+  }
+
+  &-table__cap {
+    text-align: right;
+    margin-top: 10px;
+    @include med.media(sp) {
+      font-size:13px;
+      margin-top: 4px;
+    }
+  }
+
+  &__pdfLinkWrap {
+    background-color: #1F2224;
+    display: inline-block;
+    margin-top: 20px;
+    @include med.media(sp) {
+      width: 100%;
+    }
+    > a {
+      display: flex;
+      align-items: center;
+      color:#FFFFFF;
+      text-decoration: none;
+      padding: 20px;
+      &:visited {
+        color:#FFFFFF;
+      }
+
+      span {
+        line-height: 1;
+      }
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      @include med.media(sp) {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  &__pdfText {
+    font-size: 16px;
+    margin-right: 20px;
+
+    @include med.media(sp) {
+      font-size: 14px;
+      margin-right: 0;
+    }
+  }
+
+  &__pdfIcon {
+    width:16px;
+    display: inline-block;
+    > img {
+      width: 100%;
+      vertical-align: middle;
+    }
+  }
+}

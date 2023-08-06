@@ -1,0 +1,68 @@
+@use "../../helpers/mediaquery" as med;
+
+.common-secondVisual {
+  @include med.media(pc) {
+    width:980px;
+    margin:auto;
+  }
+
+  .common-secondHeading {
+    padding: 0 20px;
+    @include med.media(pc) {
+      padding: 0;
+    }
+  }
+
+  .common-heading--h3 {
+    @include med.media(pc) {
+      br {
+        &.pc-none {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__list {
+    margin-top: 20px;
+    padding:0 20px;
+
+    @include med.media(pc) {
+      padding: 0;
+    }
+
+    > li {
+      font-size: 18px;
+      @include med.media(pc) {
+        font-size:20px;
+      }
+
+      > span {
+        margin-right: 10px;
+        @include med.media(pc) {
+          margin-right: 15px;
+          margin-left: 5px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    margin-top: 20px;
+    > img {
+      width: 100%;
+      object-fit: cover;
+      @include med.media(pc) {
+        max-height: 400px;
+      }
+    }
+  }
+}
+
+body.is-landscape {
+  .common-secondVisual__img {
+    > img {
+      max-height: 400px;
+    }
+  }
+}

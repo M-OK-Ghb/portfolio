@@ -1,0 +1,268 @@
+@use "../../helpers/mediaquery"as med;
+
+.common-tableWrap {
+  margin-top: 40px;
+  @include med.media(sp) {
+    overflow-x: hidden;
+    margin-top: 10px;
+    padding: 20px;
+  }
+
+  @include med.media(tb) {
+    margin-top: 10px;
+    padding-left: 20px;
+  }
+}
+
+.common-tableArea {
+  margin-top: 100px;
+
+  &__text {
+    padding: 0 20px;
+
+    @include med.media(pc) {
+      padding: 0;
+    }
+
+    >p {
+      font-size: 16px;
+      padding-bottom: 10px;
+    }
+  }
+
+  &__rank {
+    margin-top: 40px;
+    @include med.media(pc) {
+      display: flex;
+    }
+
+    >p {
+      padding-bottom: 10px;
+      @include med.media(pc) {
+        padding-bottom: 0;
+        margin-right: 30px;
+      }
+    }
+  }
+
+  @include med.media(pc) {
+    width: 980px;
+    margin: 100px auto 0;
+  }
+}
+
+.common-table {
+  margin-top: 10px;
+
+  @include med.media(tb) {
+    width: 576px;
+    margin: 10px auto 0;
+  }
+  @include med.media(sp) {
+    position: relative;
+    overflow-x: auto;
+  }
+
+  &__heading {
+    font-size: 16px;
+    background-color: #222427;
+    color: #FFFFFF;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    @include med.media(sp) {
+      text-align: left;
+      padding-left: 20px;
+      position: sticky;
+      margin: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
+
+    @include med.media(tb) {
+      text-align: left;
+      padding-left: 20px;
+      width: 576px;
+    }
+  }
+
+  &__list {
+    width: 980px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 4px;
+    > dt {
+      flex-basis: 303px;
+      background: #D5D5D5;
+      font-size: 15px;
+      line-height: 1;
+      padding:17.5px 10px;
+      position: relative;
+      z-index:2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include med.media(sp) {
+        flex-basis: 140px;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        left: 0;
+      }
+
+      @include med.media(tb) {
+        flex-basis: 140px;
+      }
+
+      &.newLine {
+        @include med.media(sp) {
+          padding: 10px 5px;
+        }
+
+        @include med.media(tb) {
+          padding: 10px 5px;
+        }
+      }
+
+      br {
+        display: none;
+        @include med.media(sp) {
+          display: block;
+        }
+
+        @include med.media(tb) {
+          display: block;
+        }
+      }
+    }
+
+    > dd {
+      flex-basis: 672px;
+      height: 50px;
+      line-height: 50px;
+      position: relative;
+      z-index:1;
+      @include med.media(sp) {
+        flex-basis: 432px;
+      }
+
+      @include med.media(tb) {
+        flex-basis: 432px;
+      }
+    }
+
+    @include med.media(sp) {
+      width: 576px;
+    }
+
+    @include med.media(tb) {
+      width: 576px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    > div {
+      &:nth-of-type(even) {
+        background:#D5D5D5;
+      }
+    }
+  }
+
+  &__item {
+    font-size: 13px;
+    line-height: 50px;
+    text-align: center;
+    flex-basis: 165px;
+    background-color: #eee;
+    &.doubleLine {
+      line-height: 1.25;
+      padding: 8px;
+    }
+
+    &.multiItem {
+      background-color: #fff;
+      flex-basis: 334px;
+      @include med.media(sp) {
+        flex-basis: 214px;
+      }
+
+      @include med.media(tb) {
+        flex-basis: 214px;
+      }
+    }
+    &.threeItem {
+      flex-basis: 221px;
+      @include med.media(sp) {
+        flex-basis: 142px;
+      }
+    }
+
+    > a {
+      width: 100%;
+      display: block;
+      color:#007699;
+      font-size: 18px;
+      text-decoration: none;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:visited {
+        color: inherit;
+      }
+    }
+
+    > span {
+      font-size: 18px;
+      display: block;
+    }
+
+    @include med.media(sp) {
+      flex-basis: 105px;
+    }
+
+    @include med.media(tb) {
+      flex-basis: 105px;
+    }
+
+  }
+
+  &__headTop {
+    height: 24px;
+    line-height: 24px;
+    background: #eee;
+  }
+
+  &__headBottom {
+    height: 24px;
+    line-height: 24px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+      width: 165px;
+      display: inline-block;
+      @include med.media(sp) {
+        width: 105px;
+      }
+
+      @include med.media(tb) {
+        width: 105px;
+      }
+    }
+  }
+
+  &__bottomLeft {
+    background: #eee;
+  }
+
+  &__bottomRight {
+    background: #D5D5D5;
+  }
+}

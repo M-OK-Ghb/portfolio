@@ -1,0 +1,85 @@
+// -------------------------------------------------------------------
+//  error.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/extend";
+
+.errorPage {
+  margin-top: 90px;
+  @include med.media(sp) {
+    margin-top: 9.6vh;
+  }
+
+  @include med.media(tb) {
+    margin-top: 12vh;
+  }
+
+  &__heading {
+    padding: 90px 0 60px;
+    @include med.media(sp) {
+      padding: 6vh 0;
+    }
+  }
+
+  &__text {
+    margin-bottom: 120px;
+    padding:8%;
+    background-color: #ebebeb;
+    @include med.media(sp) {
+      padding: 5%;
+      margin-bottom: 80px;
+    }
+  }
+
+  &__textInner {
+    background-color: #fff;
+    padding: 9%;
+    border-radius: 10px;
+    max-width: 1020px;
+    margin: auto;
+
+    > p {
+      font-size:18px;
+      line-height: 2.5;
+      background-color: #fff;
+      @include med.media(sp) {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__btnWrap {
+    margin-top: 100px;
+    display: flex;
+    @include med.media(sp) {
+      margin-top: 80px;
+      display: block;
+    }
+  }
+
+  .common-heading--h1 {
+    @include med.media(sp) {
+      font-size: 20px;
+    }
+  }
+
+  .grayArrowBtn {
+    width: 335px;
+
+    @include med.media(tb) {
+      width: 250px;
+    }
+
+    @include med.media(sp) {
+      width: 90%;
+      > a {
+        line-height: 50px;
+        height: 50px;
+        font-size: 14px;
+      }
+    }
+  }
+}
+

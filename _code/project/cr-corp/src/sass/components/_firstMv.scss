@@ -1,0 +1,495 @@
+@use "../helpers/mediaquery" as med;
+@use "../helpers/variables" as v;
+
+/*下からの距離が変化して丸の全体が上から下に動く*/
+@keyframes circlemove{
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+
+/*上から下にかけて丸が透過→不透明→透過する*/
+@keyframes cirlemovehide{
+  0% {
+    opacity: 0
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.firstMv {
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  pointer-events: none;
+
+  &.is-cmModalOn {
+    pointer-events: auto;
+  }
+
+  /*=======================*/
+  /*Youtube差し込み箇所LPへの導線*/
+  &__cmModal {
+    display: none;
+    &.is-cmModalOn {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      width:100%;
+      height:100vh;
+      background: rgba(0,0,0,0.8);
+      z-index: 30;
+    }
+  }
+
+  &__cmModalInner {
+    position: relative;
+    width:100%;
+    height:100vh;
+    text-align: center;
+  }
+
+  &__cmMovie {
+    width:60%;
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    > iframe {
+      width: 100%;
+      height: 32vw;
+    }
+
+    @include med.media(tb) {
+      width:75%;
+    }
+
+    @include med.media(sp) {
+      top: 44.5%;
+      width:100%;
+
+      > iframe {
+        width:100%;
+        height: 62.5vw;
+      }
+    }
+  }
+
+  &__cmBanner {
+    margin:20px auto 0;
+
+    @include med.media(sp) {
+      margin-top:24px;
+      width: 70%;
+    }
+
+    > a {
+      width: 65%;
+      display: block;
+      margin:auto;
+      transition: opacity 0.3s;
+      &:hover {
+        opacity: 0.7;
+      }
+      img {
+        width:100%;
+        object-fit: cover;
+      }
+
+      @include med.media(tb) {
+        width: 80%;
+      }
+
+      @include med.media(sp) {
+        width: 80%;
+      }
+    }
+  }
+
+  &__cmCloseBtnWrap {
+    position: absolute;
+    top: -10px;
+    right: -40px;
+
+    > a {
+      color: #fff;
+      font-size: 36px;
+      font-weight: bold;
+      display: inline-block;
+      text-decoration: none;
+      transition: opacity 0.3s;
+      line-height: 1;
+      margin-right: -6px;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    @include med.media(sp) {
+      position: static; 
+      text-align: right;
+      padding-right: 10px;
+      padding-bottom: 4px;
+    }
+  }
+
+  /*Youtube差し込み箇所終了*/
+  /*=======================*/
+  &__inner {
+    position: relative;
+  }
+
+  &__img {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    &__item {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) translateY(0) scale(1.05);
+      transform-origin: top;
+      transition: transform 6s linear;
+      width: 100vw;
+      height: 100vh;
+      display: none;
+      > img {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+      }
+      &.is-slide {
+        transform: translateX(-50%) translateY(-5%) scale(1.05);
+      }
+      &.is-current {
+        display: block;
+      }
+    }
+  }
+
+  &__cover {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    transform: translateY(0);
+    transition: transform 0.8s v.$transition-easing;
+    z-index: 10;
+    &.is-slide {
+      transform: translateY(-100%);
+    }
+    &__item {
+      //flex: 1 1 50%;
+      width: 50%;
+      height: 25%;
+      position: relative;
+      overflow: hidden;
+      > div {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        transform: translateY(101%);
+        transition: transform 0.4s v.$transition-easing;
+      }
+      &.is-slide {
+        > div {
+          transform: translateY(0);
+        }
+      }
+      @include med.media(pc) {
+        //flex: 1 1 25%;
+        width: 25%;
+        height: 50%;
+      }
+    }
+  }
+
+  &__logo {
+    position: absolute;
+    width: 19.2vw;
+    top: 4.8vh;
+    left: 5.4vw;
+
+    > img {
+      width: 100%;
+    }
+
+    @include med.media(pc) {
+      width: 7vw;
+      top: 14vh;
+      left: 3.6vw;
+    }
+
+    @include med.media(tb) {
+      width: 16vw;
+    }
+  }
+
+  &__heading {
+    font-family: 'Barlow', sans-serif;
+    position: absolute;
+    top: 17.4vh;
+    left: 5.4vw;
+    font-size: 13.9vw;
+    line-height: 1;
+    color: #fff;
+    width: 90.2vw;
+    @include med.media(pc) {
+      font-size: 6.08vw;
+      top: 12vh;
+      left: 15vw;
+    }
+
+    @include med.media(tb) {
+      font-size: 11vw;
+    }
+  }
+
+  &__bottom {
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    background-color: rgba(31, 34, 36, 0.4);
+    color: #fff;
+    padding: 2.5vh 5.22vw;
+    transform: translateY(100%);
+
+    &.is-slideup {
+      transform: translateY(0);
+      transition: transform 0.5s;
+      transition-delay: 0ms;
+    }
+
+    p {
+      line-height: 1;
+    }
+
+    @include med.media(pc) {
+      display: grid;
+      justify-content: right;
+      padding-right: 13vw;
+    }
+  }
+
+  &__bottomInner {
+    @include med.media(pc) {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  &__genre {
+    font-family: 'Barlow', sans-serif;
+    font-size: 7.46vw;
+    line-height: 1;
+
+    @include med.media(pc) {
+      font-size: 2.65vw;
+      margin-right: 20px;
+      line-height: 1.5;
+    }
+
+    @include med.media(tb) {
+      font-size: 7vw;
+    }
+  }
+
+  &__total {
+    font-family: "din-condensed", sans-serif;
+    font-size: 18.5vw;
+    margin-right: 2.67vw;
+
+    @include med.media(pc) {
+      font-size: 5.9vw;
+      margin-right: 15px;
+    }
+
+    @include med.media(tb) {
+      font-size: 16vw;
+    }
+  }
+
+  &__text {
+    font-family: 'Barlow', sans-serif;
+    font-size: 5.86vw;
+
+    @include med.media(pc) {
+      font-size: 1.78vw; 
+    }
+  }
+
+  &__addText {
+    font-size: 3.46vw;
+    line-height: 1.1;
+
+    @include med.media(pc) {
+      font-size: 14px;
+    }
+
+    @include med.media(tb) {
+      font-size: 3vw;
+    }
+  }
+  &__scrolldown {
+    position: absolute;
+    bottom: 20vh;
+    right: 5vw;
+    @include med.media(sp) {
+      bottom: 25vh;
+      right: 11vw;
+    }
+    @include med.media(tb) {
+      bottom: 24vh;
+      right: 6vw;
+    }
+    > span {
+      /*描画位置*/
+      position: absolute;
+      left:10px;
+      bottom:10px;
+      /*テキストの形状*/
+      color: #fff;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      /*縦書き設定*/
+      writing-mode: vertical-rl;
+    }
+    &::before {
+      content: "";
+      /*描画位置*/
+      position: absolute;
+      bottom:0;
+      left:-3px;
+      /*丸の形状*/
+      width:7px;
+      height:7px;
+      border-radius: 50%;
+      background:#fff;
+      /*丸の動き1.6秒かけて透過し、永遠にループ*/
+      animation:
+        circlemove 1.6s ease-in-out infinite,
+        cirlemovehide 1.6s ease-out infinite;
+    }
+    &::after {
+      content:"";
+      /*描画位置*/
+      position: absolute;
+      bottom:0;
+      left:0;
+      /*線の形状*/
+      width:1px;
+      height: 50px;
+      background:#fff;
+    }
+  }
+}
+
+
+/*TopページのLPへのバナー画像 PCとSPで別素材を利用*/
+.pc--banner {
+  @include med.media(sp) {
+    display: none;
+  }
+}
+
+.sp--banner {
+  @include med.media(pc) {
+    display: none;
+  }
+
+  @include med.media(tb) {
+    display: none;
+  }
+}
+
+/*iframe の再生時間制御のためPCとSPで出し分け*/
+.pc--iframe {
+  @include med.media(sp) {
+    display: none;
+  }
+}
+
+.sp--iframe {
+  @include med.media(pc) {
+    display: none;
+  }
+
+  @include med.media(tb) {
+    display: none;
+  }
+}
+
+body {
+  &.is-cmModalOn {
+    overflow: hidden;
+  }
+}
+
+body.is-landscape {
+  .firstMv {
+    &__logo {
+      width: 7vw;
+      top: 17vh;
+      left: 3.6vw;
+    }
+
+    &__heading {
+      width: 36vw;
+      font-size: 6.08vw;
+      top: 15vh;
+      left: 15vw;
+    }
+
+    &__bottom {
+      display: grid;
+      justify-content: right;
+      padding-right: 13vw;
+    }
+    
+
+    &__bottomInner {
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &__genre {
+      font-size: 2.65vw;
+      margin-right: 20px;
+      line-height: 1.5;
+    }
+
+    &__total {
+      font-size: 5.9vw;
+      margin-right: 15px;
+    }
+
+    &__text {
+      font-size: 1.8vw;
+    }
+
+    &__addText {
+      font-size: 14px;
+    }
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/subpages/_subpageHead.ejs', {path: "../../",title: "お問い合わせ | クリーク･アンド･リバー社｜C&Rグループ", description: "お問い合わせ。クリーク･アンド･リバー社とC&Rグループは、映像、ゲーム、Web、広告・出版、医療、会計、法曹、建築、コンピュータサイエンスなどのプロフェショナル･エージェンシーのパイオニア。プロフェショナルの叡智を掛け合わせ、革新的な事業を創造しています。"}); %>
+  <body>
+    <%- include('../include/_header.ejs'); %>
+    <main id="contact" class="subpage">
+      <div class="breadcrumb">
+        <ol class="breadcrumb__list">
+          <li>
+            <a href="/">TOP</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a>お問い合わせ</a>
+          </li>
+        </ol>
+        <!-- /.breadcrumb -->
+      </div>
+      <section class="imgKv">
+        <h1 class="imgKv__ttl">お問い合わせ</h1>
+        <span class="imgKv__line"></span>
+      </section>
+      <div class="contentWrap"> 
+        <section class="contact phaseSelect">
+          <h3 class="contact__lead -uLine">
+            お問い合わせしたいテーマを<br class="pc">選択してください。
+          </h3>
+          <a class="form__btn mt arrow__iconHover" target="_blank" href="/faq/">
+            よくあるご質問もご参照ください。
+            <div class="arrow-glay">
+              <span class="arrow"></span>
+            </div>
+          </a>
+          <form class="form" action="" method="post" name="form"  onsubmit="return validate()">
+            <h4 class="-lLine">クリーク･アンド･リバー社について</h4>
+            <div class="checkboxWrap">
+              <label class="checkbox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span>
+                <span class="checkbox__labelText">お仕事のご依頼・ご相談について</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span>
+                <span class="checkbox__labelText">IR情報について</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span>
+                <span class="checkbox__labelText">採用について</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span>
+                <span class="checkbox__labelText">取材のご依頼</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span>
+                <span class="checkbox__labelText">講演のご依頼</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span>
+                <span class="checkbox__labelText">当社Webサイトについて</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span>
+                <span class="checkbox__labelText">当社へのご意見</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span>
+                <span class="checkbox__labelText">その他</span>
+              </label>
+            </div>
+            <h4 class="-lLine">グループ会社の事業について</h4> 
+            <div class="linkbox">
+              <a class="linkbox__txt -outboundLinkFlex" target="_blank" href="">医療分野へのお問い合わせ</a>
+              <a class="linkbox__txt -outboundLinkFlex" target="_blank" href="">ファッション分野へのお問い合わせ</a>
+              <a class="linkbox__txt -outboundLinkFlex" target="_blank" href="">会計分野へのお問い合わせ</a>
+              <a class="linkbox__txt -outboundLinkFlex" target="_blank" href="">法曹分野へのお問い合わせ</a>
+            </div>
+            <h4 class="-lLine">プロフェッショナルの皆さまのお問い合わせ</h4>
+            <div class="checkboxWrap">
+              <label class="checkbox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span>
+                <span class="checkbox__labelText">C&Rグループへの登録について</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span> 
+                <span class="checkbox__labelText">ビジネスパートナー登録について（フリーランス・事業主の方）</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span>
+                <span class="checkbox__labelText">セミナーについて</span>
+              </label>
+              <label class="checkbox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span>
+                <span class="checkbox__labelText">その他</span>
+              </label>
+            </div>
+            <label class="stickyBtn form__submitBtn form__btn -right arrow__iconHover">
+              <input class="" type="submit" value="お問い合わせする">
+              <div class="arrow-glay">
+                <span class="arrow"></span>
+              </div>
+            </label>
+          </form>
+        </section>
+      </div>
+    </main>
+    <%- include('../include/_footer.ejs'); %>
+  </body>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>
+    window.onscroll = function () {
+      if (window.matchMedia( "(max-width: 767px)" ).matches) {
+        var check = window.pageYOffset ;
+        var docHeight = $(document).height();
+        var dispHeight = $(window).height();
+        if(check > docHeight-dispHeight-60){  
+            $('.stickyBtn').fadeOut();
+        }else{
+            $('.stickyBtn').fadeIn();	
+        }
+      }
+    };
+</script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/subpages/_subpageHead.ejs', {path: "../../", title: "ESG活動 | サステナビリティ | クリーク･アンド･リバー社｜C&Rグループ", description: "サステナビリティ基本方針。サステナビリティ。 クリーク･アンド･リバー社とC&Rグループは、映像、ゲーム、Web、広告・出版、医療、会計、法曹、建築、コンピュータサイエンスなどのプロフェショナル･エージェンシーのパイオニア。プロフェショナルの叡智を掛け合わせ、革新的な事業を創造しています。"}); %>
+  <body>
+    <%- include('../../include/_header.ejs'); %>
+    <main id="sustainability" class="subpage esg">
+      <div class="breadcrumb">
+        <ol class="breadcrumb__list">
+          <li>
+            <a href="">TOP</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a href="">サステナビリティ</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a>ESG活動</a>
+          </li>
+        </ol>
+        <!-- /.breadcrumb -->
+      </div>
+      <div class="common-mainVisual">
+        <img src="../../images/sustainability_main.jpg" alt="ダミー">
+        <h1 class="common-heading--h1">ESG活動<br><span></span></h1>
+      </div>
+
+      <div class="contentWrap commonSustainability esg">
+        <h2 class="common-textBlock__textTop commonSustainability__ttl">
+          ESG活動
+        </h2>
+        <ul class="ankerLinks__blk-glay">
+          <li>
+            <a href="./environment/">環境
+              <div class="arrow--grayBtn"><span class="arrow"></span></div>
+            </a>
+          </li>
+          <li>
+            <a href="./social/">
+              社会
+              <div class="arrow--grayBtn"><span class="arrow"></span></div>
+            </a>
+          </li>
+          <li>
+            <a href="./governance/">
+              ガバナンス
+              <div class="arrow--grayBtn"><span class="arrow"></span></div>
+            </a>
+          </li>
+          <li>
+            <a href="./data/">
+              ESG活動
+              <div class="arrow--grayBtn"><span class="arrow"></span></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <%- include('../../include/subpages/_sustainabilityLink.ejs',); %>
+
+    </main>
+    <%- include('../../include/_footer.ejs'); %>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      $('body').on('click', '.anchor-link', function(){
+    		let link_id = $(this).attr('href');
+            $('html,body').animate({scrollTop: $(link_id).offset().top - 100 },'slow');
+    	
+    })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,90 @@
+@use "../helpers/mediaquery" as med;
+
+.categoryMenu {
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  @include med.media(sp) {
+    margin: 20px 0;
+    width: 100vw;
+    overflow-y: auto;
+  }
+  &__button {
+    font-size: 16px;
+    height: 40px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #F5F6F7;
+    white-space: nowrap;
+    border: none;
+    position: relative;
+    a {
+      text-decoration: underline;
+    }
+    &--01 {
+      a {
+        color: #299900;
+      }
+      &.categoryMenu__button--active {
+        background: #299900;
+        color: #fff;
+      }
+    }
+    &--02 {
+      a{
+        color: #83807A;
+      }
+      &.categoryMenu__button--active {
+        background: #83807A;
+        color: #fff;
+      }
+    }
+    &--03 {
+      a {
+        color: #007699;
+      }
+      &.categoryMenu__button--active {
+        background: #007699;
+        color: #fff;
+      }
+    }
+    &--04 {
+      a {
+        color: #990070;
+      }
+      &.categoryMenu__button--active {
+        background: #990070;
+        color: #fff;
+      }
+    }
+    &--05 {
+      a {
+        color: #991C00;
+      }
+      &.categoryMenu__button--active {
+        background: #991C00;
+        color: #fff;
+      }
+    }
+    &--06 {
+      a {
+        color: #996600;
+      }
+      &.categoryMenu__button--active {
+        background: #996600;
+        color: #fff;
+      }
+    }
+    &--07 {
+      a {
+        color: #000;
+      }
+      &.categoryMenu__button--active {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+}

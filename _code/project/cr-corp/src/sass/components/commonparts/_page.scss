@@ -1,0 +1,28 @@
+@use "../../helpers/mediaquery" as med;
+
+.page {
+  &__container {
+    display: flex;
+    align-items: flex-start;
+    max-width: 980px;
+    padding-top: 80px;
+    margin: auto;
+    @include med.media(tb) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include med.media(sp) {
+      flex-direction: column;
+    }
+    &--mtThin {
+      padding-top: 40px;
+    }
+  }
+  &__inner {
+    flex: 1;
+    padding-right: 20px;
+    @include med.media(sp) {
+      padding-right: 0;
+    }
+  }
+}

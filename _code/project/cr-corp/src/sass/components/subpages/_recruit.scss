@@ -1,0 +1,208 @@
+
+
+@use "../subpages/common" as com;
+#recruit{
+  h2{
+    line-height: 1.4;
+  }
+  .imgKv{
+    background-image: url(../../../images/recruit/kv_img.jpg);
+    @include com.mq(min, md) {
+      background-image: url(../../../images/recruit/kv_img_pc.jpg);
+    }
+  }
+  .recruit{
+    margin-top: 80px;
+    padding-bottom: 100px;
+    &__mainLogo{
+      margin-top: 34px;
+      @include com.mq(min, xl) {
+        max-width: 540px;
+      }
+    }
+    &__linkWrap{
+      margin-top: 40px;
+      ul{
+        margin-top: 10px;
+      }
+      @include com.mq(min, xl) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__linkWrap > li{
+      &:not(:first-of-type){
+        margin-top: 40px;
+        @include com.mq(min, xl) {
+          margin-top: 0;
+        }
+      }
+      @include com.mq(min, xl) {
+        max-width: 450px;
+        width: 45%;
+      }
+    }
+    &__section{
+      padding-top: 90px;
+    }
+    &__group{
+      ul{
+        margin-top: 6px;
+        @include com.mq(min, xl) {
+          margin-top: 0;
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+        li{
+          margin-top: 40px;
+          &:not(:first-of-type){
+            margin-top: 60px;
+          }
+          @include com.mq(min, xl) {
+            margin-top: 60px;
+            max-width: 430px;
+            width: 45.74%;
+          }
+          a{
+            display: block;
+            width: 100%;
+            position: relative;
+            &::after{
+              content: "";
+              width: 14px;
+              height: 12px;
+              position: absolute;
+              top: 20px;
+              right: 15px;
+              background: url(../images/common/outbound_link_icon.svg) center center / contain no-repeat;
+            }
+            img {
+              -webkit-box-shadow: 0 0 0 1.5px #ddd;
+              box-shadow: 0 0 0 1.5px #ddd;
+            }
+          }
+          p{ 
+            font-size: 12px;
+            font-weight: bold;
+            margin-top: 2px;
+            span{
+              padding: 2px 0;
+              display: block;
+              &:first-of-type {
+                font-size: 16px;
+              }
+            }
+            .-cate{
+              background: #E0E0E0;
+              padding: 0 3px;
+              border-radius: 2px;
+              display: inline-block;
+              font-weight: 500;
+            }
+          }
+          p.pcCol{
+            @include com.mq(min, xl) {
+              width: 100%;
+              flex-wrap: wrap;
+            }
+          }
+        }
+      }
+    }
+  }
+  .recruitLinkBlk{
+    margin: 40px 0 0 0;
+    @include com.mq(min, xl) {
+      margin: 40px 0 0 0;
+    }
+    &__list{
+      width: 100%;
+      @include com.mq(min, xl) {
+        margin-top: 18px;
+      }
+      li{
+        width: 100%;
+        border-bottom: unset;
+        padding: 0;
+        // &:nth-child(2n-1){
+        //   @include com.mq(min, xl) {
+        //     margin-right: 40px;
+        //   }
+        // }
+        @include com.mq(min, xl) {
+          width: 100%;
+        }
+        a{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          padding: 24px 15px 24px 0;
+          font-size: 16px;
+          font-weight: normal;
+          border-bottom: 1px solid #DDDDDD;
+        }
+        .arrow__icon{
+          &::after{
+            content: '';
+            display: inline-block;
+            width: 11px;
+            height: 10px;
+            flex: 0 0 11px;
+            background: url(../../images/common/icon_arrow.svg);
+          }
+        }
+      }
+      
+    }
+  }
+  .know{
+    margin-top: 90px;
+    section{
+      &:not(:first-of-type){
+        margin-top: 60px;
+      }
+      figure{
+        margin-top: 20px;
+        @include com.mq(min, xl) {
+          max-width: 566px;
+          width: 57%;
+        }
+      }
+      .sectionWrap{
+        @include com.mq(min, xl) {
+          max-width: 354px;
+          width: 100%;
+          margin-top: 37px;
+        }
+      }
+    }
+    section.flex{
+      @include com.mq(min, xl) {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    section.fdrr{
+      @include com.mq(min, xl) {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    }
+    section.movieLink{
+      margin-top: 100px;
+      text-align: center;
+      figure{
+        max-width:  520px;
+        margin: 40px auto 0;
+      }
+      .global__btn,.global__btn--gray{
+        margin-top: 32px;
+      }
+    }
+
+  }
+
+}

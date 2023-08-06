@@ -1,0 +1,21 @@
+@use "../../helpers/mediaquery" as med;
+
+.common-arrow {
+  &__backBtn {
+    cursor: pointer;
+    border-bottom: solid 2px #222427;
+    border-left: solid 2px #222427;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+  }
+
+  &__nextBtn {
+    cursor: pointer;
+    border-top: solid 2px #222427;
+    border-right: solid 2px #222427;
+    width: 8px;
+    height: 8px;
+    transform: rotate(45deg);
+  }
+}

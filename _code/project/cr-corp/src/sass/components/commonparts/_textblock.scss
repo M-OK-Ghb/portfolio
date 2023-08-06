@@ -1,0 +1,94 @@
+@use "../../helpers/mediaquery" as med;
+
+.common-textBlock {
+  padding:0 20px;
+  margin-top: 100px;
+  @include med.media(pc) {
+    width: 980px;
+    margin: 100px auto 0;
+    padding:0;
+  }
+
+  &__textTop {
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+  }
+
+  &__textDetail {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 20px;
+    @include med.media(pc) {
+      font-size: 16px;
+    }
+  }
+
+  &__imgWrap {
+    margin-top: 40px;
+    > img {
+      width: 100%;
+      object-fit: cover;
+      @include med.media(pc) {
+        max-height: 400px;
+      }
+    }
+    @include med.media(pc) {
+      width: 335px;
+    }
+  }
+
+  &__textWrap {
+    margin-top: 40px;
+    > p {
+      font-size: 16px;
+      &:nth-of-type(1) {
+        font-weight: bold;
+        font-size: 18px;
+      }
+
+      &:nth-of-type(2) {
+        margin-top: 20px;
+        line-height: 1.8;
+      }
+
+    }
+    @include med.media(pc) {
+      width: 605px;
+    }
+  }
+
+  &__contentWrap {
+    @include med.media(pc) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+body.is-landscape {
+  .common-textBlock__textDetail {
+    font-size: 18px;
+  }
+
+  .common-textBlock__imgWrap {
+    width: 335px;
+    > img {
+      max-height: 400px;
+    }
+  }
+
+  .common-textBlock__textWrap {
+    > p {
+      font-size: 16px;
+    }
+    width: 605px;
+  }
+
+  .common-textBlock__contentWrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+}

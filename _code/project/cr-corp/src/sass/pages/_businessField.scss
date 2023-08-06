@@ -1,0 +1,359 @@
+// -------------------------------------------------------------------
+//  pages.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/extend";
+
+.businessField {
+  &__image {
+    text-align: center;
+    img {
+      max-width: 430px;
+    }
+  }
+  &__num {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 90px;
+    @include med.media(sp) {
+      flex-direction: column;
+    }
+    &__item {
+      &:not(:last-child) {
+        margin-right: 100px;
+        @include med.media(sp) {
+          margin-right: 0;
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &__heading {
+      font-size: 26px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    &__text {
+      font-size: 100px;
+      font-weight: bold;
+      line-height: 1;
+      font-family: din-condensed, sans-serif;
+      @include med.media(sp) {
+        font-size: 80px;
+      }
+    }
+    &__unit {
+      font-size: 32px;
+    }
+
+  }
+  &__block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 90px;
+    @include med.media(sp) {
+      grid-template-columns: 1fr;
+    }
+    &__col {}
+    &__title {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #aaa;
+      width: 100%;
+      display: inline-block;
+      &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+      &__text {
+        display: flex;
+        align-items: center;
+        img {
+          width: 25px;
+          height: 33px;
+          width: auto !important;
+          margin-right: 5px;
+          padding-bottom: 3px;
+        }
+        p {
+          font-size: 24px;
+          font-weight: bold;
+        }
+      }
+      &__arrow {
+        position: absolute;
+        top: 50%;
+        right: 15px;
+        &::before {
+          content: '';
+          width: 12px;
+          height: 2px;
+          background: #1F2224;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        &::after {
+          content: '';
+          width: 8px;
+          height: 8px;
+          border-right: 2px solid #1F2224;
+          border-bottom: 2px solid #1F2224;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: rotate(315deg) translate(2px,-2px);
+        }
+      }
+      &:hover {
+        // .businessField__block__title__text p {
+        //   color: #d28903;
+        // }
+        // .businessField__block__title__arrow::before {
+        //   background: #d28903;
+        // }
+        // .businessField__block__title__arrow::after {
+        //   border-color: #d28903;
+        // }
+        .businessField__block__title__text img {
+          // filter: invert(67%) sepia(21%) saturate(5036%) hue-rotate(339deg) brightness(94%) contrast(75%);
+
+        }
+        // .businessField__block__title {
+        //   border-bottom: 1.5px solid #d28903 !important;
+        // }
+      }
+    }
+    &__item {
+      padding-top: 50px;
+    }
+    &__list {
+      padding: 0;
+      margin: 0;
+      li {
+        margin-bottom: 25px;
+        font-size: 14px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+      a {
+        font-size: 14px !important;
+        color: #1F2224 !important;
+        text-decoration: none !important;
+        line-height: 1;
+        padding-left: 11px;
+        position: relative;
+        border-bottom: 1px solid #1F2224;
+        &::before {
+          content: "";
+          width: 7px;
+          height: 7px;
+          border-right: 1px solid #1F2224;
+          border-top: 1px solid #1F2224;
+          position: absolute;
+          top: 6px;
+          left: 0;
+          transform: rotate(45deg);
+        }
+        &:hover {
+          color: #d28903 !important;
+          border-color: #d28903 !important;
+          &::before {
+            border-color: #d28903;
+          }
+        }
+      }
+    }
+    &--creative {
+      .businessField__block__title {
+        border-bottom: 1.5px solid #8B6678;
+        // &:hover {
+        //   border-bottom: 1.5px solid #d28903 !important;
+        // }
+      }
+    }
+    &--medical {
+      .businessField__block__title {
+        border-bottom: 1.5px solid #5E753D;
+        // &:hover {
+        //   border-bottom: 1.5px solid #d28903 !important;
+        // }
+      }
+    }
+    &--construction {
+      .businessField__block__title {
+        border-bottom: 1.5px solid #6A6A80;
+        // &:hover {
+        //   border-bottom: 1.5px solid #d28903 !important;
+        // }
+      }
+    }
+    &--cs {
+      .businessField__block__title {
+        border-bottom: 1.5px solid #92734A;
+        // &:hover {
+        //   border-bottom: 1.5px solid #d28903 !important;
+        // }
+      }
+    }
+    &--lc {
+      .businessField__block__title {
+        border-bottom: 1.5px solid #715338;
+        // &:hover {
+        //   border-bottom: 1.5px solid #d28903 !important;
+        // }
+      }
+    }
+    &--qol {
+      .businessField__block__title {
+        border-bottom: 1.5px solid #2B5C7A;
+        // &:hover {
+        //   border-bottom: 1.5px solid #d28903 !important;
+        // }
+      }
+    }
+    &--ms {
+      .businessField__block__title {
+        border-bottom: 1.5px solid #7B7D27;
+        // &:hover {
+        //   border-bottom: 1.5px solid #d28903 !important;
+        // }
+      }
+    }
+  }
+  &__GN {
+    &__title {
+      font-size: 40px;
+      font-weight: bold;
+      font-family: din-condensed,sans-serif;
+      color: #fff;
+      margin-bottom: 60px;
+      text-align: center;
+    }
+    .businessField__num__heading,
+    .businessField__num__text {
+      color: #fff;
+    }
+  }
+  &--kv {
+    position: relative;
+    &::before {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: .5;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+a.businessField__block__title:hover {
+  border-bottom: 1.5px solid #d28903 !important;
+  & .businessField__block__title__text p {
+    color: #d28903;
+  }
+  & .businessField__block__title__arrow::before {
+    background: #d28903;
+  }
+  & .businessField__block__title__arrow::after {
+    border-color: #d28903;
+  }
+}
+
+.common-section__GN {
+  background: #384551;
+  padding: 60px 0 80px 0;
+}
+
+.common-section {
+  &--creative {
+    @include med.media(sp) {
+      margin-bottom: 100px;
+    }
+    .common-heading--h3 {
+      color: #8B6678;
+    }
+    .businessField__num__heading,
+    .businessField__num__text {
+      color: #8B6678;
+    }
+  }
+  &--medical {
+    @include med.media(sp) {
+      margin-bottom: 100px;
+    }
+    .common-heading--h3 {
+      color: #5E753D;
+    }
+    .businessField__num__heading,
+    .businessField__num__text {
+      color: #5E753D;
+    }
+  }
+  &--construction {
+    @include med.media(sp) {
+      margin-bottom: 100px;
+    }
+    .common-heading--h3 {
+      color: #6A6A80;
+    }
+    .businessField__num__heading,
+    .businessField__num__text {
+      color: #6A6A80;
+    }
+  }
+  &--cs {
+    @include med.media(sp) {
+      margin-bottom: 100px;
+    }
+    .common-heading--h3 {
+      color: #92734A;
+    }
+    .businessField__num__heading,
+    .businessField__num__text {
+      color: #92734A;
+    }
+  }
+  &--lc {
+    @include med.media(sp) {
+      margin-bottom: 100px;
+    }
+    .common-heading--h3 {
+      color: #715338;
+    }
+    .businessField__num__heading,
+    .businessField__num__text {
+      color: #715338;
+    }
+  }
+  &--qol {
+    @include med.media(sp) {
+      margin-bottom: 100px;
+    }
+    .common-heading--h3 {
+      color: #2B5C7A;
+    }
+    .businessField__num__heading,
+    .businessField__num__text {
+      color: #2B5C7A;
+    }
+  }
+  &--ms {
+    @include med.media(sp) {
+      margin-bottom: 100px;
+    }
+    .common-heading--h3 {
+      color: #7B7D27;
+    }
+    .businessField__num__heading,
+    .businessField__num__text {
+      color: #7B7D27;
+    }
+  }
+}

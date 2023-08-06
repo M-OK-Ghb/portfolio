@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/subpages/_subpageHead.ejs', {path: "../../", title: "サステナビリティマネージメント | サステナビリティ | クリーク･アンド･リバー社｜C&Rグループ", description: "サステナビリティ基本方針。サステナビリティ。 クリーク･アンド･リバー社とC&Rグループは、映像、ゲーム、Web、広告・出版、医療、会計、法曹、建築、コンピュータサイエンスなどのプロフェショナル･エージェンシーのパイオニア。プロフェショナルの叡智を掛け合わせ、革新的な事業を創造しています。"}); %>
+  <body>
+    <%- include('../../include/_header.ejs'); %>
+    <main id="sustainability" class="subpage">
+      <div class="breadcrumb">
+        <ol class="breadcrumb__list">
+          <li>
+            <a href="">TOP</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a href="">サステナビリティ</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a>サステナビリティマネージメント</a>
+          </li>
+        </ol>
+        <!-- /.breadcrumb -->
+      </div>
+      <div class="common-mainVisual">
+        <img src="../../images/sustainability_main.jpg" alt="ダミー">
+        <h1 class="common-heading--h1">サステナビリティマネージメント<br><span></span></h1>
+      </div>
+
+      <div class="contentWrap commonSustainability">
+        <ul class="ankerLinks__blk-glay commonSustainabilityLinks">
+          <li>
+            <a class="anchor-link" href="#section01">サステナビリティ基本方針
+
+              <div class="arrow--grayBtn"><span class="arrow"></span></div>
+            </a>
+          </li>
+          <li>
+            <a class="anchor-link" href="#section02">
+              サステナビリティ推進体制
+              <div class="arrow--grayBtn"><span class="arrow"></span></div>
+            </a>
+          </li>
+        </ul>
+
+        <h2 id="section01" class="common-textBlock__textTop commonSustainability__ttl">
+          サステナビリティ基本方針
+        </h2>
+        <p class="commonSustainability__txt">C＆Rグループの統括理念「人の能力は、無限の可能性を秘めています。私たちは、その能力を最大限に引き出し、人と社会の幸せのために貢献します」に基づく当社グループの使命「すべてのステークホルダーへの価値提供」の実現に向けて、様々な社会課題の解決や地球環境の保全について、プロフェッショナルを軸とした事業活動を当社グループ一丸となって取り組むことにより、社会全体の永続的な発展及び当社グループの永続的な成長の両立をめざしてまいります。</p>
+        <h2 id="section02" class="common-textBlock__textTop commonSustainability__ttl">
+          サステナビリティ推進体制
+        </h2>
+        <p class="commonSustainability__txt">サステナビリティ委員会は、クリーク･アンド･リバー社の内部規定「サステナビリティ委員会規程」に基づく委員会としての位置づけであり、クリーク･アンド･リバー社及び連結対象子会社を対象範囲としております。</p>
+
+        <h3 class="common-heading--h3">サステナビリティ委員会の設置</h3>
+        <div class="common-heading--h3__underLine"></div>
+        <p class="commonSustainability__txt">
+          サステナビリティ基本方針に基づき、当社グループのサステナビリティに関する議論を集約し、実行の質・スピードをさらに高めることを目的とした委員会を新設いたします。代表取締役を委員長とし、常勤取締役、執行役員により構成し、当社グループのサステナビリティに関する課題を審議し、取締役会に提案・報告することといたします。本委員会の推進委員は経営企画部、総務部、人事部、専門職人事部及び委員長が指名するメンバーが担うものとし、事務局は経営企画部が担うものとします。
+        </p>
+        <div class="commonSustainability__img">
+          <img src="../../images/sustainability04_materiality_figure.png" alt="">
+        </div>
+      </div>
+
+      <%- include('../../include/subpages/_sustainabilityLink.ejs',); %>
+
+    </main>
+    <%- include('../../include/_footer.ejs'); %>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+      $('body').on('click', '.anchor-link', function(){
+    		let link_id = $(this).attr('href');
+            $('html,body').animate({scrollTop: $(link_id).offset().top - 100 },'slow');
+    	
+    })
+    </script>
+  </body>
+</html>

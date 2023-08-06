@@ -1,0 +1,20 @@
+// -------------------------------------------------------------------
+//  contents.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/extend";
+
+html {
+  height: -webkit-fill-available;
+}
+
+body {
+  -ms-overflow-style: none;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+}
+
+
+

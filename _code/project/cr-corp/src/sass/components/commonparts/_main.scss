@@ -1,0 +1,18 @@
+@use "../../helpers/mediaquery" as med;
+
+.main {
+  margin-top: 9.6vh;
+  @include med.media(tb) {
+    margin-top: 12vh;
+  }
+
+  @include med.media(pc) {
+    margin-top: 90px;
+  }
+}
+
+body.is-landscape {
+  .main {
+    margin-top: 15vh;
+  }
+}

@@ -1,0 +1,32 @@
+@use "../../helpers/mediaquery" as med;
+
+.common {
+  &-breadCrumbWrapper {
+    background-color: #eee;
+    padding:10px 20px;
+    @include med.media(pc) {
+      padding:10px 40px;
+    }
+  }
+
+  &-breadCrumb {
+    display: flex;
+    line-height: 1;
+    > li {
+      margin-right: 8px;
+      a {
+        color: #222427;
+        line-height: 1;
+        font-size: 12px;
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &:visited {
+          color: inherit;
+        }
+      }
+    }
+  }  
+}

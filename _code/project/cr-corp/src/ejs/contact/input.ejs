@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/subpages/_subpageHead.ejs', {path: "../../",title: "お問い合わせ | クリーク･アンド･リバー社｜C&Rグループ", description: "お問い合わせ。クリーク･アンド･リバー社とC&Rグループは、映像、ゲーム、Web、広告・出版、医療、会計、法曹、建築、コンピュータサイエンスなどのプロフェショナル･エージェンシーのパイオニア。プロフェショナルの叡智を掛け合わせ、革新的な事業を創造しています。"}); %>
+  <body>
+    <%- include('../include/_header.ejs'); %>
+    <main id="contact" class="subpage">
+      <div class="breadcrumb">
+        <ol class="breadcrumb__list">
+          <li>
+            <a href="/">TOP</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a>お問い合わせ</a>
+          </li>
+        </ol>
+        <!-- /.breadcrumb -->
+      </div>
+      <section class="imgKv">
+        <h1 class="imgKv__ttl">お問い合わせ</h1>
+        <span class="imgKv__line"></span>
+      </section>
+      <div class="contentWrap"> 
+        <section class="contact phaseInput">
+          <ul class="phaseBox">
+            <li class="-color">
+              <span>1</span>
+              <p>入力</p>
+            </li>
+            <li class="">
+              <span>2</span>
+              <p>確認</p>
+            </li>
+            <li class="">
+              <span>3</span>
+              <p>完了</p>
+            </li>
+          </ul>
+          <h3 class="contact__lead -uLine">
+            お問い合わせ内容を<br class="pc">入力してください。
+          </h3>
+          <form class="form" action="" method="post" name="form"  onsubmit="return validate()">
+            <div class="dateBring">
+              <h5 class="dateBring__ttl">お問い合わせしたいテーマ</h5>
+              <div class="dateBring__list">
+                <p>C&Rグループへの登録について</p>
+                <p>お仕事のご依頼・ご相談について</p>
+                <p>選択テーマ表示</p>
+                <p>選択テーマ表示</p>
+                <p>選択テーマ表示</p>
+              </div>
+            </div>
+            <p class="noteBox">
+              - これまでに寄せられた<a target="_blank" href="/faq/">よくあるご質問</a>への回答も、合わせて参考にしてください。<br>
+              - 最新のIR情報は、<a target="_blank" href="/ir/">IR情報ページ</a>でご確認ください。<br>
+              ※土日祝は一部休みのため、返信が遅くなる場合がございます。あらかじめご了承ください。
+            </p>
+            <a class="form__backBtn form__btn mt arrow__iconHover" href="#" onclick="window.history.back();">
+              お問い合わせしたいテーマを選びなおす
+              <div class="arrow-glay -left">
+                <span class="arrow"></span>
+              </div>
+            </a>
+            <ul class="inputBlk">
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">お問い合わせ内容を記入ください。<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <textarea type="text" name="" value="" placeholder="" required></textarea>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">姓<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <input type="text" name="" value="" placeholder="" autocomplete="" required>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">名<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <input type="text" name="" value="" placeholder="" autocomplete="" required>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">姓（カナ）<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <input type="text" name="" value="" placeholder="" autocomplete="" required>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">名（カナ）<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <input type="text" name="" value="" placeholder="" autocomplete="" required>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">メールアドレス<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <input type="text" name="" value="" placeholder="" autocomplete="" required>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">メールアドレス（確認用）<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <input type="text" name="" value="" placeholder="" autocomplete="" required>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">電話番号（ハイフン不要）</div>
+                <div class="inputBlk__td">
+                  <input type="text" name="" value="" autocomplete="" placeholder="">
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">会社名</div>
+                <div class="inputBlk__td">
+                  <input type="text" name="" value="" placeholder="">
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">部署名</div>
+                <div class="inputBlk__td">
+                  <input type="text" name="" value="" placeholder="">
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">役職名</div>
+                <div class="inputBlk__td">
+                  <input type="text" name="" value="" placeholder="">
+                </div>
+              </li>
+            </ul>
+            <div class="enQueteBlk">
+              <p class="enQueteBlk__lead">よろしければアンケートにご協力ください。<br>当社サイトをどのようにお知りになりましたか？<br>（複数選択可）</p>
+              <div class="checkboxWrap">
+                <label class="checkbox">
+                  <input class="checkbox__input" name="" type="checkbox">
+                  <span class="checkbox__dummyInput"></span>
+                  <span class="checkbox__labelText">新聞</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" name="" type="checkbox">
+                  <span class="checkbox__dummyInput"></span> 
+                  <span class="checkbox__labelText">雑誌</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" name="" type="checkbox">
+                  <span class="checkbox__dummyInput"></span>
+                  <span class="checkbox__labelText">書籍</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" name="" type="checkbox">
+                  <span class="checkbox__dummyInput"></span>
+                  <span class="checkbox__labelText">検索エンジン</span>
+                </label>
+                <label class="checkbox">
+                  <input class="checkbox__input" name="" type="checkbox">
+                  <span class="checkbox__dummyInput"></span>
+                  <span class="checkbox__labelText">友人・知人の紹介</span>
+                </label>
+                <label class="checkbox -indent">
+                  <input class="checkbox__input" name="" type="checkbox">
+                  <span class="checkbox__dummyInput"></span>
+                  <span class="checkbox__labelText">ニュースサイトなど</span>
+                </label>
+                <div class="enQueteBlk__wrap">
+                  <div class="enQueteBlk__th">URL</div>
+                  <div class="enQueteBlk__td">
+                    <input type="text" name="" value="" placeholder="">
+                  </div>
+                </div>
+                <label class="checkbox -indent">
+                  <input class="checkbox__input" name="" type="checkbox">
+                  <span class="checkbox__dummyInput"></span>
+                  <span class="checkbox__labelText">その他</span>
+                </label>
+                <div class="enQueteBlk__wrap">
+                  <div class="enQueteBlk__td -noTxt">
+                    <input type="text" name="" value="" placeholder="">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <label class="form__submitBtn form__btn -right arrow__iconHover">
+              <input class="" type="submit" value="確認する">
+              <div class="arrow-glay">
+                <span class="arrow"></span>
+              </div>
+            </label>
+          </form>
+        </section>
+      </div>
+    </main>
+    <%- include('../include/_footer.ejs'); %>
+  </body>
+</html>

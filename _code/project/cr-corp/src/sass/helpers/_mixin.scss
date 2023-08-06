@@ -1,0 +1,26 @@
+// -------------------------------------------------------------------
+//  mixin.scss
+// -------------------------------------------------------------------
+@use "sass:math";
+
+// font-size-rem
+// -------------------------------------------------------------------
+@mixin fontsize($size) {
+  font-size: math.div($size, 10);
+  font-size: $size * 1px;
+}
+
+// clearfix
+// -------------------------------------------------------------------
+@mixin clearfix {
+  zoom: 1;
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  &:before {
+    display: table;
+    content: "";
+  }
+}

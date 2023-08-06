@@ -1,0 +1,16 @@
+.newsLabel {
+  width: 90px;
+  font-size: 12px;
+  text-align: center;
+  background-color: #996600;
+  border-radius: 2px;
+  color: white;
+
+  &--pressRelease {
+    background-color: #299900;
+  }
+
+  &--seminar {
+    background-color: #007699;
+  }
+}

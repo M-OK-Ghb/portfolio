@@ -1,0 +1,70 @@
+@use "../helpers/mediaquery" as med;
+
+.newsBottom {
+  padding:80px 5.3% 0;
+
+  @include med.media(pc) {
+    padding:80px 15.5% 0;
+  }
+
+  &__miniText {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+    margin-top: 20px;
+
+    @include med.media(pc) {
+      margin-left: 20px;
+    }
+  }
+
+  &__list {
+    margin-top: 40px;
+    @include med.media(pc) {
+      max-width: 980px;
+      margin: 40px auto 0;
+    }
+    > li {
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 40px;
+      }
+
+      @include med.media(pc) {
+        width: 100%;
+        display: table;
+      }
+
+      p {
+        @include med.media(pc) {
+          display: table-cell;
+        }
+      }
+    }
+  }
+
+  &__head {
+    margin-bottom: 10px;
+    span {
+      display: inline-block;
+      &:nth-child(2) {
+        margin-left:20px;
+        font-size: 12px;
+      }
+    }
+
+    @include med.media(pc) {
+      display: table-cell;
+      width: 240px;
+    }
+  }
+
+  &__headingWrap {
+    @include med.media(pc) {
+      display: flex;
+      align-items: flex-end;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+  }
+}

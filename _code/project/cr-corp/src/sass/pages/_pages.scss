@@ -1,0 +1,246 @@
+// -------------------------------------------------------------------
+//  pages.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mixin" as mix;
+@use "../helpers/mediaquery" as med;
+@use "../helpers/extend";
+
+.common-section {
+  margin-bottom: 120px;
+  &__grayBox {
+    background: #E9E9E9;
+    padding: 60px 20px;
+    @include med.media(sp) {
+      padding: 60px 20px;
+    }
+  }
+  &.thin {
+    margin-bottom: 80px;
+  }
+}
+
+.common-container {
+  max-width: 1020px;
+  width: 100%;
+  margin: auto;
+  padding: 0 20px;
+  &--sp {
+    width: auto;
+  }
+  &--top {
+    margin-top: 80px;
+  }
+}
+
+.common-m-none {
+  margin: 0;
+}
+.common-mt-none {
+  margin-top: 0 !important;
+}
+
+.common-mb {
+  margin-bottom: 20px;
+  &--subTitle {
+    margin-bottom: 30px;
+  }
+  &--title {
+    margin-bottom: 40px;
+  }
+  &--subTitle {
+    margin-bottom: 30px;
+  }
+  &--section {
+    margin-bottom: 90px;
+  }
+}
+
+.common-text {
+  &--normal {
+    font-size: 16px;
+  }
+  &--small {
+    font-size: 12px;
+  }
+  &--right {
+    text-align: right;
+  }
+  &--center {
+    text-align: center;
+  }
+  &--bold {
+    font-weight: bold;
+  }
+}
+
+.common-heading--h4 {
+  &.common-mb {
+    margin-top: 40px;
+  }
+}
+
+.common-secondHeading {
+  &.common-mb--subTitle {
+    margin-top: 60px;
+  }
+}
+
+.common-sitemap {
+  &__grid {
+    display: flex;
+    @include med.media(sp) {
+      padding-left: 10%;
+      display: none;
+    }
+    &__cnt {
+      width: 50%;
+      > div {
+        padding-bottom: 80px;
+      }
+    }
+    &__sp {
+      display: none;
+      > div {
+        padding-bottom: 80px;
+      }
+    }
+    @include med.media(sp) {
+      &__sp {
+        display: block;
+      }
+    }
+  }
+  &__title {
+    color: #222427;
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 40px;
+    line-height: 1;
+    @include med.media(sp) {
+      font-size: 26px;
+    }
+    &__link {
+      color: #000;
+      text-decoration: none;
+      font-size: 20px;
+      line-height: 1;
+      display: inline-block;
+      position: relative;
+      margin-right: 50px;
+      &::before {
+        content: '';
+        width: 14px;
+        height: 14px;
+        border-left: 2px solid #222427;
+        border-bottom: 2px solid #222427;
+        position: absolute;
+        top: 40%;
+        right: -20px;
+        transform-origin: top right;
+        transform: rotate(-135deg);
+      }
+      &:hover {
+        color: #D28903;
+        &::before {
+          border-color: #D28903;
+        }
+      }
+    }
+  }
+  &__ul {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+  }
+  &__li {
+    padding-bottom: 10px;
+    &:last-child {
+      padding-bottom: 0;
+    }
+    a {
+      font-size: 16px;
+      color: #000;
+      &[target="_blank"] {
+        position: relative;
+        &::before,
+        &::after {
+          content: '';
+          width: 9px;
+          height: 8px;
+          background: #fff;
+          border: 1.5px solid #000;
+          position: absolute;
+          top: 50%;
+          right: -15px;
+
+        }
+        &::before {
+          transform: translate(0, -50%);
+        }
+        &::after {
+          transform: translate(35%,-84%);
+        }
+      }
+      &:hover {
+        color: #D28903;
+        &::before,
+        &::after {
+          border-color: #D28903;
+        }
+      }
+    }
+  }
+}
+
+.common-sitemap__heading {
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  line-height: 1;
+  letter-spacing: .5px;
+  color: #000;
+  @include med.media(sp) {
+    font-size: 34px;
+  }
+  span {
+    width: 2.5%;
+    display: block;
+    margin: 16px auto 0;
+    height: 4px;
+    background-color: #000000;
+    @include med.media(sp) {
+      width: 10%;
+    }
+  }
+}
+
+.common-sitemap__heading__wrap {
+  padding-top: 90px;
+  padding-bottom: 130px;
+}
+
+.common-flex {
+  &--center {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.privacy__list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  li {
+    padding-left: 30px;
+    position: relative;
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+  &__num {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

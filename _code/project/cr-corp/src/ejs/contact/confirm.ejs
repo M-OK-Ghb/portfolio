@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/subpages/_subpageHead.ejs', {path: "../../",title: "お問い合わせ | クリーク･アンド･リバー社｜C&Rグループ", description: "お問い合わせ。クリーク･アンド･リバー社とC&Rグループは、映像、ゲーム、Web、広告・出版、医療、会計、法曹、建築、コンピュータサイエンスなどのプロフェショナル･エージェンシーのパイオニア。プロフェショナルの叡智を掛け合わせ、革新的な事業を創造しています。"}); %>
+  <body>
+    <%- include('../include/_header.ejs'); %>
+    <main id="contact" class="subpage">
+      <div class="breadcrumb">
+        <ol class="breadcrumb__list">
+          <li>
+            <a href="/">TOP</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a>お問い合わせ</a>
+          </li>
+        </ol>
+        <!-- /.breadcrumb -->
+      </div>
+      <section class="imgKv">
+        <h1 class="imgKv__ttl">お問い合わせ</h1>
+        <span class="imgKv__line"></span>
+      </section>
+      <div class="contentWrap"> 
+        <section class="contact phaseConfirm">
+          <ul class="phaseBox">
+            <li class="-color">
+              <span>1</span>
+              <p>入力</p>
+            </li>
+            <li class="-color">
+              <span>2</span>
+              <p>確認</p>
+            </li>
+            <li class="">
+              <span>3</span>
+              <p>完了</p>
+            </li>
+          </ul>
+          <p class="contact__lead -uLine">
+            お問い合わせ内容を<br class="pc">確認してください。
+          </p>
+          <form class="form" action="" method="post" name="form"  onsubmit="return validate()">
+            <div class="dateBring">
+              <h5 class="dateBring__ttl">お問い合わせしたいテーマ</h5>
+              <div class="dateBring__list">
+                <p>C&Rグループへの登録について</p>
+                <p>お仕事のご依頼・ご相談について</p>
+                <p>選択テーマ表示</p>
+                <p>選択テーマ表示</p>
+                <p>選択テーマ表示</p>
+              </div>
+            </div>
+            <ul class="inputBlk">
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">お問い合わせ内容を記入ください。<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <p class="inputBlk__confirmTxt">
+                    お問い合わせ内容に入力された文字列が表示されますお問い合わせ内容に入力された文字列が表示されますお問い合わせ内容に入力された文字列が表示されますお問い合わせ内容に入力された文字列が表示されますお問い合わせ内容に入力された文字列が表示されます
+                  </p>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">姓<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <p class="inputBlk__confirmTxt">清水</p>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">名<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <p class="inputBlk__confirmTxt">俊哉</p>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">姓（カナ）<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <p class="inputBlk__confirmTxt">シミズ</p>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">名（カナ）<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <p class="inputBlk__confirmTxt">トシヤ</p>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">メールアドレス<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <p class="inputBlk__confirmTxt">toshiya@monster-diev.com</p>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">メールアドレス（確認用）<span>必須</span></div>
+                <div class="inputBlk__td">
+                  <p class="inputBlk__confirmTxt">toshiya@monster-diev.com</p>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">電話番号（ハイフン不要）</div>
+                <div class="inputBlk__td">
+                  <p class="inputBlk__confirmTxt">0364470091</p>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">会社名</div>
+                <div class="inputBlk__td">
+                  <p class="inputBlk__confirmTxt">株式会社MONSTER DIVE</p>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">部署名</div>
+                <div class="inputBlk__td">
+                  <p class="inputBlk__confirmTxt">Webプロダクション</p>
+                </div>
+              </li>
+              <li class="inputBlk__wrap">
+                <div class="inputBlk__th">役職名</div>
+                <div class="inputBlk__td">
+                  <p class="inputBlk__confirmTxt">ディレクター</p>
+                </div>
+              </li>
+            </ul>
+            <div class="enQueteBlk">
+              <p class="enQueteBlk__lead">よろしければアンケートにご協力ください。<br>当社サイトをどのようにお知りになりましたか？<br>（複数選択可）</p>
+              <p class="enQueteBlk__bring">新聞, 雑誌, 書籍, 検索エンジン,友人・知人の紹介</p>
+              <p class="enQueteBlk__url">URL</p>
+              <p class="enQueteBlk__bring">https://newssite.com/</p>
+              <p class="enQueteBlk__another">その他</p>
+              <p class="enQueteBlk__bring">テレビで見た井川社長のインタビューに強く共感しました。</p>
+            </div>
+            <p class="confirm__note">
+              ・ご入力いただいたメールアドレスに、お問い合わせ受付の確認メール・回答メールをお送りいたします。<br><br>
+              ・メール受信制限機能をご利用のお客様は、「上記に同意して問い合わすせる」ボタンを押す前に「@hq.cri.co.jp」からのメールを受け取れるように設定をお願いします。<br><br>
+              ・サービスに関するお問い合わせは、各サービスサイトよりお問い合わせください。
+            </p>
+            <p class="privacy__boxTtl">個人情報取得に関する利用規約</p>
+            <p class="privacy__boxNote">本サービスのお申し込みにあたり、あらかじめ下記をお読みいただき「同意する」にチェックいただきますようお願いいたします。</p>
+            <div class="privacy__box">
+              <h5 class="privacy__boxSubTtl">■個人情報の利用目的</h5>
+              <p class="privacy__boxTxt">
+                当フォームにご入力いただいた個人情報は以下の利用目的の範囲内で利用いたします。<br>
+                この利用目的の範囲を超えて個人情報を取り扱う場合には、あらかじめ本人に利用目的を通知し、ご確認の同意をいただいた後に利用いたします。<br>
+                個人情報の取扱いについては以下をご確認ください。<br>
+                <a target="_blank" href="https://www.cri.co.jp/privacy/">https://www.cri.co.jp/privacy/</a><br><br>
+                ・お問い合わせ内容の受け付けのため<br>
+                ・統計分析業務のため<br>
+                ・その他、上記業務に付随してご連絡・情報提供を行うため<br>
+                ・ご本人からお問い合わせいただいた際、当社所定の手続きによりご本人を確認するため<br>
+                ※本登録された個人情報を企業に提供する場合には、あらかじめご本人の同意を得るものとします。<br>
+                ※お預かりした個人情報を委託する場合には、十分な個人情報保護水準を確保していることを条件とし、機密保持契約を結んだ上で行います。
+              </p>
+              <h5 class="privacy__boxSubTtl">■第三者提供について</h5>
+              <p class="privacy__boxTxt">
+                本お問い合わせフォームにご入力いただいた情報は、Twilio社が提供するサービスSendGridを使用しております。フォームにご入力いただいた情報は上記の利用目的で利用いたします。取得した情報は当社およびTwilio社の管理のもと、Twilio社で一定期間適切に保存されます。<br>
+                なおTwilio社は、SendGridサービスを遂行するためにお客様の情報を処理します。（収集、記録、整理、構造化、保存、翻訳、改変もしくは変更、検索、参照、使用、送信による開示、頒布、その他の方法による提供、調整もしくは組み合わせ、制限、消去、破棄などが含まれます。）Twilio社のデータ保護付属書およびセキュリティ概要書、プライバシーノーティスについては、以下のページをご確認ください。<br>
+                データ保護付属書　<a href="https://www.twilio.com/ja/legal/data-protection-addendum" target="_blank">https://www.twilio.com/ja/legal/data-protection-addendum</a><br>
+                セキュリティ概要書　<a target="_blank" href="https://www.twilio.com/ja/legal/security-overview" >https://www.twilio.com/ja/legal/security-overview</a><br>
+                プライバシーノーティス　<a target="_blank" href="https://www.twilio.com/ja/legal/privacy">https://www.twilio.com/ja/legal/privacy</a><br><br>
+                お客様が個人情報の内容の開示、訂正を希望される場合は、下記担当窓口問い合わせ先までご連絡ください。<br>
+                株式会社クリーク･アンド･リバー社　経営企画部<br>
+                E-mail：creek@hq.cri.co.jp<br><br>
+                苦情及び相談については、下記個人情報相談窓口までご連絡ください。<br>
+                株式会社クリーク･アンド･リバー社<br>
+                個人情報相談窓口<br>
+              </p>
+
+            </div>
+            <div class="privacyCheckBoxWrap">
+              <label class="checkbox privacyCheckBox">
+                <input class="checkbox__input" name="" type="checkbox">
+                <span class="checkbox__dummyInput"></span>
+                <span class="checkbox__labelText">個人情報取得に関する利用規約に同意する。</span>
+              </label>
+            </div>
+            <div class="pcFlex">
+              <label class="form__submitBtn form__btn -right arrow__iconHover">
+                <input class="" type="submit" value="この内容で送信する">
+                <div class="arrow-glay">
+                  <span class="arrow"></span>
+                </div>
+              </label>
+              <label class="form__backBtn form__btn arrow__iconHover">
+                <div class="arrow-glay -left">
+                  <span class="arrow"></span>
+                </div>
+                <input class="" type="button" value="戻って内容を変更する" onclick="window.history.back();">
+              </label>
+            </div>
+          </form>
+        </section>
+      </div>
+    </main>
+    <%- include('../include/_footer.ejs'); %>
+  </body>
+</html>

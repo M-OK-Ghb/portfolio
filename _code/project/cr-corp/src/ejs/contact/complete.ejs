@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../include/subpages/_subpageHead.ejs', {path: "../../",title: "お問い合わせ | クリーク･アンド･リバー社｜C&Rグループ", description: "お問い合わせ。クリーク･アンド･リバー社とC&Rグループは、映像、ゲーム、Web、広告・出版、医療、会計、法曹、建築、コンピュータサイエンスなどのプロフェショナル･エージェンシーのパイオニア。プロフェショナルの叡智を掛け合わせ、革新的な事業を創造しています。"}); %>
+  <body>
+    <%- include('../include/_header.ejs'); %>
+    <main id="contact" class="subpage">
+      <div class="breadcrumb">
+        <ol class="breadcrumb__list">
+          <li>
+            <a href="/">TOP</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a>お問い合わせ</a>
+          </li>
+        </ol>
+        <!-- /.breadcrumb -->
+      </div>
+      <section class="imgKv">
+        <h1 class="imgKv__ttl">お問い合わせ</h1>
+        <span class="imgKv__line"></span>
+      </section>
+      <div class="contentWrap"> 
+        <section class="contact complate">
+          <ul class="phaseBox">
+            <li class="-color">
+              <span>1</span>
+              <p>入力</p>
+            </li>
+            <li class="-color">
+              <span>2</span>
+              <p>確認</p>
+            </li>
+            <li class="-color">
+              <span>3</span>
+              <p>完了</p>
+            </li>
+          </ul>
+          <h3 class="contact__lead -uLine">
+            お問い合わせを<br class="pc">受け付けました。
+          </h3>
+          <p class="complate__txt">
+            お問い合わせいただく内容により、返信にお時間をいただく場合やご返答しかねる場合がございます。何卒、ご了承いただけますようお願い申し上げます。
+          </p>
+          <a class="form__backBtn form__btn arrow__iconHover" href="/">トップページへ戻る
+            <div class="arrow-glay -left">
+              <span class="arrow"></span>
+            </div>
+          </a>
+        </section>
+      </div>
+    </main>
+    <%- include('../include/_footer.ejs'); %>
+  </body>
+</html>

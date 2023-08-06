@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../include/subpages/_subpageHead.ejs', {path: "../../",title: "IRライブラリ | IR情報 | クリーク･アンド･リバー社｜C&Rグループ", description: "IRライブラリ。IR情報。クリーク･アンド･リバー社とC&Rグループは、映像、ゲーム、Web、広告・出版、医療、会計、法曹、建築、コンピュータサイエンスなどのプロフェショナル･エージェンシーのパイオニア。プロフェショナルの叡智を掛け合わせ、革新的な事業を創造しています。"}); %>
+  <body>
+    <%- include('../../include/_header.ejs'); %>
+    <main id="library" class="subpage">
+      <div class="breadcrumb">
+        <ol class="breadcrumb__list">
+          <li>
+            <a href="">TOP</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a href="">IR情報</a>
+            <span class="breadcrumb__line">/</span>
+          </li>
+          <li>
+            <a>IRライブラリ</a>
+          </li>
+        </ol>
+        <!-- /.breadcrumb -->
+      </div>
+      <section class="imgKv">
+        <h1 class="imgKv__ttl">IRライブラリ</h1>
+        <span class="imgKv__line"></span>
+      </section>
+      <div class="contentWrap">
+        <%- include('../../include/subpages/_irDoc.ejs',); %>
+        <section class="libraryLinkBlk -col">
+          <ul class="libraryLinkBlk__list">
+            <li>
+              <a href="" class="arrow__iconHover-underLine">決算短信
+                <div class="arrow-glay">
+                  <span class="arrow"></span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="" class="arrow__iconHover-underLine">
+                決算説明会資料・動画
+                <div class="arrow-glay">
+                  <span class="arrow"></span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="" class="arrow__iconHover-underLine">
+                有価証券報告書／四半期報告書
+                <div class="arrow-glay">
+                  <span class="arrow"></span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="" class="arrow__iconHover-underLine">
+                株主総会
+                <div class="arrow-glay">
+                  <span class="arrow"></span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="" class="arrow__iconHover-underLine">
+                事業報告書
+                <div class="arrow-glay">
+                  <span class="arrow"></span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="" class="arrow__iconHover-underLine">
+                個人投資家向け資料等
+                <div class="arrow-glay">
+                  <span class="arrow"></span>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="" class="arrow__iconHover-underLine">
+                ファクトシート
+                <div class="arrow-glay">
+                  <span class="arrow"></span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section><!-- /.linkBlk -->
+        <%- include('../../include/subpages/_irLinkBlk.ejs',); %>
+        <!-- /.linkBlk -->
+      </div>
+      <%- include('../../include/subpages/_irBnrBlk.ejs',); %>
+      <!-- /.bnrBlk -->
+    </main>
+    <%- include('../../include/_footer.ejs'); %>
+  </body>
+</html>

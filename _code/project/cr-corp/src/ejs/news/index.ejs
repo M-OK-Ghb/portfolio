@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('../include/_headNewsRelease.ejs'); %>
+
+<body>
+  <div class="container" id="js-container">
+    <%- include('../include/_header.ejs'); %>
+    <main id="js-main" class="main">
+      <div class="common-breadCrumbWrapper">
+        <ul class="common-breadCrumb">
+          <li>
+            <a href="#">トップ /</a>
+          </li>
+          <li>
+            <a href="#">ニュースリリース</a>
+          </li>
+        </ul>
+      </div>
+      <div class="common-mainVisual common-mainVisual--privacy common-mb">
+        <img src="../images/newsRelease_02.jpg" alt="ニュースリリース">
+        <h1 class="common-heading--h1">ニュースリリース<br><span></span></h1>
+      </div>
+      <div class="common-container common-mb--section common-container--top">
+        <div class="newsRelease__wrapper top">
+          <h2 class="common-heading--h2 common-mb">重要なお知らせ</h2>
+          <%- include('../include/_newsRelease.ejs'); %>
+        </div>
+      </div>
+
+      <%- include('../include/_newsReleaseSearch.ejs'); %>
+
+      <div class="common-container">
+        <h2 class="common-heading--h2">プレスリリース</h2>
+      </div>
+      <div class="page__container page__container--mtThin">
+        <div class="page__inner">
+
+          <div class="categoryMenu">
+            <button class="categoryMenu__button categoryMenu__button--01 categoryMenu__button--active">プレスリリース</button>
+            <button class="categoryMenu__button categoryMenu__button--02"><a href="#">グループ企業</a></button>
+            <button class="categoryMenu__button categoryMenu__button--03"><a href="#">IR</a></button>
+            <button class="categoryMenu__button categoryMenu__button--04"><a href="#">セミナー</a></button>
+            <button class="categoryMenu__button categoryMenu__button--05"><a href="#">イベント</a></button>
+            <button class="categoryMenu__button categoryMenu__button--06"><a href="#">トピックス</a></button>
+            <button class="categoryMenu__button categoryMenu__button--07"><a href="#">すべて</a></button>
+          </div>
+
+          <div class="archiveList__number">
+            <p class="archiveList__number__parts">1-30件 / 120件</p>
+          </div>
+
+          <div class="newsRelease__wrapper">
+            <%- include('../include/_newsRelease.ejs'); %>
+            <%- include('../include/_newsRelease.ejs'); %>
+            <%- include('../include/_newsRelease.ejs'); %>
+            <%- include('../include/_newsRelease.ejs'); %>
+            <%- include('../include/_newsRelease.ejs'); %>
+            <%- include('../include/_newsRelease.ejs'); %>
+            <%- include('../include/_newsRelease.ejs'); %>
+            <%- include('../include/_newsRelease.ejs'); %>
+          </div>
+
+          <%- include('../include/_archiveList.ejs'); %>
+
+        </div>
+        <%- include('../include/_sidebarRelease.ejs'); %>
+      </div>
+      <%- include('../include/commonparts/_mainBottom.ejs'); %>
+      <%- include('../include/_footer.ejs'); %>
+    </main>
+    <%- include('../include/_scrollTop.ejs'); %>
+  </div>
+  <script>
+  var $sidebar = document.getElementById('js-sidebar');
+  var $sidebarButton = document.getElementById('js-sidebar__button');
+
+  $sidebarButton.addEventListener('click', function(){
+    this.classList.toggle('is-open');
+    $sidebar.classList.toggle('is-open');
+  }, false);
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.2.0/browser/pixi.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>

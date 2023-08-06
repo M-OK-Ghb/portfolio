@@ -1,0 +1,140 @@
+<%  let page = 'top'; %>
+<!DOCTYPE html>
+<html lang="ja">
+<%- include('include/_head.ejs'); %>
+
+<body id="js-top" data-page="top">
+  <%- include('include/_loading.ejs'); %>
+  <div class="container" id="js-container">
+    <%- include('include/_headerTop.ejs') %>
+    <main id="js-main" class="main">
+      <%- include('include/_firstMv.ejs'); %>
+      <div class="main__inner">
+        <%- include('include/_secondMv.ejs'); %>
+        <%- include('include/_news.ejs'); %>
+        <%- include('include/_pageList.ejs'); %>
+        <%- include('include/_toProfessional.ejs'); %>
+        <%- include('include/_newsBottom.ejs'); %>
+        <%- include('include/_multiField.ejs'); %>
+      </div>
+      <%- include('include/_footer.ejs'); %>
+    </main>
+    <%- include('include/_scrollTop.ejs'); %>
+  </div>
+  <!--firstView Data-->
+  <script>
+    var mainVisualItems = [{
+        count: "85,650",
+        genre: "TV & Movies",
+        creativeFlag: true,
+        unitFlag: true
+      },
+      {
+        count: "85,650",
+        genre: "Games",
+        creativeFlag: true,
+        unitFlag: false
+      },
+      {
+        count: "85,650",
+        genre: "Web",
+        creativeFlag: true,
+        unitFlag: true
+      },
+      {
+        count: "85,650",
+        genre: "Ad & Publishing",
+        creativeFlag: true,
+        unitFlag: true
+      },
+      {
+        count: "85,650",
+        genre: "Artists & Authors",
+        creativeFlag: true,
+        unitFlag: true
+      },
+      {
+        count: "85,650",
+        genre: "Performing arts",
+        creativeFlag: true,
+        unitFlag: true
+      },
+      {
+        count: "4500",
+        genre: "Architecture",
+        creativeFlag: false,
+        unitFlag: true
+      },
+      {
+        count: "7,100",
+        genre: "Fashion",
+        creativeFlag: false,
+        unitFlag: true
+      },
+      {
+        count: "2,700",
+        genre: "Food",
+        creativeFlag: false,
+        unitFlag: true
+      },
+      {
+        count: "100",
+        genre: "Athlete",
+        creativeFlag: false,
+        unitFlag: true
+      },
+      {
+        count: "1,150",
+        genre: "Life science",
+        creativeFlag: false,
+        unitFlag: true
+      },
+      {
+        count: "Now launching",
+        genre: "Agriculture",
+        creativeFlag: false,
+        unitFlag: false
+      },
+      {
+        count: "5,000",
+        genre: "Computer science",
+        creativeFlag: false,
+        unitFlag: true
+      },
+      {
+        count: "4,200",
+        genre: "IT",
+        creativeFlag: false,
+        unitFlag: true
+      },
+      {
+        count: "500",
+        genre: "CXO",
+        creativeFlag: false,
+        unitFlag: true
+      },
+      {
+        count: "18,500",
+        genre: "Legal",
+        creativeFlag: false,
+        unitFlag: true
+      },
+      {
+        count: "57,000",
+        genre: "Accounting",
+        creativeFlag: false,
+        unitFlag: true
+      },
+      {
+        count: "143,000",
+        genre: "Medical",
+        creativeFlag: false,
+        unitFlag: true
+      }
+    ];
+  </script>
+  <script src="./js/main.js"></script>
+  <script src="./js/vendor.js"></script>
+</body>
+
+</html>
