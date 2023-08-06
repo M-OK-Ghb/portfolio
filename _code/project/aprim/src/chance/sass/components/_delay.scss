@@ -1,0 +1,21 @@
+// -------------------------------------------------------------------
+// 	delayImg.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.js-delay {
+  opacity: 0;
+  &.is-show {
+    transition: 0.3s;
+    opacity: 1;
+  }
+}
+
+.js-delay-body {
+  opacity: 0;
+  &.is-show {
+    transition: 0.3s;
+    opacity: 1;
+  }
+}

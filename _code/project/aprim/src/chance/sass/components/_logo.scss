@@ -1,0 +1,28 @@
+// -------------------------------------------------------------------
+// 	logo.scss
+// -------------------------------------------------------------------
+@use "../helpers/variables" as var;
+@use "../helpers/mediaquery" as med;
+
+.c-logo {
+  width: 95px;
+  > a {
+    width: 100%;
+    display: block;
+    &:hover {
+      transition: 0.3s;
+      opacity: 0.5;
+    }
+  }
+
+  > span {
+    display: inline-block;
+    > img {
+      width: 100%;
+    }
+  }
+
+  @include med.media(sp) {
+    width: 12.65vw;
+  }
+}

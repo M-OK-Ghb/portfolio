@@ -1,0 +1,22 @@
+<div class="p-sub__message">
+  <div class="p-sub__messageInner">
+    <%- include('../_sub/_logo.ejs', {data: data}); %>
+    <%- include('../_sub/_genreHeading.ejs', {data: data}); %>
+    <%- include('../_sub/_partNumber.ejs', {data: data}); %>
+    <p class="p-sub__title">せんせい<span>×</span></p>
+    <h1 class="p-sub__headingTop <%= data.slug %>">
+      <img src="<%= data.imgPath %>/heading.svg" alt="" id="js-headNav-showPoint" loading="eager">
+    </h1>
+    <div class="p-sub__mainVisual">
+      <img src="<%= data.imgPath %>/fv.png" alt="" loading="lazy">
+    </div>
+    <div class="p-sub__messageTextsWrap">
+      <p></p>
+      <p>というのはちょっと大げさですが…</p>
+      <p id="js-headNav-hidePoint"></p>
+    </div>
+    <%- include('../_sub/_guideText.ejs', {data: data}); %>
+  </div>
+  <%- include('../_sub/_headNav.ejs', {data: data}); %>  
+</div>
+<%- include('../_sub/_triangleCover.ejs', {data: data}); %>

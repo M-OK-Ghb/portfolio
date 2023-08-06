@@ -1,0 +1,87 @@
+<%
+  const data = {
+    title: "地域と成長する『PBL』",
+    description: "地域と成長する『PBL』｜クリエーター「パントビスコ」さんと兵庫大学「教育学部 教育学科」のコラボコンテンツ。「せんせい、チャンス。」ってこんな感じ!?な世界をお楽しみください。2023年4月新設（予定）兵庫県加古川市。",
+    path: "../",
+    imgPath: "../images/pbl",
+    commonImgPath: "../images/common",
+    category: "future",
+    slug: "pbl",
+    part: "3",
+    navNum: 3
+  }
+%>
+
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../_common/_head.ejs', {data: data}); %>
+  <body class="js-delay-body">
+    <%- include('../_common/_ga.ejs', {data: data}); %>
+    <div class="p-sub__container">
+      <main class="p-sub__main">
+        <div class="p-sub__message">
+          <div class="p-sub__messageInner">
+            <%- include('../_sub/_logo.ejs', {data: data}); %>
+            <%- include('../_sub/_genreHeading.ejs', {data: data}); %>
+            <%- include('../_sub/_partNumber.ejs', {data: data}); %>
+            <p class="p-sub__title <%= data.slug %>">
+              <img class="js-delay" src="<%= data.imgPath %>/subtitle.svg" alt="せんせい × 地域社会" loading="eager">
+            </p>
+            <h1 class="p-sub__headingTop <%= data.slug %>">
+              <img class="js-delay" src="<%= data.imgPath %>/heading.svg" alt="地域まるごとせんせい！？" id="js-headNav-showPoint" loading="eager">
+            </h1>
+            <div class="p-sub__mainVisual">
+              <img class="js-delay" src="<%= data.imgPath %>/fv.png" alt="その3 地域の皆さんや保護者との「超絶見守りシステム」で安心！？　イラスト" loading="eager">
+            </div>
+            <div class="p-sub__messageTextsWrap js-delay">
+              <p>おとなりのハツばあちゃんも、寿司屋のゲンさんも、憧れのヨシ子先輩も、地域の人々が教壇に大集結!? 勉強はもちろん、恋や人生も教えてもらえる学校になる!</p>
+              <p>というのはちょっと大げさですが…</p>
+              <p id="js-headNav-hidePoint">「チーム学校」という考え方のもと、教員間の連携、専門人材の活用、保護者や地域の人々も教育に参画。先生が孤立することなく地域ぐるみで子どもの成長を支える動きが活発化するでしょう。</p>
+            </div>
+            <%- include('../_sub/_guideText.ejs', {data: data}); %>
+          </div>
+          <%- include('../_sub/_headNav.ejs', {data: data}); %>  
+        </div>
+        <%- include('../_sub/_triangleCover.ejs', {data: data}); %>
+        <div class="p-sub__detail">
+          <div class="p-sub__detailTop">
+            <h2 class="p-sub__detailHeading">
+              <img src="<%= data.imgPath %>/detail_heading.svg" alt="地域と成長するPBL" loading="lazy">
+            </h2>
+            <p class="p-sub__detailText">
+              4年間を通じた<span>※</span>PBL(課題解決型学習で理論と実践を繰り返しながら地域社会の中で成長できます。
+            </p>
+            <p class="p-sub__detailText--en">
+              <span>※PBL : </span>
+              <span>Project Based Learning</span>
+            </p>
+          </div>
+          <div class="c-detailLink">
+            <p>もっと詳しく知りたい！</p>
+            <div class="c-linkButton">
+              <a href="https://www.hyogo-dai.ac.jp/education/feature/#section01-3" target="_blank">
+                <span>兵庫大学 教育学部サイトへ</span>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26">
+                  <defs>
+                    <clipPath id="clip-path">
+                      <rect width="26" height="26" fill="#0d3993"/>
+                    </clipPath>
+                  </defs>
+                  <g clip-path="url(#clip-path)">
+                    <path d="M16.194,22.816H4.789A4.8,4.8,0,0,1,0,18.027V6.622A4.8,4.8,0,0,1,4.789,1.833H9.579a1.368,1.368,0,0,1,0,2.737H4.789A2.055,2.055,0,0,0,2.737,6.622v11.4A2.055,2.055,0,0,0,4.789,20.08h11.4a2.055,2.055,0,0,0,2.053-2.053v-5.7a1.368,1.368,0,0,1,2.737,0v5.7a4.8,4.8,0,0,1-4.789,4.789" transform="translate(0 3.184)" fill="#0d3993"/>
+                    <path d="M4.7,16.879a1.37,1.37,0,0,1-.966-2.337L17.875.4A1.369,1.369,0,1,1,19.81,2.338L5.671,16.476a1.366,1.366,0,0,1-.969.4" transform="translate(5.791 0)" fill="#0d3993"/>
+                    <path d="M17.394,14.6a1.369,1.369,0,0,1-1.368-1.368V2.737H5.535A1.368,1.368,0,1,1,5.535,0H17.394a1.369,1.369,0,0,1,1.368,1.368V13.227A1.369,1.369,0,0,1,17.394,14.6" transform="translate(7.237)" fill="#0d3993"/>
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <%- include('../_sub/_bottomNav.ejs', {data: data}); %>
+        </div>
+        <%- include('../_sub/_copyRight.ejs', {data: data}); %>
+      </main>
+    </div>
+  </body>
+  <%- include('../_common/_script.ejs', {data: data}); %>
+</html>

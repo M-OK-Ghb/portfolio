@@ -1,0 +1,46 @@
+// -------------------------------------------------------------------
+//  variables.scss
+// -------------------------------------------------------------------
+
+// Width
+// -------------------------------------------------------------------
+$BREAK_POINT_SP: 960px;
+
+// Font
+// -------------------------------------------------------------------
+// Adobe Font A P-OTF Jun ProN
+@font-face {
+  font-family: "JunProLight";
+  src: url("../font/A-OTF-Jun201Pro-Regular.otf") format("woff");
+}
+
+@font-face {
+  font-family: "JunProMedium";
+  src: url("../font/AP-OTF-Jun34ProN-Medium.otf") format("woff");
+}
+
+@font-face {
+  font-family: "JunProBold";
+  src: url("../font/AP-OTF-Jun501ProN-Bold.otf") format("woff");
+}
+
+$BASE_FONT_FAMILY: JunProMedium, sans-serif;
+$EM_FONT_FAMILY: JunProBold, sans-serif;
+$LIGHT_FONT_FAMILY: JunProLight, sans-serif;
+
+$SNS_BUTTON_FONT_FAMILY: "Helvetica",Arial,"Hiragino Kaku Gothic ProN","Hiragino Sans",Meiryo,sans-serif;
+
+// Color
+// -------------------------------------------------------------------
+$BASE_BG_COLOR: #F5F4F4;
+$BASIC_TEXT_COLOR: #333;
+$ACCENT_BG_COLOR: #103A91;
+$ACCENT_TEXT_COLOR: #0D3993;
+
+// BG Blue Texture
+// -------------------------------------------------------------------
+// $BG_TEXTURE: url(../images/common/bg_texture.svg);
+$BG_TEXTURE: url(../images/common/bg_texture.png);
+
+
+

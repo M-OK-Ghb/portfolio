@@ -1,0 +1,17 @@
+<div class="p-sub__detail">
+  <div class="p-sub__detailTop">
+    <h2 class="p-sub__detailHeading">
+      <img src="<%= data.imgPath %>/detail_heading.svg" alt="" loading="lazy">
+    </h2>
+    <p class="p-sub__detailText">
+      <span>※</span><br class="is-pc">
+    </p>
+    <p class="p-sub__detailText--en">
+      <span>※ : </span>
+      <span></span>
+    </p>
+  </div>
+  <%- include('../_sub/_detailLink.ejs', {data: data}); %>
+  <%- include('../_sub/_bottomNav.ejs', {data: data}); %>
+</div>
+<%- include('../_sub/_copyRight.ejs', {data: data}); %>

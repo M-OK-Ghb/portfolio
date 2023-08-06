@@ -1,0 +1,15 @@
+// -------------------------------------------------------------------
+//  state.scss
+// -------------------------------------------------------------------
+@use "../helpers/mediaquery" as med;
+
+.is-sp {
+  @include med.media(pc) {
+    display: none;
+  }
+}
+.is-pc {
+  @include med.media(sp) {
+    display: none;
+  }
+}

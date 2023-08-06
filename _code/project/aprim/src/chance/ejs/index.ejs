@@ -1,0 +1,27 @@
+<%
+  const data = {
+    isTop: true,
+    title: "「せんせい、チャンス!?」×パントビスコさんタイアップ",
+    description: "クリエーター「パントビスコ」さんと兵庫大学「教育学部 教育学科」のコラボコンテンツ。「せんせい、チャンス。」ってこんな感じ!?な世界をお楽しみください。2023年4月新設（予定）兵庫県加古川市。",
+    path: "./",
+    imgPath: "images/top",
+    commonImgPath: "images/common"
+  }
+%>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('_common/_head.ejs', {data: data}); %>
+  <body class="js-delay-body">
+    <%- include('_common/_ga.ejs', {data: data}); %>
+    <div class="p-top__container">
+      <main class="p-top__main">
+        <%- include('_top/_intro.ejs', {data: data}); %>
+        <%- include('_top/_menu.ejs', {data: data}); %>
+        <%- include('_top/_creatorInfo.ejs', {data: data}); %>
+        <%- include('_top/_bottom.ejs', {data: data}); %>
+      </main>
+    </div>
+    <%- include('_common/_script.ejs', {data: data}); %>
+  </body>
+</html>

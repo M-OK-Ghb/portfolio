@@ -1,0 +1,47 @@
+<div class="c-navBottom">
+  <div class="c-navLinkWrap left">
+    <% if(data.navNum === 1) { %>
+    <% } else if(data.navNum === 2) { %>
+    <a href="../iep/">
+      <img src="<%= data.commonImgPath %>/bottom_nav_left_1_1.png" alt="せんせいの未来編 お一人さま授業！？" loading="lazy">
+    </a>
+    <% } else if(data.navNum === 3) { %>
+    <a href="../ict/">
+      <img src="<%= data.commonImgPath %>/bottom_nav_left_1_2.png" alt="せんせいの未来編 せんせいもロボット化！？" loading="lazy">
+    </a>
+    <% } else if(data.navNum === 4) { %>
+    <a href="../pbl/">
+      <img src="<%= data.commonImgPath %>/bottom_nav_left_1_3.png" alt="地域まるごとせんせい！？" loading="lazy">
+    </a>
+    <% } else if(data.navNum === 5) { %>
+    <a href="../heart/">
+      <img src="<%= data.commonImgPath %>/bottom_nav_left_2_1.png" alt="せんせいっていいな編 いつもありがとう" loading="lazy">
+    </a>
+    <% } %>
+  </div>
+  <div class="c-navBackLink c-backLink">
+    <a href="../">
+      <span>トップへ戻る </span>
+      <img src="<%= data.commonImgPath %>/icon_return.svg" alt="Return icon" loading="lazy">
+    </a>
+  </div>
+  <div class="c-navLinkWrap right">
+    <% if(data.navNum === 1) { %>
+    <a href="../ict/">
+      <img src="<%= data.commonImgPath %>/bottom_nav_right_1_2.png" alt="せんせいの未来編 せんせいもロボット化！？" loading="lazy">
+    </a>
+    <% } else if(data.navNum === 2) { %>
+    <a href="../pbl/">
+      <img src="<%= data.commonImgPath %>/bottom_nav_right_1_3.png" alt="せんせいの未来編 地域まるごとせんせい！？" loading="lazy">
+    </a>
+    <% } else if(data.navNum === 3) { %>
+    <a href="../heart/">
+      <img src="<%= data.commonImgPath %>/bottom_nav_right_2_1.png" alt="せんせいっていいな編 いつもありがとう" loading="lazy">
+    </a>
+    <% } else if(data.navNum === 4) { %>
+    <a href="../remedial/">
+      <img src="<%= data.commonImgPath %>/bottom_nav_right_2_2.png" alt="せんせいっていいな編 ひとそれぞれ" loading="lazy">
+    </a>
+    <% } %>
+  </div>
+</div>
