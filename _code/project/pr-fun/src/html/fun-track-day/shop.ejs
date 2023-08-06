@@ -1,0 +1,102 @@
+<%
+path = '../';
+category = '';
+page = '';
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<%- include ../include/_meta %>
+<%- include('../include/_head' ,{
+  title: meta.top.title,
+  description: meta.top.description,
+  catTitle: meta.top.catTitle
+})
+%>
+
+<body class="page-tyre-list">
+  <% include ../include/_old %>
+  <div class="wrapper">
+    <% include ../include/_header %>
+    <div class="contents">
+
+      <div class="sitePath">
+        <ul class="inner">
+          <li class="item"><a href="/" aria-label="サイトトップへ戻る"><svg xmlns="http://www.w3.org/2000/svg" width="15.167"
+                height="14" aria-label="Home">
+                <path data-name="home" d="M5.833 14V9.333h3.5V14h3.558V7h2.275L7.583 0 0 7h2.275v7z" fill="#888" />
+                </svg></a></li>
+          <li class="item"><strong>FUN TRACK DAY</strong></li>
+        </ul>
+      </div>
+
+
+      <main>
+
+        <div class="page-header">
+          <div class="inner">
+            <h1 class="headline">
+              <span class="main funAdjust">FUN <br class="is-sp">TRACK <br class="is-sp"> DAY</span>
+              <span class="sub funAdjust">ファントラックデイ</span>
+            </h1>
+            <div class="articleBox">
+              <h2 class="funDay__headTop">申し込み可能店舗 関東</h2>
+              <% include _shopTable %>
+              <% include _applyDetail %>
+            </div>
+          </div>
+        </div>
+
+        <div class="funDay__area">
+          <div class="inner">
+            <div class="localNav">
+              <div class="localNav-L">
+                <ul class="inner">
+                  <!-- <li class="item">
+                    <a href="shop.html">
+                      <span class="label">東北</span>
+                    </a>
+                  </li> -->
+                  <li class="item is-active">
+                    <a href="shop.html">
+                      <span class="label">関東</span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="shop.html">
+                      <span class="label">中部</span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="shop.html">
+                      <span class="label">近畿</span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="shop.html">
+                      <span class="label">中国・四国</span>
+                    </a>
+                  </li>
+                  <li class="item">
+                    <a href="shop.html" class="border-adjust">
+                      <span class="label">九州</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+
+
+      <% include ../include/_bnr_01 %>
+    </div>
+    <% include ../include/_footer %>
+  </div>
+  <% include ../include/_modal %>
+  <% include ../include/_script.ejs %>
+
+</body>
+
+</html>

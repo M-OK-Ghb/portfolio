@@ -1,0 +1,48 @@
+@charset "UTF-8";
+// -------------------------------------------------------------------
+//  print.scss
+// -------------------------------------------------------------------
+
+.global-header {
+  display: none!important;
+}
+.contents {
+  min-width: 100%;
+  height: 100%!important;
+  margin-right: 0;
+  border-right: none;
+}
+.prev-btn {
+  display: none!important;
+}
+.next-btn {
+  display: none!important;
+}
+.catalog-controller-scale {
+  display: none!important;
+}
+.catalog-footer {
+  display: none!important;
+}
+
+.catalogBlock {
+  grid-template-rows: none;
+  display: block;
+  width: 100%;
+}
+.catalog-body {
+  height: 100%;
+  margin-top: 0!important;
+}
+.pdf {
+  width: 100%!important;
+}
+.pdf-pages {
+  > div {
+    text-align: center;
+    background: #dddddd!important;
+    > img {
+      background: #fff;
+    }
+  }
+}

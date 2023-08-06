@@ -1,0 +1,97 @@
+<%
+path = '../';
+category = '';
+page = '';
+%><!DOCTYPE html>
+<html lang="ja">
+<%- include ../include/_meta %>
+<%- include('../include/_head' ,{
+  title: meta.top.title,
+  description: meta.top.description,
+  catTitle: meta.top.catTitle
+})
+%>
+<body class="page-archives">
+<% include ../include/_old %>
+<div class="wrapper">
+  <% include ../include/_header %>
+  <div class="contents">
+
+			<div class="sitePath">
+				<ul class="inner">
+					<li class="item"><a href="/" aria-label="サイトトップへ戻る"><svg xmlns="http://www.w3.org/2000/svg" width="15.167" height="14" aria-label="Home"><path data-name="home" d="M5.833 14V9.333h3.5V14h3.558V7h2.275L7.583 0 0 7h2.275v7z" fill="#888"/></svg></a></li>
+					<li class="item"><strong>ページのタイトル</strong></li>
+				</ul>
+			</div>
+
+			<main>
+				<article>
+
+					<header class="page-header">
+      <div class="inner">
+       <h1 class="headline">
+        <span class="main">About</span>
+        <span class="sub">サイトについて</span>
+       </h1>
+      </div>
+					</header>
+     
+					<div class="page-body">
+						<div class="inner">
+     
+       <div class="aboutText">
+        <p class="aboutText-00">
+         <span>当サイトはPIRELLI、METZELERブランドの公式情報以外にも</span><br class="is-pc">
+         <em>ファンの皆さまが必要と思われる情報を発信し、<br>共有するために立ち上げられました。</em>
+        </p>
+        <p>メーカーサイドの一方的な、時には冷たく感じられる情報提供に対して、多方面からのご意見や情報を一元かつ多面的、横断的に閲覧していただくことが目的でございます。</p>
+        <p>本サイトには、皆様により多くの包括的な情報をお届けするために「非公式」の内容も含まれています。メーカーの公式サイトでは実現が難しい「ユーザーの視座に基づいた」構成を心がけております。</p>
+        <p>メーカーからのお知らせ、公開できるデータ関係、ジャーナリストの知見による考察や、ユーザーインプレッション、日本国内のイベント情報やレーシングサポートのスケジュールなど内容は多岐にわたります。</p>
+        <p class="aboutText-01"><strong>このサイトを「ファンサイト」と名付けさせていただきました。<br>PIRELLIブランドのファン、METZELERブランドのファンの方はもちろん、モーターサイクルファンのすべての方々に有益で面白い情報を集め、発信していくことで、日本のモータサイクル文化の発展、継承に一役買えれば幸いと存じます。</strong></p>
+
+        <dl class="tableStyle">
+         <div class="raw">
+          <dt class="head">趣旨</dt>
+          <dd class="body">
+           <p>当サイトはPIRELLI、METZELERブランドの公式情報以外のファンの皆さまが必要と思われるコンテンツを集めて発信するサイトです。皆様により多くの包括的な情報をお届けするために非公式の内容も含まれています。公式な情報に関してはPIRELLI、METZELERそれぞれの公式WEBサイトにてご確認ください。記事の内容には最新の注意を払っておりますが、サイト内の情報を活用する際には個人の責任のもとに行ってください。その内容から発生する問題もしくは副次的にもたらされるあらゆる問題について運営元のピレリジャパン株式会社（以下、弊社）では責任を負うものではありません。</p>
+           <ul>
+            <li><a href="aaaa" target="_blank">ピレリ公式サイト</a></li>
+            <li><a href="aaaa" target="_blank">メッツラー公式サイト</a></li>
+           </ul>
+          </dd>
+         </div>
+         <div class="raw">
+          <dt class="head">著作権について</dt>
+          <dd class="body">
+           <p>当サイトを構成する文章、画像、商標等にかかわる著作権は、弊社に帰属します。 利用者の皆さまが権利者から適正な許諾を得ることなく、本サイトの全部又は一部を無断で使用することは、法律により固く禁じられております。</p>
+          </dd>
+         </div>
+         <div class="raw">
+          <dt class="head">リンクについて</dt>
+          <dd class="body">
+           <p>当サイトへのリンクは、原則自由です。 ただし、画像などのページ構成要素に対してリンクをする場合は原典を明示の上、行ってください。 明示されていない形での直接リンクは禁止します。<br>当サイトからリンクされている第三者のサイトについては、それぞれの責任において管理・運営されています。 その内容から発生する問題もしくは副次的にもたらされるあらゆる問題について弊社は責任を負うものではありません。</p>
+          </dd>
+         </div>
+         <div class="raw">
+          <dt class="head">免責事項について</dt>
+          <dd class="body">
+           <p>弊社は当サイトに情報を掲載するにあたり細心の注意を払っていますが、掲載された情報の内容に関しその正確性や安全性を 保証するものではありません。あくまで利用者様ご本人の責任においてご利用頂くものとします。<br>利用者の皆様がこれらの情報の使用・利用、または使用・利用の不可能によって生じる損害・不利益について、弊社はいかなる責任を負うものではありません。 また予告なしに本サイト上の情報を変更、中断又は中止させて頂くことがございます。</p>
+          </dd>
+         </div>
+        </dl>
+       </div>
+
+      </div>
+     </div>
+
+    </article>
+   </main>
+			
+			
+   <% include ../include/_bnr_01 %>
+  </div>
+  <% include ../include/_footer %>
+</div>
+
+</body>
+</html>

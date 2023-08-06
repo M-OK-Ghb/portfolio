@@ -1,0 +1,58 @@
+// -------------------------------------------------------------------
+//  mixin.scss
+// -------------------------------------------------------------------
+
+// font-size-rem
+// -------------------------------------------------------------------
+@mixin fontsize($size) {
+  font-size: ($size / 10) * 1rem;
+  font-size: $size * 1px;
+}
+
+// hover
+// -------------------------------------------------------------------
+@mixin hover {
+  @include media(pc){
+    transition: all .3s $transition-easing;
+    &:hover {
+      @content;
+    }
+  }
+}
+
+// margin-auto
+// -------------------------------------------------------------------
+@mixin marginauto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// clearfix
+// -------------------------------------------------------------------
+@mixin clearfix {
+  zoom: 1;
+  &:after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+  &:before {
+    display: table;
+    content: "";
+  }
+}
+
+@mixin in($name) {
+  @at-root {
+    #{&}-#{$name} {
+      @content;
+    }
+  }
+}
+@mixin at($name) {
+  @at-root {
+    #{&}_#{$name} {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,1122 @@
+// -------------------------------------------------------------------
+//  tyres.scss
+// -------------------------------------------------------------------
+
+
+
+.nav-type {}
+
+
+.list-tyre {
+	width: 100%;
+	margin-left: -1px;
+	box-sizing: border-box;
+
+	.item {
+  width: calc(25% - 1px);
+		padding-left: 1px;
+		padding-bottom: 1px;
+  @include media(tb){
+   width: calc(50% - 1px);
+  }
+  @include media(sp){
+   width: calc(50% - 1px);
+  }
+		> a {
+   position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			padding: 35px 0;
+			//background: #ffffff;
+			//background-image: url(../images/bg_cat_onroad.jpg);
+			//background-repeat: no-repeat;
+			//background-position: 50% 0;
+			box-sizing: border-box;
+   transition: all .3s $transition-easingOutExpo;
+   //&::before {
+    //content: "";
+    //position: absolute;
+    //bottom: 0;
+    //z-index: 0;
+   //}
+      }
+
+      .bg {
+         width: 100%;
+         height: 65%;
+         position: absolute;
+         top: 0;
+         left: 0;
+			background-image: url(../images/bg_cat_onroad.jpg);
+			background-repeat: no-repeat;
+         background-position: 50% 0;
+         background-size: cover;
+      }
+      
+		.label {
+   position: relative;
+			margin: 0 0 10px;
+			width: 71.42857142857143%;
+			//background: #ffffff;
+			text-align: center;
+			> img {
+            max-width: 100%;
+			}
+		}
+		.image {
+   position: relative;
+   transition: .2s;
+   -webkit-backface-visibility:hidden;
+   backface-visibility:hidden;
+   //width: 71.42857142857143%;
+   width: 90%;
+   display: block;
+			text-align: center;
+			> img {
+				max-width: 100%;
+			}
+		}
+
+      @include media(pc){
+         &:hover {
+            .image {
+               transform: translateY(-20px);
+            }
+         }
+      }
+	}
+}
+#{unquote('_:-ms-input-placeholder, :root')} .list-tyre .item .image {
+   height: 250px;
+}
+
+
+
+.tyreList-block {
+ width: 100%;
+ margin-top: 80px;
+ padding-right: 80px;
+ padding-left: 80px;
+ overflow: hidden;
+
+ @include media(sp){
+  margin-top: 40px;
+  padding-right: 5%;
+  padding-left: 5%;
+ }
+ > .inner {
+		max-width: 1600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+ }
+ .localNav {
+  width: 100%;
+ }
+ .localNav-L {
+  width: 100%;
+  > .inner {
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: nowrap;
+   box-sizing: border-box;
+   @include media(sp){
+    flex-wrap: wrap;
+   }
+  }
+  .item {
+   min-height: 97px;
+   flex-basis: 20%;
+
+   @include media(sp){
+      min-height: 50px;
+    flex-basis: 50%;
+    &:first-child {
+     flex-basis: 100% !important;
+    }
+   }
+
+   &:first-child {
+      a {
+         justify-content: center;
+      }
+   }
+
+   > a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    background: #ffffff;
+    border: 1px solid #222222;
+    color: #222222;
+    text-decoration: none;
+    transition: all .3s $transition-easingOutExpo;
+    box-sizing: border-box;
+    outline: none;
+    @include media(sp){
+      padding: 10px 20px;
+       flex-direction: row;
+       justify-content: flex-start;
+    }
+    > .icon {
+     display: block;
+     width: 100%;
+     height: 30px;
+     margin-bottom: 5px;
+     text-align: center;
+     @include media(sp){
+        width: 30px;
+        margin-right: 10px;
+        margin-bottom: 0;
+     }
+     svg {
+      width: 100%;
+      height: 100%;
+      @include media(sp){
+         width: 30px;
+      }
+      path,circle {
+       fill:#222222;
+      }
+     }
+    }
+    > .label {
+     display: block;
+     text-align: center;
+    }
+
+    @include media(sp){
+     border: 0.5px solid #222222;
+    }
+    
+   }
+   &:nth-child(1) {
+    flex-basis: 10%;
+   }
+   + .item > a,
+   + .item > button {
+    border-left:none;
+   }
+   &:nth-child(even) > a {
+    @include media(sp){
+     border-left: 0.5px solid #222222;
+    }
+   }
+
+   &.is-active a,
+   button.is-checked {
+    background: #222222;
+    color: #ffffff;
+    svg {
+     path,circle {
+      fill:#ffffff;
+     }
+    }
+   }
+
+   @include media(pc){
+      &:hover a,
+      &:hover button,
+      &.is-active a,
+      button.is-checked {
+       background: #222222;
+       color: #ffffff;
+       svg {
+        path,circle {
+         fill:#ffffff;
+        }
+       }
+      }
+     }
+    }
+   }
+ 
+ 
+ 
+ 
+ .localNav-S {
+  margin: 40px 0 20px;
+  > .inner {
+   display: flex;
+   flex-wrap: wrap;
+   box-sizing: border-box;
+   
+  }
+  .item {
+   margin-right: 10px;
+   margin-bottom: 10px;
+   margin: 0 10px 10px 0;
+   > a,
+   > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 30px;
+    padding: 0 20px;
+    background: #ffffff;
+    border: 1px solid #222222;
+    border-radius: 40px;
+    color: #222222;
+    @include fontsize(14);
+    text-decoration: none;
+    transition: all .3s $transition-easingOutExpo;
+    box-sizing: border-box;
+    cursor: pointer;
+    > .icon {
+     display: block;
+     width: 30px;
+     height: 20px;
+     margin-right: 10px;
+     text-align: center;
+     svg {
+      width: 100%;
+      height: 100%;
+      path {
+       fill:#222222;
+      }
+     }
+    }
+   }
+
+   &:hover a,
+   &:hover button,
+   &.is-active a,
+   button.is-checked {
+    background: #222222;
+    color: #ffffff;
+    svg {
+     path {
+      fill:#ffffff;
+     }
+    }
+   }
+  }
+ }
+}
+
+
+ 
+
+.tyre-data {
+ position: relative;
+ width: 100%;
+ box-sizing: border-box;
+
+ @include media(pc){
+ margin-bottom: 80px;
+ }
+
+ @include media(sp){
+    margin-top: 60px;
+ }
+
+ > .inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 65px 120px 1fr;
+ // gap: 13px 0px;
+   max-width: 1600px;
+  margin: 0 auto;
+  padding: 160px 5% 0;
+  box-sizing: border-box;
+
+  @include media(pc){
+   position: relative;
+  }
+
+  @include media(sp){
+   grid-template-columns: 1fr;
+   grid-template-rows: 65px 90px 1fr;
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-top: 0;
+  }
+ }
+
+ .tyre-data-bg {
+   position: absolute;
+   content: "";
+   width: 100%;
+   height: 344px;
+   background-image: url(../images/dummy_category_bg_01.jpg);
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   z-index: 0;
+}
+ //&::before {
+  //position: absolute;
+  //content: "";
+  //width: 100%;
+  //height: 344px;
+  //background-image: url(../images/dummy_category_bg_01.jpg);
+  //background-repeat: no-repeat;
+  //background-position: center;
+  //background-size: cover;
+  //z-index: 0;
+ //}
+ 
+ .category {
+  grid-area: 1 / 2 / 2 / 3;
+  z-index: 1;
+  color: #ffffff;
+  @include fontsize(14);
+  position: relative;
+
+  @include media(pc){
+     padding-left: 20px;
+  }
+
+  @include media(sp){
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     grid-area: 1 / 1 / 2 / 2;
+  }
+
+  .items {
+   display: flex;
+   flex-flow: row;
+   justify-content: flex-start;
+   .item {
+    display: flex;
+    .icon {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 30px;
+     height: 25px;
+     margin-right: 5px;
+     svg {
+      width: 50px;
+      height: 50px;
+   }
+    }
+    .label {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     line-height: 1;
+    }
+    + .item {
+     &::before {
+      content: ">";
+      margin-left: 20px;
+      margin-right: 20px;
+     }
+    }
+   }
+   
+  }
+ }
+ .headline {
+  grid-area: 2 / 2 / 3 / 3;
+  align-self: start;
+  z-index: 1;
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  align-items: center;
+  @include fontsize(14);
+  font-weight: normal;
+  line-height: 1;
+  position: relative;
+
+  @include media(pc){
+     padding-left: 20px;
+  }
+
+  @include media(sp){
+     grid-area: 2 / 1 / 3 / 2;
+     justify-content: flex-start;
+  }
+  
+  .label {
+   width: 200px;
+   height: 60px;
+   background: #ffffff;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   img {
+    max-width: 100%;
+    height: 60px;
+   }
+  }
+  .type {
+   display: inline-block;
+   margin-left: 22px;
+   padding: 10px;
+   border: 1px solid rgba(255,255,255,0.5);
+   background: rgba(0,0,0,0.5);
+   color: #ffffff;
+
+   @include media(sp){
+       margin-left: 15px;
+   }
+  }
+ }
+ .summary {
+  grid-area: 3 / 2 / 4 / 3;
+  align-self: start;
+  z-index: 1;
+  padding: 40px 0;
+  @include media(pc){
+     padding-left: 20px;
+  }
+  @include media(sp){
+   padding: 0 0 40px 0;
+     grid-area: 4 / 1 / 5 / 2;
+  }
+  .head {
+   @include fontsize(18);
+   font-weight: bold;
+   line-height: 1.7;
+  }
+  .body {
+   margin-top: 15px;
+   @include fontsize(14);
+   font-weight: normal;
+   line-height: 2.0;
+  }
+ }
+ .catalog {
+  grid-area: 4 / 2 / 5 / 3;
+  align-self: start;
+  z-index: 1;
+  @include media(pc){
+     padding-left: 20px;
+  }
+  @include media(sp){
+     grid-area: 5 / 1 / 6 / 2;
+  }
+  > .btn {
+   display: inline-block;
+   background: #222222;
+   color: #ffffff;
+   @include fontsize(14);
+   text-decoration: none;
+   text-align: center;
+   font-weight: normal;
+  } 
+
+  a {
+
+  @include media(sp){
+     margin: 0 auto;
+}
+  }
+ }
+ .photos {
+  display: grid;
+  grid-area: 1 / 1 / 5 / 2;
+  grid-template-columns: 100px;
+/*
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  flex-wrap: wrap;
+*/
+  z-index: 1;
+  overflow: hidden;
+
+  @include media(pc){
+     min-width: 500px;
+  }
+
+  @include media(sp){
+     display: flex;
+     flex-direction: column;
+     grid-area: 3 / 1 / 4 / 2;
+  }
+  
+  > .images {
+   grid-area: 1 / 2 / 2 / 3;
+   overflow: hidden;
+
+   @include media(pc){
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+      max-width: 660px;
+   }
+   > .inner {
+    width: 100%;
+   }
+   .items {
+    width: 100%;
+   }
+   .item {
+    display: block;
+    padding: 0 60px;
+    text-align: center;
+
+    @include media(sp){
+      padding: 0 50px;
+    }
+
+    picture {}
+    img {
+     width: 100%;
+     max-width: 450px;
+    }
+   }
+  }
+  > .thumbnails {
+   grid-area: 1 / 1 / 2 / 2;
+//   flex-basis: 100px;
+   width: 100px;
+
+   @include media(sp){
+      width: 100%;
+      margin: 20px 0 40px 0;
+   }
+
+   > .inner {
+    height: 100%;
+   }
+   //.items {
+   // display: flex;
+   // flex-direction: column;
+   // width: 100%;
+   // height: 100%;
+   //}
+
+   .items {
+      justify-content: center;
+      @include media(sp){
+         flex-direction: row !important;
+      }
+   }
+
+   .item {
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+    width: 100px;
+    height: 100px !important;
+    padding: 5px;
+    background: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media(sp){
+       width: 33.3%;
+       height: 90px !important;
+    }
+
+    + .item {
+     margin-top: 10px;
+
+     @include media(sp){
+        margin: 0;
+   }
+
+    }
+    picture {}
+    img {
+       width: 100%;
+       height: 100%;
+
+       @include media(sp){
+          width: auto;
+       }
+    }
+    &.swiper-slide-thumb-active {
+     img {
+      opacity: 0.5;
+     }
+    }
+   }
+  }
+
+  .swiper-button-prev {
+   background: none;
+   &::after {
+    display: none;
+   }
+  }
+  .swiper-button-next {
+   background: none;
+   &::after {
+    display: none;
+   }
+  }
+  .swiper-button-disabled {}
+
+ }
+}
+
+.swiper-button-prev {
+   left: 0 !important;
+}
+
+.tyre-size {
+ position: relative;
+ width: 100%;
+ margin-top: 160px;
+ box-sizing: border-box;
+
+ @include media(sp){
+   margin-top: 100px;
+ }
+
+ > .inner {
+		max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 5%;
+  box-sizing: border-box;
+
+
+  @include media(sp){
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  > .header .title {
+   @include fontsize(28);
+   text-align: center;
+  }
+  > .body {
+  }
+ }
+ .notice {
+  margin-top: 34px;
+  color: #555555;
+  @include fontsize(12);
+ }
+
+
+ .tabBox {
+  margin-top: 60px;
+
+  @include media(sp){
+     margin-top: 30px;
+  }
+
+  .tabList {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-bottom: 1px solid #222222;
+
+   @include media(sp){
+      align-items: flex-end;
+   }
+   
+   .item {
+    max-width: 280px;
+    margin: 0 2px;
+    box-sizing: border-box;
+
+    @include media(sp){
+       min-width: 0;
+       height: 65px;
+    }
+    
+    button {
+     width: 100%;
+     padding: 18px;
+     border: 1px solid #222222;
+     border-bottom: none;
+     border-radius: 4px 4px 0 0;
+     background: #ffffff;
+     color: #222222;
+     @include fontsize(14);
+     line-height: 1;
+     font-weight: bold;
+     outline: none;
+     appearance: none;
+     cursor: pointer;
+     transition: all .3s $transition-easingOutExpo,;
+
+     @include media(sp){
+        height: 65px;
+     }
+    }
+
+    @include media(pc){
+      &:hover {
+       button {
+        border-color:  #222222;
+        background: #222222;
+        color: #ffffff;
+       }
+      }
+   }
+    &.is-active {
+     button {
+      border-color:  #222222;
+      background: #222222;
+      color: #ffffff;
+      cursor:auto;
+     }
+    }
+   }
+  }
+  .tabPanel {
+   display: none;
+   border-bottom: 1px solid #222222;
+   &.is-show {
+    display: block;
+   }
+   .items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 4px 4px;
+    padding: 20px 0;
+
+    @include media(sp){
+       grid-template-columns: 1fr;
+    }
+   }
+   .item {
+    padding: 15px 20px;
+    background: #f0f0f0;
+    @include fontsize(14);
+    line-height: 1;
+   }
+  }
+
+  &.tab-num-3 {
+   .tabList {
+    .item {
+     width: calc(848px / 3);
+    }
+   }
+  }
+  &.tab-num-2 {
+   .tabList {
+    .item {
+     width: calc(848px / 2);
+    }
+   }
+  }
+ }
+}
+
+
+.tyre-pnNav {
+ margin-top: 100px;
+ .inner {
+  display: flex;
+  justify-content: space-between;
+		max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 5%;
+  box-sizing: border-box;
+
+  @include media(sp){
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+ }
+ .btn {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+//  max-width: 510px;
+//  padding: 0 20px;
+  box-sizing: border-box;
+  transition: all .3s $transition-easingOutExpo;
+
+  @include media(sp){
+     width: calc(50% - 10px);
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+
+     &:first-child {
+      flex-direction: column-reverse;
+     }
+  }
+  /*
+  &::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   width: 70px;
+   height: 70px;
+   margin: auto;
+   background: #222222;
+   border-radius: 4px;
+   z-index: 2;
+  }
+  */
+  &::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   bottom: 0;
+   width: calc(100% - 50px);
+   height: 120px;
+   margin: auto;
+   border: 1px solid #222222;
+   border-radius: 4px;
+   z-index: 0;
+
+   @include media(sp){
+      width: 100%;
+      height: 300px;
+   }
+  }
+  .icon {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 70px;
+   height: 70px;
+   background: #222222;
+   border-radius: 4px;
+   z-index: 10;
+   transition: all .3s $transition-easingOutExpo;
+   @include media(pc){
+      min-width: 70px;
+      min-height: 70px;
+   }
+   @include media(sp){
+      width: 35px;
+      height: 60px;
+      position: absolute;
+ }
+
+ path {
+    fill: #ffdd32;
+ }
+  }
+  .label {
+   display: block;
+   padding: 0 10px;
+   z-index: 10;
+
+   img {
+         width: 100%;
+   }
+
+  }
+  .image {
+   display: flex;
+   align-items: center;
+//   padding-top: 30px;
+   z-index: 10;
+   > img  {
+    max-height: 200px;
+    width: auto;
+
+    @include media(sp){
+      max-width: 100%;
+   }
+   }
+  }
+
+  @include media(pc){
+  &:hover {
+   .icon {
+    background: #ffdd32;
+    path {
+  			fill: #222222;
+    }
+   }
+  }
+}
+ }
+ .prev {
+  margin-right: 10px;
+  &::before {
+   left: 0;
+  }
+  &::after {
+   right: 0;
+  }
+  .icon {
+     @include media(sp){
+      left: -14%;
+   }
+  }
+  .label {
+   order: 2;
+  }
+  .image {
+   padding-left: 10px;
+  }
+
+  @include media(pc){
+  &:hover {
+   .icon {
+    transform: translateX(-15px);
+   }
+  }
+}
+ }
+ .next {
+  margin-left: 10px;
+  &::before {
+   right: 0;
+  }
+  &::after {
+   left: 0;
+  }
+  .icon {
+     order: 3;
+     @include media(sp){
+      right: -14%;
+   }
+   }
+  .label {}
+  .image {
+   padding-right: 10px;
+  }
+
+  @include media(pc){
+  &:hover {
+   .icon {
+    transform: translateX(15px);
+   }
+  }
+}
+ }
+ 
+}
+
+
+
+
+.list-tyre .item.type-racing > a > .bg,
+.type-racing .tyre-data::before {
+ background-image: url(../images/bg_cat_racing_race.jpg);
+}
+.list-tyre .item.type-racing-race > a > .bg,
+.type-racing-race .tyre-data::before {
+ background-image: url(../images/bg_cat_racing_race.jpg);
+}
+
+
+.list-tyre .item.type-onroad > a > .bg,
+.type-onroad .tyre-data::before {
+// background-image: url(../images/bg_cat_onroad.jpg);
+}
+.list-tyre .item.type-onroad-cruiser_tourers > a > .bg,
+.type-onroad-cruiser_tourers .tyre-data::before {
+ background-image: url(../images/bg_cat_onroad_cruiser_tourers.jpg);
+}
+.list-tyre .item.type-onroad-sport > a > .bg,
+.type-onroad-sport .tyre-data::before {
+ background-image: url(../images/bg_cat_onroad_sport.jpg);
+}
+.list-tyre .item.type-onroad-sport_touring > a > .bg,
+.type-onroad-sport_touring .tyre-data::before {
+ background-image: url(../images/bg_cat_onroad_sport_touring.jpg);
+}
+.list-tyre .item.type-onroad-supersport > a > .bg,
+.type-onroad-supersport .tyre-data::before {
+ background-image: url(../images/bg_cat_onroad_supersport.jpg);
+}
+.list-tyre .item.type-onroad-urban > a > .bg,
+.type-onroad-urban .tyre-data::before {
+ background-image: url(../images/bg_cat_onroad_urban.jpg);
+}
+
+
+.list-tyre .item.type-on_offroad-enduro_onoff > a > .bg,
+.type-on_offroad-enduro_onoff .tyre-data::before {
+ background-image: url(../images/bg_cat_on_offroad_enduro_onoff.jpg);
+}
+.list-tyre .item.type-on_offroad-street > a > .bg,
+.type-on_offroad-street .tyre-data::before {
+ background-image: url(../images/bg_cat_on_offroad_enduro_street.jpg);
+}
+.list-tyre .item.type-on_offroad-rally > a > .bg,
+.type-on_offroad-rally .tyre-data::before {
+ background-image: url(../images/bg_cat_on_offroad_rally.jpg);
+}
+
+
+.list-tyre .item.type-offroad > a > .bg,
+.type-on_offroad .tyre-data::before {
+ background-image: url(../images/bg_cat_offroad_motocross.jpg);
+}
+.list-tyre .item.type-offroad-motocross > a > .bg,
+.type-on_offroad-motocross .tyre-data::before {
+ background-image: url(../images/bg_cat_offroad_motocross.jpg);
+}
+
+
+.list-tyre .item.type-scooter > a > .bg,
+.type-scooter .tyre-data::before {
+ background-image: url(../images/bg_cat_scooter_onoff.jpg);
+}
+.list-tyre .item.type-scooter-onoff > a > .bg,
+.type-scooter-onoff .tyre-data::before {
+ background-image: url(../images/bg_cat_scooter_onoff.jpg);
+}
+.list-tyre .item.type-scooter-race > a > .bg,
+.type-scooter-race .tyre-data::before {
+ background-image: url(../images/bg_cat_scooter_race.jpg);
+}
+.list-tyre .item.type-scooter-sport > a > .bg,
+.type-scooter-sport .tyre-data::before {
+ background-image: url(../images/bg_cat_scooter_sport.jpg);
+}
+.list-tyre .item.type-scooter-urban > a > .bg,
+.type-scooter-urban .tyre-data::before {
+ background-image: url(../images/bg_cat_scooter_urban.jpg);
+}
+
+.photos-ie-only-styles {
+
+   .photos {
+      position: relative;
+   
+       @include media(pc){
+          min-width: 300px;
+       }
+       .images {
+          @include media(pc){
+            position: absolute;
+          }
+       }
+   }
+
+   .tyre-pnNav {
+      .icon {
+         top: 0;
+         bottom: 0;
+         margin: auto;
+      } 
+
+      .label {
+         width: 100%;
+      }
+
+      .image {
+         @include media(pc){
+            width: 100%;
+         }
+      }
+   }
+ }
+
+ .tyres-ie-only-styles {
+   .list-tyre {
+     .image {
+        img {
+         //width: 100%;
+         max-height: 250px;
+      }
+     }
+  }
+}

@@ -1,0 +1,297 @@
+<%
+path = '../';
+category = '';
+page = '';
+%><!DOCTYPE html>
+<html lang="ja">
+<%- include ../include/_meta %>
+<%- include('../include/_head' ,{
+  title: meta.top.title,
+  description: meta.top.description,
+  catTitle: meta.top.catTitle
+})
+%>
+<body class="page-tyre-list">
+<% include ../include/_old %>
+<div class="wrapper">
+  <% include ../include/_header %>
+  <div class="contents">
+
+			<div class="sitePath">
+				<ul class="inner">
+					<li class="item"><a href="/" aria-label="サイトトップへ戻る"><svg xmlns="http://www.w3.org/2000/svg" width="15.167" height="14" aria-label="Home"><path data-name="home" d="M5.833 14V9.333h3.5V14h3.558V7h2.275L7.583 0 0 7h2.275v7z" fill="#888"/></svg></a></li>
+					<li class="item"><strong>All Tyres</strong></li>
+				</ul>
+			</div>
+
+
+			<main>
+			
+				<div class="page-header">
+					<div class="inner">
+						<h1 class="headline">
+							<span class="main">All <br class="is-sp">Tyres</span>
+							<span class="sub">全てのタイヤ</span>
+						</h1>
+					</div>
+				</div>
+
+				<div class="tyreList-block">
+					<div class="inner">
+      <div class="localNav filter-button-group">
+        <div class="localNav-L">
+          <ul class="inner">
+          <li class="item"><a href="/pirelli/tyres/"><span>All</span></a></li>
+          <li class="item is-active">
+          <a href="/pirelli/tyres/racing/">
+          <span class="icon"><svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 123.5 71.5" xml:space="preserve"><style>.st0{fill:#fff}</style><g id="レイヤー_2_1_"><g id="レイヤー_6"><path class="st0" d="M83.1 61.2c1.1-7.9 2.4-19.3 20.4-30.9 5.1-3.8 13.1-5.8 2.7-18S90.7-1.2 86.6.7c-1.8.8-.1 1.7 4.8 6.8 2.6 2.7 8.9 8.1 2.3 12.1s-11.6 1.7-16.9-5C73.5 10.4 61.5 11.3 57 13c-2.2.8-3.5 2.4-2.9 9.2s-5.4 13-16.2 8.5-12.5-16.1-12.5-18.2c0 0-14.5-1.2-21.4 4.8s-1.9 4.1 7.6 7c12.2 3.6 34.8 10.9 30.3 37l41.2-.1z"></path><path class="st0" d="M50.3 21.1c-.2 3 0 9.3-9 6.7S30.2 16 30 13.5s.9.4 3 1.9 12.3 2.8 15 2.4 2.4 1.3 2.3 3.3zM20.1 70.2c-9.5 0-17.3-7.7-17.3-17.3s7.7-17.3 17.3-17.3 17.3 7.7 17.3 17.3c0 9.6-7.8 17.3-17.3 17.3zm0-28.6c-6.2 0-11.3 5.1-11.3 11.3s5.1 11.3 11.3 11.3c6.2 0 11.3-5.1 11.3-11.3 0-6.2-5.1-11.3-11.3-11.3z"></path><path class="st0" d="M20.1 71.5c-10.3 0-18.6-8.3-18.6-18.6s8.3-18.6 18.6-18.6 18.6 8.3 18.6 18.6-8.3 18.6-18.6 18.6zm0-34.6c-8.8 0-16 7.2-16 16s7.2 16 16 16 16-7.2 16-16-7.2-15.9-16-16zm0 28.6c-7 0-12.6-5.6-12.6-12.6s5.6-12.6 12.6-12.6S32.7 46 32.7 52.9c0 7-5.7 12.6-12.6 12.6zm0-22.6c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-9.9-10-10z"></path><path class="st0" d="M20.1 58h19.1c.8 0 1.5-.7 1.5-1.5v-.3L39.2 49c-.1-.7-.7-1.2-1.5-1.2H20.1c-2.8 0-5.1 2.3-5.1 5.1s2.3 5.1 5.1 5.1zM76.9 12.5c-1.5-1.3 4.7-5.6 8.2-4.8s5.5 9.4 3.8 9.5-2.8 0-5-3.3c-1.5-2.1-5.3.1-7-1.4z"></path><path transform="rotate(-45.001 4.746 30.134)" class="st0" d="M.7 27.4h8v5.4h-8z"></path><path transform="rotate(-45.001 9.033 25.844)" class="st0" d="M5 24.6h8V27H5z"></path><path class="st0" d="M106.8 42.6c2.2-1.6 5.2-1.1 13.5-1.3.8 0 1.4-.6 1.4-1.4 0-.3-.1-.7-.4-.9-2.2-2.4-7.5-7-12.1-6.9-2.7 0-5.4 2.2-7 3.8-1.7 1.9-1.6 4.8.2 6.6 1.9 1.9 3.4.8 4.4.1z"></path><circle class="st0" cx="20.1" cy="52.9" r="5.1"></circle><circle class="st0" cx="104.8" cy="52.9" r="6.7"></circle><path class="st0" d="M105.5 56.9l2.5-1.4-6.8-11.8c-.9.4-1.8.8-2.5 1.5l6.8 11.7z"></path><path class="st0" d="M121.1 44c-.3-.5-.8-.8-1.4-.8l-6.8.2c-.8 0-1.4.8-1.4 1.6 0 .4.2.7.4 1 3.9 3.9 3.8 10.3-.1 14.1C108 64 101.6 64 97.7 60c-3.9-3.9-3.8-10.3.1-14.1 1-.9 2.1-1.7 3.4-2.2L98 38.1c-4.7 3.8-8 8-10 15.8-.9 3.2-.3 6.6 1.5 9.3 5.9 8.4 17.5 10.4 25.9 4.5 7.5-5.3 10-15.5 5.7-23.7z"></path></g></g></svg>
+          </span>
+          <span class="label">レーシング</span>
+          </a>
+          </li>
+          <li class="item">
+          <a href="/pirelli/tyres/onroad/">
+          <span class="icon"><svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 123 81.1" xml:space="preserve"><style>.st0{fill:#fff}</style><g id="レイヤー_2_1_"><g id="レイヤー_6"><path class="st0" d="M20 52.3c4.9 0 8.8 4 8.8 8.8s-4 8.8-8.8 8.8-8.8-4-8.8-8.8c0-4.9 3.9-8.8 8.8-8.8m0-11.2c-11 0-20 9-20 20s9 20 20 20 20-9 20-20-9-20-20-20z"></path><circle class="st0" cx="20" cy="61.1" r="4.9"></circle><path class="st0" d="M103.1 52.3c4.9 0 8.8 4 8.8 8.8s-4 8.8-8.8 8.8-8.8-4-8.8-8.8c-.1-4.9 3.9-8.8 8.8-8.8m0-11.2c-11 0-20 9-20 20s9 20 20 20 20-9 20-20-9-20-20-20z"></path><circle class="st0" cx="103.1" cy="61.1" r="4.9"></circle><path transform="rotate(-27.712 95.675 47.07)" class="st0" d="M94 31.2h3.3v31.7H94z"></path><path transform="rotate(-61.841 26.77 48.457)" class="st0" d="M12.4 46.8h28.7v3.3H12.4z"></path><path class="st0" d="M79.5 55.3H44.7c-.2 0-.4-.1-.6-.3-1.4-2.5-11.3-18.9-39.3-26.9-.3-.1-.5-.5-.4-.8 0-.1.1-.1.1-.2l3.4-3.7c.1-.1.3-.2.5-.2h5.5c.1 0 .2 0 .3.1 2 1.1 23.7 12.8 33.8 10.1 10.6-2.8 15.6-9.5 7.2-16.1s6.7-7.4 14.5-6.5c5.6.7 8 3.8 9 5.5.2.3.6.4.9.2.1-.1.2-.1.2-.2 1.2-2 4-5.9 8.7-5.9 6.3.1 1.2-5.1-5.4-9.1-3.5-1.7 2.4-3.2 12.6 5.5 17.4 14.9 14.3 22.9 9.5 23.8-9.5 1.7-16.8 2.4-25.1 24.3-.1.2-.3.4-.6.4z"></path><path class="st0" d="M26.8 39.7c-5.8-4.3-15.5-4-19.5-2.7s-7.5 8.6 0 4.6 19.5-1.9 19.5-1.9zM94.8 36.6l1.6 3.4c6-2.4 12.8-2 18.4 1.1 0 0 2-5-2.2-6.1-4.1-1-13-1.6-17.8 1.6zM79.9 4.2l5.2 6.3c.7.8.6 2.1-.3 2.8-.8.7-2.1.6-2.8-.3l-5.2-6.3c-.7-.8-.6-2.1.3-2.8.9-.6 2.1-.5 2.8.3zM22.1 24.4c8.5 4.8 24.9 9.7 30.9 4.1s.6-9.3-.6-10-2.2 1.1-3.6 1.9-18.2-3-21.8-4.8-6.2-1.6-5.9 2.6c.1 2.1.4 4.1 1 6.2zM89.9 36.1c1.3 2.5-9.9 19.2-9.9 19.2l-6.7-11.9 12.6-11.6 4 4.3z"></path></g></g></svg>
+          </span>
+          <span class="label">オンロード</span>
+          </a>
+          </li>
+          <li class="item">
+          <a href="/pirelli/tyres/on_offroad/">
+          <span class="icon"><svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 123.5 82.2" xml:space="preserve"><style>.st0{fill:#fff}</style><g id="レイヤー_2_1_"><g id="レイヤー_6"><path class="st0" d="M96.4 29.6c-5.6 2.5-15.4 7.2-16.6 18.7s-9.9 18.4-19 18.7-15.3-2.3-15.5-9.3-5.4-12.7-5.8-13-2.3-2.5 3.7-1.5 20-3.8 21-5.4c1-1.5-3.4-4.7-3.4-4.7s-9.1 4.7-18.4 4.7S24.6 33 11.8 25c-3.5-1.8-2.4-4-.7-4h9.7s4.7-.4 11.6 4.7 12.8 6.8 17.3 2.9 10.4-10.3 17.2-10.1 13.7 4.6 18.6 1.4 3.6-5.8 1-9.1S80.4-2.3 84.9.5s10.9 9 15.9 21.8c.9 3-4.4 7.3-4.4 7.3z"></path><path class="st0" d="M76.6 5.1l6.5 9.5c.6.9.4 2.2-.5 2.8-.9.6-2.2.4-2.8-.5l-6.5-9.5c-.6-.9-.4-2.2.5-2.8.9-.7 2.2-.5 2.8.5z"></path><path class="st0" d="M71.2 8.9H78c.8 0 1.5.7 1.5 1.5v1c0 .8-.7 1.5-1.5 1.5h-6.8c-.8 0-1.5-.7-1.5-1.5v-1c0-.8.7-1.5 1.5-1.5zM19.6 49.8c7 0 12.7 5.7 12.7 12.7s-5.7 12.7-12.7 12.7S6.9 69.6 6.9 62.6s5.7-12.7 12.7-12.8m0-6.9C8.8 42.9 0 51.7 0 62.6s8.8 19.6 19.6 19.6 19.6-8.8 19.6-19.6c.1-10.9-8.7-19.7-19.6-19.7z"></path><circle class="st0" cx="19.6" cy="62.6" r="8.2"></circle><path class="st0" d="M103.8 49.8c7 0 12.7 5.7 12.7 12.7s-5.7 12.7-12.7 12.7c-7 0-12.7-5.7-12.7-12.7 0-6.9 5.7-12.6 12.7-12.7m0-6.9c-10.8 0-19.6 8.8-19.6 19.6s8.8 19.6 19.6 19.6 19.6-8.8 19.6-19.6c.1-10.8-8.7-19.6-19.6-19.6z"></path><circle class="st0" cx="103.8" cy="62.6" r="8.2"></circle><path transform="rotate(-17.259 34.275 58.416)" class="st0" d="M21.3 55.4h25.9v6.1H21.3z"></path><path class="st0" d="M95.8 39.4l8.6 17.9c.7 1.5.1 3.3-1.4 4.1-1.5.7-3.3.1-4.1-1.4l-8.6-17.9c-.7-1.5-.1-3.3 1.4-4.1 1.5-.7 3.3-.1 4.1 1.4zM100.8 22.3c7.7 4.9 11.2 8 12.1 10.3s-7.6-2.5-16.5-3 4.4-7.3 4.4-7.3z"></path></g></g></svg>
+          </span>
+          <span class="label">オン/オフロード</span>
+          </a>
+          </li>
+          <li class="item">
+          <a href="/pirelli/tyres/offroad/">
+          <span class="icon"><svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 123.5 71.6" xml:space="preserve"><style>.st0{fill:#fff}</style><g id="レイヤー_2_1_"><g id="レイヤー_6"><path class="st0" d="M43.3 52.3c0 .6.4 1 .9 1.1H56c5.8 0 14.6-3 16.9-11.4s13.1-22.7 30-22.7c7.1 0 13.5 6.2 14.6 2.8s-6.9-7.3-14.6-7.3c-5.9 0-10.3 1.1-11.6 1.9-.4.2-.9.2-1.2-.1l-4.7-4.9c-.2-.2-.4-.3-.7-.3h-9.4c-.5 0-.9.4-1 .8-.3 2.4-2.7 9.5-19.1 17.3-.1.1-.3.1-.4.1-2.2.1-25.1.4-33.8-15.6-.2-.3-.5-.5-.9-.5h-13c-.6 0-1 .5-.9 1.1 0 .3.2.6.5.8l4.6 2.4c.4.2.6.6.5 1l-.4 2.8c-.1.5.2.9.7 1.1C17.3 24 45.3 33 43.3 52.3zM80.3 6.9c2.3-1.3 2.3-3.9 0-4.1S79.6 0 78.2 0H65.9v4.1H74v2.8h6.3z"></path><path class="st0" d="M71.6 13.8C67.3 18.7 59.8 26.3 55.3 27s-24.6-2.2-30-10.5 4.5-.7 9.4-.2 19.5 4.4 34.9-3.6c2-1.4 2 1.1 2 1.1zM19.8 38.8c7.2 0 13 5.8 13 13s-5.8 13-13 13-13-5.8-13-13 5.8-13 13-13m0-6.8C8.9 32 0 40.9 0 51.8s8.9 19.8 19.8 19.8 19.8-8.9 19.8-19.8S30.7 32 19.8 32z"></path><circle class="st0" cx="19.8" cy="51.8" r="7.3"></circle><path class="st0" d="M103.7 38.8c7.2 0 13 5.8 13 13s-5.8 13-13 13-13-5.8-13-13 5.8-13 13-13m0-6.8c-10.9 0-19.8 8.9-19.8 19.8s8.9 19.8 19.8 19.8 19.8-8.9 19.8-19.8S114.6 32 103.7 32z"></path><circle class="st0" cx="103.7" cy="51.8" r="7.3"></circle><path transform="rotate(-13.179 35.495 48.147)" class="st0" d="M19.4 46.2h32.2v3.9H19.4z"></path><path class="st0" d="M103.7 54.7c-1 0-2-.6-2.5-1.5L88.3 30.8c-.9-1.3-.6-3.1.7-4s3.1-.6 4 .7c.1.2.2.3.3.5l12.9 22.5c.8 1.4.3 3.2-1 4-.6.1-1.1.2-1.5.2z"></path></g></g></svg>
+          </span>
+          <span class="label">オフロード</span>
+          </a>
+          </li>
+          <li class="item">
+          <a href="/pirelli/tyres/scooter/">
+          <span class="icon"><svg version="1.1" id="レイヤー_1" xmlns="http://www.w3.org/2000/svg" x="0" y="0" viewBox="0 0 123.5 77.3" xml:space="preserve"><style>.st0{fill:#fff}</style><g id="レイヤー_2_1_"><g id="レイヤー_6"><path class="st0" d="M38.9 65.5L.2 27c-.2-.1-.2-.3-.2-.4V24c0-.3.2-.6.5-.6.1 0 .2 0 .3.1l46.4 23.3c.1 0 .1.1.2.1l9.2 9.7c.1.1.2.2.4.2h12.6c.2 0 .3-.1.4-.2L78.1 46s3.5-4.4 0-10.1-5.7-16.9-.5-21.8c3.6-3.3 5-4.8 5.6-5.4.2-.2.5-.2.7-.1C87 11 106.1 25.9 111.6 35c1.9 2.9 1.2 3.7-3.5 2.9S82 40.5 84.2 65.1c0 .3-.2.6-.5.6H39.3c-.2 0-.3-.1-.4-.2z"></path><path class="st0" d="M47.6 42.2L5.9 21.6s-3-1.6 5.8-1l28.6 1.8s4.2-6.3 7.3-3.5 4.5 3.7 5.8 3.3 2.1 16.5-5.8 20zM106.4 49.1c6.2 0 11.2 5 11.2 11.2 0 6.2-5 11.2-11.2 11.2-6.2 0-11.2-5-11.2-11.2 0-6.2 5-11.2 11.2-11.2m0-5.9c-9.4 0-17.1 7.7-17.1 17.1 0 9.4 7.7 17.1 17.1 17.1 9.4 0 17.1-7.7 17.1-17.1 0-9.5-7.7-17.1-17.1-17.1z"></path><circle class="st0" cx="106.4" cy="60.2" r="5"></circle><circle class="st0" cx="17.1" cy="60.2" r="5"></circle><path fill="none" d="M106.4 60.2L93.8 37.9"></path><path transform="rotate(-29.308 100.108 49.056)" class="st0" d="M97.9 36.2h4.3v25.6h-4.3z"></path><path class="st0" d="M15.7 71.3C9.6 70.6 5.2 65 5.9 58.9c.6-5 4.5-9 9.5-9.8.3 0 .5-.3.5-.6 0-.2-.1-.3-.2-.4l-4-3.9c-.2-.2-.4-.2-.6-.1C2.3 47.4-2.2 57.2 1 66.1s13.1 13.4 21.9 10.2c4.8-1.8 8.6-5.6 10.3-10.4.1-.2 0-.4-.1-.6l-4-3.9c-.2-.2-.6-.2-.8 0-.1.1-.1.2-.1.3-.9 6-6.4 10.3-12.5 9.6zM63.4 2.7h14c.8 0 1.4.6 1.4 1.4v1.6c0 .8-.6 1.4-1.4 1.4h-14c-.8 0-1.4-.6-1.4-1.4V4.1c0-.8.6-1.4 1.4-1.4z"></path><path class="st0" d="M72.5 0H76c.3 0 .6.3.6.6v8.3c0 .3-.2.6-.5.6-.2 0-.5-.1-.5-.3L72 .8c-.1-.3 0-.6.3-.8h.2z"></path></g></g></svg>
+          </span>
+          <span class="label">スクーター</span>
+          </a>
+          </li>
+          </ul>
+          </div>
+          <div class="localNav-S">
+            <ul class="inner filters button-group" data-filter-group="type">
+            <li class="item"><button data-filter="*" class="is-checked"><span>All</span></button></li>
+            <li class="item"><button data-filter="*"><span>レーストラック</span></button></li>
+            <li class="item"><button data-filter="*"><span>オフロード</span></button></li>
+            <li class="item"><button data-filter="*"><span>レーストラック</span></button></li>
+            <li class="item"><button data-filter="*"><span>オフロード</span></button></li>
+            </ul>
+            </div>
+      </div>
+
+
+<div class="list-tyre isotope">
+
+  <% for (var i = 0; i < 30; i++) { %>
+ <article class="item element-item type-onroad" data-category="onroad"> <a href="/tyres/detail.html">
+  <div class="bg"></div>
+  <h2 class="label"><img src="../../images/1fc4969ffff8e7a2aa45a23cc6c2f300c6bb437e.jpg" alt=" DIABLO™ ROSSO CORSA II"></h2>
+  <picture class="image"> <img src="../../images/676b37f505c9cd5bc16d3d64fc37d3acd59dc113.png" decoding="async" alt=" DIABLO™ ROSSO CORSA II"> </picture>
+  </a> </article>
+  <% } %>
+
+  <!--
+ <article class="item element-item type-onoff" data-category="onroad"> <a href="/pirelli/tyres/SL_60.html">
+  <h2 class="label"><img src="../images/1fc4969ffff8e7a2aa45a23cc6c2f300c6bb437e.jpg" alt="SL 60™"></h2>
+  <picture class="image"> <img src="../images/676b37f505c9cd5bc16d3d64fc37d3acd59dc113.png" decoding="async" alt="SL 60™"> </picture>
+  </a> </article>
+ <article class="item element-item type-urban" data-category="onroad"> <a href="/pirelli/tyres/SL_38_UNICO.html">
+  <h2 class="label"><img src="../images/logo_SL38TMUNICO.jpg" alt="SL 38™UNICO"></h2>
+  <picture class="image"> <img src="../images/29e577955535cf6c61ea1e00c803ebfe53e30195.png" decoding="async" alt="SL 38™UNICO"> </picture>
+  </a> </article>
+ <article class="item element-item type-urban" data-category="onroad"> <a href="/pirelli/tyres/SL_26.html">
+  <h2 class="label"><img src="/pirelli/logo_SL26.jpg" alt="SL 26™"></h2>
+  <picture class="image"> <img src="../images/1a47420a2f7103a5ac59fd80668d094da6439889.png" decoding="async" alt="SL 26™"> </picture>
+  </a> </article>
+ <article class="item element-item type-urban" data-category="onroad"> <a href="/pirelli/tyres/ANGEL_SCOOTER.html">
+  <h2 class="label"><img src="../images/logo_AngelScooter.jpg" alt="ANGEL™SCOOTER"></h2>
+  <picture class="image"> <img src="../images/9484e3b4cfbc8cb9b07996385c3dd23e0a8daa35.png" decoding="async" alt="ANGEL™SCOOTER"> </picture>
+  </a> </article>
+ <article class="item element-item type-sport" data-category="onroad"> <a href="/pirelli/tyres/DIABLO_ROSSO_SCOOTER.html">
+  <h2 class="label"><img src="../images/logo_DiabloRossoScooter.jpg" alt="DIABLO ROSSO™SCOOTER"></h2>
+  <picture class="image"> <img src="../images/db1ddf471e6a15898363a86a8c7411104a6cd5d4.png" decoding="async" alt="DIABLO ROSSO™SCOOTER"> </picture>
+  </a> </article>
+ <article class="item element-item type-race" data-category="onroad"> <a href="/pirelli/tyres/DIABLO_ROSSO_SCOOTER_SC.html">
+  <h2 class="label"><img src="../images/4e53dcb3796c66aa5ad3f5af864b1fe696fc12c3.jpg" alt="DIABLO ROSSO™ SCOOTER SC"></h2>
+  <picture class="image"> <img src="../images/044b3fc6ebcd46ce02f36e041e9ba9cdefc3a85d.png" decoding="async" alt="DIABLO ROSSO™ SCOOTER SC"> </picture>
+  </a> </article>
+ <article class="item element-item type-offroad" data-category="onroad"> <a href="/pirelli/tyres/103c0b155115952f069077f322667c3875c0c13a.html">
+  <h2 class="label"><img src="../images/logo_SCORPIONTMMXMUD.jpg" alt="SCORPION™MX MUD"></h2>
+  <picture class="image"> <img src="../images/92013c5eb607c96777563442285ad5edf3a4d95c.png" decoding="async" alt="SCORPION™MX MUD"> </picture>
+  </a> </article>
+ <article class="item element-item type-offroad" data-category="onroad"> <a href="/pirelli/tyres/SCORPION_MX_SOFT.html">
+  <h2 class="label"><img src="../images/logo_ScorpionMXsoftREAR.jpg" alt="SCORPION™MX SOFT"></h2>
+  <picture class="image"> <img src="../images/14266d0169815eee8c0c886e5c9a74e0695d5d39.png" decoding="async" alt="SCORPION™MX SOFT"> </picture>
+  </a> </article>
+ <article class="item element-item type-offroad" data-category="onroad"> <a href="/pirelli/tyres/SCORPION_MX32_MID_HARD.html">
+  <h2 class="label"><img src="../images/logo_SCORPIONTMMX32MIDHARD.jpg" alt="SCORPION™MX32 MID HARD"></h2>
+  <picture class="image"> <img src="../images/0cc657c8e0a1e9f0f4b2d5cdf6d46017c2537be3.png" decoding="async" alt="SCORPION™MX32 MID HARD"> </picture>
+  </a> </article>
+ <article class="item element-item type-offroad" data-category="onroad"> <a href="/pirelli/tyres/SCORPION_MX32_MID_SOFT.html">
+  <h2 class="label"><img src="../images/logo_SCORPIONTMMX32MIDSOFT.jpg" alt="SCORPION™MX32TM MID SOFT"></h2>
+  <picture class="image"> <img src="../images/3e1a8c28d367b67be2bf89a6d1f7a2e9bc6ddbd5.png" decoding="async" alt="SCORPION™MX32TM MID SOFT"> </picture>
+  </a> </article>
+ <article class="item element-item type-rally" data-category="onroad"> <a href="/pirelli/tyres/MT_21_RALLYCROSS.html">
+  <h2 class="label"><img src="../images/logo_MT21.jpg" alt="MT 21™RALLYCROSS"></h2>
+  <picture class="image"> <img src="../images/617330a175358a9b1c8c18ecc81b17a2d5d358b1.png" decoding="async" alt="MT 21™RALLYCROSS"> </picture>
+  </a> </article>
+ <article class="item element-item type-enduro_onoff" data-category="onroad"> <a href="/pirelli/tyres/MT_60.html">
+  <h2 class="label"><img src="../images/logo_MT60.jpg" alt="MT 60™"></h2>
+  <picture class="image"> <img src="../images/34bbb145f6e2664e4c92b2dc42359a426ef695a3.png" decoding="async" alt="MT 60™"> </picture>
+  </a> </article>
+ <article class="item element-item type-enduro_onoff" data-category="onroad"> <a href="/pirelli/tyres/MT_60_RS.html">
+  <h2 class="label"><img src="../images/logo_MT60RS.jpg" alt="MT 60™RS"></h2>
+  <picture class="image"> <img src="../images/0ba624f7cfbf586f102b72f8ff5d8d9b8c017458.png" decoding="async" alt="MT 60™RS"> </picture>
+  </a> </article>
+ <article class="item element-item type-enduro_onoff" data-category="onroad"> <a href="/pirelli/tyres/SCORPION_MT_90_A/T.html">
+  <h2 class="label"><img src="../images/logo_SCORPIONTMMT90AT.jpg" alt="SCORPION™MT 90 A/T"></h2>
+  <picture class="image"> <img src="../images/52f9075fcfd7ddf1e10bd9f11c4c6904cdf9f835.png" decoding="async" alt="SCORPION™MT 90 A/T"> </picture>
+  </a> </article>
+ <article class="item element-item type-rally" data-category="onroad"> <a href="/pirelli/tyres/SCORPION_RALLY.html">
+  <h2 class="label"><img src="../images/logo_ScorpionRally.jpg" alt="SCORPION™RALLY"></h2>
+  <picture class="image"> <img src="../images/453cd7b17e7bd8105cb10813f099ddfa93413bef.png" decoding="async" alt="SCORPION™RALLY"> </picture>
+  </a> </article>
+ <article class="item element-item type-enduro_onoff" data-category="onroad"> <a href="/pirelli/tyres/SCORPION_RALLY_STR.html">
+  <h2 class="label"><img src="../images/logo_ScorpionRallySTR.jpg" alt="SCORPION™RALLY STR"></h2>
+  <picture class="image"> <img src="../images/161aca92ce3ad33c7d39428db6bb62c27803123f.png" decoding="async" alt="SCORPION™RALLY STR"> </picture>
+  </a> </article>
+ <article class="item element-item type-enduro_street" data-category="onroad"> <a href="/pirelli/tyres/SCORPION_TRAIL_II.html">
+  <h2 class="label"><img src="../images/logo_ScorpionTrailii.jpg" alt="SCORPION™TRAIL II"></h2>
+  <picture class="image"> <img src="../images/0e6bed1f09a8ff7ab19e49c5e12c1b4340c49cc2.png" decoding="async" alt="SCORPION™TRAIL II"> </picture>
+  </a> </article>
+ <article class="item element-item type-cruiser_tourers" data-category="onroad"> <a href="/pirelli/tyres/f0b6f6f22942c24d475b751d2a2ef8f4842d3cbb.html">
+  <h2 class="label"><img src="../images/logo_NightDragon.jpg" alt="NIGHT DRAGON™"></h2>
+  <picture class="image"> <img src="../images/f2b5a1a5f99124be62c4240d9997bebbd9a6d762.png" decoding="async" alt="NIGHT DRAGON™"> </picture>
+  </a> </article>
+ <article class="item element-item type-urban" data-category="onroad"> <a href="/pirelli/tyres/CITY_DEMON.html">
+  <h2 class="label"><img src="../images/logo_CITYDEMON.jpg" alt="CITY DEMON™"></h2>
+  <picture class="image"> <img src="../images/29885c3e8788f2736f1904a5dffb6f93f142fe6b.png" decoding="async" alt="CITY DEMON™"> </picture>
+  </a> </article>
+ <article class="item element-item type-sport" data-category="onroad"> <a href="/pirelli/tyres/SPORT_DEMON.html">
+  <h2 class="label"><img src="../images/logo_SPORTDEMON.jpg" alt="SPORT DEMON™"></h2>
+  <picture class="image"> <img src="../images/d9f97e048f74fcffde33233ea2d1de85ad7ad0ed.png" decoding="async" alt="SPORT DEMON™"> </picture>
+  </a> </article>
+ <article class="item element-item type-sport_touring" data-category="onroad"> <a href="/pirelli/tyres/ANGEL_GT_II.html">
+  <h2 class="label"><img src="../images/logo_ANGELGTII.jpg" alt="ANGEL™GT II"></h2>
+  <picture class="image"> <img src="../images/cff3e608e030f49f3d72fb74c781176646979087.png" decoding="async" alt="ANGEL™GT II"> </picture>
+  </a> </article>
+ <article class="item element-item type-sport" data-category="onroad"> <a href="/pirelli/tyres/PHANTOM_SPORTSCOMP.html">
+  <h2 class="label"><img src="../images/logo_PhantomSportsComp.jpg" alt="PHANTOM™SPORTSCOMP"></h2>
+  <picture class="image"> <img src="../images/cfeb81b2d2f8782b08daa3d8fb460d634834df33.png" decoding="async" alt="PHANTOM™SPORTSCOMP"> </picture>
+  </a> </article>
+ <article class="item element-item type-sport" data-category="onroad"> <a href="/pirelli/tyres/DIABLO_ROSSO_III.html">
+  <h2 class="label"><img src="../images/89f00b1bfdd23dd3a550dc15971c40dd400b0dfa.jpg" alt="DIABLO ROSSO™III"></h2>
+  <picture class="image"> <img src="../images/1ebc1e36acc5da3c737abb7476f9539cc297501c.png" decoding="async" alt="DIABLO ROSSO™III"> </picture>
+  </a> </article>
+ <article class="item element-item type-supersport" data-category="onroad"> <a href="/pirelli/tyres/DIABLO_ROSSO_CORSA_II.html">
+  <h2 class="label"><img src="../images/logo_DiabloRossoCorsaII.jpg" alt="DIABLO ROSSO™CORSA II"></h2>
+  <picture class="image"> <img src="../images/a8406aa30533010bb733ee0a3e49d09bb13788e0.png" decoding="async" alt="DIABLO ROSSO™CORSA II"> </picture>
+  </a> </article>
+ <article class="item element-item type-supersport" data-category="onroad"> <a href="/pirelli/tyres/DIABLO_SUPERCORSA_SP.html">
+  <h2 class="label"><img src="../images/logo_DIABLOTMSUPERCORSASP.jpg" alt="DIABLO™SUPERCORSA SP"></h2>
+  <picture class="image"> <img src="../images/6560341a6e68615e978dba69b96c8c21e9fe7a35.png" decoding="async" alt="DIABLO™SUPERCORSA SP"> </picture>
+  </a> </article>
+ <article class="item element-item type-racing" data-category="onroad"> <a href="/pirelli/tyres/PHANTOM_SPORTSCOMP_RS.html">
+  <h2 class="label"><img src="../images/logo_PHANTOMTMSPORTSCOMPRS.jpg" alt="PHANTOM™SPORTSCOMP RS"></h2>
+  <picture class="image"> <img src="../images/3a8694bbc7010c8b8ea6f12ac1d4a6b57f547a8b.png" decoding="async" alt="PHANTOM™SPORTSCOMP RS"> </picture>
+  </a> </article>
+ <article class="item element-item type-racing" data-category="onroad"> <a href="/pirelli/tyres/DIABLO_SUPERCORSA_SC.html">
+  <h2 class="label"><img src="../images/logo_DIABLOTMSUPERCORSASC.jpg" alt="DIABLO™SUPERCORSA SC"></h2>
+  <picture class="image"> <img src="../images/9ebcbf1b64776d7ae783fb7d993c12d7cf74d930.png" decoding="async" alt="DIABLO™SUPERCORSA SC"> </picture>
+  </a> </article>
+ <article class="item element-item type-racing" data-category="onroad"> <a href="/pirelli/tyres/DIABLO_RAIN.html">
+  <h2 class="label"><img src="../images/logo_DiabloRain.jpg" alt="DIABLO™RAIN"></h2>
+  <picture class="image"> <img src="../images/76c9c551ab70ca00528e66fc858f7549856065b4.png" decoding="async" alt="DIABLO™RAIN"> </picture>
+  </a> </article>
+ <article class="item element-item type-racing" data-category="onroad"> <a href="/pirelli/tyres/DIABLO_WET.html">
+  <h2 class="label"><img src="../images/logo_DiabloWet.jpg" alt="DIABLO™WET"></h2>
+  <picture class="image"> <img src="../images/6b9c157eb0c07c9d8867d3a07ffb601bf8959fd0.png" decoding="async" alt="DIABLO™WET"> </picture>
+  </a> </article>
+ <article class="item element-item type-racing" data-category="onroad"> <a href="/pirelli/tyres/DIABLO_SUPERBIKE.html">
+  <h2 class="label"><img src="../images/logo_DiabloSuperbike.jpg" alt="DIABLO™SUPERBIKE"></h2>
+  <picture class="image"> <img src="../images/6545f09aa5c912b668da96fc786896570f982082.png" decoding="async" alt="DIABLO™SUPERBIKE"> </picture>
+  </a> </article>-->
+</div>
+      
+      
+     </div>
+				</div>
+
+			</main>
+		
+			
+   <% include ../include/_bnr_01 %>
+  </div>
+  <% include ../include/_footer %>
+</div>
+<% include ../include/_modal %>
+<% include ../include/_script.ejs %>
+
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script>
+function getHashFilter() {
+  var hash = location.hash;
+  // get filter=filterName
+  var matches = location.hash.match( /filter=([^&]+)/i );
+  var hashFilter = matches && matches[1];
+  return hashFilter && decodeURIComponent( hashFilter );
+}
+
+$(window).on('load',function(){
+
+  var $grid = $('.isotope');
+
+  // bind filter button click
+  var $filters = $('.filter-button-group').on( 'click', 'button', function() {
+    var filterAttr = $( this ).attr('data-filter');
+    // set filter in hash
+    location.hash = 'filter=' + encodeURIComponent( filterAttr );
+  });
+
+  var isIsotopeInit = false;
+
+  function onHashchange() {
+    var hashFilter = getHashFilter();
+    if ( !hashFilter && isIsotopeInit ) {
+      return;
+    }
+    isIsotopeInit = true;
+    // filter isotope
+    $grid.isotope({
+      itemSelector: '.element-item',
+      percentPosition: true,
+      layoutMode: 'fitRows',
+      filter: hashFilter
+    });
+    // set selected class on button
+    if ( hashFilter ) {
+      $filters.find('.is-checked').removeClass('is-checked');
+      $filters.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+    }
+  }
+
+  $(window).on( 'hashchange', onHashchange );
+  // trigger event handler to init Isotope
+  onHashchange();
+
+  var userAgent = window.navigator.userAgent.toLowerCase();
+if(userAgent.indexOf('trident') != -1) {
+  var body = document.body;
+  body.classList.add('tyres-ie-only-styles')
+};
+
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+// -------------------------------------------------------------------
+//  mediaquery.scss
+// -------------------------------------------------------------------
+
+$BREAK_POINT_XLG: 1440px;
+$BREAK_POINT_SP: 980px;
+$BREAK_POINT_XSP: 340px;
+
+@mixin media($mediaSize) {
+  //@if $madiaSize == xlg {
+  //  // X Largeサイズ用
+  //  @media (min-width: $BREAK_POINT_XLG + 1) {
+  //    @content;
+  //  }
+  //}
+  //@else
+  @if $mediaSize == pc {
+    // PC用
+    @media (min-width: $BREAK_POINT_SP + 1) {
+      @content;
+    }
+  } @else if $mediaSize == sp {
+    // SP用
+    @media (max-width: $BREAK_POINT_SP) {
+      @content;
+    }
+    } @else if $mediaSize == xsp {
+      @media only screen and (max-width: $BREAK_POINT_XSP) {
+        @content;
+      }
+    } 
+}
+
+@mixin mq($min-width, $max-width) {
+  @media (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+
+@mixin mq-min($min-width) {
+  @media (min-width: $min-width) {
+    @content;
+  }
+}
+
+@mixin mq-max($max-width) {
+  @media (max-width: $max-width) {
+    @content;
+  }
+}

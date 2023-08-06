@@ -1,0 +1,118 @@
+// -------------------------------------------------------------------
+// 	button.scss
+// -------------------------------------------------------------------
+
+.btn-mid {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    padding: 20px 40px;
+    background: #222;
+    border-radius: 4px;
+    color: #fff;
+    @include fontsize(16);
+    line-height: 1;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all .3s $transition-easingOutExpo;
+
+    .icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s $transition-easingOutExpo;
+
+        path {
+            fill: #ffdd32;
+        }
+    }
+
+    .label {}
+
+    @include media(pc) {
+        &:hover {
+            background: #ffdd32;
+            color: #222222;
+
+            .icon {
+                transform: translateX(15px);
+
+                path {
+                    fill: #222222;
+                }
+            }
+        }
+    }
+
+    &.funDay__btn-mid {
+        .label {
+            color:#fff;
+        }
+
+        @include media(pc) {
+            &:hover {
+                .label {
+                    color:#222;
+                }
+            }
+        }
+        width:200px;
+        font-size:14px;
+    }
+}
+
+.btn-mid-back {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    padding: 20px 40px;
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    color: #222222;
+    @include fontsize(16);
+    line-height: 1;
+    text-align: center;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all .3s $transition-easingOutExpo;
+
+    .icon {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all .3s $transition-easingOutExpo;
+    }
+
+    .label {}
+
+    @include media(pc) {
+        &:hover {
+            background: #ffdd32;
+            color: #222222;
+
+            .icon {
+                transform: translateX(15px);
+
+                path {
+                    fill: #222222;
+                }
+            }
+        }
+    }
+}

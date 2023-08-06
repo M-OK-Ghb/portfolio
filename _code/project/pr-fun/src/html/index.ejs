@@ -1,0 +1,542 @@
+<%
+path = './';
+category = '';
+page = '';
+%>
+<!DOCTYPE html>
+<html lang="ja">
+<%- include include/_meta %>
+<%- include('./include/_head' ,{
+title: meta.top.title,
+description: meta.top.description,
+catTitle: meta.top.catTitle
+})
+%>
+
+<body class="page-siteIndex">
+  <% include include/_old %>
+  <div class="wrapper">
+    <% include include/_header %>
+    <main class="contents">
+
+      <div class="sec-mVisual" id="getMVHeight">
+
+        <div class="sec-inner">
+
+          <div id="data-card-wrap" class="sec-body">
+            <% for (var i = 0; i < 5; i++) { %>
+            <div class="card data-card">
+              <div class="body articleMeta">
+                <h2 class="title"><a href="/article/detail.html" aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。"
+                    class="split-text-parent">
+                    <span class="split-text"><%= i + 1; %>ここには記事のタイトルが入ります。ここには記事のタイ</span>
+                    <!-- <span>ここには記事のタイトルが入ります。ここには記事のタイトルが入ります。</span> -->
+                  </a></h2>
+                <div class="meta">
+                  <time datetime="2020-12-24" class="date"><span>2020.12.24</span></time>
+                  <div class="category"><span>カテゴリー</span></div>
+                </div>
+                <div class="list-tag">
+                  <ul class="items">
+                    <li class="item"><a href="/article/detail.html" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a>
+                    </li>
+                    <li class="item"><a href="/article/detail.html" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a>
+                    </li>
+                    <li class="item"><a href="/article/detail.html" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <% } %>
+          </div>
+          <div class="sec-footer">
+            <div class="controller">
+              <div class="inner">
+                <div id="data-controller-number" class="number">
+                  <div class="data-number-item number-item is-active is-prev">01</div>
+                  <div class="data-number-item number-item is-active is-current">02</div>
+                  <div class="data-number-item number-item is-active is-next">03</div>
+                  <div class="data-number-item number-item">04</div>
+                  <div class="data-number-item number-item">05</div>
+                </div>
+                <div id="data-controller-prev" class="prev is-pc" aria-label="Previous">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9.15" height="16.003" viewBox="0 0 9.15 16.003">
+                    <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down"
+                      d="M8,6.392,14.056.336a1.139,1.139,0,0,1,1.615,0,1.153,1.153,0,0,1,0,1.62L8.814,8.817a1.142,1.142,0,0,1-1.577.033l-6.9-6.89A1.144,1.144,0,0,1,1.949.341Z"
+                      transform="translate(9.15) rotate(90)" fill="#222" />
+                  </svg>
+                </div>
+                <div id="data-controller-next" class="next is-pc" aria-label="Next">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="9.15" height="16.003" viewBox="0 0 9.15 16.003">
+                    <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down"
+                      d="M8,6.392,14.056.336a1.139,1.139,0,0,1,1.615,0,1.153,1.153,0,0,1,0,1.62L8.814,8.817a1.142,1.142,0,0,1-1.577.033l-6.9-6.89A1.144,1.144,0,0,1,1.949.341Z"
+                      transform="translate(0 16.003) rotate(-90)" fill="#222" />
+                  </svg>
+                </div>
+                <canvas id="data-controller-bg" class="bg"></canvas>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <section class="sec-news" aria-label="ニュース">
+        <div class="sec-inner">
+          <header class="sec-header">
+            <h2 class="headline"><span>News</span></h2>
+          </header>
+          <div class="sec-body">
+            <div class="sec-body-inner">
+              <time datetime="2020-12-24" class="date"><span>2020.12.24</span></time>
+              <p class="title"><a
+                  href="/news/detail.html">ここにはニュースのタイトルが入ります。ここにはニュースのタイトルが入ります。ここにはニュースのタイトルが入ります。ここにはニュースのタイトルが入ります。</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="sec-article content_padding" aria-label="最新記事一覧">
+        <header class="sec-header">
+          <h2 class="headline">
+            <span class="main">Article</span>
+            <span class="sub">最新記事</span>
+          </h2>
+        </header>
+        <% include include/_category %>
+
+        <div class="sec-body">
+          <div class="list-wrap swiper-container">
+            <div class="list-article type-single swiper-wrapper">
+              <div class="card swiper-slide">
+                <div class="image">
+                  <a href="/article/detail.html" aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">
+                    <picture>
+                      <source media="(min-width: 960px)" srcset="../images/dummy_article_01.png">
+                      <img src="../images/dummy_article_01.png" decoding="async" decoding="async" alt="aaaaaa">
+                    </picture>
+                  </a>
+                </div>
+                <div class="body articleMeta">
+                  <h2 class="title"><a href="/article/detail.html"
+                      aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">ここには記事のタイトルが入ります。ここには記事のタイトルが入ります。ここには記事のタイトルが入ります。</a>
+                  </h2>
+                  <div class="meta">
+                    <time datetime="2020-12-24" class="date topArticleDate_padding"><span>2020.12.24</span></time>
+                    <div class="category"><span>カテゴリー</span></div>
+                  </div>
+                  <div class="list-tag">
+                    <ul class="items">
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image">
+                  <a href="/article/detail.html" aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">
+                    <picture>
+                      <source media="(min-width: 960px)" srcset="../images/dummy_article_01.png">
+                      <img src="../images/dummy_article_01.png" decoding="async" decoding="async" alt="aaaaaa">
+                    </picture>
+                  </a>
+                </div>
+                <div class="body articleMeta">
+                  <h2 class="title"><a href="/article/detail.html"
+                      aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">ここには記事のタイトルが入ります。</a></h2>
+                  <div class="meta">
+                    <time datetime="2020-12-24" class="date topArticleDate_padding"><span>2020.12.24</span></time>
+                    <div class="category"><span>カテゴリー</span></div>
+                  </div>
+                  <div class="list-tag">
+                    <ul class="items">
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image">
+                  <a href="/article/detail.html" aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">
+                    <picture>
+                      <source media="(min-width: 960px)" srcset="../images/dummy_article_01.png">
+                      <img src="../images/dummy_article_01.png" decoding="async" decoding="async" alt="aaaaaa">
+                    </picture>
+                  </a>
+                </div>
+                <div class="body articleMeta">
+                  <h2 class="title"><a href="/article/detail.html"
+                      aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">ここには記事のタイトルが入ります。</a></h2>
+                  <div class="meta">
+                    <time datetime="2020-12-24" class="date topArticleDate_padding"><span>2020.12.24</span></time>
+                    <div class="category"><span>カテゴリー</span></div>
+                  </div>
+                  <div class="list-tag">
+                    <ul class="items">
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image">
+                  <a href="/article/detail.html" aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">
+                    <picture>
+                      <source media="(min-width: 960px)" srcset="../images/dummy_article_01.png">
+                      <img src="../images/dummy_article_01.png" decoding="async" decoding="async" alt="aaaaaa">
+                    </picture>
+                  </a>
+                </div>
+                <div class="body articleMeta">
+                  <h2 class="title"><a href="/article/detail.html"
+                      aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">ここには記事のタイトルが入ります。</a></h2>
+                  <div class="meta">
+                    <time datetime="2020-12-24" class="date topArticleDate_padding"><span>2020.12.24</span></time>
+                    <div class="category"><span>カテゴリー</span></div>
+                  </div>
+                  <div class="list-tag">
+                    <ul class="items">
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image">
+                  <a href="/article/detail.html" aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">
+                    <picture>
+                      <source media="(min-width: 960px)" srcset="../images/dummy_article_01.png">
+                      <img src="../images/dummy_article_01.png" decoding="async" decoding="async" alt="aaaaaa">
+                    </picture>
+                  </a>
+                </div>
+                <div class="body articleMeta">
+                  <h2 class="title"><a href="/article/detail.html"
+                      aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">ここには記事のタイトルが入ります。</a></h2>
+                  <div class="meta">
+                    <time datetime="2020-12-24" class="date topArticleDate_padding"><span>2020.12.24</span></time>
+                    <div class="category"><span>カテゴリー</span></div>
+                  </div>
+                  <div class="list-tag">
+                    <ul class="items">
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image">
+                  <a href="/article/detail.html" aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">
+                    <picture>
+                      <source media="(min-width: 960px)" srcset="../images/dummy_article_01.png">
+                      <img src="../images/dummy_article_01.png" decoding="async" decoding="async" alt="aaaaaa">
+                    </picture>
+                  </a>
+                </div>
+                <div class="body articleMeta">
+                  <h2 class="title"><a href="/article/detail.html"
+                      aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">ここには記事のタイトルが入ります。ここには記事のタイトルが入ります。ここには記事のタイトルが入ります。</a>
+                  </h2>
+                  <div class="meta">
+                    <time datetime="2020-12-24" class="date topArticleDate_padding"><span>2020.12.24</span></time>
+                    <div class="category"><span>カテゴリー</span></div>
+                  </div>
+                  <div class="list-tag">
+                    <ul class="items">
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image">
+                  <a href="/article/detail.html" aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">
+                    <picture>
+                      <source media="(min-width: 960px)" srcset="../images/dummy_article_01.png">
+                      <img src="../images/dummy_article_01.png" decoding="async" decoding="async" alt="aaaaaa">
+                    </picture>
+                  </a>
+                </div>
+                <div class="body articleMeta">
+                  <h2 class="title"><a href="/article/detail.html"
+                      aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">ここには記事のタイトルが入ります。</a></h2>
+                  <div class="meta">
+                    <time datetime="2020-12-24" class="date topArticleDate_padding"><span>2020.12.24</span></time>
+                    <div class="category"><span>カテゴリー</span></div>
+                  </div>
+                  <div class="list-tag">
+                    <ul class="items">
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image">
+                  <a href="/article/detail.html" aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">
+                    <picture>
+                      <source media="(min-width: 960px)" srcset="../images/dummy_article_01.png">
+                      <img src="../images/dummy_article_01.png" decoding="async" decoding="async" alt="aaaaaa">
+                    </picture>
+                  </a>
+                </div>
+                <div class="body articleMeta">
+                  <h2 class="title"><a href="/article/detail.html"
+                      aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">ここには記事のタイトルが入ります。</a></h2>
+                  <div class="meta">
+                    <time datetime="2020-12-24" class="date topArticleDate_padding"><span>2020.12.24</span></time>
+                    <div class="category"><span>カテゴリー</span></div>
+                  </div>
+                  <div class="list-tag">
+                    <ul class="items">
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image">
+                  <a href="/article/detail.html" aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">
+                    <picture>
+                      <source media="(min-width: 960px)" srcset="../images/dummy_article_01.png">
+                      <img src="../images/dummy_article_01.png" decoding="async" decoding="async" alt="aaaaaa">
+                    </picture>
+                  </a>
+                </div>
+                <div class="body articleMeta">
+                  <h2 class="title"><a href="/article/detail.html"
+                      aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">ここには記事のタイトルが入ります。</a></h2>
+                  <div class="meta">
+                    <time datetime="2020-12-24" class="date topArticleDate_padding"><span>2020.12.24</span></time>
+                    <div class="category"><span>カテゴリー</span></div>
+                  </div>
+                  <div class="list-tag">
+                    <ul class="items">
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="image">
+                  <a href="/article/detail.html" aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">
+                    <picture>
+                      <source media="(min-width: 960px)" srcset="../images/dummy_article_01.png">
+                      <img src="../images/dummy_article_01.png" decoding="async" decoding="async" alt="aaaaaa">
+                    </picture>
+                  </a>
+                </div>
+                <div class="body articleMeta">
+                  <h2 class="title"><a href="/article/detail.html"
+                      aria-label="記事「ここには記事のタイトルが入ります。」の詳細へ移動します。">ここには記事のタイトルが入ります。</a></h2>
+                  <div class="meta">
+                    <time datetime="2020-12-24" class="date topArticleDate_padding"><span>2020.12.24</span></time>
+                    <div class="category"><span>カテゴリー</span></div>
+                  </div>
+                  <div class="list-tag">
+                    <ul class="items">
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                      <li class="item"><a href="aaaaaa" aria-label="タグ「タグ名が入ります。」のついた記事の詳細へ">タグ名が入ります。</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slide-controller --topArticle">
+              <button class="btn prev swiper-button-prev" alia-label="前へ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20.988">
+                  <path data-name="Icon ionic-ios-arrow-down"
+                    d="M3.617 10.497l7.942 7.936a1.493 1.493 0 010 2.118 1.512 1.512 0 01-2.125 0l-9-8.992A1.5 1.5 0 01.39 9.491L9.428.437a1.5 1.5 0 112.125 2.118z"
+                    fill="#7f7f7f" />
+                </svg>
+              </button>
+              <button class="btn next swiper-button-next" alia-label="次へ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20.988">
+                  <path data-name="Icon ionic-ios-arrow-down"
+                    d="M8.383 10.49L.441 2.554a1.493 1.493 0 010-2.118 1.512 1.512 0 012.125 0l9 8.992a1.5 1.5 0 01.044 2.068L2.572 20.55a1.5 1.5 0 11-2.125-2.118z"
+                    fill="#7f7f7f" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+
+        <footer class="sec-footer">
+          <div class="swiper-scrollbar"></div>
+          <div class="btn">
+            <a href="/article/" class="btn-mid" aria-label="記事の一覧へ">
+              <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.595">
+                  <path data-name="Icon awesome-arrow-right"
+                    d="M6.8 1.045l.8-.792a.854.854 0 011.211 0l6.942 6.939a.854.854 0 010 1.211l-6.947 6.94a.854.854 0 01-1.211 0l-.795-.79a.858.858 0 01.014-1.225l4.3-4.1H.857A.855.855 0 010 8.369V7.226a.855.855 0 01.857-.857H11.12l-4.3-4.1a.852.852 0 01-.02-1.224z"
+                    fill="#ffdd32" /></svg></span>
+              <span class="label">一覧を見る</span>
+            </a>
+          </div>
+        </footer>
+      </section>
+
+      <section class="sec-tyre" aria-label="全てのタイヤ">
+        <div class="sec-inner">
+          <header class="sec-header">
+            <h2 class="headline">
+              <span class="main">All <br class="is-sp" />Tyres</span>
+              <span class="sub">全てのタイヤ</span>
+            </h2>
+          </header>
+          <div class="sec-body">
+            <ul class="list-tyreCategory">
+              <li class="item type-racing">
+                <a href="/tyres/">
+                  <p class="label">
+                    <span class="icon"><img src="../images/ico_racing.svg" width="66" alt=""></span>
+                    <span>レーシング</span>
+                  </p>
+                  <picture class="image">
+                    <source media="(min-width: 960px)" srcset="../images/bg_racing.jpg">
+                    <img src="../images/bg_racing.jpg" decoding="async" decoding="async" alt="aaaaaa">
+                  </picture>
+                </a>
+              </li>
+              <li class="item">
+                <a href="/tyres/">
+                  <p class="label">
+                    <span class="icon"><img src="../images/ico_racing.svg" width="66" alt=""></span>
+                    <span>オンロード</span>
+                  </p>
+                  <picture class="image">
+                    <source media="(min-width: 960px)" srcset="../images/bg_onroad.jpg">
+                    <img src="../images/bg_onroad.jpg" decoding="async" decoding="async" alt="aaaaaa">
+                  </picture>
+                </a>
+              </li>
+              <li class="item">
+                <a href="/tyres/">
+                  <p class="label">
+                    <span class="icon"><img src="../images/ico_racing.svg" width="66" alt=""></span>
+                    <span>オン/オフロード</span>
+                  </p>
+                  <picture class="image">
+                    <source media="(min-width: 960px)" srcset="../images/bg_on_offroad.jpg">
+                    <img src="../images/bg_on_offroad.jpg" decoding="async" decoding="async" alt="aaaaaa">
+                  </picture>
+                </a>
+              </li>
+              <li class="item">
+                <a href="/tyres/">
+                  <p class="label">
+                    <span class="icon"><img src="../images/ico_racing.svg" width="66" alt=""></span>
+                    <span>オフロード</span>
+                  </p>
+                  <picture class="image">
+                    <source media="(min-width: 960px)" srcset="../images/bg_offroad.jpg">
+                    <img src="../images/bg_offroad.jpg" decoding="async" decoding="async" alt="aaaaaa">
+                  </picture>
+                </a>
+              </li>
+              <li class="item">
+                <a href="/tyres/">
+                  <p class="label">
+                    <span class="icon"><img src="../images/ico_racing.svg" width="66" alt=""></span>
+                    <span>スクーター</span>
+                  </p>
+                  <picture class="image">
+                    <source media="(min-width: 960px)" srcset="../images/bg_scooter.jpg">
+                    <img src="../images/bg_scooter.jpg" decoding="async" decoding="async" alt="aaaaaa">
+                  </picture>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+          <footer class="sec-footer">
+            <div class="btn">
+              <a href="/tyres/" class="btn-mid" aria-label="タイヤの一覧へ">
+                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="15.595">
+                    <path data-name="Icon awesome-arrow-right"
+                      d="M6.8 1.045l.8-.792a.854.854 0 011.211 0l6.942 6.939a.854.854 0 010 1.211l-6.947 6.94a.854.854 0 01-1.211 0l-.795-.79a.858.858 0 01.014-1.225l4.3-4.1H.857A.855.855 0 010 8.369V7.226a.855.855 0 01.857-.857H11.12l-4.3-4.1a.852.852 0 01-.02-1.224z"
+                      fill="#ffdd32" /></svg></span>
+                <span class="label">全てのタイヤを見る</span>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </section>
+
+      <% include include/_bnr_01 %>
+    </main>
+    <% include include/_footer %>
+  </div>
+  <script>
+    var sliderImagePc = [
+      "../images/top/img1.jpg",
+      "../images/top/img2.jpg",
+      "../images/top/img3.jpg",
+      "../images/top/img4.jpg",
+      "../images/top/img5.jpg"
+    ];
+    var sliderImageSp = [
+      "../images/top/img6.jpg",
+      "../images/top/img7.jpg",
+      "../images/top/img8.jpg",
+      "../images/top/img9.jpg",
+      "../images/top/img10.jpg"
+    ];
+  </script>
+  <% include include/_script.ejs %>
+
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.min.css" />
+  <script src="//cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+  <script>
+    let swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      slidesPerView: 'auto',
+      freeMode: true,
+      freeModeSticky: true,
+      breakpoints: {
+        1025: {
+          // slidesPerView: 5,
+          slidesPerGroup: 4,
+        }
+      }
+    });
+
+    //ファーストビュー
+    const elem = document.getElementById('getMVHeight');
+    window.addEventListener('resize', function () {
+      elem.style.height = window.innerHeight - 88 + 'px'
+    })
+    window.addEventListener('DOMContentLoaded', function () {
+      elem.style.height = window.innerHeight - 88 + 'px'
+    })
+  </script>
+
+</body>
+
+</html>

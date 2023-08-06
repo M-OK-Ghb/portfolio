@@ -1,0 +1,101 @@
+// -------------------------------------------------------------------
+//  qaBlock.scss
+// -------------------------------------------------------------------
+
+.article-qaBlock {
+  margin-top: 120px;
+  > dl {
+    margin-bottom: 50px;
+  }
+}
+
+.article-qaItem {
+  width: 100%;
+  > dt,dd {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    > div {
+      width: 100px;
+      @include media(sp){
+        width: 13.33vw;
+        max-width: 100px;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    > p {
+      position: relative;
+      margin-top: 0;
+      width: 577px;
+      background-color: #EEEEEE;
+      padding: 20px;
+      border-radius: 20px;
+      height: max-content;
+
+      @include media(sp){
+        width: 70.67vw;
+        padding: 3%;
+      }
+
+      &::before {
+        content: "";
+        background-image: url(../images/article_fukidashi.svg);
+        position: absolute;
+        width: 50px;
+        height: 30px;
+        top: 20px;
+        background-size: 100% 100%;
+
+        @include media(sp){
+          width: 6.67vw;
+          height: 4vw;
+          top: 12.5px;
+
+          max-width: 50px;
+          max-height: 30px;
+        }
+      }
+    }
+  }
+
+  > dt {
+    margin-bottom: 30px;
+    > p {
+      font-weight: bold;
+      line-height: 1.875;
+      color: #222222;
+
+      &::before {
+        left: -30px;
+        @include media(sp){
+          left: -4.5vw;
+        }
+      }
+    }
+  }
+
+  > dd {
+    margin-bottom: 30px;
+    > div {
+      order: 1;
+    }
+
+    > p {
+      color: #555555;
+
+      &::before {
+        right: -30px;
+        transform: scale(-1, 1);
+        @include media(sp){
+          right: -4.5vw;
+        }
+      }
+    }
+  }
+}
+
