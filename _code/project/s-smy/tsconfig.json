@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "sourceMap": true,
+      "target": "es5", // TSはECMAScript 5に変換
+      "module": "commonjs", // TSのモジュールはES Modulesとして出力
+      "moduleResolution": "node",
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true, // これを追加
+      "esModuleInterop": true, // これを追加
+    },
+    "exclude": [
+      "./node_modules"
+    ]
+  }
